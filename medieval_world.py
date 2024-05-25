@@ -93,7 +93,47 @@ def load_world_data(filepath: str) -> Tuple[pd.DataFrame]:
             * [(id, name, legend)]
         - nameBases (names for each culture)
     """
-    return
+    with open(filepath, "rb") as fp:
+        wd = json.load(fp)
+        return (
+            burgs_from_world_data(wd),
+            cells_from_world_data(wd),
+            features_from_world_data(wd),
+            rivers_from_world_data(wd),
+            cultures_from_world_data(wd),
+        )
+
+
+def burgs_from_world_data(d: dict) -> pd.DataFrame:
+    return (
+        pd.DataFrame.from_records(d["pack"]["burgs"]).dropna(how="all").set_index("i")
+    )
+
+
+def cells_from_world_data(d: dict) -> pd.DataFrame:
+    return (
+        pd.DataFrame.from_records(d["pack"]["cells"]).dropna(how="all").set_index("i")
+    )
+
+
+def features_from_world_data(d: dict) -> pd.DataFrame:
+    return (
+        pd.DataFrame()
+    )  # pd.DataFrame.from_records(d['pack']['features']).dropna(how='all').set_index('i')
+
+
+def rivers_from_world_data(d: dict) -> pd.DataFrame:
+    return (
+        pd.DataFrame.from_records(d["pack"]["rivers"]).dropna(how="all").set_index("i")
+    )
+
+
+def cultures_from_world_data(d: dict) -> pd.DataFrame:
+    return (
+        pd.DataFrame.from_records(d["pack"]["cultures"])
+        .dropna(how="all")
+        .set_index("i")
+    )
 
 
 def load_manual_data(filepath: str) -> Tuple[pd.DataFrame]:
