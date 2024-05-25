@@ -144,7 +144,29 @@ def load_manual_data(filepath: str) -> Tuple[pd.DataFrame]:
         - Citizen consumption & production
         - Citizen random generation based on Burg data (burg type, culture type, biome, features, religion) ----()----> citizens
     """
-    return
+    tabs = [
+        "Economy",
+        "Land Use",
+        "Citizens",
+        "Citizen Generator",
+        "Citizen Burg Modifiers",
+        "Citizen Biome Modifiers",
+    ]
+    two_col_kwargs = dict(index_col=0, header=[0, 1])
+    one_col_kwargs = dict(index_col=0)
+    read_kwargs = [
+        two_col_kwargs,
+        two_col_kwargs,
+        two_col_kwargs,
+        one_col_kwargs,
+        one_col_kwargs,
+        one_col_kwargs,
+    ]
+    with open(filepath, "rb") as fp:
+        return tuple(
+            pd.read_excel(filepath, tab, **read_kwargs)
+            for tab, read_kwargs in zip(tabs, read_kwargs)
+        )
 
 
 def extend_world_data(
