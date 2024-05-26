@@ -568,6 +568,7 @@ def update_burg_urban_area(sb: pd.Series, land_use: pd.DataFrame) -> pd.DataFram
 
     sb.loc[pd.IndexSlice["Urban", "Area", :]] = np.ceil(
         population
+        / land_use.unstack().loc[pd.IndexSlice["Quartier", "Inhabitants", :]]
         * land_use.unstack().loc[pd.IndexSlice["Requirements", "Urban area", :]]
     ).values
     sb.loc[pd.IndexSlice["Urban", "Side", :]] = np.ceil(
@@ -591,6 +592,7 @@ def update_burg_farmland_area(sb: pd.Series, land_use: pd.DataFrame) -> pd.DataF
 
     sb.loc[pd.IndexSlice["Farmland", "Area", :]] = np.ceil(
         population
+        / land_use.unstack().loc[pd.IndexSlice["Quartier", "Inhabitants", :]]
         * land_use.unstack().loc[pd.IndexSlice["Requirements", "Farmland", :]]
     ).values
     sb.loc[pd.IndexSlice["Farmland", "Side", :]] = np.ceil(
