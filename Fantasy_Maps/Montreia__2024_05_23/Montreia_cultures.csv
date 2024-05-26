@@ -1,0 +1,10 @@
+i,name,base,origins,shield,center,color,type,expansionism,code
+0,Wildlands,1,[None],round,,,,,
+1,Roman,8,[0],roman,4411.0,#fdb462,Naval,1.5,Ro
+2,Hellenic,7,[0],boeotian,1983.0,#b3de69,Generic,1.0,He
+3,Roman,8,[0],roman,4460.0,#80b1d3,Generic,1.0,RO
+4,Persian,24,[0],oval,1606.0,#fb8072,Generic,1.0,Pe
+5,Germanic,0,[0],round,4027.0,#bc80bd,Naval,1.5,Ge
+6,Scythian,24,[0],round,2351.0,#dababf,Nomadic,1.5,Sc
+7,Estian,9,[0],pavise,3884.0,#c6b9c1,Generic,1.0,Es
+8,Celtic,22,[0],round,1776.0,#fccde5,Highland,1.2,Ce

@@ -601,4 +601,9 @@ def update_burg_farmland_area(sb: pd.Series, land_use: pd.DataFrame) -> pd.DataF
 
 
 def save_world_data(world_data_filepath: str, world_data):
-    pass
+    suffix = world_data_filepath.split(" Full ")[0]
+    ewd_files = ["burgs", "cells", "features", "rivers", "cultures"]
+    ewd_paths = [f"{suffix}_{ef}.csv" for ef in ewd_files]
+
+    for data, fpath in zip(world_data, ewd_paths):
+        data.to_csv(fpath)
