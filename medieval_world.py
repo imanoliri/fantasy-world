@@ -118,8 +118,10 @@ def cells_from_world_data(d: dict) -> pd.DataFrame:
 
 def features_from_world_data(d: dict) -> pd.DataFrame:
     return (
-        pd.DataFrame()
-    )  # pd.DataFrame.from_records(d['pack']['features']).dropna(how='all').set_index('i')
+        pd.DataFrame.from_records(d["pack"]["features"][1:])
+        .dropna(how="all")
+        .set_index("i")
+    )
 
 
 def rivers_from_world_data(d: dict) -> pd.DataFrame:
