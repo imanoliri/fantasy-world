@@ -177,12 +177,12 @@ def extend_world_data(
     cultures: pd.DataFrame,
     manual_data: Tuple[pd.DataFrame],
 ) -> pd.DataFrame:
-    new_burgs = extend_burg_data(burgs, cells, features, rivers, cultures, manual_data)
+    new_burgs = extend_burgs(burgs, cells, features, rivers, cultures, manual_data)
 
     return new_burgs, cells, features, rivers, cultures, manual_data
 
 
-def extend_burg_data(
+def extend_burgs(
     burgs: pd.DataFrame,
     cells: pd.DataFrame,
     features: pd.DataFrame,
@@ -209,8 +209,6 @@ def extend_burg_data(
     ]
     for data, cols, renamer, on_left, on_right in columns_to_add:
         new_burgs = add_columns(new_burgs, data, cols, renamer, on_left, on_right)
-    # new_burgs = add_features_to_burgs(new_burgs, features, ['type', 'group', 'land', 'border'])
-    # new_burgs = add_cultures_to_burgs(new_burgs, rivers, ['cells'])
 
     new_burgs = generate_new_burg_data(new_burgs, manual_data)
     return new_burgs
