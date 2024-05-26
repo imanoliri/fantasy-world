@@ -1,6 +1,7 @@
 import os
 
 from medieval_world import generate_extended_world_data
+from study_world import study_burgs
 
 cwd = os.getcwd()
 wd_dir = f"{cwd}/Fantasy_Maps/Montreia__2024_05_23"
@@ -12,3 +13,4 @@ ewd_paths = [f"{suffix}_{ef}" for ef in ewd_files]
 burgs, cells, features, rivers, cultures = generate_extended_world_data(
     wd_path, md_path
 )
+study_burgs(burgs, wd_dir)
