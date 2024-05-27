@@ -389,11 +389,6 @@ def generate_new_burg_data(
     consumption_idx = [["Consumption"], ["Total"], ["Food", "Gold"]]
     production_idx = [["Production"], ["Total"], ["Food", "Gold"]]
     net_idx = [["Net"], ["Total"], ["Food", "Gold"]]
-    buildings_idx = [
-        ["Buildings"],
-        ["Available"],
-        ["Port", "Fort", "Church", "Capital", "Market"],
-    ]
     urban_land_idx = [
         ["Urban"],
         ["Area", "Side"],
@@ -410,7 +405,6 @@ def generate_new_burg_data(
         consumption_idx,
         production_idx,
         net_idx,
-        buildings_idx,
         urban_land_idx,
         farm_land_idx,
     ]
