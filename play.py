@@ -10,7 +10,8 @@ md_path = "Medieval Info.xlsx"
 suffix = f".{wd_dir}/Montreia"
 ewd_files = ["burgs", "cells", "features", "rivers", "cultures"]
 ewd_paths = [f"{suffix}_{ef}" for ef in ewd_files]
-burgs, cells, features, rivers, cultures = generate_extended_world_data(
-    wd_path, md_path
+world_data_extended = generate_extended_world_data(wd_path, md_path)
+burgs, cells, features, rivers, cultures, religions, states, provinces, biomes = (
+    world_data_extended
 )
 study_burgs(burgs, wd_dir)

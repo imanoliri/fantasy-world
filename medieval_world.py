@@ -101,6 +101,10 @@ def load_world_data(filepath: str) -> Tuple[pd.DataFrame]:
             features_from_world_data(wd),
             rivers_from_world_data(wd),
             cultures_from_world_data(wd),
+            religions_from_world_data(wd),
+            states_from_world_data(wd),
+            provinces_from_world_data(wd),
+            biomes_from_world_data(wd),
         )
 
 
@@ -135,6 +139,27 @@ def cultures_from_world_data(d: dict) -> pd.DataFrame:
         pd.DataFrame.from_records(d["pack"]["cultures"])
         .dropna(how="all")
         .set_index("i")
+    )
+
+
+def religions_from_world_data(d: dict) -> pd.DataFrame:
+    return pd.DataFrame.from_records(d["pack"]["religions"])
+
+
+def states_from_world_data(d: dict) -> pd.DataFrame:
+    return pd.DataFrame.from_records(d["pack"]["states"])
+
+
+def provinces_from_world_data(d: dict) -> pd.DataFrame:
+    return pd.DataFrame.from_records(d["pack"]["provinces"][1:])
+
+
+def biomes_from_world_data(d: dict) -> pd.DataFrame:
+    return pd.DataFrame({k: v for k, v in list(d["biomesData"].items())[1:3]}).replace(
+        {
+            "Tropical seasonal forest": "Tropical forest",
+            "Temperate deciduous forest": "Temperate forest",
+        }
     )
 
 
@@ -177,11 +202,37 @@ def extend_world_data(
     features: pd.DataFrame,
     rivers: pd.DataFrame,
     cultures: pd.DataFrame,
+    religions: List[str],
+    states: List[str],
+    provinces: List[str],
+    biomes: List[str],
     manual_data: Tuple[pd.DataFrame],
 ) -> pd.DataFrame:
-    new_burgs = extend_burgs(burgs, cells, features, rivers, cultures, manual_data)
+    new_burgs = extend_burgs(
+        burgs,
+        cells,
+        features,
+        rivers,
+        cultures,
+        religions,
+        states,
+        provinces,
+        biomes,
+        manual_data,
+    )
 
-    return new_burgs, cells, features, rivers, cultures, manual_data
+    return (
+        new_burgs,
+        cells,
+        features,
+        rivers,
+        cultures,
+        religions,
+        states,
+        provinces,
+        biomes,
+        manual_data,
+    )
 
 
 def extend_burgs(
@@ -190,7 +241,12 @@ def extend_burgs(
     features: pd.DataFrame,
     rivers: pd.DataFrame,
     cultures: pd.DataFrame,
+    religions: List[str],
+    states: List[str],
+    provinces: List[str],
+    biomes: List[str],
     manual_data: Tuple[pd.DataFrame],
+    convert_categorical_ids_strings: bool = True,
 ) -> pd.DataFrame:
     new_burgs = burgs.reset_index().copy()
     columns_to_add = [
@@ -212,6 +268,22 @@ def extend_burgs(
     for data, cols, renamer, on_left, on_right in columns_to_add:
         new_burgs = add_columns(new_burgs, data, cols, renamer, on_left, on_right)
 
+    if convert_categorical_ids_strings:
+
+        def get_names(df_cat: pd.DataFrame) -> List[str]:
+            return [cat.replace(" ", "\n") for cat in df_cat.name.values]
+
+        categorical_idxs_to_str = [
+            ("state", get_names(states)),
+            ("province", get_names(provinces)),
+            ("culture", get_names(cultures)),
+            ("religion", get_names(religions)),
+            ("biome", get_names(biomes)),
+        ]
+        for col, names in categorical_idxs_to_str:
+            new_burgs.loc[:, col] = new_burgs.loc[:, col].replace(
+                dict(zip(range(len(names)), names))
+            )
     new_burgs = generate_new_burg_data(new_burgs, manual_data)
     return new_burgs
 
@@ -604,7 +676,17 @@ def update_burg_farmland_area(sb: pd.Series, land_use: pd.DataFrame) -> pd.DataF
 
 def save_world_data(world_data_filepath: str, world_data):
     suffix = world_data_filepath.split(" Full ")[0]
-    ewd_files = ["burgs", "cells", "features", "rivers", "cultures"]
+    ewd_files = [
+        "burgs",
+        "cells",
+        "features",
+        "rivers",
+        "cultures",
+        "religions",
+        "states",
+        "provinces",
+        "biomes",
+    ]
     ewd_paths = [f"{suffix}_{ef}.csv" for ef in ewd_files]
 
     for data, fpath in zip(world_data, ewd_paths):

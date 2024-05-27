@@ -1,0 +1,14 @@
+,name,i,origins,type,form,culture,center,deity,expansion,expansionism,color,code
+0,No religion,0,,,,,,,,,,
+1,Roman Shamanism,1,[0],Folk,Shamanism,1.0,3792.0,"Agensium, The Troubled",culture,0.0,#fdb462,RS
+2,Hellenic Pantheon,2,[0],Folk,Polytheism,2.0,399.0,"Achargan, The Brown Giver",culture,0.0,#b3de69,HP
+3,Roman Deities,3,[0],Folk,Polytheism,3.0,4359.0,"Tulabistel, The Fat Ruler",culture,0.0,#80b1d3,RD
+4,Old Persian Shamanism,4,[0],Folk,Shamanism,4.0,2036.0,"Taritishahr, The Crazy Forefather of Heaven",culture,0.0,#fb8072,OP
+5,Old Germanic Beliefs,5,[0],Folk,Animism,5.0,1151.0,,culture,0.0,#bc80bd,OG
+6,Scythian Forefathers,6,[0],Folk,Ancestor Worship,6.0,2385.0,"Argabsard, The Amber Justice",culture,0.0,#dababf,SF
+7,Estian Spirits,7,[0],Folk,Animism,7.0,3926.0,,culture,0.0,#c6b9c1,ES
+8,Celtic Forefathers,8,[0],Folk,Ancestor Worship,8.0,1007.0,"Kirk, The Broken Lion",culture,0.0,#fccde5,CF
+9,Helbiaion Religion,9,[2],Organized,Dualism,2.0,254.0,"Dodicea, The Bright Raven",global,8.0,#d3d28d,HR
+10,Persian Deities,10,[4],Organized,Polytheism,4.0,2356.0,"Mamabad, The Far Reaper of Heaven",culture,8.3,#f6869b,PD
+11,Vaamalese Church,11,"[7, 1]",Organized,Monotheism,7.0,3614.0,"Onkyla, The Bright Shark",state,6.4,#bde6ca,VC
+12,Germanicism,12,[5],Organized,Polytheism,5.0,3166.0,"Maulrech, The Coral Transcendent",culture,5.3,#dbadb5,Ge
