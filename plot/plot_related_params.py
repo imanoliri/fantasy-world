@@ -7,7 +7,7 @@ import pandas as pd
 import seaborn as sns
 
 
-def plot_pairplot(df: pd. DataFrame, name: str, plot_dir:str='.', sub: str = '', x_vars: List[str]=None, y_vars: List[str]=None, join_multilevel: bool = True):
+def plot_pairplot(df: pd. DataFrame, name: str, plot_dir:str='.', sub: str = '', x_vars: List[str]=None, y_vars: List[str]=None, join_multilevel: bool = True, **kwargs):
     if sub != '':
         sub = f'_{sub.strip(' _')}'
     df_plot = df
@@ -17,7 +17,7 @@ def plot_pairplot(df: pd. DataFrame, name: str, plot_dir:str='.', sub: str = '',
             df_plot.columns = ['_'.join(c) for c in df_plot.columns]
             x_vars = ['_'.join(c) for c in x_vars]
             y_vars = ['_'.join(c) for c in y_vars]
-    pair_grid = sns.pairplot(df_plot, x_vars=x_vars, y_vars=y_vars)
+    pair_grid = sns.pairplot(df_plot, x_vars=x_vars, y_vars=y_vars, **kwargs)
     ax = plt.gca()
     title_str = f'pairplot_{name}{sub}'
     ax.set_title(title_str)
