@@ -9,61 +9,6 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 
 
-def summary_burgs(df: pd.DataFrame) -> pd.DataFrame:
-    return summaries_burgs(df).apply(get_summary_burgs_parameter)
-
-
-def get_summary_burgs_parameter(s: pd.Series) -> pd.Series:
-    stat_names = ["Median", "Mean", "Min", "Max"]
-    try:
-        return pd.Series([s.median(), s.mean(), s.min(), s.max()], stat_names).round(1)
-    except:
-        sc = s.value_counts()
-        return pd.Series([np.NaN, np.NaN, sc.idxmin(), sc.idxmax()], stat_names)
-
-
-def summaries_burgs(df: pd.DataFrame) -> pd.DataFrame:
-    return df.apply(summary_burg, axis=1)
-
-
-def summary_burg(sb: pd.Series) -> pd.Series:
-    return pd.Series(
-        [
-            *sb.loc[
-                [
-                    ("Population", "Total", "Heads"),
-                    ("Political", "Characteristics", "Type"),
-                    ("Nature", "Characteristics", "Biome"),
-                ]
-            ].values,
-            sb.loc[
-                [
-                    ("Infrastructure", "Buildings", "Capital"),
-                    ("Infrastructure", "Buildings", "Port"),
-                    ("Infrastructure", "Buildings", "Castle"),
-                    ("Infrastructure", "Buildings", "Market"),
-                    ("Infrastructure", "Buildings", "Church"),
-                    ("Infrastructure", "Buildings", "Shanty Town"),
-                ]
-            ].sum(),
-            *sb.loc[[("Infrastructure", "Network", "road")]].values,
-            sb.loc[[("Net", "Total", "Food"), ("Net", "Total", "Gold")]].mean(),
-            sb.loc[
-                [("Urban", "Area", "Min (ha)"), ("Urban", "Area", "Max (ha)")]
-            ].mean(),
-        ],
-        index=[
-            "Total_Population",
-            "Type",
-            "Biome",
-            "Buildings",
-            "Roads",
-            "Farmland Area",
-            "Urban Area",
-        ],
-    )
-
-
 def plot_histograms(
     df: pd.DataFrame,
     columns: List[Union[str, Tuple[str]]] = None,
