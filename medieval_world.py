@@ -48,6 +48,7 @@ Extended data:
 """
 
 import json
+import pathlib
 from typing import List, Tuple
 
 import numpy as np
@@ -60,10 +61,7 @@ def generate_extended_world_data(
     world_data = load_world_data(world_data_filepath)
     manual_data = load_manual_data(manual_data_filepath)
 
-    *extended_world_data, manual_data = extend_world_data(*world_data, manual_data)
-    save_world_data(world_data_filepath, extended_world_data)
-
-    return extended_world_data
+    return extend_world_data(*world_data, manual_data)
 
 
 def load_world_data(filepath: str) -> Tuple[pd.DataFrame]:
@@ -222,15 +220,17 @@ def extend_world_data(
     )
 
     return (
-        new_burgs,
-        cells,
-        features,
-        rivers,
-        cultures,
-        religions,
-        states,
-        provinces,
-        biomes,
+        (
+            new_burgs,
+            cells,
+            features,
+            rivers,
+            cultures,
+            religions,
+            states,
+            provinces,
+            biomes,
+        ),
         manual_data,
     )
 
@@ -668,8 +668,9 @@ def update_burg_farmland_area(sb: pd.Series, land_use: pd.DataFrame) -> pd.DataF
     return sb
 
 
-def save_world_data(world_data_filepath: str, world_data):
-    suffix = world_data_filepath.split(" Full ")[0]
+def save_world_data(world_data_filepath: str, world_data: List[pd.DataFrame]):
+    world_data_filepath
+    pathlib.Path(world_data_filepath).mkdir(parents=True, exist_ok=True)
     ewd_files = [
         "burgs",
         "cells",
@@ -681,7 +682,7 @@ def save_world_data(world_data_filepath: str, world_data):
         "provinces",
         "biomes",
     ]
-    ewd_paths = [f"{suffix}_{ef}.csv" for ef in ewd_files]
+    ewd_paths = [f"{world_data_filepath}/{ef}.csv" for ef in ewd_files]
 
     for data, fpath in zip(world_data, ewd_paths):
         data.to_csv(fpath)
