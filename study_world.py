@@ -51,7 +51,7 @@ def study_burgs(df: pd.DataFrame, plot_dir: str, name: str = "burgs"):
 
     for group_1, params_1 in parameter_groups:
         for group_2, params_2 in parameter_groups:
-            pair_name = f"{group_2} vs {group_1}"
+            pair_name = f"{group_1} vs {group_2}"
             pair_name_str = pair_name.replace(" ", "_")
             plot_pairplot(
                 df,
