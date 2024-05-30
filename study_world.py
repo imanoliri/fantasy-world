@@ -1,10 +1,12 @@
 import pathlib
+from typing import Callable, List, Tuple
 
 import pandas as pd
 
 from plot.plot_independent_params import plot_histograms
 from plot.plot_related_params import plot_pairplot
 from study.study_burgs import parameter_groups_burgs, summaries_burgs, summary_burgs
+from study.study_cells import parameter_groups_cells, summaries_cells, summary_cells
 
 def study_burgs(df: pd.DataFrame, plot_dir: str):
 
@@ -12,6 +14,18 @@ def study_burgs(df: pd.DataFrame, plot_dir: str):
         df, plot_dir, "burgs", summary_burgs, summaries_burgs, parameter_groups_burgs
     )
 
+
+def study_cells(df: pd.DataFrame, plot_dir: str):
+
+    study_general(
+        df,
+        plot_dir,
+        "cells",
+        summary_cells,
+        summaries_cells,
+        parameter_groups_cells,
+        plot_relationships=False,
+    )
 
 
 def study_general(
