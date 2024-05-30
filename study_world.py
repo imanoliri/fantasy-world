@@ -2,63 +2,68 @@ import pathlib
 
 import pandas as pd
 
-from plot.plot_independent_params import plot_histograms, summaries_burgs, summary_burgs
+from plot.plot_independent_params import plot_histograms
 from plot.plot_related_params import plot_pairplot
+from study.study_burgs import parameter_groups_burgs, summaries_burgs, summary_burgs
+
+def study_burgs(df: pd.DataFrame, plot_dir: str):
+
+    study_general(
+        df, plot_dir, "burgs", summary_burgs, summaries_burgs, parameter_groups_burgs
+    )
 
 
-def study_burgs(df: pd.DataFrame, plot_dir: str, name: str = "burgs"):
 
-    # Single parameters
-    df_summary = summary_burgs(df).T
-    fpath = f"{plot_dir}/{name}/parameters/burgs_summary.csv"
-    pathlib.Path(fpath).parent.mkdir(parents=True, exist_ok=True)
-    df_summary.to_csv(fpath)
+def study_general(
+    df: pd.DataFrame,
+    plot_dir: str,
+    name: str,
+    summary_function: Callable = None,
+    summaries_function: Callable = None,
+    parameter_groups: List[Tuple[str, List[Tuple[str]]]] = None,
+    plot_parameters: bool = True,
+    plot_relationships: bool = True,
+    columns_not_to_plot: List[str] = None,
+):
 
-    df_summaries = summaries_burgs(df)
-    plot_histograms(df, plot_dir=f"{plot_dir}/{name}/parameters")
-    plot_histograms(df_summaries, plot_dir=f"{plot_dir}/{name}/parameters_summaries")
+    # Independent parameters
+    if summary_function is not None:
+        df_summary = summary_function(df)
+        fpath = f"{plot_dir}/{name}/{name}_summary.csv"
+        pathlib.Path(fpath).parent.mkdir(parents=True, exist_ok=True)
+        df_summary.to_csv(fpath)
+
+    if summaries_function is not None:
+        df_summaries = summaries_function(df)
+        fpath = f"{plot_dir}/{name}/{name}_summaries.csv"
+        pathlib.Path(fpath).parent.mkdir(parents=True, exist_ok=True)
+        df_summaries.to_csv(fpath)
+        plot_histograms(
+            df_summaries, plot_dir=f"{plot_dir}/{name}/parameters_summaries"
+        )
+    df_plot = df
+    if columns_not_to_plot is not None:
+        df_plot = df.loc[:, [c for c in df.columns if c not in columns_not_to_plot]]
+
+    if plot_parameters:
+        plot_histograms(df_plot, plot_dir=f"{plot_dir}/{name}/parameters")
 
     # Related parameters
-    city_params = [
-        ("Population", "Total", "Heads"),
-        ("Political", "Characteristics", "Type"),
-        ("Infrastructure", "Buildings", "Capital"),
-        ("Infrastructure", "Buildings", "Port"),
-        ("Infrastructure", "Buildings", "Castle"),
-        ("Infrastructure", "Buildings", "Market"),
-        ("Infrastructure", "Buildings", "Church"),
-        ("Infrastructure", "Buildings", "Shanty Town"),
-        ("Infrastructure", "Network", "road"),
-    ]
-
-    location_params = [
-        ("Nature", "Characteristics", "Biome"),
-    ]  # , river, sea, altitude
-    size_params = [
-        ("Farmland", "Area", "Min (ha)"),
-        ("Farmland", "Area", "Max (ha)"),
-    ]
-    production_params = [
-        ("Net", "Total", "Food"),
-        ("Net", "Total", "Gold"),
-    ]
-    parameter_groups = [
-        ("City", city_params),
-        ("Location", location_params),
-        ("Size", size_params),
-        ("Production", production_params),
-    ]
-
-    for group_1, params_1 in parameter_groups:
-        for group_2, params_2 in parameter_groups:
-            pair_name = f"{group_1} vs {group_2}"
-            pair_name_str = pair_name.replace(" ", "_")
-            plot_pairplot(
-                df,
-                plot_dir=f"{plot_dir}/{name}/parameter_relations",
-                name=pair_name_str,
-                x_vars=params_1,
-                y_vars=params_2,
-            )
+    if plot_relationships:
+        if parameter_groups is not None:
+            for group_1, params_1 in parameter_groups:
+                for group_2, params_2 in parameter_groups:
+                    pair_name = f"{group_1} vs {group_2}"
+                    pair_name_str = pair_name.replace(" ", "_")
+                    if columns_not_to_plot is not None:
+                        params_1 = [p for p in params_1 if p not in columns_not_to_plot]
+                        params_2 = [p for p in params_2 if p not in columns_not_to_plot]
+                    plot_pairplot(
+                        df_plot,
+                        plot_dir=f"{plot_dir}/{name}/parameter_relations",
+                        name=pair_name_str,
+                        x_vars=params_1,
+                        y_vars=params_2,
+                    )
 
     # Repeat by kingdom, continent etc

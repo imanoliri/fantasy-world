@@ -1,5 +1,6 @@
-import numpy as np
 import pandas as pd
+
+from study.summaries import summaries_data, summary_data
 
 city_params = [
     ("Population", "Total", "Heads"),
@@ -35,29 +36,11 @@ parameter_groups_burgs = [
 
 
 def summary_burgs(df: pd.DataFrame) -> pd.DataFrame:
-    return summaries_burgs(df).apply(get_summary_burgs_parameter).T
-
-
-def get_summary_burgs_parameter(s: pd.Series) -> pd.Series:
-    stat_names = ["Median", "Mean", "Mode", "Min", "Max"]
-    try:
-        return pd.Series(
-            [
-                s.median(),
-                s.mean(),
-                ("__".join(str(v) for v in s.mode().iloc[::2].values)),
-                s.min(),
-                s.max(),
-            ],
-            stat_names,
-        ).round(1)
-    except:
-        sc = s.value_counts()
-        return pd.Series([np.NaN, np.NaN, np.NaN, sc.idxmin(), sc.idxmax()], stat_names)
+    return summary_data(df, summary_burg)
 
 
 def summaries_burgs(df: pd.DataFrame) -> pd.DataFrame:
-    return df.apply(summary_burg, axis=1)
+    return summaries_data(df, summary_burg)
 
 
 def summary_burg(sb: pd.Series) -> pd.Series:
