@@ -1,7 +1,7 @@
 import os
 
 from medieval_world import generate_extended_world_data, save_world_data
-from study_world import study_burgs, study_cells
+from study_world import study_burgs, study_cells, study_states
 
 cwd = os.getcwd()
 wd_dir = f"{cwd}/Fantasy_Maps/Montreia__2024_05_23"
@@ -20,3 +20,4 @@ burgs, cells, features, rivers, cultures, religions, states, provinces, biomes =
 )
 study_burgs(burgs, save_dir)
 study_cells(cells, save_dir)
+study_states(states, burgs, cells, save_dir)

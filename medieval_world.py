@@ -145,7 +145,43 @@ def religions_from_world_data(d: dict) -> pd.DataFrame:
 
 
 def states_from_world_data(d: dict) -> pd.DataFrame:
-    return pd.DataFrame.from_records(d["pack"]["states"])
+    df = pd.DataFrame.from_records(d["pack"]["states"])
+    df.loc[:, "diplomacy"] = [
+        "\n".join(flatten_nested_lists(d)) for d in df.loc[:, "diplomacy"].values
+    ]
+
+    df.loc[:, "campaigns"] = read_campaigns(df.loc[:, "campaigns"].values)
+
+    return df
+
+
+def flatten_nested_lists(ls: list) -> list:
+    for i in ls:
+        if isinstance(i, (list, tuple)):
+            for j in flatten_nested_lists(i):
+                yield j
+        else:
+            yield i
+
+
+def read_campaigns(campaigns: list) -> List[str]:
+    return [
+        (
+            "\n".join(
+                [
+                    (
+                        " - ".join(str(s) for s in c.values())
+                        if isinstance(c, dict)
+                        else np.NaN
+                    )
+                    for c in cs
+                ]
+            )
+            if isinstance(cs, list)
+            else np.NaN
+        )
+        for cs in campaigns
+    ]
 
 
 def provinces_from_world_data(d: dict) -> pd.DataFrame:

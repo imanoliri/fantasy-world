@@ -7,6 +7,13 @@ from plot.plot_independent_params import plot_histograms
 from plot.plot_related_params import plot_pairplot
 from study.study_burgs import parameter_groups_burgs, summaries_burgs, summary_burgs
 from study.study_cells import parameter_groups_cells, summaries_cells, summary_cells
+from study.study_states import (
+    extend_states,
+    parameter_groups_states,
+    summaries_states,
+    summary_states,
+)
+
 
 def study_burgs(df: pd.DataFrame, plot_dir: str):
 
@@ -26,6 +33,31 @@ def study_cells(df: pd.DataFrame, plot_dir: str):
         parameter_groups_cells,
         plot_relationships=False,
     )
+
+
+def study_states(
+    states: pd.DataFrame, burgs: pd.DataFrame, cells: pd.DataFrame, plot_dir: str
+):
+
+    states_extended = extend_states(states, burgs, cells)
+    study_general(
+        states_extended,
+        plot_dir,
+        "states",
+        summary_states,
+        summaries_states,
+        parameter_groups_states,
+        columns_not_to_plot=[
+            "neighbors",
+            "provinces",
+            "diplomacy",
+            "campaigns",
+            "coa",
+            "pole",
+            "military",
+        ],
+    )
+
 
 
 def study_general(
