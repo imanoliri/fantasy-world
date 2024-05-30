@@ -53,6 +53,7 @@ def summary_burg(sb: pd.Series) -> pd.Series:
                     ("Nature", "Characteristics", "Biome"),
                 ]
             ].values,
+            *sb.Citizens.Nr.values,
             sb.loc[
                 [
                     ("Infrastructure", "Buildings", "Capital"),
@@ -77,6 +78,7 @@ def summary_burg(sb: pd.Series) -> pd.Series:
             "Total_Population",
             "Type",
             "Biome",
+            *sb.Citizens.Nr.index,
             "Buildings",
             "Roads",
             "Production_Food",
