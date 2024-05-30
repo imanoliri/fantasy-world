@@ -1,25 +1,658 @@
 ,i,name,urban,rural,burgs,area,cells,neighbors,diplomacy,provinces,color,expansionism,capital,type,center,culture,coa,campaigns,form,formName,fullName,pole,alert,military
-0,0,Neutrals,17.029,824.3131349384785,2,77037,399,"[2, 20, 8, 21, 13, 10, 15, 11, 22, 12, 4, 6, 14, 18]","[['Shahia-Thropebian War', 'Shahia declared a war on its rival Thropebeia', ""Thropebeia's ally Hetos joined the war on defenders side"", ""Thropebeia's ally Bukania joined the war on defenders side"", ""Shahia's ally Chamia avoided entering the war""], ['Chamia-Bukanian War', 'Chamia declared a war on its rival Bukania', ""Bukania's ally Fasasania joined the war on defenders side"", ""Bukania's ally Jepsa joined the war on defenders side"", ""Bukania's ally Sasburgia joined the war on defenders side"", ""Bukania's ally Theonia joined the war on defenders side"", ""Bukania's ally Joentara joined the war on defenders side"", ""Bukania's ally Thropebeia joined the war on defenders side"", ""Bukania's ally Tapocia joined the war on defenders side"", ""Chamia's ally Shahia avoided entering the war"", ""Chamia's ally Tyrianti joined the war on attackers side"", ""Chamia's ally Hetos did not join the war as its allies are in war on both sides"", ""Chamia's ally Vavala avoided entering the war"", ""Chamia's ally Eljanmaa avoided entering the war"", ""Chamia's ally Mulurikia avoided entering the war""], ['Druriria-Riririgenian War', 'Druriria declared a war on its rival Riririgen', ""Riririgen's ally Vavala joined the war on defenders side""], ['Eljanmaa-Vavalian War', 'Eljanmaa declared a war on its rival Vavala', ""Vavala's ally Fasasania joined the war on defenders side"", ""Vavala's ally Chamia joined the war on defenders side"", ""Vavala's ally Hetos joined the war on defenders side"", ""Vavala's ally Sasburgia joined the war on defenders side"", ""Vavala's ally Theonia joined the war on defenders side"", ""Vavala's ally Joentara joined the war on defenders side"", ""Vavala's ally Tapocia joined the war on defenders side"", ""Vavala's ally Riririgen joined the war on defenders side"", ""Eljanmaa's ally Jepsa avoided entering the war""]]",[],,,,,,,,,,,,,,
-1,1,Shushjia,134.163,559.3905973434448,10,9472,59,"[4, 17, 14]","['x', 'x', 'Ally', 'Neutral', 'Rival', 'Ally', 'Friendly', 'Ally', 'Neutral', 'Neutral', 'Neutral', 'Ally', 'Neutral', 'Neutral', 'Suspicion', 'Unknown', 'Suspicion', 'Suspicion', 'Unknown', 'Unknown', 'Neutral', 'Suspicion', 'Ally', 'Neutral']","[1, 2, 3]",#66c2a5,1.0,1.0,Generic,2517.0,4.0,"{'t1': 'or', 'charges': [{'charge': 'greyhoundRampant', 't': 'azure', 'p': 'e', 't2': 'azure', 'size': 1.5}], 'shield': 'oval'}","[{'name': 'Absarish Conquest', 'start': 1522, 'end': 1523}, {'name': 'Joentaran Campaign', 'start': 1621, 'end': 1624}, {'name': 'Chamian Rebellion', 'start': 1636, 'end': 1640}]",Monarchy,Satrapy,Satrapy of Shushjia,"[1529.96484375, 535.61328125]",2.42,[]
-2,2,Fasasania,93.965,2483.557126760483,24,100778,532,"[20, 0, 12, 11]","['x', 'Ally', 'x', 'Neutral', 'Enemy', 'Neutral', 'Ally', 'Enemy', 'Friendly', 'Neutral', 'Ally', 'Suspicion', 'Neutral', 'Ally', 'Ally', 'Enemy', 'Unknown', 'Unknown', 'Friendly', 'Neutral', 'Ally', 'Ally', 'Suspicion', 'Friendly']","[4, 5, 6, 7, 8, 9, 111]",#fc8d62,1.0,2.0,Nomadic,1151.0,6.0,"{'t1': 'purpure', 'charges': [{'charge': 'lionPassantGuardant', 't': 'or', 'p': 'e', 't2': 'argent', 't3': 'or', 'size': 1.5}], 'shield': 'round'}","[{'name': 'Khanese Conquest', 'start': 1254, 'end': 1259}, {'name': 'Cielumnian Invasion', 'start': 1438, 'end': 1444}, {'name': 'Sasburgian Rebellion', 'start': 1493, 'end': 1494}, {'name': 'Tapocian Conquest', 'start': 1636, 'end': 1641}]",Monarchy,Empire,Fasasanian Empire,"[694.3046875, 401.5703125]",0.13,"[{'i': 0, 'a': 755, 'cell': 1153, 'x': 598.3400000000001, 'y': 340.13, 'bx': 598.3400000000001, 'by': 340.13, 'u': {'cavalry': 509, 'archers': 134, 'infantry': 111, 'artillery': 1}, 'n': 0, 'name': '2nd (Fasasan) Regiment', 'state': 2, 'icon': '🐴'}]"
-3,3,Shahia,62.424,599.1303105354309,8,10865,55,"[16, 7, 21, 5]","['x', 'Neutral', 'Neutral', 'x', 'Ally', 'Suspicion', 'Friendly', 'Suspicion', 'Enemy', 'Friendly', 'Unknown', 'Unknown', 'Neutral', 'Friendly', 'Unknown', 'Neutral', 'Enemy', 'Friendly', 'Neutral', 'Friendly', 'Neutral', 'Enemy', 'Unknown', 'Neutral']","[10, 11]",#8da0cb,1.0,3.0,Generic,1118.0,4.0,"{'t1': 'azure', 'ordinaries': [{'ordinary': 'bordure', 't': 'or'}], 'shield': 'oval'}","[{'name': 'Bukanian Campaign', 'start': 1397, 'end': 1398}, {'name': 'Palian Expedition', 'start': 1435, 'end': 1447}, {'name': 'Thropebeian Invasion', 'start': 1636, 'end': 1641}, {'name': 'Paranese Conflict', 'start': 1636, 'end': 1640}, {'name': 'Thropebian War', 'start': 1640, 'end': 1642}]",Monarchy,Satrapy,Satrapy of Shahia,"[1388.3203125, 313.5546875]",5.0,"[{'i': 0, 'a': 4610, 'cell': 946, 'x': 1374.58, 'y': 294.86, 'bx': 1374.58, 'by': 294.86, 'u': {'archers': 1941, 'cavalry': 586, 'artillery': 31, 'infantry': 2052}, 'n': 0, 'name': '2nd (Shah) Regiment', 'state': 3, 'icon': '⚔️'}]"
-4,4,Chamia,90.19399999999999,763.7615132331848,11,15125,73,"[17, 21, 1, 0, 6, 14]","['x', 'Rival', 'Enemy', 'Ally', 'x', 'Friendly', 'Enemy', 'Ally', 'Ally', 'Suspicion', 'Ally', 'Friendly', 'Enemy', 'Enemy', 'Enemy', 'Enemy', 'Enemy', 'Friendly', 'Ally', 'Suspicion', 'Enemy', 'Enemy', 'Friendly', 'Neutral']","[12, 13, 14, 112]",#e78ac3,1.0,4.0,Generic,2408.0,4.0,"{'t1': 'purpure', 'division': {'division': 'perFess', 't': 'or', 'line': 'straight'}, 'charges': [{'charge': 'horsePassant', 't': 'argent', 'p': 'k', 't2': 'argent', 'size': 0.7}, {'charge': 'skeleton', 't': 'azure', 'p': 'n', 'size': 0.7}], 'shield': 'oval'}","[{'name': 'Jowz Invasion', 'start': 1434, 'end': 1444}, {'name': 'Farehdeyan Rebellion', 'start': 1444, 'end': 1445}, {'name': 'Kahak Expedition', 'start': 1490, 'end': 1496}, {'name': 'Jepsan War', 'start': 1554, 'end': 1564}, {'name': 'Shushjian Rebellion', 'start': 1561, 'end': 1562}, {'name': 'Joentaran Conquest', 'start': 1636, 'end': 1641}, {'name': 'Bukanian War', 'start': 1641, 'end': 1642}]",Monarchy,Principality,Principality of Chamia,"[1427.73046875, 538.62890625]",4.73,"[{'i': 0, 'a': 3072, 'cell': 2508, 'x': 1401.94, 'y': 507.48, 'bx': 1401.94, 'by': 507.48, 'u': {'archers': 1298, 'cavalry': 438, 'artillery': 42, 'infantry': 1294}, 'n': 0, 'name': '2nd (Shustan) Regiment', 'state': 4, 'icon': '🏹'}, {'i': 1, 'a': 2676, 'cell': 2716, 'x': 1455.66, 'y': 567.58, 'bx': 1455.66, 'by': 567.58, 'u': {'archers': 1094, 'cavalry': 403, 'artillery': 39, 'infantry': 1140}, 'n': 0, 'name': '4th (Dugedia) Regiment', 'state': 4, 'icon': '⚔️'}, {'i': 2, 'a': 1602, 'cell': 2613, 'x': 1478.35, 'y': 527.1, 'bx': 1478.35, 'by': 527.1, 'u': {'archers': 691, 'cavalry': 198, 'infantry': 713}, 'n': 0, 'name': '6th (Dugedia) Regiment', 'state': 4, 'icon': '⚔️'}]"
-5,5,Pali,64.55499999999999,407.2445447444916,6,7586,44,"[3, 17, 21]","['x', 'Ally', 'Neutral', 'Suspicion', 'Friendly', 'x', 'Neutral', 'Neutral', 'Friendly', 'Unknown', 'Neutral', 'Suspicion', 'Neutral', 'Ally', 'Neutral', 'Unknown', 'Friendly', 'Suspicion', 'Suspicion', 'Unknown', 'Neutral', 'Suspicion', 'Suspicion', 'Neutral']","[15, 16]",#a6d854,1.0,5.0,Generic,1213.0,4.0,"{'t1': 'gules', 'division': {'division': 'perFess', 't': 'barry-or-purpure', 'line': 'straight'}, 'charges': [{'charge': 'centaur', 't': 'argent', 'p': 'k', 't2': 'argent', 't3': 'argent', 'size': 0.7}, {'charge': 'cancer', 't': 'azure', 'p': 'n', 'size': 0.7}], 'shield': 'oval'}","[{'name': 'Bukanian Crusade', 'start': 1519, 'end': 1526}, {'name': 'Qodshahr Campaign', 'start': 1636, 'end': 1641}, {'name': 'Gonut Invasion', 'start': 1636, 'end': 1637}]",Monarchy,Satrapy,Satrapy of Pali,"[1475.35546875, 349.69921875]",1.26,"[{'i': 0, 'a': 2707, 'cell': 1036, 'x': 1455.74, 'y': 319.18000000000006, 'bx': 1455.74, 'by': 319.18000000000006, 'u': {'archers': 1350, 'cavalry': 203, 'artillery': 28, 'infantry': 1126}, 'n': 0, 'name': '1st (Shemshania) Regiment', 'state': 5, 'icon': '🏹'}]"
-6,6,Jepsa,90.926,896.3595025241375,14,18423,98,"[4, 0, 18, 14]","['x', 'Friendly', 'Ally', 'Friendly', 'Enemy', 'Neutral', 'x', 'Enemy', 'Ally', 'Suspicion', 'Neutral', 'Friendly', 'Friendly', 'Neutral', 'Suspicion', 'Ally', 'Friendly', 'Neutral', 'Ally', 'Unknown', 'Friendly', 'Ally', 'Friendly', 'Neutral']","[17, 18, 19, 20, 113]",#ffd92f,1.0,6.0,Generic,3694.0,7.0,"{'t1': 'argent', 'charges': [{'charge': 'ratRampant', 't': 'purpure', 'p': 'e', 't2': 'purpure', 'size': 1.5}], 'shield': 'pavise'}","[{'name': 'Chamian Rebellion', 'start': 1396, 'end': 1403}, {'name': 'Haparan Invasion', 'start': 1447, 'end': 1451}, {'name': 'Tamsan War', 'start': 1636, 'end': 1640}, {'name': 'Forsmukan War', 'start': 1636, 'end': 1637}]",Monarchy,Principality,Principality of Jepsa,"[1349.84765625, 661.15234375]",1.94,"[{'i': 0, 'a': 3834, 'cell': 3588, 'x': 1301.15, 'y': 682.7, 'bx': 1301.15, 'by': 682.7, 'u': {'infantry': 1800, 'cavalry': 1045, 'artillery': 21, 'archers': 968}, 'n': 0, 'name': '1st (Seilumamas) Regiment', 'state': 6, 'icon': '⚔️'}, {'i': 1, 'a': 2998, 'cell': 3495, 'x': 1410.27, 'y': 670.3, 'bx': 1410.27, 'by': 670.3, 'u': {'archers': 1202, 'cavalry': 534, 'artillery': 21, 'infantry': 1241}, 'n': 0, 'name': '2nd (Raplaki) Regiment', 'state': 6, 'icon': '⚔️'}, {'i': 2, 'a': 2472, 'cell': 3488, 'x': 1358.71, 'y': 678.35, 'bx': 1358.71, 'by': 678.35, 'u': {'infantry': 1170, 'archers': 782, 'cavalry': 505, 'artillery': 15}, 'n': 0, 'name': '3rd (Kehmamen) Regiment', 'state': 6, 'icon': '⚔️'}, {'i': 3, 'a': 11, 'cell': 3495, 'x': 1415.85, 'y': 685.67, 'bx': 1415.85, 'by': 685.67, 'u': {'fleet': 11}, 'n': 1, 'name': '1st Fleet', 'state': 6, 'icon': '🌊'}]"
-7,7,Tyrianti,217.09800000000004,1045.2375438809395,21,20673,109,"[8, 16, 3, 21]","['x', 'Ally', 'Enemy', 'Suspicion', 'Ally', 'Neutral', 'Enemy', 'x', 'Friendly', 'Unknown', 'Friendly', 'Unknown', 'Enemy', 'Enemy', 'Enemy', 'Unknown', 'Enemy', 'Ally', 'Neutral', 'Neutral', 'Enemy', 'Enemy', 'Unknown', 'Neutral']","[21, 22, 23, 24, 25, 26]",#6dc3c3,1.0,7.0,Generic,190.0,2.0,"{'t1': 'argent', 'charges': [{'charge': 'thistle', 't': 'purpure', 'p': 'abcpqh', 'size': 0.5}], 'shield': 'boeotian'}","[{'name': 'Heto Conquest', 'start': 1334, 'end': 1335}, {'name': 'Thropebeian Conquest', 'start': 1385, 'end': 1386}, {'name': 'Naro Crusade', 'start': 1441, 'end': 1445}, {'name': 'Delean Campaign', 'start': 1578, 'end': 1579}]",Monarchy,Kingdom,Kingdom of Tyrianti,"[1263.359375, 229.515625]",2.89,"[{'i': 0, 'a': 4572, 'cell': 350, 'x': 1240.92, 'y': 192.03999999999996, 'bx': 1240.92, 'by': 192.03999999999996, 'u': {'archers': 1775, 'cavalry': 671, 'artillery': 42, 'infantry': 2084}, 'n': 0, 'name': '1st (Tenaigia) Regiment', 'state': 7, 'icon': '⚔️'}, {'i': 1, 'a': 3346, 'cell': 440, 'x': 1273.5, 'y': 192.85000000000002, 'bx': 1273.5, 'by': 192.85000000000002, 'u': {'archers': 1665, 'artillery': 25, 'infantry': 1397, 'cavalry': 259}, 'n': 0, 'name': '3rd (Menaipia) Regiment', 'state': 7, 'icon': '🏹'}, {'i': 2, 'a': 2578, 'cell': 534, 'x': 1273.23, 'y': 236.45000000000005, 'bx': 1273.23, 'by': 236.45000000000005, 'u': {'archers': 1005, 'cavalry': 374, 'infantry': 1178, 'artillery': 21}, 'n': 0, 'name': '4th (Cyzantibeth) Regiment', 'state': 7, 'icon': '⚔️'}, {'i': 3, 'a': 1607, 'cell': 265, 'x': 1296.26, 'y': 182.63, 'bx': 1296.26, 'by': 182.63, 'u': {'archers': 882, 'cavalry': 50, 'infantry': 604, 'artillery': 71}, 'n': 0, 'name': '6th (Askromepios) Regiment', 'state': 7, 'icon': '🏹'}, {'i': 4, 'a': 31, 'cell': 265, 'x': 1301.3, 'y': 161.80999999999995, 'bx': 1301.3, 'by': 161.80999999999995, 'u': {'fleet': 31}, 'n': 1, 'name': '1st Fleet', 'state': 7, 'icon': '🌊'}]"
-8,8,Hetos,123.45399999999997,1020.7341094613075,19,22656,115,"[13, 7, 0, 21]","['x', 'Neutral', 'Friendly', 'Enemy', 'Ally', 'Friendly', 'Ally', 'Friendly', 'x', 'Neutral', 'Ally', 'Neutral', 'Friendly', 'Rival', 'Friendly', 'Enemy', 'Ally', 'Friendly', 'Neutral', 'Unknown', 'Friendly', 'Rival', 'Neutral', 'Suspicion']","[27, 28, 29, 30, 31, 114, 115]",#ff9a66,1.0,8.0,Generic,249.0,2.0,"{'t1': 'gules', 'ordinaries': [{'ordinary': 'bend', 't': 'argent', 'line': 'wavy'}], 'charges': [{'charge': 'serpent', 't': 'gules', 'p': 'jo', 't2': 'or', 'size': 0.7}], 'shield': 'boeotian'}","[{'name': 'Theonian Invasion', 'start': 1220, 'end': 1224}, {'name': 'Bukanian Campaign', 'start': 1354, 'end': 1363}, {'name': 'Tyriantian Crusade', 'start': 1465, 'end': 1466}, {'name': 'Kno Intervention', 'start': 1555, 'end': 1556}]",Theocracy,Patriarchate,Patriarchate of Hetos,"[1146.0390625, 254.7890625]",1.58,"[{'i': 0, 'a': 932, 'cell': 1289, 'x': 1163.53, 'y': 365.9, 'bx': 1163.53, 'by': 365.9, 'u': {'infantry': 429, 'archers': 218, 'cavalry': 284, 'artillery': 1}, 'n': 0, 'name': '3rd (Phaismebe) Regiment', 'state': 8, 'icon': '⚔️'}]"
-9,9,Druriria,38.262,279.6486120223999,6,6986,41,"[10, 22, 23, 19]","['x', 'Neutral', 'Neutral', 'Friendly', 'Suspicion', 'Unknown', 'Suspicion', 'Unknown', 'Neutral', 'x', 'Enemy', 'Friendly', 'Unknown', 'Neutral', 'Neutral', 'Friendly', 'Neutral', 'Suspicion', 'Unknown', 'Suspicion', 'Neutral', 'Unknown', 'Friendly', 'Enemy']","[32, 33, 116]",#b5b0c1,1.0,9.0,Naval,3562.0,1.0,"{'t1': 'vert', 'division': {'division': 'perFess', 't': 'argent', 'line': 'flechy'}, 'charges': [{'charge': 'goutte', 't': 'or', 'p': 'kn', 'divided': 'counter', 'size': 0.7}], 'shield': 'roman'}","[{'name': 'Vebutegian Campaign', 'start': 1432, 'end': 1433}, {'name': 'Naplarian War', 'start': 1514, 'end': 1521}, {'name': 'Vavalan Crusade', 'start': 1539, 'end': 1540}, {'name': 'Riririgenese Conflict', 'start': 1542, 'end': 1543}, {'name': 'Riririgenian War', 'start': 1642, 'end': 1642}]",Monarchy,Grand Duchy,Grand Duchy of Druriria,"[981.265625, 676.171875]",5.0,[]
-10,10,Vavala,26.101999999999997,634.9750890135765,8,20647,103,"[0, 15, 22, 9, 19]","['x', 'Neutral', 'Ally', 'Unknown', 'Ally', 'Neutral', 'Neutral', 'Friendly', 'Ally', 'Enemy', 'x', 'Friendly', 'Ally', 'Ally', 'Ally', 'Enemy', 'Neutral', 'Neutral', 'Neutral', 'Friendly', 'Ally', 'Friendly', 'Friendly', 'Ally']","[34, 35, 117, 118]",#e191dc,1.0,10.0,Generic,3460.0,7.0,"{'t1': 'argent', 'division': {'division': 'perPale', 't': 'vert', 'line': 'straight'}, 'ordinaries': [{'ordinary': 'fessCotissed', 't': 'gules', 'line': 'straight'}], 'shield': 'pavise'}","[{'name': 'Druririan Invasion', 'start': 1363, 'end': 1369}, {'name': 'Oitapirt War', 'start': 1376, 'end': 1385}, {'name': 'Eljanmaan War', 'start': 1636, 'end': 1637}, {'name': 'Vebutegian Conflict', 'start': 1636, 'end': 1641}, {'name': 'Kausupinese Rebellion', 'start': 1636, 'end': 1641}, {'name': 'Eljanmian War', 'start': 1639, 'end': 1642}]",Monarchy,Kingdom,Kingdom of Vavala,"[1026.1328125, 558.9453125]",2.77,"[{'i': 0, 'a': 3532, 'cell': 3264, 'x': 1052.16, 'y': 650.42, 'bx': 1052.16, 'by': 650.42, 'u': {'infantry': 1408, 'archers': 873, 'cavalry': 1236, 'artillery': 15}, 'n': 0, 'name': '1st (Hoskog) Regiment', 'state': 10, 'icon': '⚔️'}, {'i': 1, 'a': 1942, 'cell': 2184, 'x': 1099.8, 'y': 494.28, 'bx': 1099.8, 'by': 494.28, 'u': {'infantry': 544, 'archers': 349, 'cavalry': 1048, 'artillery': 1}, 'n': 0, 'name': '3rd (Hinkania) Regiment', 'state': 10, 'icon': '🐴'}, {'i': 2, 'a': 7, 'cell': 3463, 'x': 1022.75, 'y': 668.74, 'bx': 1022.75, 'by': 668.74, 'u': {'fleet': 7}, 'n': 1, 'name': '1st Fleet', 'state': 10, 'icon': '🌊'}]"
-11,11,Cielumnia,234.739,1734.4449908733368,30,39609,222,"[2, 0, 22, 12]","['x', 'Ally', 'Suspicion', 'Unknown', 'Friendly', 'Suspicion', 'Friendly', 'Unknown', 'Neutral', 'Friendly', 'Friendly', 'x', 'Suspicion', 'Suspicion', 'Ally', 'Friendly', 'Neutral', 'Suspicion', 'Friendly', 'Unknown', 'Friendly', 'Neutral', 'Suzerain', 'Unknown']","[36, 37, 38, 39, 40, 41, 42, 43, 119, 120, 121]",#c8e655,1.0,11.0,Naval,3446.0,1.0,"{'t1': 'azure', 'charges': [{'charge': 'lozenge', 't': 'argent', 'p': 'abcdefgzi', 'size': 0.3}], 'shield': 'roman'}","[{'name': 'Sasburgian Campaign', 'start': 1420, 'end': 1421}, {'name': 'Ulum Crusade', 'start': 1591, 'end': 1598}, {'name': 'Vetian Invasion', 'start': 1617, 'end': 1618}, {'name': 'Vebutegian War', 'start': 1636, 'end': 1641}]",Union,Confederation,Cielumnian Confederation,"[728.5859375, 690.0078125]",0.39,[]
-12,12,Sasburgia,501.7950000000001,3463.3310148715973,70,69405,427,"[2, 0, 11]","['x', 'Neutral', 'Neutral', 'Neutral', 'Enemy', 'Neutral', 'Friendly', 'Enemy', 'Friendly', 'Unknown', 'Ally', 'Suspicion', 'x', 'Ally', 'Ally', 'Enemy', 'Neutral', 'Neutral', 'Ally', 'Neutral', 'Ally', 'Ally', 'Suspicion', 'Neutral']","[44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 122]",#ffee35,1.0,12.0,Naval,3127.0,5.0,"{'t1': 'or', 'ordinaries': [{'ordinary': 'bordure', 't': 'azure'}], 'charges': [{'charge': 'skeleton', 't': 'azure', 'p': 'e', 'size': 1.1}], 'shield': 'round'}","[{'name': 'Alindorf Campaign', 'start': 1502, 'end': 1505}, {'name': 'Schliburg Campaign', 'start': 1544, 'end': 1551}, {'name': 'Cielumnian War', 'start': 1636, 'end': 1641}]",Monarchy,Empire,Sasburgian Empire,"[536.728515625, 649.212890625]",0.24,"[{'i': 0, 'a': 707, 'cell': 4027, 'x': 618.3, 'y': 750, 'bx': 618.3, 'by': 750, 'u': {'archers': 280, 'artillery': 10, 'infantry': 358, 'cavalry': 59}, 'n': 0, 'name': '2nd (Hauheterswe) Regiment', 'state': 12, 'icon': '⚔️'}]"
-13,13,Theonia,65.782,517.9201681613922,10,11666,66,"[8, 20, 0]","['x', 'Neutral', 'Ally', 'Friendly', 'Enemy', 'Ally', 'Neutral', 'Enemy', 'Rival', 'Neutral', 'Ally', 'Suspicion', 'Ally', 'x', 'Friendly', 'Enemy', 'Neutral', 'Neutral', 'Neutral', 'Unknown', 'Friendly', 'Ally', 'Suspicion', 'Suspicion']","[62, 63, 64, 123]",#61dcba,1.0,13.0,Generic,424.0,2.0,"{'t1': 'sable', 'ordinaries': [{'ordinary': 'fess', 't': 'argent', 'line': 'escartely'}], 'charges': [{'charge': 'key', 't': 'gules', 'p': 'def', 'size': 0.5}], 'shield': 'boeotian'}","[{'name': 'Tapocian War', 'start': 1428, 'end': 1437}, {'name': 'Heto War', 'start': 1441, 'end': 1449}, {'name': 'Tyrexand Expedition', 'start': 1490, 'end': 1493}]",Monarchy,Despotate,Theonian Despotate,"[1061.734375, 222.515625]",2.05,"[{'i': 0, 'a': 3390, 'cell': 424, 'x': 1040.2, 'y': 215.39999999999998, 'bx': 1040.2, 'by': 215.39999999999998, 'u': {'archers': 1108, 'cavalry': 634, 'artillery': 34, 'infantry': 1614}, 'n': 0, 'name': '1st (Lelia) Regiment', 'state': 13, 'icon': '👑'}, {'i': 1, 'a': 2504, 'cell': 1384, 'x': 1124.86, 'y': 378.3299999999999, 'bx': 1124.86, 'by': 378.3299999999999, 'u': {'infantry': 1172, 'cavalry': 697, 'artillery': 13, 'archers': 622}, 'n': 0, 'name': '2nd (Pydrialeta) Regiment', 'state': 13, 'icon': '⚔️'}]"
-14,14,Joentara,42.931999999999995,550.5569538772106,7,10935,68,"[1, 4, 0, 6]","['x', 'Suspicion', 'Ally', 'Unknown', 'Enemy', 'Neutral', 'Suspicion', 'Enemy', 'Friendly', 'Neutral', 'Ally', 'Ally', 'Ally', 'Friendly', 'x', 'Enemy', 'Neutral', 'Ally', 'Ally', 'Neutral', 'Friendly', 'Ally', 'Ally', 'Neutral']","[65, 66]",#ffb46b,1.0,14.0,Generic,3503.0,7.0,"{'t1': 'argent', 'ordinaries': [{'ordinary': 'cross', 't': 'gules', 'line': 'straight'}], 'charges': [{'charge': 'crossHummetty', 't': 'argent', 'p': 'beh', 'size': 0.3}], 'shield': 'pavise'}","[{'name': 'Jepsan War', 'start': 1286, 'end': 1298}, {'name': 'Rapian War', 'start': 1484, 'end': 1485}, {'name': 'Husakiman Expedition', 'start': 1524, 'end': 1531}, {'name': 'Hospokian War', 'start': 1620, 'end': 1621}]",Monarchy,Grand Duchy,Grand Duchy of Joentara,"[1501.90625, 683.28125]",3.93,[]
-15,15,Eljanmaa,136.54200000000003,980.3307824730873,15,25724,134,"[10, 0, 18]","['x', 'Unknown', 'Enemy', 'Neutral', 'Enemy', 'Unknown', 'Ally', 'Unknown', 'Enemy', 'Friendly', 'Enemy', 'Friendly', 'Enemy', 'Enemy', 'Enemy', 'x', 'Unknown', 'Neutral', 'Suspicion', 'Suspicion', 'Enemy', 'Friendly', 'Friendly', 'Enemy']","[67, 68, 69, 70, 124]",#89afe6,1.0,15.0,Generic,3773.0,7.0,"{'t1': 'sable', 'ordinaries': [{'ordinary': 'fess', 't': 'or', 'line': 'straight'}], 'charges': [{'charge': 'trowel', 't': 'or', 'p': 'abcz', 't2': 'or', 'size': 0.5}], 'shield': 'pavise'}","[{'name': 'Vavalan Campaign', 'start': 1441, 'end': 1457}, {'name': 'Ruotian Conquest', 'start': 1562, 'end': 1573}, {'name': 'Mulurikian War', 'start': 1636, 'end': 1637}, {'name': 'Vavalian War', 'start': 1639, 'end': 1642}]",Monarchy,Kingdom,Kingdom of Eljanmaa,"[1146.640625, 614.984375]",1.58,[]
-16,16,Thropebeia,102.43799999999999,594.1249159574509,11,11123,73,"[7, 3]","['x', 'Suspicion', 'Unknown', 'Enemy', 'Enemy', 'Friendly', 'Friendly', 'Enemy', 'Ally', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Unknown', 'x', 'Neutral', 'Unknown', 'Neutral', 'Friendly', 'Ally', 'Neutral', 'Neutral']","[71, 72, 73]",#d3aad5,1.0,16.0,Generic,362.0,2.0,"{'t1': 'argent', 'division': {'division': 'perFess', 't': 'azure', 'line': 'straight'}, 'ordinaries': [{'ordinary': 'pileInBend', 't': 'gules', 'divided': 'counter'}], 'shield': 'boeotian'}","[{'name': 'Shahian Campaign', 'start': 1420, 'end': 1422}, {'name': 'Tyriantian Conflict', 'start': 1544, 'end': 1545}, {'name': 'Shahian War', 'start': 1640, 'end': 1642}]",Union,Union,Thropebeian Union,"[1361.125, 193.875]",5.0,"[{'i': 0, 'a': 4228, 'cell': 266, 'x': 1310.9, 'y': 170, 'bx': 1310.9, 'by': 170, 'u': {'archers': 2155, 'cavalry': 297, 'infantry': 1754, 'artillery': 22}, 'n': 0, 'name': '1st (Atropesia) Regiment', 'state': 16, 'icon': '🏹'}, {'i': 1, 'a': 3109, 'cell': 271, 'x': 1383, 'y': 174, 'bx': 1383, 'by': 174, 'u': {'archers': 1645, 'cavalry': 156, 'artillery': 77, 'infantry': 1231}, 'n': 0, 'name': '4th (Atropesia) Regiment', 'state': 16, 'icon': '🏹'}, {'i': 2, 'a': 2768, 'cell': 446, 'x': 1354.92, 'y': 207.81999999999994, 'bx': 1354.92, 'by': 207.81999999999994, 'u': {'archers': 1399, 'cavalry': 206, 'infantry': 1159, 'artillery': 4}, 'n': 0, 'name': '5th (Dopepikonia) Regiment', 'state': 16, 'icon': '🏹'}, {'i': 3, 'a': 23, 'cell': 271, 'x': 1398.79, 'y': 180.95000000000005, 'bx': 1398.79, 'by': 180.95000000000005, 'u': {'fleet': 23}, 'n': 1, 'name': '1st Fleet', 'state': 16, 'icon': '🌊'}]"
-17,17,Ziyeh,85.07000000000001,524.2394409179688,13,11371,61,"[5, 21, 4, 1]","['x', 'Suspicion', 'Unknown', 'Friendly', 'Friendly', 'Suspicion', 'Neutral', 'Ally', 'Friendly', 'Suspicion', 'Neutral', 'Suspicion', 'Neutral', 'Neutral', 'Ally', 'Neutral', 'Neutral', 'x', 'Neutral', 'Friendly', 'Neutral', 'Rival', 'Suspicion', 'Unknown']","[74, 75, 76, 77]",#f9d356,1.0,17.0,Generic,1919.0,4.0,"{'t1': 'purpure', 'division': {'division': 'perPale', 't': 'argent', 'line': 'rayonne'}, 'charges': [{'charge': 'palace', 't': 'or', 'p': 'p', 'size': 0.7}, {'charge': 'bookClosed2', 't': 'gules', 'p': 'q', 'size': 0.7}], 'shield': 'oval'}","[{'name': 'Bukanian Rebellion', 'start': 1460, 'end': 1461}, {'name': 'Chamian War', 'start': 1527, 'end': 1532}, {'name': 'Tiyanese Expedition', 'start': 1617, 'end': 1618}, {'name': 'Shushjian War', 'start': 1636, 'end': 1641}]",Monarchy,Satrapy,Satrapy of Ziyeh,"[1506.2421875, 426.4453125]",1.85,[]
-18,18,Mulurikia,219.55100000000002,1736.8593246936798,27,27015,150,"[6, 0, 15]","['x', 'Unknown', 'Friendly', 'Neutral', 'Ally', 'Suspicion', 'Ally', 'Neutral', 'Neutral', 'Unknown', 'Neutral', 'Friendly', 'Ally', 'Neutral', 'Ally', 'Suspicion', 'Unknown', 'Neutral', 'x', 'Neutral', 'Neutral', 'Neutral', 'Friendly', 'Neutral']","[78, 79, 80, 81, 82, 83, 84, 125]",#94c1aa,1.0,18.0,Generic,4287.0,7.0,"{'t1': 'argent', 'division': {'division': 'perPale', 't': 'vert', 'line': 'rayonne'}, 'charges': [{'charge': 'mullet', 't': 'purpure', 'p': 'p', 'size': 0.7}, {'charge': 'crossSaltire', 't': 'or', 'p': 'q', 'size': 0.7}], 'shield': 'pavise'}","[{'name': 'Ravan Invasion', 'start': 1428, 'end': 1436}, {'name': 'Vehjan War', 'start': 1518, 'end': 1519}, {'name': 'Eljanmaan Conquest', 'start': 1635, 'end': 1641}]",Monarchy,Kingdom,Kingdom of Mulurikia,"[1313.873046875, 795.275390625]",0.22,[]
-19,19,Naplaria,98.01599999999999,938.8403502702713,14,16877,99,"[10, 9, 23]","['x', 'Unknown', 'Neutral', 'Friendly', 'Suspicion', 'Unknown', 'Unknown', 'Neutral', 'Unknown', 'Suspicion', 'Friendly', 'Unknown', 'Neutral', 'Unknown', 'Neutral', 'Suspicion', 'Neutral', 'Friendly', 'Neutral', 'x', 'Neutral', 'Neutral', 'Unknown', 'Suspicion']","[85, 86, 87, 88, 126]",#8dbbb7,1.0,19.0,Generic,3870.0,7.0,"{'t1': 'argent', 'division': {'division': 'gyronny', 't': 'sable'}, 'charges': [{'charge': 'goutte', 't': 'azure', 'p': 'behdf', 'divided': 'counter', 'size': 0.4}], 'shield': 'pavise'}","[{'name': 'Osalalan Campaign', 'start': 1591, 'end': 1596}, {'name': 'Narniokian Conflict', 'start': 1636, 'end': 1641}, {'name': 'Riririgenese War', 'start': 1636, 'end': 1641}]",Theocracy,Theocracy,Naplarian Theocracy,"[1021.87890625, 764.48046875]",0.42,"[{'i': 0, 'a': 1573, 'cell': 4136, 'x': 1015.41, 'y': 780.62, 'bx': 1015.41, 'by': 780.62, 'u': {'archers': 530, 'cavalry': 325, 'infantry': 713, 'artillery': 5}, 'n': 0, 'name': '1st (Nogesihi) Regiment', 'state': 19, 'icon': '⚔️'}]"
-20,20,Tapocia,262.91,2226.944678068161,40,49385,269,"[2, 13, 0]","['x', 'Neutral', 'Ally', 'Neutral', 'Enemy', 'Neutral', 'Friendly', 'Enemy', 'Friendly', 'Neutral', 'Ally', 'Friendly', 'Ally', 'Friendly', 'Friendly', 'Enemy', 'Friendly', 'Neutral', 'Neutral', 'Neutral', 'x', 'Ally', 'Friendly', 'Unknown']","[89, 90, 91, 92, 93, 94, 95, 96, 97, 98]",#b49ed5,1.0,20.0,Generic,598.0,2.0,"{'t1': 'sable', 'ordinaries': [{'ordinary': 'fess', 't': 'or', 'line': 'dragonTeeth'}], 'charges': [{'charge': 'greyhoundSejant', 't': 'gules', 'p': 'def', 't2': 'gules', 't3': 'or', 'size': 0.5}], 'shield': 'boeotian'}","[{'name': 'Ekionese Invasion', 'start': 1464, 'end': 1470}, {'name': 'Fasasanian War', 'start': 1542, 'end': 1546}, {'name': 'Theonian Campaign', 'start': 1544, 'end': 1545}]",Monarchy,Empire,Tapocian Empire,"[960.884765625, 312.017578125]",0.14,"[{'i': 0, 'a': 370, 'cell': 399, 'x': 832.78, 'y': 196.89999999999998, 'bx': 832.78, 'by': 196.89999999999998, 'u': {'archers': 121, 'artillery': 1, 'infantry': 175, 'cavalry': 73}, 'n': 0, 'name': '3rd (Cypethos) Regiment', 'state': 20, 'icon': '⚔️'}]"
-21,21,Bukania,230.10600000000002,1900.8002364635468,29,30803,150,"[3, 7, 0, 8, 5, 17, 4]","['x', 'Suspicion', 'Ally', 'Enemy', 'Enemy', 'Suspicion', 'Ally', 'Enemy', 'Rival', 'Unknown', 'Friendly', 'Neutral', 'Ally', 'Ally', 'Ally', 'Friendly', 'Ally', 'Rival', 'Neutral', 'Neutral', 'Ally', 'x', 'Neutral', 'Neutral']","[99, 100, 101, 102, 103, 104, 105, 106]",#1ac3c6,1.0,21.0,Generic,1705.0,4.0,"{'t1': 'gules', 'ordinaries': [{'ordinary': 'cross', 't': 'or', 'line': 'straight'}], 'charges': [{'charge': 'hourglass', 't': 'sable', 'p': 'behdf', 't2': 'argent', 't3': 'or', 'size': 0.3}], 'shield': 'oval'}","[{'name': 'Ziyeh Campaign', 'start': 1191, 'end': 1201}, {'name': 'Pirzanan Conflict', 'start': 1421, 'end': 1422}, {'name': 'Jabad Conflict', 'start': 1444, 'end': 1445}, {'name': 'Palian War', 'start': 1497, 'end': 1505}, {'name': 'Heto Campaign', 'start': 1541, 'end': 1551}, {'name': 'Arzalabadian Invasion', 'start': 1569, 'end': 1578}, {'name': 'Shahian War', 'start': 1636, 'end': 1639}, {'name': 'Chamian War', 'start': 1641, 'end': 1642}]",Monarchy,Kingdom,Kingdom of Bukania,"[1356.333984375, 431.638671875]",2.32,"[{'i': 0, 'a': 3551, 'cell': 1709, 'x': 1368.16, 'y': 412.35, 'bx': 1368.16, 'by': 412.35, 'u': {'infantry': 1746, 'archers': 1051, 'cavalry': 731, 'artillery': 23}, 'n': 0, 'name': '2nd (Shemshahria) Regiment', 'state': 21, 'icon': '⚔️'}, {'i': 1, 'a': 3174, 'cell': 1201, 'x': 1306.09, 'y': 354.87, 'bx': 1306.09, 'by': 354.87, 'u': {'infantry': 1585, 'archers': 875, 'cavalry': 706, 'artillery': 8}, 'n': 0, 'name': '4th (Shemshahria) Regiment', 'state': 21, 'icon': '⚔️'}]"
-22,22,Vebutegia,47.384,375.32471990585327,6,8209,45,"[0, 10, 11, 9]","['x', 'Ally', 'Suspicion', 'Unknown', 'Friendly', 'Suspicion', 'Friendly', 'Unknown', 'Neutral', 'Friendly', 'Friendly', 'Vassal', 'Suspicion', 'Suspicion', 'Ally', 'Friendly', 'Neutral', 'Suspicion', 'Friendly', 'Unknown', 'Friendly', 'Neutral', 'x', 'Unknown']","[107, 108]",#ffd344,1.0,22.0,Naval,3453.0,1.0,"{'t1': 'or', 'ordinaries': [{'ordinary': 'pile', 't': 'azure'}], 'charges': [{'charge': 'agnusDei', 't': 'or', 'p': 'b', 't2': 'gules', 'size': 0.5}], 'shield': 'roman'}","[{'name': 'Druririan War', 'start': 1383, 'end': 1384}, {'name': 'Auretonis Conquest', 'start': 1497, 'end': 1500}, {'name': 'Vavalan Campaign', 'start': 1551, 'end': 1552}, {'name': 'Cielumnian Campaign', 'start': 1636, 'end': 1641}]",Monarchy,Grand Duchy,Grand Duchy of Vebutegia,"[926.6796875, 606.9921875]",0.44,"[{'i': 0, 'a': 551, 'cell': 2970, 'x': 929.41, 'y': 593.74, 'bx': 929.41, 'by': 593.74, 'u': {'infantry': 278, 'cavalry': 82, 'archers': 183, 'artillery': 8}, 'n': 0, 'name': '1st (Vilbium) Regiment', 'state': 22, 'icon': '⚔️'}]"
-23,23,Riririgen,29.500000000000004,195.3438594341278,3,3524,23,"[9, 19]","['x', 'Neutral', 'Friendly', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Suspicion', 'Enemy', 'Ally', 'Unknown', 'Neutral', 'Suspicion', 'Neutral', 'Enemy', 'Neutral', 'Unknown', 'Neutral', 'Suspicion', 'Unknown', 'Neutral', 'Unknown', 'x']","[109, 110]",#b1ce72,1.0,23.0,Naval,3754.0,1.0,"{'t1': 'sable', 'charges': [{'charge': 'escallop', 't': 'argent', 'p': 'e', 'size': 1.5}], 'shield': 'roman'}","[{'name': 'Castrum Invasion', 'start': 1564, 'end': 1565}, {'name': 'Druririan War', 'start': 1636, 'end': 1637}, {'name': 'Druririan War', 'start': 1642, 'end': 1642}]",Monarchy,Duchy,Duchy of Riririgen,"[911.40625, 701.96875]",5.0,[]
+0,0,Neutrals,17.029,824.3131349384785,2,77037,399,"[2, 20, 8, 21, 13, 10, 15, 11, 22, 12, 4, 6, 14, 18]","Shahia-Thropebian War
+Shahia declared a war on its rival Thropebeia
+Thropebeia's ally Hetos joined the war on defenders side
+Thropebeia's ally Bukania joined the war on defenders side
+Shahia's ally Chamia avoided entering the war
+Chamia-Bukanian War
+Chamia declared a war on its rival Bukania
+Bukania's ally Fasasania joined the war on defenders side
+Bukania's ally Jepsa joined the war on defenders side
+Bukania's ally Sasburgia joined the war on defenders side
+Bukania's ally Theonia joined the war on defenders side
+Bukania's ally Joentara joined the war on defenders side
+Bukania's ally Thropebeia joined the war on defenders side
+Bukania's ally Tapocia joined the war on defenders side
+Chamia's ally Shahia avoided entering the war
+Chamia's ally Tyrianti joined the war on attackers side
+Chamia's ally Hetos did not join the war as its allies are in war on both sides
+Chamia's ally Vavala avoided entering the war
+Chamia's ally Eljanmaa avoided entering the war
+Chamia's ally Mulurikia avoided entering the war
+Druriria-Riririgenian War
+Druriria declared a war on its rival Riririgen
+Riririgen's ally Vavala joined the war on defenders side
+Eljanmaa-Vavalian War
+Eljanmaa declared a war on its rival Vavala
+Vavala's ally Fasasania joined the war on defenders side
+Vavala's ally Chamia joined the war on defenders side
+Vavala's ally Hetos joined the war on defenders side
+Vavala's ally Sasburgia joined the war on defenders side
+Vavala's ally Theonia joined the war on defenders side
+Vavala's ally Joentara joined the war on defenders side
+Vavala's ally Tapocia joined the war on defenders side
+Vavala's ally Riririgen joined the war on defenders side
+Eljanmaa's ally Jepsa avoided entering the war",[],,,,,,,,,,,,,,
+1,1,Shushjia,134.163,559.3905973434448,10,9472,59,"[4, 17, 14]","x
+x
+Ally
+Neutral
+Rival
+Ally
+Friendly
+Ally
+Neutral
+Neutral
+Neutral
+Ally
+Neutral
+Neutral
+Suspicion
+Unknown
+Suspicion
+Suspicion
+Unknown
+Unknown
+Neutral
+Suspicion
+Ally
+Neutral","[1, 2, 3]",#66c2a5,1.0,1.0,Generic,2517.0,4.0,"{'t1': 'or', 'charges': [{'charge': 'greyhoundRampant', 't': 'azure', 'p': 'e', 't2': 'azure', 'size': 1.5}], 'shield': 'oval'}","Absarish Conquest - 1522 - 1523
+Joentaran Campaign - 1621 - 1624
+Chamian Rebellion - 1636 - 1640",Monarchy,Satrapy,Satrapy of Shushjia,"[1529.96484375, 535.61328125]",2.42,[]
+2,2,Fasasania,93.965,2483.557126760483,24,100778,532,"[20, 0, 12, 11]","x
+Ally
+x
+Neutral
+Enemy
+Neutral
+Ally
+Enemy
+Friendly
+Neutral
+Ally
+Suspicion
+Neutral
+Ally
+Ally
+Enemy
+Unknown
+Unknown
+Friendly
+Neutral
+Ally
+Ally
+Suspicion
+Friendly","[4, 5, 6, 7, 8, 9, 111]",#fc8d62,1.0,2.0,Nomadic,1151.0,6.0,"{'t1': 'purpure', 'charges': [{'charge': 'lionPassantGuardant', 't': 'or', 'p': 'e', 't2': 'argent', 't3': 'or', 'size': 1.5}], 'shield': 'round'}","Khanese Conquest - 1254 - 1259
+Cielumnian Invasion - 1438 - 1444
+Sasburgian Rebellion - 1493 - 1494
+Tapocian Conquest - 1636 - 1641",Monarchy,Empire,Fasasanian Empire,"[694.3046875, 401.5703125]",0.13,"[{'i': 0, 'a': 755, 'cell': 1153, 'x': 598.3400000000001, 'y': 340.13, 'bx': 598.3400000000001, 'by': 340.13, 'u': {'cavalry': 509, 'archers': 134, 'infantry': 111, 'artillery': 1}, 'n': 0, 'name': '2nd (Fasasan) Regiment', 'state': 2, 'icon': '🐴'}]"
+3,3,Shahia,62.424,599.1303105354309,8,10865,55,"[16, 7, 21, 5]","x
+Neutral
+Neutral
+x
+Ally
+Suspicion
+Friendly
+Suspicion
+Enemy
+Friendly
+Unknown
+Unknown
+Neutral
+Friendly
+Unknown
+Neutral
+Enemy
+Friendly
+Neutral
+Friendly
+Neutral
+Enemy
+Unknown
+Neutral","[10, 11]",#8da0cb,1.0,3.0,Generic,1118.0,4.0,"{'t1': 'azure', 'ordinaries': [{'ordinary': 'bordure', 't': 'or'}], 'shield': 'oval'}","Bukanian Campaign - 1397 - 1398
+Palian Expedition - 1435 - 1447
+Thropebeian Invasion - 1636 - 1641
+Paranese Conflict - 1636 - 1640
+Thropebian War - 1640 - 1642",Monarchy,Satrapy,Satrapy of Shahia,"[1388.3203125, 313.5546875]",5.0,"[{'i': 0, 'a': 4610, 'cell': 946, 'x': 1374.58, 'y': 294.86, 'bx': 1374.58, 'by': 294.86, 'u': {'archers': 1941, 'cavalry': 586, 'artillery': 31, 'infantry': 2052}, 'n': 0, 'name': '2nd (Shah) Regiment', 'state': 3, 'icon': '⚔️'}]"
+4,4,Chamia,90.19399999999999,763.7615132331848,11,15125,73,"[17, 21, 1, 0, 6, 14]","x
+Rival
+Enemy
+Ally
+x
+Friendly
+Enemy
+Ally
+Ally
+Suspicion
+Ally
+Friendly
+Enemy
+Enemy
+Enemy
+Enemy
+Enemy
+Friendly
+Ally
+Suspicion
+Enemy
+Enemy
+Friendly
+Neutral","[12, 13, 14, 112]",#e78ac3,1.0,4.0,Generic,2408.0,4.0,"{'t1': 'purpure', 'division': {'division': 'perFess', 't': 'or', 'line': 'straight'}, 'charges': [{'charge': 'horsePassant', 't': 'argent', 'p': 'k', 't2': 'argent', 'size': 0.7}, {'charge': 'skeleton', 't': 'azure', 'p': 'n', 'size': 0.7}], 'shield': 'oval'}","Jowz Invasion - 1434 - 1444
+Farehdeyan Rebellion - 1444 - 1445
+Kahak Expedition - 1490 - 1496
+Jepsan War - 1554 - 1564
+Shushjian Rebellion - 1561 - 1562
+Joentaran Conquest - 1636 - 1641
+Bukanian War - 1641 - 1642",Monarchy,Principality,Principality of Chamia,"[1427.73046875, 538.62890625]",4.73,"[{'i': 0, 'a': 3072, 'cell': 2508, 'x': 1401.94, 'y': 507.48, 'bx': 1401.94, 'by': 507.48, 'u': {'archers': 1298, 'cavalry': 438, 'artillery': 42, 'infantry': 1294}, 'n': 0, 'name': '2nd (Shustan) Regiment', 'state': 4, 'icon': '🏹'}, {'i': 1, 'a': 2676, 'cell': 2716, 'x': 1455.66, 'y': 567.58, 'bx': 1455.66, 'by': 567.58, 'u': {'archers': 1094, 'cavalry': 403, 'artillery': 39, 'infantry': 1140}, 'n': 0, 'name': '4th (Dugedia) Regiment', 'state': 4, 'icon': '⚔️'}, {'i': 2, 'a': 1602, 'cell': 2613, 'x': 1478.35, 'y': 527.1, 'bx': 1478.35, 'by': 527.1, 'u': {'archers': 691, 'cavalry': 198, 'infantry': 713}, 'n': 0, 'name': '6th (Dugedia) Regiment', 'state': 4, 'icon': '⚔️'}]"
+5,5,Pali,64.55499999999999,407.2445447444916,6,7586,44,"[3, 17, 21]","x
+Ally
+Neutral
+Suspicion
+Friendly
+x
+Neutral
+Neutral
+Friendly
+Unknown
+Neutral
+Suspicion
+Neutral
+Ally
+Neutral
+Unknown
+Friendly
+Suspicion
+Suspicion
+Unknown
+Neutral
+Suspicion
+Suspicion
+Neutral","[15, 16]",#a6d854,1.0,5.0,Generic,1213.0,4.0,"{'t1': 'gules', 'division': {'division': 'perFess', 't': 'barry-or-purpure', 'line': 'straight'}, 'charges': [{'charge': 'centaur', 't': 'argent', 'p': 'k', 't2': 'argent', 't3': 'argent', 'size': 0.7}, {'charge': 'cancer', 't': 'azure', 'p': 'n', 'size': 0.7}], 'shield': 'oval'}","Bukanian Crusade - 1519 - 1526
+Qodshahr Campaign - 1636 - 1641
+Gonut Invasion - 1636 - 1637",Monarchy,Satrapy,Satrapy of Pali,"[1475.35546875, 349.69921875]",1.26,"[{'i': 0, 'a': 2707, 'cell': 1036, 'x': 1455.74, 'y': 319.18000000000006, 'bx': 1455.74, 'by': 319.18000000000006, 'u': {'archers': 1350, 'cavalry': 203, 'artillery': 28, 'infantry': 1126}, 'n': 0, 'name': '1st (Shemshania) Regiment', 'state': 5, 'icon': '🏹'}]"
+6,6,Jepsa,90.926,896.3595025241375,14,18423,98,"[4, 0, 18, 14]","x
+Friendly
+Ally
+Friendly
+Enemy
+Neutral
+x
+Enemy
+Ally
+Suspicion
+Neutral
+Friendly
+Friendly
+Neutral
+Suspicion
+Ally
+Friendly
+Neutral
+Ally
+Unknown
+Friendly
+Ally
+Friendly
+Neutral","[17, 18, 19, 20, 113]",#ffd92f,1.0,6.0,Generic,3694.0,7.0,"{'t1': 'argent', 'charges': [{'charge': 'ratRampant', 't': 'purpure', 'p': 'e', 't2': 'purpure', 'size': 1.5}], 'shield': 'pavise'}","Chamian Rebellion - 1396 - 1403
+Haparan Invasion - 1447 - 1451
+Tamsan War - 1636 - 1640
+Forsmukan War - 1636 - 1637",Monarchy,Principality,Principality of Jepsa,"[1349.84765625, 661.15234375]",1.94,"[{'i': 0, 'a': 3834, 'cell': 3588, 'x': 1301.15, 'y': 682.7, 'bx': 1301.15, 'by': 682.7, 'u': {'infantry': 1800, 'cavalry': 1045, 'artillery': 21, 'archers': 968}, 'n': 0, 'name': '1st (Seilumamas) Regiment', 'state': 6, 'icon': '⚔️'}, {'i': 1, 'a': 2998, 'cell': 3495, 'x': 1410.27, 'y': 670.3, 'bx': 1410.27, 'by': 670.3, 'u': {'archers': 1202, 'cavalry': 534, 'artillery': 21, 'infantry': 1241}, 'n': 0, 'name': '2nd (Raplaki) Regiment', 'state': 6, 'icon': '⚔️'}, {'i': 2, 'a': 2472, 'cell': 3488, 'x': 1358.71, 'y': 678.35, 'bx': 1358.71, 'by': 678.35, 'u': {'infantry': 1170, 'archers': 782, 'cavalry': 505, 'artillery': 15}, 'n': 0, 'name': '3rd (Kehmamen) Regiment', 'state': 6, 'icon': '⚔️'}, {'i': 3, 'a': 11, 'cell': 3495, 'x': 1415.85, 'y': 685.67, 'bx': 1415.85, 'by': 685.67, 'u': {'fleet': 11}, 'n': 1, 'name': '1st Fleet', 'state': 6, 'icon': '🌊'}]"
+7,7,Tyrianti,217.09800000000004,1045.2375438809395,21,20673,109,"[8, 16, 3, 21]","x
+Ally
+Enemy
+Suspicion
+Ally
+Neutral
+Enemy
+x
+Friendly
+Unknown
+Friendly
+Unknown
+Enemy
+Enemy
+Enemy
+Unknown
+Enemy
+Ally
+Neutral
+Neutral
+Enemy
+Enemy
+Unknown
+Neutral","[21, 22, 23, 24, 25, 26]",#6dc3c3,1.0,7.0,Generic,190.0,2.0,"{'t1': 'argent', 'charges': [{'charge': 'thistle', 't': 'purpure', 'p': 'abcpqh', 'size': 0.5}], 'shield': 'boeotian'}","Heto Conquest - 1334 - 1335
+Thropebeian Conquest - 1385 - 1386
+Naro Crusade - 1441 - 1445
+Delean Campaign - 1578 - 1579",Monarchy,Kingdom,Kingdom of Tyrianti,"[1263.359375, 229.515625]",2.89,"[{'i': 0, 'a': 4572, 'cell': 350, 'x': 1240.92, 'y': 192.03999999999996, 'bx': 1240.92, 'by': 192.03999999999996, 'u': {'archers': 1775, 'cavalry': 671, 'artillery': 42, 'infantry': 2084}, 'n': 0, 'name': '1st (Tenaigia) Regiment', 'state': 7, 'icon': '⚔️'}, {'i': 1, 'a': 3346, 'cell': 440, 'x': 1273.5, 'y': 192.85000000000002, 'bx': 1273.5, 'by': 192.85000000000002, 'u': {'archers': 1665, 'artillery': 25, 'infantry': 1397, 'cavalry': 259}, 'n': 0, 'name': '3rd (Menaipia) Regiment', 'state': 7, 'icon': '🏹'}, {'i': 2, 'a': 2578, 'cell': 534, 'x': 1273.23, 'y': 236.45000000000005, 'bx': 1273.23, 'by': 236.45000000000005, 'u': {'archers': 1005, 'cavalry': 374, 'infantry': 1178, 'artillery': 21}, 'n': 0, 'name': '4th (Cyzantibeth) Regiment', 'state': 7, 'icon': '⚔️'}, {'i': 3, 'a': 1607, 'cell': 265, 'x': 1296.26, 'y': 182.63, 'bx': 1296.26, 'by': 182.63, 'u': {'archers': 882, 'cavalry': 50, 'infantry': 604, 'artillery': 71}, 'n': 0, 'name': '6th (Askromepios) Regiment', 'state': 7, 'icon': '🏹'}, {'i': 4, 'a': 31, 'cell': 265, 'x': 1301.3, 'y': 161.80999999999995, 'bx': 1301.3, 'by': 161.80999999999995, 'u': {'fleet': 31}, 'n': 1, 'name': '1st Fleet', 'state': 7, 'icon': '🌊'}]"
+8,8,Hetos,123.45399999999997,1020.7341094613075,19,22656,115,"[13, 7, 0, 21]","x
+Neutral
+Friendly
+Enemy
+Ally
+Friendly
+Ally
+Friendly
+x
+Neutral
+Ally
+Neutral
+Friendly
+Rival
+Friendly
+Enemy
+Ally
+Friendly
+Neutral
+Unknown
+Friendly
+Rival
+Neutral
+Suspicion","[27, 28, 29, 30, 31, 114, 115]",#ff9a66,1.0,8.0,Generic,249.0,2.0,"{'t1': 'gules', 'ordinaries': [{'ordinary': 'bend', 't': 'argent', 'line': 'wavy'}], 'charges': [{'charge': 'serpent', 't': 'gules', 'p': 'jo', 't2': 'or', 'size': 0.7}], 'shield': 'boeotian'}","Theonian Invasion - 1220 - 1224
+Bukanian Campaign - 1354 - 1363
+Tyriantian Crusade - 1465 - 1466
+Kno Intervention - 1555 - 1556",Theocracy,Patriarchate,Patriarchate of Hetos,"[1146.0390625, 254.7890625]",1.58,"[{'i': 0, 'a': 932, 'cell': 1289, 'x': 1163.53, 'y': 365.9, 'bx': 1163.53, 'by': 365.9, 'u': {'infantry': 429, 'archers': 218, 'cavalry': 284, 'artillery': 1}, 'n': 0, 'name': '3rd (Phaismebe) Regiment', 'state': 8, 'icon': '⚔️'}]"
+9,9,Druriria,38.262,279.6486120223999,6,6986,41,"[10, 22, 23, 19]","x
+Neutral
+Neutral
+Friendly
+Suspicion
+Unknown
+Suspicion
+Unknown
+Neutral
+x
+Enemy
+Friendly
+Unknown
+Neutral
+Neutral
+Friendly
+Neutral
+Suspicion
+Unknown
+Suspicion
+Neutral
+Unknown
+Friendly
+Enemy","[32, 33, 116]",#b5b0c1,1.0,9.0,Naval,3562.0,1.0,"{'t1': 'vert', 'division': {'division': 'perFess', 't': 'argent', 'line': 'flechy'}, 'charges': [{'charge': 'goutte', 't': 'or', 'p': 'kn', 'divided': 'counter', 'size': 0.7}], 'shield': 'roman'}","Vebutegian Campaign - 1432 - 1433
+Naplarian War - 1514 - 1521
+Vavalan Crusade - 1539 - 1540
+Riririgenese Conflict - 1542 - 1543
+Riririgenian War - 1642 - 1642",Monarchy,Grand Duchy,Grand Duchy of Druriria,"[981.265625, 676.171875]",5.0,[]
+10,10,Vavala,26.101999999999997,634.9750890135765,8,20647,103,"[0, 15, 22, 9, 19]","x
+Neutral
+Ally
+Unknown
+Ally
+Neutral
+Neutral
+Friendly
+Ally
+Enemy
+x
+Friendly
+Ally
+Ally
+Ally
+Enemy
+Neutral
+Neutral
+Neutral
+Friendly
+Ally
+Friendly
+Friendly
+Ally","[34, 35, 117, 118]",#e191dc,1.0,10.0,Generic,3460.0,7.0,"{'t1': 'argent', 'division': {'division': 'perPale', 't': 'vert', 'line': 'straight'}, 'ordinaries': [{'ordinary': 'fessCotissed', 't': 'gules', 'line': 'straight'}], 'shield': 'pavise'}","Druririan Invasion - 1363 - 1369
+Oitapirt War - 1376 - 1385
+Eljanmaan War - 1636 - 1637
+Vebutegian Conflict - 1636 - 1641
+Kausupinese Rebellion - 1636 - 1641
+Eljanmian War - 1639 - 1642",Monarchy,Kingdom,Kingdom of Vavala,"[1026.1328125, 558.9453125]",2.77,"[{'i': 0, 'a': 3532, 'cell': 3264, 'x': 1052.16, 'y': 650.42, 'bx': 1052.16, 'by': 650.42, 'u': {'infantry': 1408, 'archers': 873, 'cavalry': 1236, 'artillery': 15}, 'n': 0, 'name': '1st (Hoskog) Regiment', 'state': 10, 'icon': '⚔️'}, {'i': 1, 'a': 1942, 'cell': 2184, 'x': 1099.8, 'y': 494.28, 'bx': 1099.8, 'by': 494.28, 'u': {'infantry': 544, 'archers': 349, 'cavalry': 1048, 'artillery': 1}, 'n': 0, 'name': '3rd (Hinkania) Regiment', 'state': 10, 'icon': '🐴'}, {'i': 2, 'a': 7, 'cell': 3463, 'x': 1022.75, 'y': 668.74, 'bx': 1022.75, 'by': 668.74, 'u': {'fleet': 7}, 'n': 1, 'name': '1st Fleet', 'state': 10, 'icon': '🌊'}]"
+11,11,Cielumnia,234.739,1734.4449908733368,30,39609,222,"[2, 0, 22, 12]","x
+Ally
+Suspicion
+Unknown
+Friendly
+Suspicion
+Friendly
+Unknown
+Neutral
+Friendly
+Friendly
+x
+Suspicion
+Suspicion
+Ally
+Friendly
+Neutral
+Suspicion
+Friendly
+Unknown
+Friendly
+Neutral
+Suzerain
+Unknown","[36, 37, 38, 39, 40, 41, 42, 43, 119, 120, 121]",#c8e655,1.0,11.0,Naval,3446.0,1.0,"{'t1': 'azure', 'charges': [{'charge': 'lozenge', 't': 'argent', 'p': 'abcdefgzi', 'size': 0.3}], 'shield': 'roman'}","Sasburgian Campaign - 1420 - 1421
+Ulum Crusade - 1591 - 1598
+Vetian Invasion - 1617 - 1618
+Vebutegian War - 1636 - 1641",Union,Confederation,Cielumnian Confederation,"[728.5859375, 690.0078125]",0.39,[]
+12,12,Sasburgia,501.7950000000001,3463.3310148715973,70,69405,427,"[2, 0, 11]","x
+Neutral
+Neutral
+Neutral
+Enemy
+Neutral
+Friendly
+Enemy
+Friendly
+Unknown
+Ally
+Suspicion
+x
+Ally
+Ally
+Enemy
+Neutral
+Neutral
+Ally
+Neutral
+Ally
+Ally
+Suspicion
+Neutral","[44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 122]",#ffee35,1.0,12.0,Naval,3127.0,5.0,"{'t1': 'or', 'ordinaries': [{'ordinary': 'bordure', 't': 'azure'}], 'charges': [{'charge': 'skeleton', 't': 'azure', 'p': 'e', 'size': 1.1}], 'shield': 'round'}","Alindorf Campaign - 1502 - 1505
+Schliburg Campaign - 1544 - 1551
+Cielumnian War - 1636 - 1641",Monarchy,Empire,Sasburgian Empire,"[536.728515625, 649.212890625]",0.24,"[{'i': 0, 'a': 707, 'cell': 4027, 'x': 618.3, 'y': 750, 'bx': 618.3, 'by': 750, 'u': {'archers': 280, 'artillery': 10, 'infantry': 358, 'cavalry': 59}, 'n': 0, 'name': '2nd (Hauheterswe) Regiment', 'state': 12, 'icon': '⚔️'}]"
+13,13,Theonia,65.782,517.9201681613922,10,11666,66,"[8, 20, 0]","x
+Neutral
+Ally
+Friendly
+Enemy
+Ally
+Neutral
+Enemy
+Rival
+Neutral
+Ally
+Suspicion
+Ally
+x
+Friendly
+Enemy
+Neutral
+Neutral
+Neutral
+Unknown
+Friendly
+Ally
+Suspicion
+Suspicion","[62, 63, 64, 123]",#61dcba,1.0,13.0,Generic,424.0,2.0,"{'t1': 'sable', 'ordinaries': [{'ordinary': 'fess', 't': 'argent', 'line': 'escartely'}], 'charges': [{'charge': 'key', 't': 'gules', 'p': 'def', 'size': 0.5}], 'shield': 'boeotian'}","Tapocian War - 1428 - 1437
+Heto War - 1441 - 1449
+Tyrexand Expedition - 1490 - 1493",Monarchy,Despotate,Theonian Despotate,"[1061.734375, 222.515625]",2.05,"[{'i': 0, 'a': 3390, 'cell': 424, 'x': 1040.2, 'y': 215.39999999999998, 'bx': 1040.2, 'by': 215.39999999999998, 'u': {'archers': 1108, 'cavalry': 634, 'artillery': 34, 'infantry': 1614}, 'n': 0, 'name': '1st (Lelia) Regiment', 'state': 13, 'icon': '👑'}, {'i': 1, 'a': 2504, 'cell': 1384, 'x': 1124.86, 'y': 378.3299999999999, 'bx': 1124.86, 'by': 378.3299999999999, 'u': {'infantry': 1172, 'cavalry': 697, 'artillery': 13, 'archers': 622}, 'n': 0, 'name': '2nd (Pydrialeta) Regiment', 'state': 13, 'icon': '⚔️'}]"
+14,14,Joentara,42.931999999999995,550.5569538772106,7,10935,68,"[1, 4, 0, 6]","x
+Suspicion
+Ally
+Unknown
+Enemy
+Neutral
+Suspicion
+Enemy
+Friendly
+Neutral
+Ally
+Ally
+Ally
+Friendly
+x
+Enemy
+Neutral
+Ally
+Ally
+Neutral
+Friendly
+Ally
+Ally
+Neutral","[65, 66]",#ffb46b,1.0,14.0,Generic,3503.0,7.0,"{'t1': 'argent', 'ordinaries': [{'ordinary': 'cross', 't': 'gules', 'line': 'straight'}], 'charges': [{'charge': 'crossHummetty', 't': 'argent', 'p': 'beh', 'size': 0.3}], 'shield': 'pavise'}","Jepsan War - 1286 - 1298
+Rapian War - 1484 - 1485
+Husakiman Expedition - 1524 - 1531
+Hospokian War - 1620 - 1621",Monarchy,Grand Duchy,Grand Duchy of Joentara,"[1501.90625, 683.28125]",3.93,[]
+15,15,Eljanmaa,136.54200000000003,980.3307824730873,15,25724,134,"[10, 0, 18]","x
+Unknown
+Enemy
+Neutral
+Enemy
+Unknown
+Ally
+Unknown
+Enemy
+Friendly
+Enemy
+Friendly
+Enemy
+Enemy
+Enemy
+x
+Unknown
+Neutral
+Suspicion
+Suspicion
+Enemy
+Friendly
+Friendly
+Enemy","[67, 68, 69, 70, 124]",#89afe6,1.0,15.0,Generic,3773.0,7.0,"{'t1': 'sable', 'ordinaries': [{'ordinary': 'fess', 't': 'or', 'line': 'straight'}], 'charges': [{'charge': 'trowel', 't': 'or', 'p': 'abcz', 't2': 'or', 'size': 0.5}], 'shield': 'pavise'}","Vavalan Campaign - 1441 - 1457
+Ruotian Conquest - 1562 - 1573
+Mulurikian War - 1636 - 1637
+Vavalian War - 1639 - 1642",Monarchy,Kingdom,Kingdom of Eljanmaa,"[1146.640625, 614.984375]",1.58,[]
+16,16,Thropebeia,102.43799999999999,594.1249159574509,11,11123,73,"[7, 3]","x
+Suspicion
+Unknown
+Enemy
+Enemy
+Friendly
+Friendly
+Enemy
+Ally
+Neutral
+Neutral
+Neutral
+Neutral
+Neutral
+Neutral
+Unknown
+x
+Neutral
+Unknown
+Neutral
+Friendly
+Ally
+Neutral
+Neutral","[71, 72, 73]",#d3aad5,1.0,16.0,Generic,362.0,2.0,"{'t1': 'argent', 'division': {'division': 'perFess', 't': 'azure', 'line': 'straight'}, 'ordinaries': [{'ordinary': 'pileInBend', 't': 'gules', 'divided': 'counter'}], 'shield': 'boeotian'}","Shahian Campaign - 1420 - 1422
+Tyriantian Conflict - 1544 - 1545
+Shahian War - 1640 - 1642",Union,Union,Thropebeian Union,"[1361.125, 193.875]",5.0,"[{'i': 0, 'a': 4228, 'cell': 266, 'x': 1310.9, 'y': 170, 'bx': 1310.9, 'by': 170, 'u': {'archers': 2155, 'cavalry': 297, 'infantry': 1754, 'artillery': 22}, 'n': 0, 'name': '1st (Atropesia) Regiment', 'state': 16, 'icon': '🏹'}, {'i': 1, 'a': 3109, 'cell': 271, 'x': 1383, 'y': 174, 'bx': 1383, 'by': 174, 'u': {'archers': 1645, 'cavalry': 156, 'artillery': 77, 'infantry': 1231}, 'n': 0, 'name': '4th (Atropesia) Regiment', 'state': 16, 'icon': '🏹'}, {'i': 2, 'a': 2768, 'cell': 446, 'x': 1354.92, 'y': 207.81999999999994, 'bx': 1354.92, 'by': 207.81999999999994, 'u': {'archers': 1399, 'cavalry': 206, 'infantry': 1159, 'artillery': 4}, 'n': 0, 'name': '5th (Dopepikonia) Regiment', 'state': 16, 'icon': '🏹'}, {'i': 3, 'a': 23, 'cell': 271, 'x': 1398.79, 'y': 180.95000000000005, 'bx': 1398.79, 'by': 180.95000000000005, 'u': {'fleet': 23}, 'n': 1, 'name': '1st Fleet', 'state': 16, 'icon': '🌊'}]"
+17,17,Ziyeh,85.07000000000001,524.2394409179688,13,11371,61,"[5, 21, 4, 1]","x
+Suspicion
+Unknown
+Friendly
+Friendly
+Suspicion
+Neutral
+Ally
+Friendly
+Suspicion
+Neutral
+Suspicion
+Neutral
+Neutral
+Ally
+Neutral
+Neutral
+x
+Neutral
+Friendly
+Neutral
+Rival
+Suspicion
+Unknown","[74, 75, 76, 77]",#f9d356,1.0,17.0,Generic,1919.0,4.0,"{'t1': 'purpure', 'division': {'division': 'perPale', 't': 'argent', 'line': 'rayonne'}, 'charges': [{'charge': 'palace', 't': 'or', 'p': 'p', 'size': 0.7}, {'charge': 'bookClosed2', 't': 'gules', 'p': 'q', 'size': 0.7}], 'shield': 'oval'}","Bukanian Rebellion - 1460 - 1461
+Chamian War - 1527 - 1532
+Tiyanese Expedition - 1617 - 1618
+Shushjian War - 1636 - 1641",Monarchy,Satrapy,Satrapy of Ziyeh,"[1506.2421875, 426.4453125]",1.85,[]
+18,18,Mulurikia,219.55100000000002,1736.8593246936798,27,27015,150,"[6, 0, 15]","x
+Unknown
+Friendly
+Neutral
+Ally
+Suspicion
+Ally
+Neutral
+Neutral
+Unknown
+Neutral
+Friendly
+Ally
+Neutral
+Ally
+Suspicion
+Unknown
+Neutral
+x
+Neutral
+Neutral
+Neutral
+Friendly
+Neutral","[78, 79, 80, 81, 82, 83, 84, 125]",#94c1aa,1.0,18.0,Generic,4287.0,7.0,"{'t1': 'argent', 'division': {'division': 'perPale', 't': 'vert', 'line': 'rayonne'}, 'charges': [{'charge': 'mullet', 't': 'purpure', 'p': 'p', 'size': 0.7}, {'charge': 'crossSaltire', 't': 'or', 'p': 'q', 'size': 0.7}], 'shield': 'pavise'}","Ravan Invasion - 1428 - 1436
+Vehjan War - 1518 - 1519
+Eljanmaan Conquest - 1635 - 1641",Monarchy,Kingdom,Kingdom of Mulurikia,"[1313.873046875, 795.275390625]",0.22,[]
+19,19,Naplaria,98.01599999999999,938.8403502702713,14,16877,99,"[10, 9, 23]","x
+Unknown
+Neutral
+Friendly
+Suspicion
+Unknown
+Unknown
+Neutral
+Unknown
+Suspicion
+Friendly
+Unknown
+Neutral
+Unknown
+Neutral
+Suspicion
+Neutral
+Friendly
+Neutral
+x
+Neutral
+Neutral
+Unknown
+Suspicion","[85, 86, 87, 88, 126]",#8dbbb7,1.0,19.0,Generic,3870.0,7.0,"{'t1': 'argent', 'division': {'division': 'gyronny', 't': 'sable'}, 'charges': [{'charge': 'goutte', 't': 'azure', 'p': 'behdf', 'divided': 'counter', 'size': 0.4}], 'shield': 'pavise'}","Osalalan Campaign - 1591 - 1596
+Narniokian Conflict - 1636 - 1641
+Riririgenese War - 1636 - 1641",Theocracy,Theocracy,Naplarian Theocracy,"[1021.87890625, 764.48046875]",0.42,"[{'i': 0, 'a': 1573, 'cell': 4136, 'x': 1015.41, 'y': 780.62, 'bx': 1015.41, 'by': 780.62, 'u': {'archers': 530, 'cavalry': 325, 'infantry': 713, 'artillery': 5}, 'n': 0, 'name': '1st (Nogesihi) Regiment', 'state': 19, 'icon': '⚔️'}]"
+20,20,Tapocia,262.91,2226.944678068161,40,49385,269,"[2, 13, 0]","x
+Neutral
+Ally
+Neutral
+Enemy
+Neutral
+Friendly
+Enemy
+Friendly
+Neutral
+Ally
+Friendly
+Ally
+Friendly
+Friendly
+Enemy
+Friendly
+Neutral
+Neutral
+Neutral
+x
+Ally
+Friendly
+Unknown","[89, 90, 91, 92, 93, 94, 95, 96, 97, 98]",#b49ed5,1.0,20.0,Generic,598.0,2.0,"{'t1': 'sable', 'ordinaries': [{'ordinary': 'fess', 't': 'or', 'line': 'dragonTeeth'}], 'charges': [{'charge': 'greyhoundSejant', 't': 'gules', 'p': 'def', 't2': 'gules', 't3': 'or', 'size': 0.5}], 'shield': 'boeotian'}","Ekionese Invasion - 1464 - 1470
+Fasasanian War - 1542 - 1546
+Theonian Campaign - 1544 - 1545",Monarchy,Empire,Tapocian Empire,"[960.884765625, 312.017578125]",0.14,"[{'i': 0, 'a': 370, 'cell': 399, 'x': 832.78, 'y': 196.89999999999998, 'bx': 832.78, 'by': 196.89999999999998, 'u': {'archers': 121, 'artillery': 1, 'infantry': 175, 'cavalry': 73}, 'n': 0, 'name': '3rd (Cypethos) Regiment', 'state': 20, 'icon': '⚔️'}]"
+21,21,Bukania,230.10600000000002,1900.8002364635468,29,30803,150,"[3, 7, 0, 8, 5, 17, 4]","x
+Suspicion
+Ally
+Enemy
+Enemy
+Suspicion
+Ally
+Enemy
+Rival
+Unknown
+Friendly
+Neutral
+Ally
+Ally
+Ally
+Friendly
+Ally
+Rival
+Neutral
+Neutral
+Ally
+x
+Neutral
+Neutral","[99, 100, 101, 102, 103, 104, 105, 106]",#1ac3c6,1.0,21.0,Generic,1705.0,4.0,"{'t1': 'gules', 'ordinaries': [{'ordinary': 'cross', 't': 'or', 'line': 'straight'}], 'charges': [{'charge': 'hourglass', 't': 'sable', 'p': 'behdf', 't2': 'argent', 't3': 'or', 'size': 0.3}], 'shield': 'oval'}","Ziyeh Campaign - 1191 - 1201
+Pirzanan Conflict - 1421 - 1422
+Jabad Conflict - 1444 - 1445
+Palian War - 1497 - 1505
+Heto Campaign - 1541 - 1551
+Arzalabadian Invasion - 1569 - 1578
+Shahian War - 1636 - 1639
+Chamian War - 1641 - 1642",Monarchy,Kingdom,Kingdom of Bukania,"[1356.333984375, 431.638671875]",2.32,"[{'i': 0, 'a': 3551, 'cell': 1709, 'x': 1368.16, 'y': 412.35, 'bx': 1368.16, 'by': 412.35, 'u': {'infantry': 1746, 'archers': 1051, 'cavalry': 731, 'artillery': 23}, 'n': 0, 'name': '2nd (Shemshahria) Regiment', 'state': 21, 'icon': '⚔️'}, {'i': 1, 'a': 3174, 'cell': 1201, 'x': 1306.09, 'y': 354.87, 'bx': 1306.09, 'by': 354.87, 'u': {'infantry': 1585, 'archers': 875, 'cavalry': 706, 'artillery': 8}, 'n': 0, 'name': '4th (Shemshahria) Regiment', 'state': 21, 'icon': '⚔️'}]"
+22,22,Vebutegia,47.384,375.32471990585327,6,8209,45,"[0, 10, 11, 9]","x
+Ally
+Suspicion
+Unknown
+Friendly
+Suspicion
+Friendly
+Unknown
+Neutral
+Friendly
+Friendly
+Vassal
+Suspicion
+Suspicion
+Ally
+Friendly
+Neutral
+Suspicion
+Friendly
+Unknown
+Friendly
+Neutral
+x
+Unknown","[107, 108]",#ffd344,1.0,22.0,Naval,3453.0,1.0,"{'t1': 'or', 'ordinaries': [{'ordinary': 'pile', 't': 'azure'}], 'charges': [{'charge': 'agnusDei', 't': 'or', 'p': 'b', 't2': 'gules', 'size': 0.5}], 'shield': 'roman'}","Druririan War - 1383 - 1384
+Auretonis Conquest - 1497 - 1500
+Vavalan Campaign - 1551 - 1552
+Cielumnian Campaign - 1636 - 1641",Monarchy,Grand Duchy,Grand Duchy of Vebutegia,"[926.6796875, 606.9921875]",0.44,"[{'i': 0, 'a': 551, 'cell': 2970, 'x': 929.41, 'y': 593.74, 'bx': 929.41, 'by': 593.74, 'u': {'infantry': 278, 'cavalry': 82, 'archers': 183, 'artillery': 8}, 'n': 0, 'name': '1st (Vilbium) Regiment', 'state': 22, 'icon': '⚔️'}]"
+23,23,Riririgen,29.500000000000004,195.3438594341278,3,3524,23,"[9, 19]","x
+Neutral
+Friendly
+Neutral
+Neutral
+Neutral
+Neutral
+Neutral
+Suspicion
+Enemy
+Ally
+Unknown
+Neutral
+Suspicion
+Neutral
+Enemy
+Neutral
+Unknown
+Neutral
+Suspicion
+Unknown
+Neutral
+Unknown
+x","[109, 110]",#b1ce72,1.0,23.0,Naval,3754.0,1.0,"{'t1': 'sable', 'charges': [{'charge': 'escallop', 't': 'argent', 'p': 'e', 'size': 1.5}], 'shield': 'roman'}","Castrum Invasion - 1564 - 1565
+Druririan War - 1636 - 1637
+Druririan War - 1642 - 1642",Monarchy,Duchy,Duchy of Riririgen,"[911.40625, 701.96875]",5.0,[]
