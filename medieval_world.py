@@ -630,7 +630,7 @@ def update_burg_consumption_and_production(
     ).T
     sb.loc[pd.IndexSlice["Net", "Total", :]] = (
         sb.loc[pd.IndexSlice["Production", "Total", :]].values
-        - sb.loc[pd.IndexSlice["Consumption", "Total", :]].values
+        + sb.loc[pd.IndexSlice["Consumption", "Total", :]].values
     )
     return sb
 
