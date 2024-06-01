@@ -14,6 +14,17 @@ city_params = [
     ("Infrastructure", "Network", "road"),
 ]
 
+citizen_params = [
+    ("Citizens", "Nr", "Farmer"),
+    ("Citizens", "Nr", "Fisherman"),
+    ("Citizens", "Nr", "Hunter"),
+    ("Citizens", "Nr", "Craftsman"),
+    ("Citizens", "Nr", "Tradesman"),
+    ("Citizens", "Nr", "Churchman"),
+    ("Citizens", "Nr", "Clerk"),
+    ("Citizens", "Nr", "Soldier"),
+]
+
 location_params = [
     ("Nature", "Characteristics", "Biome"),
 ]  # , river, sea, altitude
@@ -29,6 +40,7 @@ production_params = [
 ]
 parameter_groups_burgs = [
     ("City", city_params),
+    ("Citizens", citizen_params),
     ("Location", location_params),
     ("Size", size_params),
     ("Production", production_params),
