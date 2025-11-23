@@ -1,114 +1,179 @@
 import json
-import os
+import statistics
 
 
 CITIZEN_INFO_FILE = "info/citizen_info.json"
-SETTLEMENT_HIERARCHY_FILE = "info/settlement_sizes.json"
-ECONOMIC_CONSTANTS_FILE = "info/economic_constants.json"
+SETTLEMENT_INFO_FILE = "info/settlement_info.json"
+ECONOMY_INFO_FILE = "info/economy_info.json"
 
 AFMG_MAP_FILE = "fantasy_map/Montreia Full 2024-05-23-10-01.json" 
 
 def load_json_file(filepath):
-    """Loads and returns data from a JSON file."""
-    if not os.path.exists(filepath):
-        print(f"Error: Required file not found at path: {filepath}")
-        return None
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        return data
-    except json.JSONDecodeError:
-        print(f"Error: Failed to decode JSON from {filepath}. Check file format.")
-        return None
-    except Exception as e:
-        print(f"An unexpected error occurred while reading {filepath}: {e}")
-        return None
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+def write_to_json_file(data, filepath):
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+        
 
 
-def load_simulation_data():
+def load_simulation_config():
     """Loads all external simulation configuration files."""
     
     print("\n--- Loading External Simulation Data ---")
     
     citizen_data = load_json_file(CITIZEN_INFO_FILE)
     if citizen_data:
-        print(f"Successfully loaded citizen data for {len(citizen_data.get('CITIZEN_INFO', []))} citizen types.")
+        print(f"Successfully loaded citizen info.")
     
-    # 2. Load Settlement Hierarchy Data (for classification)
-    hierarchy_data = load_json_file(SETTLEMENT_HIERARCHY_FILE)
-    if hierarchy_data:
-        print(f"Successfully loaded settlement hierarchy data.")
+    settlements_data = load_json_file(SETTLEMENT_INFO_FILE)
+    if settlements_data:
+        print(f"Successfully loaded settlement info.")
         
-    # 3. Load Economic Constants (Quartier sizes, Ratios)
-    constants_data = load_json_file(ECONOMIC_CONSTANTS_FILE)
-    if constants_data:
-        print(f"Successfully loaded economic constants.")
+    economy_data = load_json_file(ECONOMY_INFO_FILE)
+    if economy_data:
+        print(f"Successfully loaded economy info.")
 
     return {
-        "citizens": citizen_data.get("CITIZEN_INFO", []) if citizen_data else [],
-        "hierarchy": hierarchy_data.get("SETTLEMENT_HIERARCHY", []) if hierarchy_data else [],
-        "constants": constants_data.get("QUARTIER_DEFINITION", {}) if constants_data else {}
+        "citizens": citizen_data if citizen_data else [],
+        "settlements": settlements_data if settlements_data else [],
+        "economy": economy_data if economy_data else {}
     }
 
 
-def load_afmg_map_data(filepath):
+def get_burgs_from_afmg_map_data(filepath):
     """Loads the entire AFMG JSON export and extracts the burgs."""
     
     print(f"\n--- Loading AFMG Map Data from {filepath} ---")
     map_data = load_json_file(filepath)
     
-    if map_data and 'burgs' in map_data:
-        burgs = map_data.get('burgs')
-        print(f"Successfully loaded map containing {len(burgs)} burgs.")
+    if map_data:
+        if 'burgs' in map_data.get('pack'):
+            burgs = map_data.get('pack').get('burgs')
+            print(f"Successfully loaded map containing {len(burgs)} burgs.")
         
-        print(f"Example burg loaded: {burgs.get('name') if burgs else 'N/A'}")
+            print(f"Example burg loaded: {burgs[1] if burgs else 'N/A'}")
 
         return burgs
     
-    elif map_data:
-        print("Map data loaded, but 'burgs' array was not found. Check AFMG export format.")
-        return []
+
+
+
+def get_burg_models(burgs, config):
+    print("\n--- Processing burgs ---")
+
+    l = len(burgs)
+    burg_models = []
+    for b, burg in enumerate(burgs):
+        print(f"Processing burg {b + 1} of {l}: {burg.get('name', 'Unknown')}")
+        if burg:
+            burg_models.append(dict(id=b,**get_burg_model(burg, config)))
+
+    print("Burg processing complete. Info added to burg objects.")
     
-    return []
+    return burg_models
 
 
-def process_burgs(burgs, config):
+
+# BURG > GET MODEL
+def get_burg_model(burg, config):
     """
-    Placeholder for the core simulation logic.
-    This is where you would calculate Quartiers and Net Resources 
-    (Net Food, Net Gold) for each burg.
+    Process a burg. Generate the citizens and quartiers based on the simulation configuration.
     """
-    if not burgs or not config.get('citizens'):
-        print("\nCannot run simulation: Missing burg or citizen data.")
-        return
 
-    print("\n--- Running Burg Economy Calculation (Simulation Placeholder) ---")
+    citizens = get_citizens_for_burg(burg, config)
+    quartiers = get_quartiers_for_burg(citizens, config)
+    # net_production_per_quartier_type = get_net_production_and_consumption_per_quartier_type_for_burg(quartiers, config)
+    net_production_burg = get_net_production_for_burg(quartiers, config)
+    area_requirements_burg = get_area_requirements_for_burg(burg, config)
+
+    return {'name': burg.get('name'), 'type': burg.get('type'), 'population': round(burg.get('population')*1000), 'citizens': citizens, 'quartiers': quartiers, 'net_production_burg': net_production_burg, 'area_requirements_burg': area_requirements_burg}
+
+
+# BURG > CITIZENS
+def get_citizens_for_burg(burg, config):
+    population = round(burg.get('population')*1000)
+    citizen_frequencies_modified = get_citizen_frequencies_for_burg(burg, config)
+    total_frequency = sum(citizen_frequencies_modified.values())
+    citizen_frequencies_normalized = {cn: cf / total_frequency for cn, cf in citizen_frequencies_modified.items()}
+    return {citizen_name: round(population * citizen_frequency) for citizen_name, citizen_frequency in citizen_frequencies_normalized.items()}
+
+
+def get_citizen_frequencies_for_burg(burg, config):
+    return {citizen.get('Citizen'): max(0, get_citizen_frequency(citizen, burg)) for citizen in config['citizens']}
+
+
+def get_citizen_frequency(citizen, burg):
+    return citizen.get('Base_Frequency') + get_citizen_burg_type_modifier(citizen, burg) + get_citizen_burg_features_modifier(citizen, burg)
+
+
+def get_citizen_burg_type_modifier(citizen, burg):
+    modifiers = citizen.get('Burg_Type_Frequency_Modifiers')
+    return modifiers.get(burg.get('type'), 0)
+
+def get_citizen_burg_features_modifier(citizen, burg):
+    modifiers = citizen.get('Burg_Features_Frequency_Modifiers')
+    modifiers = {k.lower(): v for k,v in modifiers.items()} # lowercase dictionary of modifiers
+    return sum([modifiers.get(feature) for feature, exists in burg.items() if feature.lower() in modifiers and exists > 0])
+
+
+
+# BURG > QUARTIERS
+def get_quartiers_for_burg(citizens, config):
+    return {citizen_name: get_number_of_quartiers_for_citizen_population(citizen_population, config.get('economy').get('Quartiers')) for citizen_name, citizen_population in citizens.items()}
+
+def get_number_of_quartiers_for_citizen_population(citizen_population, quartiers_config):
+    return int(citizen_population / statistics.mean([quartiers_config.get('Min_Inhabitants_Per_Quartier'), quartiers_config.get('Max_Inhabitants_Per_Quartier')]))
+
+
+
+# BURG > PRODUCTION
+def get_net_production_for_burg(quartiers, config):
+    return get_net_production_from_per_quartier_type(get_net_production_and_consumption_per_quartier_type_for_burg(quartiers, config))
+
+
+def get_net_production_and_consumption_per_quartier_type_for_burg(quartiers, config):
+    return {citizen_name: get_net_production_and_consumption_for_quartier(quartier_number, [citizen for citizen in config.get('citizens') if citizen.get('Citizen') == citizen_name][0]) for citizen_name, quartier_number in quartiers.items()}
+
+
+def get_net_production_and_consumption_for_quartier(quartier_number, citizen_config):
+    return {
+            'Net_Food': quartier_number * citizen_config.get('Production_Food', 0) - quartier_number * citizen_config.get('Consumption_Food', 0),
+            'Net_Gold': quartier_number * citizen_config.get('Production_Gold', 0) - quartier_number * citizen_config.get('Consumption_Gold', 0)
+    }
+
+def get_net_production_from_per_quartier_type(net_production_per_quartier_type):
+    return {
+            'Net_Food': sum(net_quartier.get('Net_Food') for net_quartier in net_production_per_quartier_type.values()),
+            'Net_Gold': sum(net_quartier.get('Net_Gold') for net_quartier in net_production_per_quartier_type.values())
+    }
+
+
+# BURG > AREA REQUIREMENTS
+def get_area_requirements_for_burg(burg, config):
+    population = round(burg.get('population')*1000)
+    area_requirements = config.get('economy').get('Area_Requirements')
+    return {
+        "Farmland_to_Feed_Burg_ha_Min": round(population * area_requirements.get('Farmland_to_Feed_Person_ha_Min')),
+        "Farmland_to_Feed_Burg_ha_Max": round(population * area_requirements.get('Farmland_to_Feed_Person_ha_Max')),
+        "Urban_Area_Burg_ha_Min": round(population * area_requirements.get('Urban_Area_Per_Person_m2_Min') / 10_000),
+        "Urban_Area_Burg_ha_Max": round(population * area_requirements.get('Urban_Area_Per_Person_m2_Max') / 10_000),
+    }
     
 
-    min_inhabitants = config['constants'].get('Min_Inhabitants_Per_Quartier')
-    
-    if min_inhabitants:
-        print(f"Using Min Inhabitants per Quartier: {min_inhabitants}")
-    
-    
-    print("Burg processing complete. New economic data would now be appended to burg objects.")
-    # The processed burg list, now containing 'NetFood', 'NetGold', etc., 
-    # would be used for visualization in the AFMG fork [Conversation History].
-    
-    return burgs
+def get_area_requirement_for_citizen_quartiers(citizen_name, quartier_number, config):
+    citizen_config = [citizen for citizen in config.get('citizens') if citizen.get('Citizen') == citizen_name][0]
+    area_per_quartier = citizen_config.get('Area_Requirement_ha_Per_Quartier', 0)
+    return quartier_number * area_per_quartier
 
 
 if __name__ == "__main__":
     
-    config_data = load_simulation_data()
+    simulation_config = load_simulation_config()
     
-    burg_list = load_afmg_map_data(AFMG_MAP_FILE)
+    burg_list = get_burgs_from_afmg_map_data(AFMG_MAP_FILE)
 
+    burg_models = get_burg_models(burg_list, simulation_config)
 
-    if burg_list and config_data['citizens'] and config_data['constants']:
-        processed_burgs = process_burgs(burg_list, config_data)
-        
-        # In a full implementation, you might save this processed data 
-        # or load it back into the front-end environment of the AFMG fork.
-    else:
-        print("\nSystem initialization failed due to missing configuration or map files.")
+    write_to_json_file(burg_models, 'burg_models.json')
