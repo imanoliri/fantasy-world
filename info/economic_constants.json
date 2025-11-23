@@ -1,0 +1,28 @@
+{
+  "QUARTIER_DEFINITION": {
+    "Min_Inhabitants_Per_Quartier": 600,
+    "Max_Inhabitants_Per_Quartier": 1000,
+    "Quartier_Land_Requirements_ha": {
+      "Farmland_Min": 600,
+      "Farmland_Max": 2000,
+      "Urban_Area_Min": 0.375,
+      "Urban_Area_Max": 5
+    }
+  },
+  "RATION_RATIOS": {
+    "Land_to_Feed_Person_ha_Min": 1,
+    "Land_to_Feed_Person_ha_Max": 2,
+    "Urban_Area_Per_Person_m2_Min": 25,
+    "Urban_Area_Per_Person_m2_Max": 50,
+    "Farmer_to_Eater_Ratio_Min": 1,
+    "Farmer_to_Eater_Ratio_Max": 2,
+    "Fisher_to_Eater_Ratio_Min": 1.5,
+    "Fisher_to_Eater_Ratio_Max": 3
+  },
+  "TRANSPORT_COSTS": {
+    "Land": 20,
+    "River": 4,
+    "Sea": 1
+  },
+  "SOURCE_CITATION": "[2], [3]"
+}
