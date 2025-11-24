@@ -1,0 +1,116 @@
+[
+  {
+    "Citizen": "Farmer",
+    "Base_Frequency": 80,
+    "Burg_Type_Frequency_Modifiers": {
+      "Naval": -10,
+      "Highland": -10
+    },
+    "Burg_Features_Frequency_Modifiers": {
+      "Capital": -30,
+      "Port": -10,
+      "Shanty Town": 10
+    },
+    "Consumption_Food": -1,
+    "Consumption_Gold": 0,
+    "Production_Food": 2,
+    "Production_Gold": 0
+  },
+  {
+    "Citizen": "Fisherman",
+    "Base_Frequency": 5,
+    "Burg_Type_Frequency_Modifiers": {
+      "Naval": 15
+    },
+    "Burg_Features_Frequency_Modifiers": {
+      "River": 5,
+      "Lake": 5,
+      "Naval": 15,
+      "Port": 15
+    },
+    "Consumption_Food": -1,
+    "Consumption_Gold": 0,
+    "Production_Food": 3,
+    "Production_Gold": 0
+  },
+  {
+    "Citizen": "Hunter",
+    "Base_Frequency": 5,
+    "Burg_Type_Frequency_Modifiers": {
+      "Nomadic": 5,
+      "Hunting": 10
+    },
+    "Burg_Features_Frequency_Modifiers": {},
+    "Consumption_Food": -1,
+    "Consumption_Gold": 0,
+    "Production_Food": 1.5,
+    "Production_Gold": 0
+  },
+  {
+    "Citizen": "Craftsman",
+    "Base_Frequency": 5,
+    "Burg_Type_Frequency_Modifiers": {
+      "Nomadic": -5
+    },
+    "Burg_Features_Frequency_Modifiers": {
+      "Capital": 10,
+      "Citadel": 5,
+      "Market": 5,
+      "Church": 5
+    },
+    "Consumption_Food": -1,
+    "Consumption_Gold": 0,
+    "Production_Food": 0,
+    "Production_Gold": 0.75
+  },
+  {
+    "Citizen": "Tradesman",
+    "Base_Frequency": 5,
+    "Burg_Type_Frequency_Modifiers": {},
+    "Burg_Features_Frequency_Modifiers": {
+      "Capital": 10,
+      "Port": 10,
+      "Market": 10
+    },
+    "Consumption_Food": -1,
+    "Consumption_Gold": 0,
+    "Production_Food": 0,
+    "Production_Gold": 1.5
+  },
+  {
+    "Citizen": "Churchman",
+    "Base_Frequency": 0,
+    "Burg_Type_Frequency_Modifiers": {},
+    "Burg_Features_Frequency_Modifiers": {
+      "Church": 10
+    },
+    "Consumption_Food": -1,
+    "Consumption_Gold": -1,
+    "Production_Food": 0,
+    "Production_Gold": 0
+  },
+  {
+    "Citizen": "Clerk",
+    "Base_Frequency": 0,
+    "Burg_Type_Frequency_Modifiers": {},
+    "Burg_Features_Frequency_Modifiers": {
+      "Capital": 10
+    },
+    "Consumption_Food": -1,
+    "Consumption_Gold": -1,
+    "Production_Food": 0,
+    "Production_Gold": 0
+  },
+  {
+    "Citizen": "Soldier",
+    "Base_Frequency": 0,
+    "Burg_Type_Frequency_Modifiers": {},
+    "Burg_Features_Frequency_Modifiers": {
+      "Citadel": 10
+    },
+    "Consumption_Food": -1,
+    "Consumption_Gold": -1,
+    "Production_Food": 0,
+    "Production_Gold": 0
+  }
+]
