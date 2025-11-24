@@ -11,7 +11,7 @@ df_burgs_net_production.to_csv('data/burgs_net_production.csv')
 df_burgs.sort_values(by='nr_quartiers', ascending=False)
 df_burgs.to_csv('data/burgs.csv')
 
-print(f'\tTotal world production:\n{repr(df_burgs_net_production.sum())}')
+print(f'\tTotal world production:\n{repr(df_burgs_net_production.loc[:,['Net_Food', 'Net_Gold']].sum().to_dict())}')
 print(f'\tTotal world quartiers: {df_burgs.nr_quartiers.sum()}')
 
 print(f'Each quartier produces on average: {round(df_burgs_net_production.Net_Food.sum() / df_burgs.nr_quartiers.sum(), 2)}x excess of its own food consumption.')
