@@ -1,6 +1,6 @@
 import pandas as pd
 
-burg_models = pd.read_json('burg_models.json')
+burg_models = pd.read_json('burgs.json')
 df_burgs = pd.DataFrame.from_records(burg_models)
 df_burgs_net_production = pd.DataFrame.from_records(df_burgs.net_production_burg)
 
