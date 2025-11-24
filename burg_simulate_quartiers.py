@@ -88,7 +88,7 @@ def get_burg_model(burg, config):
     net_production_burg = get_net_production_for_burg(quartiers, config)
     area_requirements_burg = get_area_requirements_for_burg(burg, config)
 
-    return {'name': burg.get('name'), 'type': burg.get('type'), 'population': round(burg.get('population')*1000), 'citizens': citizens, 'quartiers': quartiers, 'net_production_burg': net_production_burg, 'area_requirements_burg': area_requirements_burg}
+    return {'name': burg.get('name'), 'type': burg.get('type'), 'capital': burg.get('capital'), 'population': round(burg.get('population')*1000), 'citizens': citizens, 'nr_quartiers': sum(quartiers.values()), 'quartiers': quartiers, 'net_production_burg': net_production_burg, 'area_requirements_burg': area_requirements_burg}
 
 
 # BURG > CITIZENS
@@ -139,8 +139,8 @@ def get_net_production_and_consumption_per_quartier_type_for_burg(quartiers, con
 
 def get_net_production_and_consumption_for_quartier(quartier_number, citizen_config):
     return {
-            'Net_Food': quartier_number * citizen_config.get('Production_Food', 0) - quartier_number * citizen_config.get('Consumption_Food', 0),
-            'Net_Gold': quartier_number * citizen_config.get('Production_Gold', 0) - quartier_number * citizen_config.get('Consumption_Gold', 0)
+            'Net_Food': quartier_number * citizen_config.get('Production_Food', 0) + quartier_number * citizen_config.get('Consumption_Food', 0),
+            'Net_Gold': quartier_number * citizen_config.get('Production_Gold', 0) + quartier_number * citizen_config.get('Consumption_Gold', 0)
     }
 
 def get_net_production_from_per_quartier_type(net_production_per_quartier_type):
