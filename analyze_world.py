@@ -1,9 +1,13 @@
 import json
 import collections
+import os
+import re
+
+import glob
 
 # Configuration
-INPUT_FILE = r'c:\Github_Projects\fantasy-world\fantasy_map\Montreia Full 2024-05-23-10-01.json'
-OUTPUT_FILE = r'c:\Github_Projects\fantasy-world\interactive_world_report.html'
+INPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_map'
+OUTPUT_DIR = r'c:\Github_Projects\fantasy-world\reports'
 
 def load_data(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -72,7 +76,7 @@ def generate_section_html(section_id, title, table_headers, rows_html, chart_id)
             <div class="chart-container"><canvas id="{chart_id}"></canvas></div>
         </div>"""
 
-def generate_html(data, analysis):
+def generate_html(data, analysis, output_file):
     info = data.get('info', {})
     settings = data.get('settings', {})
     pack = data.get('pack', {})
@@ -232,9 +236,29 @@ def generate_html(data, analysis):
         {js_charts}
     </script></body></html>"""
     
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f: f.write(html)
-    print(f"Report generated at: {OUTPUT_FILE}")
+    with open(output_file, 'w', encoding='utf-8') as f: f.write(html)
+    print(f"Report generated at: {output_file}")
 
 if __name__ == "__main__":
-    data = load_data(INPUT_FILE)
-    generate_html(data, analyze_data(data))
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
+        print(f"Created output directory: {OUTPUT_DIR}")
+
+    json_files = glob.glob(os.path.join(INPUT_DIR, '*.json'))
+    
+    if not json_files:
+        print(f"No JSON files found in {INPUT_DIR}")
+    else:
+        print(f"Found {len(json_files)} map files.")
+        for filepath in json_files:
+            try:
+                print(f"Processing {os.path.basename(filepath)}...")
+                data = load_data(filepath)
+                
+                map_name = data.get('info', {}).get('mapName', 'Unknown_Map')
+                safe_name = re.sub(r'[^\w\-_]', '_', map_name)
+                output_filename = os.path.join(OUTPUT_DIR, f"{safe_name}_report.html")
+                
+                generate_html(data, analyze_data(data), output_filename)
+            except Exception as e:
+                print(f"Error processing {filepath}: {e}")
