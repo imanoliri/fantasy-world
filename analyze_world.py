@@ -222,7 +222,10 @@ def generate_html(data, analysis, output_file):
         .chart-container {{ position: relative; height: 400px; width: 100%; display: block; }}
         .table-container {{ display: none; overflow-x: auto; }}
         .show-table .chart-container {{ display: none; }} .show-table .table-container {{ display: block; }}
+        .back-link {{ display: inline-block; margin-bottom: 20px; color: #2980b9; text-decoration: none; font-weight: bold; }}
+        .back-link:hover {{ text-decoration: underline; }}
     </style></head><body>
+    <a href="index.html" class="back-link">&larr; Back to Index</a>
     <h1>World Analysis: {info.get('mapName', 'Montreia')}</h1>
     <div class="card"><h2>General Statistics</h2><div class="stat-grid">
         <div class="stat-box"><div class="stat-value">{len(states)-1 if len(states)>1 else 0}</div><div>States</div></div>
@@ -239,6 +242,40 @@ def generate_html(data, analysis, output_file):
     with open(output_file, 'w', encoding='utf-8') as f: f.write(html)
     print(f"Report generated at: {output_file}")
 
+def generate_index_html(reports, output_dir):
+    links_html = ""
+    for name, filename in reports:
+        # Filename is absolute path, need relative for link
+        rel_path = os.path.basename(filename)
+        links_html += f"""
+        <a href="{rel_path}" class="report-card">
+            <div class="report-icon">🗺️</div>
+            <div class="report-name">{name}</div>
+            <div class="report-action">View Report &rarr;</div>
+        </a>"""
+
+    html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy World Reports</title>
+    <style>
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; padding: 40px; background: #f4f4f9; max-width: 800px; }}
+        h1 {{ text-align: center; color: #2c3e50; margin-bottom: 40px; }}
+        .reports-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }}
+        .report-card {{ background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; align-items: center; text-align: center; }}
+        .report-card:hover {{ transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }}
+        .report-icon {{ font-size: 3em; margin-bottom: 15px; }}
+        .report-name {{ font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: #2c3e50; }}
+        .report-action {{ color: #3498db; font-weight: 500; }}
+    </style></head><body>
+    <h1>Fantasy World Reports</h1>
+    <div class="reports-grid">
+        {links_html}
+    </div>
+    </body></html>"""
+    
+    index_path = os.path.join(output_dir, 'index.html')
+    with open(index_path, 'w', encoding='utf-8') as f: f.write(html)
+    print(f"Index generated at: {index_path}")
+
 if __name__ == "__main__":
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
@@ -246,6 +283,8 @@ if __name__ == "__main__":
 
     json_files = glob.glob(os.path.join(INPUT_DIR, '*.json'))
     
+    generated_reports = []
+
     if not json_files:
         print(f"No JSON files found in {INPUT_DIR}")
     else:
@@ -260,5 +299,9 @@ if __name__ == "__main__":
                 output_filename = os.path.join(OUTPUT_DIR, f"{safe_name}_report.html")
                 
                 generate_html(data, analyze_data(data), output_filename)
+                generated_reports.append((map_name, output_filename))
             except Exception as e:
                 print(f"Error processing {filepath}: {e}")
+        
+        if generated_reports:
+            generate_index_html(generated_reports, OUTPUT_DIR)
