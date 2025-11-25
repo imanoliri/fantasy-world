@@ -3,7 +3,7 @@ import collections
 
 # Configuration
 INPUT_FILE = r'c:\Github_Projects\fantasy-world\fantasy_map\Montreia Full 2024-05-23-10-01.json'
-OUTPUT_FILE = r'c:\Github_Projects\fantasy-world\montreia_report.html'
+OUTPUT_FILE = r'c:\Github_Projects\fantasy-world\interactive_world_report.html'
 
 def load_data(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
