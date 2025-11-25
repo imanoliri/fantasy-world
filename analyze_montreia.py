@@ -3,28 +3,23 @@ import collections
 
 # Configuration
 INPUT_FILE = r'c:\Github_Projects\fantasy-world\fantasy_map\Montreia Full 2024-05-23-10-01.json'
+import json
+import collections
+
+# Configuration
+INPUT_FILE = r'c:\Github_Projects\fantasy-world\fantasy_map\Montreia Full 2024-05-23-10-01.json'
 OUTPUT_FILE = r'c:\Github_Projects\fantasy-world\montreia_report.html'
 
 def load_data(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def generate_html(data):
+def analyze_data(data):
     pack = data.get('pack', {})
-    info = data.get('info', {})
     settings = data.get('settings', {})
-    
-    # Extract Data
-    biomes_data = data.get('biomesData', {}) # Usually a dict or list
-    # If biomesData is a dict with ids as keys, or list. Azgaar usually has it as object with i, name, color
-    # Let's handle both list and dict if possible, but usually it's a list in recent versions or dict in older.
-    # Based on keys seen earlier, it's a top level key.
     
     cells = pack.get('cells', [])
     burgs = pack.get('burgs', [])
-    states = pack.get('states', [])
-    cultures = pack.get('cultures', [])
-    religions = pack.get('religions', [])
     
     # Analysis Storage
     total_area = 0
@@ -32,8 +27,6 @@ def generate_html(data):
     
     biome_stats = collections.defaultdict(lambda: {'area': 0, 'cells': 0, 'pop': 0})
     state_stats = collections.defaultdict(lambda: {'area': 0, 'cells': 0, 'pop': 0, 'burgs': 0})
-    culture_stats = collections.defaultdict(lambda: {'area': 0, 'cells': 0, 'pop': 0, 'burgs': 0})
-    religion_stats = collections.defaultdict(lambda: {'area': 0, 'cells': 0, 'pop': 0, 'burgs': 0})
     
     # Process Cells
     # cells is often a columnar data structure in Azgaar (arrays of values), OR a list of objects.
@@ -69,19 +62,7 @@ def generate_html(data):
             state_stats[state_id]['cells'] += 1
             state_stats[state_id]['pop'] += real_pop
             
-        # Culture
-        culture_id = cell.get('culture', 0)
-        if culture_id > 0:
-            culture_stats[culture_id]['area'] += area
-            culture_stats[culture_id]['cells'] += 1
-            culture_stats[culture_id]['pop'] += real_pop
-            
-        # Religion
-        religion_id = cell.get('religion', 0)
-        if religion_id > 0:
-            religion_stats[religion_id]['area'] += area
-            religion_stats[religion_id]['cells'] += 1
-            religion_stats[religion_id]['pop'] += real_pop
+
 
         total_area += area
         total_pop += real_pop
@@ -89,6 +70,34 @@ def generate_html(data):
     # Process Burgs
     # Burgs is usually a list of objects.
     valid_burgs = [b for b in burgs if isinstance(b, dict) and 'name' in b] # Filter out empty/placeholders
+    
+    return {
+        'total_area': total_area,
+        'total_pop': total_pop,
+        'biome_stats': biome_stats,
+        'state_stats': state_stats,
+        'valid_burgs': valid_burgs
+    }
+
+def generate_html(data, analysis):
+    pack = data.get('pack', {})
+    info = data.get('info', {})
+    settings = data.get('settings', {})
+    
+    # Unpack analysis
+    total_area = analysis['total_area']
+    total_pop = analysis['total_pop']
+    biome_stats = analysis['biome_stats']
+    state_stats = analysis['state_stats']
+    valid_burgs = analysis['valid_burgs']
+    
+    # Extract Data needed for HTML generation
+    biomes_data = data.get('biomesData', {}) # Usually a dict or list
+    # If biomesData is a dict with ids as keys, or list. Azgaar usually has it as object with i, name, color
+    # Let's handle both list and dict if possible, but usually it's a list in recent versions or dict in older.
+    # Based on keys seen earlier, it's a top level key.
+    
+    states = pack.get('states', [])
     
     # HTML Construction
     html = f"""
@@ -535,4 +544,5 @@ def generate_html(data):
 
 if __name__ == "__main__":
     data = load_data(INPUT_FILE)
-    generate_html(data)
+    analysis = analyze_data(data)
+    generate_html(data, analysis)
