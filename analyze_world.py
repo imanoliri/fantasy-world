@@ -12,532 +12,229 @@ def load_data(filepath):
 def analyze_data(data):
     pack = data.get('pack', {})
     settings = data.get('settings', {})
-    
     cells = pack.get('cells', [])
     burgs = pack.get('burgs', [])
     
-    # Analysis Storage
     total_area = 0
     total_pop = 0
     
     biome_stats = collections.defaultdict(lambda: {'area': 0, 'cells': 0, 'pop': 0})
-    state_stats = collections.defaultdict(lambda: {'area': 0, 'cells': 0, 'pop': 0, 'burgs': 0})
+    state_stats = collections.defaultdict(lambda: {'area': 0, 'cells': 0, 'pop': 0})
     
-    # Process Cells
-    # cells is often a columnar data structure in Azgaar (arrays of values), OR a list of objects.
-    # The view_file output showed 'cells' as a LIST OF OBJECTS (e.g., {"i": 0, "v": [...], "biome": 0, ...})
-    # So we can iterate directly.
-    
+    pop_rate = float(settings.get('populationRate', 1000))
+
     for cell in cells:
-        # Skip if 'i' is missing or it's a placeholder (though list of objects usually implies valid cells)
         if 'area' not in cell: continue
-        
         area = cell.get('area', 0)
-        pop = cell.get('pop', 0) * float(settings.get('populationRate', 1000)) # pop is usually scaled
-        # Actually pop in cells is usually raw population * populationRate? 
-        # In Azgaar JSON, cell.pop is often just a number. The settings.populationRate is a multiplier usually applied in UI.
-        # Let's assume cell.pop needs multiplication if it looks small, or check settings.
-        # Wait, usually cell.pop is already the population number in some versions, or needs 'populationRate'.
-        # Let's use the raw value * rate for now, or just raw if it looks big. 
-        # In the file view: "pop": 0 for many cells. "populationRate": "1000".
-        # Let's assume we multiply.
+        pop = cell.get('pop', 0) * pop_rate
         
-        real_pop = pop # We will format this later.
+        biome_stats[cell.get('biome', 0)]['area'] += area
+        biome_stats[cell.get('biome', 0)]['cells'] += 1
+        biome_stats[cell.get('biome', 0)]['pop'] += pop
         
-        # Biome
-        biome_id = cell.get('biome', 0)
-        biome_stats[biome_id]['area'] += area
-        biome_stats[biome_id]['cells'] += 1
-        biome_stats[biome_id]['pop'] += real_pop
-        
-        # State
         state_id = cell.get('state', 0)
-        if state_id > 0: # 0 is usually neutrals/water
+        if state_id > 0:
             state_stats[state_id]['area'] += area
             state_stats[state_id]['cells'] += 1
-            state_stats[state_id]['pop'] += real_pop
-            
-
+            state_stats[state_id]['pop'] += pop
 
         total_area += area
-        total_pop += real_pop
+        total_pop += pop
 
-    # Process Burgs
-    # Burgs is usually a list of objects.
-    valid_burgs = [b for b in burgs if isinstance(b, dict) and 'name' in b] # Filter out empty/placeholders
+    valid_burgs = [b for b in burgs if isinstance(b, dict) and 'name' in b]
     
     return {
-        'total_area': total_area,
-        'total_pop': total_pop,
-        'biome_stats': biome_stats,
-        'state_stats': state_stats,
+        'total_area': total_area, 'total_pop': total_pop,
+        'biome_stats': biome_stats, 'state_stats': state_stats,
         'valid_burgs': valid_burgs
     }
 
+def generate_section_html(section_id, title, table_headers, rows_html, chart_id):
+    return f"""
+        <div class="card" id="{section_id}">
+            <div class="header-row">
+                <h2>{title}</h2>
+                <div class="toggle-container">
+                    <span>Table</span>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="toggleView('{section_id}')">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Chart</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr>{''.join(f'<th>{h}</th>' for h in table_headers)}</tr></thead>
+                    <tbody>{rows_html}</tbody>
+                </table>
+            </div>
+            <div class="chart-container"><canvas id="{chart_id}"></canvas></div>
+        </div>"""
+
 def generate_html(data, analysis):
-    pack = data.get('pack', {})
     info = data.get('info', {})
     settings = data.get('settings', {})
+    pack = data.get('pack', {})
     
-    # Unpack analysis
-    total_area = analysis['total_area']
-    total_pop = analysis['total_pop']
-    biome_stats = analysis['biome_stats']
-    state_stats = analysis['state_stats']
-    valid_burgs = analysis['valid_burgs']
-    
-    # Extract Data needed for HTML generation
-    biomes_data = data.get('biomesData', {}) # Usually a dict or list
-    # If biomesData is a dict with ids as keys, or list. Azgaar usually has it as object with i, name, color
-    # Let's handle both list and dict if possible, but usually it's a list in recent versions or dict in older.
-    # Based on keys seen earlier, it's a top level key.
-    
+    biomes_data = data.get('biomesData', {})
     states = pack.get('states', [])
     
-    # HTML Construction
-    html = f"""
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>World Analysis: {info.get('mapName', 'Montreia')}</title>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <style>
-            body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max_width: 1200px; margin: 0 auto; padding: 20px; background: #f4f4f9; }}
-            h1, h2, h3 {{ color: #2c3e50; }}
-            .card {{ background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }}
-            table {{ width: 100%; border-collapse: collapse; margin-top: 10px; }}
-            th, td {{ padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }}
-            th {{ background-color: #f8f9fa; }}
-            .stat-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }}
-            .stat-box {{ background: #eef2f5; padding: 15px; border-radius: 5px; text-align: center; }}
-            .stat-value {{ font-size: 1.5em; font-weight: bold; color: #2980b9; }}
-            .color-box {{ display: inline-block; width: 12px; height: 12px; margin-right: 5px; border: 1px solid #ccc; }}
-            
-            /* Toggle Switch */
-            .header-row {{ display: flex; justify-content: space-between; align-items: center; }}
-            .toggle-container {{ display: flex; align-items: center; gap: 10px; font-size: 0.9em; }}
-            .switch {{ position: relative; display: inline-block; width: 50px; height: 24px; }}
-            .switch input {{ opacity: 0; width: 0; height: 0; }}
-            .slider {{ position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; -webkit-transition: .4s; transition: .4s; border-radius: 24px; }}
-            .slider:before {{ position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; -webkit-transition: .4s; transition: .4s; border-radius: 50%; }}
-            input:checked + .slider {{ background-color: #2196F3; }}
-            input:focus + .slider {{ box-shadow: 0 0 1px #2196F3; }}
-            input:checked + .slider:before {{ -webkit-transform: translateX(26px); -ms-transform: translateX(26px); transform: translateX(26px); }}
-            
-            /* View Containers */
-            .chart-container {{ position: relative; height: 400px; width: 100%; display: block; }}
-            .table-container {{ display: none; overflow-x: auto; }}
-            .show-table .chart-container {{ display: none; }}
-            .show-table .table-container {{ display: block; }}
-        </style>
-    </head>
-    <body>
-        <h1>World Analysis: {info.get('mapName', 'Montreia')}</h1>
-        
-        <div class="card">
-            <h2>General Statistics</h2>
-            <div class="stat-grid">
-                <div class="stat-box">
-                    <div class="stat-value">{len(states)-1 if len(states)>1 else 0}</div>
-                    <div>States</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-value">{len(valid_burgs):,}</div>
-                    <div>Burgs (Cities/Towns)</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-value">{total_area:,.0f} {settings.get('areaUnit', 'sq mi')}</div>
-                    <div>Total Land Area</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-value">{int(total_pop):,}</div>
-                    <div>Total Population (Approx)</div>
-                </div>
-            </div>
-        </div>
+    # Helper to get name/color safely
+    def get_meta(source, idx, key, default):
+        return source[idx].get(key, default) if idx < len(source) else default
 
-        <!-- Biomes Section -->
-        <div class="card" id="biomes-section">
-            <div class="header-row">
-                <h2>Biomes</h2>
-                <div class="toggle-container">
-                    <span>Table</span>
-                    <label class="switch">
-                        <input type="checkbox" checked onchange="toggleView('biomes-section')">
-                        <span class="slider"></span>
-                    </label>
-                    <span>Chart</span>
-                </div>
-            </div>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Biome</th>
-                            <th>Area</th>
-                            <th>% Area</th>
-                            <th>Cells</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-    """
+    # Prepare Sections
+    sections = []
+    charts_config = []
     
-    # Biomes Table
-    # biomesData is a dict of lists (columnar)
-    # keys: 'i', 'name', 'color', etc.
-    biome_names = biomes_data.get('name', [])
-    biome_colors = biomes_data.get('color', [])
+    # 1. Biomes
+    sorted_biomes = sorted(analysis['biome_stats'].items(), key=lambda x: x[1]['area'], reverse=True)
+    b_rows = ""
+    b_chart = {'labels': [], 'data': [], 'colors': []}
     
-    # Sort biomes by area
-    sorted_biomes = sorted(biome_stats.items(), key=lambda x: x[1]['area'], reverse=True)
-    
-    # Prepare data for charts
-    chart_biomes_labels = []
-    chart_biomes_data = []
-    chart_biomes_colors = []
-
     for bid, stats in sorted_biomes:
-        b_name = "Unknown"
-        b_color = "#ccc"
+        name = biomes_data.get('name', [])[bid] if bid < len(biomes_data.get('name', [])) else "Unknown"
+        color = biomes_data.get('color', [])[bid] if bid < len(biomes_data.get('color', [])) else "#ccc"
+        pct = (stats['area'] / analysis['total_area'] * 100) if analysis['total_area'] else 0
         
-        if bid < len(biome_names):
-            b_name = biome_names[bid]
+        b_rows += f"""<tr><td><span class="color-box" style="background-color: {color}"></span>{name}</td>
+                      <td>{stats['area']:,.0f}</td><td>{pct:.1f}%</td><td>{stats['cells']}</td></tr>"""
         
-        if bid < len(biome_colors):
-            b_color = biome_colors[bid]
-
-        pct = (stats['area'] / total_area * 100) if total_area > 0 else 0
-        
-        # Filter Marine from Chart only
-        if b_name.lower() != "marine":
-            chart_biomes_labels.append(b_name)
-            chart_biomes_data.append(stats['area'])
-            chart_biomes_colors.append(b_color)
-
-        html += f"""
-                        <tr>
-                            <td><span class="color-box" style="background-color: {b_color}"></span>{b_name}</td>
-                            <td>{stats['area']:,.0f}</td>
-                            <td>{pct:.1f}%</td>
-                            <td>{stats['cells']}</td>
-                        </tr>
-        """
-        
-    html += """
-                    </tbody>
-                </table>
-            </div>
-            <div class="chart-container">
-                <canvas id="biomesChart"></canvas>
-            </div>
-        </div>
-        
-        <!-- States Section -->
-        <div class="card" id="states-section">
-            <div class="header-row">
-                <h2>States</h2>
-                <div class="toggle-container">
-                    <span>Table</span>
-                    <label class="switch">
-                        <input type="checkbox" checked onchange="toggleView('states-section')">
-                        <span class="slider"></span>
-                    </label>
-                    <span>Chart</span>
-                </div>
-            </div>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>State</th>
-                            <th>Area</th>
-                            <th>Population</th>
-                            <th>Burgs</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-    """
-    
-    # States Table
-    # states is a list, index = state_id. 0 is usually neutral.
-    sorted_states = sorted(state_stats.items(), key=lambda x: x[1]['pop'], reverse=True)
-    
-    chart_states_labels = []
-    chart_states_data = []
-    chart_states_colors = []
-
-    for sid, stats in sorted_states:
-        s_name = "Neutral"
-        s_color = "#ccc"
-        if sid < len(states):
-            s_name = states[sid].get('name', f'State {sid}')
-            s_color = states[sid].get('color', '#ccc')
+        if name.lower() != "marine":
+            b_chart['labels'].append(name)
+            b_chart['data'].append(stats['area'])
+            b_chart['colors'].append(color)
             
-        # Count burgs for this state
-        burg_count = sum(1 for b in valid_burgs if b.get('state') == sid)
+    sections.append(generate_section_html('biomes-section', 'Biomes', ['Biome', 'Area', '% Area', 'Cells'], b_rows, 'biomesChart'))
+    charts_config.append({
+        'id': 'biomesChart', 'type': 'pie', 'data': b_chart, 
+        'title': 'Biome Distribution (Area) - Excluding Marine',
+        'dataset_label': 'Area', 'legend_pos': 'right'
+    })
+
+    # 2. States
+    sorted_states = sorted(analysis['state_stats'].items(), key=lambda x: x[1]['pop'], reverse=True)
+    s_rows = ""
+    s_chart = {'labels': [], 'data': [], 'colors': []}
+    
+    for sid, stats in sorted_states:
+        name = get_meta(states, sid, 'name', f'State {sid}')
+        color = get_meta(states, sid, 'color', '#ccc')
+        burg_count = sum(1 for b in analysis['valid_burgs'] if b.get('state') == sid)
         
-        chart_states_labels.append(s_name)
-        chart_states_data.append(stats['pop'])
-        chart_states_colors.append(s_color)
-
-        html += f"""
-                        <tr>
-                            <td><span class="color-box" style="background-color: {s_color}"></span>{s_name}</td>
-                            <td>{stats['area']:,.0f}</td>
-                            <td>{int(stats['pop']):,}</td>
-                            <td>{burg_count}</td>
-                        </tr>
-        """
-
-    html += """
-                    </tbody>
-                </table>
-            </div>
-            <div class="chart-container">
-                <canvas id="statesChart"></canvas>
-            </div>
-        </div>
-
-        <!-- Burgs Section -->
-        <div class="card" id="burgs-section">
-            <div class="header-row">
-                <h2>Largest Burgs</h2>
-                <div class="toggle-container">
-                    <span>Table</span>
-                    <label class="switch">
-                        <input type="checkbox" checked onchange="toggleView('burgs-section')">
-                        <span class="slider"></span>
-                    </label>
-                    <span>Chart</span>
-                </div>
-            </div>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Population</th>
-                            <th>State</th>
-                            <th>Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-    """
-    
-    # Burgs Table (Top 20)
-    # Sort by population
-    sorted_burgs = sorted(valid_burgs, key=lambda x: x.get('population', 0), reverse=True)[:20]
-    
-    chart_burgs_labels = []
-    chart_burgs_data = []
-    chart_burgs_colors = []
-
-    for b in sorted_burgs:
-        name = b.get('name', 'Unnamed')
-        pop = b.get('population', 0) * float(settings.get('populationRate', 1000))
-        state_id = b.get('state', 0)
-        state_name = states[state_id].get('name', 'Neutral') if state_id < len(states) else 'Unknown'
-        state_color = states[state_id].get('color', '#ccc') if state_id < len(states) else '#ccc'
-        b_type = b.get('type', 'Generic')
+        s_rows += f"""<tr><td><span class="color-box" style="background-color: {color}"></span>{name}</td>
+                      <td>{stats['area']:,.0f}</td><td>{int(stats['pop']):,}</td><td>{burg_count}</td></tr>"""
         
-        chart_burgs_labels.append(name)
-        chart_burgs_data.append(pop)
-        chart_burgs_colors.append(state_color)
+        s_chart['labels'].append(name)
+        s_chart['data'].append(stats['pop'])
+        s_chart['colors'].append(color)
 
-        html += f"""
-                        <tr>
-                            <td>{name}</td>
-                            <td>{int(pop):,}</td>
-                            <td>{state_name}</td>
-                            <td>{b_type}</td>
-                        </tr>
-        """
+    sections.append(generate_section_html('states-section', 'States', ['State', 'Area', 'Population', 'Burgs'], s_rows, 'statesChart'))
+    charts_config.append({
+        'id': 'statesChart', 'type': 'bar', 'data': s_chart, 
+        'title': 'State Populations', 'indexAxis': 'y',
+        'dataset_label': 'Population', 'legend_pos': 'top'
+    })
 
-    html += """
-                    </tbody>
-                </table>
-            </div>
-            <div class="chart-container">
-                <canvas id="burgsChart"></canvas>
-            </div>
-        </div>
-
-        <!-- Smallest Burgs Section -->
-        <div class="card" id="smallest-burgs-section">
-            <div class="header-row">
-                <h2>Smallest Burgs</h2>
-                <div class="toggle-container">
-                    <span>Table</span>
-                    <label class="switch">
-                        <input type="checkbox" checked onchange="toggleView('smallest-burgs-section')">
-                        <span class="slider"></span>
-                    </label>
-                    <span>Chart</span>
-                </div>
-            </div>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Population</th>
-                            <th>State</th>
-                            <th>Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-    """
+    # 3. Burgs (Largest & Smallest)
+    pop_rate = float(settings.get('populationRate', 1000))
     
-    # Smallest Burgs Table (Bottom 20)
-    # Sort by population ascending to get the smallest
-    sorted_smallest_burgs = sorted(valid_burgs, key=lambda x: x.get('population', 0))[:20]
+    def process_burgs(burg_list, chart_id, title, section_id):
+        rows = ""
+        chart = {'labels': [], 'data': [], 'colors': []}
+        for b in burg_list:
+            name = b.get('name', 'Unnamed')
+            pop = b.get('population', 0) * pop_rate
+            sid = b.get('state', 0)
+            s_name = get_meta(states, sid, 'name', 'Neutral')
+            s_color = get_meta(states, sid, 'color', '#ccc')
+            
+            rows += f"<tr><td>{name}</td><td>{int(pop):,}</td><td>{s_name}</td><td>{b.get('type', 'Generic')}</td></tr>"
+            chart['labels'].append(name)
+            chart['data'].append(pop)
+            chart['colors'].append(s_color)
+            
+        return generate_section_html(section_id, title, ['Name', 'Population', 'State', 'Type'], rows, chart_id), \
+               {'id': chart_id, 'type': 'bar', 'data': chart, 'title': title, 'indexAxis': 'y', 'dataset_label': 'Population'}
+
+    sorted_burgs = sorted(analysis['valid_burgs'], key=lambda x: x.get('population', 0), reverse=True)[:20]
+    sec, cfg = process_burgs(sorted_burgs, 'burgsChart', 'Largest Burgs', 'burgs-section')
+    sections.append(sec)
+    charts_config.append(cfg)
     
-    chart_smallest_burgs_labels = []
-    chart_smallest_burgs_data = []
-    chart_smallest_burgs_colors = []
+    sorted_smallest = sorted(analysis['valid_burgs'], key=lambda x: x.get('population', 0))[:20]
+    sec, cfg = process_burgs(sorted_smallest, 'smallestBurgsChart', 'Smallest Burgs', 'smallest-burgs-section')
+    sections.append(sec)
+    charts_config.append(cfg)
 
-    for b in sorted_smallest_burgs:
-        name = b.get('name', 'Unnamed')
-        pop = b.get('population', 0) * float(settings.get('populationRate', 1000))
-        state_id = b.get('state', 0)
-        state_name = states[state_id].get('name', 'Neutral') if state_id < len(states) else 'Unknown'
-        state_color = states[state_id].get('color', '#ccc') if state_id < len(states) else '#ccc'
-        b_type = b.get('type', 'Generic')
-        
-        chart_smallest_burgs_labels.append(name)
-        chart_smallest_burgs_data.append(pop)
-        chart_smallest_burgs_colors.append(state_color)
+    # Generate JS for charts
+    js_charts = ""
+    for c in charts_config:
+        legend_display = 'true' if c['type'] == 'pie' else 'false'
+        js_charts += f"""
+        new Chart(document.getElementById('{c['id']}').getContext('2d'), {{
+            type: '{c['type']}',
+            data: {{
+                labels: {json.dumps(c['data']['labels'])},
+                datasets: [{{
+                    label: '{c.get('dataset_label', 'Value')}',
+                    data: {json.dumps(c['data']['data'])},
+                    backgroundColor: {json.dumps(c['data']['colors'])},
+                    borderWidth: 1
+                }}]
+            }},
+            options: {{
+                responsive: true, maintainAspectRatio: false,
+                indexAxis: '{c.get('indexAxis', 'x')}',
+                plugins: {{ 
+                    legend: {{ display: {legend_display}, position: '{c.get('legend_pos', 'top')}' }}, 
+                    title: {{ display: true, text: '{c['title']}' }} 
+                }}
+            }}
+        }});"""
 
-        html += f"""
-                        <tr>
-                            <td>{name}</td>
-                            <td>{int(pop):,}</td>
-                            <td>{state_name}</td>
-                            <td>{b_type}</td>
-                        </tr>
-        """
-
-    html += f"""
-                    </tbody>
-                </table>
-            </div>
-            <div class="chart-container">
-                <canvas id="smallestBurgsChart"></canvas>
-            </div>
-        </div>
-
+    # Final HTML assembly
+    html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Analysis: {info.get('mapName', 'Montreia')}</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; padding: 20px; background: #f4f4f9; }}
+        .card {{ background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }}
+        table {{ width: 100%; border-collapse: collapse; margin-top: 10px; }}
+        th, td {{ padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }} th {{ background-color: #f8f9fa; }}
+        .stat-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }}
+        .stat-box {{ background: #eef2f5; padding: 15px; border-radius: 5px; text-align: center; }}
+        .stat-value {{ font-size: 1.5em; font-weight: bold; color: #2980b9; }}
+        .color-box {{ display: inline-block; width: 12px; height: 12px; margin-right: 5px; border: 1px solid #ccc; }}
+        .header-row {{ display: flex; justify-content: space-between; align-items: center; }}
+        .toggle-container {{ display: flex; align-items: center; gap: 10px; font-size: 0.9em; }}
+        .switch {{ position: relative; display: inline-block; width: 50px; height: 24px; }}
+        .switch input {{ opacity: 0; width: 0; height: 0; }}
+        .slider {{ position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 24px; }}
+        .slider:before {{ position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }}
+        input:checked + .slider {{ background-color: #2196F3; }}
+        input:checked + .slider:before {{ transform: translateX(26px); }}
+        .chart-container {{ position: relative; height: 400px; width: 100%; display: block; }}
+        .table-container {{ display: none; overflow-x: auto; }}
+        .show-table .chart-container {{ display: none; }} .show-table .table-container {{ display: block; }}
+    </style></head><body>
+    <h1>World Analysis: {info.get('mapName', 'Montreia')}</h1>
+    <div class="card"><h2>General Statistics</h2><div class="stat-grid">
+        <div class="stat-box"><div class="stat-value">{len(states)-1 if len(states)>1 else 0}</div><div>States</div></div>
+        <div class="stat-box"><div class="stat-value">{len(analysis['valid_burgs']):,}</div><div>Burgs</div></div>
+        <div class="stat-box"><div class="stat-value">{analysis['total_area']:,.0f} {settings.get('areaUnit', 'sq mi')}</div><div>Total Area</div></div>
+        <div class="stat-box"><div class="stat-value">{int(analysis['total_pop']):,}</div><div>Total Pop</div></div>
+    </div></div>
+    {''.join(sections)}
     <script>
-        function toggleView(sectionId) {{
-            const section = document.getElementById(sectionId);
-            section.classList.toggle('show-table');
-        }}
-
-        // Biomes Chart (Pie)
-        const ctxBiomes = document.getElementById('biomesChart').getContext('2d');
-        new Chart(ctxBiomes, {{
-            type: 'pie',
-            data: {{
-                labels: {json.dumps(chart_biomes_labels)},
-                datasets: [{{
-                    data: {json.dumps(chart_biomes_data)},
-                    backgroundColor: {json.dumps(chart_biomes_colors)},
-                    borderWidth: 1
-                }}]
-            }},
-            options: {{
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {{
-                    legend: {{ position: 'right' }},
-                    title: {{ display: true, text: 'Biome Distribution (Area) - Excluding Marine' }}
-                }}
-            }}
-        }});
-
-        // States Chart (Horizontal Bar)
-        const ctxStates = document.getElementById('statesChart').getContext('2d');
-        new Chart(ctxStates, {{
-            type: 'bar',
-            data: {{
-                labels: {json.dumps(chart_states_labels)},
-                datasets: [{{
-                    label: 'Population',
-                    data: {json.dumps(chart_states_data)},
-                    backgroundColor: {json.dumps(chart_states_colors)},
-                    borderWidth: 1
-                }}]
-            }},
-            options: {{
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {{
-                    legend: {{ display: false }},
-                    title: {{ display: true, text: 'State Populations' }}
-                }}
-            }}
-        }});
-
-        // Burgs Chart (Horizontal Bar)
-        const ctxBurgs = document.getElementById('burgsChart').getContext('2d');
-        new Chart(ctxBurgs, {{
-            type: 'bar',
-            data: {{
-                labels: {json.dumps(chart_burgs_labels)},
-                datasets: [{{
-                    label: 'Population',
-                    data: {json.dumps(chart_burgs_data)},
-                    backgroundColor: {json.dumps(chart_burgs_colors)},
-                    borderWidth: 1
-                }}]
-            }},
-            options: {{
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {{
-                    legend: {{ display: false }},
-                    title: {{ display: true, text: 'Top 20 Burgs by Population' }}
-                }}
-            }}
-        }});
-
-        // Smallest Burgs Chart (Horizontal Bar)
-        const ctxSmallestBurgs = document.getElementById('smallestBurgsChart').getContext('2d');
-        new Chart(ctxSmallestBurgs, {{
-            type: 'bar',
-            data: {{
-                labels: {json.dumps(chart_smallest_burgs_labels)},
-                datasets: [{{
-                    label: 'Population',
-                    data: {json.dumps(chart_smallest_burgs_data)},
-                    backgroundColor: {json.dumps(chart_smallest_burgs_colors)},
-                    borderWidth: 1
-                }}]
-            }},
-            options: {{
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {{
-                    legend: {{ display: false }},
-                    title: {{ display: true, text: 'Smallest 20 Burgs by Population' }}
-                }}
-            }}
-        }});
-    </script>
-    </body>
-    </html>
-    """
+        function toggleView(id) {{ document.getElementById(id).classList.toggle('show-table'); }}
+        {js_charts}
+    </script></body></html>"""
     
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        f.write(html)
-    
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f: f.write(html)
     print(f"Report generated at: {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     data = load_data(INPUT_FILE)
-    analysis = analyze_data(data)
-    generate_html(data, analysis)
+    generate_html(data, analyze_data(data))
