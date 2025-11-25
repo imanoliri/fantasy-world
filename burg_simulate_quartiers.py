@@ -174,6 +174,6 @@ if __name__ == "__main__":
     
     burg_list = get_burgs_from_afmg_map_data(AFMG_MAP_FILE)
 
-    burg_models = get_burg_models(burg_list, simulation_config)
+    burgs = get_burg_models(burg_list, simulation_config)
 
-    write_to_json_file(burg_models, 'burg_models.json')
+    write_to_json_file(burgs, 'data/burgs.json')
