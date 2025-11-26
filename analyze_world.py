@@ -209,7 +209,7 @@ def generate_html(data, analysis, output_file):
     <div class="card"><h2>General Statistics</h2><div class="stat-grid">
         <div class="stat-box"><div class="stat-value">{len(states)-1 if len(states)>1 else 0}</div><div>States</div></div>
         <div class="stat-box"><div class="stat-value">{len(analysis['valid_burgs']):,}</div><div>Burgs</div></div>
-        <div class="stat-box"><div class="stat-value">{analysis['total_area']:,.0f}</div><div>Total Area ({settings.get('areaUnit', 'sq mi')})</div></div>
+        <div class="stat-box"><div class="stat-value">{analysis['total_area']:,.0f}</div><div>Total Area</div></div>
         <div class="stat-box"><div class="stat-value">{int(analysis['total_pop']):,}</div><div>Total Pop</div></div>
     </div></div>
     {''.join(sections)}
