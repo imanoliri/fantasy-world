@@ -209,7 +209,7 @@ def generate_html(data, analysis, output_file):
     <div class="card"><h2>General Statistics</h2><div class="stat-grid">
         <div class="stat-box"><div class="stat-value">{len(states)-1 if len(states)>1 else 0}</div><div>States</div></div>
         <div class="stat-box"><div class="stat-value">{len(analysis['valid_burgs']):,}</div><div>Burgs</div></div>
-        <div class="stat-box"><div class="stat-value">{analysis['total_area']:,.0f} {settings.get('areaUnit', 'sq mi')}</div><div>Total Area</div></div>
+        <div class="stat-box"><div class="stat-value">{analysis['total_area']:,.0f}</div><div>Total Area ({settings.get('areaUnit', 'sq mi')})</div></div>
         <div class="stat-box"><div class="stat-value">{int(analysis['total_pop']):,}</div><div>Total Pop</div></div>
     </div></div>
     {''.join(sections)}
@@ -223,7 +223,7 @@ def generate_html(data, analysis, output_file):
 
 def generate_css(output_dir):
     css = """
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; padding: 20px; background: #f4f4f9; max-width: 1200px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; padding: 20px; background: #f4f4f9; max-width: 1000px; }
         .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; } th { background-color: #f8f9fa; }
