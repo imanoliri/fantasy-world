@@ -154,7 +154,7 @@ def generate_html(data, analysis, output_file):
             s_name = get_meta(states, sid, 'name', 'Neutral')
             s_color = get_meta(states, sid, 'color', '#ccc')
             
-            rows += f"<tr><td>{name}</td><td>{int(pop):,}</td><td>{s_name}</td><td>{b.get('type', 'Generic')}</td></tr>"
+            rows += f"<tr><td><span class=\"color-box\" style=\"background-color: {s_color}\"></span>{name}</td><td>{int(pop):,}</td><td>{s_name}</td><td>{b.get('type', 'Generic')}</td></tr>"
             chart['labels'].append(name)
             chart['data'].append(pop)
             chart['colors'].append(s_color)
@@ -176,6 +176,12 @@ def generate_html(data, analysis, output_file):
     js_charts = ""
     for c in charts_config:
         legend_display = 'true' if c['type'] == 'pie' else 'false'
+        scales_config = ""
+        if c['type'] == 'bar':
+            # For bar charts, we want to ensure the index axis (where labels are) shows all ticks
+            idx_axis = c.get('indexAxis', 'x')
+            scales_config = f", scales: {{ {idx_axis}: {{ ticks: {{ autoSkip: false }} }} }}"
+
         js_charts += f"""
         new Chart(document.getElementById('{c['id']}').getContext('2d'), {{
             type: '{c['type']}',
@@ -194,7 +200,7 @@ def generate_html(data, analysis, output_file):
                 plugins: {{ 
                     legend: {{ display: {legend_display}, position: '{c.get('legend_pos', 'top')}' }}, 
                     title: {{ display: true, text: '{c['title']}' }} 
-                }}
+                }}{scales_config}
             }}
         }});"""
 
@@ -202,35 +208,14 @@ def generate_html(data, analysis, output_file):
     html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Analysis: {info.get('mapName', 'Montreia')}</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; padding: 20px; background: #f4f4f9; }}
-        .card {{ background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }}
-        table {{ width: 100%; border-collapse: collapse; margin-top: 10px; }}
-        th, td {{ padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }} th {{ background-color: #f8f9fa; }}
-        .stat-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }}
-        .stat-box {{ background: #eef2f5; padding: 15px; border-radius: 5px; text-align: center; }}
-        .stat-value {{ font-size: 1.5em; font-weight: bold; color: #2980b9; }}
-        .color-box {{ display: inline-block; width: 12px; height: 12px; margin-right: 5px; border: 1px solid #ccc; }}
-        .header-row {{ display: flex; justify-content: space-between; align-items: center; }}
-        .toggle-container {{ display: flex; align-items: center; gap: 10px; font-size: 0.9em; }}
-        .switch {{ position: relative; display: inline-block; width: 50px; height: 24px; }}
-        .switch input {{ opacity: 0; width: 0; height: 0; }}
-        .slider {{ position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 24px; }}
-        .slider:before {{ position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }}
-        input:checked + .slider {{ background-color: #2196F3; }}
-        input:checked + .slider:before {{ transform: translateX(26px); }}
-        .chart-container {{ position: relative; height: 400px; width: 100%; display: block; }}
-        .table-container {{ display: none; overflow-x: auto; }}
-        .show-table .chart-container {{ display: none; }} .show-table .table-container {{ display: block; }}
-        .back-link {{ display: inline-block; margin-bottom: 20px; color: #2980b9; text-decoration: none; font-weight: bold; }}
-        .back-link:hover {{ text-decoration: underline; }}
-    </style></head><body>
+    <link rel="stylesheet" href="styles.css">
+    </head><body>
     <a href="index.html" class="back-link">&larr; Back to Index</a>
     <h1>World Analysis: {info.get('mapName', 'Montreia')}</h1>
     <div class="card"><h2>General Statistics</h2><div class="stat-grid">
         <div class="stat-box"><div class="stat-value">{len(states)-1 if len(states)>1 else 0}</div><div>States</div></div>
         <div class="stat-box"><div class="stat-value">{len(analysis['valid_burgs']):,}</div><div>Burgs</div></div>
-        <div class="stat-box"><div class="stat-value">{analysis['total_area']:,.0f} {settings.get('areaUnit', 'sq mi')}</div><div>Total Area</div></div>
+        <div class="stat-box"><div class="stat-value">{analysis['total_area']:,.0f}</div><div>Total Area</div></div>
         <div class="stat-box"><div class="stat-value">{int(analysis['total_pop']):,}</div><div>Total Pop</div></div>
     </div></div>
     {''.join(sections)}
@@ -241,6 +226,34 @@ def generate_html(data, analysis, output_file):
     
     with open(output_file, 'w', encoding='utf-8') as f: f.write(html)
     print(f"Report generated at: {output_file}")
+
+def generate_css(output_dir):
+    css = """
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; padding: 20px; background: #f4f4f9; max-width: 1000px; }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; } th { background-color: #f8f9fa; }
+        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .stat-box { background: #eef2f5; padding: 15px; border-radius: 5px; text-align: center; }
+        .stat-value { font-size: 1.5em; font-weight: bold; color: #2980b9; }
+        .color-box { display: inline-block; width: 12px; height: 12px; margin-right: 5px; border: 1px solid #ccc; }
+        .header-row { display: flex; justify-content: space-between; align-items: center; }
+        .toggle-container { display: flex; align-items: center; gap: 10px; font-size: 0.9em; }
+        .switch { position: relative; display: inline-block; width: 50px; height: 24px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 24px; }
+        .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: #2196F3; }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .chart-container { position: relative; height: 400px; width: 100%; display: block; }
+        .table-container { display: none; overflow-x: auto; }
+        .show-table .chart-container { display: none; } .show-table .table-container { display: block; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #2980b9; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+    """
+    css_path = os.path.join(output_dir, 'styles.css')
+    with open(css_path, 'w', encoding='utf-8') as f: f.write(css)
+    print(f"CSS generated at: {css_path}")
 
 def generate_index_html(reports, output_dir):
     links_html = ""
@@ -280,6 +293,8 @@ if __name__ == "__main__":
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
         print(f"Created output directory: {OUTPUT_DIR}")
+        
+    generate_css(OUTPUT_DIR)
 
     json_files = glob.glob(os.path.join(INPUT_DIR, '*.json'))
     
