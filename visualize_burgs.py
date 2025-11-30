@@ -31,6 +31,12 @@ def generate_html(burgs):
         'Mining': '#f1c40f'    # Yellow
     }
     
+    # Collect all citizen types for table headers
+    citizen_types = set()
+    for b in burgs:
+        citizen_types.update(b.get('quartiers', {}).keys())
+    sorted_citizen_types = sorted(list(citizen_types))
+
     for b in burgs:
         # Map Logic
         cx = b['x']
@@ -56,32 +62,52 @@ def generate_html(burgs):
         is_capital = b.get('capital') == 1
         capital_class = " capital" if is_capital else ""
         stroke_width = 3 if is_capital else 2
-            
-        svg_elements.append(f"""
-            <circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" stroke="{stroke}" stroke-width="{stroke_width}"
-                    class="burg-dot{capital_class}" data-id="{b['id']}" data-name="{b['name']}" 
-                    data-pop="{b['population']}" data-type="{b.get('type', 'Unknown')}" data-gold="{net_gold:.2f}">
-                <title>{b['name']} (Pop: {b['population']:,})</title>
-            </circle>
-        """)
         
         # Table Logic
         net_food = b.get('net_production_burg', {}).get('Net_Food', 0)
         quartiers = b.get('nr_quartiers', 0)
         
+        # SVG Element (Removed <title> to avoid double tooltip)
+        svg_elements.append(f"""
+            <circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" stroke="{stroke}" stroke-width="{stroke_width}"
+                    class="burg-dot{capital_class}" data-id="{b['id']}" data-name="{b['name']}" 
+                    data-pop="{b['population']}" data-type="{b.get('type', 'Unknown')}" 
+                    data-gold="{net_gold:.2f}" data-food="{net_food:.2f}">
+            </circle>
+        """)
+        
         name_display = f"★ {b['name']}" if is_capital else b['name']
         row_class = "capital-row" if is_capital else ""
+
+        # Quartier Details for Tooltip
+        quartier_details = ""
+        # Get counts for all types (including 0s) and sort by count desc
+        type_counts = []
+        for ct in sorted_citizen_types:
+            count = b.get('quartiers', {}).get(ct, 0)
+            type_counts.append((ct, count))
+        
+        type_counts.sort(key=lambda x: x[1], reverse=True)
+        
+        for ct, count in type_counts:
+            if count > 0:
+                quartier_details += f"{ct}: {count}<br>"
         
         table_rows.append(f"""
             <tr data-id="{b['id']}" class="{row_class}" onclick="highlightBurg({b['id']})">
                 <td>{name_display}</td>
                 <td>{b.get('type', 'Unknown')}</td>
-                <td>{quartiers}</td>
+                <td class="quartier-cell" data-details="{quartier_details}">{quartiers}</td>
                 <td>{b['population']:,}</td>
                 <td class="{ 'pos' if net_food > 0 else 'neg' }">{net_food:.2f}</td>
                 <td class="{ 'pos' if net_gold > 0 else 'neg' }">{net_gold:.2f}</td>
             </tr>
         """)
+
+    # Update sort indices (fixed again)
+    idx_pop = 3
+    idx_food = 4
+    idx_gold = 5
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -122,11 +148,13 @@ def generate_html(burgs):
         tr.selected {{ background-color: #fff3cd; border-left: 5px solid #f1c40f; }}
         tr.capital-row {{ font-weight: bold; background-color: #fffbf0; }}
         
+        .quartier-cell {{ cursor: help; text-decoration: underline dotted #aaa; }}
+        
         .pos {{ color: #27ae60; font-weight: bold; }}
         .neg {{ color: #c0392b; font-weight: bold; }}
         
         /* Tooltip */
-        .tooltip {{ position: absolute; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 100; }}
+        .tooltip {{ position: absolute; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; }}
     </style>
 </head>
 <body>
@@ -141,7 +169,6 @@ def generate_html(burgs):
                 <!-- Grid/Background could go here -->
                 {''.join(svg_elements)}
             </svg>
-            <div id="tooltip" class="tooltip"></div>
         </div>
         
         <div class="table-container">
@@ -151,9 +178,9 @@ def generate_html(burgs):
                         <th onclick="sortTable(0)">Name</th>
                         <th onclick="sortTable(1)">Type</th>
                         <th onclick="sortTable(2)">Quartiers</th>
-                        <th onclick="sortTable(3)">Pop</th>
-                        <th onclick="sortTable(4)">Food</th>
-                        <th onclick="sortTable(5)">Gold</th>
+                        <th onclick="sortTable({idx_pop})">Pop</th>
+                        <th onclick="sortTable({idx_food})">Food</th>
+                        <th onclick="sortTable({idx_gold})">Gold</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -162,11 +189,14 @@ def generate_html(burgs):
             </table>
         </div>
     </div>
+    <div id="tooltip" class="tooltip"></div>
+
 
     <script>
         const svg = document.getElementById('mapSvg');
         const tooltip = document.getElementById('tooltip');
         const mapContainer = document.getElementById('mapContainer');
+        const table = document.getElementById('burgTable');
         let selectedId = null;
 
         // Map Interactions
@@ -186,14 +216,36 @@ def generate_html(burgs):
                 const pop = parseInt(e.target.getAttribute('data-pop')).toLocaleString();
                 const type = e.target.getAttribute('data-type');
                 const gold = e.target.getAttribute('data-gold');
+                const food = e.target.getAttribute('data-food');
                 
-                tooltip.innerHTML = `<strong>${{name}}</strong><br>Type: ${{type}}<br>Pop: ${{pop}}<br>Gold: ${{gold}}`;
+                tooltip.innerHTML = `<strong>${{name}}</strong><br>Type: ${{type}}<br>Pop: ${{pop}}<br>Food: ${{food}}<br>Gold: ${{gold}}`;
                 tooltip.style.display = 'block';
                 tooltip.style.left = (e.pageX + 10) + 'px';
                 tooltip.style.top = (e.pageY + 10) + 'px';
             }} else {{
                 tooltip.style.display = 'none';
             }}
+        }});
+        
+        // Table Tooltip Interactions
+        table.addEventListener('mousemove', (e) => {{
+            if (e.target.classList.contains('quartier-cell')) {{
+                const details = e.target.getAttribute('data-details');
+                if (details) {{
+                    tooltip.innerHTML = details;
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = (e.pageX + 10) + 'px';
+                    tooltip.style.top = (e.pageY + 10) + 'px';
+                }}
+            }} else {{
+                // Only hide if not over map dot (which is separate)
+                // But we are in table container, so map tooltip is not active
+                tooltip.style.display = 'none';
+            }}
+        }});
+        
+        table.addEventListener('mouseleave', () => {{
+            tooltip.style.display = 'none';
         }});
 
         // Pan and Zoom (Basic)
