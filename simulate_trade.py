@@ -1,6 +1,5 @@
 import json
 import math
-import pandas as pd
 
 BURGS_FILE = 'data/burgs.json'
 OUTPUT_FILE = 'data/trade_routes.csv'
@@ -93,15 +92,12 @@ if __name__ == "__main__":
     print(f"\nTotal trades generated: {len(trades)}")
     
     if trades:
-        df = pd.DataFrame(trades)
-        df.to_csv(OUTPUT_FILE, index=False)
+        # Simple CSV output without pandas
+        import csv
+        with open(OUTPUT_FILE, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=trades[0].keys())
+            writer.writeheader()
+            writer.writerows(trades)
         print(f"Trade routes saved to {OUTPUT_FILE}")
-        
-        # Summary
-        print("\nTop 5 Trade Routes by Volume:")
-        print(df.sort_values('Amount', ascending=False).head(5)[['From_Name', 'To_Name', 'Commodity', 'Amount']])
-        
-        print("\nTotal Volume per Commodity:")
-        print(df.groupby('Commodity')['Amount'].sum())
     else:
         print("No trades occurred.")

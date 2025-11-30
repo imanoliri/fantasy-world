@@ -2,8 +2,12 @@ import json
 import collections
 import os
 import re
-
 import glob
+
+# Import modules
+import simulate_economy
+import generate_interactive_map
+import simulate_trade
 
 # Configuration
 INPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_map'
@@ -12,6 +16,11 @@ OUTPUT_DIR = r'c:\Github_Projects\fantasy-world\reports'
 def load_data(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         return json.load(f)
+
+def save_json(data, filepath):
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+    print(f"Saved JSON to {filepath}")
 
 def analyze_data(data):
     pack = data.get('pack', {})
@@ -208,9 +217,9 @@ def generate_html(data, analysis, output_file):
     html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Analysis: {info.get('mapName', 'Montreia')}</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     </head><body>
-    <a href="index.html" class="back-link">&larr; Back to Index</a>
+    <a href="../index.html" class="back-link">&larr; Back to Index</a>
     <h1>World Analysis: {info.get('mapName', 'Montreia')}</h1>
     <div class="card"><h2>General Statistics</h2><div class="stat-grid">
         <div class="stat-box"><div class="stat-value">{len(states)-1 if len(states)>1 else 0}</div><div>States</div></div>
@@ -257,15 +266,24 @@ def generate_css(output_dir):
 
 def generate_index_html(reports, output_dir):
     links_html = ""
-    for name, filename in reports:
+    for name, report_file, map_file in reports:
         # Filename is absolute path, need relative for link
-        rel_path = os.path.basename(filename)
+        # Reports are now in subfolders, so we need to link into them
+        # report_file: reports/MapName/MapName_report.html
+        # map_file: reports/MapName/MapName_map.html
+        
+        report_rel = os.path.relpath(report_file, output_dir)
+        map_rel = os.path.relpath(map_file, output_dir)
+        
         links_html += f"""
-        <a href="{rel_path}" class="report-card">
+        <div class="report-card">
             <div class="report-icon">🗺️</div>
             <div class="report-name">{name}</div>
-            <div class="report-action">View Report &rarr;</div>
-        </a>"""
+            <div class="report-actions">
+                <a href="{report_rel}" class="report-action">View Report &rarr;</a>
+                <a href="{map_rel}" class="report-action">Interactive Map &rarr;</a>
+            </div>
+        </div>"""
 
     html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fantasy World Reports</title>
@@ -273,11 +291,13 @@ def generate_index_html(reports, output_dir):
         body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; padding: 40px; background: #f4f4f9; max-width: 800px; }}
         h1 {{ text-align: center; color: #2c3e50; margin-bottom: 40px; }}
         .reports-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }}
-        .report-card {{ background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; align-items: center; text-align: center; }}
+        .report-card {{ background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; align-items: center; text-align: center; }}
         .report-card:hover {{ transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }}
         .report-icon {{ font-size: 3em; margin-bottom: 15px; }}
         .report-name {{ font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: #2c3e50; }}
-        .report-action {{ color: #3498db; font-weight: 500; }}
+        .report-actions {{ display: flex; flex-direction: column; gap: 10px; width: 100%; }}
+        .report-action {{ color: #3498db; font-weight: 500; text-decoration: none; border: 1px solid #3498db; padding: 8px; border-radius: 4px; transition: background 0.2s, color 0.2s; }}
+        .report-action:hover {{ background: #3498db; color: white; }}
     </style></head><body>
     <h1>Fantasy World Reports</h1>
     <div class="reports-grid">
@@ -298,6 +318,9 @@ if __name__ == "__main__":
 
     json_files = glob.glob(os.path.join(INPUT_DIR, '*.json'))
     
+    # Load simulation config once
+    sim_config = simulate_economy.load_simulation_config()
+    
     generated_reports = []
 
     if not json_files:
@@ -311,12 +334,42 @@ if __name__ == "__main__":
                 
                 map_name = data.get('info', {}).get('mapName', 'Unknown_Map')
                 safe_name = re.sub(r'[^\w\-_]', '_', map_name)
-                output_filename = os.path.join(OUTPUT_DIR, f"{safe_name}_report.html")
                 
-                generate_html(data, analyze_data(data), output_filename)
-                generated_reports.append((map_name, output_filename))
+                # Create Map Folder
+                map_dir = os.path.join(OUTPUT_DIR, safe_name)
+                if not os.path.exists(map_dir):
+                    os.makedirs(map_dir)
+                
+                # 1. Run Economy Simulation
+                processed_burgs = simulate_economy.process_map_data(data, sim_config)
+                
+                # Save Burgs JSON
+                burgs_file = os.path.join(map_dir, f"{safe_name}_burgs.json")
+                save_json(processed_burgs, burgs_file)
+                
+                # Update burgs in data object for analysis
+                data['pack']['burgs'] = processed_burgs
+                
+                # 2. Run Trade Simulation
+                trades = simulate_trade.simulate_trade(processed_burgs)
+                
+                # Save Trade Routes JSON
+                trades_file = os.path.join(map_dir, f"{safe_name}_trade_routes.json")
+                save_json(trades, trades_file)
+                
+                # 3. Generate Interactive Map
+                map_filename = os.path.join(map_dir, f"{safe_name}_map.html")
+                generate_interactive_map.generate_map(processed_burgs, map_filename, trades_data=trades)
+                
+                # 4. Generate Static Report
+                report_filename = os.path.join(map_dir, f"{safe_name}_report.html")
+                generate_html(data, analyze_data(data), report_filename)
+                
+                generated_reports.append((map_name, report_filename, map_filename))
             except Exception as e:
                 print(f"Error processing {filepath}: {e}")
+                import traceback
+                traceback.print_exc()
         
         if generated_reports:
             generate_index_html(generated_reports, OUTPUT_DIR)

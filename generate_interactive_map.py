@@ -2,26 +2,11 @@ import csv
 import json
 import math
 
-BURGS_FILE = 'data/burgs.json'
-TRADES_FILE = 'data/trade_routes.csv'
-OUTPUT_FILE = 'interactive_map.html'
+# TRADES_FILE = 'data/trade_routes.csv' # Removed dependency
 
-def load_burgs():
-    with open(BURGS_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-def load_trades():
-    trades = []
-    try:
-        with open(TRADES_FILE, 'r', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                trades.append(row)
-    except FileNotFoundError:
-        print("Trade routes file not found. Skipping trade visualization.")
-    return trades
-
-def generate_html(burgs):
+def generate_map(burgs, output_file, trades_data=None):
+    print(f"Generating interactive map with {len(burgs)} burgs...")
+    
     # Determine map bounds
     xs = [b['x'] for b in burgs]
     ys = [b['y'] for b in burgs]
@@ -38,25 +23,25 @@ def generate_html(burgs):
     svg_elements = []
     
     # 1. Trade Routes (Lines) - Draw first so they are behind burgs
-    trades = load_trades()
-    for t in trades:
-        from_id = t['From_ID']
-        to_id = t['To_ID']
-        
-        if from_id in burg_coords and to_id in burg_coords:
-            x1, y1 = burg_coords[from_id]
-            x2, y2 = burg_coords[to_id]
+    if trades_data:
+        for t in trades_data:
+            from_id = str(t['From_ID'])
+            to_id = str(t['To_ID'])
             
-            # Style based on commodity or amount? 
-            # For now, simple styling.
-            commodity = t['Commodity']
-            stroke_color = '#f39c12' if commodity == 'Net_Gold' else '#27ae60' # Gold vs Food
-            
-            svg_elements.append(f"""
-                <line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" 
-                      stroke="{stroke_color}" stroke-width="1" stroke-opacity="0.6"
-                      class="trade-route" />
-            """)
+            if from_id in burg_coords and to_id in burg_coords:
+                x1, y1 = burg_coords[from_id]
+                x2, y2 = burg_coords[to_id]
+                
+                # Style based on commodity or amount? 
+                # For now, simple styling.
+                commodity = t['Commodity']
+                stroke_color = '#f39c12' if commodity == 'Net_Gold' else '#27ae60' # Gold vs Food
+                
+                svg_elements.append(f"""
+                    <line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" 
+                          stroke="{stroke_color}" stroke-width="1" stroke-opacity="0.6"
+                          class="trade-route" />
+                """)
 
     # 2. Burgs (Circles)
     table_rows = []
@@ -336,12 +321,7 @@ def generate_html(burgs):
                 }}
             }});
             
-            // If 'all' is unchecked but some others are checked, we use the list.
-            // If 'all' is checked, we conceptually select everything, but let's rely on the individual checks being synced or just use the list.
-            // Actually, toggleAllTypes syncs them. So we just trust the list of checked items (excluding 'all').
-            
             const rows = table.getElementsByTagName('tr');
-            const dots = document.querySelectorAll('.burg-dot');
             
             // Filter Table
             // Start from 1 to skip header
@@ -466,105 +446,122 @@ def generate_html(burgs):
             startY = e.clientY;
         }});
         
-        mapContainer.addEventListener('mouseup', () => {{ isPanning = false; mapContainer.style.cursor = 'default'; }});
-        mapContainer.addEventListener('mouseleave', () => {{ isPanning = false; mapContainer.style.cursor = 'default'; }});
+        mapContainer.addEventListener('mouseup', () => {{
+            isPanning = false;
+            mapContainer.style.cursor = 'default';
+        }});
+        
+        mapContainer.addEventListener('mouseleave', () => {{
+            isPanning = false;
+            mapContainer.style.cursor = 'default';
+        }});
         
         mapContainer.addEventListener('wheel', (e) => {{
             e.preventDefault();
             const scale = e.deltaY > 0 ? 1.1 : 0.9;
+            const w = viewBox[2];
+            const h = viewBox[3];
+            
             viewBox[2] *= scale;
             viewBox[3] *= scale;
+            
+            // Zoom towards center
+            viewBox[0] -= (viewBox[2] - w) / 2;
+            viewBox[1] -= (viewBox[3] - h) / 2;
+            
             svg.setAttribute('viewBox', viewBox.join(' '));
         }});
 
-        // Selection Logic
         function selectBurg(id) {{
-            // Clear previous
-            document.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
-            
-            if (!id) return;
-            
-            // Highlight Map
-            const dot = document.querySelector(`.burg-dot[data-id="${{id}}"]`);
-            if (dot) dot.classList.add('selected');
-            
-            // Highlight Table
-            const row = document.querySelector(`tr[data-id="${{id}}"]`);
-            if (row) {{
-                row.classList.add('selected');
-                row.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+            // Remove previous selection
+            if (selectedId) {{
+                const prevRow = document.querySelector(`tr[data-id="${{selectedId}}"]`);
+                const prevDot = document.querySelector(`.burg-dot[data-id="${{selectedId}}"]`);
+                if (prevRow) prevRow.classList.remove('selected');
+                if (prevDot) prevDot.classList.remove('selected');
             }}
             
             selectedId = id;
+            
+            if (id) {{
+                const row = document.querySelector(`tr[data-id="${{id}}"]`);
+                const dot = document.querySelector(`.burg-dot[data-id="${{id}}"]`);
+                
+                if (row) {{
+                    row.classList.add('selected');
+                    row.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+                }}
+                
+                if (dot) {{
+                    dot.classList.add('selected');
+                    // Optional: Center map on dot?
+                }}
+            }}
         }}
         
         function highlightBurg(id) {{
             selectBurg(id);
         }}
 
-        // Table Sorting
         function sortTable(n, header) {{
-            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-            table = document.getElementById("burgTable");
+            const table = document.getElementById("burgTable");
+            let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            switching = true;
+            dir = "asc"; 
             
             // Reset other headers
-            const headers = table.getElementsByTagName("th");
-            for (let h of headers) {{
+            const headers = table.querySelectorAll('th');
+            headers.forEach(h => {{
                 if (h !== header) {{
                     h.classList.remove('sort-asc', 'sort-desc');
                 }}
-            }}
+            }});
             
-            // Determine direction
+            // Toggle current header
             if (header.classList.contains('sort-asc')) {{
                 dir = "desc";
                 header.classList.remove('sort-asc');
                 header.classList.add('sort-desc');
             }} else {{
-                dir = "asc";
                 header.classList.remove('sort-desc');
                 header.classList.add('sort-asc');
             }}
-            
-            rows = Array.from(table.rows).slice(1); // Get all rows except header as an array
-            
-            rows.sort(function(a, b) {{
-                x = a.getElementsByTagName("TD")[n];
-                y = b.getElementsByTagName("TD")[n];
-                let xVal = x.innerHTML.replace(/,/g, '');
-                let yVal = y.innerHTML.replace(/,/g, '');
-                
-                // Remove ★ for sorting names if needed
-                if (n === 0) {{
-                    xVal = xVal.replace('★ ', '');
-                    yVal = yVal.replace('★ ', '');
-                }}
-                
-                if (!isNaN(parseFloat(xVal))) {{ xVal = parseFloat(xVal); yVal = parseFloat(yVal); }}
-                else {{ xVal = xVal.toLowerCase(); yVal = yVal.toLowerCase(); }}
-                
-                let comparison = 0;
-                if (xVal > yVal) {{
-                    comparison = 1;
-                }} else if (xVal < yVal) {{
-                    comparison = -1;
-                }}
-                return (dir == "asc") ? comparison : -comparison;
-            }});
 
-            // Re-append sorted rows to the table body
+            // Optimization: Sort an array of rows instead of DOM manipulation
             const tbody = table.querySelector('tbody');
-            tbody.innerHTML = ''; // Clear existing rows
-            rows.forEach(row => tbody.appendChild(row));
+            const rowsArray = Array.from(tbody.rows);
+            
+            rowsArray.sort((a, b) => {{
+                let x = a.getElementsByTagName("TD")[n];
+                let y = b.getElementsByTagName("TD")[n];
+                
+                let xContent = x.textContent || x.innerText;
+                let yContent = y.textContent || y.innerText;
+                
+                // Handle "★ " prefix
+                xContent = xContent.replace("★ ", "");
+                yContent = yContent.replace("★ ", "");
+                
+                // Check if numeric (remove commas)
+                let xNum = parseFloat(xContent.replace(/,/g, ""));
+                let yNum = parseFloat(yContent.replace(/,/g, ""));
+                
+                if (!isNaN(xNum) && !isNaN(yNum)) {{
+                    return dir === "asc" ? xNum - yNum : yNum - xNum;
+                }} else {{
+                    return dir === "asc" ? xContent.localeCompare(yContent) : yContent.localeCompare(xContent);
+                }}
+            }});
+            
+            // Re-append sorted rows
+            const fragment = document.createDocumentFragment();
+            rowsArray.forEach(row => fragment.appendChild(row));
+            tbody.appendChild(fragment);
         }}
     </script>
 </body>
 </html>"""
     
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+    with open(output_file, 'w', encoding='utf-8') as f:
         f.write(html)
-    print(f"Map generated at {OUTPUT_FILE}")
-
-if __name__ == "__main__":
-    burgs = load_burgs()
-    generate_html(burgs)
+    print(f"Map generated at {output_file}")
