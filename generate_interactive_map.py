@@ -192,18 +192,13 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         tr.selected {{ background-color: #fff3cd; border-left: 5px solid #f1c40f; }}
         tr.capital-row {{ font-weight: bold; background-color: #fffbf0; }}
         
-        .quartier-cell {{ cursor: help; text-decoration: underline dotted #aaa; }}
-        
-        .pos {{ color: #27ae60; font-weight: bold; }}
-        .neg {{ color: #c0392b; font-weight: bold; }}
-        
         /* Tooltip */
-        .tooltip {{ position: fixed; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; }}
+        .tooltip {{ position: fixed; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; max-width: 200px; }}
         
-        /* Sort Arrows */
-        th.sort-asc::after {{ content: " ▲"; }}
-        th.sort-desc::after {{ content: " ▼"; }}
-        
+        /* Hidden Table State */
+        .container.table-hidden .table-container {{ display: none; }}
+        .container.table-hidden .map-container {{ flex: 1 1 100%; border-right: none; }}
+
         .controls input[type="text"] {{
             padding: 5px;
             border-radius: 4px;
@@ -236,6 +231,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             
             <label><input type="checkbox" id="toggleTrades" checked onchange="toggleTrades()"> Show Trade Routes</label>
             <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
+            <label><input type="checkbox" id="toggleTable" checked onchange="toggleTable()"> Show Data Table</label>
             <span>| Total Burgs: {len(burgs)}</span>
         </div>
     </header>
@@ -294,6 +290,18 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             }} else {{
                 document.body.classList.remove('show-capitals');
             }}
+        }}
+
+        function toggleTable() {{
+            const checkbox = document.getElementById('toggleTable');
+            const container = document.querySelector('.container');
+            if (checkbox.checked) {{
+                container.classList.remove('table-hidden');
+            }} else {{
+                container.classList.add('table-hidden');
+            }}
+            // Trigger resize event to ensure SVG scales correctly if needed
+            window.dispatchEvent(new Event('resize'));
         }}
         
         function toggleAllTypes(source) {{
@@ -390,8 +398,18 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 
                 tooltip.innerHTML = `<strong>${{name}}</strong><br>Type: ${{type}}<br>Pop: ${{pop}}<br>Food: ${{food}}<br>Gold: ${{gold}}`;
                 tooltip.style.display = 'block';
-                tooltip.style.left = (e.clientX + 10) + 'px';
-                tooltip.style.top = (e.clientY + 10) + 'px';
+                
+                // Smart positioning to keep within viewport
+                let top = e.clientY + 10;
+                let left = e.clientX + 10;
+                
+                // Check if tooltip goes off bottom
+                if (top + 100 > window.innerHeight) {{
+                    top = e.clientY - 100; // Move above cursor
+                }}
+                
+                tooltip.style.left = left + 'px';
+                tooltip.style.top = top + 'px';
             }} else {{
                 tooltip.style.display = 'none';
             }}
