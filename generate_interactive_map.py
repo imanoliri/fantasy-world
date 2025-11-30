@@ -158,10 +158,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         
         .controls {{ display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }}
         
-        .container {{ display: flex; flex: 1; overflow: hidden; }}
+        .container {{ display: flex; flex: 1; overflow: hidden; position: relative; }}
         
         /* Map Section */
-        .map-container {{ flex: 2; background: #ecf0f1; position: relative; overflow: hidden; border-right: 1px solid #bdc3c7; }}
+        .map-container {{ width: 100%; height: 100%; background: #ecf0f1; position: relative; overflow: hidden; }}
         svg {{ width: 100%; height: 100%; cursor: grab; }}
         svg:active {{ cursor: grabbing; }}
         
@@ -183,7 +183,8 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         /* Table Section */
-        .table-container {{ flex: 1; overflow-y: auto; background: white; padding: 0; min-width: 300px; }}
+        /* Table Section */
+        .table-container {{ position: absolute; right: 0; top: 0; bottom: 0; width: 500px; overflow-y: auto; background: rgba(255, 255, 255, 0.95); padding: 0; z-index: 20; box-shadow: -2px 0 5px rgba(0,0,0,0.1); border-left: 1px solid #ddd; }}
         table {{ width: 100%; border-collapse: collapse; font-size: 0.9rem; }}
         th, td {{ padding: 10px; text-align: left; border-bottom: 1px solid #eee; }}
         th {{ background: #f8f9fa; position: sticky; top: 0; z-index: 1; cursor: pointer; }}
@@ -197,7 +198,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         
         /* Hidden Table State */
         .container.table-hidden .table-container {{ display: none; }}
-        .container.table-hidden .map-container {{ flex: 1 1 100%; border-right: none; }}
+        /* Hidden Table State */
+        .container.table-hidden .table-container {{ display: none; }}
+        /* .container.table-hidden .map-container rule removed as map is always full width now */
 
         .controls input[type="text"] {{
             padding: 5px;
@@ -231,12 +234,12 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             
             <label><input type="checkbox" id="toggleTrades" checked onchange="toggleTrades()"> Show Trade Routes</label>
             <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
-            <label><input type="checkbox" id="toggleTable" checked onchange="toggleTable()"> Show Data Table</label>
+            <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Show Data Table</label>
             <span>| Total Burgs: {len(burgs)}</span>
         </div>
     </header>
     
-    <div class="container">
+    <div class="container table-hidden">
         <div class="map-container" id="mapContainer">
             <svg id="mapSvg" viewBox="{min_x-50} {min_y-50} {width} {height}" preserveAspectRatio="xMidYMid meet">
                 <!-- Grid/Background could go here -->
