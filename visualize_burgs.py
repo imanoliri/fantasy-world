@@ -1,12 +1,25 @@
+import csv
 import json
 import math
 
 BURGS_FILE = 'data/burgs.json'
+TRADES_FILE = 'data/trade_routes.csv'
 OUTPUT_FILE = 'interactive_map.html'
 
 def load_burgs():
     with open(BURGS_FILE, 'r', encoding='utf-8') as f:
         return json.load(f)
+
+def load_trades():
+    trades = []
+    try:
+        with open(TRADES_FILE, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                trades.append(row)
+    except FileNotFoundError:
+        print("Trade routes file not found. Skipping trade visualization.")
+    return trades
 
 def generate_html(burgs):
     # Determine map bounds
@@ -18,8 +31,34 @@ def generate_html(burgs):
     width = max_x - min_x + 100
     height = max_y - min_y + 100
     
-    # Generate SVG circles
+    # Create a lookup for burg coordinates
+    burg_coords = {str(b['id']): (b['x'], b['y']) for b in burgs}
+    
+    # Generate SVG Elements
     svg_elements = []
+    
+    # 1. Trade Routes (Lines) - Draw first so they are behind burgs
+    trades = load_trades()
+    for t in trades:
+        from_id = t['From_ID']
+        to_id = t['To_ID']
+        
+        if from_id in burg_coords and to_id in burg_coords:
+            x1, y1 = burg_coords[from_id]
+            x2, y2 = burg_coords[to_id]
+            
+            # Style based on commodity or amount? 
+            # For now, simple styling.
+            commodity = t['Commodity']
+            stroke_color = '#f39c12' if commodity == 'Net_Gold' else '#27ae60' # Gold vs Food
+            
+            svg_elements.append(f"""
+                <line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" 
+                      stroke="{stroke_color}" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            """)
+
+    # 2. Burgs (Circles)
     table_rows = []
     
     # Color mapping
@@ -120,6 +159,8 @@ def generate_html(burgs):
         header {{ background: #2c3e50; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 10; }}
         h1 {{ margin: 0; font-size: 1.2rem; }}
         
+        .controls {{ display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }}
+        
         .container {{ display: flex; flex: 1; overflow: hidden; }}
         
         /* Map Section */
@@ -130,7 +171,12 @@ def generate_html(burgs):
         .burg-dot {{ transition: r 0.2s, stroke-width 0.2s; cursor: pointer; }}
         .burg-dot:hover {{ stroke: #333; stroke-width: 3px; }}
         .burg-dot.selected {{ stroke: #000; stroke-width: 4px; r: 15px; animation: pulse 1s infinite; }}
-        .burg-dot.capital {{ filter: drop-shadow(0 0 6px gold); }}
+        
+        /* Only show capital glow when body has show-capitals class */
+        body.show-capitals .burg-dot.capital {{ filter: drop-shadow(0 0 6px gold); }}
+        
+        .trade-route {{ pointer-events: none; transition: opacity 0.3s; }}
+        .trade-route.hidden {{ opacity: 0; }}
         
         @keyframes pulse {{
             0% {{ stroke-opacity: 1; }}
@@ -157,10 +203,14 @@ def generate_html(burgs):
         .tooltip {{ position: absolute; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; }}
     </style>
 </head>
-<body>
+<body class="show-capitals">
     <header>
         <h1>Interactive Burg Map</h1>
-        <div style="font-size: 0.9rem;">Total Burgs: {len(burgs)}</div>
+        <div class="controls">
+            <label><input type="checkbox" id="toggleTrades" checked onchange="toggleTrades()"> Show Trade Routes</label>
+            <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
+            <span>| Total Burgs: {len(burgs)}</span>
+        </div>
     </header>
     
     <div class="container">
@@ -191,13 +241,33 @@ def generate_html(burgs):
     </div>
     <div id="tooltip" class="tooltip"></div>
 
-
     <script>
         const svg = document.getElementById('mapSvg');
         const tooltip = document.getElementById('tooltip');
         const mapContainer = document.getElementById('mapContainer');
         const table = document.getElementById('burgTable');
         let selectedId = null;
+
+        function toggleTrades() {{
+            const checkbox = document.getElementById('toggleTrades');
+            const routes = document.querySelectorAll('.trade-route');
+            routes.forEach(r => {{
+                if (checkbox.checked) {{
+                    r.classList.remove('hidden');
+                }} else {{
+                    r.classList.add('hidden');
+                }}
+            }});
+        }}
+        
+        function toggleCapitals() {{
+            const checkbox = document.getElementById('toggleCapitals');
+            if (checkbox.checked) {{
+                document.body.classList.add('show-capitals');
+            }} else {{
+                document.body.classList.remove('show-capitals');
+            }}
+        }}
 
         // Map Interactions
         svg.addEventListener('click', (e) => {{
@@ -254,7 +324,7 @@ def generate_html(burgs):
         let viewBox = svg.getAttribute('viewBox').split(' ').map(parseFloat);
         
         mapContainer.addEventListener('mousedown', (e) => {{
-            if (e.target === svg || e.target.tagName === 'circle') {{
+            if (e.target === svg || e.target.tagName === 'circle' || e.target.tagName === 'line') {{
                 isPanning = true;
                 startX = e.clientX;
                 startY = e.clientY;

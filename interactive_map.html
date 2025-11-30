@@ -9,6 +9,8 @@
         header { background: #2c3e50; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 10; }
         h1 { margin: 0; font-size: 1.2rem; }
         
+        .controls { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }
+        
         .container { display: flex; flex: 1; overflow: hidden; }
         
         /* Map Section */
@@ -19,7 +21,12 @@
         .burg-dot { transition: r 0.2s, stroke-width 0.2s; cursor: pointer; }
         .burg-dot:hover { stroke: #333; stroke-width: 3px; }
         .burg-dot.selected { stroke: #000; stroke-width: 4px; r: 15px; animation: pulse 1s infinite; }
-        .burg-dot.capital { filter: drop-shadow(0 0 6px gold); }
+        
+        /* Only show capital glow when body has show-capitals class */
+        body.show-capitals .burg-dot.capital { filter: drop-shadow(0 0 6px gold); }
+        
+        .trade-route { pointer-events: none; transition: opacity 0.3s; }
+        .trade-route.hidden { opacity: 0; }
         
         @keyframes pulse {
             0% { stroke-opacity: 1; }
@@ -46,10 +53,14 @@
         .tooltip { position: absolute; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; }
     </style>
 </head>
-<body>
+<body class="show-capitals">
     <header>
         <h1>Interactive Burg Map</h1>
-        <div style="font-size: 0.9rem;">Total Burgs: 404</div>
+        <div class="controls">
+            <label><input type="checkbox" id="toggleTrades" checked onchange="toggleTrades()"> Show Trade Routes</label>
+            <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
+            <span>| Total Burgs: 404</span>
+        </div>
     </header>
     
     <div class="container">
@@ -57,6 +68,82 @@
             <svg id="mapSvg" viewBox="260.5999999999999 65.5 1366.4 839.84" preserveAspectRatio="xMidYMid meet">
                 <!-- Grid/Background could go here -->
                 
+                <line x1="1243" y1="790.5" x2="1213.04" y2="735.33" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="460.5" y1="613" x2="539.48" y2="698.76" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="1118" y1="709" x2="1136.21" y2="677.47" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="1413.5" y1="684" x2="1446.7" y2="689.7" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="1479.55" y1="332.80999999999995" x2="1467.25" y2="393.95000000000005" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="1380.95" y1="707.22" x2="1300.31" y2="681.86" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="1252" y1="839" x2="1274.53" y2="849.03" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="978.54" y1="249.89" x2="950.4" y2="408.3299999999999" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="460.5" y1="613" x2="406.20000000000005" y2="597.5" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="686.5" y1="772.5" x2="737.3499999999999" y2="726.82" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="829" y1="677" x2="799.31" y2="708.62" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="460.5" y1="613" x2="542.6399999999999" y2="597.38" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="1304.5" y1="159" x2="1339.17" y2="192.15999999999997" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="460.5" y1="613" x2="577.81" y2="506.4100000000001" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="1304.5" y1="159" x2="1259.37" y2="220.80999999999995" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="896.46" y1="350.79999999999995" x2="884.03" y2="330.88" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="1402.5" y1="254" x2="1400.7" y2="233.39999999999998" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="904.5" y1="673" x2="878.21" y2="558.08" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
+                <line x1="1243" y1="790.5" x2="1297.59" y2="798.29" 
+                      stroke="#f39c12" stroke-width="1" stroke-opacity="0.6"
+                      class="trade-route" />
+            
             <circle cx="1531.65" cy="524.32" r="16.044313634431358" fill="#95a5a6" stroke="#2ecc71" stroke-width="3"
                     class="burg-dot capital" data-id="1" data-name="Parabriz" 
                     data-pop="25742" data-type="Generic" 
@@ -6140,13 +6227,33 @@
     </div>
     <div id="tooltip" class="tooltip"></div>
 
-
     <script>
         const svg = document.getElementById('mapSvg');
         const tooltip = document.getElementById('tooltip');
         const mapContainer = document.getElementById('mapContainer');
         const table = document.getElementById('burgTable');
         let selectedId = null;
+
+        function toggleTrades() {
+            const checkbox = document.getElementById('toggleTrades');
+            const routes = document.querySelectorAll('.trade-route');
+            routes.forEach(r => {
+                if (checkbox.checked) {
+                    r.classList.remove('hidden');
+                } else {
+                    r.classList.add('hidden');
+                }
+            });
+        }
+        
+        function toggleCapitals() {
+            const checkbox = document.getElementById('toggleCapitals');
+            if (checkbox.checked) {
+                document.body.classList.add('show-capitals');
+            } else {
+                document.body.classList.remove('show-capitals');
+            }
+        }
 
         // Map Interactions
         svg.addEventListener('click', (e) => {
@@ -6203,7 +6310,7 @@
         let viewBox = svg.getAttribute('viewBox').split(' ').map(parseFloat);
         
         mapContainer.addEventListener('mousedown', (e) => {
-            if (e.target === svg || e.target.tagName === 'circle') {
+            if (e.target === svg || e.target.tagName === 'circle' || e.target.tagName === 'line') {
                 isPanning = true;
                 startX = e.clientX;
                 startY = e.clientY;
