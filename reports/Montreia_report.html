@@ -168,7 +168,7 @@
                 plugins: { 
                     legend: { display: false, position: 'top' }, 
                     title: { display: true, text: 'State Populations' } 
-                }
+                }, scales: { y: { ticks: { autoSkip: false } } }
             }
         });
         new Chart(document.getElementById('burgsChart').getContext('2d'), {
@@ -188,7 +188,7 @@
                 plugins: { 
                     legend: { display: false, position: 'top' }, 
                     title: { display: true, text: 'Largest Burgs' } 
-                }
+                }, scales: { y: { ticks: { autoSkip: false } } }
             }
         });
         new Chart(document.getElementById('smallestBurgsChart').getContext('2d'), {
@@ -208,7 +208,7 @@
                 plugins: { 
                     legend: { display: false, position: 'top' }, 
                     title: { display: true, text: 'Smallest Burgs' } 
-                }
+                }, scales: { y: { ticks: { autoSkip: false } } }
             }
         });
     </script></body></html>

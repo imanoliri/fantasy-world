@@ -176,6 +176,12 @@ def generate_html(data, analysis, output_file):
     js_charts = ""
     for c in charts_config:
         legend_display = 'true' if c['type'] == 'pie' else 'false'
+        scales_config = ""
+        if c['type'] == 'bar':
+            # For bar charts, we want to ensure the index axis (where labels are) shows all ticks
+            idx_axis = c.get('indexAxis', 'x')
+            scales_config = f", scales: {{ {idx_axis}: {{ ticks: {{ autoSkip: false }} }} }}"
+
         js_charts += f"""
         new Chart(document.getElementById('{c['id']}').getContext('2d'), {{
             type: '{c['type']}',
@@ -194,7 +200,7 @@ def generate_html(data, analysis, output_file):
                 plugins: {{ 
                     legend: {{ display: {legend_display}, position: '{c.get('legend_pos', 'top')}' }}, 
                     title: {{ display: true, text: '{c['title']}' }} 
-                }}
+                }}{scales_config}
             }}
         }});"""
 
