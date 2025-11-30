@@ -80,11 +80,13 @@ def generate_html(burgs):
     sorted_citizen_types = sorted(list(citizen_types))
     sorted_burg_types = sorted(list(burg_types))
     
-    # Generate Type Filter Options
-    type_options = '<option value="all">All Types</option>'
+    # Generate Type Filter Options (Checkboxes)
+    type_checkboxes = '<div class="checkbox-list" id="typeCheckboxes">'
+    type_checkboxes += '<label><input type="checkbox" value="all" checked onchange="toggleAllTypes(this)"> All Types</label>'
     for t in sorted_burg_types:
-        type_options += f'<option value="{t}">{t}</option>'
-    type_options += '<option value="Capital">Capital</option>'
+        type_checkboxes += f'<label><input type="checkbox" value="{t}" checked onchange="filterTable()"> {t}</label>'
+    type_checkboxes += '<label><input type="checkbox" value="Capital" checked onchange="filterTable()"> Capital</label>'
+    type_checkboxes += '</div>'
 
     for b in burgs:
         # Map Logic
@@ -178,9 +180,10 @@ def generate_html(burgs):
         svg {{ width: 100%; height: 100%; cursor: grab; }}
         svg:active {{ cursor: grabbing; }}
         
-        .burg-dot {{ transition: r 0.2s, stroke-width 0.2s; cursor: pointer; }}
+        .burg-dot {{ transition: r 0.2s, stroke-width 0.2s, opacity 0.3s; cursor: pointer; }}
         .burg-dot:hover {{ stroke: #333; stroke-width: 3px; }}
         .burg-dot.selected {{ stroke: #000; stroke-width: 4px; r: 15px; animation: pulse 1s infinite; }}
+        .burg-dot.hidden {{ display: none; }}
         
         /* Only show capital glow when body has show-capitals class */
         body.show-capitals .burg-dot.capital {{ filter: drop-shadow(0 0 6px gold); }}
@@ -216,12 +219,21 @@ def generate_html(burgs):
         th.sort-asc::after {{ content: " ▲"; }}
         th.sort-desc::after {{ content: " ▼"; }}
         
-        .controls input[type="text"], .controls select {{
+        .controls input[type="text"] {{
             padding: 5px;
             border-radius: 4px;
             border: 1px solid #ccc;
             margin-right: 10px;
         }}
+        
+        /* Custom Dropdown */
+        .dropdown {{ position: relative; display: inline-block; }}
+        .dropbtn {{ background-color: #34495e; color: white; padding: 5px 10px; font-size: 0.9rem; border: none; cursor: pointer; border-radius: 4px; }}
+        .dropdown-content {{ display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; max-height: 300px; overflow-y: auto; padding: 5px; border-radius: 4px; }}
+        .dropdown-content label {{ color: black; padding: 5px; display: block; cursor: pointer; }}
+        .dropdown-content label:hover {{ background-color: #f1f1f1; }}
+        .dropdown:hover .dropdown-content {{ display: block; }}
+        .dropdown:hover .dropbtn {{ background-color: #2c3e50; }}
     </style>
 </head>
 <body class="show-capitals">
@@ -229,9 +241,14 @@ def generate_html(burgs):
         <h1>Interactive Burg Map</h1>
         <div class="controls">
             <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search names...">
-            <select id="typeFilter" onchange="filterTable()">
-                {type_options}
-            </select>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Filter Types ▼</button>
+                <div class="dropdown-content">
+                    {type_checkboxes}
+                </div>
+            </div>
+            
             <label><input type="checkbox" id="toggleTrades" checked onchange="toggleTrades()"> Show Trade Routes</label>
             <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
             <span>| Total Burgs: {len(burgs)}</span>
@@ -293,32 +310,80 @@ def generate_html(burgs):
                 document.body.classList.remove('show-capitals');
             }}
         }}
+        
+        function toggleAllTypes(source) {{
+            const checkboxes = document.querySelectorAll('#typeCheckboxes input[type="checkbox"]');
+            for(var i=0, n=checkboxes.length;i<n;i++) {{
+                checkboxes[i].checked = source.checked;
+            }}
+            filterTable();
+        }}
 
         function filterTable() {{
             const searchInput = document.getElementById('searchInput');
-            const typeFilter = document.getElementById('typeFilter');
             const filterText = searchInput.value.toLowerCase();
-            const filterType = typeFilter.value;
+            
+            // Get selected types
+            const checkboxes = document.querySelectorAll('#typeCheckboxes input[type="checkbox"]');
+            const selectedTypes = [];
+            let allSelected = false;
+            
+            checkboxes.forEach(cb => {{
+                if (cb.value === 'all') {{
+                    allSelected = cb.checked;
+                }} else if (cb.checked) {{
+                    selectedTypes.push(cb.value);
+                }}
+            }});
+            
+            // If 'all' is unchecked but some others are checked, we use the list.
+            // If 'all' is checked, we conceptually select everything, but let's rely on the individual checks being synced or just use the list.
+            // Actually, toggleAllTypes syncs them. So we just trust the list of checked items (excluding 'all').
             
             const rows = table.getElementsByTagName('tr');
+            const dots = document.querySelectorAll('.burg-dot');
             
+            // Filter Table
             // Start from 1 to skip header
             for (let i = 1; i < rows.length; i++) {{
                 const row = rows[i];
                 const nameCell = row.getElementsByTagName('td')[0];
                 const typeCell = row.getElementsByTagName('td')[1];
+                const burgId = row.getAttribute('data-id');
                 
                 if (nameCell && typeCell) {{
                     const nameText = nameCell.textContent || nameCell.innerText;
                     const typeText = typeCell.textContent || typeCell.innerText;
+                    const isCapitalRow = row.classList.contains('capital-row');
                     
                     const matchesName = nameText.toLowerCase().indexOf(filterText) > -1;
-                    const matchesType = filterType === 'all' || typeText === filterType || (filterType === 'Capital' && row.classList.contains('capital-row'));
                     
-                    if (matchesName && matchesType) {{
+                    // Check if type matches ANY of the selected types
+                    // Special handling for Capital: if 'Capital' is selected, show if row is capital
+                    let matchesType = false;
+                    if (selectedTypes.includes(typeText)) {{
+                        matchesType = true;
+                    }}
+                    if (selectedTypes.includes('Capital') && isCapitalRow) {{
+                        matchesType = true;
+                    }}
+                    
+                    const isVisible = matchesName && matchesType;
+                    
+                    if (isVisible) {{
                         row.style.display = "";
                     }} else {{
                         row.style.display = "none";
+                    }}
+                    
+                    // Filter Map Dot corresponding to this row
+                    const dot = document.querySelector(`.burg-dot[data-id="${{burgId}}"]`);
+                    if (dot) {{
+                        if (isVisible) {{
+                            dot.classList.remove('hidden');
+                        }} else {{
+                            dot.classList.add('hidden');
+                        }}
                     }}
                 }}
             }}
