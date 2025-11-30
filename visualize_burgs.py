@@ -42,28 +42,41 @@ def generate_html(burgs):
         if r > 20: r = 20
         
         color = type_colors.get(b.get('type'), '#95a5a6')
-        if b.get('capital') == 1:
-            stroke = '#e74c3c'
-            stroke_width = 2
+        
+        # Net Gold Logic for Stroke
+        net_gold = b.get('net_production_burg', {}).get('Net_Gold', 0)
+        if net_gold > 0.01:
+            stroke = '#2ecc71' # Green
+        elif net_gold < -0.01:
+            stroke = '#e74c3c' # Red
         else:
-            stroke = '#fff'
-            stroke_width = 1
+            stroke = '#ffffff' # White
+            
+        # Capital Logic
+        is_capital = b.get('capital') == 1
+        capital_class = " capital" if is_capital else ""
+        stroke_width = 3 if is_capital else 2
             
         svg_elements.append(f"""
             <circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" stroke="{stroke}" stroke-width="{stroke_width}"
-                    class="burg-dot" data-id="{b['id']}" data-name="{b['name']}" data-pop="{b['population']}">
+                    class="burg-dot{capital_class}" data-id="{b['id']}" data-name="{b['name']}" 
+                    data-pop="{b['population']}" data-type="{b.get('type', 'Unknown')}" data-gold="{net_gold:.2f}">
                 <title>{b['name']} (Pop: {b['population']:,})</title>
             </circle>
         """)
         
         # Table Logic
         net_food = b.get('net_production_burg', {}).get('Net_Food', 0)
-        net_gold = b.get('net_production_burg', {}).get('Net_Gold', 0)
+        quartiers = b.get('nr_quartiers', 0)
+        
+        name_display = f"★ {b['name']}" if is_capital else b['name']
+        row_class = "capital-row" if is_capital else ""
         
         table_rows.append(f"""
-            <tr data-id="{b['id']}" onclick="highlightBurg({b['id']})">
-                <td>{b['name']}</td>
+            <tr data-id="{b['id']}" class="{row_class}" onclick="highlightBurg({b['id']})">
+                <td>{name_display}</td>
                 <td>{b.get('type', 'Unknown')}</td>
+                <td>{quartiers}</td>
                 <td>{b['population']:,}</td>
                 <td class="{ 'pos' if net_food > 0 else 'neg' }">{net_food:.2f}</td>
                 <td class="{ 'pos' if net_gold > 0 else 'neg' }">{net_gold:.2f}</td>
@@ -91,6 +104,7 @@ def generate_html(burgs):
         .burg-dot {{ transition: r 0.2s, stroke-width 0.2s; cursor: pointer; }}
         .burg-dot:hover {{ stroke: #333; stroke-width: 3px; }}
         .burg-dot.selected {{ stroke: #000; stroke-width: 4px; r: 15px; animation: pulse 1s infinite; }}
+        .burg-dot.capital {{ filter: drop-shadow(0 0 6px gold); }}
         
         @keyframes pulse {{
             0% {{ stroke-opacity: 1; }}
@@ -106,6 +120,7 @@ def generate_html(burgs):
         th:hover {{ background: #e9ecef; }}
         tr:hover {{ background-color: #f1f1f1; cursor: pointer; }}
         tr.selected {{ background-color: #fff3cd; border-left: 5px solid #f1c40f; }}
+        tr.capital-row {{ font-weight: bold; background-color: #fffbf0; }}
         
         .pos {{ color: #27ae60; font-weight: bold; }}
         .neg {{ color: #c0392b; font-weight: bold; }}
@@ -135,9 +150,10 @@ def generate_html(burgs):
                     <tr>
                         <th onclick="sortTable(0)">Name</th>
                         <th onclick="sortTable(1)">Type</th>
-                        <th onclick="sortTable(2)">Pop</th>
-                        <th onclick="sortTable(3)">Food</th>
-                        <th onclick="sortTable(4)">Gold</th>
+                        <th onclick="sortTable(2)">Quartiers</th>
+                        <th onclick="sortTable(3)">Pop</th>
+                        <th onclick="sortTable(4)">Food</th>
+                        <th onclick="sortTable(5)">Gold</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -168,7 +184,10 @@ def generate_html(burgs):
             if (e.target.classList.contains('burg-dot')) {{
                 const name = e.target.getAttribute('data-name');
                 const pop = parseInt(e.target.getAttribute('data-pop')).toLocaleString();
-                tooltip.innerHTML = `<strong>${{name}}</strong><br>Pop: ${{pop}}`;
+                const type = e.target.getAttribute('data-type');
+                const gold = e.target.getAttribute('data-gold');
+                
+                tooltip.innerHTML = `<strong>${{name}}</strong><br>Type: ${{type}}<br>Pop: ${{pop}}<br>Gold: ${{gold}}`;
                 tooltip.style.display = 'block';
                 tooltip.style.left = (e.pageX + 10) + 'px';
                 tooltip.style.top = (e.pageY + 10) + 'px';
