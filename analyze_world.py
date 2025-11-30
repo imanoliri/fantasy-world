@@ -95,7 +95,10 @@ def generate_html(data, analysis, output_file):
     
     # Helper to get name/color safely
     def get_meta(source, idx, key, default):
-        return source[idx].get(key, default) if idx < len(source) else default
+        if idx < len(source):
+            val = source[idx].get(key)
+            return val if val is not None else default
+        return default
 
     # Prepare Sections
     sections = []
@@ -159,10 +162,14 @@ def generate_html(data, analysis, output_file):
         for b in burg_list:
             name = b.get('name', 'Unnamed')
             pop = b.get('population', 0) * pop_rate
-            sid = b.get('state', 0)
+            sid = int(b.get('state', 0))
             s_name = get_meta(states, sid, 'name', 'Neutral')
             s_color = get_meta(states, sid, 'color', '#ccc')
             
+            # Debug print for first few
+            if len(chart['labels']) < 3:
+                print(f"DEBUG: Burg {name}, State ID {sid}, Color {s_color}")
+
             rows += f"<tr><td><span class=\"color-box\" style=\"background-color: {s_color}\"></span>{name}</td><td>{int(pop):,}</td><td>{s_name}</td><td>{b.get('type', 'Generic')}</td></tr>"
             chart['labels'].append(name)
             chart['data'].append(pop)
@@ -359,7 +366,7 @@ if __name__ == "__main__":
                 
                 # 3. Generate Interactive Map
                 map_filename = os.path.join(map_dir, f"{safe_name}_map.html")
-                generate_interactive_map.generate_map(processed_burgs, map_filename, trades_data=trades)
+                generate_interactive_map.generate_map(processed_burgs, map_filename, trades_data=trades, map_name=map_name)
                 
                 # 4. Generate Static Report
                 report_filename = os.path.join(map_dir, f"{safe_name}_report.html")

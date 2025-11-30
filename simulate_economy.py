@@ -92,6 +92,7 @@ def get_burg_model(burg, config):
         'x': burg.get('x'), 
         'y': burg.get('y'), 
         'type': burg.get('type'), 
+        'state': burg.get('state'),
         'capital': burg.get('capital'), 
         'population': round(burg.get('population')*1000), 
         'citizens': citizens, 

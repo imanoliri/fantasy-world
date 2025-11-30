@@ -1,0 +1,173 @@
+[
+    {
+        "From_ID": 146,
+        "From_Name": "Glerialas",
+        "To_ID": 29,
+        "To_Name": "Miimaa",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 62.78
+    },
+    {
+        "From_ID": 12,
+        "From_Name": "Opel",
+        "To_ID": 36,
+        "To_Name": "Fredenmunsa",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 116.59
+    },
+    {
+        "From_ID": 15,
+        "From_Name": "Kohtaki",
+        "To_ID": 44,
+        "To_Name": "Jepsapaki",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 36.41
+    },
+    {
+        "From_ID": 27,
+        "From_Name": "Nuvuspo",
+        "To_ID": 56,
+        "To_Name": "Hetkavere",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 33.69
+    },
+    {
+        "From_ID": 5,
+        "From_Name": "Dastgerd",
+        "To_ID": 62,
+        "To_Name": "Talkhast",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 62.36
+    },
+    {
+        "From_ID": 6,
+        "From_Name": "Oitsa",
+        "To_ID": 70,
+        "To_Name": "Seilumamas",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 84.53
+    },
+    {
+        "From_ID": 43,
+        "From_Name": "Aemara",
+        "To_ID": 91,
+        "To_Name": "Herviarau",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 24.66
+    },
+    {
+        "From_ID": 20,
+        "From_Name": "Oncheleu",
+        "To_ID": 101,
+        "To_Name": "Pitherythro",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 160.92
+    },
+    {
+        "From_ID": 12,
+        "From_Name": "Opel",
+        "To_ID": 123,
+        "To_Name": "Hinzenburg",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 56.47
+    },
+    {
+        "From_ID": 239,
+        "From_Name": "Marnorum",
+        "To_ID": 141,
+        "To_Name": "Rodutum",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 68.35
+    },
+    {
+        "From_ID": 179,
+        "From_Name": "Apinium",
+        "To_ID": 172,
+        "To_Name": "Supinorum",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 43.37
+    },
+    {
+        "From_ID": 12,
+        "From_Name": "Opel",
+        "To_ID": 175,
+        "To_Name": "Schutwan",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 83.61
+    },
+    {
+        "From_ID": 75,
+        "From_Name": "Askromepios",
+        "To_ID": 224,
+        "To_Name": "Acharta",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 47.97
+    },
+    {
+        "From_ID": 12,
+        "From_Name": "Opel",
+        "To_ID": 237,
+        "To_Name": "Adefidshahr",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 158.5
+    },
+    {
+        "From_ID": 75,
+        "From_Name": "Askromepios",
+        "To_ID": 307,
+        "To_Name": "Cyzantibeth",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 76.53
+    },
+    {
+        "From_ID": 374,
+        "From_Name": "Thucia",
+        "To_ID": 382,
+        "To_Name": "Inverwick",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 23.48
+    },
+    {
+        "From_ID": 189,
+        "From_Name": "Sehpasirs",
+        "To_ID": 386,
+        "To_Name": "Hyeleuthos",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 20.68
+    },
+    {
+        "From_ID": 22,
+        "From_Name": "Pulbium",
+        "To_ID": 393,
+        "To_Name": "Laylostan",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 117.89
+    },
+    {
+        "From_ID": 146,
+        "From_Name": "Glerialas",
+        "To_ID": 398,
+        "To_Name": "Letiatigan",
+        "Commodity": "Net_Gold",
+        "Amount": 0.25,
+        "Distance": 55.14
+    }
+]

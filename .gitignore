@@ -32,7 +32,6 @@ env.bak/
 venv.bak/
 
 # Project Outputs
-reports/
 *.log
 
 # IDEs
