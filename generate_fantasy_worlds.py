@@ -10,7 +10,7 @@ import generate_interactive_map
 import simulate_trade
 
 # Configuration
-INPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_map'
+INPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_maps'
 OUTPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_worlds'
 
 def load_data(filepath):
