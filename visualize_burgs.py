@@ -72,9 +72,19 @@ def generate_html(burgs):
     
     # Collect all citizen types for table headers
     citizen_types = set()
+    burg_types = set()
     for b in burgs:
         citizen_types.update(b.get('quartiers', {}).keys())
+        burg_types.add(b.get('type', 'Unknown'))
+    
     sorted_citizen_types = sorted(list(citizen_types))
+    sorted_burg_types = sorted(list(burg_types))
+    
+    # Generate Type Filter Options
+    type_options = '<option value="all">All Types</option>'
+    for t in sorted_burg_types:
+        type_options += f'<option value="{t}">{t}</option>'
+    type_options += '<option value="Capital">Capital</option>'
 
     for b in burgs:
         # Map Logic
@@ -200,13 +210,28 @@ def generate_html(burgs):
         .neg {{ color: #c0392b; font-weight: bold; }}
         
         /* Tooltip */
-        .tooltip {{ position: absolute; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; }}
+        .tooltip {{ position: fixed; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; }}
+        
+        /* Sort Arrows */
+        th.sort-asc::after {{ content: " ▲"; }}
+        th.sort-desc::after {{ content: " ▼"; }}
+        
+        .controls input[type="text"], .controls select {{
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }}
     </style>
 </head>
 <body class="show-capitals">
     <header>
         <h1>Interactive Burg Map</h1>
         <div class="controls">
+            <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search names...">
+            <select id="typeFilter" onchange="filterTable()">
+                {type_options}
+            </select>
             <label><input type="checkbox" id="toggleTrades" checked onchange="toggleTrades()"> Show Trade Routes</label>
             <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
             <span>| Total Burgs: {len(burgs)}</span>
@@ -225,12 +250,12 @@ def generate_html(burgs):
             <table id="burgTable">
                 <thead>
                     <tr>
-                        <th onclick="sortTable(0)">Name</th>
-                        <th onclick="sortTable(1)">Type</th>
-                        <th onclick="sortTable(2)">Quartiers</th>
-                        <th onclick="sortTable({idx_pop})">Pop</th>
-                        <th onclick="sortTable({idx_food})">Food</th>
-                        <th onclick="sortTable({idx_gold})">Gold</th>
+                        <th onclick="sortTable(0, this)">Name</th>
+                        <th onclick="sortTable(1, this)">Type</th>
+                        <th onclick="sortTable(2, this)">Quartiers</th>
+                        <th onclick="sortTable({idx_pop}, this)">Pop</th>
+                        <th onclick="sortTable({idx_food}, this)">Food</th>
+                        <th onclick="sortTable({idx_gold}, this)">Gold</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -269,6 +294,36 @@ def generate_html(burgs):
             }}
         }}
 
+        function filterTable() {{
+            const searchInput = document.getElementById('searchInput');
+            const typeFilter = document.getElementById('typeFilter');
+            const filterText = searchInput.value.toLowerCase();
+            const filterType = typeFilter.value;
+            
+            const rows = table.getElementsByTagName('tr');
+            
+            // Start from 1 to skip header
+            for (let i = 1; i < rows.length; i++) {{
+                const row = rows[i];
+                const nameCell = row.getElementsByTagName('td')[0];
+                const typeCell = row.getElementsByTagName('td')[1];
+                
+                if (nameCell && typeCell) {{
+                    const nameText = nameCell.textContent || nameCell.innerText;
+                    const typeText = typeCell.textContent || typeCell.innerText;
+                    
+                    const matchesName = nameText.toLowerCase().indexOf(filterText) > -1;
+                    const matchesType = filterType === 'all' || typeText === filterType || (filterType === 'Capital' && row.classList.contains('capital-row'));
+                    
+                    if (matchesName && matchesType) {{
+                        row.style.display = "";
+                    }} else {{
+                        row.style.display = "none";
+                    }}
+                }}
+            }}
+        }}
+
         // Map Interactions
         svg.addEventListener('click', (e) => {{
             if (e.target.classList.contains('burg-dot')) {{
@@ -290,8 +345,8 @@ def generate_html(burgs):
                 
                 tooltip.innerHTML = `<strong>${{name}}</strong><br>Type: ${{type}}<br>Pop: ${{pop}}<br>Food: ${{food}}<br>Gold: ${{gold}}`;
                 tooltip.style.display = 'block';
-                tooltip.style.left = (e.pageX + 10) + 'px';
-                tooltip.style.top = (e.pageY + 10) + 'px';
+                tooltip.style.left = (e.clientX + 10) + 'px';
+                tooltip.style.top = (e.clientY + 10) + 'px';
             }} else {{
                 tooltip.style.display = 'none';
             }}
@@ -304,8 +359,8 @@ def generate_html(burgs):
                 if (details) {{
                     tooltip.innerHTML = details;
                     tooltip.style.display = 'block';
-                    tooltip.style.left = (e.pageX + 10) + 'px';
-                    tooltip.style.top = (e.pageY + 10) + 'px';
+                    tooltip.style.left = (e.clientX + 10) + 'px';
+                    tooltip.style.top = (e.clientY + 10) + 'px';
                 }}
             }} else {{
                 // Only hide if not over map dot (which is separate)
@@ -383,41 +438,59 @@ def generate_html(burgs):
         }}
 
         // Table Sorting
-        function sortTable(n) {{
+        function sortTable(n, header) {{
             var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
             table = document.getElementById("burgTable");
-            switching = true;
-            dir = "asc";
-            while (switching) {{
-                switching = false;
-                rows = table.rows;
-                for (i = 1; i < (rows.length - 1); i++) {{
-                    shouldSwitch = false;
-                    x = rows[i].getElementsByTagName("TD")[n];
-                    y = rows[i + 1].getElementsByTagName("TD")[n];
-                    let xVal = x.innerHTML.replace(/,/g, '');
-                    let yVal = y.innerHTML.replace(/,/g, '');
-                    
-                    if (!isNaN(parseFloat(xVal))) {{ xVal = parseFloat(xVal); yVal = parseFloat(yVal); }}
-                    else {{ xVal = xVal.toLowerCase(); yVal = yVal.toLowerCase(); }}
-                    
-                    if (dir == "asc") {{
-                        if (xVal > yVal) {{ shouldSwitch = true; break; }}
-                    }} else if (dir == "desc") {{
-                        if (xVal < yVal) {{ shouldSwitch = true; break; }}
-                    }}
-                }}
-                if (shouldSwitch) {{
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                    switching = true;
-                    switchcount ++;
-                }} else {{
-                    if (switchcount == 0 && dir == "asc") {{
-                        dir = "desc";
-                        switching = true;
-                    }}
+            
+            // Reset other headers
+            const headers = table.getElementsByTagName("th");
+            for (let h of headers) {{
+                if (h !== header) {{
+                    h.classList.remove('sort-asc', 'sort-desc');
                 }}
             }}
+            
+            // Determine direction
+            if (header.classList.contains('sort-asc')) {{
+                dir = "desc";
+                header.classList.remove('sort-asc');
+                header.classList.add('sort-desc');
+            }} else {{
+                dir = "asc";
+                header.classList.remove('sort-desc');
+                header.classList.add('sort-asc');
+            }}
+            
+            rows = Array.from(table.rows).slice(1); // Get all rows except header as an array
+            
+            rows.sort(function(a, b) {{
+                x = a.getElementsByTagName("TD")[n];
+                y = b.getElementsByTagName("TD")[n];
+                let xVal = x.innerHTML.replace(/,/g, '');
+                let yVal = y.innerHTML.replace(/,/g, '');
+                
+                // Remove ★ for sorting names if needed
+                if (n === 0) {{
+                    xVal = xVal.replace('★ ', '');
+                    yVal = yVal.replace('★ ', '');
+                }}
+                
+                if (!isNaN(parseFloat(xVal))) {{ xVal = parseFloat(xVal); yVal = parseFloat(yVal); }}
+                else {{ xVal = xVal.toLowerCase(); yVal = yVal.toLowerCase(); }}
+                
+                let comparison = 0;
+                if (xVal > yVal) {{
+                    comparison = 1;
+                }} else if (xVal < yVal) {{
+                    comparison = -1;
+                }}
+                return (dir == "asc") ? comparison : -comparison;
+            }});
+
+            // Re-append sorted rows to the table body
+            const tbody = table.querySelector('tbody');
+            tbody.innerHTML = ''; // Clear existing rows
+            rows.forEach(row => tbody.appendChild(row));
         }}
     </script>
 </body>
