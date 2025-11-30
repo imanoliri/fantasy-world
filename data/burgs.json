@@ -2,6 +2,8 @@
     {
         "id": 1,
         "name": "Parabriz",
+        "x": 1531.65,
+        "y": 524.32,
         "type": "Generic",
         "capital": 1,
         "population": 25742,
@@ -40,6 +42,8 @@
     {
         "id": 2,
         "name": "Fasasan",
+        "x": 583.5,
+        "y": 337,
         "type": "Naval",
         "capital": 1,
         "population": 12568,
@@ -78,6 +82,8 @@
     {
         "id": 3,
         "name": "Shah",
+        "x": 1395.89,
+        "y": 317.55999999999995,
         "type": "Generic",
         "capital": 1,
         "population": 10081,
@@ -116,6 +122,8 @@
     {
         "id": 4,
         "name": "Narififi",
+        "x": 1456.72,
+        "y": 514.53,
         "type": "Generic",
         "capital": 1,
         "population": 15541,
@@ -154,6 +162,8 @@
     {
         "id": 5,
         "name": "Dastgerd",
+        "x": 1479.55,
+        "y": 332.80999999999995,
         "type": "Generic",
         "capital": 1,
         "population": 15263,
@@ -192,6 +202,8 @@
     {
         "id": 6,
         "name": "Oitsa",
+        "x": 1380.95,
+        "y": 707.22,
         "type": "Naval",
         "capital": 1,
         "population": 9057,
@@ -230,6 +242,8 @@
     {
         "id": 7,
         "name": "Golanag",
+        "x": 1291.5,
+        "y": 160,
         "type": "Naval",
         "capital": 1,
         "population": 4710,
@@ -268,6 +282,8 @@
     {
         "id": 8,
         "name": "Sapala",
+        "x": 1132,
+        "y": 175,
         "type": "Naval",
         "capital": 1,
         "population": 38421,
@@ -306,6 +322,8 @@
     {
         "id": 9,
         "name": "Boviataci",
+        "x": 985.5,
+        "y": 680.5,
         "type": "Naval",
         "capital": 1,
         "population": 4515,
@@ -344,6 +362,8 @@
     {
         "id": 10,
         "name": "Tajajar",
+        "x": 985,
+        "y": 676.5,
         "type": "Naval",
         "capital": 1,
         "population": 13042,
@@ -382,6 +402,8 @@
     {
         "id": 11,
         "name": "Besoscri",
+        "x": 841,
+        "y": 665,
         "type": "Naval",
         "capital": 1,
         "population": 4596,
@@ -420,6 +442,8 @@
     {
         "id": 12,
         "name": "Opel",
+        "x": 460.5,
+        "y": 613,
         "type": "Naval",
         "capital": 1,
         "population": 27525,
@@ -458,6 +482,8 @@
     {
         "id": 13,
         "name": "Sores",
+        "x": 1039.2,
+        "y": 214.39999999999998,
         "type": "Generic",
         "capital": 1,
         "population": 12946,
@@ -496,6 +522,8 @@
     {
         "id": 14,
         "name": "Kylmi",
+        "x": 1538.5,
+        "y": 676.5,
         "type": "Naval",
         "capital": 1,
         "population": 4302,
@@ -534,6 +562,8 @@
     {
         "id": 15,
         "name": "Kohtaki",
+        "x": 1118,
+        "y": 709,
         "type": "Naval",
         "capital": 1,
         "population": 35200,
@@ -572,6 +602,8 @@
     {
         "id": 16,
         "name": "Atropesia",
+        "x": 1397.5,
+        "y": 189.5,
         "type": "Naval",
         "capital": 1,
         "population": 25699,
@@ -610,6 +642,8 @@
     {
         "id": 17,
         "name": "Fuzeylos",
+        "x": 1514.58,
+        "y": 432.9100000000001,
         "type": "Hunting",
         "capital": 1,
         "population": 3223,
@@ -648,6 +682,8 @@
     {
         "id": 18,
         "name": "Nikahai",
+        "x": 1249.5,
+        "y": 795.5,
         "type": "Naval",
         "capital": 1,
         "population": 4918,
@@ -686,6 +722,8 @@
     {
         "id": 19,
         "name": "Kilvala",
+        "x": 1075.5,
+        "y": 734,
         "type": "Naval",
         "capital": 1,
         "population": 14154,
@@ -724,6 +762,8 @@
     {
         "id": 20,
         "name": "Oncheleu",
+        "x": 978.54,
+        "y": 249.89,
         "type": "Generic",
         "capital": 1,
         "population": 38762,
@@ -762,6 +802,8 @@
     {
         "id": 21,
         "name": "Bukan",
+        "x": 1315.43,
+        "y": 413.37,
         "type": "Generic",
         "capital": 1,
         "population": 36991,
@@ -800,6 +842,8 @@
     {
         "id": 22,
         "name": "Pulbium",
+        "x": 904.5,
+        "y": 673,
         "type": "Naval",
         "capital": 1,
         "population": 17407,
@@ -838,6 +882,8 @@
     {
         "id": 23,
         "name": "Vindautum",
+        "x": 894,
+        "y": 714.5,
         "type": "Naval",
         "capital": 1,
         "population": 5589,
@@ -876,6 +922,8 @@
     {
         "id": 24,
         "name": "Siunlinjo",
+        "x": 1353.28,
+        "y": 766.41,
         "type": "Hunting",
         "capital": 0,
         "population": 2170,
@@ -914,6 +962,8 @@
     {
         "id": 25,
         "name": "Breitter",
+        "x": 592.5900000000001,
+        "y": 704.73,
         "type": "Hunting",
         "capital": 0,
         "population": 2424,
@@ -952,6 +1002,8 @@
     {
         "id": 26,
         "name": "Ebutugusca",
+        "x": 974.2,
+        "y": 659.5,
         "type": "Lake",
         "capital": 0,
         "population": 5570,
@@ -990,6 +1042,8 @@
     {
         "id": 27,
         "name": "Nuvuspo",
+        "x": 1413.5,
+        "y": 684,
         "type": "Naval",
         "capital": 0,
         "population": 23787,
@@ -1028,6 +1082,8 @@
     {
         "id": 28,
         "name": "Arin",
+        "x": 1342.96,
+        "y": 369.62,
         "type": "Hunting",
         "capital": 0,
         "population": 1571,
@@ -1066,6 +1122,8 @@
     {
         "id": 29,
         "name": "Miimaa",
+        "x": 1213.04,
+        "y": 735.33,
         "type": "Generic",
         "capital": 0,
         "population": 16808,
@@ -1104,6 +1162,8 @@
     {
         "id": 30,
         "name": "Olymeryth",
+        "x": 871.5,
+        "y": 229,
         "type": "Naval",
         "capital": 0,
         "population": 2631,
@@ -1142,6 +1202,8 @@
     {
         "id": 31,
         "name": "Sicearnas",
+        "x": 1112.85,
+        "y": 363.85,
         "type": "Hunting",
         "capital": 0,
         "population": 5861,
@@ -1180,6 +1242,8 @@
     {
         "id": 32,
         "name": "Plategium",
+        "x": 831.0999999999999,
+        "y": 699.2,
         "type": "Hunting",
         "capital": 0,
         "population": 4461,
@@ -1218,6 +1282,8 @@
     {
         "id": 33,
         "name": "Durgopori",
+        "x": 662.1199999999999,
+        "y": 725.31,
         "type": "Hunting",
         "capital": 0,
         "population": 5007,
@@ -1256,6 +1322,8 @@
     {
         "id": 34,
         "name": "Acharta",
+        "x": 986.5,
+        "y": 203.5,
         "type": "Naval",
         "capital": 0,
         "population": 3700,
@@ -1294,6 +1362,8 @@
     {
         "id": 35,
         "name": "Kuntioge",
+        "x": 1388.68,
+        "y": 622.56,
         "type": "Hunting",
         "capital": 0,
         "population": 3445,
@@ -1332,6 +1402,8 @@
     {
         "id": 36,
         "name": "Fredenmunsa",
+        "x": 539.48,
+        "y": 698.76,
         "type": "Generic",
         "capital": 0,
         "population": 15786,
@@ -1370,6 +1442,8 @@
     {
         "id": 37,
         "name": "Mautiojarmu",
+        "x": 1111.34,
+        "y": 644.67,
         "type": "Hunting",
         "capital": 0,
         "population": 1790,
@@ -1408,6 +1482,8 @@
     {
         "id": 38,
         "name": "Hauheterswe",
+        "x": 626,
+        "y": 771.5,
         "type": "Naval",
         "capital": 0,
         "population": 20422,
@@ -1446,6 +1522,8 @@
     {
         "id": 39,
         "name": "Karlsauern",
+        "x": 445.8499999999999,
+        "y": 698.81,
         "type": "Generic",
         "capital": 0,
         "population": 13485,
@@ -1484,6 +1562,8 @@
     {
         "id": 40,
         "name": "Koula",
+        "x": 1050,
+        "y": 816.5,
         "type": "Naval",
         "capital": 0,
         "population": 11925,
@@ -1522,6 +1602,8 @@
     {
         "id": 41,
         "name": "Enzheim",
+        "x": 415,
+        "y": 647,
         "type": "Naval",
         "capital": 0,
         "population": 2661,
@@ -1560,6 +1642,8 @@
     {
         "id": 42,
         "name": "Komeh",
+        "x": 1368.14,
+        "y": 563.2,
         "type": "Highland",
         "capital": 0,
         "population": 1514,
@@ -1598,6 +1682,8 @@
     {
         "id": 43,
         "name": "Aemara",
+        "x": 1252,
+        "y": 839,
         "type": "Naval",
         "capital": 0,
         "population": 10662,
@@ -1636,6 +1722,8 @@
     {
         "id": 44,
         "name": "Jepsapaki",
+        "x": 1136.21,
+        "y": 677.47,
         "type": "Generic",
         "capital": 0,
         "population": 15908,
@@ -1674,6 +1762,8 @@
     {
         "id": 45,
         "name": "Frexaufin",
+        "x": 594.5999999999999,
+        "y": 762.4,
         "type": "Hunting",
         "capital": 0,
         "population": 3402,
@@ -1712,6 +1802,8 @@
     {
         "id": 46,
         "name": "Nashamnan",
+        "x": 1503.54,
+        "y": 476.14,
         "type": "Generic",
         "capital": 0,
         "population": 6242,
@@ -1750,6 +1842,8 @@
     {
         "id": 47,
         "name": "Tieben",
+        "x": 411.5,
+        "y": 535.5,
         "type": "Naval",
         "capital": 0,
         "population": 9720,
@@ -1788,6 +1882,8 @@
     {
         "id": 48,
         "name": "Hayeh",
+        "x": 1291.15,
+        "y": 374.85,
         "type": "Hunting",
         "capital": 0,
         "population": 5596,
@@ -1826,6 +1922,8 @@
     {
         "id": 49,
         "name": "Turun",
+        "x": 660,
+        "y": 235,
         "type": "Naval",
         "capital": 0,
         "population": 1615,
@@ -1864,6 +1962,8 @@
     {
         "id": 50,
         "name": "Echeh",
+        "x": 1501.49,
+        "y": 505.94000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 1969,
@@ -1902,6 +2002,8 @@
     {
         "id": 51,
         "name": "Geitovium",
+        "x": 649.21,
+        "y": 666.99,
         "type": "Hunting",
         "capital": 0,
         "population": 1684,
@@ -1940,6 +2042,8 @@
     {
         "id": 52,
         "name": "Yvaski",
+        "x": 1518.31,
+        "y": 667.65,
         "type": "Generic",
         "capital": 0,
         "population": 9975,
@@ -1978,6 +2082,8 @@
     {
         "id": 53,
         "name": "Olalumapari",
+        "x": 1182.48,
+        "y": 699.99,
         "type": "Generic",
         "capital": 0,
         "population": 10237,
@@ -2016,6 +2122,8 @@
     {
         "id": 54,
         "name": "Oviila",
+        "x": 1201.65,
+        "y": 750.45,
         "type": "Hunting",
         "capital": 0,
         "population": 2039,
@@ -2054,6 +2162,8 @@
     {
         "id": 55,
         "name": "Adnicrem",
+        "x": 656.96,
+        "y": 648.32,
         "type": "Generic",
         "capital": 0,
         "population": 18657,
@@ -2092,6 +2202,8 @@
     {
         "id": 56,
         "name": "Hetkavere",
+        "x": 1446.7,
+        "y": 689.7,
         "type": "Generic",
         "capital": 0,
         "population": 16410,
@@ -2130,6 +2242,8 @@
     {
         "id": 57,
         "name": "Drurinetia",
+        "x": 784.5,
+        "y": 744.5,
         "type": "Naval",
         "capital": 0,
         "population": 3200,
@@ -2168,6 +2282,8 @@
     {
         "id": 58,
         "name": "Tepemiraz",
+        "x": 1465.2,
+        "y": 437.46000000000004,
         "type": "Generic",
         "capital": 0,
         "population": 6375,
@@ -2206,6 +2322,8 @@
     {
         "id": 59,
         "name": "Zransara",
+        "x": 1400.94,
+        "y": 508.48,
         "type": "Generic",
         "capital": 0,
         "population": 24595,
@@ -2244,6 +2362,8 @@
     {
         "id": 60,
         "name": "Rozveh",
+        "x": 1373.94,
+        "y": 541.14,
         "type": "Generic",
         "capital": 0,
         "population": 8371,
@@ -2282,6 +2402,8 @@
     {
         "id": 61,
         "name": "Lepa",
+        "x": 1164.12,
+        "y": 755.87,
         "type": "Generic",
         "capital": 0,
         "population": 14077,
@@ -2320,6 +2442,8 @@
     {
         "id": 62,
         "name": "Talkhast",
+        "x": 1467.25,
+        "y": 393.95000000000005,
         "type": "Generic",
         "capital": 0,
         "population": 16553,
@@ -2358,6 +2482,8 @@
     {
         "id": 63,
         "name": "Opfheim",
+        "x": 506.3600000000001,
+        "y": 582.85,
         "type": "Generic",
         "capital": 0,
         "population": 14654,
@@ -2396,6 +2522,8 @@
     {
         "id": 64,
         "name": "Farok",
+        "x": 1547.44,
+        "y": 555.64,
         "type": "Generic",
         "capital": 0,
         "population": 8273,
@@ -2434,6 +2562,8 @@
     {
         "id": 65,
         "name": "Nigripona",
+        "x": 878.5,
+        "y": 660.5,
         "type": "Naval",
         "capital": 0,
         "population": 5012,
@@ -2472,6 +2602,8 @@
     {
         "id": 66,
         "name": "Cypethos",
+        "x": 820.5,
+        "y": 194,
         "type": "Naval",
         "capital": 0,
         "population": 13634,
@@ -2510,6 +2642,8 @@
     {
         "id": 67,
         "name": "Villelocen",
+        "x": 886.5,
+        "y": 660.5,
         "type": "Naval",
         "capital": 0,
         "population": 7021,
@@ -2548,6 +2682,8 @@
     {
         "id": 68,
         "name": "Nuorvi",
+        "x": 939.23,
+        "y": 732.65,
         "type": "Hunting",
         "capital": 0,
         "population": 4609,
@@ -2586,6 +2722,8 @@
     {
         "id": 69,
         "name": "Trea",
+        "x": 867.31,
+        "y": 293.56999999999994,
         "type": "Hunting",
         "capital": 0,
         "population": 1594,
@@ -2624,6 +2762,8 @@
     {
         "id": 70,
         "name": "Seilumamas",
+        "x": 1300.31,
+        "y": 681.86,
         "type": "Generic",
         "capital": 0,
         "population": 12968,
@@ -2662,6 +2802,8 @@
     {
         "id": 71,
         "name": "Vilpianum",
+        "x": 738.5700000000002,
+        "y": 708.88,
         "type": "Hunting",
         "capital": 0,
         "population": 4406,
@@ -2700,6 +2842,8 @@
     {
         "id": 72,
         "name": "Schombachal",
+        "x": 361.5999999999999,
+        "y": 347,
         "type": "Generic",
         "capital": 0,
         "population": 13859,
@@ -2738,6 +2882,8 @@
     {
         "id": 73,
         "name": "Thebaizep",
+        "x": 1083.41,
+        "y": 378.27,
         "type": "Generic",
         "capital": 0,
         "population": 27665,
@@ -2776,6 +2922,8 @@
     {
         "id": 74,
         "name": "Viohtinenta",
+        "x": 1245.07,
+        "y": 680.88,
         "type": "Hunting",
         "capital": 0,
         "population": 1855,
@@ -2814,6 +2962,8 @@
     {
         "id": 75,
         "name": "Askromepios",
+        "x": 1304.5,
+        "y": 159,
         "type": "Naval",
         "capital": 0,
         "population": 67966,
@@ -2852,6 +3002,8 @@
     {
         "id": 76,
         "name": "Dudeshk",
+        "x": 508.3399999999999,
+        "y": 327.8299999999999,
         "type": "Hunting",
         "capital": 0,
         "population": 1401,
@@ -2890,6 +3042,8 @@
     {
         "id": 77,
         "name": "Panakhunch",
+        "x": 1349.49,
+        "y": 492.03999999999996,
         "type": "Hunting",
         "capital": 0,
         "population": 4202,
@@ -2928,6 +3082,8 @@
     {
         "id": 78,
         "name": "Halalizi",
+        "x": 1237.93,
+        "y": 355.1600000000001,
         "type": "Hunting",
         "capital": 0,
         "population": 1372,
@@ -2966,6 +3122,8 @@
     {
         "id": 79,
         "name": "Vilva",
+        "x": 1372.14,
+        "y": 655.64,
         "type": "River",
         "capital": 0,
         "population": 8646,
@@ -3004,6 +3162,8 @@
     {
         "id": 80,
         "name": "Kehmamen",
+        "x": 1320.29,
+        "y": 694.08,
         "type": "Generic",
         "capital": 0,
         "population": 9144,
@@ -3042,6 +3202,8 @@
     {
         "id": 81,
         "name": "Smyrmenos",
+        "x": 1238.43,
+        "y": 171.25,
         "type": "Hunting",
         "capital": 0,
         "population": 2005,
@@ -3080,6 +3242,8 @@
     {
         "id": 82,
         "name": "Lefka",
+        "x": 1074.42,
+        "y": 188.01,
         "type": "Generic",
         "capital": 0,
         "population": 13552,
@@ -3118,6 +3282,8 @@
     {
         "id": 83,
         "name": "Olissa",
+        "x": 1121.56,
+        "y": 399.75,
         "type": "Highland",
         "capital": 0,
         "population": 1524,
@@ -3156,6 +3322,8 @@
     {
         "id": 84,
         "name": "Foredenberg",
+        "x": 476.28,
+        "y": 677.91,
         "type": "Generic",
         "capital": 0,
         "population": 7819,
@@ -3194,6 +3362,8 @@
     {
         "id": 85,
         "name": "Nabad",
+        "x": 1325.01,
+        "y": 424.89,
         "type": "Hunting",
         "capital": 0,
         "population": 1913,
@@ -3232,6 +3402,8 @@
     {
         "id": 86,
         "name": "Duravarea",
+        "x": 857.5999999999999,
+        "y": 585.44,
         "type": "Generic",
         "capital": 0,
         "population": 6007,
@@ -3270,6 +3442,8 @@
     {
         "id": 87,
         "name": "Vaamali",
+        "x": 1082,
+        "y": 692.1,
         "type": "Generic",
         "capital": 0,
         "population": 37827,
@@ -3308,6 +3482,8 @@
     {
         "id": 88,
         "name": "Kaljavaave",
+        "x": 1062.79,
+        "y": 766.14,
         "type": "Hunting",
         "capital": 0,
         "population": 1667,
@@ -3346,6 +3522,8 @@
     {
         "id": 89,
         "name": "Sirtis",
+        "x": 677.4000000000001,
+        "y": 714.21,
         "type": "Generic",
         "capital": 0,
         "population": 26501,
@@ -3384,6 +3562,8 @@
     {
         "id": 90,
         "name": "Akhaionti",
+        "x": 1268.15,
+        "y": 321.81999999999994,
         "type": "Generic",
         "capital": 0,
         "population": 14686,
@@ -3422,6 +3602,8 @@
     {
         "id": 91,
         "name": "Herviarau",
+        "x": 1274.53,
+        "y": 849.03,
         "type": "Generic",
         "capital": 0,
         "population": 16132,
@@ -3460,6 +3642,8 @@
     {
         "id": 92,
         "name": "Rez Shahr",
+        "x": 515.8,
+        "y": 427.5,
         "type": "Generic",
         "capital": 0,
         "population": 8800,
@@ -3498,6 +3682,8 @@
     {
         "id": 93,
         "name": "Predionium",
+        "x": 772.71,
+        "y": 712.35,
         "type": "Hunting",
         "capital": 0,
         "population": 1647,
@@ -3536,6 +3722,8 @@
     {
         "id": 94,
         "name": "Bysos",
+        "x": 1320.94,
+        "y": 223.51,
         "type": "Hunting",
         "capital": 0,
         "population": 1400,
@@ -3574,6 +3762,8 @@
     {
         "id": 95,
         "name": "Corgento",
+        "x": 916.24,
+        "y": 579.13,
         "type": "Hunting",
         "capital": 0,
         "population": 1524,
@@ -3612,6 +3802,8 @@
     {
         "id": 96,
         "name": "Bjorpio",
+        "x": 1367.39,
+        "y": 639.56,
         "type": "Generic",
         "capital": 0,
         "population": 6487,
@@ -3650,6 +3842,8 @@
     {
         "id": 97,
         "name": "Aahai",
+        "x": 1259.98,
+        "y": 737.5,
         "type": "Generic",
         "capital": 0,
         "population": 7878,
@@ -3688,6 +3882,8 @@
     {
         "id": 98,
         "name": "Naistellen",
+        "x": 1266.67,
+        "y": 816.24,
         "type": "Hunting",
         "capital": 0,
         "population": 5249,
@@ -3726,6 +3922,8 @@
     {
         "id": 99,
         "name": "Leiposia",
+        "x": 1211.43,
+        "y": 339.56999999999994,
         "type": "Hunting",
         "capital": 0,
         "population": 1871,
@@ -3764,6 +3962,8 @@
     {
         "id": 100,
         "name": "Pteron",
+        "x": 1201.96,
+        "y": 370.72,
         "type": "Highland",
         "capital": 0,
         "population": 11937,
@@ -3802,6 +4002,8 @@
     {
         "id": 101,
         "name": "Pitherythro",
+        "x": 950.4,
+        "y": 408.3299999999999,
         "type": "Generic",
         "capital": 0,
         "population": 9859,
@@ -3840,6 +4042,8 @@
     {
         "id": 102,
         "name": "Iolirira",
+        "x": 939.73,
+        "y": 362.78,
         "type": "Hunting",
         "capital": 0,
         "population": 4514,
@@ -3878,6 +4082,8 @@
     {
         "id": 103,
         "name": "Bashahrzuq",
+        "x": 1354.98,
+        "y": 451.9100000000001,
         "type": "Hunting",
         "capital": 0,
         "population": 5198,
@@ -3916,6 +4122,8 @@
     {
         "id": 104,
         "name": "Tulplahera",
+        "x": 1163.64,
+        "y": 664.57,
         "type": "Generic",
         "capital": 0,
         "population": 11863,
@@ -3954,6 +4162,8 @@
     {
         "id": 105,
         "name": "Abgard",
+        "x": 1487,
+        "y": 557.23,
         "type": "Generic",
         "capital": 0,
         "population": 6422,
@@ -3992,6 +4202,8 @@
     {
         "id": 106,
         "name": "Gorsarak",
+        "x": 801.51,
+        "y": 563.85,
         "type": "Hunting",
         "capital": 0,
         "population": 2685,
@@ -4030,6 +4242,8 @@
     {
         "id": 107,
         "name": "Rakka",
+        "x": 1332.01,
+        "y": 777.8,
         "type": "Generic",
         "capital": 0,
         "population": 16803,
@@ -4068,6 +4282,8 @@
     {
         "id": 108,
         "name": "Alifabadrud",
+        "x": 1319.71,
+        "y": 382.0799999999999,
         "type": "Hunting",
         "capital": 0,
         "population": 2094,
@@ -4106,6 +4322,8 @@
     {
         "id": 109,
         "name": "Ruosaajaama",
+        "x": 1268.27,
+        "y": 653.61,
         "type": "Hunting",
         "capital": 0,
         "population": 1615,
@@ -4144,6 +4362,8 @@
     {
         "id": 110,
         "name": "Hagenhau",
+        "x": 548.72,
+        "y": 668.04,
         "type": "Hunting",
         "capital": 0,
         "population": 1865,
@@ -4182,6 +4402,8 @@
     {
         "id": 111,
         "name": "Konut",
+        "x": 1528.55,
+        "y": 367.28,
         "type": "Generic",
         "capital": 0,
         "population": 7583,
@@ -4220,6 +4442,8 @@
     {
         "id": 112,
         "name": "Murion",
+        "x": 1368.9,
+        "y": 229.90999999999997,
         "type": "Generic",
         "capital": 0,
         "population": 11127,
@@ -4258,6 +4482,8 @@
     {
         "id": 113,
         "name": "Varmir",
+        "x": 1545.09,
+        "y": 431.14,
         "type": "Generic",
         "capital": 0,
         "population": 8964,
@@ -4296,6 +4522,8 @@
     {
         "id": 114,
         "name": "Atheia",
+        "x": 852,
+        "y": 200,
         "type": "Naval",
         "capital": 0,
         "population": 3537,
@@ -4334,6 +4562,8 @@
     {
         "id": 115,
         "name": "Amphi",
+        "x": 866.5,
+        "y": 228,
         "type": "Naval",
         "capital": 0,
         "population": 2150,
@@ -4372,6 +4602,8 @@
     {
         "id": 116,
         "name": "Byrian",
+        "x": 1378.76,
+        "y": 239.47000000000003,
         "type": "Generic",
         "capital": 0,
         "population": 19677,
@@ -4410,6 +4642,8 @@
     {
         "id": 117,
         "name": "Pyryla",
+        "x": 1114.74,
+        "y": 603.67,
         "type": "Hunting",
         "capital": 0,
         "population": 5117,
@@ -4448,6 +4682,8 @@
     {
         "id": 118,
         "name": "Bamberg",
+        "x": 527.8400000000001,
+        "y": 728.93,
         "type": "Hunting",
         "capital": 0,
         "population": 2175,
@@ -4486,6 +4722,8 @@
     {
         "id": 119,
         "name": "Linnocenni",
+        "x": 1364.5,
+        "y": 816.5,
         "type": "Naval",
         "capital": 0,
         "population": 4942,
@@ -4524,6 +4762,8 @@
     {
         "id": 120,
         "name": "Gegandal",
+        "x": 1452.93,
+        "y": 362.5899999999999,
         "type": "Hunting",
         "capital": 0,
         "population": 1406,
@@ -4562,6 +4802,8 @@
     {
         "id": 121,
         "name": "Kanmalankaa",
+        "x": 1371.6,
+        "y": 758.66,
         "type": "Generic",
         "capital": 0,
         "population": 7561,
@@ -4600,6 +4842,8 @@
     {
         "id": 122,
         "name": "Laporystho",
+        "x": 1314.28,
+        "y": 146.22000000000003,
         "type": "Hunting",
         "capital": 0,
         "population": 1810,
@@ -4638,6 +4882,8 @@
     {
         "id": 123,
         "name": "Hinzenburg",
+        "x": 406.20000000000005,
+        "y": 597.5,
         "type": "Generic",
         "capital": 0,
         "population": 16483,
@@ -4676,6 +4922,8 @@
     {
         "id": 124,
         "name": "Karksa",
+        "x": 1119.5,
+        "y": 718.5,
         "type": "Naval",
         "capital": 0,
         "population": 7023,
@@ -4714,6 +4962,8 @@
     {
         "id": 125,
         "name": "Kodeck",
+        "x": 595.5,
+        "y": 745.5,
         "type": "Naval",
         "capital": 0,
         "population": 8188,
@@ -4752,6 +5002,8 @@
     {
         "id": 126,
         "name": "Eiameale",
+        "x": 1062.72,
+        "y": 203.71000000000004,
         "type": "Generic",
         "capital": 0,
         "population": 9171,
@@ -4790,6 +5042,8 @@
     {
         "id": 127,
         "name": "Tevand",
+        "x": 1373.81,
+        "y": 295.63,
         "type": "Generic",
         "capital": 0,
         "population": 14200,
@@ -4828,6 +5082,8 @@
     {
         "id": 128,
         "name": "Frienenmuns",
+        "x": 456.05999999999995,
+        "y": 649.48,
         "type": "Hunting",
         "capital": 0,
         "population": 3697,
@@ -4866,6 +5122,8 @@
     {
         "id": 129,
         "name": "Ceventillan",
+        "x": 834.21,
+        "y": 307.9200000000001,
         "type": "Hunting",
         "capital": 0,
         "population": 1620,
@@ -4904,6 +5162,8 @@
     {
         "id": 130,
         "name": "Todtlin",
+        "x": 399.6700000000001,
+        "y": 451.13,
         "type": "Hunting",
         "capital": 0,
         "population": 5854,
@@ -4942,6 +5202,8 @@
     {
         "id": 131,
         "name": "Aichten",
+        "x": 310.5999999999999,
+        "y": 488,
         "type": "Hunting",
         "capital": 0,
         "population": 1054,
@@ -4980,6 +5242,8 @@
     {
         "id": 132,
         "name": "Throton",
+        "x": 1381.52,
+        "y": 191.76,
         "type": "Hunting",
         "capital": 0,
         "population": 2751,
@@ -5018,6 +5282,8 @@
     {
         "id": 133,
         "name": "Nemunaribas",
+        "x": 1352.06,
+        "y": 300.96000000000004,
         "type": "Hunting",
         "capital": 0,
         "population": 1830,
@@ -5056,6 +5322,8 @@
     {
         "id": 134,
         "name": "Zizicheres",
+        "x": 1557.6,
+        "y": 488.4,
         "type": "Generic",
         "capital": 0,
         "population": 10227,
@@ -5094,6 +5362,8 @@
     {
         "id": 135,
         "name": "Steiamt",
+        "x": 383.28,
+        "y": 610.51,
         "type": "Hunting",
         "capital": 0,
         "population": 3260,
@@ -5132,6 +5402,8 @@
     {
         "id": 136,
         "name": "Kaurepolama",
+        "x": 1226.8,
+        "y": 666.04,
         "type": "Hunting",
         "capital": 0,
         "population": 1556,
@@ -5170,6 +5442,8 @@
     {
         "id": 137,
         "name": "Sinztal",
+        "x": 505.23,
+        "y": 675.02,
         "type": "Hunting",
         "capital": 0,
         "population": 2194,
@@ -5208,6 +5482,8 @@
     {
         "id": 138,
         "name": "Vanlin",
+        "x": 1041.89,
+        "y": 752.54,
         "type": "Hunting",
         "capital": 0,
         "population": 1628,
@@ -5246,6 +5522,8 @@
     {
         "id": 139,
         "name": "Enzklostatt",
+        "x": 433.4200000000001,
+        "y": 437.65,
         "type": "Hunting",
         "capital": 0,
         "population": 990,
@@ -5284,6 +5562,8 @@
     {
         "id": 140,
         "name": "Konut",
+        "x": 1323.8,
+        "y": 477.25,
         "type": "Generic",
         "capital": 0,
         "population": 12064,
@@ -5322,6 +5602,8 @@
     {
         "id": 141,
         "name": "Rodutum",
+        "x": 737.3499999999999,
+        "y": 726.82,
         "type": "Generic",
         "capital": 0,
         "population": 17387,
@@ -5360,6 +5642,8 @@
     {
         "id": 142,
         "name": "Chabad",
+        "x": 1455.74,
+        "y": 319.18000000000006,
         "type": "Generic",
         "capital": 0,
         "population": 20508,
@@ -5398,6 +5682,8 @@
     {
         "id": 143,
         "name": "Munswegen",
+        "x": 410.78999999999996,
+        "y": 363.78,
         "type": "Generic",
         "capital": 0,
         "population": 13490,
@@ -5436,6 +5722,8 @@
     {
         "id": 144,
         "name": "Pabad",
+        "x": 1349.15,
+        "y": 403.26,
         "type": "Hunting",
         "capital": 0,
         "population": 1738,
@@ -5474,6 +5762,8 @@
     {
         "id": 145,
         "name": "Arkepeqan",
+        "x": 1288.08,
+        "y": 421.15,
         "type": "Generic",
         "capital": 0,
         "population": 7233,
@@ -5512,6 +5802,8 @@
     {
         "id": 146,
         "name": "Glerialas",
+        "x": 1243,
+        "y": 790.5,
         "type": "Naval",
         "capital": 0,
         "population": 19357,
@@ -5550,6 +5842,8 @@
     {
         "id": 147,
         "name": "Armir",
+        "x": 1562.16,
+        "y": 519.91,
         "type": "Generic",
         "capital": 0,
         "population": 21706,
@@ -5588,6 +5882,8 @@
     {
         "id": 148,
         "name": "Cornobocob",
+        "x": 698.98,
+        "y": 701.25,
         "type": "Hunting",
         "capital": 0,
         "population": 1675,
@@ -5626,6 +5922,8 @@
     {
         "id": 149,
         "name": "Deleos",
+        "x": 1286.6,
+        "y": 222.41999999999996,
         "type": "Generic",
         "capital": 0,
         "population": 7985,
@@ -5664,6 +5962,8 @@
     {
         "id": 150,
         "name": "Gordistakhr",
+        "x": 1270.9,
+        "y": 437.13,
         "type": "Highland",
         "capital": 0,
         "population": 2534,
@@ -5702,6 +6002,8 @@
     {
         "id": 151,
         "name": "Rudeshk",
+        "x": 1413.22,
+        "y": 438.78999999999996,
         "type": "Hunting",
         "capital": 0,
         "population": 1880,
@@ -5740,6 +6042,8 @@
     {
         "id": 152,
         "name": "Grenburg",
+        "x": 312.25,
+        "y": 468.20000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 1369,
@@ -5778,6 +6082,8 @@
     {
         "id": 153,
         "name": "Tunaleoy",
+        "x": 1577,
+        "y": 490,
         "type": "Naval",
         "capital": 0,
         "population": 40920,
@@ -5816,6 +6122,8 @@
     {
         "id": 154,
         "name": "Stympia",
+        "x": 1372.01,
+        "y": 178.24,
         "type": "Generic",
         "capital": 0,
         "population": 8963,
@@ -5854,6 +6162,8 @@
     {
         "id": 155,
         "name": "Pavesi",
+        "x": 1259.1,
+        "y": 662.06,
         "type": "Generic",
         "capital": 0,
         "population": 10844,
@@ -5892,6 +6202,8 @@
     {
         "id": 156,
         "name": "Karlsbachin",
+        "x": 615.3699999999999,
+        "y": 714.5,
         "type": "Hunting",
         "capital": 0,
         "population": 2053,
@@ -5930,6 +6242,8 @@
     {
         "id": 157,
         "name": "Stenaunau",
+        "x": 487.5,
+        "y": 735.4,
         "type": "Hunting",
         "capital": 0,
         "population": 2201,
@@ -5968,6 +6282,8 @@
     {
         "id": 158,
         "name": "Pulbarea",
+        "x": 663.6300000000001,
+        "y": 768,
         "type": "Hunting",
         "capital": 0,
         "population": 1976,
@@ -6006,6 +6322,8 @@
     {
         "id": 159,
         "name": "Eukeia",
+        "x": 1221.57,
+        "y": 197.19000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 5828,
@@ -6044,6 +6362,8 @@
     {
         "id": 160,
         "name": "Cleosia",
+        "x": 1048.49,
+        "y": 386.1,
         "type": "Hunting",
         "capital": 0,
         "population": 1564,
@@ -6082,6 +6402,8 @@
     {
         "id": 161,
         "name": "Glattnau",
+        "x": 322.19000000000005,
+        "y": 418.16999999999996,
         "type": "Generic",
         "capital": 0,
         "population": 11043,
@@ -6120,6 +6442,8 @@
     {
         "id": 162,
         "name": "Qahteh",
+        "x": 1364,
+        "y": 423.73,
         "type": "Hunting",
         "capital": 0,
         "population": 2292,
@@ -6158,6 +6482,8 @@
     {
         "id": 163,
         "name": "Segenhardt",
+        "x": 384.8699999999999,
+        "y": 529.03,
         "type": "Hunting",
         "capital": 0,
         "population": 999,
@@ -6196,6 +6522,8 @@
     {
         "id": 164,
         "name": "Sixustarau",
+        "x": 905,
+        "y": 639,
         "type": "Naval",
         "capital": 0,
         "population": 3744,
@@ -6234,6 +6562,8 @@
     {
         "id": 165,
         "name": "Abewed",
+        "x": 797.1700000000001,
+        "y": 240.79999999999995,
         "type": "Hunting",
         "capital": 0,
         "population": 3987,
@@ -6272,6 +6602,8 @@
     {
         "id": 166,
         "name": "Pithe",
+        "x": 1150.2,
+        "y": 367.03,
         "type": "Hunting",
         "capital": 0,
         "population": 1645,
@@ -6310,6 +6642,8 @@
     {
         "id": 167,
         "name": "Pyvindapa",
+        "x": 976.4,
+        "y": 800.7,
         "type": "Hunting",
         "capital": 0,
         "population": 1756,
@@ -6348,6 +6682,8 @@
     {
         "id": 168,
         "name": "Jiraz",
+        "x": 1496.88,
+        "y": 376.73,
         "type": "Generic",
         "capital": 0,
         "population": 11228,
@@ -6386,6 +6722,8 @@
     {
         "id": 169,
         "name": "Arin",
+        "x": 1279.45,
+        "y": 467.9200000000001,
         "type": "Highland",
         "capital": 0,
         "population": 1436,
@@ -6424,6 +6762,8 @@
     {
         "id": 170,
         "name": "Nogesihi",
+        "x": 1005.53,
+        "y": 771.56,
         "type": "Generic",
         "capital": 0,
         "population": 10868,
@@ -6462,6 +6802,8 @@
     {
         "id": 171,
         "name": "Bemudezavar",
+        "x": 1507.59,
+        "y": 393.21000000000004,
         "type": "Hunting",
         "capital": 0,
         "population": 4282,
@@ -6500,6 +6842,8 @@
     {
         "id": 172,
         "name": "Supinorum",
+        "x": 799.31,
+        "y": 708.62,
         "type": "Generic",
         "capital": 0,
         "population": 17748,
@@ -6538,6 +6882,8 @@
     {
         "id": 173,
         "name": "Tampaavaki",
+        "x": 1041.08,
+        "y": 777.82,
         "type": "Hunting",
         "capital": 0,
         "population": 1714,
@@ -6576,6 +6922,8 @@
     {
         "id": 174,
         "name": "Duzey-Shahr",
+        "x": 1409.01,
+        "y": 567.06,
         "type": "Hunting",
         "capital": 0,
         "population": 1669,
@@ -6614,6 +6962,8 @@
     {
         "id": 175,
         "name": "Schutwan",
+        "x": 542.6399999999999,
+        "y": 597.38,
         "type": "Generic",
         "capital": 0,
         "population": 15647,
@@ -6652,6 +7002,8 @@
     {
         "id": 176,
         "name": "Clauturorum",
+        "x": 743.22,
+        "y": 681.52,
         "type": "Generic",
         "capital": 0,
         "population": 7262,
@@ -6690,6 +7042,8 @@
     {
         "id": 177,
         "name": "Syrve",
+        "x": 1521.88,
+        "y": 703.71,
         "type": "Hunting",
         "capital": 0,
         "population": 3763,
@@ -6728,6 +7082,8 @@
     {
         "id": 178,
         "name": "Trelolita",
+        "x": 776.49,
+        "y": 742.46,
         "type": "Generic",
         "capital": 0,
         "population": 7808,
@@ -6766,6 +7122,8 @@
     {
         "id": 179,
         "name": "Apinium",
+        "x": 829,
+        "y": 677,
         "type": "Naval",
         "capital": 0,
         "population": 9990,
@@ -6804,6 +7162,8 @@
     {
         "id": 180,
         "name": "Shabas",
+        "x": 1411.8,
+        "y": 282.1,
         "type": "Hunting",
         "capital": 0,
         "population": 3542,
@@ -6842,6 +7202,8 @@
     {
         "id": 181,
         "name": "Kenos",
+        "x": 1271.63,
+        "y": 352.22,
         "type": "Generic",
         "capital": 0,
         "population": 10755,
@@ -6880,6 +7242,8 @@
     {
         "id": 182,
         "name": "Halerirazhi",
+        "x": 1374.19,
+        "y": 374.15,
         "type": "Hunting",
         "capital": 0,
         "population": 4606,
@@ -6918,6 +7282,8 @@
     {
         "id": 183,
         "name": "Gotnausern",
+        "x": 351.0999999999999,
+        "y": 398.9,
         "type": "Hunting",
         "capital": 0,
         "population": 4042,
@@ -6956,6 +7322,8 @@
     {
         "id": 184,
         "name": "Donenterbach",
+        "x": 378.97,
+        "y": 394.73,
         "type": "Generic",
         "capital": 0,
         "population": 9485,
@@ -6994,6 +7362,8 @@
     {
         "id": 185,
         "name": "Unbachal",
+        "x": 315.70000000000005,
+        "y": 504.29999999999995,
         "type": "Hunting",
         "capital": 0,
         "population": 1087,
@@ -7032,6 +7402,8 @@
     {
         "id": 186,
         "name": "Noligamunum",
+        "x": 1312.86,
+        "y": 822.65,
         "type": "Generic",
         "capital": 0,
         "population": 8432,
@@ -7070,6 +7442,8 @@
     {
         "id": 187,
         "name": "Magrapoli",
+        "x": 1132.56,
+        "y": 245.06999999999994,
         "type": "Hunting",
         "capital": 0,
         "population": 2234,
@@ -7108,6 +7482,8 @@
     {
         "id": 188,
         "name": "Kala",
+        "x": 940.49,
+        "y": 212.65999999999997,
         "type": "Hunting",
         "capital": 0,
         "population": 1621,
@@ -7146,6 +7522,8 @@
     {
         "id": 189,
         "name": "Sehpasirs",
+        "x": 1402.5,
+        "y": 254,
         "type": "Naval",
         "capital": 0,
         "population": 17160,
@@ -7184,6 +7562,8 @@
     {
         "id": 190,
         "name": "Leginenaile",
+        "x": 1121.07,
+        "y": 287.87,
         "type": "Hunting",
         "capital": 0,
         "population": 1303,
@@ -7222,6 +7602,8 @@
     {
         "id": 191,
         "name": "Aibenauhegen",
+        "x": 367.20000000000005,
+        "y": 435.72,
         "type": "Hunting",
         "capital": 0,
         "population": 943,
@@ -7260,6 +7642,8 @@
     {
         "id": 192,
         "name": "Doravencu",
+        "x": 765.27,
+        "y": 677.12,
         "type": "Generic",
         "capital": 0,
         "population": 7301,
@@ -7298,6 +7682,8 @@
     {
         "id": 193,
         "name": "Sellinkirch",
+        "x": 549.05,
+        "y": 709.64,
         "type": "Generic",
         "capital": 0,
         "population": 8670,
@@ -7336,6 +7722,8 @@
     {
         "id": 194,
         "name": "Philea",
+        "x": 1244.44,
+        "y": 335.87,
         "type": "Generic",
         "capital": 0,
         "population": 8326,
@@ -7374,6 +7762,8 @@
     {
         "id": 195,
         "name": "Lofenheim",
+        "x": 315,
+        "y": 528,
         "type": "Naval",
         "capital": 0,
         "population": 5965,
@@ -7412,6 +7802,8 @@
     {
         "id": 196,
         "name": "Ventium",
+        "x": 697.44,
+        "y": 741.27,
         "type": "Generic",
         "capital": 0,
         "population": 12393,
@@ -7450,6 +7842,8 @@
     {
         "id": 197,
         "name": "Temnos",
+        "x": 1051.6,
+        "y": 312.12,
         "type": "Hunting",
         "capital": 0,
         "population": 3949,
@@ -7488,6 +7882,8 @@
     {
         "id": 198,
         "name": "Sulzlin",
+        "x": 589.98,
+        "y": 636.63,
         "type": "Generic",
         "capital": 0,
         "population": 13252,
@@ -7526,6 +7922,8 @@
     {
         "id": 199,
         "name": "Pforzheim",
+        "x": 446.5,
+        "y": 724,
         "type": "Naval",
         "capital": 0,
         "population": 11571,
@@ -7564,6 +7962,8 @@
     {
         "id": 200,
         "name": "Laulaue",
+        "x": 1132.5,
+        "y": 749.5,
         "type": "Naval",
         "capital": 0,
         "population": 2760,
@@ -7602,6 +8002,8 @@
     {
         "id": 201,
         "name": "Emnos",
+        "x": 1330,
+        "y": 115.5,
         "type": "Naval",
         "capital": 0,
         "population": 3276,
@@ -7640,6 +8042,8 @@
     {
         "id": 202,
         "name": "Neliomesia",
+        "x": 1272.5,
+        "y": 191.85000000000002,
         "type": "Hunting",
         "capital": 0,
         "population": 2139,
@@ -7678,6 +8082,8 @@
     {
         "id": 203,
         "name": "Momand",
+        "x": 655.56,
+        "y": 279.70000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 2669,
@@ -7716,6 +8122,8 @@
     {
         "id": 204,
         "name": "Amphidros",
+        "x": 933.03,
+        "y": 294.14,
         "type": "Generic",
         "capital": 0,
         "population": 6949,
@@ -7754,6 +8162,8 @@
     {
         "id": 205,
         "name": "Tytostos",
+        "x": 997.41,
+        "y": 390.94000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 5123,
@@ -7792,6 +8202,8 @@
     {
         "id": 206,
         "name": "Gourgos",
+        "x": 1018.6,
+        "y": 246.20000000000005,
         "type": "Lake",
         "capital": 0,
         "population": 1443,
@@ -7830,6 +8242,8 @@
     {
         "id": 207,
         "name": "Inverkeithin",
+        "x": 779.52,
+        "y": 250.25,
         "type": "Hunting",
         "capital": 0,
         "population": 5461,
@@ -7868,6 +8282,8 @@
     {
         "id": 208,
         "name": "Hanos",
+        "x": 980.91,
+        "y": 281.06999999999994,
         "type": "Hunting",
         "capital": 0,
         "population": 1467,
@@ -7906,6 +8322,8 @@
     {
         "id": 209,
         "name": "Sialkhast",
+        "x": 634.4000000000001,
+        "y": 349.28,
         "type": "Hunting",
         "capital": 0,
         "population": 5938,
@@ -7944,6 +8362,8 @@
     {
         "id": 210,
         "name": "Seyaveri",
+        "x": 1389.32,
+        "y": 410.97,
         "type": "Hunting",
         "capital": 0,
         "population": 4298,
@@ -7982,6 +8402,8 @@
     {
         "id": 211,
         "name": "Nushahrzad",
+        "x": 1407.47,
+        "y": 468.26,
         "type": "Generic",
         "capital": 0,
         "population": 10578,
@@ -8020,6 +8442,8 @@
     {
         "id": 212,
         "name": "Hatomsar",
+        "x": 1321.45,
+        "y": 565.64,
         "type": "Highland",
         "capital": 0,
         "population": 16148,
@@ -8058,6 +8482,8 @@
     {
         "id": 213,
         "name": "Kilvioeva",
+        "x": 1091.02,
+        "y": 643.37,
         "type": "Hunting",
         "capital": 0,
         "population": 1670,
@@ -8096,6 +8522,8 @@
     {
         "id": 214,
         "name": "Brigendaco",
+        "x": 902.6,
+        "y": 691.6,
         "type": "Generic",
         "capital": 0,
         "population": 14739,
@@ -8134,6 +8562,8 @@
     {
         "id": 215,
         "name": "Odiraris",
+        "x": 1247.08,
+        "y": 283.64,
         "type": "Generic",
         "capital": 0,
         "population": 14044,
@@ -8172,6 +8602,8 @@
     {
         "id": 216,
         "name": "Bayan",
+        "x": 1358.19,
+        "y": 323.8399999999999,
         "type": "Hunting",
         "capital": 0,
         "population": 1012,
@@ -8210,6 +8642,8 @@
     {
         "id": 217,
         "name": "Breiswald",
+        "x": 351,
+        "y": 555.4,
         "type": "Hunting",
         "capital": 0,
         "population": 4090,
@@ -8248,6 +8682,8 @@
     {
         "id": 218,
         "name": "Jifilandal",
+        "x": 657.69,
+        "y": 454.13,
         "type": "Hunting",
         "capital": 0,
         "population": 2947,
@@ -8286,6 +8722,8 @@
     {
         "id": 219,
         "name": "Plalela",
+        "x": 1238.33,
+        "y": 247.09000000000003,
         "type": "Generic",
         "capital": 0,
         "population": 7195,
@@ -8324,6 +8762,8 @@
     {
         "id": 220,
         "name": "Herina",
+        "x": 1192.98,
+        "y": 279.9100000000001,
         "type": "Hunting",
         "capital": 0,
         "population": 1428,
@@ -8362,6 +8802,8 @@
     {
         "id": 221,
         "name": "Meybid",
+        "x": 563.3699999999999,
+        "y": 369.56999999999994,
         "type": "Hunting",
         "capital": 0,
         "population": 2404,
@@ -8400,6 +8842,8 @@
     {
         "id": 222,
         "name": "Vehkaki",
+        "x": 1308.24,
+        "y": 739.64,
         "type": "Generic",
         "capital": 0,
         "population": 8870,
@@ -8438,6 +8882,8 @@
     {
         "id": 223,
         "name": "Vequm",
+        "x": 1367.6,
+        "y": 799.5,
         "type": "Hunting",
         "capital": 0,
         "population": 1707,
@@ -8476,6 +8922,8 @@
     {
         "id": 224,
         "name": "Acharta",
+        "x": 1339.17,
+        "y": 192.15999999999997,
         "type": "Generic",
         "capital": 0,
         "population": 10307,
@@ -8514,6 +8962,8 @@
     {
         "id": 225,
         "name": "Chalbia",
+        "x": 1171.33,
+        "y": 263.22,
         "type": "Hunting",
         "capital": 0,
         "population": 1047,
@@ -8552,6 +9002,8 @@
     {
         "id": 226,
         "name": "Brilor",
+        "x": 861.8499999999999,
+        "y": 331,
         "type": "Generic",
         "capital": 0,
         "population": 8700,
@@ -8590,6 +9042,8 @@
     {
         "id": 227,
         "name": "Tememi",
+        "x": 1093.51,
+        "y": 508.72,
         "type": "Hunting",
         "capital": 0,
         "population": 1609,
@@ -8628,6 +9082,8 @@
     {
         "id": 228,
         "name": "Herbachlin",
+        "x": 519.4200000000001,
+        "y": 599.16,
         "type": "Generic",
         "capital": 0,
         "population": 7513,
@@ -8666,6 +9122,8 @@
     {
         "id": 229,
         "name": "Rasteried",
+        "x": 349.0999999999999,
+        "y": 370.70000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 1106,
@@ -8704,6 +9162,8 @@
     {
         "id": 230,
         "name": "Buchenaufen",
+        "x": 348.71000000000004,
+        "y": 513.43,
         "type": "Generic",
         "capital": 0,
         "population": 17093,
@@ -8742,6 +9202,8 @@
     {
         "id": 231,
         "name": "Harvakini",
+        "x": 1184.63,
+        "y": 629.86,
         "type": "Generic",
         "capital": 0,
         "population": 6030,
@@ -8780,6 +9242,8 @@
     {
         "id": 232,
         "name": "Suotankaan",
+        "x": 1550.64,
+        "y": 708.47,
         "type": "Hunting",
         "capital": 0,
         "population": 2672,
@@ -8818,6 +9282,8 @@
     {
         "id": 233,
         "name": "Vatrolis",
+        "x": 987.9,
+        "y": 214.5,
         "type": "Hunting",
         "capital": 0,
         "population": 5077,
@@ -8856,6 +9322,8 @@
     {
         "id": 234,
         "name": "Gazdan",
+        "x": 1530.16,
+        "y": 413.88,
         "type": "Hunting",
         "capital": 0,
         "population": 4939,
@@ -8894,6 +9362,8 @@
     {
         "id": 235,
         "name": "Nashehteh",
+        "x": 1385.29,
+        "y": 446.37,
         "type": "Generic",
         "capital": 0,
         "population": 20598,
@@ -8932,6 +9402,8 @@
     {
         "id": 236,
         "name": "Kautio",
+        "x": 1277.72,
+        "y": 681.14,
         "type": "Generic",
         "capital": 0,
         "population": 7534,
@@ -8970,6 +9442,8 @@
     {
         "id": 237,
         "name": "Adefidshahr",
+        "x": 577.81,
+        "y": 506.4100000000001,
         "type": "Generic",
         "capital": 0,
         "population": 15263,
@@ -9008,6 +9482,8 @@
     {
         "id": 238,
         "name": "Cantego",
+        "x": 919.2,
+        "y": 745.5,
         "type": "Generic",
         "capital": 0,
         "population": 9172,
@@ -9046,6 +9522,8 @@
     {
         "id": 239,
         "name": "Marnorum",
+        "x": 686.5,
+        "y": 772.5,
         "type": "Naval",
         "capital": 0,
         "population": 22627,
@@ -9084,6 +9562,8 @@
     {
         "id": 240,
         "name": "Agustatuva",
+        "x": 718.29,
+        "y": 765.33,
         "type": "Generic",
         "capital": 0,
         "population": 7663,
@@ -9122,6 +9602,8 @@
     {
         "id": 241,
         "name": "Shahrdestan",
+        "x": 504.04999999999995,
+        "y": 381.4200000000001,
         "type": "Generic",
         "capital": 0,
         "population": 10897,
@@ -9160,6 +9642,8 @@
     {
         "id": 242,
         "name": "Ballfach",
+        "x": 323.05,
+        "y": 449.96,
         "type": "Generic",
         "capital": 0,
         "population": 7472,
@@ -9198,6 +9682,8 @@
     {
         "id": 243,
         "name": "Farimnan",
+        "x": 1299.53,
+        "y": 468.54999999999995,
         "type": "Highland",
         "capital": 0,
         "population": 1481,
@@ -9236,6 +9722,8 @@
     {
         "id": 244,
         "name": "Apenalbron",
+        "x": 324.48,
+        "y": 495.9100000000001,
         "type": "Generic",
         "capital": 0,
         "population": 9853,
@@ -9274,6 +9762,8 @@
     {
         "id": 245,
         "name": "Jowzdandaq",
+        "x": 1487.41,
+        "y": 536.88,
         "type": "Generic",
         "capital": 0,
         "population": 13071,
@@ -9312,6 +9802,8 @@
     {
         "id": 246,
         "name": "Khormajan",
+        "x": 696.72,
+        "y": 268.70000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 964,
@@ -9350,6 +9842,8 @@
     {
         "id": 247,
         "name": "Theolis",
+        "x": 1163.7,
+        "y": 300.31999999999994,
         "type": "Hunting",
         "capital": 0,
         "population": 964,
@@ -9388,6 +9882,8 @@
     {
         "id": 248,
         "name": "Tores",
+        "x": 1048.34,
+        "y": 347.15,
         "type": "Hunting",
         "capital": 0,
         "population": 2901,
@@ -9426,6 +9922,8 @@
     {
         "id": 249,
         "name": "Hasht",
+        "x": 1464.16,
+        "y": 476.05999999999995,
         "type": "Hunting",
         "capital": 0,
         "population": 1714,
@@ -9464,6 +9962,8 @@
     {
         "id": 250,
         "name": "Griestatt",
+        "x": 618.19,
+        "y": 617.5,
         "type": "Highland",
         "capital": 0,
         "population": 1660,
@@ -9502,6 +10002,8 @@
     {
         "id": 251,
         "name": "Agicos",
+        "x": 941.56,
+        "y": 245.87,
         "type": "Hunting",
         "capital": 0,
         "population": 4075,
@@ -9540,6 +10042,8 @@
     {
         "id": 252,
         "name": "Shahrdehen",
+        "x": 633.5,
+        "y": 414.29999999999995,
         "type": "Lake",
         "capital": 0,
         "population": 7938,
@@ -9578,6 +10082,8 @@
     {
         "id": 253,
         "name": "Tiorkausa",
+        "x": 1256.15,
+        "y": 764.8,
         "type": "Hunting",
         "capital": 0,
         "population": 1876,
@@ -9616,6 +10122,8 @@
     {
         "id": 254,
         "name": "Nilmi",
+        "x": 1005.14,
+        "y": 805.32,
         "type": "Hunting",
         "capital": 0,
         "population": 4331,
@@ -9654,6 +10162,8 @@
     {
         "id": 255,
         "name": "Stymphagios",
+        "x": 1200.08,
+        "y": 178.89999999999998,
         "type": "Generic",
         "capital": 0,
         "population": 6806,
@@ -9692,6 +10202,8 @@
     {
         "id": 256,
         "name": "Durbolzheim",
+        "x": 338.24,
+        "y": 435.9100000000001,
         "type": "Hunting",
         "capital": 0,
         "population": 1056,
@@ -9730,6 +10242,8 @@
     {
         "id": 257,
         "name": "Yabahan",
+        "x": 1553.5,
+        "y": 576.5,
         "type": "Naval",
         "capital": 0,
         "population": 3702,
@@ -9768,6 +10282,8 @@
     {
         "id": 258,
         "name": "Kauri",
+        "x": 1012.01,
+        "y": 593,
         "type": "Hunting",
         "capital": 0,
         "population": 2148,
@@ -9806,6 +10322,8 @@
     {
         "id": 259,
         "name": "Hernum",
+        "x": 783.72,
+        "y": 676.3,
         "type": "Generic",
         "capital": 0,
         "population": 7572,
@@ -9844,6 +10362,8 @@
     {
         "id": 260,
         "name": "Pyzan",
+        "x": 760.5,
+        "y": 208.70000000000005,
         "type": "Generic",
         "capital": 0,
         "population": 9691,
@@ -9882,6 +10402,8 @@
     {
         "id": 261,
         "name": "Schlisenhau",
+        "x": 397.79999999999995,
+        "y": 539.8,
         "type": "Hunting",
         "capital": 0,
         "population": 1138,
@@ -9920,6 +10442,8 @@
     {
         "id": 262,
         "name": "Ampsaxos",
+        "x": 1094.36,
+        "y": 220.08000000000004,
         "type": "Hunting",
         "capital": 0,
         "population": 1457,
@@ -9958,6 +10482,8 @@
     {
         "id": 263,
         "name": "Manlurun",
+        "x": 1436.69,
+        "y": 312.18000000000006,
         "type": "Generic",
         "capital": 0,
         "population": 8567,
@@ -9996,6 +10522,8 @@
     {
         "id": 264,
         "name": "Psychraion",
+        "x": 1173.98,
+        "y": 331.49,
         "type": "Generic",
         "capital": 0,
         "population": 11585,
@@ -10034,6 +10562,8 @@
     {
         "id": 265,
         "name": "Estar",
+        "x": 1316.72,
+        "y": 542.56,
         "type": "Highland",
         "capital": 0,
         "population": 16361,
@@ -10072,6 +10602,8 @@
     {
         "id": 266,
         "name": "Shamabafa",
+        "x": 1401.42,
+        "y": 541.35,
         "type": "Hunting",
         "capital": 0,
         "population": 1724,
@@ -10110,6 +10642,8 @@
     {
         "id": 267,
         "name": "Herebenter",
+        "x": 563,
+        "y": 629.03,
         "type": "Highland",
         "capital": 0,
         "population": 10226,
@@ -10148,6 +10682,8 @@
     {
         "id": 268,
         "name": "Forse",
+        "x": 1498.23,
+        "y": 722.87,
         "type": "Hunting",
         "capital": 0,
         "population": 1875,
@@ -10186,6 +10722,8 @@
     {
         "id": 269,
         "name": "Contia",
+        "x": 1298.5,
+        "y": 852.5,
         "type": "Naval",
         "capital": 0,
         "population": 4850,
@@ -10224,6 +10762,8 @@
     {
         "id": 270,
         "name": "Titropona",
+        "x": 1157.5,
+        "y": 190.5,
         "type": "Naval",
         "capital": 0,
         "population": 16266,
@@ -10262,6 +10802,8 @@
     {
         "id": 271,
         "name": "Troyros",
+        "x": 1344.76,
+        "y": 255.21000000000004,
         "type": "Generic",
         "capital": 0,
         "population": 10918,
@@ -10300,6 +10842,8 @@
     {
         "id": 272,
         "name": "Turum",
+        "x": 738.23,
+        "y": 262.05999999999995,
         "type": "Highland",
         "capital": 0,
         "population": 1657,
@@ -10338,6 +10882,8 @@
     {
         "id": 273,
         "name": "Golalaion",
+        "x": 1286.69,
+        "y": 291.64,
         "type": "Hunting",
         "capital": 0,
         "population": 1059,
@@ -10376,6 +10922,8 @@
     {
         "id": 274,
         "name": "Avavaakioe",
+        "x": 1214.7,
+        "y": 678.45,
         "type": "Generic",
         "capital": 0,
         "population": 10955,
@@ -10414,6 +10962,8 @@
     {
         "id": 275,
         "name": "Tulpa",
+        "x": 1175.13,
+        "y": 735.63,
         "type": "Hunting",
         "capital": 0,
         "population": 3706,
@@ -10452,6 +11002,8 @@
     {
         "id": 276,
         "name": "Pithymnoscu",
+        "x": 1143.76,
+        "y": 276.68000000000006,
         "type": "Hunting",
         "capital": 0,
         "population": 3301,
@@ -10490,6 +11042,8 @@
     {
         "id": 277,
         "name": "Gorcyro",
+        "x": 1328.43,
+        "y": 283.89,
         "type": "Generic",
         "capital": 0,
         "population": 9167,
@@ -10528,6 +11082,8 @@
     {
         "id": 278,
         "name": "Pithenaros",
+        "x": 1225.17,
+        "y": 308.0899999999999,
         "type": "Hunting",
         "capital": 0,
         "population": 1951,
@@ -10566,6 +11122,8 @@
     {
         "id": 279,
         "name": "Nagesheh",
+        "x": 1268.03,
+        "y": 383.68000000000006,
         "type": "Generic",
         "capital": 0,
         "population": 26371,
@@ -10604,6 +11162,8 @@
     {
         "id": 280,
         "name": "Totti",
+        "x": 1389,
+        "y": 732,
         "type": "Naval",
         "capital": 0,
         "population": 2836,
@@ -10642,6 +11202,8 @@
     {
         "id": 281,
         "name": "Debeleapon",
+        "x": 1193.47,
+        "y": 238.55999999999995,
         "type": "Hunting",
         "capital": 0,
         "population": 2299,
@@ -10680,6 +11242,8 @@
     {
         "id": 282,
         "name": "Ampsos",
+        "x": 909.92,
+        "y": 311.88,
         "type": "Hunting",
         "capital": 0,
         "population": 1715,
@@ -10718,6 +11282,8 @@
     {
         "id": 283,
         "name": "Methos",
+        "x": 1193.61,
+        "y": 321.86,
         "type": "Generic",
         "capital": 0,
         "population": 7466,
@@ -10756,6 +11322,8 @@
     {
         "id": 284,
         "name": "Hasht",
+        "x": 488.4000000000001,
+        "y": 366.20000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 3937,
@@ -10794,6 +11362,8 @@
     {
         "id": 285,
         "name": "Varabad",
+        "x": 641,
+        "y": 234,
         "type": "Naval",
         "capital": 0,
         "population": 3749,
@@ -10832,6 +11402,8 @@
     {
         "id": 286,
         "name": "Zafadabahi",
+        "x": 611.8899999999999,
+        "y": 562.96,
         "type": "Generic",
         "capital": 0,
         "population": 2437,
@@ -10870,6 +11442,8 @@
     {
         "id": 287,
         "name": "Lieuenberg",
+        "x": 535.8800000000001,
+        "y": 657.52,
         "type": "Generic",
         "capital": 0,
         "population": 10328,
@@ -10908,6 +11482,8 @@
     {
         "id": 288,
         "name": "Jowshahrlik",
+        "x": 1411.46,
+        "y": 369.9100000000001,
         "type": "Hunting",
         "capital": 0,
         "population": 1204,
@@ -10946,6 +11522,8 @@
     {
         "id": 289,
         "name": "Tiroft",
+        "x": 1486.02,
+        "y": 475.24,
         "type": "Hunting",
         "capital": 0,
         "population": 2470,
@@ -10984,6 +11562,8 @@
     {
         "id": 290,
         "name": "Porvi",
+        "x": 1106.8,
+        "y": 666.5,
         "type": "Hunting",
         "capital": 0,
         "population": 3315,
@@ -11022,6 +11602,8 @@
     {
         "id": 291,
         "name": "Lekhasos",
+        "x": 1359.24,
+        "y": 190.65999999999997,
         "type": "Hunting",
         "capital": 0,
         "population": 1971,
@@ -11060,6 +11642,8 @@
     {
         "id": 292,
         "name": "Thyrotitapo",
+        "x": 855.5999999999999,
+        "y": 230.70000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 5685,
@@ -11098,6 +11682,8 @@
     {
         "id": 293,
         "name": "Pydrialeta",
+        "x": 1073.63,
+        "y": 248.21000000000004,
         "type": "Generic",
         "capital": 0,
         "population": 9762,
@@ -11136,6 +11722,8 @@
     {
         "id": 294,
         "name": "Shemshampy",
+        "x": 1385.02,
+        "y": 557.04,
         "type": "Hunting",
         "capital": 0,
         "population": 3370,
@@ -11174,6 +11762,8 @@
     {
         "id": 295,
         "name": "Vilbium",
+        "x": 884.3499999999999,
+        "y": 585.17,
         "type": "Generic",
         "capital": 0,
         "population": 12261,
@@ -11212,6 +11802,8 @@
     {
         "id": 296,
         "name": "Roykkapera",
+        "x": 1435.1,
+        "y": 626.48,
         "type": "Hunting",
         "capital": 0,
         "population": 3710,
@@ -11250,6 +11842,8 @@
     {
         "id": 297,
         "name": "Teralaiton",
+        "x": 920.4,
+        "y": 264.85,
         "type": "Hunting",
         "capital": 0,
         "population": 1214,
@@ -11288,6 +11882,8 @@
     {
         "id": 298,
         "name": "Fedeh",
+        "x": 1399.94,
+        "y": 570.7,
         "type": "Generic",
         "capital": 0,
         "population": 11127,
@@ -11326,6 +11922,8 @@
     {
         "id": 299,
         "name": "Stympsakou",
+        "x": 959.17,
+        "y": 278.61,
         "type": "Hunting",
         "capital": 0,
         "population": 4200,
@@ -11364,6 +11962,8 @@
     {
         "id": 300,
         "name": "Enailiphos",
+        "x": 1124.86,
+        "y": 378.3299999999999,
         "type": "Generic",
         "capital": 0,
         "population": 6593,
@@ -11402,6 +12002,8 @@
     {
         "id": 301,
         "name": "Busgaheds",
+        "x": 1529.71,
+        "y": 454.94000000000005,
         "type": "Generic",
         "capital": 0,
         "population": 1152,
@@ -11440,6 +12042,8 @@
     {
         "id": 302,
         "name": "Parvi",
+        "x": 1105.48,
+        "y": 618.28,
         "type": "Hunting",
         "capital": 0,
         "population": 5347,
@@ -11478,6 +12082,8 @@
     {
         "id": 303,
         "name": "Waldbrongen",
+        "x": 370.46000000000004,
+        "y": 628.8399999999999,
         "type": "Generic",
         "capital": 0,
         "population": 19740,
@@ -11516,6 +12122,8 @@
     {
         "id": 304,
         "name": "Raulupunvaa",
+        "x": 1360.94,
+        "y": 724.77,
         "type": "Generic",
         "capital": 0,
         "population": 690,
@@ -11554,6 +12162,8 @@
     {
         "id": 305,
         "name": "Lempaa",
+        "x": 1137.45,
+        "y": 735.04,
         "type": "Generic",
         "capital": 0,
         "population": 14271,
@@ -11592,6 +12202,8 @@
     {
         "id": 306,
         "name": "Psychre",
+        "x": 1297.79,
+        "y": 207.11,
         "type": "Generic",
         "capital": 0,
         "population": 8821,
@@ -11630,6 +12242,8 @@
     {
         "id": 307,
         "name": "Cyzantibeth",
+        "x": 1259.37,
+        "y": 220.80999999999995,
         "type": "Generic",
         "capital": 0,
         "population": 12880,
@@ -11668,6 +12282,8 @@
     {
         "id": 308,
         "name": "Paphapon",
+        "x": 1080.2,
+        "y": 295.87,
         "type": "Hunting",
         "capital": 0,
         "population": 997,
@@ -11706,6 +12322,8 @@
     {
         "id": 309,
         "name": "Ailerbolz",
+        "x": 332.1500000000001,
+        "y": 408.75,
         "type": "Hunting",
         "capital": 0,
         "population": 5589,
@@ -11744,6 +12362,8 @@
     {
         "id": 310,
         "name": "Kapflochzar",
+        "x": 490.51,
+        "y": 651.6,
         "type": "Hunting",
         "capital": 0,
         "population": 5299,
@@ -11782,6 +12402,8 @@
     {
         "id": 311,
         "name": "Pohja",
+        "x": 1231.04,
+        "y": 695.89,
         "type": "Generic",
         "capital": 0,
         "population": 10984,
@@ -11820,6 +12442,8 @@
     {
         "id": 312,
         "name": "Caqugusen",
+        "x": 1344.5,
+        "y": 845.4,
         "type": "Generic",
         "capital": 0,
         "population": 6632,
@@ -11858,6 +12482,8 @@
     {
         "id": 313,
         "name": "Bareshahr",
+        "x": 599.3,
+        "y": 314.20000000000005,
         "type": "Generic",
         "capital": 0,
         "population": 7355,
@@ -11896,6 +12522,8 @@
     {
         "id": 314,
         "name": "Jowslamshad",
+        "x": 715.47,
+        "y": 408.78,
         "type": "Generic",
         "capital": 0,
         "population": 957,
@@ -11934,6 +12562,8 @@
     {
         "id": 315,
         "name": "Haqansar",
+        "x": 728.22,
+        "y": 494.6600000000001,
         "type": "Generic",
         "capital": 0,
         "population": 5190,
@@ -11972,6 +12602,8 @@
     {
         "id": 316,
         "name": "Kokkalija",
+        "x": 1293.48,
+        "y": 650.64,
         "type": "Hunting",
         "capital": 0,
         "population": 1740,
@@ -12010,6 +12642,8 @@
     {
         "id": 317,
         "name": "Ayehtarok",
+        "x": 620.4000000000001,
+        "y": 383.4,
         "type": "Lake",
         "capital": 0,
         "population": 1677,
@@ -12048,6 +12682,8 @@
     {
         "id": 318,
         "name": "Rheingendorf",
+        "x": 432.4100000000001,
+        "y": 654.83,
         "type": "Generic",
         "capital": 0,
         "population": 14224,
@@ -12086,6 +12722,8 @@
     {
         "id": 319,
         "name": "Liganorum",
+        "x": 992.63,
+        "y": 660.78,
         "type": "Lake",
         "capital": 0,
         "population": 4052,
@@ -12124,6 +12762,8 @@
     {
         "id": 320,
         "name": "Thupaktos",
+        "x": 1193.28,
+        "y": 208.14999999999998,
         "type": "Generic",
         "capital": 0,
         "population": 12445,
@@ -12162,6 +12802,8 @@
     {
         "id": 321,
         "name": "Sesia",
+        "x": 1279.44,
+        "y": 248.95000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 1661,
@@ -12200,6 +12842,8 @@
     {
         "id": 322,
         "name": "Pewald",
+        "x": 377.77,
+        "y": 375.42,
         "type": "Hunting",
         "capital": 0,
         "population": 1166,
@@ -12238,6 +12882,8 @@
     {
         "id": 323,
         "name": "Surira",
+        "x": 1265.18,
+        "y": 369.75,
         "type": "Generic",
         "capital": 0,
         "population": 9268,
@@ -12276,6 +12922,8 @@
     {
         "id": 324,
         "name": "Inaralas",
+        "x": 987.3,
+        "y": 690.8,
         "type": "Lake",
         "capital": 0,
         "population": 11191,
@@ -12314,6 +12962,8 @@
     {
         "id": 325,
         "name": "Berghaupen",
+        "x": 424.1399999999999,
+        "y": 700.24,
         "type": "Hunting",
         "capital": 0,
         "population": 1769,
@@ -12352,6 +13002,8 @@
     {
         "id": 326,
         "name": "Imbla",
+        "x": 1102.53,
+        "y": 308.85,
         "type": "Hunting",
         "capital": 0,
         "population": 999,
@@ -12390,6 +13042,8 @@
     {
         "id": 327,
         "name": "Open",
+        "x": 400.6500000000001,
+        "y": 423.19000000000005,
         "type": "Generic",
         "capital": 0,
         "population": 9562,
@@ -12428,6 +13082,8 @@
     {
         "id": 328,
         "name": "Varjoles",
+        "x": 1425.45,
+        "y": 455.80999999999995,
         "type": "Generic",
         "capital": 0,
         "population": 16388,
@@ -12466,6 +13122,8 @@
     {
         "id": 329,
         "name": "Rickenweise",
+        "x": 629.21,
+        "y": 654.71,
         "type": "Generic",
         "capital": 0,
         "population": 8043,
@@ -12504,6 +13162,8 @@
     {
         "id": 330,
         "name": "Konar",
+        "x": 1540.18,
+        "y": 393.79999999999995,
         "type": "Generic",
         "capital": 0,
         "population": 11142,
@@ -12542,6 +13202,8 @@
     {
         "id": 331,
         "name": "Kauni",
+        "x": 1488.47,
+        "y": 697.23,
         "type": "Hunting",
         "capital": 0,
         "population": 3935,
@@ -12580,6 +13242,8 @@
     {
         "id": 332,
         "name": "Siunda",
+        "x": 1028.38,
+        "y": 535.48,
         "type": "Generic",
         "capital": 0,
         "population": 3468,
@@ -12618,6 +13282,8 @@
     {
         "id": 333,
         "name": "Gerantesium",
+        "x": 781.44,
+        "y": 638.59,
         "type": "Generic",
         "capital": 0,
         "population": 3537,
@@ -12656,6 +13322,8 @@
     {
         "id": 334,
         "name": "Ampha",
+        "x": 811.5,
+        "y": 211.5,
         "type": "Hunting",
         "capital": 0,
         "population": 1591,
@@ -12694,6 +13362,8 @@
     {
         "id": 335,
         "name": "Lekros",
+        "x": 1312.18,
+        "y": 322.21000000000004,
         "type": "Hunting",
         "capital": 0,
         "population": 1006,
@@ -12732,6 +13402,8 @@
     {
         "id": 336,
         "name": "Asham",
+        "x": 484.5,
+        "y": 399.5,
         "type": "Naval",
         "capital": 0,
         "population": 1827,
@@ -12770,6 +13442,8 @@
     {
         "id": 337,
         "name": "Echeh",
+        "x": 797.3800000000001,
+        "y": 471.64,
         "type": "Generic",
         "capital": 0,
         "population": 691,
@@ -12808,6 +13482,8 @@
     {
         "id": 338,
         "name": "Namolpaqers",
+        "x": 621.47,
+        "y": 576.02,
         "type": "Highland",
         "capital": 0,
         "population": 668,
@@ -12846,6 +13522,8 @@
     {
         "id": 339,
         "name": "Torvi",
+        "x": 1092,
+        "y": 574.96,
         "type": "Generic",
         "capital": 0,
         "population": 2322,
@@ -12884,6 +13562,8 @@
     {
         "id": 340,
         "name": "Zalejankala",
+        "x": 1500.66,
+        "y": 595.18,
         "type": "Generic",
         "capital": 0,
         "population": 4413,
@@ -12922,6 +13602,8 @@
     {
         "id": 341,
         "name": "Adnicrem",
+        "x": 1019.4,
+        "y": 677.1,
         "type": "Lake",
         "capital": 0,
         "population": 4218,
@@ -12960,6 +13642,8 @@
     {
         "id": 342,
         "name": "Nuorvi",
+        "x": 1057.8,
+        "y": 792.46,
         "type": "Hunting",
         "capital": 0,
         "population": 1791,
@@ -12998,6 +13682,8 @@
     {
         "id": 343,
         "name": "Cysatissos",
+        "x": 896.02,
+        "y": 283.6600000000001,
         "type": "Hunting",
         "capital": 0,
         "population": 1094,
@@ -13036,6 +13722,8 @@
     {
         "id": 344,
         "name": "Arezvanshan",
+        "x": 558.53,
+        "y": 442.43000000000006,
         "type": "Generic",
         "capital": 0,
         "population": 3553,
@@ -13074,6 +13762,8 @@
     {
         "id": 345,
         "name": "Varveshahr",
+        "x": 1484.57,
+        "y": 451.04999999999995,
         "type": "Generic",
         "capital": 0,
         "population": 12799,
@@ -13112,6 +13802,8 @@
     {
         "id": 346,
         "name": "Lohlai",
+        "x": 1117.23,
+        "y": 689.75,
         "type": "Generic",
         "capital": 0,
         "population": 9458,
@@ -13150,6 +13842,8 @@
     {
         "id": 347,
         "name": "Kyltalahra",
+        "x": 1382.92,
+        "y": 724.29,
         "type": "Hunting",
         "capital": 0,
         "population": 4721,
@@ -13188,6 +13882,8 @@
     {
         "id": 348,
         "name": "Kalajavo",
+        "x": 1025.58,
+        "y": 722.1,
         "type": "Generic",
         "capital": 0,
         "population": 701,
@@ -13226,6 +13922,8 @@
     {
         "id": 349,
         "name": "Vehjapame",
+        "x": 967.05,
+        "y": 769.01,
         "type": "Hunting",
         "capital": 0,
         "population": 1730,
@@ -13264,6 +13962,8 @@
     {
         "id": 350,
         "name": "Rhamnos",
+        "x": 1239.92,
+        "y": 193.03999999999996,
         "type": "Generic",
         "capital": 0,
         "population": 19939,
@@ -13302,6 +14002,8 @@
     {
         "id": 351,
         "name": "Teniaris",
+        "x": 843.4299999999998,
+        "y": 241.69000000000005,
         "type": "Generic",
         "capital": 0,
         "population": 9298,
@@ -13340,6 +14042,8 @@
     {
         "id": 352,
         "name": "Habad",
+        "x": 1562.13,
+        "y": 367.52,
         "type": "Generic",
         "capital": 0,
         "population": 4302,
@@ -13378,6 +14082,8 @@
     {
         "id": 353,
         "name": "Viljan",
+        "x": 1025.01,
+        "y": 608.69,
         "type": "Hunting",
         "capital": 0,
         "population": 2205,
@@ -13416,6 +14122,8 @@
     {
         "id": 354,
         "name": "Rheisach",
+        "x": 513.6700000000001,
+        "y": 656.56,
         "type": "Generic",
         "capital": 0,
         "population": 735,
@@ -13454,6 +14162,8 @@
     {
         "id": 355,
         "name": "Jukra",
+        "x": 1226.71,
+        "y": 269.12,
         "type": "Generic",
         "capital": 0,
         "population": 8191,
@@ -13492,6 +14202,8 @@
     {
         "id": 356,
         "name": "Argos",
+        "x": 1085.17,
+        "y": 325.0899999999999,
         "type": "Hunting",
         "capital": 0,
         "population": 4377,
@@ -13530,6 +14242,8 @@
     {
         "id": 357,
         "name": "Frohngengen",
+        "x": 447,
+        "y": 458.79999999999995,
         "type": "Hunting",
         "capital": 0,
         "population": 1198,
@@ -13568,6 +14282,8 @@
     {
         "id": 358,
         "name": "Bushian",
+        "x": 761.52,
+        "y": 457.86,
         "type": "Generic",
         "capital": 0,
         "population": 1769,
@@ -13606,6 +14322,8 @@
     {
         "id": 359,
         "name": "Komeshcheh",
+        "x": 1538.5,
+        "y": 471.2,
         "type": "Generic",
         "capital": 0,
         "population": 884,
@@ -13644,6 +14362,8 @@
     {
         "id": 360,
         "name": "Ourilama",
+        "x": 1037.5,
+        "y": 507.87,
         "type": "Generic",
         "capital": 0,
         "population": 636,
@@ -13682,6 +14402,8 @@
     {
         "id": 361,
         "name": "Lausach",
+        "x": 320.47,
+        "y": 557.69,
         "type": "Hunting",
         "capital": 0,
         "population": 1194,
@@ -13720,6 +14442,8 @@
     {
         "id": 362,
         "name": "Farand",
+        "x": 564.0999999999999,
+        "y": 603.83,
         "type": "Generic",
         "capital": 0,
         "population": 4601,
@@ -13758,6 +14482,8 @@
     {
         "id": 363,
         "name": "Leralavata",
+        "x": 925.65,
+        "y": 623.1,
         "type": "Hunting",
         "capital": 0,
         "population": 5427,
@@ -13796,6 +14522,8 @@
     {
         "id": 364,
         "name": "Lugduridi",
+        "x": 649.4299999999998,
+        "y": 701.39,
         "type": "Generic",
         "capital": 0,
         "population": 8609,
@@ -13834,6 +14562,8 @@
     {
         "id": 365,
         "name": "Aphosmenia",
+        "x": 1041.57,
+        "y": 270.03999999999996,
         "type": "Hunting",
         "capital": 0,
         "population": 1801,
@@ -13872,6 +14602,8 @@
     {
         "id": 366,
         "name": "Vabad",
+        "x": 744.1500000000001,
+        "y": 299.68000000000006,
         "type": "Generic",
         "capital": 0,
         "population": 567,
@@ -13910,6 +14642,8 @@
     {
         "id": 367,
         "name": "Zadaibastan",
+        "x": 569.44,
+        "y": 558.14,
         "type": "Generic",
         "capital": 0,
         "population": 4496,
@@ -13948,6 +14682,8 @@
     {
         "id": 368,
         "name": "Victrum",
+        "x": 845.1199999999999,
+        "y": 611.13,
         "type": "Generic",
         "capital": 0,
         "population": 7129,
@@ -13986,6 +14722,8 @@
     {
         "id": 369,
         "name": "Hattu",
+        "x": 1028.69,
+        "y": 638.68,
         "type": "Generic",
         "capital": 0,
         "population": 710,
@@ -14024,6 +14762,8 @@
     {
         "id": 370,
         "name": "Lauruuvara",
+        "x": 1347.16,
+        "y": 693.22,
         "type": "Hunting",
         "capital": 0,
         "population": 2080,
@@ -14062,6 +14802,8 @@
     {
         "id": 371,
         "name": "Aeliorysthe",
+        "x": 733.71,
+        "y": 225.33000000000004,
         "type": "Hunting",
         "capital": 0,
         "population": 1142,
@@ -14100,6 +14842,8 @@
     {
         "id": 372,
         "name": "Histhos",
+        "x": 974.91,
+        "y": 328.9,
         "type": "Generic",
         "capital": 0,
         "population": 10427,
@@ -14138,6 +14882,8 @@
     {
         "id": 373,
         "name": "Pholis",
+        "x": 915.01,
+        "y": 336.31999999999994,
         "type": "Hunting",
         "capital": 0,
         "population": 1818,
@@ -14176,6 +14922,8 @@
     {
         "id": 374,
         "name": "Thucia",
+        "x": 896.46,
+        "y": 350.79999999999995,
         "type": "Generic",
         "capital": 0,
         "population": 25316,
@@ -14214,6 +14962,8 @@
     {
         "id": 375,
         "name": "Buchebengen",
+        "x": 447.0999999999999,
+        "y": 415.70000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 1130,
@@ -14252,6 +15002,8 @@
     {
         "id": 376,
         "name": "Ashahr",
+        "x": 1340.82,
+        "y": 514.8,
         "type": "Hunting",
         "capital": 0,
         "population": 1783,
@@ -14290,6 +15042,8 @@
     {
         "id": 377,
         "name": "Schom",
+        "x": 534.8,
+        "y": 547,
         "type": "Generic",
         "capital": 0,
         "population": 6049,
@@ -14328,6 +15082,8 @@
     {
         "id": 378,
         "name": "Dehen",
+        "x": 1455.9,
+        "y": 567.82,
         "type": "Generic",
         "capital": 0,
         "population": 22057,
@@ -14366,6 +15122,8 @@
     {
         "id": 379,
         "name": "Nauphospian",
+        "x": 1370.16,
+        "y": 152.83,
         "type": "Generic",
         "capital": 0,
         "population": 1784,
@@ -14404,6 +15162,8 @@
     {
         "id": 380,
         "name": "Dipathepios",
+        "x": 826.69,
+        "y": 276.44000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 4091,
@@ -14442,6 +15202,8 @@
     {
         "id": 381,
         "name": "Erira",
+        "x": 1149.6,
+        "y": 296.87,
         "type": "Hunting",
         "capital": 0,
         "population": 3454,
@@ -14480,6 +15242,8 @@
     {
         "id": 382,
         "name": "Inverwick",
+        "x": 884.03,
+        "y": 330.88,
         "type": "Generic",
         "capital": 0,
         "population": 17372,
@@ -14518,6 +15282,8 @@
     {
         "id": 383,
         "name": "Athmoros",
+        "x": 1120.29,
+        "y": 333.5,
         "type": "Hunting",
         "capital": 0,
         "population": 2380,
@@ -14556,6 +15322,8 @@
     {
         "id": 384,
         "name": "Jijan",
+        "x": 1574.92,
+        "y": 381.76,
         "type": "Generic",
         "capital": 0,
         "population": 4213,
@@ -14594,6 +15362,8 @@
     {
         "id": 385,
         "name": "Matrix",
+        "x": 802.16,
+        "y": 855.34,
         "type": "Hunting",
         "capital": 0,
         "population": 1733,
@@ -14632,6 +15402,8 @@
     {
         "id": 386,
         "name": "Hyeleuthos",
+        "x": 1400.7,
+        "y": 233.39999999999998,
         "type": "Generic",
         "capital": 0,
         "population": 15073,
@@ -14670,6 +15442,8 @@
     {
         "id": 387,
         "name": "Morcyreia",
+        "x": 973.36,
+        "y": 234.68000000000006,
         "type": "Hunting",
         "capital": 0,
         "population": 4472,
@@ -14708,6 +15482,8 @@
     {
         "id": 388,
         "name": "Datarasabi",
+        "x": 1387.27,
+        "y": 260.23,
         "type": "Generic",
         "capital": 0,
         "population": 13395,
@@ -14746,6 +15522,8 @@
     {
         "id": 389,
         "name": "Fashehrke",
+        "x": 600.72,
+        "y": 355.89,
         "type": "Generic",
         "capital": 0,
         "population": 2895,
@@ -14784,6 +15562,8 @@
     {
         "id": 390,
         "name": "Naharde",
+        "x": 1410.64,
+        "y": 417.28,
         "type": "Generic",
         "capital": 0,
         "population": 9609,
@@ -14822,6 +15602,8 @@
     {
         "id": 391,
         "name": "Hahayan",
+        "x": 1549.5,
+        "y": 471,
         "type": "Naval",
         "capital": 0,
         "population": 2131,
@@ -14860,6 +15642,8 @@
     {
         "id": 392,
         "name": "Utsajaavapa",
+        "x": 992.78,
+        "y": 543.79,
         "type": "Generic",
         "capital": 0,
         "population": 2284,
@@ -14898,6 +15682,8 @@
     {
         "id": 393,
         "name": "Laylostan",
+        "x": 878.21,
+        "y": 558.08,
         "type": "Generic",
         "capital": 0,
         "population": 9883,
@@ -14936,6 +15722,8 @@
     {
         "id": 394,
         "name": "Lenzgraberg",
+        "x": 388,
+        "y": 620.8,
         "type": "Generic",
         "capital": 0,
         "population": 12892,
@@ -14974,6 +15762,8 @@
     {
         "id": 395,
         "name": "Durmerswald",
+        "x": 475.48,
+        "y": 657.47,
         "type": "Hunting",
         "capital": 0,
         "population": 1808,
@@ -15012,6 +15802,8 @@
     {
         "id": 396,
         "name": "Adflegilia",
+        "x": 949.42,
+        "y": 646.12,
         "type": "Generic",
         "capital": 0,
         "population": 8716,
@@ -15050,6 +15842,8 @@
     {
         "id": 397,
         "name": "Vaajama",
+        "x": 1329.45,
+        "y": 739.42,
         "type": "Generic",
         "capital": 0,
         "population": 3631,
@@ -15088,6 +15882,8 @@
     {
         "id": 398,
         "name": "Letiatigan",
+        "x": 1297.59,
+        "y": 798.29,
         "type": "Generic",
         "capital": 0,
         "population": 15069,
@@ -15126,6 +15922,8 @@
     {
         "id": 399,
         "name": "Baghstan",
+        "x": 1396.37,
+        "y": 439.95000000000005,
         "type": "Hunting",
         "capital": 0,
         "population": 2104,
@@ -15164,6 +15962,8 @@
     {
         "id": 400,
         "name": "Waldbrandt",
+        "x": 371.5,
+        "y": 471,
         "type": "Generic",
         "capital": 0,
         "population": 10283,
@@ -15202,6 +16002,8 @@
     {
         "id": 401,
         "name": "Vogtsberg",
+        "x": 419.5,
+        "y": 498.77,
         "type": "Hunting",
         "capital": 0,
         "population": 3107,
@@ -15240,6 +16042,8 @@
     {
         "id": 402,
         "name": "Pulbium",
+        "x": 812.05,
+        "y": 637.75,
         "type": "Generic",
         "capital": 0,
         "population": 9003,
@@ -15278,6 +16082,8 @@
     {
         "id": 403,
         "name": "Gesoscrie",
+        "x": 692.28,
+        "y": 646.22,
         "type": "Hunting",
         "capital": 0,
         "population": 5142,
@@ -15316,6 +16122,8 @@
     {
         "id": 404,
         "name": "Atrarilalo",
+        "x": 753.8499999999999,
+        "y": 647.81,
         "type": "Generic",
         "capital": 0,
         "population": 4779,

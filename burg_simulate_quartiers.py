@@ -68,7 +68,7 @@ def get_burg_models(burgs, config):
     for b, burg in enumerate(burgs):
         print(f"Processing burg {b + 1} of {l}: {burg.get('name', 'Unknown')}")
         if burg:
-            burg_models.append(dict(id=b,**get_burg_model(burg, config)))
+            burg_models.append(get_burg_model(burg, config))
 
     print("Burg processing complete. Info added to burg objects.")
     
@@ -88,7 +88,7 @@ def get_burg_model(burg, config):
     net_production_burg = get_net_production_for_burg(quartiers, config)
     area_requirements_burg = get_area_requirements_for_burg(burg, config)
 
-    return {'name': burg.get('name'), 'type': burg.get('type'), 'capital': burg.get('capital'), 'population': round(burg.get('population')*1000), 'citizens': citizens, 'nr_quartiers': sum(quartiers.values()), 'quartiers': quartiers, 'net_production_burg': net_production_burg, 'area_requirements_burg': area_requirements_burg}
+    return {'id': burg.get('i'), 'name': burg.get('name'), 'x': burg.get('x'), 'y': burg.get('y'), 'type': burg.get('type'), 'capital': burg.get('capital'), 'population': round(burg.get('population')*1000), 'citizens': citizens, 'nr_quartiers': sum(quartiers.values()), 'quartiers': quartiers, 'net_production_burg': net_production_burg, 'area_requirements_burg': area_requirements_burg}
 
 
 # BURG > CITIZENS
