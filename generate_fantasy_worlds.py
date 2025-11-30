@@ -11,7 +11,7 @@ import simulate_trade
 
 # Configuration
 INPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_map'
-OUTPUT_DIR = r'c:\Github_Projects\fantasy-world\reports'
+OUTPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_worlds'
 
 def load_data(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -22,7 +22,7 @@ def save_json(data, filepath):
         json.dump(data, f, indent=4, ensure_ascii=False)
     print(f"Saved JSON to {filepath}")
 
-def analyze_data(data):
+def analyze_world_data(data):
     pack = data.get('pack', {})
     settings = data.get('settings', {})
     cells = pack.get('cells', [])
@@ -85,7 +85,7 @@ def generate_section_html(section_id, title, table_headers, rows_html, chart_id)
             <div class="chart-container"><canvas id="{chart_id}"></canvas></div>
         </div>"""
 
-def generate_html(data, analysis, output_file):
+def generate_world_report(data, analysis, output_file):
     info = data.get('info', {})
     settings = data.get('settings', {})
     pack = data.get('pack', {})
@@ -271,7 +271,7 @@ def generate_css(output_dir):
     with open(css_path, 'w', encoding='utf-8') as f: f.write(css)
     print(f"CSS generated at: {css_path}")
 
-def generate_index_html(reports, output_dir):
+def generate_worlds_index(reports, output_dir):
     links_html = ""
     for name, report_file, map_file in reports:
         # Filename is absolute path, need relative for link
@@ -370,7 +370,7 @@ if __name__ == "__main__":
                 
                 # 4. Generate Static Report
                 report_filename = os.path.join(map_dir, f"{safe_name}_report.html")
-                generate_html(data, analyze_data(data), report_filename)
+                generate_world_report(data, analyze_world_data(data), report_filename)
                 
                 generated_reports.append((map_name, report_filename, map_filename))
             except Exception as e:
@@ -379,4 +379,4 @@ if __name__ == "__main__":
                 traceback.print_exc()
         
         if generated_reports:
-            generate_index_html(generated_reports, OUTPUT_DIR)
+            generate_worlds_index(generated_reports, OUTPUT_DIR)
