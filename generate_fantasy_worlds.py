@@ -105,28 +105,60 @@ def generate_world_report(data, analysis, output_file):
     charts_config = []
     
     # 1. Biomes
-    sorted_biomes = sorted(analysis['biome_stats'].items(), key=lambda x: x[1]['area'], reverse=True)
+    # Table sorted by Area
+    sorted_biomes_area = sorted(analysis['biome_stats'].items(), key=lambda x: x[1]['area'], reverse=True)
     b_rows = ""
-    b_chart = {'labels': [], 'data': [], 'colors': []}
     
-    for bid, stats in sorted_biomes:
+    for bid, stats in sorted_biomes_area:
         name = biomes_data.get('name', [])[bid] if bid < len(biomes_data.get('name', [])) else "Unknown"
         color = biomes_data.get('color', [])[bid] if bid < len(biomes_data.get('color', [])) else "#ccc"
         pct = (stats['area'] / analysis['total_area'] * 100) if analysis['total_area'] else 0
         
         b_rows += f"""<tr><td><span class="color-box" style="background-color: {color}"></span>{name}</td>
                       <td>{stats['area']:,.0f}</td><td>{pct:.1f}%</td><td>{stats['cells']}</td></tr>"""
+
+    # Chart sorted by Temperature (Cold -> Warm)
+    BIOME_RANK = {
+        'Glacier': 1, 'Tundra': 2, 'Taiga': 3, 'Cold desert': 4,
+        'Temperate rainforest': 5, 'Temperate deciduous forest': 6,
+        'Grassland': 7, 'Wetland': 8,
+        'Tropical seasonal forest': 9, 'Tropical rainforest': 10,
+        'Savanna': 11, 'Hot desert': 12
+    }
+    
+    # Filter and sort for chart
+    chart_biomes = []
+    for bid, stats in analysis['biome_stats'].items():
+        name = biomes_data.get('name', [])[bid] if bid < len(biomes_data.get('name', [])) else "Unknown"
+        if name.lower() == "marine": continue
         
-        if name.lower() != "marine":
-            b_chart['labels'].append(name)
-            b_chart['data'].append(stats['area'])
-            b_chart['colors'].append(color)
+        color = biomes_data.get('color', [])[bid] if bid < len(biomes_data.get('color', [])) else "#ccc"
+        rank = BIOME_RANK.get(name, 99)
+        chart_biomes.append({'name': name, 'area': stats['area'], 'color': color, 'rank': rank})
+        
+    chart_biomes.sort(key=lambda x: x['rank'])
+    
+    # Prepare Stacked Bar Data (One bar, multiple datasets)
+    b_chart = {'labels': ['Global Biome Distribution'], 'datasets': []}
+    total_chart_area = 0
+    
+    for b in chart_biomes:
+        total_chart_area += b['area']
+        b_chart['datasets'].append({
+            'label': b['name'],
+            'data': [b['area']],
+            'backgroundColor': b['color'],
+            'barPercentage': 0.9, # Make bar thick
+            'categoryPercentage': 1.0
+        })
             
     sections.append(generate_section_html('biomes-section', 'Biomes', ['Biome', 'Area', '% Area', 'Cells'], b_rows, 'biomesChart'))
     charts_config.append({
-        'id': 'biomesChart', 'type': 'pie', 'data': b_chart, 
-        'title': 'Biome Distribution (Area) - Excluding Marine',
-        'dataset_label': 'Area', 'legend_pos': 'right'
+        'id': 'biomesChart', 'type': 'bar', 'data': b_chart, 
+        'title': 'Biome Distribution (Cold to Warm)',
+        'dataset_label': 'Area', 'legend_pos': 'bottom',
+        'indexAxis': 'y', 'stacked': True,
+        'x_max': total_chart_area
     })
 
     # 2. States
@@ -191,17 +223,21 @@ def generate_world_report(data, analysis, output_file):
     # Generate JS for charts
     js_charts = ""
     for c in charts_config:
-        legend_display = 'true' if c['type'] == 'pie' else 'false'
+        legend_display = 'true' if c['type'] == 'pie' or c.get('stacked') else 'false'
+        
         scales_config = ""
-        if c['type'] == 'bar':
+        if c.get('stacked'):
+            x_max_str = f", max: {c['x_max']}" if 'x_max' in c else ""
+            scales_config = f", scales: {{ x: {{ stacked: true, display: false{x_max_str} }}, y: {{ stacked: true, display: false }} }}"
+        elif c['type'] == 'bar':
             # For bar charts, we want to ensure the index axis (where labels are) shows all ticks
             idx_axis = c.get('indexAxis', 'x')
             scales_config = f", scales: {{ {idx_axis}: {{ ticks: {{ autoSkip: false }} }} }}"
 
-        js_charts += f"""
-        new Chart(document.getElementById('{c['id']}').getContext('2d'), {{
-            type: '{c['type']}',
-            data: {{
+        if 'datasets' in c['data']:
+            data_json = json.dumps(c['data'])
+        else:
+            data_json = f"""{{
                 labels: {json.dumps(c['data']['labels'])},
                 datasets: [{{
                     label: '{c.get('dataset_label', 'Value')}',
@@ -209,7 +245,12 @@ def generate_world_report(data, analysis, output_file):
                     backgroundColor: {json.dumps(c['data']['colors'])},
                     borderWidth: 1
                 }}]
-            }},
+            }}"""
+
+        js_charts += f"""
+        new Chart(document.getElementById('{c['id']}').getContext('2d'), {{
+            type: '{c['type']}',
+            data: {data_json},
             options: {{
                 responsive: true, maintainAspectRatio: false,
                 indexAxis: '{c.get('indexAxis', 'x')}',

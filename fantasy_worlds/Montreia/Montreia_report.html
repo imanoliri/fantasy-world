@@ -132,23 +132,15 @@
         function toggleView(id) { document.getElementById(id).classList.toggle('show-table'); }
         
         new Chart(document.getElementById('biomesChart').getContext('2d'), {
-            type: 'pie',
-            data: {
-                labels: ["Temperate deciduous forest", "Tropical seasonal forest", "Grassland", "Savanna", "Temperate rainforest", "Tropical rainforest", "Wetland", "Taiga", "Cold desert", "Glacier", "Tundra", "Hot desert"],
-                datasets: [{
-                    label: 'Area',
-                    data: [135019, 121169, 119048, 59466, 52457, 49373, 27140, 19949, 15033, 14940, 8779, 1495],
-                    backgroundColor: ["#29bc56", "#b6d95d", "#c8d68f", "#d2d082", "#409c43", "#7dcb35", "#0b9131", "#4b6b32", "#b5b887", "#d5e7eb", "#96784b", "#fbe79f"],
-                    borderWidth: 1
-                }]
-            },
+            type: 'bar',
+            data: {"labels": ["Global Biome Distribution"], "datasets": [{"label": "Glacier", "data": [14940], "backgroundColor": "#d5e7eb", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Tundra", "data": [8779], "backgroundColor": "#96784b", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Taiga", "data": [19949], "backgroundColor": "#4b6b32", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Cold desert", "data": [15033], "backgroundColor": "#b5b887", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Temperate rainforest", "data": [52457], "backgroundColor": "#409c43", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Temperate deciduous forest", "data": [135019], "backgroundColor": "#29bc56", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Grassland", "data": [119048], "backgroundColor": "#c8d68f", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Wetland", "data": [27140], "backgroundColor": "#0b9131", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Tropical seasonal forest", "data": [121169], "backgroundColor": "#b6d95d", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Tropical rainforest", "data": [49373], "backgroundColor": "#7dcb35", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Savanna", "data": [59466], "backgroundColor": "#d2d082", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Hot desert", "data": [1495], "backgroundColor": "#fbe79f", "barPercentage": 0.9, "categoryPercentage": 1.0}]},
             options: {
                 responsive: true, maintainAspectRatio: false,
-                indexAxis: 'x',
+                indexAxis: 'y',
                 plugins: { 
-                    legend: { display: true, position: 'right' }, 
-                    title: { display: true, text: 'Biome Distribution (Area) - Excluding Marine' } 
-                }
+                    legend: { display: true, position: 'bottom' }, 
+                    title: { display: true, text: 'Biome Distribution (Cold to Warm)' } 
+                }, scales: { x: { stacked: true, display: false, max: 623868 }, y: { stacked: true, display: false } }
             }
         });
         new Chart(document.getElementById('statesChart').getContext('2d'), {
