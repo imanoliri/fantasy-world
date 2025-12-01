@@ -432,6 +432,10 @@ if __name__ == "__main__":
                 states_file = os.path.join(map_dir, f"{safe_name}_states.json")
                 save_json(states, states_file)
 
+                cultures = data.get('pack', {}).get('cultures', [])
+                cultures_file = os.path.join(map_dir, f"{safe_name}_cultures.json")
+                save_json(cultures, cultures_file)
+
                 trades = simulate_trade.simulate_trade(processed_burgs)
                 
                 # Save Trade Routes JSON
@@ -439,14 +443,15 @@ if __name__ == "__main__":
                 save_json(trades, trades_file)
                 
                 # 3. Generate Interactive Map
-                map_filename = os.path.join(map_dir, f"{safe_name}_map.html")
-                generate_interactive_map.generate_map(processed_burgs, map_filename, trades_data=trades, map_name=map_name)
+                map_file = os.path.join(map_dir, f"{safe_name}_map.html")
+                generate_interactive_map.generate_map(processed_burgs, map_file, trades, safe_name, states=states, cultures=cultures)
                 
                 # 4. Generate Static Report
                 report_filename = os.path.join(map_dir, f"{safe_name}_report.html")
                 generate_world_report(data, analyze_world_data(data), report_filename)
                 
-                generated_reports.append((map_name, report_filename, map_filename))
+                generated_reports.append((map_name, report_filename, map_file))
+                
             except Exception as e:
                 print(f"Error processing {filepath}: {e}")
                 import traceback

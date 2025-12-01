@@ -4,7 +4,7 @@ import math
 
 # TRADES_FILE = 'data/trade_routes.csv' # Removed dependency
 
-def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map"):
+def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map", states=None, cultures=None):
     print(f"Generating interactive map for {map_name} with {len(burgs)} burgs...")
     
     # Determine map bounds
@@ -122,6 +122,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             <circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" stroke="{stroke}" stroke-width="{stroke_width}"
                     class="burg-dot{capital_class}" data-id="{b['id']}" data-name="{b['name']}" 
                     data-pop="{b['population']}" data-type="{b.get('type', 'Unknown')}" 
+                    data-state="{b.get('state_name', 'Unknown')}"
                     data-gold="{net_gold:.2f}" data-food="{net_food:.2f}"
                     data-quartiers="{quartier_details}">
             </circle>
@@ -142,6 +143,50 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             </tr>
         """)
 
+    # Update sort indices
+    idx_pop = 4
+    idx_food = 5
+    idx_gold = 6
+
+    # 3. States Table Rows
+    state_rows = []
+    if states:
+        # Create lookups
+        burg_name_lookup = {b['id']: b['name'] for b in burgs}
+        culture_name_lookup = {}
+        if cultures:
+            for c in cultures:
+                culture_name_lookup[c['i']] = c['name']
+
+        for s in states:
+            # Columns: color, name, capital, type, culture, burgs, area, cells, form, fullname
+            color = s.get('color', '#cccccc')
+            name = s.get('name', 'Unknown')
+            capital_id = s.get('capital', 0)
+            capital_name = burg_name_lookup.get(capital_id, 'Unknown') if capital_id else 'None'
+            type_ = s.get('type', 'Unknown')
+            culture_id = s.get('culture', 0)
+            culture_name = culture_name_lookup.get(culture_id, 'Unknown')
+            burgs_count = s.get('burgs', 0)
+            area = s.get('area', 0)
+            cells = s.get('cells', 0)
+            form = s.get('form', 'Unknown')
+            fullname = s.get('fullName', name)
+            
+            state_rows.append(f"""
+                <tr>
+                    <td><span class="color-box" style="background-color: {color}; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>{name}</td>
+                    <td>{capital_name}</td>
+                    <td>{type_}</td>
+                    <td>{culture_name}</td>
+                    <td>{burgs_count}</td>
+                    <td>{area:,}</td>
+                    <td>{cells:,}</td>
+                    <td>{form}</td>
+                    <td>{fullname}</td>
+                </tr>
+            """)
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -181,8 +226,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         /* Table Section */
-        /* Table Section */
-        .table-container {{ position: absolute; right: 0; top: 0; bottom: 0; width: 800px; overflow-y: auto; background: rgba(255, 255, 255, 0.95); padding: 0; z-index: 20; box-shadow: -2px 0 5px rgba(0,0,0,0.1); border-left: 1px solid #ddd; }}
+        .tables-wrapper {{ position: absolute; right: 0; top: 0; bottom: 0; display: flex; z-index: 20; pointer-events: none; }}
+        .table-container, .state-table-container {{ width: 800px; overflow-y: auto; background: rgba(255, 255, 255, 0.95); padding: 0; box-shadow: -2px 0 5px rgba(0,0,0,0.1); border-left: 1px solid #ddd; pointer-events: auto; }}
+        .hidden {{ display: none !important; }}
+        
         table {{ width: 100%; border-collapse: collapse; font-size: 0.9rem; }}
         th, td {{ padding: 10px; text-align: left; border-bottom: 1px solid #eee; }}
         th {{ background: #f8f9fa; position: sticky; top: 0; z-index: 1; cursor: pointer; }}
@@ -194,12 +241,6 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         /* Tooltip */
         .tooltip {{ position: fixed; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; max-width: 200px; }}
         
-        /* Hidden Table State */
-        .container.table-hidden .table-container {{ display: none; }}
-        /* Hidden Table State */
-        .container.table-hidden .table-container {{ display: none; }}
-        /* .container.table-hidden .map-container rule removed as map is always full width now */
-
         .controls input[type="text"] {{
             padding: 5px;
             border-radius: 4px;
@@ -213,7 +254,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         .dropdown-content {{ display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; max-height: 300px; overflow-y: auto; padding: 5px; border-radius: 4px; }}
         .dropdown-content label {{ color: black; padding: 5px; display: block; cursor: pointer; }}
         .dropdown-content label:hover {{ background-color: #f1f1f1; }}
-        .dropdown:hover .dropdown-content {{ display: block; }}
+        .dropdown:hover {{ .dropdown-content {{ display: block; }} }}
         .dropdown:hover .dropbtn {{ background-color: #2c3e50; }}
     </style>
 </head>
@@ -232,12 +273,13 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             
             <label><input type="checkbox" id="toggleTrades" checked onchange="toggleTrades()"> Show Trade Routes</label>
             <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
-            <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Show Data Table</label>
+            <label><input type="checkbox" id="toggleStateTable" onchange="toggleStateTable()"> Show States Table</label>
+            <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Show Burgs Table</label>
             <span>| Total Burgs: {len(burgs)}</span>
         </div>
     </header>
     
-    <div class="container table-hidden">
+    <div class="container">
         <div class="map-container" id="mapContainer">
             <svg id="mapSvg" viewBox="{min_x-50} {min_y-50} {width} {height}" preserveAspectRatio="xMidYMid meet">
                 <!-- Grid/Background could go here -->
@@ -245,23 +287,47 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             </svg>
         </div>
         
-        <div class="table-container">
-            <table id="burgTable">
-                <thead>
-                    <tr>
-                        <th onclick="sortTable(0, this)">Name</th>
-                        <th onclick="sortTable(1, this)">Type</th>
-                        <th onclick="sortTable(2, this)">State</th>
-                        <th onclick="sortTable(3, this)">Quartiers</th>
-                        <th onclick="sortTable(4, this)">Pop</th>
-                        <th onclick="sortTable(5, this)">Food</th>
-                        <th onclick="sortTable(6, this)">Gold</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {''.join(table_rows)}
-                </tbody>
-            </table>
+        <div class="tables-wrapper">
+            <div class="state-table-container hidden" id="stateTableContainer">
+                <table id="stateTable">
+                    <thead>
+                        <tr>
+                            <th>Color</th>
+                            <th>Name</th>
+                            <th>Capital</th>
+                            <th>Type</th>
+                            <th>Culture</th>
+                            <th>Burgs</th>
+                            <th>Area</th>
+                            <th>Cells</th>
+                            <th>Form</th>
+                            <th>Fullname</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {''.join(state_rows)}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container hidden" id="burgTableContainer">
+                <table id="burgTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0, this)">Name</th>
+                            <th onclick="sortTable(1, this)">Type</th>
+                            <th onclick="sortTable(2, this)">State</th>
+                            <th onclick="sortTable(3, this)">Quartiers</th>
+                            <th onclick="sortTable({idx_pop}, this)">Pop</th>
+                            <th onclick="sortTable({idx_food}, this)">Food</th>
+                            <th onclick="sortTable({idx_gold}, this)">Gold</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {''.join(table_rows)}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <div id="tooltip" class="tooltip"></div>
@@ -296,13 +362,23 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
 
         function toggleTable() {{
             const checkbox = document.getElementById('toggleTable');
-            const container = document.querySelector('.container');
+            const container = document.getElementById('burgTableContainer');
             if (checkbox.checked) {{
-                container.classList.remove('table-hidden');
+                container.classList.remove('hidden');
             }} else {{
-                container.classList.add('table-hidden');
+                container.classList.add('hidden');
             }}
-            // Trigger resize event to ensure SVG scales correctly if needed
+            window.dispatchEvent(new Event('resize'));
+        }}
+
+        function toggleStateTable() {{
+            const checkbox = document.getElementById('toggleStateTable');
+            const container = document.getElementById('stateTableContainer');
+            if (checkbox.checked) {{
+                container.classList.remove('hidden');
+            }} else {{
+                container.classList.add('hidden');
+            }}
             window.dispatchEvent(new Event('resize'));
         }}
         
@@ -395,11 +471,15 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 const name = e.target.getAttribute('data-name');
                 const pop = parseInt(e.target.getAttribute('data-pop')).toLocaleString();
                 const type = e.target.getAttribute('data-type');
+                const state = e.target.getAttribute('data-state');
                 const gold = e.target.getAttribute('data-gold');
                 const food = e.target.getAttribute('data-food');
                 const quartiers = e.target.getAttribute('data-quartiers');
+                const isCapital = e.target.classList.contains('capital');
                 
-                let tooltipContent = `<strong>${{name}}</strong><br>Type: ${{type}}<br>Pop: ${{pop}}<br>Food: ${{food}}<br>Gold: ${{gold}}`;
+                let displayName = isCapital ? `★ ${{name}}` : name;
+                
+                let tooltipContent = `<strong>${{displayName}}</strong><br>State: ${{state}}<br>Type: ${{type}}<br>Pop: ${{pop}}<br>Food: ${{food}}<br>Gold: ${{gold}}`;
                 if (quartiers) {{
                     tooltipContent += `<hr style="margin: 5px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.3);">${{quartiers}}`;
                 }}

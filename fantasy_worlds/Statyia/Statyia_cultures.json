@@ -1,0 +1,109 @@
+[
+    {
+        "name": "Wildlands",
+        "i": 0,
+        "base": 1,
+        "origins": [
+            null
+        ],
+        "shield": "round"
+    },
+    {
+        "name": "Wigton",
+        "base": 1,
+        "shield": "heater",
+        "center": 2225,
+        "i": 1,
+        "color": "#80b1d3",
+        "type": "River",
+        "expansionism": 3.1,
+        "origins": [
+            0
+        ],
+        "code": "Wi"
+    },
+    {
+        "name": "Hornver",
+        "base": 1,
+        "shield": "wedged",
+        "center": 1837,
+        "i": 2,
+        "color": "#fdb462",
+        "type": "River",
+        "expansionism": 2.7,
+        "origins": [
+            0
+        ],
+        "code": "Ho"
+    },
+    {
+        "name": "Salne",
+        "base": 1,
+        "shield": "swiss",
+        "center": 1788,
+        "i": 3,
+        "color": "#dababf",
+        "type": "Naval",
+        "expansionism": 5.2,
+        "origins": [
+            0
+        ],
+        "code": "Sa"
+    },
+    {
+        "name": "Chistowen",
+        "base": 1,
+        "shield": "oldFrench",
+        "center": 2699,
+        "i": 4,
+        "color": "#c6b9c1",
+        "type": "Generic",
+        "expansionism": 1.9,
+        "origins": [
+            0
+        ],
+        "code": "Ch"
+    },
+    {
+        "name": "Boltashes",
+        "base": 1,
+        "shield": "swiss",
+        "center": 3051,
+        "i": 5,
+        "color": "#b3de69",
+        "type": "Hunting",
+        "expansionism": 2,
+        "origins": [
+            0
+        ],
+        "code": "Bo"
+    },
+    {
+        "name": "Osbury",
+        "base": 1,
+        "shield": "spanish",
+        "center": 987,
+        "i": 6,
+        "color": "#fccde5",
+        "type": "Naval",
+        "expansionism": 3.9,
+        "origins": [
+            0
+        ],
+        "code": "Os"
+    },
+    {
+        "name": "Guildge",
+        "base": 1,
+        "shield": "hessen",
+        "center": 6007,
+        "i": 7,
+        "color": "#fb8072",
+        "type": "Naval",
+        "expansionism": 3.1,
+        "origins": [
+            0
+        ],
+        "code": "Gu"
+    }
+]

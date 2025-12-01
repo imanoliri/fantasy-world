@@ -1,0 +1,123 @@
+[
+    {
+        "name": "Wildlands",
+        "i": 0,
+        "base": 1,
+        "origins": [
+            null
+        ],
+        "shield": "round"
+    },
+    {
+        "name": "Roman",
+        "base": 8,
+        "shield": "roman",
+        "center": 4411,
+        "i": 1,
+        "color": "#fdb462",
+        "type": "Naval",
+        "expansionism": 1.5,
+        "origins": [
+            0
+        ],
+        "code": "Ro"
+    },
+    {
+        "name": "Hellenic",
+        "base": 7,
+        "shield": "boeotian",
+        "center": 1983,
+        "i": 2,
+        "color": "#b3de69",
+        "type": "Generic",
+        "expansionism": 1,
+        "origins": [
+            0
+        ],
+        "code": "He"
+    },
+    {
+        "name": "Roman",
+        "base": 8,
+        "shield": "roman",
+        "center": 4460,
+        "i": 3,
+        "color": "#80b1d3",
+        "type": "Generic",
+        "expansionism": 1,
+        "origins": [
+            0
+        ],
+        "code": "RO"
+    },
+    {
+        "name": "Persian",
+        "base": 24,
+        "shield": "oval",
+        "center": 1606,
+        "i": 4,
+        "color": "#fb8072",
+        "type": "Generic",
+        "expansionism": 1,
+        "origins": [
+            0
+        ],
+        "code": "Pe"
+    },
+    {
+        "name": "Germanic",
+        "base": 0,
+        "shield": "round",
+        "center": 4027,
+        "i": 5,
+        "color": "#bc80bd",
+        "type": "Naval",
+        "expansionism": 1.5,
+        "origins": [
+            0
+        ],
+        "code": "Ge"
+    },
+    {
+        "name": "Scythian",
+        "base": 24,
+        "shield": "round",
+        "center": 2351,
+        "i": 6,
+        "color": "#dababf",
+        "type": "Nomadic",
+        "expansionism": 1.5,
+        "origins": [
+            0
+        ],
+        "code": "Sc"
+    },
+    {
+        "name": "Estian",
+        "base": 9,
+        "shield": "pavise",
+        "center": 3884,
+        "i": 7,
+        "color": "#c6b9c1",
+        "type": "Generic",
+        "expansionism": 1,
+        "origins": [
+            0
+        ],
+        "code": "Es"
+    },
+    {
+        "name": "Celtic",
+        "base": 22,
+        "shield": "round",
+        "center": 1776,
+        "i": 8,
+        "color": "#fccde5",
+        "type": "Highland",
+        "expansionism": 1.2,
+        "origins": [
+            0
+        ],
+        "code": "Ce"
+    }
+]
