@@ -142,10 +142,6 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             </tr>
         """)
 
-    # Update sort indices
-    idx_pop = 4
-    idx_food = 5
-    idx_gold = 6
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -186,7 +182,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
 
         /* Table Section */
         /* Table Section */
-        .table-container {{ position: absolute; right: 0; top: 0; bottom: 0; width: 500px; overflow-y: auto; background: rgba(255, 255, 255, 0.95); padding: 0; z-index: 20; box-shadow: -2px 0 5px rgba(0,0,0,0.1); border-left: 1px solid #ddd; }}
+        .table-container {{ position: absolute; right: 0; top: 0; bottom: 0; width: 800px; overflow-y: auto; background: rgba(255, 255, 255, 0.95); padding: 0; z-index: 20; box-shadow: -2px 0 5px rgba(0,0,0,0.1); border-left: 1px solid #ddd; }}
         table {{ width: 100%; border-collapse: collapse; font-size: 0.9rem; }}
         th, td {{ padding: 10px; text-align: left; border-bottom: 1px solid #eee; }}
         th {{ background: #f8f9fa; position: sticky; top: 0; z-index: 1; cursor: pointer; }}
@@ -257,9 +253,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                         <th onclick="sortTable(1, this)">Type</th>
                         <th onclick="sortTable(2, this)">State</th>
                         <th onclick="sortTable(3, this)">Quartiers</th>
-                        <th onclick="sortTable({idx_pop}, this)">Pop</th>
-                        <th onclick="sortTable({idx_food}, this)">Food</th>
-                        <th onclick="sortTable({idx_gold}, this)">Gold</th>
+                        <th onclick="sortTable(4, this)">Pop</th>
+                        <th onclick="sortTable(5, this)">Food</th>
+                        <th onclick="sortTable(6, this)">Gold</th>
                     </tr>
                 </thead>
                 <tbody>
