@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy World Reports</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; padding: 40px; background: #f4f4f9; max-width: 800px; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 40px; }
+        .reports-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .report-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .report-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .report-icon { font-size: 3em; margin-bottom: 15px; }
+        .report-name { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: #2c3e50; }
+        .report-actions { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+        .report-action { color: #3498db; font-weight: 500; text-decoration: none; border: 1px solid #3498db; padding: 8px; border-radius: 4px; transition: background 0.2s, color 0.2s; }
+        .report-action:hover { background: #3498db; color: white; }
+    </style></head><body>
+    <h1>Fantasy World Reports</h1>
+    <div class="reports-grid">
+        
+        <div class="report-card">
+            <div class="report-icon">🗺️</div>
+            <div class="report-name">Montreia</div>
+            <div class="report-actions">
+                <a href="Montreia\Montreia_report.html" class="report-action">View Report &rarr;</a>
+                <a href="Montreia\Montreia_map.html" class="report-action">Interactive Map &rarr;</a>
+            </div>
+        </div>
+        <div class="report-card">
+            <div class="report-icon">🗺️</div>
+            <div class="report-name">Statyia</div>
+            <div class="report-actions">
+                <a href="Statyia\Statyia_report.html" class="report-action">View Report &rarr;</a>
+                <a href="Statyia\Statyia_map.html" class="report-action">Interactive Map &rarr;</a>
+            </div>
+        </div>
+    </div>
+    </body></html>

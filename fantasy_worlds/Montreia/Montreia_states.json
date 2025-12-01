@@ -1,0 +1,3038 @@
+[
+    {
+        "i": 0,
+        "name": "Neutrals",
+        "urban": 17.029,
+        "rural": 824.3131349384785,
+        "burgs": 2,
+        "area": 77037,
+        "cells": 399,
+        "neighbors": [
+            2,
+            20,
+            8,
+            21,
+            13,
+            10,
+            15,
+            11,
+            22,
+            12,
+            4,
+            6,
+            14,
+            18
+        ],
+        "diplomacy": [
+            [
+                "Shahia-Thropebian War",
+                "Shahia declared a war on its rival Thropebeia",
+                "Thropebeia's ally Hetos joined the war on defenders side",
+                "Thropebeia's ally Bukania joined the war on defenders side",
+                "Shahia's ally Chamia avoided entering the war"
+            ],
+            [
+                "Chamia-Bukanian War",
+                "Chamia declared a war on its rival Bukania",
+                "Bukania's ally Fasasania joined the war on defenders side",
+                "Bukania's ally Jepsa joined the war on defenders side",
+                "Bukania's ally Sasburgia joined the war on defenders side",
+                "Bukania's ally Theonia joined the war on defenders side",
+                "Bukania's ally Joentara joined the war on defenders side",
+                "Bukania's ally Thropebeia joined the war on defenders side",
+                "Bukania's ally Tapocia joined the war on defenders side",
+                "Chamia's ally Shahia avoided entering the war",
+                "Chamia's ally Tyrianti joined the war on attackers side",
+                "Chamia's ally Hetos did not join the war as its allies are in war on both sides",
+                "Chamia's ally Vavala avoided entering the war",
+                "Chamia's ally Eljanmaa avoided entering the war",
+                "Chamia's ally Mulurikia avoided entering the war"
+            ],
+            [
+                "Druriria-Riririgenian War",
+                "Druriria declared a war on its rival Riririgen",
+                "Riririgen's ally Vavala joined the war on defenders side"
+            ],
+            [
+                "Eljanmaa-Vavalian War",
+                "Eljanmaa declared a war on its rival Vavala",
+                "Vavala's ally Fasasania joined the war on defenders side",
+                "Vavala's ally Chamia joined the war on defenders side",
+                "Vavala's ally Hetos joined the war on defenders side",
+                "Vavala's ally Sasburgia joined the war on defenders side",
+                "Vavala's ally Theonia joined the war on defenders side",
+                "Vavala's ally Joentara joined the war on defenders side",
+                "Vavala's ally Tapocia joined the war on defenders side",
+                "Vavala's ally Riririgen joined the war on defenders side",
+                "Eljanmaa's ally Jepsa avoided entering the war"
+            ]
+        ],
+        "provinces": []
+    },
+    {
+        "i": 1,
+        "color": "#66c2a5",
+        "name": "Shushjia",
+        "expansionism": 1,
+        "capital": 1,
+        "type": "Generic",
+        "center": 2517,
+        "culture": 4,
+        "coa": {
+            "t1": "or",
+            "charges": [
+                {
+                    "charge": "greyhoundRampant",
+                    "t": "azure",
+                    "p": "e",
+                    "t2": "azure",
+                    "size": 1.5
+                }
+            ],
+            "shield": "oval"
+        },
+        "urban": 134.163,
+        "rural": 559.3905973434448,
+        "burgs": 10,
+        "area": 9472,
+        "cells": 59,
+        "neighbors": [
+            4,
+            17,
+            14
+        ],
+        "campaigns": [
+            {
+                "name": "Absarish Conquest",
+                "start": 1522,
+                "end": 1523
+            },
+            {
+                "name": "Joentaran Campaign",
+                "start": 1621,
+                "end": 1624
+            },
+            {
+                "name": "Chamian Rebellion",
+                "start": 1636,
+                "end": 1640
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "x",
+            "Ally",
+            "Neutral",
+            "Rival",
+            "Ally",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "Suspicion",
+            "Unknown",
+            "Suspicion",
+            "Suspicion",
+            "Unknown",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Ally",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Satrapy",
+        "fullName": "Satrapy of Shushjia",
+        "provinces": [
+            1,
+            2,
+            3
+        ],
+        "pole": [
+            1529.96484375,
+            535.61328125
+        ],
+        "alert": 2.42,
+        "military": []
+    },
+    {
+        "i": 2,
+        "color": "#fc8d62",
+        "name": "Fasasania",
+        "expansionism": 1,
+        "capital": 2,
+        "type": "Nomadic",
+        "center": 1151,
+        "culture": 6,
+        "coa": {
+            "t1": "purpure",
+            "charges": [
+                {
+                    "charge": "lionPassantGuardant",
+                    "t": "or",
+                    "p": "e",
+                    "t2": "argent",
+                    "t3": "or",
+                    "size": 1.5
+                }
+            ],
+            "shield": "round"
+        },
+        "urban": 93.965,
+        "rural": 2483.557126760483,
+        "burgs": 24,
+        "area": 100778,
+        "cells": 532,
+        "neighbors": [
+            20,
+            0,
+            12,
+            11
+        ],
+        "campaigns": [
+            {
+                "name": "Khanese Conquest",
+                "start": 1254,
+                "end": 1259
+            },
+            {
+                "name": "Cielumnian Invasion",
+                "start": 1438,
+                "end": 1444
+            },
+            {
+                "name": "Sasburgian Rebellion",
+                "start": 1493,
+                "end": 1494
+            },
+            {
+                "name": "Tapocian Conquest",
+                "start": 1636,
+                "end": 1641
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Ally",
+            "x",
+            "Neutral",
+            "Enemy",
+            "Neutral",
+            "Ally",
+            "Enemy",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Suspicion",
+            "Neutral",
+            "Ally",
+            "Ally",
+            "Enemy",
+            "Unknown",
+            "Unknown",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Ally",
+            "Suspicion",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Empire",
+        "fullName": "Fasasanian Empire",
+        "provinces": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            111
+        ],
+        "pole": [
+            694.3046875,
+            401.5703125
+        ],
+        "alert": 0.13,
+        "military": [
+            {
+                "i": 0,
+                "a": 755,
+                "cell": 1153,
+                "x": 598.3400000000001,
+                "y": 340.13,
+                "bx": 598.3400000000001,
+                "by": 340.13,
+                "u": {
+                    "cavalry": 509,
+                    "archers": 134,
+                    "infantry": 111,
+                    "artillery": 1
+                },
+                "n": 0,
+                "name": "2nd (Fasasan) Regiment",
+                "state": 2,
+                "icon": "🐴"
+            }
+        ]
+    },
+    {
+        "i": 3,
+        "color": "#8da0cb",
+        "name": "Shahia",
+        "expansionism": 1,
+        "capital": 3,
+        "type": "Generic",
+        "center": 1118,
+        "culture": 4,
+        "coa": {
+            "t1": "azure",
+            "ordinaries": [
+                {
+                    "ordinary": "bordure",
+                    "t": "or"
+                }
+            ],
+            "shield": "oval"
+        },
+        "urban": 62.424,
+        "rural": 599.1303105354309,
+        "burgs": 8,
+        "area": 10865,
+        "cells": 55,
+        "neighbors": [
+            16,
+            7,
+            21,
+            5
+        ],
+        "campaigns": [
+            {
+                "name": "Bukanian Campaign",
+                "start": 1397,
+                "end": 1398
+            },
+            {
+                "name": "Palian Expedition",
+                "start": 1435,
+                "end": 1447
+            },
+            {
+                "name": "Thropebeian Invasion",
+                "start": 1636,
+                "end": 1641
+            },
+            {
+                "name": "Paranese Conflict",
+                "start": 1636,
+                "end": 1640
+            },
+            {
+                "name": "Thropebian War",
+                "start": 1640,
+                "end": 1642
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Neutral",
+            "x",
+            "Ally",
+            "Suspicion",
+            "Friendly",
+            "Suspicion",
+            "Enemy",
+            "Friendly",
+            "Unknown",
+            "Unknown",
+            "Neutral",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Enemy",
+            "Friendly",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Enemy",
+            "Unknown",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Satrapy",
+        "fullName": "Satrapy of Shahia",
+        "provinces": [
+            10,
+            11
+        ],
+        "pole": [
+            1388.3203125,
+            313.5546875
+        ],
+        "alert": 5,
+        "military": [
+            {
+                "i": 0,
+                "a": 4610,
+                "cell": 946,
+                "x": 1374.58,
+                "y": 294.86,
+                "bx": 1374.58,
+                "by": 294.86,
+                "u": {
+                    "archers": 1941,
+                    "cavalry": 586,
+                    "artillery": 31,
+                    "infantry": 2052
+                },
+                "n": 0,
+                "name": "2nd (Shah) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 4,
+        "color": "#e78ac3",
+        "name": "Chamia",
+        "expansionism": 1,
+        "capital": 4,
+        "type": "Generic",
+        "center": 2408,
+        "culture": 4,
+        "coa": {
+            "t1": "purpure",
+            "division": {
+                "division": "perFess",
+                "t": "or",
+                "line": "straight"
+            },
+            "charges": [
+                {
+                    "charge": "horsePassant",
+                    "t": "argent",
+                    "p": "k",
+                    "t2": "argent",
+                    "size": 0.7
+                },
+                {
+                    "charge": "skeleton",
+                    "t": "azure",
+                    "p": "n",
+                    "size": 0.7
+                }
+            ],
+            "shield": "oval"
+        },
+        "urban": 90.19399999999999,
+        "rural": 763.7615132331848,
+        "burgs": 11,
+        "area": 15125,
+        "cells": 73,
+        "neighbors": [
+            17,
+            21,
+            1,
+            0,
+            6,
+            14
+        ],
+        "campaigns": [
+            {
+                "name": "Jowz Invasion",
+                "start": 1434,
+                "end": 1444
+            },
+            {
+                "name": "Farehdeyan Rebellion",
+                "start": 1444,
+                "end": 1445
+            },
+            {
+                "name": "Kahak Expedition",
+                "start": 1490,
+                "end": 1496
+            },
+            {
+                "name": "Jepsan War",
+                "start": 1554,
+                "end": 1564
+            },
+            {
+                "name": "Shushjian Rebellion",
+                "start": 1561,
+                "end": 1562
+            },
+            {
+                "name": "Joentaran Conquest",
+                "start": 1636,
+                "end": 1641
+            },
+            {
+                "name": "Bukanian War",
+                "start": 1641,
+                "end": 1642
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Rival",
+            "Enemy",
+            "Ally",
+            "x",
+            "Friendly",
+            "Enemy",
+            "Ally",
+            "Ally",
+            "Suspicion",
+            "Ally",
+            "Friendly",
+            "Enemy",
+            "Enemy",
+            "Enemy",
+            "Enemy",
+            "Enemy",
+            "Friendly",
+            "Ally",
+            "Suspicion",
+            "Enemy",
+            "Enemy",
+            "Friendly",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Principality",
+        "fullName": "Principality of Chamia",
+        "provinces": [
+            12,
+            13,
+            14,
+            112
+        ],
+        "pole": [
+            1427.73046875,
+            538.62890625
+        ],
+        "alert": 4.73,
+        "military": [
+            {
+                "i": 0,
+                "a": 3072,
+                "cell": 2508,
+                "x": 1401.94,
+                "y": 507.48,
+                "bx": 1401.94,
+                "by": 507.48,
+                "u": {
+                    "archers": 1298,
+                    "cavalry": 438,
+                    "artillery": 42,
+                    "infantry": 1294
+                },
+                "n": 0,
+                "name": "2nd (Shustan) Regiment",
+                "state": 4,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 2676,
+                "cell": 2716,
+                "x": 1455.66,
+                "y": 567.58,
+                "bx": 1455.66,
+                "by": 567.58,
+                "u": {
+                    "archers": 1094,
+                    "cavalry": 403,
+                    "artillery": 39,
+                    "infantry": 1140
+                },
+                "n": 0,
+                "name": "4th (Dugedia) Regiment",
+                "state": 4,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 1602,
+                "cell": 2613,
+                "x": 1478.35,
+                "y": 527.1,
+                "bx": 1478.35,
+                "by": 527.1,
+                "u": {
+                    "archers": 691,
+                    "cavalry": 198,
+                    "infantry": 713
+                },
+                "n": 0,
+                "name": "6th (Dugedia) Regiment",
+                "state": 4,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 5,
+        "color": "#a6d854",
+        "name": "Pali",
+        "expansionism": 1,
+        "capital": 5,
+        "type": "Generic",
+        "center": 1213,
+        "culture": 4,
+        "coa": {
+            "t1": "gules",
+            "division": {
+                "division": "perFess",
+                "t": "barry-or-purpure",
+                "line": "straight"
+            },
+            "charges": [
+                {
+                    "charge": "centaur",
+                    "t": "argent",
+                    "p": "k",
+                    "t2": "argent",
+                    "t3": "argent",
+                    "size": 0.7
+                },
+                {
+                    "charge": "cancer",
+                    "t": "azure",
+                    "p": "n",
+                    "size": 0.7
+                }
+            ],
+            "shield": "oval"
+        },
+        "urban": 64.55499999999999,
+        "rural": 407.2445447444916,
+        "burgs": 6,
+        "area": 7586,
+        "cells": 44,
+        "neighbors": [
+            3,
+            17,
+            21
+        ],
+        "campaigns": [
+            {
+                "name": "Bukanian Crusade",
+                "start": 1519,
+                "end": 1526
+            },
+            {
+                "name": "Qodshahr Campaign",
+                "start": 1636,
+                "end": 1641
+            },
+            {
+                "name": "Gonut Invasion",
+                "start": 1636,
+                "end": 1637
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Ally",
+            "Neutral",
+            "Suspicion",
+            "Friendly",
+            "x",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "Ally",
+            "Neutral",
+            "Unknown",
+            "Friendly",
+            "Suspicion",
+            "Suspicion",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Suspicion",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Satrapy",
+        "fullName": "Satrapy of Pali",
+        "provinces": [
+            15,
+            16
+        ],
+        "pole": [
+            1475.35546875,
+            349.69921875
+        ],
+        "alert": 1.26,
+        "military": [
+            {
+                "i": 0,
+                "a": 2707,
+                "cell": 1036,
+                "x": 1455.74,
+                "y": 319.18000000000006,
+                "bx": 1455.74,
+                "by": 319.18000000000006,
+                "u": {
+                    "archers": 1350,
+                    "cavalry": 203,
+                    "artillery": 28,
+                    "infantry": 1126
+                },
+                "n": 0,
+                "name": "1st (Shemshania) Regiment",
+                "state": 5,
+                "icon": "🏹"
+            }
+        ]
+    },
+    {
+        "i": 6,
+        "color": "#ffd92f",
+        "name": "Jepsa",
+        "expansionism": 1,
+        "capital": 6,
+        "type": "Generic",
+        "center": 3694,
+        "culture": 7,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "ratRampant",
+                    "t": "purpure",
+                    "p": "e",
+                    "t2": "purpure",
+                    "size": 1.5
+                }
+            ],
+            "shield": "pavise"
+        },
+        "urban": 90.926,
+        "rural": 896.3595025241375,
+        "burgs": 14,
+        "area": 18423,
+        "cells": 98,
+        "neighbors": [
+            4,
+            0,
+            18,
+            14
+        ],
+        "campaigns": [
+            {
+                "name": "Chamian Rebellion",
+                "start": 1396,
+                "end": 1403
+            },
+            {
+                "name": "Haparan Invasion",
+                "start": 1447,
+                "end": 1451
+            },
+            {
+                "name": "Tamsan War",
+                "start": 1636,
+                "end": 1640
+            },
+            {
+                "name": "Forsmukan War",
+                "start": 1636,
+                "end": 1637
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Friendly",
+            "Ally",
+            "Friendly",
+            "Enemy",
+            "Neutral",
+            "x",
+            "Enemy",
+            "Ally",
+            "Suspicion",
+            "Neutral",
+            "Friendly",
+            "Friendly",
+            "Neutral",
+            "Suspicion",
+            "Ally",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Unknown",
+            "Friendly",
+            "Ally",
+            "Friendly",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Principality",
+        "fullName": "Principality of Jepsa",
+        "provinces": [
+            17,
+            18,
+            19,
+            20,
+            113
+        ],
+        "pole": [
+            1349.84765625,
+            661.15234375
+        ],
+        "alert": 1.94,
+        "military": [
+            {
+                "i": 0,
+                "a": 3834,
+                "cell": 3588,
+                "x": 1301.15,
+                "y": 682.7,
+                "bx": 1301.15,
+                "by": 682.7,
+                "u": {
+                    "infantry": 1800,
+                    "cavalry": 1045,
+                    "artillery": 21,
+                    "archers": 968
+                },
+                "n": 0,
+                "name": "1st (Seilumamas) Regiment",
+                "state": 6,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 2998,
+                "cell": 3495,
+                "x": 1410.27,
+                "y": 670.3,
+                "bx": 1410.27,
+                "by": 670.3,
+                "u": {
+                    "archers": 1202,
+                    "cavalry": 534,
+                    "artillery": 21,
+                    "infantry": 1241
+                },
+                "n": 0,
+                "name": "2nd (Raplaki) Regiment",
+                "state": 6,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 2472,
+                "cell": 3488,
+                "x": 1358.71,
+                "y": 678.35,
+                "bx": 1358.71,
+                "by": 678.35,
+                "u": {
+                    "infantry": 1170,
+                    "archers": 782,
+                    "cavalry": 505,
+                    "artillery": 15
+                },
+                "n": 0,
+                "name": "3rd (Kehmamen) Regiment",
+                "state": 6,
+                "icon": "⚔️"
+            },
+            {
+                "i": 3,
+                "a": 11,
+                "cell": 3495,
+                "x": 1415.85,
+                "y": 685.67,
+                "bx": 1415.85,
+                "by": 685.67,
+                "u": {
+                    "fleet": 11
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 6,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 7,
+        "color": "#6dc3c3",
+        "name": "Tyrianti",
+        "expansionism": 1,
+        "capital": 7,
+        "type": "Generic",
+        "center": 190,
+        "culture": 2,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "thistle",
+                    "t": "purpure",
+                    "p": "abcpqh",
+                    "size": 0.5
+                }
+            ],
+            "shield": "boeotian"
+        },
+        "urban": 217.09800000000004,
+        "rural": 1045.2375438809395,
+        "burgs": 21,
+        "area": 20673,
+        "cells": 109,
+        "neighbors": [
+            8,
+            16,
+            3,
+            21
+        ],
+        "campaigns": [
+            {
+                "name": "Heto Conquest",
+                "start": 1334,
+                "end": 1335
+            },
+            {
+                "name": "Thropebeian Conquest",
+                "start": 1385,
+                "end": 1386
+            },
+            {
+                "name": "Naro Crusade",
+                "start": 1441,
+                "end": 1445
+            },
+            {
+                "name": "Delean Campaign",
+                "start": 1578,
+                "end": 1579
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Ally",
+            "Enemy",
+            "Suspicion",
+            "Ally",
+            "Neutral",
+            "Enemy",
+            "x",
+            "Friendly",
+            "Unknown",
+            "Friendly",
+            "Unknown",
+            "Enemy",
+            "Enemy",
+            "Enemy",
+            "Unknown",
+            "Enemy",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "Enemy",
+            "Enemy",
+            "Unknown",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Tyrianti",
+        "provinces": [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+        ],
+        "pole": [
+            1263.359375,
+            229.515625
+        ],
+        "alert": 2.89,
+        "military": [
+            {
+                "i": 0,
+                "a": 4572,
+                "cell": 350,
+                "x": 1240.92,
+                "y": 192.03999999999996,
+                "bx": 1240.92,
+                "by": 192.03999999999996,
+                "u": {
+                    "archers": 1775,
+                    "cavalry": 671,
+                    "artillery": 42,
+                    "infantry": 2084
+                },
+                "n": 0,
+                "name": "1st (Tenaigia) Regiment",
+                "state": 7,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 3346,
+                "cell": 440,
+                "x": 1273.5,
+                "y": 192.85000000000002,
+                "bx": 1273.5,
+                "by": 192.85000000000002,
+                "u": {
+                    "archers": 1665,
+                    "artillery": 25,
+                    "infantry": 1397,
+                    "cavalry": 259
+                },
+                "n": 0,
+                "name": "3rd (Menaipia) Regiment",
+                "state": 7,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 2578,
+                "cell": 534,
+                "x": 1273.23,
+                "y": 236.45000000000005,
+                "bx": 1273.23,
+                "by": 236.45000000000005,
+                "u": {
+                    "archers": 1005,
+                    "cavalry": 374,
+                    "infantry": 1178,
+                    "artillery": 21
+                },
+                "n": 0,
+                "name": "4th (Cyzantibeth) Regiment",
+                "state": 7,
+                "icon": "⚔️"
+            },
+            {
+                "i": 3,
+                "a": 1607,
+                "cell": 265,
+                "x": 1296.26,
+                "y": 182.63,
+                "bx": 1296.26,
+                "by": 182.63,
+                "u": {
+                    "archers": 882,
+                    "cavalry": 50,
+                    "infantry": 604,
+                    "artillery": 71
+                },
+                "n": 0,
+                "name": "6th (Askromepios) Regiment",
+                "state": 7,
+                "icon": "🏹"
+            },
+            {
+                "i": 4,
+                "a": 31,
+                "cell": 265,
+                "x": 1301.3,
+                "y": 161.80999999999995,
+                "bx": 1301.3,
+                "by": 161.80999999999995,
+                "u": {
+                    "fleet": 31
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 7,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 8,
+        "color": "#ff9a66",
+        "name": "Hetos",
+        "expansionism": 1,
+        "capital": 8,
+        "type": "Generic",
+        "center": 249,
+        "culture": 2,
+        "coa": {
+            "t1": "gules",
+            "ordinaries": [
+                {
+                    "ordinary": "bend",
+                    "t": "argent",
+                    "line": "wavy"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "serpent",
+                    "t": "gules",
+                    "p": "jo",
+                    "t2": "or",
+                    "size": 0.7
+                }
+            ],
+            "shield": "boeotian"
+        },
+        "urban": 123.45399999999997,
+        "rural": 1020.7341094613075,
+        "burgs": 19,
+        "area": 22656,
+        "cells": 115,
+        "neighbors": [
+            13,
+            7,
+            0,
+            21
+        ],
+        "campaigns": [
+            {
+                "name": "Theonian Invasion",
+                "start": 1220,
+                "end": 1224
+            },
+            {
+                "name": "Bukanian Campaign",
+                "start": 1354,
+                "end": 1363
+            },
+            {
+                "name": "Tyriantian Crusade",
+                "start": 1465,
+                "end": 1466
+            },
+            {
+                "name": "Kno Intervention",
+                "start": 1555,
+                "end": 1556
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Friendly",
+            "Enemy",
+            "Ally",
+            "Friendly",
+            "Ally",
+            "Friendly",
+            "x",
+            "Neutral",
+            "Ally",
+            "Neutral",
+            "Friendly",
+            "Rival",
+            "Friendly",
+            "Enemy",
+            "Ally",
+            "Friendly",
+            "Neutral",
+            "Unknown",
+            "Friendly",
+            "Rival",
+            "Neutral",
+            "Suspicion"
+        ],
+        "form": "Theocracy",
+        "formName": "Patriarchate",
+        "fullName": "Patriarchate of Hetos",
+        "provinces": [
+            27,
+            28,
+            29,
+            30,
+            31,
+            114,
+            115
+        ],
+        "pole": [
+            1146.0390625,
+            254.7890625
+        ],
+        "alert": 1.58,
+        "military": [
+            {
+                "i": 0,
+                "a": 932,
+                "cell": 1289,
+                "x": 1163.53,
+                "y": 365.9,
+                "bx": 1163.53,
+                "by": 365.9,
+                "u": {
+                    "infantry": 429,
+                    "archers": 218,
+                    "cavalry": 284,
+                    "artillery": 1
+                },
+                "n": 0,
+                "name": "3rd (Phaismebe) Regiment",
+                "state": 8,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 9,
+        "color": "#b5b0c1",
+        "name": "Druriria",
+        "expansionism": 1,
+        "capital": 9,
+        "type": "Naval",
+        "center": 3562,
+        "culture": 1,
+        "coa": {
+            "t1": "vert",
+            "division": {
+                "division": "perFess",
+                "t": "argent",
+                "line": "flechy"
+            },
+            "charges": [
+                {
+                    "charge": "goutte",
+                    "t": "or",
+                    "p": "kn",
+                    "divided": "counter",
+                    "size": 0.7
+                }
+            ],
+            "shield": "roman"
+        },
+        "urban": 38.262,
+        "rural": 279.6486120223999,
+        "burgs": 6,
+        "area": 6986,
+        "cells": 41,
+        "neighbors": [
+            10,
+            22,
+            23,
+            19
+        ],
+        "campaigns": [
+            {
+                "name": "Vebutegian Campaign",
+                "start": 1432,
+                "end": 1433
+            },
+            {
+                "name": "Naplarian War",
+                "start": 1514,
+                "end": 1521
+            },
+            {
+                "name": "Vavalan Crusade",
+                "start": 1539,
+                "end": 1540
+            },
+            {
+                "name": "Riririgenese Conflict",
+                "start": 1542,
+                "end": 1543
+            },
+            {
+                "name": "Riririgenian War",
+                "start": 1642,
+                "end": 1642
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Suspicion",
+            "Unknown",
+            "Suspicion",
+            "Unknown",
+            "Neutral",
+            "x",
+            "Enemy",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Suspicion",
+            "Unknown",
+            "Suspicion",
+            "Neutral",
+            "Unknown",
+            "Friendly",
+            "Enemy"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Druriria",
+        "provinces": [
+            32,
+            33,
+            116
+        ],
+        "pole": [
+            981.265625,
+            676.171875
+        ],
+        "alert": 5,
+        "military": []
+    },
+    {
+        "i": 10,
+        "color": "#e191dc",
+        "name": "Vavala",
+        "expansionism": 1,
+        "capital": 10,
+        "type": "Generic",
+        "center": 3460,
+        "culture": 7,
+        "coa": {
+            "t1": "argent",
+            "division": {
+                "division": "perPale",
+                "t": "vert",
+                "line": "straight"
+            },
+            "ordinaries": [
+                {
+                    "ordinary": "fessCotissed",
+                    "t": "gules",
+                    "line": "straight"
+                }
+            ],
+            "shield": "pavise"
+        },
+        "urban": 26.101999999999997,
+        "rural": 634.9750890135765,
+        "burgs": 8,
+        "area": 20647,
+        "cells": 103,
+        "neighbors": [
+            0,
+            15,
+            22,
+            9,
+            19
+        ],
+        "campaigns": [
+            {
+                "name": "Druririan Invasion",
+                "start": 1363,
+                "end": 1369
+            },
+            {
+                "name": "Oitapirt War",
+                "start": 1376,
+                "end": 1385
+            },
+            {
+                "name": "Eljanmaan War",
+                "start": 1636,
+                "end": 1637
+            },
+            {
+                "name": "Vebutegian Conflict",
+                "start": 1636,
+                "end": 1641
+            },
+            {
+                "name": "Kausupinese Rebellion",
+                "start": 1636,
+                "end": 1641
+            },
+            {
+                "name": "Eljanmian War",
+                "start": 1639,
+                "end": 1642
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Ally",
+            "Unknown",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Ally",
+            "Enemy",
+            "x",
+            "Friendly",
+            "Ally",
+            "Ally",
+            "Ally",
+            "Enemy",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Ally",
+            "Friendly",
+            "Friendly",
+            "Ally"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Vavala",
+        "provinces": [
+            34,
+            35,
+            117,
+            118
+        ],
+        "pole": [
+            1026.1328125,
+            558.9453125
+        ],
+        "alert": 2.77,
+        "military": [
+            {
+                "i": 0,
+                "a": 3532,
+                "cell": 3264,
+                "x": 1052.16,
+                "y": 650.42,
+                "bx": 1052.16,
+                "by": 650.42,
+                "u": {
+                    "infantry": 1408,
+                    "archers": 873,
+                    "cavalry": 1236,
+                    "artillery": 15
+                },
+                "n": 0,
+                "name": "1st (Hoskog) Regiment",
+                "state": 10,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 1942,
+                "cell": 2184,
+                "x": 1099.8,
+                "y": 494.28,
+                "bx": 1099.8,
+                "by": 494.28,
+                "u": {
+                    "infantry": 544,
+                    "archers": 349,
+                    "cavalry": 1048,
+                    "artillery": 1
+                },
+                "n": 0,
+                "name": "3rd (Hinkania) Regiment",
+                "state": 10,
+                "icon": "🐴"
+            },
+            {
+                "i": 2,
+                "a": 7,
+                "cell": 3463,
+                "x": 1022.75,
+                "y": 668.74,
+                "bx": 1022.75,
+                "by": 668.74,
+                "u": {
+                    "fleet": 7
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 10,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 11,
+        "color": "#c8e655",
+        "name": "Cielumnia",
+        "expansionism": 1,
+        "capital": 11,
+        "type": "Naval",
+        "center": 3446,
+        "culture": 1,
+        "coa": {
+            "t1": "azure",
+            "charges": [
+                {
+                    "charge": "lozenge",
+                    "t": "argent",
+                    "p": "abcdefgzi",
+                    "size": 0.3
+                }
+            ],
+            "shield": "roman"
+        },
+        "urban": 234.739,
+        "rural": 1734.4449908733368,
+        "burgs": 30,
+        "area": 39609,
+        "cells": 222,
+        "neighbors": [
+            2,
+            0,
+            22,
+            12
+        ],
+        "campaigns": [
+            {
+                "name": "Sasburgian Campaign",
+                "start": 1420,
+                "end": 1421
+            },
+            {
+                "name": "Ulum Crusade",
+                "start": 1591,
+                "end": 1598
+            },
+            {
+                "name": "Vetian Invasion",
+                "start": 1617,
+                "end": 1618
+            },
+            {
+                "name": "Vebutegian War",
+                "start": 1636,
+                "end": 1641
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Ally",
+            "Suspicion",
+            "Unknown",
+            "Friendly",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Friendly",
+            "Friendly",
+            "x",
+            "Suspicion",
+            "Suspicion",
+            "Ally",
+            "Friendly",
+            "Neutral",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "Friendly",
+            "Neutral",
+            "Suzerain",
+            "Unknown"
+        ],
+        "form": "Union",
+        "formName": "Confederation",
+        "fullName": "Cielumnian Confederation",
+        "provinces": [
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            119,
+            120,
+            121
+        ],
+        "pole": [
+            728.5859375,
+            690.0078125
+        ],
+        "alert": 0.39,
+        "military": []
+    },
+    {
+        "i": 12,
+        "color": "#ffee35",
+        "name": "Sasburgia",
+        "expansionism": 1,
+        "capital": 12,
+        "type": "Naval",
+        "center": 3127,
+        "culture": 5,
+        "coa": {
+            "t1": "or",
+            "ordinaries": [
+                {
+                    "ordinary": "bordure",
+                    "t": "azure"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "skeleton",
+                    "t": "azure",
+                    "p": "e",
+                    "size": 1.1
+                }
+            ],
+            "shield": "round"
+        },
+        "urban": 501.7950000000001,
+        "rural": 3463.3310148715973,
+        "burgs": 70,
+        "area": 69405,
+        "cells": 427,
+        "neighbors": [
+            2,
+            0,
+            11
+        ],
+        "campaigns": [
+            {
+                "name": "Alindorf Campaign",
+                "start": 1502,
+                "end": 1505
+            },
+            {
+                "name": "Schliburg Campaign",
+                "start": 1544,
+                "end": 1551
+            },
+            {
+                "name": "Cielumnian War",
+                "start": 1636,
+                "end": 1641
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Enemy",
+            "Neutral",
+            "Friendly",
+            "Enemy",
+            "Friendly",
+            "Unknown",
+            "Ally",
+            "Suspicion",
+            "x",
+            "Ally",
+            "Ally",
+            "Enemy",
+            "Neutral",
+            "Neutral",
+            "Ally",
+            "Neutral",
+            "Ally",
+            "Ally",
+            "Suspicion",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Empire",
+        "fullName": "Sasburgian Empire",
+        "provinces": [
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            122
+        ],
+        "pole": [
+            536.728515625,
+            649.212890625
+        ],
+        "alert": 0.24,
+        "military": [
+            {
+                "i": 0,
+                "a": 707,
+                "cell": 4027,
+                "x": 618.3,
+                "y": 750,
+                "bx": 618.3,
+                "by": 750,
+                "u": {
+                    "archers": 280,
+                    "artillery": 10,
+                    "infantry": 358,
+                    "cavalry": 59
+                },
+                "n": 0,
+                "name": "2nd (Hauheterswe) Regiment",
+                "state": 12,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 13,
+        "color": "#61dcba",
+        "name": "Theonia",
+        "expansionism": 1,
+        "capital": 13,
+        "type": "Generic",
+        "center": 424,
+        "culture": 2,
+        "coa": {
+            "t1": "sable",
+            "ordinaries": [
+                {
+                    "ordinary": "fess",
+                    "t": "argent",
+                    "line": "escartely"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "key",
+                    "t": "gules",
+                    "p": "def",
+                    "size": 0.5
+                }
+            ],
+            "shield": "boeotian"
+        },
+        "urban": 65.782,
+        "rural": 517.9201681613922,
+        "burgs": 10,
+        "area": 11666,
+        "cells": 66,
+        "neighbors": [
+            8,
+            20,
+            0
+        ],
+        "campaigns": [
+            {
+                "name": "Tapocian War",
+                "start": 1428,
+                "end": 1437
+            },
+            {
+                "name": "Heto War",
+                "start": 1441,
+                "end": 1449
+            },
+            {
+                "name": "Tyrexand Expedition",
+                "start": 1490,
+                "end": 1493
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Ally",
+            "Friendly",
+            "Enemy",
+            "Ally",
+            "Neutral",
+            "Enemy",
+            "Rival",
+            "Neutral",
+            "Ally",
+            "Suspicion",
+            "Ally",
+            "x",
+            "Friendly",
+            "Enemy",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Friendly",
+            "Ally",
+            "Suspicion",
+            "Suspicion"
+        ],
+        "form": "Monarchy",
+        "formName": "Despotate",
+        "fullName": "Theonian Despotate",
+        "provinces": [
+            62,
+            63,
+            64,
+            123
+        ],
+        "pole": [
+            1061.734375,
+            222.515625
+        ],
+        "alert": 2.05,
+        "military": [
+            {
+                "i": 0,
+                "a": 3390,
+                "cell": 424,
+                "x": 1040.2,
+                "y": 215.39999999999998,
+                "bx": 1040.2,
+                "by": 215.39999999999998,
+                "u": {
+                    "archers": 1108,
+                    "cavalry": 634,
+                    "artillery": 34,
+                    "infantry": 1614
+                },
+                "n": 0,
+                "name": "1st (Lelia) Regiment",
+                "state": 13,
+                "icon": "👑"
+            },
+            {
+                "i": 1,
+                "a": 2504,
+                "cell": 1384,
+                "x": 1124.86,
+                "y": 378.3299999999999,
+                "bx": 1124.86,
+                "by": 378.3299999999999,
+                "u": {
+                    "infantry": 1172,
+                    "cavalry": 697,
+                    "artillery": 13,
+                    "archers": 622
+                },
+                "n": 0,
+                "name": "2nd (Pydrialeta) Regiment",
+                "state": 13,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 14,
+        "color": "#ffb46b",
+        "name": "Joentara",
+        "expansionism": 1,
+        "capital": 14,
+        "type": "Generic",
+        "center": 3503,
+        "culture": 7,
+        "coa": {
+            "t1": "argent",
+            "ordinaries": [
+                {
+                    "ordinary": "cross",
+                    "t": "gules",
+                    "line": "straight"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "crossHummetty",
+                    "t": "argent",
+                    "p": "beh",
+                    "size": 0.3
+                }
+            ],
+            "shield": "pavise"
+        },
+        "urban": 42.931999999999995,
+        "rural": 550.5569538772106,
+        "burgs": 7,
+        "area": 10935,
+        "cells": 68,
+        "neighbors": [
+            1,
+            4,
+            0,
+            6
+        ],
+        "campaigns": [
+            {
+                "name": "Jepsan War",
+                "start": 1286,
+                "end": 1298
+            },
+            {
+                "name": "Rapian War",
+                "start": 1484,
+                "end": 1485
+            },
+            {
+                "name": "Husakiman Expedition",
+                "start": 1524,
+                "end": 1531
+            },
+            {
+                "name": "Hospokian War",
+                "start": 1620,
+                "end": 1621
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Ally",
+            "Unknown",
+            "Enemy",
+            "Neutral",
+            "Suspicion",
+            "Enemy",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Ally",
+            "Ally",
+            "Friendly",
+            "x",
+            "Enemy",
+            "Neutral",
+            "Ally",
+            "Ally",
+            "Neutral",
+            "Friendly",
+            "Ally",
+            "Ally",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Joentara",
+        "provinces": [
+            65,
+            66
+        ],
+        "pole": [
+            1501.90625,
+            683.28125
+        ],
+        "alert": 3.93,
+        "military": []
+    },
+    {
+        "i": 15,
+        "color": "#89afe6",
+        "name": "Eljanmaa",
+        "expansionism": 1,
+        "capital": 15,
+        "type": "Generic",
+        "center": 3773,
+        "culture": 7,
+        "coa": {
+            "t1": "sable",
+            "ordinaries": [
+                {
+                    "ordinary": "fess",
+                    "t": "or",
+                    "line": "straight"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "trowel",
+                    "t": "or",
+                    "p": "abcz",
+                    "t2": "or",
+                    "size": 0.5
+                }
+            ],
+            "shield": "pavise"
+        },
+        "urban": 136.54200000000003,
+        "rural": 980.3307824730873,
+        "burgs": 15,
+        "area": 25724,
+        "cells": 134,
+        "neighbors": [
+            10,
+            0,
+            18
+        ],
+        "campaigns": [
+            {
+                "name": "Vavalan Campaign",
+                "start": 1441,
+                "end": 1457
+            },
+            {
+                "name": "Ruotian Conquest",
+                "start": 1562,
+                "end": 1573
+            },
+            {
+                "name": "Mulurikian War",
+                "start": 1636,
+                "end": 1637
+            },
+            {
+                "name": "Vavalian War",
+                "start": 1639,
+                "end": 1642
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Unknown",
+            "Enemy",
+            "Neutral",
+            "Enemy",
+            "Unknown",
+            "Ally",
+            "Unknown",
+            "Enemy",
+            "Friendly",
+            "Enemy",
+            "Friendly",
+            "Enemy",
+            "Enemy",
+            "Enemy",
+            "x",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Suspicion",
+            "Enemy",
+            "Friendly",
+            "Friendly",
+            "Enemy"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Eljanmaa",
+        "provinces": [
+            67,
+            68,
+            69,
+            70,
+            124
+        ],
+        "pole": [
+            1146.640625,
+            614.984375
+        ],
+        "alert": 1.58,
+        "military": []
+    },
+    {
+        "i": 16,
+        "color": "#d3aad5",
+        "name": "Thropebeia",
+        "expansionism": 1,
+        "capital": 16,
+        "type": "Generic",
+        "center": 362,
+        "culture": 2,
+        "coa": {
+            "t1": "argent",
+            "division": {
+                "division": "perFess",
+                "t": "azure",
+                "line": "straight"
+            },
+            "ordinaries": [
+                {
+                    "ordinary": "pileInBend",
+                    "t": "gules",
+                    "divided": "counter"
+                }
+            ],
+            "shield": "boeotian"
+        },
+        "urban": 102.43799999999999,
+        "rural": 594.1249159574509,
+        "burgs": 11,
+        "area": 11123,
+        "cells": 73,
+        "neighbors": [
+            7,
+            3
+        ],
+        "campaigns": [
+            {
+                "name": "Shahian Campaign",
+                "start": 1420,
+                "end": 1422
+            },
+            {
+                "name": "Tyriantian Conflict",
+                "start": 1544,
+                "end": 1545
+            },
+            {
+                "name": "Shahian War",
+                "start": 1640,
+                "end": 1642
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Unknown",
+            "Enemy",
+            "Enemy",
+            "Friendly",
+            "Friendly",
+            "Enemy",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "x",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Neutral"
+        ],
+        "form": "Union",
+        "formName": "Union",
+        "fullName": "Thropebeian Union",
+        "provinces": [
+            71,
+            72,
+            73
+        ],
+        "pole": [
+            1361.125,
+            193.875
+        ],
+        "alert": 5,
+        "military": [
+            {
+                "i": 0,
+                "a": 4228,
+                "cell": 266,
+                "x": 1310.9,
+                "y": 170,
+                "bx": 1310.9,
+                "by": 170,
+                "u": {
+                    "archers": 2155,
+                    "cavalry": 297,
+                    "infantry": 1754,
+                    "artillery": 22
+                },
+                "n": 0,
+                "name": "1st (Atropesia) Regiment",
+                "state": 16,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 3109,
+                "cell": 271,
+                "x": 1383,
+                "y": 174,
+                "bx": 1383,
+                "by": 174,
+                "u": {
+                    "archers": 1645,
+                    "cavalry": 156,
+                    "artillery": 77,
+                    "infantry": 1231
+                },
+                "n": 0,
+                "name": "4th (Atropesia) Regiment",
+                "state": 16,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 2768,
+                "cell": 446,
+                "x": 1354.92,
+                "y": 207.81999999999994,
+                "bx": 1354.92,
+                "by": 207.81999999999994,
+                "u": {
+                    "archers": 1399,
+                    "cavalry": 206,
+                    "infantry": 1159,
+                    "artillery": 4
+                },
+                "n": 0,
+                "name": "5th (Dopepikonia) Regiment",
+                "state": 16,
+                "icon": "🏹"
+            },
+            {
+                "i": 3,
+                "a": 23,
+                "cell": 271,
+                "x": 1398.79,
+                "y": 180.95000000000005,
+                "bx": 1398.79,
+                "by": 180.95000000000005,
+                "u": {
+                    "fleet": 23
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 16,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 17,
+        "color": "#f9d356",
+        "name": "Ziyeh",
+        "expansionism": 1,
+        "capital": 17,
+        "type": "Generic",
+        "center": 1919,
+        "culture": 4,
+        "coa": {
+            "t1": "purpure",
+            "division": {
+                "division": "perPale",
+                "t": "argent",
+                "line": "rayonne"
+            },
+            "charges": [
+                {
+                    "charge": "palace",
+                    "t": "or",
+                    "p": "p",
+                    "size": 0.7
+                },
+                {
+                    "charge": "bookClosed2",
+                    "t": "gules",
+                    "p": "q",
+                    "size": 0.7
+                }
+            ],
+            "shield": "oval"
+        },
+        "urban": 85.07000000000001,
+        "rural": 524.2394409179688,
+        "burgs": 13,
+        "area": 11371,
+        "cells": 61,
+        "neighbors": [
+            5,
+            21,
+            4,
+            1
+        ],
+        "campaigns": [
+            {
+                "name": "Bukanian Rebellion",
+                "start": 1460,
+                "end": 1461
+            },
+            {
+                "name": "Chamian War",
+                "start": 1527,
+                "end": 1532
+            },
+            {
+                "name": "Tiyanese Expedition",
+                "start": 1617,
+                "end": 1618
+            },
+            {
+                "name": "Shushjian War",
+                "start": 1636,
+                "end": 1641
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Unknown",
+            "Friendly",
+            "Friendly",
+            "Suspicion",
+            "Neutral",
+            "Ally",
+            "Friendly",
+            "Suspicion",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "Neutral",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "x",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Rival",
+            "Suspicion",
+            "Unknown"
+        ],
+        "form": "Monarchy",
+        "formName": "Satrapy",
+        "fullName": "Satrapy of Ziyeh",
+        "provinces": [
+            74,
+            75,
+            76,
+            77
+        ],
+        "pole": [
+            1506.2421875,
+            426.4453125
+        ],
+        "alert": 1.85,
+        "military": []
+    },
+    {
+        "i": 18,
+        "color": "#94c1aa",
+        "name": "Mulurikia",
+        "expansionism": 1,
+        "capital": 18,
+        "type": "Generic",
+        "center": 4287,
+        "culture": 7,
+        "coa": {
+            "t1": "argent",
+            "division": {
+                "division": "perPale",
+                "t": "vert",
+                "line": "rayonne"
+            },
+            "charges": [
+                {
+                    "charge": "mullet",
+                    "t": "purpure",
+                    "p": "p",
+                    "size": 0.7
+                },
+                {
+                    "charge": "crossSaltire",
+                    "t": "or",
+                    "p": "q",
+                    "size": 0.7
+                }
+            ],
+            "shield": "pavise"
+        },
+        "urban": 219.55100000000002,
+        "rural": 1736.8593246936798,
+        "burgs": 27,
+        "area": 27015,
+        "cells": 150,
+        "neighbors": [
+            6,
+            0,
+            15
+        ],
+        "campaigns": [
+            {
+                "name": "Ravan Invasion",
+                "start": 1428,
+                "end": 1436
+            },
+            {
+                "name": "Vehjan War",
+                "start": 1518,
+                "end": 1519
+            },
+            {
+                "name": "Eljanmaan Conquest",
+                "start": 1635,
+                "end": 1641
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Unknown",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Suspicion",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Ally",
+            "Suspicion",
+            "Unknown",
+            "Neutral",
+            "x",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Mulurikia",
+        "provinces": [
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            125
+        ],
+        "pole": [
+            1313.873046875,
+            795.275390625
+        ],
+        "alert": 0.22,
+        "military": []
+    },
+    {
+        "i": 19,
+        "color": "#8dbbb7",
+        "name": "Naplaria",
+        "expansionism": 1,
+        "capital": 19,
+        "type": "Generic",
+        "center": 3870,
+        "culture": 7,
+        "coa": {
+            "t1": "argent",
+            "division": {
+                "division": "gyronny",
+                "t": "sable"
+            },
+            "charges": [
+                {
+                    "charge": "goutte",
+                    "t": "azure",
+                    "p": "behdf",
+                    "divided": "counter",
+                    "size": 0.4
+                }
+            ],
+            "shield": "pavise"
+        },
+        "urban": 98.01599999999999,
+        "rural": 938.8403502702713,
+        "burgs": 14,
+        "area": 16877,
+        "cells": 99,
+        "neighbors": [
+            10,
+            9,
+            23
+        ],
+        "campaigns": [
+            {
+                "name": "Osalalan Campaign",
+                "start": 1591,
+                "end": 1596
+            },
+            {
+                "name": "Narniokian Conflict",
+                "start": 1636,
+                "end": 1641
+            },
+            {
+                "name": "Riririgenese War",
+                "start": 1636,
+                "end": 1641
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Unknown",
+            "Neutral",
+            "Friendly",
+            "Suspicion",
+            "Unknown",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "x",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Suspicion"
+        ],
+        "form": "Theocracy",
+        "formName": "Theocracy",
+        "fullName": "Naplarian Theocracy",
+        "provinces": [
+            85,
+            86,
+            87,
+            88,
+            126
+        ],
+        "pole": [
+            1021.87890625,
+            764.48046875
+        ],
+        "alert": 0.42,
+        "military": [
+            {
+                "i": 0,
+                "a": 1573,
+                "cell": 4136,
+                "x": 1015.41,
+                "y": 780.62,
+                "bx": 1015.41,
+                "by": 780.62,
+                "u": {
+                    "archers": 530,
+                    "cavalry": 325,
+                    "infantry": 713,
+                    "artillery": 5
+                },
+                "n": 0,
+                "name": "1st (Nogesihi) Regiment",
+                "state": 19,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 20,
+        "color": "#b49ed5",
+        "name": "Tapocia",
+        "expansionism": 1,
+        "capital": 20,
+        "type": "Generic",
+        "center": 598,
+        "culture": 2,
+        "coa": {
+            "t1": "sable",
+            "ordinaries": [
+                {
+                    "ordinary": "fess",
+                    "t": "or",
+                    "line": "dragonTeeth"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "greyhoundSejant",
+                    "t": "gules",
+                    "p": "def",
+                    "t2": "gules",
+                    "t3": "or",
+                    "size": 0.5
+                }
+            ],
+            "shield": "boeotian"
+        },
+        "urban": 262.91,
+        "rural": 2226.944678068161,
+        "burgs": 40,
+        "area": 49385,
+        "cells": 269,
+        "neighbors": [
+            2,
+            13,
+            0
+        ],
+        "campaigns": [
+            {
+                "name": "Ekionese Invasion",
+                "start": 1464,
+                "end": 1470
+            },
+            {
+                "name": "Fasasanian War",
+                "start": 1542,
+                "end": 1546
+            },
+            {
+                "name": "Theonian Campaign",
+                "start": 1544,
+                "end": 1545
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Ally",
+            "Neutral",
+            "Enemy",
+            "Neutral",
+            "Friendly",
+            "Enemy",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Friendly",
+            "Ally",
+            "Friendly",
+            "Friendly",
+            "Enemy",
+            "Friendly",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "x",
+            "Ally",
+            "Friendly",
+            "Unknown"
+        ],
+        "form": "Monarchy",
+        "formName": "Empire",
+        "fullName": "Tapocian Empire",
+        "provinces": [
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98
+        ],
+        "pole": [
+            960.884765625,
+            312.017578125
+        ],
+        "alert": 0.14,
+        "military": [
+            {
+                "i": 0,
+                "a": 370,
+                "cell": 399,
+                "x": 832.78,
+                "y": 196.89999999999998,
+                "bx": 832.78,
+                "by": 196.89999999999998,
+                "u": {
+                    "archers": 121,
+                    "artillery": 1,
+                    "infantry": 175,
+                    "cavalry": 73
+                },
+                "n": 0,
+                "name": "3rd (Cypethos) Regiment",
+                "state": 20,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 21,
+        "color": "#1ac3c6",
+        "name": "Bukania",
+        "expansionism": 1,
+        "capital": 21,
+        "type": "Generic",
+        "center": 1705,
+        "culture": 4,
+        "coa": {
+            "t1": "gules",
+            "ordinaries": [
+                {
+                    "ordinary": "cross",
+                    "t": "or",
+                    "line": "straight"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "hourglass",
+                    "t": "sable",
+                    "p": "behdf",
+                    "t2": "argent",
+                    "t3": "or",
+                    "size": 0.3
+                }
+            ],
+            "shield": "oval"
+        },
+        "urban": 230.10600000000002,
+        "rural": 1900.8002364635468,
+        "burgs": 29,
+        "area": 30803,
+        "cells": 150,
+        "neighbors": [
+            3,
+            7,
+            0,
+            8,
+            5,
+            17,
+            4
+        ],
+        "campaigns": [
+            {
+                "name": "Ziyeh Campaign",
+                "start": 1191,
+                "end": 1201
+            },
+            {
+                "name": "Pirzanan Conflict",
+                "start": 1421,
+                "end": 1422
+            },
+            {
+                "name": "Jabad Conflict",
+                "start": 1444,
+                "end": 1445
+            },
+            {
+                "name": "Palian War",
+                "start": 1497,
+                "end": 1505
+            },
+            {
+                "name": "Heto Campaign",
+                "start": 1541,
+                "end": 1551
+            },
+            {
+                "name": "Arzalabadian Invasion",
+                "start": 1569,
+                "end": 1578
+            },
+            {
+                "name": "Shahian War",
+                "start": 1636,
+                "end": 1639
+            },
+            {
+                "name": "Chamian War",
+                "start": 1641,
+                "end": 1642
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Ally",
+            "Enemy",
+            "Enemy",
+            "Suspicion",
+            "Ally",
+            "Enemy",
+            "Rival",
+            "Unknown",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Ally",
+            "Ally",
+            "Friendly",
+            "Ally",
+            "Rival",
+            "Neutral",
+            "Neutral",
+            "Ally",
+            "x",
+            "Neutral",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Bukania",
+        "provinces": [
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106
+        ],
+        "pole": [
+            1356.333984375,
+            431.638671875
+        ],
+        "alert": 2.32,
+        "military": [
+            {
+                "i": 0,
+                "a": 3551,
+                "cell": 1709,
+                "x": 1368.16,
+                "y": 412.35,
+                "bx": 1368.16,
+                "by": 412.35,
+                "u": {
+                    "infantry": 1746,
+                    "archers": 1051,
+                    "cavalry": 731,
+                    "artillery": 23
+                },
+                "n": 0,
+                "name": "2nd (Shemshahria) Regiment",
+                "state": 21,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 3174,
+                "cell": 1201,
+                "x": 1306.09,
+                "y": 354.87,
+                "bx": 1306.09,
+                "by": 354.87,
+                "u": {
+                    "infantry": 1585,
+                    "archers": 875,
+                    "cavalry": 706,
+                    "artillery": 8
+                },
+                "n": 0,
+                "name": "4th (Shemshahria) Regiment",
+                "state": 21,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 22,
+        "color": "#ffd344",
+        "name": "Vebutegia",
+        "expansionism": 1,
+        "capital": 22,
+        "type": "Naval",
+        "center": 3453,
+        "culture": 1,
+        "coa": {
+            "t1": "or",
+            "ordinaries": [
+                {
+                    "ordinary": "pile",
+                    "t": "azure"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "agnusDei",
+                    "t": "or",
+                    "p": "b",
+                    "t2": "gules",
+                    "size": 0.5
+                }
+            ],
+            "shield": "roman"
+        },
+        "urban": 47.384,
+        "rural": 375.32471990585327,
+        "burgs": 6,
+        "area": 8209,
+        "cells": 45,
+        "neighbors": [
+            0,
+            10,
+            11,
+            9
+        ],
+        "campaigns": [
+            {
+                "name": "Druririan War",
+                "start": 1383,
+                "end": 1384
+            },
+            {
+                "name": "Auretonis Conquest",
+                "start": 1497,
+                "end": 1500
+            },
+            {
+                "name": "Vavalan Campaign",
+                "start": 1551,
+                "end": 1552
+            },
+            {
+                "name": "Cielumnian Campaign",
+                "start": 1636,
+                "end": 1641
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Ally",
+            "Suspicion",
+            "Unknown",
+            "Friendly",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Friendly",
+            "Friendly",
+            "Vassal",
+            "Suspicion",
+            "Suspicion",
+            "Ally",
+            "Friendly",
+            "Neutral",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "Friendly",
+            "Neutral",
+            "x",
+            "Unknown"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Vebutegia",
+        "provinces": [
+            107,
+            108
+        ],
+        "pole": [
+            926.6796875,
+            606.9921875
+        ],
+        "alert": 0.44,
+        "military": [
+            {
+                "i": 0,
+                "a": 551,
+                "cell": 2970,
+                "x": 929.41,
+                "y": 593.74,
+                "bx": 929.41,
+                "by": 593.74,
+                "u": {
+                    "infantry": 278,
+                    "cavalry": 82,
+                    "archers": 183,
+                    "artillery": 8
+                },
+                "n": 0,
+                "name": "1st (Vilbium) Regiment",
+                "state": 22,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 23,
+        "color": "#b1ce72",
+        "name": "Riririgen",
+        "expansionism": 1,
+        "capital": 23,
+        "type": "Naval",
+        "center": 3754,
+        "culture": 1,
+        "coa": {
+            "t1": "sable",
+            "charges": [
+                {
+                    "charge": "escallop",
+                    "t": "argent",
+                    "p": "e",
+                    "size": 1.5
+                }
+            ],
+            "shield": "roman"
+        },
+        "urban": 29.500000000000004,
+        "rural": 195.3438594341278,
+        "burgs": 3,
+        "area": 3524,
+        "cells": 23,
+        "neighbors": [
+            9,
+            19
+        ],
+        "campaigns": [
+            {
+                "name": "Castrum Invasion",
+                "start": 1564,
+                "end": 1565
+            },
+            {
+                "name": "Druririan War",
+                "start": 1636,
+                "end": 1637
+            },
+            {
+                "name": "Druririan War",
+                "start": 1642,
+                "end": 1642
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Suspicion",
+            "Enemy",
+            "Ally",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "Enemy",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "x"
+        ],
+        "form": "Monarchy",
+        "formName": "Duchy",
+        "fullName": "Duchy of Riririgen",
+        "provinces": [
+            109,
+            110
+        ],
+        "pole": [
+            911.40625,
+            701.96875
+        ],
+        "alert": 5,
+        "military": []
+    }
+]
