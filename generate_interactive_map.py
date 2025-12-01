@@ -171,7 +171,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         row_class = "capital-row" if is_capital else ""
         
         table_rows.append(f"""
-            <tr data-id="{b['id']}" class="{row_class}" onclick="highlightBurg({b['id']})">
+            <tr data-id="{b['id']}" data-original-index="{len(table_rows)}" class="{row_class}" onclick="highlightBurg({b['id']})">
                 <td>{name_display}</td>
                 <td>{b.get('type', 'Unknown')}</td>
                 <td>{b.get('state_name', 'Unknown')}</td>
@@ -213,7 +213,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             fullname = s.get('fullName', name)
             
             state_rows.append(f"""
-                <tr>
+                <tr data-original-index="{len(state_rows)}">
                     <td><span class="color-box" style="background-color: {color}; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>{name}</td>
                     <td>{capital_name}</td>
@@ -277,6 +277,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         tr.selected {{ background-color: #fff3cd; border-left: 5px solid #f1c40f; }}
         tr.capital-row {{ font-weight: bold; background-color: #fffbf0; }}
         
+        /* Sort Icons */
+        th.sort-asc::after {{ content: ' ▲'; }}
+        th.sort-desc::after {{ content: ' ▼'; }}
+        
         /* Tooltip */
         .tooltip {{ position: fixed; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; max-width: 200px; }}
         
@@ -338,16 +342,16 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 <table id="stateTable">
                     <thead>
                         <tr>
-                            <th>Color</th>
-                            <th>Name</th>
-                            <th>Capital</th>
-                            <th>Type</th>
-                            <th>Culture</th>
-                            <th>Burgs</th>
-                            <th>Area</th>
-                            <th>Cells</th>
-                            <th>Form</th>
-                            <th>Fullname</th>
+                            <th onclick="sortTable(0, this, 'stateTable')">Color</th>
+                            <th onclick="sortTable(1, this, 'stateTable')">Name</th>
+                            <th onclick="sortTable(2, this, 'stateTable')">Capital</th>
+                            <th onclick="sortTable(3, this, 'stateTable')">Type</th>
+                            <th onclick="sortTable(4, this, 'stateTable')">Culture</th>
+                            <th onclick="sortTable(5, this, 'stateTable')">Burgs</th>
+                            <th onclick="sortTable(6, this, 'stateTable')">Area</th>
+                            <th onclick="sortTable(7, this, 'stateTable')">Cells</th>
+                            <th onclick="sortTable(8, this, 'stateTable')">Form</th>
+                            <th onclick="sortTable(9, this, 'stateTable')">Fullname</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -360,13 +364,13 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 <table id="burgTable">
                     <thead>
                         <tr>
-                            <th onclick="sortTable(0, this)">Name</th>
-                            <th onclick="sortTable(1, this)">Type</th>
-                            <th onclick="sortTable(2, this)">State</th>
-                            <th onclick="sortTable(3, this)">Quartiers</th>
-                            <th onclick="sortTable({idx_pop}, this)">Pop</th>
-                            <th onclick="sortTable({idx_food}, this)">Food</th>
-                            <th onclick="sortTable({idx_gold}, this)">Gold</th>
+                            <th onclick="sortTable(0, this, 'burgTable')">Name</th>
+                            <th onclick="sortTable(1, this, 'burgTable')">Type</th>
+                            <th onclick="sortTable(2, this, 'burgTable')">State</th>
+                            <th onclick="sortTable(3, this, 'burgTable')">Quartiers</th>
+                            <th onclick="sortTable({idx_pop}, this, 'burgTable')">Pop</th>
+                            <th onclick="sortTable({idx_food}, this, 'burgTable')">Food</th>
+                            <th onclick="sortTable({idx_gold}, this, 'burgTable')">Gold</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -739,11 +743,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             selectBurg(id);
         }}
 
-        function sortTable(n, header) {{
-            const table = document.getElementById("burgTable");
-            let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-            switching = true;
-            dir = "asc"; 
+        function sortTable(n, header, tableId) {{
+            const table = document.getElementById(tableId);
+            let dir = "asc"; 
             
             // Reset other headers
             const headers = table.querySelectorAll('th');
@@ -753,13 +755,16 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 }}
             }});
             
-            // Toggle current header
+            // Determine sort direction (Tri-state: Asc -> Desc -> Original)
             if (header.classList.contains('sort-asc')) {{
                 dir = "desc";
                 header.classList.remove('sort-asc');
                 header.classList.add('sort-desc');
-            }} else {{
+            }} else if (header.classList.contains('sort-desc')) {{
+                dir = "original";
                 header.classList.remove('sort-desc');
+            }} else {{
+                dir = "asc";
                 header.classList.add('sort-asc');
             }}
 
@@ -768,6 +773,13 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             const rowsArray = Array.from(tbody.rows);
             
             rowsArray.sort((a, b) => {{
+                // If reverting to original order
+                if (dir === "original") {{
+                    let xIndex = parseInt(a.getAttribute('data-original-index'));
+                    let yIndex = parseInt(b.getAttribute('data-original-index'));
+                    return xIndex - yIndex;
+                }}
+                
                 let x = a.getElementsByTagName("TD")[n];
                 let y = b.getElementsByTagName("TD")[n];
                 
