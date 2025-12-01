@@ -32,7 +32,7 @@
         },
         "net_production_burg": {
             "Net_Food": 1.0,
-            "Net_Gold": 0.75
+            "Net_Gold": 0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 4673,
@@ -74,7 +74,7 @@
         },
         "net_production_burg": {
             "Net_Food": 3.0,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 7189,
@@ -116,7 +116,7 @@
         },
         "net_production_burg": {
             "Net_Food": 1.0,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 6061,
@@ -158,7 +158,7 @@
         },
         "net_production_burg": {
             "Net_Food": 3.5,
-            "Net_Gold": 3.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 22533,
@@ -200,7 +200,7 @@
         },
         "net_production_burg": {
             "Net_Food": 1.0,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 6447,
@@ -242,7 +242,7 @@
         },
         "net_production_burg": {
             "Net_Food": 5.0,
-            "Net_Gold": 3.75
+            "Net_Gold": 2.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 9859,
@@ -284,7 +284,7 @@
         },
         "net_production_burg": {
             "Net_Food": 2.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 4573,
@@ -368,7 +368,7 @@
         },
         "net_production_burg": {
             "Net_Food": 1.0,
-            "Net_Gold": 3.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 15988,
@@ -452,7 +452,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.0,
-            "Net_Gold": 14.5
+            "Net_Gold": 7.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 47915,
@@ -536,7 +536,7 @@
         },
         "net_production_burg": {
             "Net_Food": 3.5,
-            "Net_Gold": 4.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 23963,
@@ -788,7 +788,7 @@
         },
         "net_production_burg": {
             "Net_Food": 10.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 14061,
@@ -830,7 +830,7 @@
         },
         "net_production_burg": {
             "Net_Food": 19.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 19030,
@@ -998,7 +998,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 10699,
@@ -1208,7 +1208,7 @@
         },
         "net_production_burg": {
             "Net_Food": 12.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 16316,
@@ -1250,7 +1250,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 23729,
@@ -1334,7 +1334,7 @@
         },
         "net_production_burg": {
             "Net_Food": 23.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 23658,
@@ -1544,7 +1544,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 18675,
@@ -1712,7 +1712,7 @@
         },
         "net_production_burg": {
             "Net_Food": 16.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 16367,
@@ -1922,7 +1922,7 @@
         },
         "net_production_burg": {
             "Net_Food": 18.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 18254,
@@ -2384,7 +2384,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 18996,
@@ -2426,7 +2426,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 23272,
@@ -2468,7 +2468,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.0,
-            "Net_Gold": 3.0
+            "Net_Gold": 2.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 14553,
@@ -2510,7 +2510,7 @@
         },
         "net_production_burg": {
             "Net_Food": 15.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 21839,
@@ -3140,7 +3140,7 @@
         },
         "net_production_burg": {
             "Net_Food": 19.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 19789,
@@ -3224,7 +3224,7 @@
         },
         "net_production_burg": {
             "Net_Food": 14.0,
-            "Net_Gold": 3.0
+            "Net_Gold": 2.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 12967,
@@ -3266,7 +3266,7 @@
         },
         "net_production_burg": {
             "Net_Food": 12.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17200,
@@ -3350,7 +3350,7 @@
         },
         "net_production_burg": {
             "Net_Food": 16.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 16662,
@@ -3392,7 +3392,7 @@
         },
         "net_production_burg": {
             "Net_Food": 9.0,
-            "Net_Gold": 1.25
+            "Net_Gold": 0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 12294,
@@ -3434,7 +3434,7 @@
         },
         "net_production_burg": {
             "Net_Food": 19.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 19375,
@@ -3476,7 +3476,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17575,
@@ -3518,7 +3518,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 15320,
@@ -3644,7 +3644,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 11113,
@@ -3686,7 +3686,7 @@
         },
         "net_production_burg": {
             "Net_Food": 18.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 18750,
@@ -3728,7 +3728,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 9779,
@@ -3854,7 +3854,7 @@
         },
         "net_production_burg": {
             "Net_Food": 12.0,
-            "Net_Gold": 1.25
+            "Net_Gold": 0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 14392,
@@ -3896,7 +3896,7 @@
         },
         "net_production_burg": {
             "Net_Food": 16.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 16601,
@@ -3938,7 +3938,7 @@
         },
         "net_production_burg": {
             "Net_Food": 19.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 25729,
@@ -3980,7 +3980,7 @@
         },
         "net_production_burg": {
             "Net_Food": 7.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 10367,
@@ -4652,7 +4652,7 @@
         },
         "net_production_burg": {
             "Net_Food": 19.5,
-            "Net_Gold": 0.75
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 27758,
@@ -4778,7 +4778,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 18183,
@@ -4988,7 +4988,7 @@
         },
         "net_production_burg": {
             "Net_Food": 34.0,
-            "Net_Gold": 2.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 45935,
@@ -5030,7 +5030,7 @@
         },
         "net_production_burg": {
             "Net_Food": 14.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 20137,
@@ -5282,7 +5282,7 @@
         },
         "net_production_burg": {
             "Net_Food": 12.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17164,
@@ -5576,7 +5576,7 @@
         },
         "net_production_burg": {
             "Net_Food": 14.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 11849,
@@ -5702,7 +5702,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 18552,
@@ -5912,7 +5912,7 @@
         },
         "net_production_burg": {
             "Net_Food": 14.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 11780,
@@ -6542,7 +6542,7 @@
         },
         "net_production_burg": {
             "Net_Food": 7.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 11438,
@@ -6668,7 +6668,7 @@
         },
         "net_production_burg": {
             "Net_Food": 24.5,
-            "Net_Gold": 0.75
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 33968,
@@ -6920,7 +6920,7 @@
         },
         "net_production_burg": {
             "Net_Food": 39.5,
-            "Net_Gold": 8.25
+            "Net_Gold": 5.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 34090,
@@ -7214,7 +7214,7 @@
         },
         "net_production_burg": {
             "Net_Food": 16.0,
-            "Net_Gold": 2.75
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 18167,
@@ -7256,7 +7256,7 @@
         },
         "net_production_burg": {
             "Net_Food": 6.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 9636,
@@ -7466,7 +7466,7 @@
         },
         "net_production_burg": {
             "Net_Food": 12.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17218,
@@ -7676,7 +7676,7 @@
         },
         "net_production_burg": {
             "Net_Food": 10.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 8297,
@@ -8138,7 +8138,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 10636,
@@ -8306,7 +8306,7 @@
         },
         "net_production_burg": {
             "Net_Food": 14.0,
-            "Net_Gold": 3.0
+            "Net_Gold": 2.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 13053,
@@ -8978,7 +8978,7 @@
         },
         "net_production_burg": {
             "Net_Food": 16.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 16830,
@@ -9020,7 +9020,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 19366,
@@ -9314,7 +9314,7 @@
         },
         "net_production_burg": {
             "Net_Food": 12.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 16307,
@@ -9650,7 +9650,7 @@
         },
         "net_production_burg": {
             "Net_Food": 20.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 26450,
@@ -9692,7 +9692,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17176,
@@ -10322,7 +10322,7 @@
         },
         "net_production_burg": {
             "Net_Food": 15.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 21330,
@@ -10406,7 +10406,7 @@
         },
         "net_production_burg": {
             "Net_Food": 8.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 12131,
@@ -10700,7 +10700,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17501,
@@ -10784,7 +10784,7 @@
         },
         "net_production_burg": {
             "Net_Food": 15.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 21241,
@@ -10868,7 +10868,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17785,
@@ -11246,7 +11246,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 15044,
@@ -11498,7 +11498,7 @@
         },
         "net_production_burg": {
             "Net_Food": 20.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 20156,
@@ -11666,7 +11666,7 @@
         },
         "net_production_burg": {
             "Net_Food": 7.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 7647,
@@ -11708,7 +11708,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17159,
@@ -11918,7 +11918,7 @@
         },
         "net_production_burg": {
             "Net_Food": 14.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 11646,
@@ -12086,7 +12086,7 @@
         },
         "net_production_burg": {
             "Net_Food": 23.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 23268,
@@ -12296,7 +12296,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.0,
-            "Net_Gold": 3.0
+            "Net_Gold": 2.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 14864,
@@ -12464,7 +12464,7 @@
         },
         "net_production_burg": {
             "Net_Food": 18.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 25101,
@@ -12716,7 +12716,7 @@
         },
         "net_production_burg": {
             "Net_Food": 19.5,
-            "Net_Gold": 0.75
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 28600,
@@ -13430,7 +13430,7 @@
         },
         "net_production_burg": {
             "Net_Food": 10.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 9210,
@@ -13472,7 +13472,7 @@
         },
         "net_production_burg": {
             "Net_Food": 19.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 25685,
@@ -14144,7 +14144,7 @@
         },
         "net_production_burg": {
             "Net_Food": 15.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 20973,
@@ -14900,7 +14900,7 @@
         },
         "net_production_burg": {
             "Net_Food": 20.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 20800,
@@ -15320,7 +15320,7 @@
         },
         "net_production_burg": {
             "Net_Food": 16.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 22291,
@@ -15740,7 +15740,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 15523,
@@ -16118,7 +16118,7 @@
         },
         "net_production_burg": {
             "Net_Food": 7.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 7016,
@@ -16328,7 +16328,7 @@
         },
         "net_production_burg": {
             "Net_Food": 7.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 6636,
@@ -16580,7 +16580,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 18177,
@@ -16832,7 +16832,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 19117,
@@ -17168,7 +17168,7 @@
         },
         "net_production_burg": {
             "Net_Food": 12.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 16550,
@@ -17294,7 +17294,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 15873,
@@ -17336,7 +17336,7 @@
         },
         "net_production_burg": {
             "Net_Food": 9.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 13484,
@@ -17546,7 +17546,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17372,
@@ -17840,7 +17840,7 @@
         },
         "net_production_burg": {
             "Net_Food": 21.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 21584,
@@ -17882,7 +17882,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 15726,
@@ -17924,7 +17924,7 @@
         },
         "net_production_burg": {
             "Net_Food": 18.0,
-            "Net_Gold": 2.75
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 19425,
@@ -18092,7 +18092,7 @@
         },
         "net_production_burg": {
             "Net_Food": 13.0,
-            "Net_Gold": -0.25
+            "Net_Gold": -0.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 18125,
@@ -18302,7 +18302,7 @@
         },
         "net_production_burg": {
             "Net_Food": 14.0,
-            "Net_Gold": 2.75
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 15604,
@@ -18722,7 +18722,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17467,
@@ -18764,7 +18764,7 @@
         },
         "net_production_burg": {
             "Net_Food": 11.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 10136,
@@ -19184,7 +19184,7 @@
         },
         "net_production_burg": {
             "Net_Food": 7.0,
-            "Net_Gold": 1.5
+            "Net_Gold": 1.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 6538,
@@ -19856,7 +19856,7 @@
         },
         "net_production_burg": {
             "Net_Food": 20.0,
-            "Net_Gold": 3.0
+            "Net_Gold": 2.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17063,
@@ -19898,7 +19898,7 @@
         },
         "net_production_burg": {
             "Net_Food": 19.0,
-            "Net_Gold": 2.75
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 21313,
@@ -20108,7 +20108,7 @@
         },
         "net_production_burg": {
             "Net_Food": 17.5,
-            "Net_Gold": 2.25
+            "Net_Gold": 1.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 17420,
@@ -20948,7 +20948,7 @@
         },
         "net_production_burg": {
             "Net_Food": 23.5,
-            "Net_Gold": 5.25
+            "Net_Gold": 3.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 21698,
@@ -21074,7 +21074,7 @@
         },
         "net_production_burg": {
             "Net_Food": 15.5,
-            "Net_Gold": 1.0
+            "Net_Gold": 0.0
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 21089,
@@ -21116,7 +21116,7 @@
         },
         "net_production_burg": {
             "Net_Food": 25.5,
-            "Net_Gold": 5.25
+            "Net_Gold": 3.5
         },
         "area_requirements_burg": {
             "Farmland_to_Feed_Burg_ha_Min": 22278,

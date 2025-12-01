@@ -61,7 +61,7 @@
     "Consumption_Food": -1,
     "Consumption_Gold": 0,
     "Production_Food": 0,
-    "Production_Gold": 0.75
+    "Production_Gold": 0.5
   },
   {
     "Citizen": "Tradesman",
@@ -75,7 +75,7 @@
     "Consumption_Food": -1,
     "Consumption_Gold": 0,
     "Production_Food": 0,
-    "Production_Gold": 1.5
+    "Production_Gold": 1
   },
   {
     "Citizen": "Churchman",
