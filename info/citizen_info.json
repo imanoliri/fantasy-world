@@ -13,7 +13,7 @@
     },
     "Consumption_Food": -1,
     "Consumption_Gold": 0,
-    "Production_Food": 2,
+    "Production_Food": 1.5,
     "Production_Gold": 0
   },
   {
@@ -30,7 +30,7 @@
     },
     "Consumption_Food": -1,
     "Consumption_Gold": 0,
-    "Production_Food": 3,
+    "Production_Food": 2,
     "Production_Gold": 0
   },
   {
