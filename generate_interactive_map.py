@@ -208,7 +208,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
     <title>Interactive Map: {map_name}</title>
     <style>
         body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }}
-        header {{ background: #2c3e50; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 10; }}
+        header {{ background: #2c3e50; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 30; position: relative; }}
         h1 {{ margin: 0; font-size: 1.2rem; }}
         
         .controls {{ display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }}
