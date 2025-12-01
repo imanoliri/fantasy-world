@@ -428,6 +428,10 @@ if __name__ == "__main__":
                 data['pack']['burgs'] = processed_burgs
                 
                 # 2. Run Trade Simulation
+                states = data.get('pack', {}).get('states', [])
+                states_file = os.path.join(map_dir, f"{safe_name}_states.json")
+                save_json(states, states_file)
+
                 trades = simulate_trade.simulate_trade(processed_burgs)
                 
                 # Save Trade Routes JSON
