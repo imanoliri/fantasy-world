@@ -26,8 +26,20 @@
         /* Only show capital glow when body has show-capitals class */
         body.show-capitals .burg-dot.capital { filter: drop-shadow(0 0 6px gold); }
         
-        .trade-route { pointer-events: none; transition: opacity 0.3s; }
-        .trade-route.hidden { opacity: 0; }
+        .trade-route { pointer-events: none; transition: opacity 0.3s; opacity: 0; }
+        
+        /* Visibility Toggles */
+        body.show-food-trades .trade-route-food { opacity: 1; }
+        body.show-gold-trades .trade-route-gold { opacity: 1; }
+        
+        /* Burg Rings Toggles */
+        /* Default stroke is white (defined inline or default), overrides below */
+        
+        body.show-food-trades .burg-dot.food-receiver { stroke: #27ae60 !important; }
+        body.show-gold-trades .burg-dot.gold-receiver { stroke: #e74c3c !important; }
+        
+        .burg-ring-gold { display: none; }
+        body.show-gold-trades .burg-ring-gold { display: block; }
         
         @keyframes pulse {
             0% { stroke-opacity: 1; }
@@ -72,7 +84,7 @@
         .dropdown:hover .dropbtn { background-color: #2c3e50; }
     </style>
 </head>
-<body class="show-capitals">
+<body class="show-capitals show-food-trades show-gold-trades">
     <header>
         <h1>Interactive Map: Statyia</h1>
         <div class="controls">
@@ -92,7 +104,8 @@
                 </div>
             </div>
             
-            <label><input type="checkbox" id="toggleTrades" checked onchange="toggleTrades()"> Show Trade Routes</label>
+            <label><input type="checkbox" id="toggleFoodTrades" checked onchange="toggleFoodTrades()"> Show Food Trade</label>
+            <label><input type="checkbox" id="toggleGoldTrades" checked onchange="toggleGoldTrades()"> Show Gold Trade</label>
             <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
             <label><input type="checkbox" id="toggleStateTable" onchange="toggleStateTable()"> Show States Table</label>
             <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Show Burgs Table</label>
@@ -107,123 +120,123 @@
                 
                     <line x1="318" y1="505.5" x2="324.5" y2="495.5" 
                           stroke="#27ae60" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-food" />
                 
                     <line x1="1585.36" y1="464.85" x2="1584.15" y2="440.44" 
                           stroke="#27ae60" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-food" />
                 
                     <line x1="1386.12" y1="364.8" x2="1353.06" y2="348.5" 
                           stroke="#27ae60" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-food" />
                 
                     <line x1="496.5" y1="329.6" x2="515.1" y2="346.2" 
                           stroke="#27ae60" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-food" />
                 
                     <line x1="1696" y1="309" x2="1661.5" y2="284.5" 
                           stroke="#27ae60" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-food" />
                 
                     <line x1="1644.65" y1="553.35" x2="1629" y2="540.68" 
                           stroke="#27ae60" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-food" />
                 
                     <line x1="897.22" y1="887.29" x2="902.2" y2="814.3" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="576.53" y1="297.25" x2="606.43" y2="376.09" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="657" y1="510.5" x2="669.33" y2="549.53" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1582.49" y1="640.28" x2="1464.97" y2="633.04" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1587.47" y1="594.03" x2="1594.92" y2="572.16" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1661.5" y1="284.5" x2="1604.87" y2="393.61" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1427.25" y1="857.49" x2="1413.04" y2="829.54" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1115.5" y1="810" x2="1097.11" y2="773.57" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="873" y1="347" x2="813.72" y2="342.48" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1192" y1="435.5" x2="1243.7" y2="406.47" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1198.5" y1="627.5" x2="1402.42" y2="578.63" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1733.5" y1="454.5" x2="1746.72" y2="519.2" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="515.1" y1="346.2" x2="542.59" y2="311.45" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1587.47" y1="594.03" x2="1544.42" y2="543.14" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1661.5" y1="284.5" x2="1603.61" y2="336.37" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="657" y1="510.5" x2="694.32" y2="406.79" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="639.89" y1="498" x2="678.47" y2="453.64" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1629" y1="540.68" x2="1528.29" y2="563.9" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="897.22" y1="887.29" x2="883.74" y2="822.28" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="731" y1="845" x2="792.72" y2="840.1" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="1582.49" y1="640.28" x2="1528.68" y2="574.42" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="382.5" y1="773" x2="362.8" y2="682.7" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="434.08" y1="490.33" x2="439.16" y2="460.86" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
                     <line x1="338.22" y1="533.9" x2="303.72" y2="550.82" 
                           stroke="#e74c3c" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route trade-route-gold" />
                 
             <circle cx="1190.82" cy="346.27" r="6.835934464285041" fill="#95a5a6" stroke="#ffffff" stroke-width="3"
                     class="burg-dot capital" data-id="1" data-name="Holcester" 
@@ -241,24 +254,24 @@
                     data-quartiers="Fisherman: 2<br>Craftsman: 1<br>Farmer: 1<br>Tradesman: 1<br>">
             </circle>
         
-            <circle cx="324.5" cy="495.5" r="7.785242449660768" fill="#3498db" stroke="#27ae60" stroke-width="3"
-                    class="burg-dot capital" data-id="3" data-name="Frampton" 
+            <circle cx="324.5" cy="495.5" r="7.785242449660768" fill="#3498db" stroke="#ffffff" stroke-width="3"
+                    class="burg-dot capital food-receiver" data-id="3" data-name="Frampton" 
                     data-pop="6061" data-type="Naval" 
                     data-state="Winchamia"
                     data-gold="1.50" data-food="-0.50"
                     data-quartiers="Craftsman: 1<br>Farmer: 1<br>Fisherman: 1<br>Tradesman: 1<br>">
             </circle>
         
-            <circle cx="1584.15" cy="440.44" r="15.010995969621737" fill="#95a5a6" stroke="#27ae60" stroke-width="3"
-                    class="burg-dot capital" data-id="4" data-name="North" 
+            <circle cx="1584.15" cy="440.44" r="15.010995969621737" fill="#95a5a6" stroke="#ffffff" stroke-width="3"
+                    class="burg-dot capital food-receiver" data-id="4" data-name="North" 
                     data-pop="22533" data-type="Generic" 
                     data-state="Wickhampia"
                     data-gold="1.00" data-food="-3.50"
                     data-quartiers="Farmer: 12<br>Craftsman: 4<br>Tradesman: 3<br>Clerk: 2<br>Soldier: 2<br>Fisherman: 1<br>Hunter: 1<br>">
             </circle>
         
-            <circle cx="1353.06" cy="348.5" r="8.029321266458329" fill="#95a5a6" stroke="#27ae60" stroke-width="3"
-                    class="burg-dot capital" data-id="5" data-name="Wickhamp" 
+            <circle cx="1353.06" cy="348.5" r="8.029321266458329" fill="#95a5a6" stroke="#ffffff" stroke-width="3"
+                    class="burg-dot capital food-receiver" data-id="5" data-name="Wickhamp" 
                     data-pop="6447" data-type="Generic" 
                     data-state="Ashetheria"
                     data-gold="1.50" data-food="-0.50"
@@ -289,8 +302,8 @@
                     data-quartiers="Farmer: 2<br>">
             </circle>
         
-            <circle cx="515.1" cy="346.2" r="12.644366334458995" fill="#95a5a6" stroke="#27ae60" stroke-width="3"
-                    class="burg-dot capital" data-id="9" data-name="Sovilsea" 
+            <circle cx="515.1" cy="346.2" r="12.644366334458995" fill="#95a5a6" stroke="#ffffff" stroke-width="3"
+                    class="burg-dot capital food-receiver" data-id="9" data-name="Sovilsea" 
                     data-pop="15988" data-type="Lake" 
                     data-state="Helsteria"
                     data-gold="1.50" data-food="-3.00"
@@ -305,8 +318,8 @@
                     data-quartiers="Farmer: 1<br>">
             </circle>
         
-            <circle cx="1661.5" cy="284.5" r="20" fill="#3498db" stroke="#27ae60" stroke-width="3"
-                    class="burg-dot capital" data-id="11" data-name="Moury" 
+            <circle cx="1661.5" cy="284.5" r="20" fill="#3498db" stroke="#ffffff" stroke-width="3"
+                    class="burg-dot capital food-receiver" data-id="11" data-name="Moury" 
                     data-pop="47915" data-type="Naval" 
                     data-state="Mourland"
                     data-gold="7.00" data-food="-4.50"
@@ -321,8 +334,8 @@
                     data-quartiers="Farmer: 1<br>">
             </circle>
         
-            <circle cx="1629" cy="540.68" r="15.479987080097967" fill="#95a5a6" stroke="#27ae60" stroke-width="3"
-                    class="burg-dot capital" data-id="13" data-name="Berbury" 
+            <circle cx="1629" cy="540.68" r="15.479987080097967" fill="#95a5a6" stroke="#ffffff" stroke-width="3"
+                    class="burg-dot capital food-receiver" data-id="13" data-name="Berbury" 
                     data-pop="23963" data-type="Generic" 
                     data-state="Basaling"
                     data-gold="1.50" data-food="-4.00"
@@ -369,8 +382,8 @@
                     data-quartiers="Farmer: 11<br>">
             </circle>
         
-            <circle cx="902.2" cy="814.3" r="11.857908753233009" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="19" data-name="Tiverton" 
+            <circle cx="902.2" cy="814.3" r="11.857908753233009" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="19" data-name="Tiverton" 
                     data-pop="14061" data-type="Generic" 
                     data-state="Dudfordia"
                     data-gold="-0.50" data-food="4.00"
@@ -449,8 +462,8 @@
                     data-quartiers="Farmer: 1<br>">
             </circle>
         
-            <circle cx="606.43" cy="376.09" r="12.773409881468613" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="29" data-name="Guildleton" 
+            <circle cx="606.43" cy="376.09" r="12.773409881468613" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="29" data-name="Guildleton" 
                     data-pop="16316" data-type="Generic" 
                     data-state="Hatfieldia"
                     data-gold="-0.50" data-food="5.00"
@@ -841,8 +854,8 @@
                     data-quartiers="Farmer: 8<br>Fisherman: 4<br>Tradesman: 2<br>">
             </circle>
         
-            <circle cx="669.33" cy="549.53" r="13.114877048604" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="78" data-name="Westclif" 
+            <circle cx="669.33" cy="549.53" r="13.114877048604" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="78" data-name="Westclif" 
                     data-pop="17200" data-type="Generic" 
                     data-state="Hatfieldia"
                     data-gold="-0.50" data-food="5.00"
@@ -889,8 +902,8 @@
                     data-quartiers="Farmer: 17<br>Craftsman: 1<br>Fisherman: 1<br>Hunter: 1<br>Tradesman: 1<br>">
             </circle>
         
-            <circle cx="1464.97" cy="633.04" r="12.37739875741264" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="84" data-name="Wodford" 
+            <circle cx="1464.97" cy="633.04" r="12.37739875741264" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="84" data-name="Wodford" 
                     data-pop="15320" data-type="Generic" 
                     data-state="Roclesia"
                     data-gold="-0.50" data-food="4.50"
@@ -977,8 +990,8 @@
                     data-quartiers="Farmer: 22<br>Craftsman: 2<br>Soldier: 2<br>Fisherman: 1<br>Hunter: 1<br>Tradesman: 1<br>">
             </circle>
         
-            <circle cx="1594.92" cy="572.16" r="10.181846590869458" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="95" data-name="Alseasings" 
+            <circle cx="1594.92" cy="572.16" r="10.181846590869458" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="95" data-name="Alseasings" 
                     data-pop="10367" data-type="Generic" 
                     data-state="Basaling"
                     data-gold="-0.50" data-food="2.50"
@@ -1105,8 +1118,8 @@
                     data-quartiers="Farmer: 6<br>">
             </circle>
         
-            <circle cx="1604.87" cy="393.61" r="16.66073227682385" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="111" data-name="Cleorough" 
+            <circle cx="1604.87" cy="393.61" r="16.66073227682385" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="111" data-name="Cleorough" 
                     data-pop="27758" data-type="Generic" 
                     data-state="Wickhampia"
                     data-gold="-0.50" data-food="6.50"
@@ -1129,8 +1142,8 @@
                     data-quartiers="Farmer: 1<br>">
             </circle>
         
-            <circle cx="1413.04" cy="829.54" r="13.484435472054438" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="114" data-name="Newleigh" 
+            <circle cx="1413.04" cy="829.54" r="13.484435472054438" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="114" data-name="Newleigh" 
                     data-pop="18183" data-type="Generic" 
                     data-state="Roclesia"
                     data-gold="-0.50" data-food="5.50"
@@ -1225,8 +1238,8 @@
                     data-quartiers="Farmer: 7<br>">
             </circle>
         
-            <circle cx="1097.11" cy="773.57" r="13.101144988129855" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="126" data-name="Foverham" 
+            <circle cx="1097.11" cy="773.57" r="13.101144988129855" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="126" data-name="Foverham" 
                     data-pop="17164" data-type="Generic" 
                     data-state="Dudfordia"
                     data-gold="-0.50" data-food="5.00"
@@ -1465,8 +1478,8 @@
                     data-quartiers="Farmer: 11<br>">
             </circle>
         
-            <circle cx="813.72" cy="342.48" r="10.694858577840101" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="156" data-name="Chilton" 
+            <circle cx="813.72" cy="342.48" r="10.694858577840101" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="156" data-name="Chilton" 
                     data-pop="11438" data-type="Generic" 
                     data-state="Hatfordia"
                     data-gold="-0.50" data-food="2.50"
@@ -1489,8 +1502,8 @@
                     data-quartiers="Farmer: 1<br>">
             </circle>
         
-            <circle cx="1243.7" cy="406.47" r="18.430409653613236" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="159" data-name="Altford" 
+            <circle cx="1243.7" cy="406.47" r="18.430409653613236" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="159" data-name="Altford" 
                     data-pop="33968" data-type="Generic" 
                     data-state="Ashetheria"
                     data-gold="-0.50" data-food="9.00"
@@ -1601,8 +1614,8 @@
                     data-quartiers="Farmer: 10<br>Fisherman: 5<br>Tradesman: 2<br>Craftsman: 1<br>Soldier: 1<br>">
             </circle>
         
-            <circle cx="1402.42" cy="578.63" r="9.816312953446422" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="173" data-name="Rothbridge" 
+            <circle cx="1402.42" cy="578.63" r="9.816312953446422" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="173" data-name="Rothbridge" 
                     data-pop="9636" data-type="Generic" 
                     data-state="Roclesia"
                     data-gold="-0.50" data-food="2.00"
@@ -1641,8 +1654,8 @@
                     data-quartiers="Farmer: 1<br>">
             </circle>
         
-            <circle cx="1746.72" cy="519.2" r="13.121737689803131" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="178" data-name="Dunsted" 
+            <circle cx="1746.72" cy="519.2" r="13.121737689803131" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="178" data-name="Dunsted" 
                     data-pop="17218" data-type="Generic" 
                     data-state="Basaling"
                     data-gold="-0.50" data-food="5.00"
@@ -1993,8 +2006,8 @@
                     data-quartiers="Farmer: 2<br>">
             </circle>
         
-            <circle cx="542.59" cy="311.45" r="12.769886452118516" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="222" data-name="Whitlewent" 
+            <circle cx="542.59" cy="311.45" r="12.769886452118516" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="222" data-name="Whitlewent" 
                     data-pop="16307" data-type="Generic" 
                     data-state="Helsteria"
                     data-gold="-0.50" data-food="5.00"
@@ -2201,8 +2214,8 @@
                     data-quartiers="Farmer: 11<br>">
             </circle>
         
-            <circle cx="1544.42" cy="543.14" r="11.014081895464551" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="248" data-name="Congley" 
+            <circle cx="1544.42" cy="543.14" r="11.014081895464551" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="248" data-name="Congley" 
                     data-pop="12131" data-type="Generic" 
                     data-state="Basaling"
                     data-gold="-0.50" data-food="3.00"
@@ -2257,8 +2270,8 @@
                     data-quartiers="Farmer: 1<br>">
             </circle>
         
-            <circle cx="1603.61" cy="336.37" r="13.229134514396625" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="255" data-name="Knutstabrid" 
+            <circle cx="1603.61" cy="336.37" r="13.229134514396625" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="255" data-name="Knutstabrid" 
                     data-pop="17501" data-type="Generic" 
                     data-state="Mourland"
                     data-gold="-0.50" data-food="5.50"
@@ -2361,8 +2374,8 @@
                     data-quartiers="Farmer: 1<br>">
             </circle>
         
-            <circle cx="694.32" cy="406.79" r="12.265398485169571" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="268" data-name="Knutster" 
+            <circle cx="694.32" cy="406.79" r="12.265398485169571" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="268" data-name="Knutster" 
                     data-pop="15044" data-type="Generic" 
                     data-state="Hatfieldia"
                     data-gold="-0.50" data-food="4.50"
@@ -2641,8 +2654,8 @@
                     data-quartiers="Farmer: 4<br>">
             </circle>
         
-            <circle cx="678.47" cy="453.64" r="16.911534525287763" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="303" data-name="Rethorough" 
+            <circle cx="678.47" cy="453.64" r="16.911534525287763" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="303" data-name="Rethorough" 
                     data-pop="28600" data-type="Generic" 
                     data-state="Hatfieldia"
                     data-gold="-0.50" data-food="6.50"
@@ -3217,8 +3230,8 @@
                     data-quartiers="Farmer: 13<br>">
             </circle>
         
-            <circle cx="1528.29" cy="563.9" r="12.4591331961738" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="375" data-name="Cantef" 
+            <circle cx="1528.29" cy="563.9" r="12.4591331961738" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="375" data-name="Cantef" 
                     data-pop="15523" data-type="Generic" 
                     data-state="Basaling"
                     data-gold="-0.50" data-food="4.50"
@@ -3377,8 +3390,8 @@
                     data-quartiers="Farmer: 8<br>">
             </circle>
         
-            <circle cx="883.74" cy="822.28" r="13.482210501249416" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="395" data-name="Tarleighes" 
+            <circle cx="883.74" cy="822.28" r="13.482210501249416" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="395" data-name="Tarleighes" 
                     data-pop="18177" data-type="Generic" 
                     data-state="Dudfordia"
                     data-gold="-0.50" data-food="5.50"
@@ -3489,8 +3502,8 @@
                     data-quartiers="Farmer: 2<br>">
             </circle>
         
-            <circle cx="792.72" cy="840.1" r="12.864680330268607" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="409" data-name="Tetrinchbu" 
+            <circle cx="792.72" cy="840.1" r="12.864680330268607" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="409" data-name="Tetrinchbu" 
                     data-pop="16550" data-type="Generic" 
                     data-state="Dudfordia"
                     data-gold="-0.50" data-food="5.00"
@@ -3513,16 +3526,16 @@
                     data-quartiers="Farmer: 5<br>Hunter: 1<br>">
             </circle>
         
-            <circle cx="1528.68" cy="574.42" r="12.598809467564783" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="412" data-name="Stapleham" 
+            <circle cx="1528.68" cy="574.42" r="12.598809467564783" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="412" data-name="Stapleham" 
                     data-pop="15873" data-type="Generic" 
                     data-state="Basaling"
                     data-gold="-0.50" data-food="4.50"
                     data-quartiers="Farmer: 13<br>Craftsman: 1<br>Soldier: 1<br>">
             </circle>
         
-            <circle cx="362.8" cy="682.7" r="11.612062693595828" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="413" data-name="Westfordbu" 
+            <circle cx="362.8" cy="682.7" r="11.612062693595828" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="413" data-name="Westfordbu" 
                     data-pop="13484" data-type="Generic" 
                     data-state="Yeone"
                     data-gold="-0.50" data-food="3.50"
@@ -3625,8 +3638,8 @@
                     data-quartiers="Farmer: 21<br>Craftsman: 1<br>Fisherman: 1<br>Hunter: 1<br>Tradesman: 1<br>">
             </circle>
         
-            <circle cx="439.16" cy="460.86" r="12.54033492375702" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="426" data-name="Sarewich" 
+            <circle cx="439.16" cy="460.86" r="12.54033492375702" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="426" data-name="Sarewich" 
                     data-pop="15726" data-type="Generic" 
                     data-state="Yeone"
                     data-gold="-0.50" data-food="4.50"
@@ -3665,8 +3678,8 @@
                     data-quartiers="Farmer: 11<br>">
             </circle>
         
-            <circle cx="303.72" cy="550.82" r="13.46291201783626" fill="#95a5a6" stroke="#e74c3c" stroke-width="2"
-                    class="burg-dot" data-id="431" data-name="Wenmouth" 
+            <circle cx="303.72" cy="550.82" r="13.46291201783626" fill="#95a5a6" stroke="#ffffff" stroke-width="2"
+                    class="burg-dot gold-receiver" data-id="431" data-name="Wenmouth" 
                     data-pop="18125" data-type="Generic" 
                     data-state="Winchamia"
                     data-gold="-0.50" data-food="5.50"
@@ -9610,16 +9623,22 @@
             tooltip.style.display = 'none';
         }
 
-        function toggleTrades() {
-            const checkbox = document.getElementById('toggleTrades');
-            const routes = document.querySelectorAll('.trade-route');
-            routes.forEach(r => {
-                if (checkbox.checked) {
-                    r.classList.remove('hidden');
-                } else {
-                    r.classList.add('hidden');
-                }
-            });
+        function toggleFoodTrades() {
+            const checkbox = document.getElementById('toggleFoodTrades');
+            if (checkbox.checked) {
+                document.body.classList.add('show-food-trades');
+            } else {
+                document.body.classList.remove('show-food-trades');
+            }
+        }
+
+        function toggleGoldTrades() {
+            const checkbox = document.getElementById('toggleGoldTrades');
+            if (checkbox.checked) {
+                document.body.classList.add('show-gold-trades');
+            } else {
+                document.body.classList.remove('show-gold-trades');
+            }
         }
         
         function toggleCapitals() {

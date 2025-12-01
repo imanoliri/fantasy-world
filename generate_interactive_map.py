@@ -48,10 +48,13 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 commodity = t['Commodity']
                 stroke_color = '#e74c3c' if commodity == 'Net_Gold' else '#27ae60' # Gold (Red/Orange) vs Food (Green)
                 
+                # Add specific class for commodity
+                route_class = "trade-route-gold" if commodity == 'Net_Gold' else "trade-route-food"
+                
                 svg_elements.append(f"""
                     <line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" 
                           stroke="{stroke_color}" stroke-width="1" stroke-opacity="0.6"
-                          class="trade-route" />
+                          class="trade-route {route_class}" />
                 """)
 
     # 2. Burgs (Circles)
@@ -137,23 +140,28 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         
         net_gold = b.get('net_production_burg', {}).get('Net_Gold', 0)
         
-        # Trade Receiver Logic for Stroke (Rings)
-        # Green for Food Receiver, Orange for Gold Receiver
+        # Trade Receiver Logic for Classes and Extra Rings
         is_food_receiver = str(b['id']) in food_receivers
         is_gold_receiver = str(b['id']) in gold_receivers
         
-        stroke = '#ffffff' # Default white
+        # We will control stroke color via CSS classes on the burg-dot
+        # Default stroke is white (via CSS or attribute if not overridden)
+        stroke = '#ffffff' 
+        dot_classes = []
         extra_ring = ""
         
         if is_food_receiver and is_gold_receiver:
-            stroke = '#27ae60' # Green for main
-            # Add outer orange/red ring
-            # We use a slightly larger radius for the second ring
+            # Both: Main dot is Green (Food), Extra ring is Orange (Gold)
+            dot_classes.append("food-receiver")
             extra_ring = f'<circle cx="{cx}" cy="{cy}" r="{r + 3}" fill="none" stroke="#e74c3c" stroke-width="2" class="burg-ring-gold" pointer-events="none" />'
         elif is_food_receiver:
-            stroke = '#27ae60' # Green
+            # Food Only: Main dot is Green
+            dot_classes.append("food-receiver")
         elif is_gold_receiver:
-            stroke = '#e74c3c' # Orange/Red
+            # Gold Only: Main dot is Orange
+            dot_classes.append("gold-receiver")
+            
+        dot_class_str = " " + " ".join(dot_classes) if dot_classes else ""
             
         # Capital Logic
         is_capital = b.get('capital') == 1
@@ -185,7 +193,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             
         svg_elements.append(f"""
             <circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" stroke="{stroke}" stroke-width="{stroke_width}"
-                    class="burg-dot{capital_class}" data-id="{b['id']}" data-name="{b['name']}" 
+                    class="burg-dot{capital_class}{dot_class_str}" data-id="{b['id']}" data-name="{b['name']}" 
                     data-pop="{b['population']}" data-type="{b.get('type', 'Unknown')}" 
                     data-state="{b.get('state_name', 'Unknown')}"
                     data-gold="{net_gold:.2f}" data-food="{net_food:.2f}"
@@ -281,8 +289,20 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         /* Only show capital glow when body has show-capitals class */
         body.show-capitals .burg-dot.capital {{ filter: drop-shadow(0 0 6px gold); }}
         
-        .trade-route {{ pointer-events: none; transition: opacity 0.3s; }}
-        .trade-route.hidden {{ opacity: 0; }}
+        .trade-route {{ pointer-events: none; transition: opacity 0.3s; opacity: 0; }}
+        
+        /* Visibility Toggles */
+        body.show-food-trades .trade-route-food {{ opacity: 1; }}
+        body.show-gold-trades .trade-route-gold {{ opacity: 1; }}
+        
+        /* Burg Rings Toggles */
+        /* Default stroke is white (defined inline or default), overrides below */
+        
+        body.show-food-trades .burg-dot.food-receiver {{ stroke: #27ae60 !important; }}
+        body.show-gold-trades .burg-dot.gold-receiver {{ stroke: #e74c3c !important; }}
+        
+        .burg-ring-gold {{ display: none; }}
+        body.show-gold-trades .burg-ring-gold {{ display: block; }}
         
         @keyframes pulse {{
             0% {{ stroke-opacity: 1; }}
@@ -327,7 +347,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         .dropdown:hover .dropbtn {{ background-color: #2c3e50; }}
     </style>
 </head>
-<body class="show-capitals">
+<body class="show-capitals show-food-trades show-gold-trades">
     <header>
         <h1>Interactive Map: {map_name}</h1>
         <div class="controls">
@@ -347,7 +367,8 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 </div>
             </div>
             
-            <label><input type="checkbox" id="toggleTrades" checked onchange="toggleTrades()"> Show Trade Routes</label>
+            <label><input type="checkbox" id="toggleFoodTrades" checked onchange="toggleFoodTrades()"> Show Food Trade</label>
+            <label><input type="checkbox" id="toggleGoldTrades" checked onchange="toggleGoldTrades()"> Show Gold Trade</label>
             <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
             <label><input type="checkbox" id="toggleStateTable" onchange="toggleStateTable()"> Show States Table</label>
             <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Show Burgs Table</label>
@@ -447,16 +468,22 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             tooltip.style.display = 'none';
         }}
 
-        function toggleTrades() {{
-            const checkbox = document.getElementById('toggleTrades');
-            const routes = document.querySelectorAll('.trade-route');
-            routes.forEach(r => {{
-                if (checkbox.checked) {{
-                    r.classList.remove('hidden');
-                }} else {{
-                    r.classList.add('hidden');
-                }}
-            }});
+        function toggleFoodTrades() {{
+            const checkbox = document.getElementById('toggleFoodTrades');
+            if (checkbox.checked) {{
+                document.body.classList.add('show-food-trades');
+            }} else {{
+                document.body.classList.remove('show-food-trades');
+            }}
+        }}
+
+        function toggleGoldTrades() {{
+            const checkbox = document.getElementById('toggleGoldTrades');
+            if (checkbox.checked) {{
+                document.body.classList.add('show-gold-trades');
+            }} else {{
+                document.body.classList.remove('show-gold-trades');
+            }}
         }}
         
         function toggleCapitals() {{
