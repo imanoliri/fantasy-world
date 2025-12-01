@@ -363,20 +363,6 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             document.getElementById(id).classList.toggle("show");
         }}
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {{
-            if (!event.target.matches('.dropbtn')) {{
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {{
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {{
-                        openDropdown.classList.remove('show');
-                    }}
-                }}
-            }}
-        }}
-
         function toggleTrades() {{
             const checkbox = document.getElementById('toggleTrades');
             const routes = document.querySelectorAll('.trade-route');
