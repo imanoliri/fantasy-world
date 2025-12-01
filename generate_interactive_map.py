@@ -80,9 +80,36 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
     # Sort states by name
     sorted_states = sorted(states, key=lambda x: x.get('name', '')) if states else []
     
+    # Create lookups for names
+    burg_name_lookup = {b['id']: b['name'] for b in burgs}
+    culture_name_lookup = {}
+    if cultures:
+        for c in cultures:
+            culture_name_lookup[c['i']] = c['name']
+
     for s in sorted_states:
         s_name = s.get('name', 'Unknown')
-        state_checkboxes += f'<label><input type="checkbox" value="{s_name}" checked onchange="filterTable()"> {s_name}</label>'
+        
+        # Prepare Tooltip Info
+        capital_id = s.get('capital', 0)
+        capital_name = burg_name_lookup.get(capital_id, 'Unknown') if capital_id else 'None'
+        type_ = s.get('type', 'Unknown')
+        culture_id = s.get('culture', 0)
+        culture_name = culture_name_lookup.get(culture_id, 'Unknown')
+        burgs_count = s.get('burgs', 0)
+        area = s.get('area', 0)
+        pop = s.get('urban', 0) # Using urban population as proxy if total not available, or just omit
+        
+        # Format tooltip content (using single quotes for JS string, so escape them if needed)
+        # We'll use a data attribute to store the HTML content
+        tooltip_info = f"<strong>{s.get('fullName', s_name)}</strong><br>"
+        tooltip_info += f"Capital: {capital_name}<br>"
+        tooltip_info += f"Type: {type_}<br>"
+        tooltip_info += f"Culture: {culture_name}<br>"
+        tooltip_info += f"Burgs: {burgs_count}<br>"
+        tooltip_info += f"Area: {area:,}"
+        
+        state_checkboxes += f'<label onmouseover="showStateTooltip(event, \'{tooltip_info}\')" onmouseout="hideTooltip()"><input type="checkbox" value="{s_name}" checked onchange="filterTable()"> {s_name}</label>'
     state_checkboxes += '</div>'
 
     for b in burgs:
@@ -361,6 +388,33 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         /* Dropdown Logic */
         function toggleDropdown(id) {{
             document.getElementById(id).classList.toggle("show");
+        }}
+
+        function showStateTooltip(e, content) {{
+            const tooltip = document.getElementById('tooltip');
+            tooltip.innerHTML = content;
+            tooltip.style.display = 'block';
+            
+            // Position near the cursor
+            let left = e.clientX + 15;
+            let top = e.clientY + 15;
+            
+            // Adjust if going off screen
+            if (left + 220 > window.innerWidth) {{
+                left = e.clientX - 230;
+            }}
+            
+            if (top + 150 > window.innerHeight) {{
+                top = e.clientY - 160;
+            }}
+            
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+        }}
+
+        function hideTooltip() {{
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
         }}
 
         function toggleTrades() {{

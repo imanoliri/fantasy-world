@@ -84,7 +84,7 @@
             <div class="dropdown">
                 <button class="dropbtn" onclick="toggleDropdown('stateDropdown')">Filter States ▼</button>
                 <div class="dropdown-content" id="stateDropdown">
-                    <div class="checkbox-list" id="stateCheckboxes"><label><input type="checkbox" value="all" checked onchange="toggleAllStates(this)"> All States</label><label><input type="checkbox" value="Ashetheria" checked onchange="filterTable()"> Ashetheria</label><label><input type="checkbox" value="Basaling" checked onchange="filterTable()"> Basaling</label><label><input type="checkbox" value="Bretland" checked onchange="filterTable()"> Bretland</label><label><input type="checkbox" value="Conglemia" checked onchange="filterTable()"> Conglemia</label><label><input type="checkbox" value="Dalia" checked onchange="filterTable()"> Dalia</label><label><input type="checkbox" value="Dudfordia" checked onchange="filterTable()"> Dudfordia</label><label><input type="checkbox" value="Hatfieldia" checked onchange="filterTable()"> Hatfieldia</label><label><input type="checkbox" value="Hatfordia" checked onchange="filterTable()"> Hatfordia</label><label><input type="checkbox" value="Helsteria" checked onchange="filterTable()"> Helsteria</label><label><input type="checkbox" value="Mourland" checked onchange="filterTable()"> Mourland</label><label><input type="checkbox" value="Mourymland" checked onchange="filterTable()"> Mourymland</label><label><input type="checkbox" value="Neutrals" checked onchange="filterTable()"> Neutrals</label><label><input type="checkbox" value="Roclesia" checked onchange="filterTable()"> Roclesia</label><label><input type="checkbox" value="Wickhampia" checked onchange="filterTable()"> Wickhampia</label><label><input type="checkbox" value="Winchamia" checked onchange="filterTable()"> Winchamia</label><label><input type="checkbox" value="Yeone" checked onchange="filterTable()"> Yeone</label></div>
+                    <div class="checkbox-list" id="stateCheckboxes"><label><input type="checkbox" value="all" checked onchange="toggleAllStates(this)"> All States</label><label onmouseover="showStateTooltip(event, '<strong>Ashetherian Empire</strong><br>Capital: Wickhamp<br>Type: River<br>Culture: Hornver<br>Burgs: 79<br>Area: 114,370')" onmouseout="hideTooltip()"><input type="checkbox" value="Ashetheria" checked onchange="filterTable()"> Ashetheria</label><label onmouseover="showStateTooltip(event, '<strong>Basaling Theocracy</strong><br>Capital: Berbury<br>Type: River<br>Culture: Wigton<br>Burgs: 73<br>Area: 88,759')" onmouseout="hideTooltip()"><input type="checkbox" value="Basaling" checked onchange="filterTable()"> Basaling</label><label onmouseover="showStateTooltip(event, '<strong>Principality of Bretland</strong><br>Capital: Barlingmo<br>Type: Generic<br>Culture: Chistowen<br>Burgs: 13<br>Area: 42,418')" onmouseout="hideTooltip()"><input type="checkbox" value="Bretland" checked onchange="filterTable()"> Bretland</label><label onmouseover="showStateTooltip(event, '<strong>Duchy of Conglemia</strong><br>Capital: Conglema<br>Type: River<br>Culture: Wigton<br>Burgs: 14<br>Area: 12,685')" onmouseout="hideTooltip()"><input type="checkbox" value="Conglemia" checked onchange="filterTable()"> Conglemia</label><label onmouseover="showStateTooltip(event, '<strong>Dominion of Dalia</strong><br>Capital: Charwick<br>Type: Naval<br>Culture: Guildge<br>Burgs: 30<br>Area: 34,440')" onmouseout="hideTooltip()"><input type="checkbox" value="Dalia" checked onchange="filterTable()"> Dalia</label><label onmouseover="showStateTooltip(event, '<strong>Kingdom of Dudfordia</strong><br>Capital: Dudford<br>Type: Naval<br>Culture: Guildge<br>Burgs: 45<br>Area: 57,941')" onmouseout="hideTooltip()"><input type="checkbox" value="Dudfordia" checked onchange="filterTable()"> Dudfordia</label><label onmouseover="showStateTooltip(event, '<strong>United Republic of Hatfieldia</strong><br>Capital: Hatfield<br>Type: Hunting<br>Culture: Boltashes<br>Burgs: 66<br>Area: 78,146')" onmouseout="hideTooltip()"><input type="checkbox" value="Hatfieldia" checked onchange="filterTable()"> Hatfieldia</label><label onmouseover="showStateTooltip(event, '<strong>Republic of Hatfordia</strong><br>Capital: Hinckneth<br>Type: Naval<br>Culture: Salne<br>Burgs: 37<br>Area: 120,451')" onmouseout="hideTooltip()"><input type="checkbox" value="Hatfordia" checked onchange="filterTable()"> Hatfordia</label><label onmouseover="showStateTooltip(event, '<strong>Republic of Helsteria</strong><br>Capital: Sovilsea<br>Type: Naval<br>Culture: Osbury<br>Burgs: 19<br>Area: 36,895')" onmouseout="hideTooltip()"><input type="checkbox" value="Helsteria" checked onchange="filterTable()"> Helsteria</label><label onmouseover="showStateTooltip(event, '<strong>Principality of Mourland</strong><br>Capital: Moury<br>Type: River<br>Culture: Wigton<br>Burgs: 9<br>Area: 32,538')" onmouseout="hideTooltip()"><input type="checkbox" value="Mourland" checked onchange="filterTable()"> Mourland</label><label onmouseover="showStateTooltip(event, '<strong>Duchy of Mourymland</strong><br>Capital: Holcester<br>Type: Naval<br>Culture: Salne<br>Burgs: 10<br>Area: 9,846')" onmouseout="hideTooltip()"><input type="checkbox" value="Mourymland" checked onchange="filterTable()"> Mourymland</label><label onmouseover="showStateTooltip(event, '<strong>Neutrals</strong><br>Capital: None<br>Type: Unknown<br>Culture: Wildlands<br>Burgs: 0<br>Area: 13,062')" onmouseout="hideTooltip()"><input type="checkbox" value="Neutrals" checked onchange="filterTable()"> Neutrals</label><label onmouseover="showStateTooltip(event, '<strong>Roclesian Theocracy</strong><br>Capital: Clifnal<br>Type: River<br>Culture: Wigton<br>Burgs: 54<br>Area: 72,744')" onmouseout="hideTooltip()"><input type="checkbox" value="Roclesia" checked onchange="filterTable()"> Roclesia</label><label onmouseover="showStateTooltip(event, '<strong>Duchy of Wickhampia</strong><br>Capital: North<br>Type: River<br>Culture: Wigton<br>Burgs: 10<br>Area: 8,394')" onmouseout="hideTooltip()"><input type="checkbox" value="Wickhampia" checked onchange="filterTable()"> Wickhampia</label><label onmouseover="showStateTooltip(event, '<strong>Duchy of Winchamia</strong><br>Capital: Frampton<br>Type: Hunting<br>Culture: Boltashes<br>Burgs: 13<br>Area: 7,723')" onmouseout="hideTooltip()"><input type="checkbox" value="Winchamia" checked onchange="filterTable()"> Winchamia</label><label onmouseover="showStateTooltip(event, '<strong>Kingdom of Yeone</strong><br>Capital: Yeone<br>Type: Hunting<br>Culture: Boltashes<br>Burgs: 33<br>Area: 63,107')" onmouseout="hideTooltip()"><input type="checkbox" value="Yeone" checked onchange="filterTable()"> Yeone</label></div>
                 </div>
             </div>
             
@@ -9541,6 +9541,33 @@
         /* Dropdown Logic */
         function toggleDropdown(id) {
             document.getElementById(id).classList.toggle("show");
+        }
+
+        function showStateTooltip(e, content) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.innerHTML = content;
+            tooltip.style.display = 'block';
+            
+            // Position near the cursor
+            let left = e.clientX + 15;
+            let top = e.clientY + 15;
+            
+            // Adjust if going off screen
+            if (left + 220 > window.innerWidth) {
+                left = e.clientX - 230;
+            }
+            
+            if (top + 150 > window.innerHeight) {
+                top = e.clientY - 160;
+            }
+            
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+        }
+
+        function hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
         }
 
         function toggleTrades() {
