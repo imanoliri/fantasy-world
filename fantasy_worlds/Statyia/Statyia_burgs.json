@@ -5,7 +5,8 @@
         "x": 1190.82,
         "y": 346.27,
         "type": "Generic",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 1,
         "population": 4673,
         "citizens": {
@@ -46,7 +47,8 @@
         "x": 1691.5,
         "y": 378.5,
         "type": "Naval",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 1,
         "population": 7189,
         "citizens": {
@@ -87,7 +89,8 @@
         "x": 324.5,
         "y": 495.5,
         "type": "Naval",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 1,
         "population": 6061,
         "citizens": {
@@ -128,7 +131,8 @@
         "x": 1584.15,
         "y": 440.44,
         "type": "Generic",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 1,
         "population": 22533,
         "citizens": {
@@ -169,7 +173,8 @@
         "x": 1353.06,
         "y": 348.5,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 1,
         "population": 6447,
         "citizens": {
@@ -210,7 +215,8 @@
         "x": 657,
         "y": 510.5,
         "type": "Naval",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 1,
         "population": 9859,
         "citizens": {
@@ -251,7 +257,8 @@
         "x": 731,
         "y": 845,
         "type": "Naval",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 1,
         "population": 4573,
         "citizens": {
@@ -292,7 +299,8 @@
         "x": 594.24,
         "y": 889.66,
         "type": "Lake",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 1,
         "population": 4022,
         "citizens": {
@@ -333,7 +341,8 @@
         "x": 515.1,
         "y": 346.2,
         "type": "Lake",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 1,
         "population": 15988,
         "citizens": {
@@ -374,7 +383,8 @@
         "x": 296.61,
         "y": 381.08,
         "type": "Lake",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 1,
         "population": 3203,
         "citizens": {
@@ -415,7 +425,8 @@
         "x": 1661.5,
         "y": 284.5,
         "type": "Naval",
-        "state": 11,
+        "state_id": 11,
+        "state_name": "Mourland",
         "capital": 1,
         "population": 47915,
         "citizens": {
@@ -456,7 +467,8 @@
         "x": 433.71,
         "y": 520.77,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 1,
         "population": 3221,
         "citizens": {
@@ -497,7 +509,8 @@
         "x": 1629,
         "y": 540.68,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 1,
         "population": 23963,
         "citizens": {
@@ -538,7 +551,8 @@
         "x": 1354.76,
         "y": 762.95,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 1,
         "population": 3435,
         "citizens": {
@@ -579,7 +593,8 @@
         "x": 813.5,
         "y": 304,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 1,
         "population": 4096,
         "citizens": {
@@ -620,7 +635,8 @@
         "x": 1387.93,
         "y": 462.37,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 5319,
         "citizens": {
@@ -661,7 +677,8 @@
         "x": 1206.43,
         "y": 365.97,
         "type": "Generic",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 0,
         "population": 7442,
         "citizens": {
@@ -702,7 +719,8 @@
         "x": 1548.42,
         "y": 749.12,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 11015,
         "citizens": {
@@ -743,7 +761,8 @@
         "x": 902.2,
         "y": 814.3,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 14061,
         "citizens": {
@@ -784,7 +803,8 @@
         "x": 1585.36,
         "y": 464.85,
         "type": "Generic",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 0,
         "population": 19030,
         "citizens": {
@@ -825,7 +845,8 @@
         "x": 1502.21,
         "y": 362.13,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 9584,
         "citizens": {
@@ -866,7 +887,8 @@
         "x": 910,
         "y": 343.5,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 2479,
         "citizens": {
@@ -907,7 +929,8 @@
         "x": 1644.65,
         "y": 553.35,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 10037,
         "citizens": {
@@ -948,7 +971,8 @@
         "x": 1018,
         "y": 310.5,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 10699,
         "citizens": {
@@ -989,7 +1013,8 @@
         "x": 1572.01,
         "y": 422.5,
         "type": "Hunting",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 0,
         "population": 1893,
         "citizens": {
@@ -1030,7 +1055,8 @@
         "x": 985.86,
         "y": 335.07,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 14711,
         "citizens": {
@@ -1071,7 +1097,8 @@
         "x": 524.23,
         "y": 511.67,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 4375,
         "citizens": {
@@ -1112,7 +1139,8 @@
         "x": 1450.78,
         "y": 598.09,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1895,
         "citizens": {
@@ -1153,7 +1181,8 @@
         "x": 606.43,
         "y": 376.09,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 16316,
         "citizens": {
@@ -1194,7 +1223,8 @@
         "x": 1398.96,
         "y": 706.15,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 23729,
         "citizens": {
@@ -1235,7 +1265,8 @@
         "x": 928.01,
         "y": 291.65,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 4936,
         "citizens": {
@@ -1276,7 +1307,8 @@
         "x": 1617.72,
         "y": 506.55,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 23658,
         "citizens": {
@@ -1317,7 +1349,8 @@
         "x": 642.81,
         "y": 577.15,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1569,
         "citizens": {
@@ -1358,7 +1391,8 @@
         "x": 878.3,
         "y": 370.81,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 13093,
         "citizens": {
@@ -1399,7 +1433,8 @@
         "x": 1266.14,
         "y": 374.2,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 14628,
         "citizens": {
@@ -1440,7 +1475,8 @@
         "x": 1611.19,
         "y": 367.08,
         "type": "Hunting",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 1562,
         "citizens": {
@@ -1481,7 +1517,8 @@
         "x": 1396.01,
         "y": 427.82,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 18675,
         "citizens": {
@@ -1522,7 +1559,8 @@
         "x": 578.34,
         "y": 527.08,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 6976,
         "citizens": {
@@ -1563,7 +1601,8 @@
         "x": 1184.88,
         "y": 800.17,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1265,
         "citizens": {
@@ -1604,7 +1643,8 @@
         "x": 1487.15,
         "y": 398.09,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 12361,
         "citizens": {
@@ -1645,7 +1685,8 @@
         "x": 434.08,
         "y": 490.33,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 16367,
         "citizens": {
@@ -1686,7 +1727,8 @@
         "x": 1569.5,
         "y": 763,
         "type": "Naval",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 3351,
         "citizens": {
@@ -1727,7 +1769,8 @@
         "x": 477.35,
         "y": 291.99,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 3238,
         "citizens": {
@@ -1768,7 +1811,8 @@
         "x": 1440.78,
         "y": 390.48,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 9766,
         "citizens": {
@@ -1809,7 +1853,8 @@
         "x": 1681.47,
         "y": 407.78,
         "type": "Generic",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 13608,
         "citizens": {
@@ -1850,7 +1895,8 @@
         "x": 556.2,
         "y": 903.4,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 18254,
         "citizens": {
@@ -1891,7 +1937,8 @@
         "x": 1664.74,
         "y": 417.36,
         "type": "Hunting",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 2994,
         "citizens": {
@@ -1932,7 +1979,8 @@
         "x": 1667.43,
         "y": 521.18,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1369,
         "citizens": {
@@ -1973,7 +2021,8 @@
         "x": 704.06,
         "y": 364.86,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1588,
         "citizens": {
@@ -2014,7 +2063,8 @@
         "x": 643.7,
         "y": 396.05,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 9900,
         "citizens": {
@@ -2055,7 +2105,8 @@
         "x": 312.43,
         "y": 473.3,
         "type": "Hunting",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 3157,
         "citizens": {
@@ -2096,7 +2147,8 @@
         "x": 447.96,
         "y": 496.96,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1822,
         "citizens": {
@@ -2137,7 +2189,8 @@
         "x": 1639.34,
         "y": 401.41,
         "type": "Generic",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 13491,
         "citizens": {
@@ -2178,7 +2231,8 @@
         "x": 1226.83,
         "y": 461.1,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 11769,
         "citizens": {
@@ -2219,7 +2273,8 @@
         "x": 1633.29,
         "y": 761.66,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 13090,
         "citizens": {
@@ -2260,7 +2315,8 @@
         "x": 716.08,
         "y": 388.3,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 6389,
         "citizens": {
@@ -2301,7 +2357,8 @@
         "x": 1580.78,
         "y": 538.64,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 18996,
         "citizens": {
@@ -2342,7 +2399,8 @@
         "x": 1483.38,
         "y": 660.49,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 23272,
         "citizens": {
@@ -2383,7 +2441,8 @@
         "x": 998,
         "y": 298.5,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 14553,
         "citizens": {
@@ -2424,7 +2483,8 @@
         "x": 584.09,
         "y": 462.17,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 21839,
         "citizens": {
@@ -2465,7 +2525,8 @@
         "x": 1429.6,
         "y": 586.78,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1763,
         "citizens": {
@@ -2506,7 +2567,8 @@
         "x": 1652.5,
         "y": 327.08,
         "type": "Hunting",
-        "state": 11,
+        "state_id": 11,
+        "state_name": "Mourland",
         "capital": 0,
         "population": 1587,
         "citizens": {
@@ -2547,7 +2609,8 @@
         "x": 1384.04,
         "y": 754.36,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1183,
         "citizens": {
@@ -2588,7 +2651,8 @@
         "x": 1234.5,
         "y": 830.5,
         "type": "Naval",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 3823,
         "citizens": {
@@ -2629,7 +2693,8 @@
         "x": 507.63,
         "y": 288.69,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 1763,
         "citizens": {
@@ -2670,7 +2735,8 @@
         "x": 849.5,
         "y": 341,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 2509,
         "citizens": {
@@ -2711,7 +2777,8 @@
         "x": 1256.86,
         "y": 519.01,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 14051,
         "citizens": {
@@ -2752,7 +2819,8 @@
         "x": 847.78,
         "y": 887.79,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 12658,
         "citizens": {
@@ -2793,7 +2861,8 @@
         "x": 656.25,
         "y": 323.67,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1598,
         "citizens": {
@@ -2834,7 +2903,8 @@
         "x": 1003.83,
         "y": 356.07,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1826,
         "citizens": {
@@ -2875,7 +2945,8 @@
         "x": 606.95,
         "y": 481.76,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 4732,
         "citizens": {
@@ -2916,7 +2987,8 @@
         "x": 1273.2,
         "y": 759.6,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1091,
         "citizens": {
@@ -2957,7 +3029,8 @@
         "x": 1703.44,
         "y": 337.97,
         "type": "Generic",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 12297,
         "citizens": {
@@ -2998,7 +3071,8 @@
         "x": 662.07,
         "y": 481.56,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 3779,
         "citizens": {
@@ -3039,7 +3113,8 @@
         "x": 1248.68,
         "y": 618.69,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 19789,
         "citizens": {
@@ -3080,7 +3155,8 @@
         "x": 719.42,
         "y": 427.09,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 13100,
         "citizens": {
@@ -3121,7 +3197,8 @@
         "x": 1717.5,
         "y": 415.5,
         "type": "Naval",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 12967,
         "citizens": {
@@ -3162,7 +3239,8 @@
         "x": 669.33,
         "y": 549.53,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 17200,
         "citizens": {
@@ -3203,7 +3281,8 @@
         "x": 1368.32,
         "y": 465.28,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 6533,
         "citizens": {
@@ -3244,7 +3323,8 @@
         "x": 1614.82,
         "y": 465.69,
         "type": "Generic",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 0,
         "population": 16662,
         "citizens": {
@@ -3285,7 +3365,8 @@
         "x": 1081.5,
         "y": 689,
         "type": "Naval",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 12294,
         "citizens": {
@@ -3326,7 +3407,8 @@
         "x": 1587.47,
         "y": 594.03,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 19375,
         "citizens": {
@@ -3367,7 +3449,8 @@
         "x": 897.22,
         "y": 887.29,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 17575,
         "citizens": {
@@ -3408,7 +3491,8 @@
         "x": 1464.97,
         "y": 633.04,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 15320,
         "citizens": {
@@ -3449,7 +3533,8 @@
         "x": 676.21,
         "y": 316.85,
         "type": "Generic",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 6658,
         "citizens": {
@@ -3490,7 +3575,8 @@
         "x": 700.03,
         "y": 852.25,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 1394,
         "citizens": {
@@ -3531,7 +3617,8 @@
         "x": 1696,
         "y": 309,
         "type": "Naval",
-        "state": 11,
+        "state_id": 11,
+        "state_name": "Mourland",
         "capital": 0,
         "population": 11113,
         "citizens": {
@@ -3572,7 +3659,8 @@
         "x": 1701.31,
         "y": 393.79,
         "type": "Generic",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 18750,
         "citizens": {
@@ -3613,7 +3701,8 @@
         "x": 530.5,
         "y": 931,
         "type": "Naval",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 9779,
         "citizens": {
@@ -3654,7 +3743,8 @@
         "x": 1184.41,
         "y": 539.27,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1606,
         "citizens": {
@@ -3695,7 +3785,8 @@
         "x": 1415.4,
         "y": 551.85,
         "type": "Highland",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 3827,
         "citizens": {
@@ -3736,7 +3827,8 @@
         "x": 921,
         "y": 715,
         "type": "Naval",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 14392,
         "citizens": {
@@ -3777,7 +3869,8 @@
         "x": 1386.12,
         "y": 364.8,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 16601,
         "citizens": {
@@ -3818,7 +3911,8 @@
         "x": 691.87,
         "y": 472.23,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 25729,
         "citizens": {
@@ -3859,7 +3953,8 @@
         "x": 1594.92,
         "y": 572.16,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 10367,
         "citizens": {
@@ -3900,7 +3995,8 @@
         "x": 515.8,
         "y": 320.8,
         "type": "Lake",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 3108,
         "citizens": {
@@ -3941,7 +4037,8 @@
         "x": 1608.91,
         "y": 481.52,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1785,
         "citizens": {
@@ -3982,7 +4079,8 @@
         "x": 479.44,
         "y": 519.87,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1631,
         "citizens": {
@@ -4023,7 +4121,8 @@
         "x": 1564.31,
         "y": 672.17,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 7983,
         "citizens": {
@@ -4064,7 +4163,8 @@
         "x": 680.3,
         "y": 414.86,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 12686,
         "citizens": {
@@ -4105,7 +4205,8 @@
         "x": 1664.29,
         "y": 654.1,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1601,
         "citizens": {
@@ -4146,7 +4247,8 @@
         "x": 543.44,
         "y": 560.99,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 14967,
         "citizens": {
@@ -4187,7 +4289,8 @@
         "x": 1260.07,
         "y": 394.84,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 2948,
         "citizens": {
@@ -4228,7 +4331,8 @@
         "x": 1324.37,
         "y": 395.26,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1610,
         "citizens": {
@@ -4269,7 +4373,8 @@
         "x": 893.98,
         "y": 308.47,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 6019,
         "citizens": {
@@ -4310,7 +4415,8 @@
         "x": 1124.93,
         "y": 325.45,
         "type": "Hunting",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 0,
         "population": 5840,
         "citizens": {
@@ -4351,7 +4457,8 @@
         "x": 219.48,
         "y": 463.44,
         "type": "Hunting",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 1609,
         "citizens": {
@@ -4392,7 +4499,8 @@
         "x": 721.88,
         "y": 639.31,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 6083,
         "citizens": {
@@ -4433,7 +4541,8 @@
         "x": 1571.12,
         "y": 363.77,
         "type": "Generic",
-        "state": 11,
+        "state_id": 11,
+        "state_name": "Mourland",
         "capital": 0,
         "population": 9668,
         "citizens": {
@@ -4474,7 +4583,8 @@
         "x": 528.12,
         "y": 381.53,
         "type": "Generic",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 6628,
         "citizens": {
@@ -4515,7 +4625,8 @@
         "x": 1604.87,
         "y": 393.61,
         "type": "Generic",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 0,
         "population": 27758,
         "citizens": {
@@ -4556,7 +4667,8 @@
         "x": 458.82,
         "y": 739.38,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 7212,
         "citizens": {
@@ -4597,7 +4709,8 @@
         "x": 922.51,
         "y": 752.32,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 1467,
         "citizens": {
@@ -4638,7 +4751,8 @@
         "x": 1413.04,
         "y": 829.54,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 18183,
         "citizens": {
@@ -4679,7 +4793,8 @@
         "x": 496.5,
         "y": 329.6,
         "type": "Lake",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 7938,
         "citizens": {
@@ -4720,7 +4835,8 @@
         "x": 353.56,
         "y": 515,
         "type": "Hunting",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 4136,
         "citizens": {
@@ -4761,7 +4877,8 @@
         "x": 868.04,
         "y": 858.81,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 2988,
         "citizens": {
@@ -4802,7 +4919,8 @@
         "x": 1437.06,
         "y": 303.42,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1649,
         "citizens": {
@@ -4843,7 +4961,8 @@
         "x": 1420.83,
         "y": 343.98,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 45935,
         "citizens": {
@@ -4884,7 +5003,8 @@
         "x": 1330.69,
         "y": 429.17,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 20137,
         "citizens": {
@@ -4925,7 +5045,8 @@
         "x": 847.68,
         "y": 297.2,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1589,
         "citizens": {
@@ -4966,7 +5087,8 @@
         "x": 1531,
         "y": 389.29,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 10752,
         "citizens": {
@@ -5007,7 +5129,8 @@
         "x": 580.28,
         "y": 416.59,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 6097,
         "citizens": {
@@ -5048,7 +5171,8 @@
         "x": 1339.61,
         "y": 624.77,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 10486,
         "citizens": {
@@ -5089,7 +5213,8 @@
         "x": 1615.07,
         "y": 736.97,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 7032,
         "citizens": {
@@ -5130,7 +5255,8 @@
         "x": 1097.11,
         "y": 773.57,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 17164,
         "citizens": {
@@ -5171,7 +5297,8 @@
         "x": 1525.55,
         "y": 450.38,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 5464,
         "citizens": {
@@ -5212,7 +5339,8 @@
         "x": 1647.85,
         "y": 508.6,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 5889,
         "citizens": {
@@ -5253,7 +5381,8 @@
         "x": 1538.73,
         "y": 575.74,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 12135,
         "citizens": {
@@ -5294,7 +5423,8 @@
         "x": 1397.63,
         "y": 385.43,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1919,
         "citizens": {
@@ -5335,7 +5465,8 @@
         "x": 687.63,
         "y": 390.23,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 2038,
         "citizens": {
@@ -5376,7 +5507,8 @@
         "x": 1753.64,
         "y": 540.8,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 7073,
         "citizens": {
@@ -5417,7 +5549,8 @@
         "x": 1154.5,
         "y": 732,
         "type": "Naval",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 11849,
         "citizens": {
@@ -5458,7 +5591,8 @@
         "x": 605.58,
         "y": 811.08,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 1514,
         "citizens": {
@@ -5499,7 +5633,8 @@
         "x": 820.5,
         "y": 329.5,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 4113,
         "citizens": {
@@ -5540,7 +5675,8 @@
         "x": 985.77,
         "y": 509.65,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 18552,
         "citizens": {
@@ -5581,7 +5717,8 @@
         "x": 301.5,
         "y": 527,
         "type": "Naval",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 4258,
         "citizens": {
@@ -5622,7 +5759,8 @@
         "x": 1558.35,
         "y": 546.13,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 8703,
         "citizens": {
@@ -5663,7 +5801,8 @@
         "x": 1689.64,
         "y": 548.86,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 12234,
         "citizens": {
@@ -5704,7 +5843,8 @@
         "x": 1407.75,
         "y": 840.53,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1706,
         "citizens": {
@@ -5745,7 +5885,8 @@
         "x": 755.5,
         "y": 576,
         "type": "Naval",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 11780,
         "citizens": {
@@ -5786,7 +5927,8 @@
         "x": 1629.5,
         "y": 307,
         "type": "Hunting",
-        "state": 11,
+        "state_id": 11,
+        "state_name": "Mourland",
         "capital": 0,
         "population": 1746,
         "citizens": {
@@ -5827,7 +5969,8 @@
         "x": 987.98,
         "y": 322.17,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 2124,
         "citizens": {
@@ -5868,7 +6011,8 @@
         "x": 552.65,
         "y": 347.17,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 1831,
         "citizens": {
@@ -5909,7 +6053,8 @@
         "x": 890.94,
         "y": 849.39,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 7282,
         "citizens": {
@@ -5950,7 +6095,8 @@
         "x": 741.8,
         "y": 550.79,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 2830,
         "citizens": {
@@ -5991,7 +6137,8 @@
         "x": 1339.49,
         "y": 586.56,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 2856,
         "citizens": {
@@ -6032,7 +6179,8 @@
         "x": 1263.61,
         "y": 810.89,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1412,
         "citizens": {
@@ -6073,7 +6221,8 @@
         "x": 232.9,
         "y": 300.4,
         "type": "Generic",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 13884,
         "citizens": {
@@ -6114,7 +6263,8 @@
         "x": 1415.8,
         "y": 335.5,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 12532,
         "citizens": {
@@ -6155,7 +6305,8 @@
         "x": 1542.11,
         "y": 371.64,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 2261,
         "citizens": {
@@ -6196,7 +6347,8 @@
         "x": 709.87,
         "y": 403.87,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1686,
         "citizens": {
@@ -6237,7 +6389,8 @@
         "x": 1653.05,
         "y": 479,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1641,
         "citizens": {
@@ -6278,7 +6431,8 @@
         "x": 1407.62,
         "y": 565.74,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 4521,
         "citizens": {
@@ -6319,7 +6473,8 @@
         "x": 598.33,
         "y": 778.04,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 11444,
         "citizens": {
@@ -6360,7 +6515,8 @@
         "x": 813.72,
         "y": 342.48,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 11438,
         "citizens": {
@@ -6401,7 +6557,8 @@
         "x": 1681.58,
         "y": 633.88,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 4106,
         "citizens": {
@@ -6442,7 +6599,8 @@
         "x": 1514.02,
         "y": 338.53,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1660,
         "citizens": {
@@ -6483,7 +6641,8 @@
         "x": 1243.7,
         "y": 406.47,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 33968,
         "citizens": {
@@ -6524,7 +6683,8 @@
         "x": 1430.66,
         "y": 440.83,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 6704,
         "citizens": {
@@ -6565,7 +6725,8 @@
         "x": 1453.6,
         "y": 440.35,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 8305,
         "citizens": {
@@ -6606,7 +6767,8 @@
         "x": 318,
         "y": 505.5,
         "type": "Naval",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 2742,
         "citizens": {
@@ -6647,7 +6809,8 @@
         "x": 1501.24,
         "y": 510.88,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1572,
         "citizens": {
@@ -6688,7 +6851,8 @@
         "x": 1737.5,
         "y": 552,
         "type": "Naval",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1403,
         "citizens": {
@@ -6729,7 +6893,8 @@
         "x": 758.5,
         "y": 587,
         "type": "Naval",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 34090,
         "citizens": {
@@ -6770,7 +6935,8 @@
         "x": 1654.27,
         "y": 627.75,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1463,
         "citizens": {
@@ -6811,7 +6977,8 @@
         "x": 349.84,
         "y": 475.29,
         "type": "Hunting",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 2035,
         "citizens": {
@@ -6852,7 +7019,8 @@
         "x": 1006,
         "y": 606.5,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 2308,
         "citizens": {
@@ -6893,7 +7061,8 @@
         "x": 1394.13,
         "y": 643.61,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 3515,
         "citizens": {
@@ -6934,7 +7103,8 @@
         "x": 767.12,
         "y": 747.28,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 895,
         "citizens": {
@@ -6975,7 +7145,8 @@
         "x": 1098.08,
         "y": 301.95,
         "type": "Hunting",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 0,
         "population": 3467,
         "citizens": {
@@ -7016,7 +7187,8 @@
         "x": 1192,
         "y": 435.5,
         "type": "Naval",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 18167,
         "citizens": {
@@ -7057,7 +7229,8 @@
         "x": 1402.42,
         "y": 578.63,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 9636,
         "citizens": {
@@ -7098,7 +7271,8 @@
         "x": 1389.62,
         "y": 808.74,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1510,
         "citizens": {
@@ -7139,7 +7313,8 @@
         "x": 550.2,
         "y": 432.6,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 1577,
         "citizens": {
@@ -7180,7 +7355,8 @@
         "x": 1565.67,
         "y": 481.53,
         "type": "Generic",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 0,
         "population": 12212,
         "citizens": {
@@ -7221,7 +7397,8 @@
         "x": 1628.94,
         "y": 475.55,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1954,
         "citizens": {
@@ -7262,7 +7439,8 @@
         "x": 1746.72,
         "y": 519.2,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 17218,
         "citizens": {
@@ -7303,7 +7481,8 @@
         "x": 1279.72,
         "y": 471.07,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 4585,
         "citizens": {
@@ -7344,7 +7523,8 @@
         "x": 1443.36,
         "y": 572.56,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 10188,
         "citizens": {
@@ -7385,7 +7565,8 @@
         "x": 1679.89,
         "y": 590.15,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 6623,
         "citizens": {
@@ -7426,7 +7607,8 @@
         "x": 1378.22,
         "y": 615.7,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1608,
         "citizens": {
@@ -7467,7 +7649,8 @@
         "x": 382.5,
         "y": 773,
         "type": "Naval",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 8297,
         "citizens": {
@@ -7508,7 +7691,8 @@
         "x": 891.4,
         "y": 777.28,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 6094,
         "citizens": {
@@ -7549,7 +7733,8 @@
         "x": 1162.67,
         "y": 806.97,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 7550,
         "citizens": {
@@ -7590,7 +7775,8 @@
         "x": 1191.83,
         "y": 305.71,
         "type": "Generic",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 0,
         "population": 6463,
         "citizens": {
@@ -7631,7 +7817,8 @@
         "x": 1113.16,
         "y": 671.64,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 9197,
         "citizens": {
@@ -7672,7 +7859,8 @@
         "x": 1472.34,
         "y": 787.72,
         "type": "Highland",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 8223,
         "citizens": {
@@ -7713,7 +7901,8 @@
         "x": 601.4,
         "y": 910.8,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 1606,
         "citizens": {
@@ -7754,7 +7943,8 @@
         "x": 1252.73,
         "y": 346.97,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 2060,
         "citizens": {
@@ -7795,7 +7985,8 @@
         "x": 737.94,
         "y": 407.11,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1786,
         "citizens": {
@@ -7836,7 +8027,8 @@
         "x": 1303.55,
         "y": 427,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1607,
         "citizens": {
@@ -7877,7 +8069,8 @@
         "x": 595.68,
         "y": 555.64,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 8214,
         "citizens": {
@@ -7918,7 +8111,8 @@
         "x": 1184,
         "y": 570.5,
         "type": "Naval",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 10636,
         "citizens": {
@@ -7959,7 +8153,8 @@
         "x": 715.14,
         "y": 662.51,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 9201,
         "citizens": {
@@ -8000,7 +8195,8 @@
         "x": 1235.03,
         "y": 757.32,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 5979,
         "citizens": {
@@ -8041,7 +8237,8 @@
         "x": 1335.2,
         "y": 776.8,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 6474,
         "citizens": {
@@ -8082,7 +8279,8 @@
         "x": 701,
         "y": 875.5,
         "type": "Naval",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 13053,
         "citizens": {
@@ -8123,7 +8321,8 @@
         "x": 676.71,
         "y": 884.19,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 6983,
         "citizens": {
@@ -8164,7 +8363,8 @@
         "x": 490.31,
         "y": 450.14,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 9546,
         "citizens": {
@@ -8205,7 +8405,8 @@
         "x": 507.09,
         "y": 641.26,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 917,
         "citizens": {
@@ -8246,7 +8447,8 @@
         "x": 1565.17,
         "y": 726.21,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 5640,
         "citizens": {
@@ -8287,7 +8489,8 @@
         "x": 543.68,
         "y": 822.91,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 6711,
         "citizens": {
@@ -8328,7 +8531,8 @@
         "x": 527.34,
         "y": 908.29,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 13530,
         "citizens": {
@@ -8369,7 +8573,8 @@
         "x": 1680.44,
         "y": 428.64,
         "type": "Hunting",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 4753,
         "citizens": {
@@ -8410,7 +8615,8 @@
         "x": 1631.98,
         "y": 598.76,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 7425,
         "citizens": {
@@ -8451,7 +8657,8 @@
         "x": 1476.15,
         "y": 859.75,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 10656,
         "citizens": {
@@ -8492,7 +8699,8 @@
         "x": 1672.48,
         "y": 311.81,
         "type": "Hunting",
-        "state": 11,
+        "state_id": 11,
+        "state_name": "Mourland",
         "capital": 0,
         "population": 2087,
         "citizens": {
@@ -8533,7 +8741,8 @@
         "x": 328.66,
         "y": 466.3,
         "type": "Hunting",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 3547,
         "citizens": {
@@ -8574,7 +8783,8 @@
         "x": 1495.94,
         "y": 691.08,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1606,
         "citizens": {
@@ -8615,7 +8825,8 @@
         "x": 396.34,
         "y": 791.09,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 5465,
         "citizens": {
@@ -8656,7 +8867,8 @@
         "x": 838.57,
         "y": 336.56,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1642,
         "citizens": {
@@ -8697,7 +8909,8 @@
         "x": 577.09,
         "y": 351.53,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 1873,
         "citizens": {
@@ -8738,7 +8951,8 @@
         "x": 1590.49,
         "y": 676.08,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 16830,
         "citizens": {
@@ -8779,7 +8993,8 @@
         "x": 461.79,
         "y": 480,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 19366,
         "citizens": {
@@ -8820,7 +9035,8 @@
         "x": 1482.13,
         "y": 362.46,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1950,
         "citizens": {
@@ -8861,7 +9077,8 @@
         "x": 546.45,
         "y": 378.46,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 4184,
         "citizens": {
@@ -8902,7 +9119,8 @@
         "x": 517.06,
         "y": 484.02,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1473,
         "citizens": {
@@ -8943,7 +9161,8 @@
         "x": 770.9,
         "y": 595.1,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1534,
         "citizens": {
@@ -8984,7 +9203,8 @@
         "x": 1725.01,
         "y": 676.72,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1463,
         "citizens": {
@@ -9025,7 +9245,8 @@
         "x": 703.18,
         "y": 726.53,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 2620,
         "citizens": {
@@ -9066,7 +9287,8 @@
         "x": 542.59,
         "y": 311.45,
         "type": "Generic",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 16307,
         "citizens": {
@@ -9107,7 +9329,8 @@
         "x": 1660.1,
         "y": 440.93,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 7344,
         "citizens": {
@@ -9148,7 +9371,8 @@
         "x": 611.3,
         "y": 569.85,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 14610,
         "citizens": {
@@ -9189,7 +9413,8 @@
         "x": 1518.43,
         "y": 639.77,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 8025,
         "citizens": {
@@ -9230,7 +9455,8 @@
         "x": 901.4,
         "y": 669.03,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 8342,
         "citizens": {
@@ -9271,7 +9497,8 @@
         "x": 181.1,
         "y": 406.8,
         "type": "Generic",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 9532,
         "citizens": {
@@ -9312,7 +9539,8 @@
         "x": 1267.15,
         "y": 456.67,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1717,
         "citizens": {
@@ -9353,7 +9581,8 @@
         "x": 1463.57,
         "y": 507.9,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1910,
         "citizens": {
@@ -9394,7 +9623,8 @@
         "x": 1461.87,
         "y": 558.4,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 26450,
         "citizens": {
@@ -9435,7 +9665,8 @@
         "x": 1485.3,
         "y": 637.7,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 17176,
         "citizens": {
@@ -9476,7 +9707,8 @@
         "x": 1615.63,
         "y": 676.44,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 5640,
         "citizens": {
@@ -9517,7 +9749,8 @@
         "x": 714.68,
         "y": 794.61,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 2321,
         "citizens": {
@@ -9558,7 +9791,8 @@
         "x": 795.5,
         "y": 862.5,
         "type": "Naval",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 5818,
         "citizens": {
@@ -9599,7 +9833,8 @@
         "x": 654.35,
         "y": 457.23,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 9852,
         "citizens": {
@@ -9640,7 +9875,8 @@
         "x": 1651.8,
         "y": 528.02,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1706,
         "citizens": {
@@ -9681,7 +9917,8 @@
         "x": 1230.78,
         "y": 646.32,
         "type": "Lake",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 7249,
         "citizens": {
@@ -9722,7 +9959,8 @@
         "x": 1210.5,
         "y": 744,
         "type": "Naval",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1726,
         "citizens": {
@@ -9763,7 +10001,8 @@
         "x": 628.5,
         "y": 829.89,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 1046,
         "citizens": {
@@ -9804,7 +10043,8 @@
         "x": 705.5,
         "y": 457.5,
         "type": "Naval",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 3383,
         "citizens": {
@@ -9845,7 +10085,8 @@
         "x": 789.47,
         "y": 611.71,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 949,
         "citizens": {
@@ -9886,7 +10127,8 @@
         "x": 1167.7,
         "y": 704,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1142,
         "citizens": {
@@ -9927,7 +10169,8 @@
         "x": 563.96,
         "y": 308.27,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 2111,
         "citizens": {
@@ -9968,7 +10211,8 @@
         "x": 1435.75,
         "y": 368.75,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 6601,
         "citizens": {
@@ -10009,7 +10253,8 @@
         "x": 1594.6,
         "y": 413.15,
         "type": "Generic",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 0,
         "population": 3364,
         "citizens": {
@@ -10050,7 +10295,8 @@
         "x": 1603.38,
         "y": 424.05,
         "type": "Generic",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 0,
         "population": 21330,
         "citizens": {
@@ -10091,7 +10337,8 @@
         "x": 1496.92,
         "y": 443.14,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 11800,
         "citizens": {
@@ -10132,7 +10379,8 @@
         "x": 1544.42,
         "y": 543.14,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 12131,
         "citizens": {
@@ -10173,7 +10421,8 @@
         "x": 379.73,
         "y": 697.45,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1037,
         "citizens": {
@@ -10214,7 +10463,8 @@
         "x": 530.3,
         "y": 293.2,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 2926,
         "citizens": {
@@ -10255,7 +10505,8 @@
         "x": 1275.65,
         "y": 436.12,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 7305,
         "citizens": {
@@ -10296,7 +10547,8 @@
         "x": 771.77,
         "y": 546.88,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 6340,
         "citizens": {
@@ -10337,7 +10589,8 @@
         "x": 1622.09,
         "y": 567.38,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 3160,
         "citizens": {
@@ -10378,7 +10631,8 @@
         "x": 835.46,
         "y": 596.57,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1655,
         "citizens": {
@@ -10419,7 +10673,8 @@
         "x": 1603.61,
         "y": 336.37,
         "type": "Generic",
-        "state": 11,
+        "state_id": 11,
+        "state_name": "Mourland",
         "capital": 0,
         "population": 17501,
         "citizens": {
@@ -10460,7 +10715,8 @@
         "x": 1099,
         "y": 431.5,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 4472,
         "citizens": {
@@ -10501,7 +10757,8 @@
         "x": 1752.1,
         "y": 458.5,
         "type": "Generic",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 21241,
         "citizens": {
@@ -10542,7 +10799,8 @@
         "x": 513.9,
         "y": 532.6,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1736,
         "citizens": {
@@ -10583,7 +10841,8 @@
         "x": 1582.49,
         "y": 640.28,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 17785,
         "citizens": {
@@ -10624,7 +10883,8 @@
         "x": 1566.9,
         "y": 658.39,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 12598,
         "citizens": {
@@ -10665,7 +10925,8 @@
         "x": 1273.67,
         "y": 682.59,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1003,
         "citizens": {
@@ -10706,7 +10967,8 @@
         "x": 355.05,
         "y": 725.19,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1586,
         "citizens": {
@@ -10747,7 +11009,8 @@
         "x": 488.76,
         "y": 768.46,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 2916,
         "citizens": {
@@ -10788,7 +11051,8 @@
         "x": 712.6,
         "y": 856.5,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 1577,
         "citizens": {
@@ -10829,7 +11093,8 @@
         "x": 919.5,
         "y": 339.6,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1754,
         "citizens": {
@@ -10870,7 +11135,8 @@
         "x": 1480.96,
         "y": 422.81,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 6774,
         "citizens": {
@@ -10911,7 +11177,8 @@
         "x": 369.44,
         "y": 482.86,
         "type": "Hunting",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 2020,
         "citizens": {
@@ -10952,7 +11219,8 @@
         "x": 694.32,
         "y": 406.79,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 15044,
         "citizens": {
@@ -10993,7 +11261,8 @@
         "x": 1516,
         "y": 480.94,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 5084,
         "citizens": {
@@ -11034,7 +11303,8 @@
         "x": 813.33,
         "y": 728.29,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 6679,
         "citizens": {
@@ -11075,7 +11345,8 @@
         "x": 876.89,
         "y": 740.41,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 4016,
         "citizens": {
@@ -11116,7 +11387,8 @@
         "x": 1650.42,
         "y": 428,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 12312,
         "citizens": {
@@ -11157,7 +11429,8 @@
         "x": 1079.4,
         "y": 465.9,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 10173,
         "citizens": {
@@ -11198,7 +11471,8 @@
         "x": 639.89,
         "y": 498,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 20156,
         "citizens": {
@@ -11239,7 +11513,8 @@
         "x": 556.49,
         "y": 525.99,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 2041,
         "citizens": {
@@ -11280,7 +11555,8 @@
         "x": 744.84,
         "y": 538.08,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 2393,
         "citizens": {
@@ -11321,7 +11597,8 @@
         "x": 1352.2,
         "y": 711.76,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 2790,
         "citizens": {
@@ -11362,7 +11639,8 @@
         "x": 666.5,
         "y": 890.5,
         "type": "Naval",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 7647,
         "citizens": {
@@ -11403,7 +11681,8 @@
         "x": 1221.58,
         "y": 308.69,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 17159,
         "citizens": {
@@ -11444,7 +11723,8 @@
         "x": 1698.97,
         "y": 526.64,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 9080,
         "citizens": {
@@ -11485,7 +11765,8 @@
         "x": 723.51,
         "y": 537.61,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 7681,
         "citizens": {
@@ -11526,7 +11807,8 @@
         "x": 665.52,
         "y": 746.51,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 4322,
         "citizens": {
@@ -11567,7 +11849,8 @@
         "x": 866.07,
         "y": 910.44,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 7591,
         "citizens": {
@@ -11608,7 +11891,8 @@
         "x": 873,
         "y": 347,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 11646,
         "citizens": {
@@ -11649,7 +11933,8 @@
         "x": 363.6,
         "y": 542.47,
         "type": "Generic",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 10654,
         "citizens": {
@@ -11690,7 +11975,8 @@
         "x": 1659.8,
         "y": 601.11,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 6517,
         "citizens": {
@@ -11731,7 +12017,8 @@
         "x": 844,
         "y": 863.58,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 2756,
         "citizens": {
@@ -11772,7 +12059,8 @@
         "x": 576.53,
         "y": 297.25,
         "type": "Generic",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 23268,
         "citizens": {
@@ -11813,7 +12101,8 @@
         "x": 310.2,
         "y": 336.9,
         "type": "Hunting",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 1663,
         "citizens": {
@@ -11854,7 +12143,8 @@
         "x": 866.42,
         "y": 335.12,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1766,
         "citizens": {
@@ -11895,7 +12185,8 @@
         "x": 1166.01,
         "y": 351.55,
         "type": "Generic",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 0,
         "population": 6399,
         "citizens": {
@@ -11936,7 +12227,8 @@
         "x": 1524.34,
         "y": 594.53,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 13511,
         "citizens": {
@@ -11977,7 +12269,8 @@
         "x": 1204,
         "y": 838,
         "type": "Naval",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 14864,
         "citizens": {
@@ -12018,7 +12311,8 @@
         "x": 483.33,
         "y": 853.75,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 1133,
         "citizens": {
@@ -12059,7 +12353,8 @@
         "x": 526.67,
         "y": 872.27,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 4227,
         "citizens": {
@@ -12100,7 +12395,8 @@
         "x": 1230.05,
         "y": 335.41,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1730,
         "citizens": {
@@ -12141,7 +12437,8 @@
         "x": 1155.44,
         "y": 361.22,
         "type": "Generic",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 0,
         "population": 25101,
         "citizens": {
@@ -12182,7 +12479,8 @@
         "x": 1155.2,
         "y": 661.2,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1006,
         "citizens": {
@@ -12223,7 +12521,8 @@
         "x": 1324.07,
         "y": 338.53,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1511,
         "citizens": {
@@ -12264,7 +12563,8 @@
         "x": 1312.36,
         "y": 385.91,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 3352,
         "citizens": {
@@ -12305,7 +12605,8 @@
         "x": 696.76,
         "y": 563.22,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 976,
         "citizens": {
@@ -12346,7 +12647,8 @@
         "x": 1612.11,
         "y": 620.92,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 4731,
         "citizens": {
@@ -12387,7 +12689,8 @@
         "x": 678.47,
         "y": 453.64,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 28600,
         "citizens": {
@@ -12428,7 +12731,8 @@
         "x": 466.45,
         "y": 461.77,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 15449,
         "citizens": {
@@ -12469,7 +12773,8 @@
         "x": 389.39,
         "y": 652.8,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1202,
         "citizens": {
@@ -12510,7 +12815,8 @@
         "x": 1669.95,
         "y": 676.91,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 11337,
         "citizens": {
@@ -12551,7 +12857,8 @@
         "x": 451.61,
         "y": 705.41,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 3402,
         "citizens": {
@@ -12592,7 +12899,8 @@
         "x": 550.37,
         "y": 719.45,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 6954,
         "citizens": {
@@ -12633,7 +12941,8 @@
         "x": 604.84,
         "y": 512.23,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1835,
         "citizens": {
@@ -12674,7 +12983,8 @@
         "x": 870.24,
         "y": 620.3,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 993,
         "citizens": {
@@ -12715,7 +13025,8 @@
         "x": 1612.41,
         "y": 639.5,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1327,
         "citizens": {
@@ -12756,7 +13067,8 @@
         "x": 1756.5,
         "y": 626.5,
         "type": "Naval",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1928,
         "citizens": {
@@ -12797,7 +13109,8 @@
         "x": 1140.8,
         "y": 730.6,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 3608,
         "citizens": {
@@ -12838,7 +13151,8 @@
         "x": 574.55,
         "y": 789.55,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 6933,
         "citizens": {
@@ -12879,7 +13193,8 @@
         "x": 812.38,
         "y": 837.59,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 1546,
         "citizens": {
@@ -12920,7 +13235,8 @@
         "x": 1123.6,
         "y": 657,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 4370,
         "citizens": {
@@ -12961,7 +13277,8 @@
         "x": 702.8,
         "y": 698.78,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 4502,
         "citizens": {
@@ -13002,7 +13319,8 @@
         "x": 713.15,
         "y": 772.87,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 7309,
         "citizens": {
@@ -13043,7 +13361,8 @@
         "x": 620.85,
         "y": 855.66,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 1081,
         "citizens": {
@@ -13084,7 +13403,8 @@
         "x": 357.5,
         "y": 273,
         "type": "Naval",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 9210,
         "citizens": {
@@ -13125,7 +13445,8 @@
         "x": 673.17,
         "y": 361.4,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 25685,
         "citizens": {
@@ -13166,7 +13487,8 @@
         "x": 1465.58,
         "y": 763.47,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 5138,
         "citizens": {
@@ -13207,7 +13529,8 @@
         "x": 1484.74,
         "y": 763.83,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1633,
         "citizens": {
@@ -13248,7 +13571,8 @@
         "x": 1604.83,
         "y": 760.85,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 12114,
         "citizens": {
@@ -13289,7 +13613,8 @@
         "x": 805.55,
         "y": 775.65,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 6443,
         "citizens": {
@@ -13330,7 +13655,8 @@
         "x": 1739.5,
         "y": 577,
         "type": "Naval",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 6140,
         "citizens": {
@@ -13371,7 +13697,8 @@
         "x": 1643.99,
         "y": 690.55,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 14893,
         "citizens": {
@@ -13412,7 +13739,8 @@
         "x": 640.46,
         "y": 765.38,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 8512,
         "citizens": {
@@ -13453,7 +13781,8 @@
         "x": 1021.65,
         "y": 351.2,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 12260,
         "citizens": {
@@ -13494,7 +13823,8 @@
         "x": 1421.47,
         "y": 410.8,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1758,
         "citizens": {
@@ -13535,7 +13865,8 @@
         "x": 1599.98,
         "y": 471.02,
         "type": "Hunting",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 0,
         "population": 3258,
         "citizens": {
@@ -13576,7 +13907,8 @@
         "x": 1644.48,
         "y": 637.21,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1040,
         "citizens": {
@@ -13617,7 +13949,8 @@
         "x": 1352.95,
         "y": 678.21,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 4137,
         "citizens": {
@@ -13658,7 +13991,8 @@
         "x": 1680.99,
         "y": 707.52,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1696,
         "citizens": {
@@ -13699,7 +14033,8 @@
         "x": 667,
         "y": 289,
         "type": "Naval",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 4752,
         "citizens": {
@@ -13740,7 +14075,8 @@
         "x": 1515.04,
         "y": 425.9,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1777,
         "citizens": {
@@ -13781,7 +14117,8 @@
         "x": 1453.55,
         "y": 460.38,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 20973,
         "citizens": {
@@ -13822,7 +14159,8 @@
         "x": 501.1,
         "y": 499.26,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 5236,
         "citizens": {
@@ -13863,7 +14201,8 @@
         "x": 859.06,
         "y": 499.47,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 12744,
         "citizens": {
@@ -13904,7 +14243,8 @@
         "x": 1540.14,
         "y": 656.57,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1799,
         "citizens": {
@@ -13945,7 +14285,8 @@
         "x": 928.51,
         "y": 692.47,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 3509,
         "citizens": {
@@ -13986,7 +14327,8 @@
         "x": 583.65,
         "y": 703.92,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1111,
         "citizens": {
@@ -14027,7 +14369,8 @@
         "x": 644.43,
         "y": 725.1,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 4127,
         "citizens": {
@@ -14068,7 +14411,8 @@
         "x": 1472.03,
         "y": 748.42,
         "type": "Highland",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1708,
         "citizens": {
@@ -14109,7 +14453,8 @@
         "x": 1227.95,
         "y": 809.53,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1603,
         "citizens": {
@@ -14150,7 +14495,8 @@
         "x": 1108.89,
         "y": 884.51,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 2934,
         "citizens": {
@@ -14191,7 +14537,8 @@
         "x": 1112.9,
         "y": 890.8,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 11990,
         "citizens": {
@@ -14232,7 +14579,8 @@
         "x": 614.83,
         "y": 319.37,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 1764,
         "citizens": {
@@ -14273,7 +14621,8 @@
         "x": 1441.15,
         "y": 598.82,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 6543,
         "citizens": {
@@ -14314,7 +14663,8 @@
         "x": 1546.82,
         "y": 694.88,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 7424,
         "citizens": {
@@ -14355,7 +14705,8 @@
         "x": 726.54,
         "y": 758.1,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 3089,
         "citizens": {
@@ -14396,7 +14747,8 @@
         "x": 771.84,
         "y": 800.87,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 4159,
         "citizens": {
@@ -14437,7 +14789,8 @@
         "x": 517.27,
         "y": 826.55,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 2212,
         "citizens": {
@@ -14478,7 +14831,8 @@
         "x": 541.02,
         "y": 835.44,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 4637,
         "citizens": {
@@ -14519,7 +14873,8 @@
         "x": 1427.25,
         "y": 857.49,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 20800,
         "citizens": {
@@ -14560,7 +14915,8 @@
         "x": 1298.01,
         "y": 465.09,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1877,
         "citizens": {
@@ -14601,7 +14957,8 @@
         "x": 1716.96,
         "y": 470.27,
         "type": "Hunting",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 1686,
         "citizens": {
@@ -14642,7 +14999,8 @@
         "x": 1492.3,
         "y": 488.49,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 9031,
         "citizens": {
@@ -14683,7 +15041,8 @@
         "x": 800.91,
         "y": 546.77,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 11174,
         "citizens": {
@@ -14724,7 +15083,8 @@
         "x": 648.66,
         "y": 709.12,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 9168,
         "citizens": {
@@ -14765,7 +15125,8 @@
         "x": 1248.61,
         "y": 712.84,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 8188,
         "citizens": {
@@ -14806,7 +15167,8 @@
         "x": 513,
         "y": 866,
         "type": "Naval",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 2310,
         "citizens": {
@@ -14847,7 +15209,8 @@
         "x": 1278.55,
         "y": 350.89,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 6319,
         "citizens": {
@@ -14888,7 +15251,8 @@
         "x": 1457.04,
         "y": 370.47,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 2413,
         "citizens": {
@@ -14929,7 +15293,8 @@
         "x": 1320.56,
         "y": 377.53,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 22291,
         "citizens": {
@@ -14970,7 +15335,8 @@
         "x": 1591.6,
         "y": 512.46,
         "type": "Generic",
-        "state": 4,
+        "state_id": 4,
+        "state_name": "Wickhampia",
         "capital": 0,
         "population": 6078,
         "citizens": {
@@ -15011,7 +15377,8 @@
         "x": 758.51,
         "y": 555.91,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1535,
         "citizens": {
@@ -15052,7 +15419,8 @@
         "x": 725.93,
         "y": 598,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 8432,
         "citizens": {
@@ -15093,7 +15461,8 @@
         "x": 1127,
         "y": 715.8,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 4033,
         "citizens": {
@@ -15134,7 +15503,8 @@
         "x": 1638.69,
         "y": 370.36,
         "type": "Hunting",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 4145,
         "citizens": {
@@ -15175,7 +15545,8 @@
         "x": 1221.91,
         "y": 384.06,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1666,
         "citizens": {
@@ -15216,7 +15587,8 @@
         "x": 1431.42,
         "y": 382.69,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1765,
         "citizens": {
@@ -15257,7 +15629,8 @@
         "x": 1339.23,
         "y": 570.94,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 2649,
         "citizens": {
@@ -15298,7 +15671,8 @@
         "x": 1367.18,
         "y": 570.59,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 13371,
         "citizens": {
@@ -15339,7 +15713,8 @@
         "x": 1528.29,
         "y": 563.9,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 15523,
         "citizens": {
@@ -15380,7 +15755,8 @@
         "x": 599.28,
         "y": 749.75,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 4303,
         "citizens": {
@@ -15421,7 +15797,8 @@
         "x": 510.87,
         "y": 779.79,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 6984,
         "citizens": {
@@ -15462,7 +15839,8 @@
         "x": 687.3,
         "y": 340.3,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 5691,
         "citizens": {
@@ -15503,7 +15881,8 @@
         "x": 365.21,
         "y": 422.09,
         "type": "Generic",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 11296,
         "citizens": {
@@ -15544,7 +15923,8 @@
         "x": 1729.4,
         "y": 498.1,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 6543,
         "citizens": {
@@ -15585,7 +15965,8 @@
         "x": 521.37,
         "y": 614.94,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 9298,
         "citizens": {
@@ -15626,7 +16007,8 @@
         "x": 853.76,
         "y": 786.45,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 5259,
         "citizens": {
@@ -15667,7 +16049,8 @@
         "x": 657.86,
         "y": 818.83,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 1134,
         "citizens": {
@@ -15708,7 +16091,8 @@
         "x": 998.5,
         "y": 331,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 7016,
         "citizens": {
@@ -15749,7 +16133,8 @@
         "x": 1421.46,
         "y": 320.14,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1846,
         "citizens": {
@@ -15790,7 +16175,8 @@
         "x": 578.29,
         "y": 627.8,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 4690,
         "citizens": {
@@ -15831,7 +16217,8 @@
         "x": 1288.27,
         "y": 638.26,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 4226,
         "citizens": {
@@ -15872,7 +16259,8 @@
         "x": 568.48,
         "y": 417.15,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1604,
         "citizens": {
@@ -15913,7 +16301,8 @@
         "x": 1732.5,
         "y": 431.5,
         "type": "Naval",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 6636,
         "citizens": {
@@ -15954,7 +16343,8 @@
         "x": 561.64,
         "y": 474.37,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 6105,
         "citizens": {
@@ -15995,7 +16385,8 @@
         "x": 1272.37,
         "y": 562.01,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1955,
         "citizens": {
@@ -16036,7 +16427,8 @@
         "x": 553.73,
         "y": 589.93,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 7390,
         "citizens": {
@@ -16077,7 +16469,8 @@
         "x": 533.35,
         "y": 611.19,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1104,
         "citizens": {
@@ -16118,7 +16511,8 @@
         "x": 827.04,
         "y": 650.84,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 8139,
         "citizens": {
@@ -16159,7 +16553,8 @@
         "x": 883.74,
         "y": 822.28,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 18177,
         "citizens": {
@@ -16200,7 +16595,8 @@
         "x": 554.86,
         "y": 887.44,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 7575,
         "citizens": {
@@ -16241,7 +16637,8 @@
         "x": 830.98,
         "y": 297.59,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1753,
         "citizens": {
@@ -16282,7 +16679,8 @@
         "x": 1153.63,
         "y": 344.98,
         "type": "Generic",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 0,
         "population": 12895,
         "citizens": {
@@ -16323,7 +16721,8 @@
         "x": 1254.67,
         "y": 433.76,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 7989,
         "citizens": {
@@ -16364,7 +16763,8 @@
         "x": 1428.45,
         "y": 462.76,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1760,
         "citizens": {
@@ -16405,7 +16805,8 @@
         "x": 398.8,
         "y": 482.97,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 19117,
         "citizens": {
@@ -16446,7 +16847,8 @@
         "x": 519.01,
         "y": 575.3,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1786,
         "citizens": {
@@ -16487,7 +16889,8 @@
         "x": 351.61,
         "y": 600.34,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1162,
         "citizens": {
@@ -16528,7 +16931,8 @@
         "x": 1230,
         "y": 680.5,
         "type": "Naval",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 3063,
         "citizens": {
@@ -16569,7 +16973,8 @@
         "x": 1175.4,
         "y": 718.7,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 11940,
         "citizens": {
@@ -16610,7 +17015,8 @@
         "x": 1279.23,
         "y": 713.43,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 4091,
         "citizens": {
@@ -16651,7 +17057,8 @@
         "x": 1215.4,
         "y": 765.8,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1132,
         "citizens": {
@@ -16692,7 +17099,8 @@
         "x": 746.62,
         "y": 770.24,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 3057,
         "citizens": {
@@ -16733,7 +17141,8 @@
         "x": 792.72,
         "y": 840.1,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 16550,
         "citizens": {
@@ -16774,7 +17183,8 @@
         "x": 747.34,
         "y": 427.55,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 3571,
         "citizens": {
@@ -16815,7 +17225,8 @@
         "x": 652.17,
         "y": 553.4,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 5973,
         "citizens": {
@@ -16856,7 +17267,8 @@
         "x": 1528.68,
         "y": 574.42,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 15873,
         "citizens": {
@@ -16897,7 +17309,8 @@
         "x": 362.8,
         "y": 682.7,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 13484,
         "citizens": {
@@ -16938,7 +17351,8 @@
         "x": 1209,
         "y": 693.9,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1037,
         "citizens": {
@@ -16979,7 +17393,8 @@
         "x": 661.36,
         "y": 723.57,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 3423,
         "citizens": {
@@ -17020,7 +17435,8 @@
         "x": 508.93,
         "y": 811.31,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 8066,
         "citizens": {
@@ -17061,7 +17477,8 @@
         "x": 128.22,
         "y": 404.24,
         "type": "Generic",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 919,
         "citizens": {
@@ -17102,7 +17519,8 @@
         "x": 338.22,
         "y": 533.9,
         "type": "Generic",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 17372,
         "citizens": {
@@ -17143,7 +17561,8 @@
         "x": 1294.15,
         "y": 563.81,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1203,
         "citizens": {
@@ -17184,7 +17603,8 @@
         "x": 729.08,
         "y": 615.15,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1053,
         "citizens": {
@@ -17225,7 +17645,8 @@
         "x": 608.97,
         "y": 629.39,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1049,
         "citizens": {
@@ -17266,7 +17687,8 @@
         "x": 1216.49,
         "y": 636.5,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 3285,
         "citizens": {
@@ -17307,7 +17729,8 @@
         "x": 1699.15,
         "y": 747.74,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1617,
         "citizens": {
@@ -17348,7 +17771,8 @@
         "x": 1221.5,
         "y": 828.5,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1573,
         "citizens": {
@@ -17389,7 +17813,8 @@
         "x": 1519.48,
         "y": 407.27,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 21584,
         "citizens": {
@@ -17430,7 +17855,8 @@
         "x": 439.16,
         "y": 460.86,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 15726,
         "citizens": {
@@ -17471,7 +17897,8 @@
         "x": 1733.5,
         "y": 454.5,
         "type": "Naval",
-        "state": 2,
+        "state_id": 2,
+        "state_name": "Conglemia",
         "capital": 0,
         "population": 19425,
         "citizens": {
@@ -17512,7 +17939,8 @@
         "x": 1517.04,
         "y": 494.49,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 4088,
         "citizens": {
@@ -17553,7 +17981,8 @@
         "x": 1543.43,
         "y": 524.2,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 3611,
         "citizens": {
@@ -17594,7 +18023,8 @@
         "x": 1607.74,
         "y": 534.03,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 11643,
         "citizens": {
@@ -17635,7 +18065,8 @@
         "x": 303.72,
         "y": 550.82,
         "type": "Generic",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 18125,
         "citizens": {
@@ -17676,7 +18107,8 @@
         "x": 1690.46,
         "y": 566.47,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 6568,
         "citizens": {
@@ -17717,7 +18149,8 @@
         "x": 847.81,
         "y": 740.84,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 5063,
         "citizens": {
@@ -17758,7 +18191,8 @@
         "x": 1119.93,
         "y": 785.88,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1172,
         "citizens": {
@@ -17799,7 +18233,8 @@
         "x": 684.76,
         "y": 792.06,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 9960,
         "citizens": {
@@ -17840,7 +18275,8 @@
         "x": 1045.5,
         "y": 252.5,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 15604,
         "citizens": {
@@ -17881,7 +18317,8 @@
         "x": 622.9,
         "y": 281.38,
         "type": "Hunting",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 1902,
         "citizens": {
@@ -17922,7 +18359,8 @@
         "x": 1215.88,
         "y": 438.1,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1682,
         "citizens": {
@@ -17963,7 +18401,8 @@
         "x": 399.89,
         "y": 445.73,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 9997,
         "citizens": {
@@ -18004,7 +18443,8 @@
         "x": 977.8,
         "y": 532.7,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1802,
         "citizens": {
@@ -18045,7 +18485,8 @@
         "x": 1192.5,
         "y": 630.5,
         "type": "Naval",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1899,
         "citizens": {
@@ -18086,7 +18527,8 @@
         "x": 628.75,
         "y": 652.32,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1070,
         "citizens": {
@@ -18127,7 +18569,8 @@
         "x": 1688.04,
         "y": 655.59,
         "type": "Highland",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 8156,
         "citizens": {
@@ -18168,7 +18611,8 @@
         "x": 1757.18,
         "y": 729.12,
         "type": "Generic",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 6008,
         "citizens": {
@@ -18209,7 +18653,8 @@
         "x": 1343.15,
         "y": 744.09,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 10156,
         "citizens": {
@@ -18250,7 +18695,8 @@
         "x": 447.91,
         "y": 767.97,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 17467,
         "citizens": {
@@ -18291,7 +18737,8 @@
         "x": 1115.5,
         "y": 810,
         "type": "Naval",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 10136,
         "citizens": {
@@ -18332,7 +18779,8 @@
         "x": 791.3,
         "y": 547.7,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 6452,
         "citizens": {
@@ -18373,7 +18821,8 @@
         "x": 470.02,
         "y": 716.87,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 3375,
         "citizens": {
@@ -18414,7 +18863,8 @@
         "x": 1324.65,
         "y": 725.12,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 1081,
         "citizens": {
@@ -18455,7 +18905,8 @@
         "x": 1254.44,
         "y": 382.25,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 8994,
         "citizens": {
@@ -18496,7 +18947,8 @@
         "x": 979.9,
         "y": 513.8,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1862,
         "citizens": {
@@ -18537,7 +18989,8 @@
         "x": 1257.72,
         "y": 639.68,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 4855,
         "citizens": {
@@ -18578,7 +19031,8 @@
         "x": 752.6,
         "y": 686.85,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 10873,
         "citizens": {
@@ -18619,7 +19073,8 @@
         "x": 944.37,
         "y": 262.92,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 3524,
         "citizens": {
@@ -18660,7 +19115,8 @@
         "x": 382.11,
         "y": 302.69,
         "type": "Hunting",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 1706,
         "citizens": {
@@ -18701,7 +19157,8 @@
         "x": 1111.5,
         "y": 312,
         "type": "Naval",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 0,
         "population": 6538,
         "citizens": {
@@ -18742,7 +19199,8 @@
         "x": 474.25,
         "y": 765,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 1141,
         "citizens": {
@@ -18783,7 +19241,8 @@
         "x": 1548.86,
         "y": 240.46,
         "type": "Hunting",
-        "state": 11,
+        "state_id": 11,
+        "state_name": "Mourland",
         "capital": 0,
         "population": 1235,
         "citizens": {
@@ -18824,7 +19283,8 @@
         "x": 856.5,
         "y": 306.78,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1745,
         "citizens": {
@@ -18865,7 +19325,8 @@
         "x": 324.43,
         "y": 529.16,
         "type": "Hunting",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 1918,
         "citizens": {
@@ -18906,7 +19367,8 @@
         "x": 388.79,
         "y": 548.97,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 7205,
         "citizens": {
@@ -18947,7 +19409,8 @@
         "x": 405.97,
         "y": 580.27,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1220,
         "citizens": {
@@ -18988,7 +19451,8 @@
         "x": 1665.49,
         "y": 583.86,
         "type": "Hunting",
-        "state": 13,
+        "state_id": 13,
+        "state_name": "Basaling",
         "capital": 0,
         "population": 1715,
         "citizens": {
@@ -19029,7 +19493,8 @@
         "x": 1242.17,
         "y": 596.36,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 1173,
         "citizens": {
@@ -19070,7 +19535,8 @@
         "x": 471.49,
         "y": 633.04,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 3160,
         "citizens": {
@@ -19111,7 +19577,8 @@
         "x": 671.12,
         "y": 635.98,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 4766,
         "citizens": {
@@ -19152,7 +19619,8 @@
         "x": 805.56,
         "y": 692.2,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 1111,
         "citizens": {
@@ -19193,7 +19661,8 @@
         "x": 1136.2,
         "y": 696.1,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 2129,
         "citizens": {
@@ -19234,7 +19703,8 @@
         "x": 621.06,
         "y": 717.05,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 12454,
         "citizens": {
@@ -19275,7 +19745,8 @@
         "x": 483.93,
         "y": 737.47,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 12524,
         "citizens": {
@@ -19316,7 +19787,8 @@
         "x": 1417.61,
         "y": 764.96,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 9086,
         "citizens": {
@@ -19357,7 +19829,8 @@
         "x": 1210,
         "y": 790,
         "type": "Naval",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 17063,
         "citizens": {
@@ -19398,7 +19871,8 @@
         "x": 1377,
         "y": 795.5,
         "type": "Naval",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 21313,
         "citizens": {
@@ -19439,7 +19913,8 @@
         "x": 1045.5,
         "y": 282.5,
         "type": "Naval",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 3144,
         "citizens": {
@@ -19480,7 +19955,8 @@
         "x": 1626.23,
         "y": 285.38,
         "type": "Generic",
-        "state": 11,
+        "state_id": 11,
+        "state_name": "Mourland",
         "capital": 0,
         "population": 7120,
         "citizens": {
@@ -19521,7 +19997,8 @@
         "x": 1212.48,
         "y": 340.71,
         "type": "Generic",
-        "state": 1,
+        "state_id": 1,
+        "state_name": "Mourymland",
         "capital": 0,
         "population": 15414,
         "citizens": {
@@ -19562,7 +20039,8 @@
         "x": 859.45,
         "y": 656.63,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 1102,
         "citizens": {
@@ -19603,7 +20081,8 @@
         "x": 723.86,
         "y": 764.35,
         "type": "Generic",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 17420,
         "citizens": {
@@ -19644,7 +20123,8 @@
         "x": 1165.3,
         "y": 778.01,
         "type": "Hunting",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 2026,
         "citizens": {
@@ -19685,7 +20165,8 @@
         "x": 1503.81,
         "y": 856.39,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 8395,
         "citizens": {
@@ -19726,7 +20207,8 @@
         "x": 603.9,
         "y": 869.1,
         "type": "Hunting",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 1170,
         "citizens": {
@@ -19767,7 +20249,8 @@
         "x": 729.02,
         "y": 142.11,
         "type": "Generic",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 879,
         "citizens": {
@@ -19808,7 +20291,8 @@
         "x": 982.75,
         "y": 265.62,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 2735,
         "citizens": {
@@ -19849,7 +20333,8 @@
         "x": 442.81,
         "y": 543.98,
         "type": "Generic",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 4439,
         "citizens": {
@@ -19890,7 +20375,8 @@
         "x": 676.95,
         "y": 573.31,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 9215,
         "citizens": {
@@ -19931,7 +20417,8 @@
         "x": 524.61,
         "y": 753.64,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 7011,
         "citizens": {
@@ -19972,7 +20459,8 @@
         "x": 1145.14,
         "y": 756.39,
         "type": "Generic",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 10723,
         "citizens": {
@@ -20013,7 +20501,8 @@
         "x": 769.65,
         "y": 784.43,
         "type": "Hunting",
-        "state": 7,
+        "state_id": 7,
+        "state_name": "Dudfordia",
         "capital": 0,
         "population": 4962,
         "citizens": {
@@ -20054,7 +20543,8 @@
         "x": 1417.01,
         "y": 811.98,
         "type": "Generic",
-        "state": 14,
+        "state_id": 14,
+        "state_name": "Roclesia",
         "capital": 0,
         "population": 8728,
         "citizens": {
@@ -20095,7 +20585,8 @@
         "x": 407.62,
         "y": 212.92,
         "type": "Generic",
-        "state": 9,
+        "state_id": 9,
+        "state_name": "Helsteria",
         "capital": 0,
         "population": 974,
         "citizens": {
@@ -20136,7 +20627,8 @@
         "x": 1033.5,
         "y": 357.9,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 1856,
         "citizens": {
@@ -20177,7 +20669,8 @@
         "x": 957.29,
         "y": 414.79,
         "type": "Hunting",
-        "state": 15,
+        "state_id": 15,
+        "state_name": "Hatfordia",
         "capital": 0,
         "population": 4490,
         "citizens": {
@@ -20218,7 +20711,8 @@
         "x": 217.01,
         "y": 416.28,
         "type": "Generic",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 8991,
         "citizens": {
@@ -20259,7 +20753,8 @@
         "x": 423.6,
         "y": 431.53,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 2808,
         "citizens": {
@@ -20300,7 +20795,8 @@
         "x": 622.15,
         "y": 433.83,
         "type": "Hunting",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1849,
         "citizens": {
@@ -20341,7 +20837,8 @@
         "x": 348.23,
         "y": 557.99,
         "type": "Hunting",
-        "state": 12,
+        "state_id": 12,
+        "state_name": "Yeone",
         "capital": 0,
         "population": 1207,
         "citizens": {
@@ -20382,7 +20879,8 @@
         "x": 316.62,
         "y": 570.91,
         "type": "Hunting",
-        "state": 3,
+        "state_id": 3,
+        "state_name": "Winchamia",
         "capital": 0,
         "population": 1738,
         "citizens": {
@@ -20423,7 +20921,8 @@
         "x": 1198.5,
         "y": 627.5,
         "type": "Naval",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 21698,
         "citizens": {
@@ -20464,7 +20963,8 @@
         "x": 578.99,
         "y": 681.62,
         "type": "Generic",
-        "state": 6,
+        "state_id": 6,
+        "state_name": "Hatfieldia",
         "capital": 0,
         "population": 1467,
         "citizens": {
@@ -20505,7 +21005,8 @@
         "x": 1174.69,
         "y": 682.6,
         "type": "Hunting",
-        "state": 5,
+        "state_id": 5,
+        "state_name": "Ashetheria",
         "capital": 0,
         "population": 2662,
         "citizens": {
@@ -20546,7 +21047,8 @@
         "x": 627.47,
         "y": 885.93,
         "type": "Generic",
-        "state": 8,
+        "state_id": 8,
+        "state_name": "Dalia",
         "capital": 0,
         "population": 21089,
         "citizens": {
@@ -20587,7 +21089,8 @@
         "x": 302,
         "y": 272.5,
         "type": "Naval",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 22278,
         "citizens": {
@@ -20628,7 +21131,8 @@
         "x": 226.91,
         "y": 350.83,
         "type": "Generic",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 3078,
         "citizens": {
@@ -20669,7 +21173,8 @@
         "x": 125.5,
         "y": 359.5,
         "type": "Naval",
-        "state": 10,
+        "state_id": 10,
+        "state_name": "Bretland",
         "capital": 0,
         "population": 2658,
         "citizens": {

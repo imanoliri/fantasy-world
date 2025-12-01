@@ -134,6 +134,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             <tr data-id="{b['id']}" class="{row_class}" onclick="highlightBurg({b['id']})">
                 <td>{name_display}</td>
                 <td>{b.get('type', 'Unknown')}</td>
+                <td>{b.get('state_name', 'Unknown')}</td>
                 <td class="quartier-cell" data-details="{quartier_details}">{quartiers}</td>
                 <td>{b['population']:,}</td>
                 <td class="{ 'pos' if net_food > 0 else 'neg' }">{net_food:.2f}</td>
@@ -141,10 +142,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             </tr>
         """)
 
-    # Update sort indices (fixed again)
-    idx_pop = 3
-    idx_food = 4
-    idx_gold = 5
+    # Update sort indices
+    idx_pop = 4
+    idx_food = 5
+    idx_gold = 6
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -254,7 +255,8 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     <tr>
                         <th onclick="sortTable(0, this)">Name</th>
                         <th onclick="sortTable(1, this)">Type</th>
-                        <th onclick="sortTable(2, this)">Quartiers</th>
+                        <th onclick="sortTable(2, this)">State</th>
+                        <th onclick="sortTable(3, this)">Quartiers</th>
                         <th onclick="sortTable({idx_pop}, this)">Pop</th>
                         <th onclick="sortTable({idx_food}, this)">Food</th>
                         <th onclick="sortTable({idx_gold}, this)">Gold</th>

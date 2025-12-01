@@ -169,7 +169,7 @@ def generate_world_report(data, analysis, output_file):
     for sid, stats in sorted_states:
         name = get_meta(states, sid, 'name', f'State {sid}')
         color = get_meta(states, sid, 'color', '#ccc')
-        burg_count = sum(1 for b in analysis['valid_burgs'] if b.get('state') == sid)
+        burg_count = sum(1 for b in analysis['valid_burgs'] if b.get('state_id') == sid)
         
         s_rows += f"""<tr><td><span class="color-box" style="background-color: {color}"></span>{name}</td>
                       <td>{stats['area']:,.0f}</td><td>{int(stats['pop']):,}</td><td>{burg_count}</td></tr>"""
@@ -194,7 +194,7 @@ def generate_world_report(data, analysis, output_file):
         for b in burg_list:
             name = b.get('name', 'Unnamed')
             pop = b.get('population', 0) * pop_rate
-            sid = int(b.get('state', 0))
+            sid = int(b.get('state_id', 0))
             s_name = get_meta(states, sid, 'name', 'Neutral')
             s_color = get_meta(states, sid, 'color', '#ccc')
             
@@ -390,6 +390,35 @@ if __name__ == "__main__":
                 
                 # 1. Run Economy Simulation
                 processed_burgs = simulate_economy.process_map_data(data, sim_config)
+
+                # Add state_name and rename state to state_id
+                states = data.get('pack', {}).get('states', [])
+                for burg in processed_burgs:
+                    state_id = burg.get('state')
+                    if state_id is not None:
+                        # Get state name, default to "Neutral" or "Unknown" if not found
+                        # States list index matches state ID usually, but safe lookup is better if IDs are properties
+                        # Based on typical Azgaar format, states is a list where index = state_id
+                        state_name = "Neutral"
+                        if isinstance(states, list) and 0 <= state_id < len(states):
+                            state_name = states[state_id].get('name', 'Neutral')
+                        
+                        burg['state_name'] = state_name
+                        burg['state_id'] = state_id
+                        del burg['state']
+                        
+                        # Reorder keys for cleaner JSON (optional but nice)
+                        # Create a new dict with desired order
+                        new_order = {'id': burg['id'], 'name': burg['name'], 'x': burg['x'], 'y': burg['y'], 
+                                     'type': burg['type'], 'state_id': state_id, 'state_name': state_name}
+                        # Add remaining keys
+                        for k, v in burg.items():
+                            if k not in new_order:
+                                new_order[k] = v
+                        
+                        # Update burg object in place (clear and update)
+                        burg.clear()
+                        burg.update(new_order)
                 
                 # Save Burgs JSON
                 burgs_file = os.path.join(map_dir, f"{safe_name}_burgs.json")
