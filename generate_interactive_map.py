@@ -73,6 +73,18 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
     type_checkboxes += '<label><input type="checkbox" value="Capital" checked onchange="filterTable()"> Capital</label>'
     type_checkboxes += '</div>'
 
+    # Generate State Filter Options (Checkboxes)
+    state_checkboxes = '<div class="checkbox-list" id="stateCheckboxes">'
+    state_checkboxes += '<label><input type="checkbox" value="all" checked onchange="toggleAllStates(this)"> All States</label>'
+    
+    # Sort states by name
+    sorted_states = sorted(states, key=lambda x: x.get('name', '')) if states else []
+    
+    for s in sorted_states:
+        s_name = s.get('name', 'Unknown')
+        state_checkboxes += f'<label><input type="checkbox" value="{s_name}" checked onchange="filterTable()"> {s_name}</label>'
+    state_checkboxes += '</div>'
+
     for b in burgs:
         # Map Logic
         cx = b['x']
@@ -251,10 +263,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         /* Custom Dropdown */
         .dropdown {{ position: relative; display: inline-block; }}
         .dropbtn {{ background-color: #34495e; color: white; padding: 5px 10px; font-size: 0.9rem; border: none; cursor: pointer; border-radius: 4px; }}
-        .dropdown-content {{ display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; max-height: 300px; overflow-y: auto; padding: 5px; border-radius: 4px; }}
+        .dropdown-content {{ display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 100; max-height: 300px; overflow-y: auto; padding: 5px; border-radius: 4px; }}
         .dropdown-content label {{ color: black; padding: 5px; display: block; cursor: pointer; }}
         .dropdown-content label:hover {{ background-color: #f1f1f1; }}
-        .dropdown:hover {{ .dropdown-content {{ display: block; }} }}
+        .dropdown-content.show {{ display: block; }}
         .dropdown:hover .dropbtn {{ background-color: #2c3e50; }}
     </style>
 </head>
@@ -265,9 +277,16 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search names...">
             
             <div class="dropdown">
-                <button class="dropbtn">Filter Types ▼</button>
-                <div class="dropdown-content">
+                <button class="dropbtn" onclick="toggleDropdown('typeDropdown')">Filter Types ▼</button>
+                <div class="dropdown-content" id="typeDropdown">
                     {type_checkboxes}
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown('stateDropdown')">Filter States ▼</button>
+                <div class="dropdown-content" id="stateDropdown">
+                    {state_checkboxes}
                 </div>
             </div>
             
@@ -339,6 +358,25 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         const table = document.getElementById('burgTable');
         let selectedId = null;
 
+        /* Dropdown Logic */
+        function toggleDropdown(id) {{
+            document.getElementById(id).classList.toggle("show");
+        }}
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {{
+            if (!event.target.matches('.dropbtn')) {{
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {{
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {{
+                        openDropdown.classList.remove('show');
+                    }}
+                }}
+            }}
+        }}
+
         function toggleTrades() {{
             const checkbox = document.getElementById('toggleTrades');
             const routes = document.querySelectorAll('.trade-route');
@@ -390,20 +428,35 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             filterTable();
         }}
 
+        function toggleAllStates(source) {{
+            const checkboxes = document.querySelectorAll('#stateCheckboxes input[type="checkbox"]');
+            for(var i=0, n=checkboxes.length;i<n;i++) {{
+                checkboxes[i].checked = source.checked;
+            }}
+            filterTable();
+        }}
+
         function filterTable() {{
             const searchInput = document.getElementById('searchInput');
             const filterText = searchInput.value.toLowerCase();
             
             // Get selected types
-            const checkboxes = document.querySelectorAll('#typeCheckboxes input[type="checkbox"]');
+            const typeCheckboxes = document.querySelectorAll('#typeCheckboxes input[type="checkbox"]');
             const selectedTypes = [];
-            let allSelected = false;
             
-            checkboxes.forEach(cb => {{
-                if (cb.value === 'all') {{
-                    allSelected = cb.checked;
-                }} else if (cb.checked) {{
+            typeCheckboxes.forEach(cb => {{
+                if (cb.value !== 'all' && cb.checked) {{
                     selectedTypes.push(cb.value);
+                }}
+            }});
+
+            // Get selected states
+            const stateCheckboxes = document.querySelectorAll('#stateCheckboxes input[type="checkbox"]');
+            const selectedStates = [];
+            
+            stateCheckboxes.forEach(cb => {{
+                if (cb.value !== 'all' && cb.checked) {{
+                    selectedStates.push(cb.value);
                 }}
             }});
             
@@ -415,17 +468,18 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 const row = rows[i];
                 const nameCell = row.getElementsByTagName('td')[0];
                 const typeCell = row.getElementsByTagName('td')[1];
+                const stateCell = row.getElementsByTagName('td')[2];
                 const burgId = row.getAttribute('data-id');
                 
-                if (nameCell && typeCell) {{
+                if (nameCell && typeCell && stateCell) {{
                     const nameText = nameCell.textContent || nameCell.innerText;
                     const typeText = typeCell.textContent || typeCell.innerText;
+                    const stateText = stateCell.textContent || stateCell.innerText;
                     const isCapitalRow = row.classList.contains('capital-row');
                     
                     const matchesName = nameText.toLowerCase().indexOf(filterText) > -1;
                     
                     // Check if type matches ANY of the selected types
-                    // Special handling for Capital: if 'Capital' is selected, show if row is capital
                     let matchesType = false;
                     if (selectedTypes.includes(typeText)) {{
                         matchesType = true;
@@ -433,8 +487,14 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     if (selectedTypes.includes('Capital') && isCapitalRow) {{
                         matchesType = true;
                     }}
+
+                    // Check if state matches ANY of the selected states
+                    let matchesState = false;
+                    if (selectedStates.includes(stateText)) {{
+                        matchesState = true;
+                    }}
                     
-                    const isVisible = matchesName && matchesType;
+                    const isVisible = matchesName && matchesType && matchesState;
                     
                     if (isVisible) {{
                         row.style.display = "";
