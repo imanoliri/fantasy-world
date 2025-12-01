@@ -553,6 +553,36 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     }}
                 }}
             }}
+
+            // Filter State Table
+            const stateTable = document.getElementById('stateTable');
+            if (stateTable) {{
+                const stateRows = stateTable.getElementsByTagName('tr');
+                // Start from 1 to skip header
+                for (let i = 1; i < stateRows.length; i++) {{
+                    const row = stateRows[i];
+                    const nameCell = row.getElementsByTagName('td')[1]; // Name is 2nd column
+                    
+                    if (nameCell) {{
+                        const stateName = nameCell.textContent || nameCell.innerText;
+                        
+                        // Check if state matches ANY of the selected states
+                        let matchesState = false;
+                        if (selectedStates.includes(stateName)) {{
+                            matchesState = true;
+                        }}
+                        
+                        // Check search text against state name
+                        const matchesSearch = stateName.toLowerCase().indexOf(filterText) > -1;
+                        
+                        if (matchesState && matchesSearch) {{
+                            row.style.display = "";
+                        }} else {{
+                            row.style.display = "none";
+                        }}
+                    }}
+                }}
+            }}
         }}
 
         // Map Interactions
