@@ -103,18 +103,6 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         net_food = b.get('net_production_burg', {}).get('Net_Food', 0)
         quartiers = b.get('nr_quartiers', 0)
         
-        # SVG Element (Removed <title> to avoid double tooltip)
-        svg_elements.append(f"""
-            <circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" stroke="{stroke}" stroke-width="{stroke_width}"
-                    class="burg-dot{capital_class}" data-id="{b['id']}" data-name="{b['name']}" 
-                    data-pop="{b['population']}" data-type="{b.get('type', 'Unknown')}" 
-                    data-gold="{net_gold:.2f}" data-food="{net_food:.2f}">
-            </circle>
-        """)
-        
-        name_display = f"★ {b['name']}" if is_capital else b['name']
-        row_class = "capital-row" if is_capital else ""
-
         # Quartier Details for Tooltip
         quartier_details = ""
         # Get counts for all types (including 0s) and sort by count desc
@@ -128,6 +116,19 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         for ct, count in type_counts:
             if count > 0:
                 quartier_details += f"{ct}: {count}<br>"
+
+        # SVG Element (Removed <title> to avoid double tooltip)
+        svg_elements.append(f"""
+            <circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" stroke="{stroke}" stroke-width="{stroke_width}"
+                    class="burg-dot{capital_class}" data-id="{b['id']}" data-name="{b['name']}" 
+                    data-pop="{b['population']}" data-type="{b.get('type', 'Unknown')}" 
+                    data-gold="{net_gold:.2f}" data-food="{net_food:.2f}"
+                    data-quartiers="{quartier_details}">
+            </circle>
+        """)
+        
+        name_display = f"★ {b['name']}" if is_capital else b['name']
+        row_class = "capital-row" if is_capital else ""
         
         table_rows.append(f"""
             <tr data-id="{b['id']}" class="{row_class}" onclick="highlightBurg({b['id']})">
@@ -398,8 +399,14 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 const type = e.target.getAttribute('data-type');
                 const gold = e.target.getAttribute('data-gold');
                 const food = e.target.getAttribute('data-food');
+                const quartiers = e.target.getAttribute('data-quartiers');
                 
-                tooltip.innerHTML = `<strong>${{name}}</strong><br>Type: ${{type}}<br>Pop: ${{pop}}<br>Food: ${{food}}<br>Gold: ${{gold}}`;
+                let tooltipContent = `<strong>${{name}}</strong><br>Type: ${{type}}<br>Pop: ${{pop}}<br>Food: ${{food}}<br>Gold: ${{gold}}`;
+                if (quartiers) {{
+                    tooltipContent += `<hr style="margin: 5px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.3);">${{quartiers}}`;
+                }}
+                
+                tooltip.innerHTML = tooltipContent;
                 tooltip.style.display = 'block';
                 
                 // Smart positioning to keep within viewport
