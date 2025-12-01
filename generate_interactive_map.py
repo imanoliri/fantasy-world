@@ -19,6 +19,17 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
     # Create a lookup for burg coordinates
     burg_coords = {str(b['id']): (b['x'], b['y']) for b in burgs}
     
+    # Identify receivers
+    food_receivers = set()
+    gold_receivers = set()
+    if trades_data:
+        for t in trades_data:
+            to_id = str(t['To_ID'])
+            if t['Commodity'] == 'Net_Food':
+                food_receivers.add(to_id)
+            elif t['Commodity'] == 'Net_Gold':
+                gold_receivers.add(to_id)
+    
     # Generate SVG Elements
     svg_elements = []
     
@@ -35,7 +46,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 # Style based on commodity or amount? 
                 # For now, simple styling.
                 commodity = t['Commodity']
-                stroke_color = '#f39c12' if commodity == 'Net_Gold' else '#27ae60' # Gold vs Food
+                stroke_color = '#e74c3c' if commodity == 'Net_Gold' else '#27ae60' # Gold (Red/Orange) vs Food (Green)
                 
                 svg_elements.append(f"""
                     <line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" 
@@ -124,14 +135,25 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         
         color = type_colors.get(b.get('type'), '#95a5a6')
         
-        # Net Gold Logic for Stroke
         net_gold = b.get('net_production_burg', {}).get('Net_Gold', 0)
-        if net_gold > 0.01:
-            stroke = '#2ecc71' # Green
-        elif net_gold < -0.01:
-            stroke = '#e74c3c' # Red
-        else:
-            stroke = '#ffffff' # White
+        
+        # Trade Receiver Logic for Stroke (Rings)
+        # Green for Food Receiver, Orange for Gold Receiver
+        is_food_receiver = str(b['id']) in food_receivers
+        is_gold_receiver = str(b['id']) in gold_receivers
+        
+        stroke = '#ffffff' # Default white
+        extra_ring = ""
+        
+        if is_food_receiver and is_gold_receiver:
+            stroke = '#27ae60' # Green for main
+            # Add outer orange/red ring
+            # We use a slightly larger radius for the second ring
+            extra_ring = f'<circle cx="{cx}" cy="{cy}" r="{r + 3}" fill="none" stroke="#e74c3c" stroke-width="2" class="burg-ring-gold" pointer-events="none" />'
+        elif is_food_receiver:
+            stroke = '#27ae60' # Green
+        elif is_gold_receiver:
+            stroke = '#e74c3c' # Orange/Red
             
         # Capital Logic
         is_capital = b.get('capital') == 1
@@ -157,6 +179,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 quartier_details += f"{ct}: {count}<br>"
 
         # SVG Element (Removed <title> to avoid double tooltip)
+        # Append extra ring if it exists
+        if extra_ring:
+            svg_elements.append(extra_ring)
+            
         svg_elements.append(f"""
             <circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" stroke="{stroke}" stroke-width="{stroke_width}"
                     class="burg-dot{capital_class}" data-id="{b['id']}" data-name="{b['name']}" 
