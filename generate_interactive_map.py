@@ -112,7 +112,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 # Default to biome fill
                 # Add data-state-id and onclick handler
                 water_attr = 'data-is-water="true"' if is_water else ''
-                paths.append(f'<path d="{d}" fill="{biome_fill}" stroke="none" data-state-color="{state_fill}" data-biome-color="{biome_fill}" data-state-id="{state_id}" {water_attr} onclick="selectState({state_id})" />')
+                paths.append(f'<path d="{d}" fill="{biome_fill}" stroke="none" data-state-color="{state_fill}" data-biome-color="{biome_fill}" data-state-id="{state_id}" data-height="{h}" {water_attr} onclick="selectState({state_id})" />')
         
         background_group = f'<g id="mapBackground" class="map-background">{"".join(paths)}</g>'
         svg_elements.append(background_group)
@@ -785,6 +785,14 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 // Initial diplomacy view (neutral or based on selected burg/state)
                 const selectedDot = selectedId ? document.querySelector(`.burg-dot[data-id="${{selectedId}}"]`) : null;
                 updateDiplomacyColors(selectedDot ? selectedDot.getAttribute('data-state') : null);
+            }} else if (currentMode === 'diplomacy') {{
+                // Switch to Heightmap
+                btn.innerText = 'Mode: Heightmap';
+                btn.setAttribute('data-mode', 'heightmap');
+                paths.forEach(p => {{
+                    const h = parseInt(p.getAttribute('data-height'));
+                    p.setAttribute('fill', getColorForHeight(h));
+                }});
             }} else {{
                 // Switch to Biome
                 btn.innerText = 'Mode: Biome';
@@ -792,6 +800,23 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 paths.forEach(p => {{
                     p.setAttribute('fill', p.getAttribute('data-biome-color'));
                 }});
+            }}
+        }}
+
+        function getColorForHeight(h) {{
+            // Azgaar height range: 0-100 (usually)
+            // Water: < 20
+            // Land: >= 20
+            
+            if (h < 20) {{
+                // Water: Uniform Deep Blue
+                return "#000080";
+            }} else {{
+                // Land gradient: Green -> Yellow -> Brown -> White
+                if (h < 40) return "#228B22"; // Forest Green (Lowlands)
+                if (h < 60) return "#9ACD32"; // Yellow Green (Hills)
+                if (h < 80) return "#CD853F"; // Peru (Mountains)
+                return "#FFFFFF"; // White (Peaks)
             }}
         }}
 
