@@ -39,6 +39,8 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         print("Generating background map polygons...")
         cells = map_data.get('pack', {}).get('cells', [])
         vertices = map_data.get('pack', {}).get('vertices', [])
+        biomes_data = map_data.get('biomesData', {})
+        biome_colors_list = biomes_data.get('color', [])
         
         # Create state color lookup
         state_colors = {}
@@ -56,26 +58,25 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         # Based on the JSON viewed earlier, it's a list of objects with 'v' property
         
         for cell in cells:
-            # Skip water cells if desired, or color them blue. 
-            # Usually h < 20 is water, but let's stick to state coloring.
-            # If state is 0 (neutral/water), maybe skip or use a default color.
             state_id = cell.get('state', 0)
+            biome_id = cell.get('biome', 0)
             
-            # If we want to show the map shape, we should render everything.
-            # If we only want political map, render states.
-            # Let's render everything with a default color if no state.
+            # Determine colors
+            state_fill = state_colors.get(state_id, '#e0e0e0') # Default grey for neutral
             
-            fill = state_colors.get(state_id, '#e0e0e0') # Default grey for neutral
-            
-            # If it's water (h < 20 usually, or check biome/type), maybe different color?
-            # For now, stick to state colors. Neutrals might be water or unclaimable land.
+            # Handle water for state view
+            h = cell.get('h', 0)
             if state_id == 0:
-                # Check height to distinguish water
-                h = cell.get('h', 0)
                 if h < 20:
-                    fill = "#a0c8f0" # Light blue for water
+                    state_fill = "#a0c8f0" # Light blue for water
                 else:
-                    fill = "#e0e0e0" # Neutral land
+                    state_fill = "#e0e0e0" # Neutral land
+            
+            # Biome color
+            if 0 <= biome_id < len(biome_colors_list):
+                biome_fill = biome_colors_list[biome_id]
+            else:
+                biome_fill = "#cccccc" # Fallback
             
             vertex_indices = cell.get('v', [])
             if not vertex_indices: continue
@@ -96,7 +97,8 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             
             if points:
                 d = "M" + " L".join(points) + " Z"
-                paths.append(f'<path d="{d}" fill="{fill}" stroke="none" />')
+                # Default to biome fill
+                paths.append(f'<path d="{d}" fill="{biome_fill}" stroke="none" data-state-color="{state_fill}" data-biome-color="{biome_fill}" />')
         
         background_group = f'<g id="mapBackground" class="map-background">{"".join(paths)}</g>'
         svg_elements.append(background_group)
@@ -510,6 +512,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             <button class="toggle-btn" id="toggleFoodTradeTable" onclick="toggleFoodTradeTable()">Food Trade Table</button>
             <button class="toggle-btn" id="toggleGoldTradeTable" onclick="toggleGoldTradeTable()">Gold Trade Table</button>
             <button class="toggle-btn active" id="toggleMap" onclick="toggleMap()">Show Map</button>
+            <button class="toggle-btn" id="toggleMapMode" onclick="toggleMapMode()">Mode: Biome</button>
             <span>| Total Burgs: {len(burgs)}</span>
         </div>
     </header>
@@ -731,13 +734,29 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 mapGroup.style.display = 'none';
             }}
         }}
-        
-        function toggleAllTypes(source) {{
-            const checkboxes = document.querySelectorAll('#typeCheckboxes input[type="checkbox"]');
-            for(var i=0, n=checkboxes.length;i<n;i++) {{
-                checkboxes[i].checked = source.checked;
+
+        function toggleMapMode() {{
+            const btn = document.getElementById('toggleMapMode');
+            const paths = document.querySelectorAll('#mapBackground path');
+            
+            // Use data attribute for state tracking
+            const currentMode = btn.getAttribute('data-mode') || 'biome';
+            
+            if (currentMode === 'biome') {{
+                // Switch to State
+                btn.innerText = 'Mode: State';
+                btn.setAttribute('data-mode', 'state');
+                paths.forEach(p => {{
+                    p.setAttribute('fill', p.getAttribute('data-state-color'));
+                }});
+            }} else {{
+                // Switch to Biome
+                btn.innerText = 'Mode: Biome';
+                btn.setAttribute('data-mode', 'biome');
+                paths.forEach(p => {{
+                    p.setAttribute('fill', p.getAttribute('data-biome-color'));
+                }});
             }}
-            filterTable();
         }}
 
         function toggleAllStates(source) {{
