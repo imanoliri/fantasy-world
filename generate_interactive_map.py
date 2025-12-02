@@ -76,6 +76,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             
             # Handle water for state view
             h = cell.get('h', 0)
+            t = cell.get('t', 0)
             is_water = False
             if state_id == 0:
                 if h < 20:
@@ -112,7 +113,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 # Default to biome fill
                 # Add data-state-id and onclick handler
                 water_attr = 'data-is-water="true"' if is_water else ''
-                paths.append(f'<path d="{d}" fill="{biome_fill}" stroke="none" data-state-color="{state_fill}" data-biome-color="{biome_fill}" data-state-id="{state_id}" data-height="{h}" {water_attr} onclick="selectState({state_id})" />')
+                paths.append(f'<path d="{d}" fill="{biome_fill}" stroke="none" data-state-color="{state_fill}" data-biome-color="{biome_fill}" data-state-id="{state_id}" data-height="{h}" data-temp="{t}" {water_attr} onclick="selectState({state_id})" />')
         
         background_group = f'<g id="mapBackground" class="map-background">{"".join(paths)}</g>'
         svg_elements.append(background_group)
@@ -793,6 +794,14 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     const h = parseInt(p.getAttribute('data-height'));
                     p.setAttribute('fill', getColorForHeight(h));
                 }});
+            }} else if (currentMode === 'heightmap') {{
+                // Switch to Temperature
+                btn.innerText = 'Mode: Temperature';
+                btn.setAttribute('data-mode', 'temperature');
+                paths.forEach(p => {{
+                    const t = parseInt(p.getAttribute('data-temp'));
+                    p.setAttribute('fill', getColorForTemp(t));
+                }});
             }} else {{
                 // Switch to Biome
                 btn.innerText = 'Mode: Biome';
@@ -818,6 +827,25 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 if (h < 80) return "#CD853F"; // Peru (Mountains)
                 return "#FFFFFF"; // White (Peaks)
             }}
+        }}
+
+        function getColorForTemp(t) {{
+            // Range: approx -30 to 50 (Celsius)
+            // Hot (> 30): Red
+            // Warm (20-30): Orange
+            // Temperate (10-20): Yellow/Green
+            // Cool (0-10): Cyan
+            // Cold (-10 to 0): Blue
+            // Freezing (< -10): Purple
+            
+            if (t < -20) return "#4B0082"; // Indigo (Deep Freeze)
+            if (t < -10) return "#800080"; // Purple (Freezing)
+            if (t < 0) return "#0000FF"; // Blue (Cold)
+            if (t < 10) return "#00BFFF"; // Deep Sky Blue (Cool)
+            if (t < 20) return "#ADFF2F"; // Green Yellow (Temperate)
+            if (t < 30) return "#FFD700"; // Gold (Warm)
+            if (t < 40) return "#FF8C00"; // Dark Orange (Hot)
+            return "#FF0000"; // Red (Scorching)
         }}
 
         function selectState(stateId) {{
