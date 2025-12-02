@@ -393,6 +393,25 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         .dropdown-content label:hover {{ background-color: #f1f1f1; }}
         .dropdown-content.show {{ display: block; }}
         .dropdown:hover .dropbtn {{ background-color: #2c3e50; }}
+        
+        /* Toggle Buttons */
+        .toggle-btn {{
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+            font-size: 0.9rem;
+        }}
+        .toggle-btn:hover {{
+            background-color: #e0e0e0;
+        }}
+        .toggle-btn.active {{
+            background-color: #3498db;
+            color: white;
+            border-color: #2980b9;
+        }}
     </style>
 </head>
 <body class="show-capitals show-food-trades show-gold-trades">
@@ -415,13 +434,13 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 </div>
             </div>
             
-            <label><input type="checkbox" id="toggleFoodTrades" checked onchange="toggleFoodTrades()"> Food Trade</label>
-            <label><input type="checkbox" id="toggleGoldTrades" checked onchange="toggleGoldTrades()"> Gold Trade</label>
-            <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
-            <label><input type="checkbox" id="toggleStateTable" onchange="toggleStateTable()"> States Table</label>
-            <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Burgs Table</label>
-            <label><input type="checkbox" id="toggleFoodTradeTable" onchange="toggleFoodTradeTable()"> Food Trade Table</label>
-            <label><input type="checkbox" id="toggleGoldTradeTable" onchange="toggleGoldTradeTable()"> Gold Trade Table</label>
+            <button class="toggle-btn active" id="toggleFoodTrades" onclick="toggleFoodTrades()">Food Trade</button>
+            <button class="toggle-btn active" id="toggleGoldTrades" onclick="toggleGoldTrades()">Gold Trade</button>
+            <button class="toggle-btn active" id="toggleCapitals" onclick="toggleCapitals()">Highlight Capitals</button>
+            <button class="toggle-btn" id="toggleStateTable" onclick="toggleStateTable()">States Table</button>
+            <button class="toggle-btn" id="toggleTable" onclick="toggleTable()">Burgs Table</button>
+            <button class="toggle-btn" id="toggleFoodTradeTable" onclick="toggleFoodTradeTable()">Food Trade Table</button>
+            <button class="toggle-btn" id="toggleGoldTradeTable" onclick="toggleGoldTradeTable()">Gold Trade Table</button>
             <span>| Total Burgs: {len(burgs)}</span>
         </div>
     </header>
@@ -556,8 +575,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         function toggleFoodTrades() {{
-            const checkbox = document.getElementById('toggleFoodTrades');
-            if (checkbox.checked) {{
+            const btn = document.getElementById('toggleFoodTrades');
+            btn.classList.toggle('active');
+            if (btn.classList.contains('active')) {{
                 document.body.classList.add('show-food-trades');
             }} else {{
                 document.body.classList.remove('show-food-trades');
@@ -565,8 +585,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         function toggleGoldTrades() {{
-            const checkbox = document.getElementById('toggleGoldTrades');
-            if (checkbox.checked) {{
+            const btn = document.getElementById('toggleGoldTrades');
+            btn.classList.toggle('active');
+            if (btn.classList.contains('active')) {{
                 document.body.classList.add('show-gold-trades');
             }} else {{
                 document.body.classList.remove('show-gold-trades');
@@ -574,8 +595,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
         
         function toggleCapitals() {{
-            const checkbox = document.getElementById('toggleCapitals');
-            if (checkbox.checked) {{
+            const btn = document.getElementById('toggleCapitals');
+            btn.classList.toggle('active');
+            if (btn.classList.contains('active')) {{
                 document.body.classList.add('show-capitals');
             }} else {{
                 document.body.classList.remove('show-capitals');
@@ -583,9 +605,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         function toggleTable() {{
-            const checkbox = document.getElementById('toggleTable');
+            const btn = document.getElementById('toggleTable');
             const container = document.getElementById('burgTableContainer');
-            if (checkbox.checked) {{
+            btn.classList.toggle('active');
+            if (btn.classList.contains('active')) {{
                 container.classList.remove('hidden');
             }} else {{
                 container.classList.add('hidden');
@@ -594,9 +617,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         function toggleStateTable() {{
-            const checkbox = document.getElementById('toggleStateTable');
+            const btn = document.getElementById('toggleStateTable');
             const container = document.getElementById('stateTableContainer');
-            if (checkbox.checked) {{
+            btn.classList.toggle('active');
+            if (btn.classList.contains('active')) {{
                 container.classList.remove('hidden');
             }} else {{
                 container.classList.add('hidden');
@@ -605,9 +629,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         function toggleFoodTradeTable() {{
-            const checkbox = document.getElementById('toggleFoodTradeTable');
+            const btn = document.getElementById('toggleFoodTradeTable');
             const container = document.getElementById('foodTradeTableContainer');
-            if (checkbox.checked) {{
+            btn.classList.toggle('active');
+            if (btn.classList.contains('active')) {{
                 container.classList.remove('hidden');
             }} else {{
                 container.classList.add('hidden');
@@ -616,9 +641,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         function toggleGoldTradeTable() {{
-            const checkbox = document.getElementById('toggleGoldTradeTable');
+            const btn = document.getElementById('toggleGoldTradeTable');
             const container = document.getElementById('goldTradeTableContainer');
-            if (checkbox.checked) {{
+            btn.classList.toggle('active');
+            if (btn.classList.contains('active')) {{
                 container.classList.remove('hidden');
             }} else {{
                 container.classList.add('hidden');
