@@ -1,6 +1,7 @@
 import csv
 import json
 import math
+import os
 
 # TRADES_FILE = 'data/trade_routes.csv' # Removed dependency
 
@@ -35,12 +36,21 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
     
     # 0. Background Map (Polygons)
     background_group = ""
+    diplomacy_matrix = []
+    
     if map_data:
         print("Generating background map polygons...")
         cells = map_data.get('pack', {}).get('cells', [])
         vertices = map_data.get('pack', {}).get('vertices', [])
         biomes_data = map_data.get('biomesData', {})
         biome_colors_list = biomes_data.get('color', [])
+        
+        # Extract Diplomacy Matrix
+        # states is a list of dicts. states[i] corresponds to state ID i.
+        # We want a list of lists where matrix[i] is the diplomacy array for state i.
+        if states:
+            for s in states:
+                diplomacy_matrix.append(s.get('diplomacy', []))
         
         # Create state color lookup
         state_colors = {}
@@ -66,9 +76,11 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             
             # Handle water for state view
             h = cell.get('h', 0)
+            is_water = False
             if state_id == 0:
                 if h < 20:
                     state_fill = "#a0c8f0" # Light blue for water
+                    is_water = True
                 else:
                     state_fill = "#e0e0e0" # Neutral land
             
@@ -98,7 +110,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             if points:
                 d = "M" + " L".join(points) + " Z"
                 # Default to biome fill
-                paths.append(f'<path d="{d}" fill="{biome_fill}" stroke="none" data-state-color="{state_fill}" data-biome-color="{biome_fill}" />')
+                # Add data-state-id and onclick handler
+                water_attr = 'data-is-water="true"' if is_water else ''
+                paths.append(f'<path d="{d}" fill="{biome_fill}" stroke="none" data-state-color="{state_fill}" data-biome-color="{biome_fill}" data-state-id="{state_id}" {water_attr} onclick="selectState({state_id})" />')
         
         background_group = f'<g id="mapBackground" class="map-background">{"".join(paths)}</g>'
         svg_elements.append(background_group)
@@ -712,6 +726,21 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             window.dispatchEvent(new Event('resize'));
         }}
 
+        const diplomacyMatrix = {json.dumps(diplomacy_matrix)};
+        const stateNameIdMap = {json.dumps({s.get('name', 'Unknown'): s.get('i', 0) for s in states} if states else {})};
+        const relationColors = {{
+            "Ally": "#32CD32",      // Lime Green
+            "Friendly": "#90EE90",  // Light Green
+            "Neutral": "#D3D3D3",   // Light Grey
+            "Suspicion": "#FFA500", // Orange
+            "Enemy": "#FF4500",     // Orange Red
+            "War": "#FF0000",       // Red
+            "Vassal": "#87CEEB",    // Sky Blue
+            "Suzerain": "#800080",  // Purple
+            "Unknown": "#F5F5F5",   // White Smoke
+            "x": "#800080"          // Selected State (Purple)
+        }};
+
         function toggleGoldTradeTable() {{
             const btn = document.getElementById('toggleGoldTradeTable');
             const container = document.getElementById('goldTradeTableContainer');
@@ -749,12 +778,74 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 paths.forEach(p => {{
                     p.setAttribute('fill', p.getAttribute('data-state-color'));
                 }});
+            }} else if (currentMode === 'state') {{
+                // Switch to Diplomacy
+                btn.innerText = 'Mode: Diplomacy';
+                btn.setAttribute('data-mode', 'diplomacy');
+                // Initial diplomacy view (neutral or based on selected burg/state)
+                const selectedDot = selectedId ? document.querySelector(`.burg-dot[data-id="${{selectedId}}"]`) : null;
+                updateDiplomacyColors(selectedDot ? selectedDot.getAttribute('data-state') : null);
             }} else {{
                 // Switch to Biome
                 btn.innerText = 'Mode: Biome';
                 btn.setAttribute('data-mode', 'biome');
                 paths.forEach(p => {{
                     p.setAttribute('fill', p.getAttribute('data-biome-color'));
+                }});
+            }}
+        }}
+
+        function selectState(stateId) {{
+            const btn = document.getElementById('toggleMapMode');
+            const currentMode = btn.getAttribute('data-mode');
+            
+            if (currentMode === 'diplomacy') {{
+                updateDiplomacyColors(stateId);
+            }}
+        }}
+
+        function updateDiplomacyColors(stateIdentifier) {{
+            let stateId = null;
+            
+            // Try to find state ID
+            if (typeof stateIdentifier === 'number') {{
+                stateId = stateIdentifier;
+            }} else if (typeof stateIdentifier === 'string') {{
+                if (stateNameIdMap.hasOwnProperty(stateIdentifier)) {{
+                    stateId = stateNameIdMap[stateIdentifier];
+                }}
+            }}
+            
+            const paths = document.querySelectorAll('#mapBackground path');
+            
+            if (stateId !== null && diplomacyMatrix[stateId]) {{
+                const relations = diplomacyMatrix[stateId];
+                
+                paths.forEach(p => {{
+                    const isWater = p.hasAttribute('data-is-water');
+                    if (isWater) {{
+                        p.setAttribute('fill', '#333333'); // Dark Gray for water
+                    }} else {{
+                        const pStateId = parseInt(p.getAttribute('data-state-id'));
+                        if (!isNaN(pStateId) && pStateId < relations.length) {{
+                            const relation = relations[pStateId];
+                            // Highlight self differently?
+                            let color = relationColors[relation] || relationColors['Unknown'];
+                            if (pStateId === stateId) color = relationColors['x'];
+                            
+                            p.setAttribute('fill', color);
+                        }}
+                    }}
+                }});
+            }} else {{
+                // Reset to neutral (White land, Dark Gray water) if no state selected
+                paths.forEach(p => {{
+                    const isWater = p.hasAttribute('data-is-water');
+                    if (isWater) {{
+                        p.setAttribute('fill', '#333333'); // Dark Gray
+                    }} else {{
+                        p.setAttribute('fill', '#ffffff'); // White
+                    }}
                 }});
             }}
         }}
@@ -1043,6 +1134,12 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     // Highlight Related State
                     const stateName = dot.getAttribute('data-state');
                     if (stateName) {{
+                        // Update Diplomacy Map if active
+                        const btn = document.getElementById('toggleMapMode');
+                        if (btn && btn.getAttribute('data-mode') === 'diplomacy') {{
+                            updateDiplomacyColors(stateName);
+                        }}
+
                         const stateTable = document.getElementById('stateTable');
                         const stateRows = stateTable.getElementsByTagName('tr');
                         for (let i = 1; i < stateRows.length; i++) {{
