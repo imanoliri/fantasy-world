@@ -8603,6 +8603,9 @@
             // Clear any trade route highlights
             clearHighlights();
             
+            // Clear previous table highlights (State and Trade)
+            document.querySelectorAll('.related-highlight').forEach(el => el.classList.remove('selected'));
+
             selectedId = id;
             
             if (id) {
@@ -8616,7 +8619,47 @@
                 
                 if (dot) {
                     dot.classList.add('selected');
-                    // Optional: Center map on dot?
+                    
+                    // Highlight Related State
+                    const stateName = dot.getAttribute('data-state');
+                    if (stateName) {
+                        const stateTable = document.getElementById('stateTable');
+                        const stateRows = stateTable.getElementsByTagName('tr');
+                        for (let i = 1; i < stateRows.length; i++) {
+                            const sRow = stateRows[i];
+                            const nameCell = sRow.getElementsByTagName('td')[1]; // Name is 2nd column
+                            if (nameCell && (nameCell.textContent || nameCell.innerText) === stateName) {
+                                sRow.classList.add('selected');
+                                sRow.classList.add('related-highlight'); // Marker class to clear later
+                                sRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                                break; 
+                            }
+                        }
+                    }
+
+                    // Highlight Related Trade Routes
+                    const burgName = dot.getAttribute('data-name');
+                    if (burgName) {
+                        ['foodTradeTable', 'goldTradeTable'].forEach(tableId => {
+                            const tTable = document.getElementById(tableId);
+                            if (tTable) {
+                                const tRows = tTable.getElementsByTagName('tr');
+                                for (let i = 1; i < tRows.length; i++) {
+                                    const tRow = tRows[i];
+                                    const fromCell = tRow.getElementsByTagName('td')[0];
+                                    const toCell = tRow.getElementsByTagName('td')[1];
+                                    
+                                    const fromName = fromCell.textContent || fromCell.innerText;
+                                    const toName = toCell.textContent || toCell.innerText;
+                                    
+                                    if (fromName === burgName || toName === burgName) {
+                                        tRow.classList.add('selected');
+                                        tRow.classList.add('related-highlight');
+                                    }
+                                }
+                            }
+                        });
+                    }
                 }
             }
         }
