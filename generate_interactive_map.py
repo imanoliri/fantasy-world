@@ -247,7 +247,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             fullname = s.get('fullName', name)
             
             state_rows.append(f"""
-                <tr data-original-index="{len(state_rows)}">
+                <tr data-original-index="{len(state_rows)}" onclick="highlightState('{name}', '{color}')">
                     <td><span class="color-box" style="background-color: {color}; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>{name}</td>
                     <td>{capital_name}</td>
@@ -871,7 +871,11 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         function clearHighlights() {{
             highlightedIds.forEach(id => {{
                 const dot = document.querySelector(`.burg-dot[data-id="${{id}}"]`);
-                if (dot) dot.classList.remove('highlighted');
+                if (dot) {{
+                    dot.classList.remove('highlighted');
+                    dot.style.fill = ''; // Reset color
+                    dot.style.stroke = ''; // Reset stroke
+                }}
             }});
             highlightedIds = [];
         }}
@@ -951,6 +955,31 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         
         function highlightBurg(id) {{
             selectBurg(id);
+        }}
+
+        function clearHighlights() {{
+            highlightedIds.forEach(id => {{
+                const dot = document.querySelector(`.burg-dot[data-id="${{id}}"]`);
+                if (dot) {{
+                    dot.classList.remove('highlighted');
+                    dot.style.fill = ''; // Reset color
+                    dot.style.stroke = ''; // Reset stroke
+                }}
+            }});
+            highlightedIds = [];
+        }}
+
+        function highlightState(stateName, color) {{
+            clearHighlights();
+            if (selectedId) selectBurg(null);
+
+            const dots = document.querySelectorAll(`.burg-dot[data-state="${{stateName}}"]`);
+            dots.forEach(dot => {{
+                dot.classList.add('highlighted');
+                dot.style.fill = color;
+                dot.style.stroke = '#000'; // Make it pop
+                highlightedIds.push(dot.getAttribute('data-id'));
+            }});
         }}
 
         function highlightTradeRoute(fromId, toId) {{

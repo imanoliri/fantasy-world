@@ -12627,7 +12627,7 @@
                     </thead>
                     <tbody>
                         
-                <tr data-original-index="0">
+                <tr data-original-index="0" onclick="highlightState('Neutrals', '#cccccc')">
                     <td><span class="color-box" style="background-color: #cccccc; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Neutrals</td>
                     <td>None</td>
@@ -12640,7 +12640,7 @@
                     <td>Neutrals</td>
                 </tr>
             
-                <tr data-original-index="1">
+                <tr data-original-index="1" onclick="highlightState('Lolia', '#66c2a5')">
                     <td><span class="color-box" style="background-color: #66c2a5; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Lolia</td>
                     <td>Chueguge</td>
@@ -12653,7 +12653,7 @@
                     <td>Kingdom of Lolia</td>
                 </tr>
             
-                <tr data-original-index="2">
+                <tr data-original-index="2" onclick="highlightState('Adnicto', '#fc8d62')">
                     <td><span class="color-box" style="background-color: #fc8d62; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Adnicto</td>
                     <td>Batua</td>
@@ -12666,7 +12666,7 @@
                     <td>Adnictan Empire</td>
                 </tr>
             
-                <tr data-original-index="3">
+                <tr data-original-index="3" onclick="highlightState('Oberischia', '#8da0cb')">
                     <td><span class="color-box" style="background-color: #8da0cb; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Oberischia</td>
                     <td>Eschb</td>
@@ -12679,7 +12679,7 @@
                     <td>Principality of Oberischia</td>
                 </tr>
             
-                <tr data-original-index="4">
+                <tr data-original-index="4" onclick="highlightState('Kakuhia', '#e78ac3')">
                     <td><span class="color-box" style="background-color: #e78ac3; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Kakuhia</td>
                     <td>Lotan</td>
@@ -12692,7 +12692,7 @@
                     <td>Duchy of Kakuhia</td>
                 </tr>
             
-                <tr data-original-index="5">
+                <tr data-original-index="5" onclick="highlightState('Citripi', '#a6d854')">
                     <td><span class="color-box" style="background-color: #a6d854; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Citripi</td>
                     <td>Sgurgo</td>
@@ -12705,7 +12705,7 @@
                     <td>Federation of Citripi</td>
                 </tr>
             
-                <tr data-original-index="6">
+                <tr data-original-index="6" onclick="highlightState('Vinivia', '#ffd92f')">
                     <td><span class="color-box" style="background-color: #ffd92f; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Vinivia</td>
                     <td>Citrino</td>
@@ -12718,7 +12718,7 @@
                     <td>Grand Duchy of Vinivia</td>
                 </tr>
             
-                <tr data-original-index="7">
+                <tr data-original-index="7" onclick="highlightState('Boskirkia', '#eaa089')">
                     <td><span class="color-box" style="background-color: #eaa089; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Boskirkia</td>
                     <td>Miton</td>
@@ -12731,7 +12731,7 @@
                     <td>Boskirkian Union</td>
                 </tr>
             
-                <tr data-original-index="8">
+                <tr data-original-index="8" onclick="highlightState('Olalamaa', '#ff8b7f')">
                     <td><span class="color-box" style="background-color: #ff8b7f; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Olalamaa</td>
                     <td>Bjorata</td>
@@ -12744,7 +12744,7 @@
                     <td>Olalamaan Theocracy</td>
                 </tr>
             
-                <tr data-original-index="9">
+                <tr data-original-index="9" onclick="highlightState('Haumaa', '#88b1e6')">
                     <td><span class="color-box" style="background-color: #88b1e6; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Haumaa</td>
                     <td>Seila</td>
@@ -12757,7 +12757,7 @@
                     <td>Principality of Haumaa</td>
                 </tr>
             
-                <tr data-original-index="10">
+                <tr data-original-index="10" onclick="highlightState('Detivis', '#f788d5')">
                     <td><span class="color-box" style="background-color: #f788d5; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>Detivis</td>
                     <td>Detivis</td>
@@ -13139,7 +13139,11 @@
         function clearHighlights() {
             highlightedIds.forEach(id => {
                 const dot = document.querySelector(`.burg-dot[data-id="${id}"]`);
-                if (dot) dot.classList.remove('highlighted');
+                if (dot) {
+                    dot.classList.remove('highlighted');
+                    dot.style.fill = ''; // Reset color
+                    dot.style.stroke = ''; // Reset stroke
+                }
             });
             highlightedIds = [];
         }
@@ -13219,6 +13223,31 @@
         
         function highlightBurg(id) {
             selectBurg(id);
+        }
+
+        function clearHighlights() {
+            highlightedIds.forEach(id => {
+                const dot = document.querySelector(`.burg-dot[data-id="${id}"]`);
+                if (dot) {
+                    dot.classList.remove('highlighted');
+                    dot.style.fill = ''; // Reset color
+                    dot.style.stroke = ''; // Reset stroke
+                }
+            });
+            highlightedIds = [];
+        }
+
+        function highlightState(stateName, color) {
+            clearHighlights();
+            if (selectedId) selectBurg(null);
+
+            const dots = document.querySelectorAll(`.burg-dot[data-state="${stateName}"]`);
+            dots.forEach(dot => {
+                dot.classList.add('highlighted');
+                dot.style.fill = color;
+                dot.style.stroke = '#000'; // Make it pop
+                highlightedIds.push(dot.getAttribute('data-id'));
+            });
         }
 
         function highlightTradeRoute(fromId, toId) {
