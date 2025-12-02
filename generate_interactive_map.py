@@ -216,9 +216,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         cy = b['y']
         
         # Radius based on population (sqrt scale)
-        r = math.sqrt(b['population']) / 10
+        r = math.sqrt(b['population']) / 15
         if r < 3: r = 3
-        if r > 20: r = 20
+        if r > 12: r = 12
         
         color = type_colors.get(b.get('type'), '#95a5a6')
         
