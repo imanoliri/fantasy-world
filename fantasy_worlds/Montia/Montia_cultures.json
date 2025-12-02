@@ -1,0 +1,165 @@
+[
+    {
+        "name": "Wildlands",
+        "i": 0,
+        "base": 1,
+        "origins": [
+            null
+        ],
+        "shield": "round"
+    },
+    {
+        "name": "Nortumbic",
+        "base": 1,
+        "shield": "heater",
+        "center": 3488,
+        "i": 1,
+        "color": "#ccebc5",
+        "type": "Highland",
+        "expansionism": 2.5,
+        "origins": [
+            0
+        ],
+        "code": "No"
+    },
+    {
+        "name": "Angshire",
+        "base": 1,
+        "shield": "heater",
+        "center": 5070,
+        "i": 2,
+        "color": "#fdb462",
+        "type": "Naval",
+        "expansionism": 3.6,
+        "origins": [
+            0
+        ],
+        "code": "An"
+    },
+    {
+        "name": "Enlandic",
+        "base": 1,
+        "shield": "heater",
+        "center": 1782,
+        "i": 3,
+        "color": "#ffed6f",
+        "type": "Highland",
+        "expansionism": 3.3,
+        "origins": [
+            0
+        ],
+        "code": "En"
+    },
+    {
+        "name": "Uruk",
+        "base": 37,
+        "shield": "urukHai",
+        "center": 2194,
+        "i": 4,
+        "color": "#8dd3c7",
+        "type": "Highland",
+        "expansionism": 2.5,
+        "origins": [
+            0
+        ],
+        "code": "Ur"
+    },
+    {
+        "name": "Aj'Snaga",
+        "base": 41,
+        "shield": "fantasy1",
+        "center": 5026,
+        "i": 5,
+        "color": "#bc80bd",
+        "type": "Lake",
+        "expansionism": 2.5,
+        "origins": [
+            0
+        ],
+        "code": "Aj"
+    },
+    {
+        "name": "Yotunn",
+        "base": 38,
+        "shield": "pavise",
+        "center": 1037,
+        "i": 6,
+        "color": "#fccde5",
+        "type": "Generic",
+        "expansionism": 2.3,
+        "origins": [
+            0
+        ],
+        "code": "Yo"
+    },
+    {
+        "name": "Norse",
+        "base": 6,
+        "shield": "oldFrench",
+        "center": 6138,
+        "i": 7,
+        "color": "#80b1d3",
+        "type": "Generic",
+        "expansionism": 1.3,
+        "origins": [
+            0
+        ],
+        "code": "NO"
+    },
+    {
+        "name": "Romian",
+        "base": 8,
+        "shield": "roman",
+        "center": 3861,
+        "i": 8,
+        "color": "#b3de69",
+        "type": "Highland",
+        "expansionism": 2.8,
+        "origins": [
+            0
+        ],
+        "code": "Ro"
+    },
+    {
+        "name": "Kobblin",
+        "base": 36,
+        "shield": "moriaOrc",
+        "center": 749,
+        "i": 9,
+        "color": "#c6b9c1",
+        "type": "Generic",
+        "expansionism": 1.7,
+        "origins": [
+            0
+        ],
+        "code": "Ko"
+    },
+    {
+        "name": "Westen",
+        "base": 1,
+        "shield": "heater",
+        "center": 3083,
+        "i": 10,
+        "color": "#fb8072",
+        "type": "Highland",
+        "expansionism": 2.5,
+        "origins": [
+            0
+        ],
+        "code": "We"
+    },
+    {
+        "name": "Kentian",
+        "base": 1,
+        "shield": "heater",
+        "center": 3736,
+        "i": 11,
+        "color": "#dababf",
+        "type": "Highland",
+        "expansionism": 3.8,
+        "origins": [
+            0
+        ],
+        "code": "Ke"
+    }
+]

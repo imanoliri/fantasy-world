@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Analysis: Bouzonia</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    </head><body>
+    <a href="../index.html" class="back-link">&larr; Back to Index</a>
+    <h1>World Analysis: Bouzonia</h1>
+    <div class="card"><h2>General Statistics</h2><div class="stat-grid">
+        <div class="stat-box"><div class="stat-value">18</div><div>States</div></div>
+        <div class="stat-box"><div class="stat-value">355</div><div>Burgs</div></div>
+        <div class="stat-box"><div class="stat-value">542,917</div><div>Total Area</div></div>
+        <div class="stat-box"><div class="stat-value">15,601,408</div><div>Total Pop</div></div>
+    </div></div>
+    
+        <div class="card" id="biomes-section">
+            <div class="header-row">
+                <h2>Biomes</h2>
+                <div class="toggle-container">
+                    <span>Table</span>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="toggleView('biomes-section')">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Chart</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>Biome</th><th>Area</th><th>% Area</th><th>Cells</th></tr></thead>
+                    <tbody><tr><td><span class="color-box" style="background-color: #466eab"></span>Marine</td>
+                      <td>408,299</td><td>75.2%</td><td>2974</td></tr><tr><td><span class="color-box" style="background-color: #409c43"></span>Temperate rainforest</td>
+                      <td>30,584</td><td>5.6%</td><td>636</td></tr><tr><td><span class="color-box" style="background-color: #29bc56"></span>Temperate deciduous forest</td>
+                      <td>27,732</td><td>5.1%</td><td>544</td></tr><tr><td><span class="color-box" style="background-color: #0b9131"></span>Wetland</td>
+                      <td>25,347</td><td>4.7%</td><td>575</td></tr><tr><td><span class="color-box" style="background-color: #7dcb35"></span>Tropical rainforest</td>
+                      <td>16,344</td><td>3.0%</td><td>414</td></tr><tr><td><span class="color-box" style="background-color: #b6d95d"></span>Tropical seasonal forest</td>
+                      <td>12,339</td><td>2.3%</td><td>258</td></tr><tr><td><span class="color-box" style="background-color: #c8d68f"></span>Grassland</td>
+                      <td>12,296</td><td>2.3%</td><td>191</td></tr><tr><td><span class="color-box" style="background-color: #d2d082"></span>Savanna</td>
+                      <td>8,960</td><td>1.7%</td><td>143</td></tr><tr><td><span class="color-box" style="background-color: #4b6b32"></span>Taiga</td>
+                      <td>953</td><td>0.2%</td><td>14</td></tr><tr><td><span class="color-box" style="background-color: #d5e7eb"></span>Glacier</td>
+                      <td>63</td><td>0.0%</td><td>1</td></tr></tbody>
+                </table>
+            </div>
+            <div class="chart-container"><canvas id="biomesChart"></canvas></div>
+        </div>
+        <div class="card" id="states-section">
+            <div class="header-row">
+                <h2>States</h2>
+                <div class="toggle-container">
+                    <span>Table</span>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="toggleView('states-section')">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Chart</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>State</th><th>Area</th><th>Population</th><th>Burgs</th></tr></thead>
+                    <tbody><tr><td><span class="color-box" style="background-color: #a2db7d"></span>Soneia</td>
+                      <td>11,985</td><td>1,711,918</td><td>45</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Caustow</td>
+                      <td>12,024</td><td>1,664,640</td><td>35</td></tr><tr><td><span class="color-box" style="background-color: #e9f051"></span>Bolteria</td>
+                      <td>12,121</td><td>1,602,037</td><td>36</td></tr><tr><td><span class="color-box" style="background-color: #ff8b7e"></span>Witland</td>
+                      <td>20,760</td><td>1,526,810</td><td>30</td></tr><tr><td><span class="color-box" style="background-color: #ffd92f"></span>Monorham</td>
+                      <td>10,056</td><td>1,442,516</td><td>34</td></tr><tr><td><span class="color-box" style="background-color: #e290dc"></span>Watchet</td>
+                      <td>10,190</td><td>1,101,678</td><td>22</td></tr><tr><td><span class="color-box" style="background-color: #8da0cb"></span>Kendenbia</td>
+                      <td>5,802</td><td>901,839</td><td>21</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Padstedia</td>
+                      <td>7,084</td><td>865,851</td><td>19</td></tr><tr><td><span class="color-box" style="background-color: #ede35b"></span>Cokenilia</td>
+                      <td>10,930</td><td>653,439</td><td>17</td></tr><tr><td><span class="color-box" style="background-color: #6be3ab"></span>Wathamia</td>
+                      <td>4,859</td><td>617,885</td><td>15</td></tr><tr><td><span class="color-box" style="background-color: #fda8b9"></span>Congia</td>
+                      <td>4,174</td><td>555,028</td><td>13</td></tr><tr><td><span class="color-box" style="background-color: #ff9cba"></span>Taria</td>
+                      <td>4,846</td><td>528,741</td><td>12</td></tr><tr><td><span class="color-box" style="background-color: #ffb066"></span>Knutland</td>
+                      <td>3,301</td><td>526,136</td><td>14</td></tr><tr><td><span class="color-box" style="background-color: #e78ac3"></span>Maton</td>
+                      <td>3,528</td><td>506,839</td><td>10</td></tr><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Whitfordia</td>
+                      <td>3,758</td><td>478,699</td><td>13</td></tr><tr><td><span class="color-box" style="background-color: #eaeb58"></span>Mitburia</td>
+                      <td>3,556</td><td>401,979</td><td>6</td></tr><tr><td><span class="color-box" style="background-color: #9f9cdc"></span>Draxted</td>
+                      <td>4,026</td><td>360,282</td><td>9</td></tr><tr><td><span class="color-box" style="background-color: #90a6e5"></span>Oldonland</td>
+                      <td>1,618</td><td>155,083</td><td>4</td></tr></tbody>
+                </table>
+            </div>
+            <div class="chart-container"><canvas id="statesChart"></canvas></div>
+        </div>
+        <div class="card" id="burgs-section">
+            <div class="header-row">
+                <h2>Largest Burgs</h2>
+                <div class="toggle-container">
+                    <span>Table</span>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="toggleView('burgs-section')">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Chart</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>Name</th><th>Population</th><th>State</th><th>Type</th></tr></thead>
+                    <tbody><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Thetham</td><td>80,852,000</td><td>Whitfordia</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #e9f051"></span>Bolter</td><td>38,662,000</td><td>Bolteria</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Brampsea</td><td>34,408,000</td><td>Caustow</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Newburyme</td><td>27,527,000</td><td>Whitfordia</td><td>Lake</td></tr><tr><td><span class="color-box" style="background-color: #6be3ab"></span>Perster</td><td>27,111,000</td><td>Wathamia</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Castre</td><td>26,946,000</td><td>Caustow</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Swaton</td><td>25,633,000</td><td>Caustow</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #e9f051"></span>Stansle</td><td>25,520,000</td><td>Bolteria</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #9f9cdc"></span>South</td><td>23,760,000</td><td>Draxted</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #ffb066"></span>Marshbou</td><td>23,438,000</td><td>Knutland</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Uxbridmouth</td><td>23,404,000</td><td>Padstedia</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #e290dc"></span>Bucking</td><td>22,031,000</td><td>Watchet</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #ffb066"></span>Wenley</td><td>21,021,000</td><td>Knutland</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #ffb066"></span>Burley</td><td>19,868,000</td><td>Knutland</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #a2db7d"></span>Stotford</td><td>19,551,000</td><td>Soneia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #6be3ab"></span>Clifracthe</td><td>19,348,000</td><td>Wathamia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #e290dc"></span>Knavewich</td><td>18,729,000</td><td>Watchet</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #a2db7d"></span>Altonby</td><td>18,075,000</td><td>Soneia</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #ffb066"></span>Garingford</td><td>17,924,000</td><td>Knutland</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #a2db7d"></span>Chawces</td><td>17,038,000</td><td>Soneia</td><td>Generic</td></tr></tbody>
+                </table>
+            </div>
+            <div class="chart-container"><canvas id="burgsChart"></canvas></div>
+        </div>
+        <div class="card" id="smallest-burgs-section">
+            <div class="header-row">
+                <h2>Smallest Burgs</h2>
+                <div class="toggle-container">
+                    <span>Table</span>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="toggleView('smallest-burgs-section')">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Chart</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>Name</th><th>Population</th><th>State</th><th>Type</th></tr></thead>
+                    <tbody><tr><td><span class="color-box" style="background-color: #e9f051"></span>Durpor</td><td>547,000</td><td>Bolteria</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #e290dc"></span>Winedonbury</td><td>550,000</td><td>Watchet</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #eaeb58"></span>Bosbury</td><td>576,000</td><td>Mitburia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #a2db7d"></span>Guildbury</td><td>610,000</td><td>Soneia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #ff8b7e"></span>Tretoncesey</td><td>669,000</td><td>Witland</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #e9f051"></span>Dunsdon</td><td>675,000</td><td>Bolteria</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #e9f051"></span>Hertford</td><td>893,000</td><td>Bolteria</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #e290dc"></span>Alther</td><td>896,000</td><td>Watchet</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #e290dc"></span>Somerton</td><td>900,000</td><td>Watchet</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Blandbuton</td><td>949,000</td><td>Caustow</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #a2db7d"></span>Manrith</td><td>953,000</td><td>Soneia</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #e9f051"></span>Torkneth</td><td>962,000</td><td>Bolteria</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #e78ac3"></span>Knutster</td><td>976,000</td><td>Maton</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #e290dc"></span>Watham</td><td>978,000</td><td>Watchet</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #ffd92f"></span>Hitchtonor</td><td>991,000</td><td>Monorham</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #ff8b7e"></span>Dodbrid</td><td>994,000</td><td>Witland</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Dudlingin</td><td>996,000</td><td>Caustow</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Lympsham</td><td>1,005,000</td><td>Caustow</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Tutham</td><td>1,007,000</td><td>Padstedia</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Skiplemave</td><td>1,016,000</td><td>Padstedia</td><td>Hunting</td></tr></tbody>
+                </table>
+            </div>
+            <div class="chart-container"><canvas id="smallestBurgsChart"></canvas></div>
+        </div>
+    <script>
+        function toggleView(id) { document.getElementById(id).classList.toggle('show-table'); }
+        
+        new Chart(document.getElementById('biomesChart').getContext('2d'), {
+            type: 'bar',
+            data: {"labels": ["Global Biome Distribution"], "datasets": [{"label": "Glacier", "data": [63], "backgroundColor": "#d5e7eb", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Taiga", "data": [953], "backgroundColor": "#4b6b32", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Temperate rainforest", "data": [30584], "backgroundColor": "#409c43", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Temperate deciduous forest", "data": [27732], "backgroundColor": "#29bc56", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Grassland", "data": [12296], "backgroundColor": "#c8d68f", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Wetland", "data": [25347], "backgroundColor": "#0b9131", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Tropical seasonal forest", "data": [12339], "backgroundColor": "#b6d95d", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Tropical rainforest", "data": [16344], "backgroundColor": "#7dcb35", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Savanna", "data": [8960], "backgroundColor": "#d2d082", "barPercentage": 0.9, "categoryPercentage": 1.0}]},
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { 
+                    legend: { display: true, position: 'bottom' }, 
+                    title: { display: true, text: 'Biome Distribution (Cold to Warm)' } 
+                }, scales: { x: { stacked: true, display: false, max: 134618 }, y: { stacked: true, display: false } }
+            }
+        });
+        new Chart(document.getElementById('statesChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ["Soneia", "Caustow", "Bolteria", "Witland", "Monorham", "Watchet", "Kendenbia", "Padstedia", "Cokenilia", "Wathamia", "Congia", "Taria", "Knutland", "Maton", "Whitfordia", "Mitburia", "Draxted", "Oldonland"],
+                datasets: [{
+                    label: 'Population',
+                    data: [1711918.2956814766, 1664640.5994296074, 1602037.503182888, 1526810.4011416435, 1442516.4990127087, 1101678.9973676205, 901839.1957879066, 865851.0980010033, 653439.901471138, 617885.7008814812, 555028.5995304585, 528741.9967651367, 526136.6000175476, 506839.5998477936, 478699.2991566658, 401979.1007936001, 360282.09936618805, 155083.0980539322],
+                    backgroundColor: ["#a2db7d", "#a6d854", "#e9f051", "#ff8b7e", "#ffd92f", "#e290dc", "#8da0cb", "#fc8d62", "#ede35b", "#6be3ab", "#fda8b9", "#ff9cba", "#ffb066", "#e78ac3", "#66c2a5", "#eaeb58", "#9f9cdc", "#90a6e5"],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { 
+                    legend: { display: false, position: 'top' }, 
+                    title: { display: true, text: 'State Populations' } 
+                }, scales: { y: { ticks: { autoSkip: false } } }
+            }
+        });
+        new Chart(document.getElementById('burgsChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ["Thetham", "Bolter", "Brampsea", "Newburyme", "Perster", "Castre", "Swaton", "Stansle", "South", "Marshbou", "Uxbridmouth", "Bucking", "Wenley", "Burley", "Stotford", "Clifracthe", "Knavewich", "Altonby", "Garingford", "Chawces"],
+                datasets: [{
+                    label: 'Population',
+                    data: [80852000.0, 38662000.0, 34408000.0, 27527000.0, 27111000.0, 26946000.0, 25633000.0, 25520000.0, 23760000.0, 23438000.0, 23404000.0, 22031000.0, 21021000.0, 19868000.0, 19551000.0, 19348000.0, 18729000.0, 18075000.0, 17924000.0, 17038000.0],
+                    backgroundColor: ["#66c2a5", "#e9f051", "#a6d854", "#66c2a5", "#6be3ab", "#a6d854", "#a6d854", "#e9f051", "#9f9cdc", "#ffb066", "#fc8d62", "#e290dc", "#ffb066", "#ffb066", "#a2db7d", "#6be3ab", "#e290dc", "#a2db7d", "#ffb066", "#a2db7d"],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { 
+                    legend: { display: false, position: 'top' }, 
+                    title: { display: true, text: 'Largest Burgs' } 
+                }, scales: { y: { ticks: { autoSkip: false } } }
+            }
+        });
+        new Chart(document.getElementById('smallestBurgsChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ["Durpor", "Winedonbury", "Bosbury", "Guildbury", "Tretoncesey", "Dunsdon", "Hertford", "Alther", "Somerton", "Blandbuton", "Manrith", "Torkneth", "Knutster", "Watham", "Hitchtonor", "Dodbrid", "Dudlingin", "Lympsham", "Tutham", "Skiplemave"],
+                datasets: [{
+                    label: 'Population',
+                    data: [547000.0, 550000.0, 576000.0, 610000.0, 669000.0, 675000.0, 893000.0, 896000.0, 900000.0, 949000.0, 953000.0, 962000.0, 976000.0, 978000.0, 991000.0, 994000.0, 996000.0, 1005000.0, 1007000.0, 1016000.0],
+                    backgroundColor: ["#e9f051", "#e290dc", "#eaeb58", "#a2db7d", "#ff8b7e", "#e9f051", "#e9f051", "#e290dc", "#e290dc", "#a6d854", "#a2db7d", "#e9f051", "#e78ac3", "#e290dc", "#ffd92f", "#ff8b7e", "#a6d854", "#a6d854", "#fc8d62", "#fc8d62"],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { 
+                    legend: { display: false, position: 'top' }, 
+                    title: { display: true, text: 'Smallest Burgs' } 
+                }, scales: { y: { ticks: { autoSkip: false } } }
+            }
+        });
+    </script></body></html>

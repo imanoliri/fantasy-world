@@ -1,0 +1,179 @@
+[
+    {
+        "name": "Wildlands",
+        "i": 0,
+        "base": 1,
+        "origins": [
+            null
+        ],
+        "shield": "round"
+    },
+    {
+        "name": "Soumi",
+        "base": 9,
+        "shield": "pavise",
+        "center": 5596,
+        "i": 1,
+        "color": "#c6b9c1",
+        "type": "Nomadic",
+        "expansionism": 3.9,
+        "origins": [
+            0
+        ],
+        "code": "So"
+    },
+    {
+        "name": "Slovan",
+        "base": 5,
+        "shield": "polish",
+        "center": 4660,
+        "i": 2,
+        "color": "#bc80bd",
+        "type": "Generic",
+        "expansionism": 1.6,
+        "origins": [
+            0
+        ],
+        "code": "Sl"
+    },
+    {
+        "name": "Tallian",
+        "base": 3,
+        "shield": "horsehead",
+        "center": 2810,
+        "i": 3,
+        "color": "#fdb462",
+        "type": "Generic",
+        "expansionism": 2,
+        "origins": [
+            0
+        ],
+        "code": "Ta"
+    },
+    {
+        "name": "Portuzian",
+        "base": 13,
+        "shield": "renaissance",
+        "center": 3482,
+        "i": 4,
+        "color": "#fb8072",
+        "type": "Nomadic",
+        "expansionism": 2,
+        "origins": [
+            0
+        ],
+        "code": "Po"
+    },
+    {
+        "name": "Vengrian",
+        "base": 15,
+        "shield": "horsehead2",
+        "center": 4194,
+        "i": 5,
+        "color": "#ffed6f",
+        "type": "Nomadic",
+        "expansionism": 2.7,
+        "origins": [
+            0
+        ],
+        "code": "Ve"
+    },
+    {
+        "name": "Elladan",
+        "base": 7,
+        "shield": "boeotian",
+        "center": 2117,
+        "i": 6,
+        "color": "#eb8de7",
+        "type": "Generic",
+        "expansionism": 1.8,
+        "origins": [
+            0
+        ],
+        "code": "El"
+    },
+    {
+        "name": "Luari",
+        "base": 2,
+        "shield": "french",
+        "center": 5399,
+        "i": 7,
+        "color": "#fccde5",
+        "type": "Nomadic",
+        "expansionism": 2.1,
+        "origins": [
+            0
+        ],
+        "code": "Lu"
+    },
+    {
+        "name": "Romian",
+        "base": 8,
+        "shield": "roman",
+        "center": 2492,
+        "i": 8,
+        "color": "#dababf",
+        "type": "Generic",
+        "expansionism": 1.7,
+        "origins": [
+            0
+        ],
+        "code": "Ro"
+    },
+    {
+        "name": "Angshire",
+        "base": 1,
+        "shield": "wedged",
+        "center": 7249,
+        "i": 9,
+        "color": "#b3de69",
+        "type": "Naval",
+        "expansionism": 2.8,
+        "origins": [
+            0
+        ],
+        "code": "An"
+    },
+    {
+        "name": "Shwazen",
+        "base": 0,
+        "shield": "swiss",
+        "center": 3681,
+        "i": 10,
+        "color": "#80b1d3",
+        "type": "River",
+        "expansionism": 2.5,
+        "origins": [
+            0
+        ],
+        "code": "Sh"
+    },
+    {
+        "name": "Astellian",
+        "base": 4,
+        "shield": "spanish",
+        "center": 3969,
+        "i": 11,
+        "color": "#ccebc5",
+        "type": "Naval",
+        "expansionism": 2.1,
+        "origins": [
+            0
+        ],
+        "code": "As"
+    },
+    {
+        "name": "Norse",
+        "base": 6,
+        "shield": "heater",
+        "center": 4022,
+        "i": 12,
+        "color": "#8dd3c7",
+        "type": "Highland",
+        "expansionism": 1.2,
+        "origins": [
+            0
+        ],
+        "code": "No"
+    }
+]

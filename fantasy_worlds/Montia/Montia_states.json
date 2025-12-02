@@ -1,0 +1,3740 @@
+[
+    {
+        "i": 0,
+        "name": "Neutrals",
+        "urban": 0,
+        "rural": 0,
+        "burgs": 0,
+        "area": 0,
+        "cells": 0,
+        "neighbors": [],
+        "diplomacy": [
+            [
+                "Margek-Shashian War",
+                "Margek declared a war on its rival Shash",
+                "Shash's ally Cothaz joined the war on defenders side",
+                "Frightened by Margek, Stap severed the defense pact with Shash",
+                "Shash's ally Pepjige joined the war on defenders side",
+                "Shash's ally Stapia joined the war on defenders side"
+            ]
+        ],
+        "provinces": []
+    },
+    {
+        "i": 1,
+        "color": "#66c2a5",
+        "name": "Shash",
+        "expansionism": 2.1,
+        "capital": 1,
+        "type": "Lake",
+        "center": 2675,
+        "culture": 5,
+        "coa": {
+            "t1": "barry-argent-azure",
+            "charges": [
+                {
+                    "charge": "snail",
+                    "t": "sable",
+                    "p": "e",
+                    "t2": "sable",
+                    "size": 1.5
+                }
+            ],
+            "shield": "fantasy1"
+        },
+        "pole": [
+            1512,
+            652
+        ],
+        "urban": 87.85699999999999,
+        "rural": 747.4354434609413,
+        "burgs": 8,
+        "area": 18574,
+        "cells": 66,
+        "neighbors": [
+            3,
+            4,
+            18
+        ],
+        "campaigns": [
+            {
+                "name": "Culesean Intervention",
+                "start": 1748,
+                "end": 1749
+            },
+            {
+                "name": "Vrean Invasion",
+                "start": 1980,
+                "end": 1987
+            },
+            {
+                "name": "Margek War",
+                "start": 1984,
+                "end": 1987
+            },
+            {
+                "name": "Margek-Shashian War",
+                "start": 1991,
+                "attacker": 18,
+                "defender": 1
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "x",
+            "Friendly",
+            "Neutral",
+            "Suspicion",
+            "Suspicion",
+            "Unknown",
+            "Neutral",
+            "Ally",
+            "Suspicion",
+            "Suspicion",
+            "Neutral",
+            "Ally",
+            "Unknown",
+            "Ally",
+            "Suspicion",
+            "Suspicion",
+            "Neutral",
+            "Enemy",
+            "Ally"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Shash",
+        "provinces": [
+            1,
+            2,
+            87
+        ],
+        "alert": 2.44,
+        "military": [
+            {
+                "i": 0,
+                "a": 2976,
+                "cell": 2777,
+                "x": 1529.46,
+                "y": 688.91,
+                "bx": 1529.46,
+                "by": 688.91,
+                "u": {
+                    "archers": 1384,
+                    "cavalry": 235,
+                    "artillery": 33,
+                    "infantry": 1324
+                },
+                "n": 0,
+                "name": "1st (Akkash) Regiment",
+                "state": 1,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 2520,
+                "cell": 2971,
+                "x": 1560.4,
+                "y": 727.1,
+                "bx": 1560.4,
+                "by": 727.1,
+                "u": {
+                    "archers": 1057,
+                    "cavalry": 254,
+                    "artillery": 23,
+                    "infantry": 1186
+                },
+                "n": 0,
+                "name": "2nd (Akkash) Regiment",
+                "state": 1,
+                "icon": "⚔️"
+            }
+        ]
+    },
+    {
+        "i": 2,
+        "color": "#fc8d62",
+        "name": "Kran'ja",
+        "expansionism": 1.4,
+        "capital": 2,
+        "type": "Lake",
+        "center": 5163,
+        "culture": 5,
+        "coa": {
+            "t1": "bendy-argent-azure",
+            "charges": [
+                {
+                    "charge": "eagle",
+                    "t": "vert",
+                    "p": "def",
+                    "t2": "sable",
+                    "t3": "gules",
+                    "size": 0.5
+                }
+            ],
+            "shield": "fantasy1"
+        },
+        "pole": [
+            1314,
+            1034
+        ],
+        "urban": 115.834,
+        "rural": 477.1606812477112,
+        "burgs": 8,
+        "area": 12977,
+        "cells": 47,
+        "neighbors": [
+            14,
+            18,
+            8
+        ],
+        "campaigns": [
+            {
+                "name": "Aj'hish War",
+                "start": 1800,
+                "end": 1809
+            },
+            {
+                "name": "Pepjigean Conflict",
+                "start": 1858,
+                "end": 1865
+            },
+            {
+                "name": "Cothish Expedition",
+                "start": 1929,
+                "end": 1930
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Friendly",
+            "x",
+            "Neutral",
+            "Friendly",
+            "Friendly",
+            "Friendly",
+            "Unknown",
+            "Suspicion",
+            "Friendly",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Neutral",
+            "Suspicion",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Rival",
+            "Ally"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Kran'ja",
+        "provinces": [
+            3,
+            4
+        ],
+        "alert": 1.4,
+        "military": [
+            {
+                "i": 0,
+                "a": 2564,
+                "cell": 5163,
+                "x": 1325.65,
+                "y": 1025.45,
+                "bx": 1325.65,
+                "by": 1025.45,
+                "u": {
+                    "archers": 1080,
+                    "cavalry": 255,
+                    "infantry": 1190,
+                    "artillery": 39
+                },
+                "n": 0,
+                "name": "1st (Caj'i) Regiment",
+                "state": 2,
+                "icon": "👑"
+            },
+            {
+                "i": 1,
+                "a": 1425,
+                "cell": 5018,
+                "x": 1222.3,
+                "y": 1004.8,
+                "bx": 1222.3,
+                "by": 1004.8,
+                "u": {
+                    "archers": 530,
+                    "cavalry": 170,
+                    "artillery": 25,
+                    "infantry": 700
+                },
+                "n": 0,
+                "name": "2nd (Goz'har) Regiment",
+                "state": 2,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 7,
+                "cell": 5018,
+                "x": 1223.15,
+                "y": 1015.09,
+                "bx": 1223.15,
+                "by": 1015.09,
+                "u": {
+                    "fleet": 7
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 2,
+                "icon": "🌊"
+            },
+            {
+                "i": 3,
+                "a": 4,
+                "cell": 5419,
+                "x": 1284.23,
+                "y": 1071.88,
+                "bx": 1284.23,
+                "by": 1071.88,
+                "u": {
+                    "fleet": 4
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 2,
+                "icon": "🌊"
+            },
+            {
+                "i": 4,
+                "a": 2,
+                "cell": 4888,
+                "x": 1320.26,
+                "y": 989.45,
+                "bx": 1320.26,
+                "by": 989.45,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 2,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 3,
+        "color": "#8da0cb",
+        "name": "Culese",
+        "expansionism": 2.6,
+        "capital": 3,
+        "type": "Lake",
+        "center": 2558,
+        "culture": 5,
+        "coa": {
+            "t1": "or",
+            "charges": [
+                {
+                    "charge": "ratRampant",
+                    "t": "sable",
+                    "p": "e",
+                    "t2": "sable",
+                    "size": 1.5
+                }
+            ],
+            "shield": "fantasy1"
+        },
+        "pole": [
+            1402,
+            660
+        ],
+        "urban": 153.39899999999997,
+        "rural": 1032.7043289542198,
+        "burgs": 16,
+        "area": 34653,
+        "cells": 135,
+        "neighbors": [
+            17,
+            4,
+            1,
+            14,
+            18
+        ],
+        "campaigns": [
+            {
+                "name": "Vrean Conflict",
+                "start": 1576,
+                "end": 1578
+            },
+            {
+                "name": "Margekan Invasion",
+                "start": 1801,
+                "end": 1802
+            },
+            {
+                "name": "Rokan Invasion",
+                "start": 1822,
+                "end": 1829
+            },
+            {
+                "name": "Shash Campaign",
+                "start": 1869,
+                "end": 1882
+            },
+            {
+                "name": "Chalkan Conflict",
+                "start": 1916,
+                "end": 1918
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Neutral",
+            "x",
+            "Suspicion",
+            "Ally",
+            "Neutral",
+            "Unknown",
+            "Ally",
+            "Ally",
+            "Ally",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Suspicion",
+            "Ally",
+            "Friendly",
+            "Suspicion",
+            "Suspicion",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Culese",
+        "provinces": [
+            5,
+            6,
+            7,
+            8,
+            88,
+            89
+        ],
+        "alert": 0.46,
+        "military": [
+            {
+                "i": 0,
+                "a": 1264,
+                "cell": 2558,
+                "x": 1401.6,
+                "y": 652.1,
+                "bx": 1401.6,
+                "by": 652.1,
+                "u": {
+                    "archers": 418,
+                    "cavalry": 227,
+                    "artillery": 15,
+                    "infantry": 604
+                },
+                "n": 0,
+                "name": "1st (Can'tu) Regiment",
+                "state": 3,
+                "icon": "👑"
+            },
+            {
+                "i": 1,
+                "a": 2,
+                "cell": 2558,
+                "x": 1393.77,
+                "y": 650.15,
+                "bx": 1393.77,
+                "by": 650.15,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 3,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 4,
+        "color": "#e78ac3",
+        "name": "Vrea",
+        "expansionism": 4.3,
+        "capital": 4,
+        "type": "Generic",
+        "center": 1066,
+        "culture": 9,
+        "coa": {
+            "t1": "gules",
+            "ordinaries": [
+                {
+                    "ordinary": "bordure",
+                    "t": "or"
+                }
+            ],
+            "shield": "moriaOrc"
+        },
+        "pole": [
+            1496,
+            515
+        ],
+        "urban": 210.50600000000003,
+        "rural": 2308.4389254152775,
+        "burgs": 37,
+        "area": 79882,
+        "cells": 317,
+        "neighbors": [
+            10,
+            3,
+            1
+        ],
+        "campaigns": [
+            {
+                "name": "Culesean Conflict",
+                "start": 1767,
+                "end": 1775
+            },
+            {
+                "name": "Stap Conflict",
+                "start": 1772,
+                "end": 1777
+            },
+            {
+                "name": "Shash War",
+                "start": 1988,
+                "end": 1992
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Friendly",
+            "Suspicion",
+            "x",
+            "Unknown",
+            "Friendly",
+            "Friendly",
+            "Ally",
+            "Unknown",
+            "Suspicion",
+            "Ally",
+            "Suspicion",
+            "Unknown",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Empire",
+        "fullName": "Vrean Empire",
+        "provinces": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            90,
+            91
+        ],
+        "alert": 0.29,
+        "military": [
+            {
+                "i": 0,
+                "a": 1074,
+                "cell": 1791,
+                "x": 1548.7,
+                "y": 527.95,
+                "bx": 1548.7,
+                "by": 527.95,
+                "u": {
+                    "archers": 426,
+                    "cavalry": 152,
+                    "infantry": 494,
+                    "artillery": 2
+                },
+                "n": 0,
+                "name": "1st (Padsham) Regiment",
+                "state": 4,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 699,
+                "cell": 1806,
+                "x": 1728.87,
+                "y": 526.11,
+                "bx": 1728.87,
+                "by": 526.11,
+                "u": {
+                    "archers": 345,
+                    "cavalry": 48,
+                    "infantry": 303,
+                    "artillery": 3
+                },
+                "n": 0,
+                "name": "2nd (Kuipuinx) Regiment",
+                "state": 4,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 687,
+                "cell": 1066,
+                "x": 1534.35,
+                "y": 426.75,
+                "bx": 1534.35,
+                "by": 426.75,
+                "u": {
+                    "archers": 362,
+                    "cavalry": 33,
+                    "infantry": 284,
+                    "artillery": 8
+                },
+                "n": 0,
+                "name": "3rd (Ulbgarm) Regiment",
+                "state": 4,
+                "icon": "👑"
+            },
+            {
+                "i": 3,
+                "a": 1,
+                "cell": 1066,
+                "x": 1536.64,
+                "y": 402.74,
+                "bx": 1536.64,
+                "by": 402.74,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 4,
+                "icon": "🌊"
+            },
+            {
+                "i": 4,
+                "a": 1,
+                "cell": 964,
+                "x": 1668.63,
+                "y": 417.11,
+                "bx": 1668.63,
+                "by": 417.11,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 4,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 5,
+        "color": "#a6d854",
+        "name": "Blech",
+        "expansionism": 5,
+        "capital": 5,
+        "type": "Naval",
+        "center": 5886,
+        "culture": 2,
+        "coa": {
+            "t1": "or",
+            "ordinaries": [
+                {
+                    "ordinary": "pileInBendSinister",
+                    "t": "gules"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "inescutcheon",
+                    "t": "purpure",
+                    "p": "ai",
+                    "size": 0.7
+                },
+                {
+                    "charge": "compassRose",
+                    "t": "or",
+                    "p": "ai",
+                    "size": 0.35
+                }
+            ],
+            "shield": "heater"
+        },
+        "pole": [
+            531,
+            945
+        ],
+        "urban": 129.99599999999998,
+        "rural": 2429.726799607277,
+        "burgs": 8,
+        "area": 70750,
+        "cells": 317,
+        "neighbors": [
+            15,
+            9
+        ],
+        "campaigns": [
+            {
+                "name": "Olafsish War",
+                "start": 1743,
+                "end": 1744
+            },
+            {
+                "name": "Cocker Rebellion",
+                "start": 1936,
+                "end": 1937
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Friendly",
+            "Ally",
+            "Unknown",
+            "x",
+            "Neutral",
+            "Ally",
+            "Friendly",
+            "Suzerain",
+            "Unknown",
+            "Suspicion",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Suzerain",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Blech",
+        "provinces": [
+            17,
+            18,
+            92,
+            93
+        ],
+        "alert": 0.71,
+        "military": [
+            {
+                "i": 0,
+                "a": 1770,
+                "cell": 5886,
+                "x": 1655.29,
+                "y": 1131.95,
+                "bx": 1655.29,
+                "by": 1131.95,
+                "u": {
+                    "archers": 639,
+                    "cavalry": 166,
+                    "artillery": 39,
+                    "infantry": 926
+                },
+                "n": 0,
+                "name": "1st (Redchambe) Regiment",
+                "state": 5,
+                "icon": "👑"
+            },
+            {
+                "i": 1,
+                "a": 974,
+                "cell": 5719,
+                "x": 450.9,
+                "y": 1114.9,
+                "bx": 450.9,
+                "by": 1114.9,
+                "u": {
+                    "archers": 548,
+                    "infantry": 417,
+                    "cavalry": 9
+                },
+                "n": 0,
+                "name": "2nd (Colesinia) Regiment",
+                "state": 5,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 192,
+                "cell": 5504,
+                "x": 644,
+                "y": 1079.2,
+                "bx": 644,
+                "by": 1079.2,
+                "u": {
+                    "archers": 110,
+                    "infantry": 82
+                },
+                "n": 0,
+                "name": "3rd (Colesinia) Regiment",
+                "state": 5,
+                "icon": "🏹"
+            },
+            {
+                "i": 3,
+                "a": 9,
+                "cell": 5886,
+                "x": 1642.18,
+                "y": 1119.42,
+                "bx": 1642.18,
+                "by": 1119.42,
+                "u": {
+                    "fleet": 9
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 5,
+                "icon": "🌊"
+            },
+            {
+                "i": 4,
+                "a": 8,
+                "cell": 6132,
+                "x": 1662.46,
+                "y": 1201.21,
+                "bx": 1662.46,
+                "by": 1201.21,
+                "u": {
+                    "fleet": 8
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 5,
+                "icon": "🌊"
+            },
+            {
+                "i": 5,
+                "a": 2,
+                "cell": 6093,
+                "x": 882.49,
+                "y": 1180.07,
+                "bx": 882.49,
+                "by": 1180.07,
+                "u": {
+                    "archers": 1,
+                    "infantry": 1
+                },
+                "n": 0,
+                "name": "4th (Redclifia) Regiment",
+                "state": 5,
+                "icon": "🏹"
+            }
+        ]
+    },
+    {
+        "i": 6,
+        "color": "#ffd92f",
+        "name": "Drior",
+        "expansionism": 2.8,
+        "capital": 6,
+        "type": "Generic",
+        "center": 735,
+        "culture": 9,
+        "coa": {
+            "t1": "azure",
+            "charges": [
+                {
+                    "charge": "bridge2",
+                    "t": "or",
+                    "p": "abc",
+                    "size": 0.5
+                }
+            ],
+            "shield": "moriaOrc"
+        },
+        "pole": [
+            1380,
+            399
+        ],
+        "urban": 43.775,
+        "rural": 477.3153565824032,
+        "burgs": 7,
+        "area": 17911,
+        "cells": 73,
+        "neighbors": [
+            10,
+            17
+        ],
+        "campaigns": [
+            {
+                "name": "Phaxan Rebellion",
+                "start": 1792,
+                "end": 1798
+            },
+            {
+                "name": "Stapan Conflict",
+                "start": 1950,
+                "end": 1960
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Unknown",
+            "Friendly",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "x",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Ally",
+            "Suspicion",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Rival",
+            "Neutral",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Drior",
+        "provinces": [
+            19,
+            20,
+            94
+        ],
+        "alert": 1.85,
+        "military": [
+            {
+                "i": 0,
+                "a": 2049,
+                "cell": 1057,
+                "x": 1426.2,
+                "y": 422.4,
+                "bx": 1426.2,
+                "by": 422.4,
+                "u": {
+                    "archers": 821,
+                    "cavalry": 282,
+                    "artillery": 19,
+                    "infantry": 927
+                },
+                "n": 0,
+                "name": "1st (Drior) Regiment",
+                "state": 6,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 1128,
+                "cell": 633,
+                "x": 1292.51,
+                "y": 348.49,
+                "bx": 1292.51,
+                "by": 348.49,
+                "u": {
+                    "archers": 556,
+                    "cavalry": 91,
+                    "infantry": 478,
+                    "artillery": 3
+                },
+                "n": 0,
+                "name": "2nd (Drior) Regiment",
+                "state": 6,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 876,
+                "cell": 735,
+                "x": 1408.76,
+                "y": 358.21,
+                "bx": 1408.76,
+                "by": 358.21,
+                "u": {
+                    "archers": 446,
+                    "artillery": 3,
+                    "cavalry": 62,
+                    "infantry": 365
+                },
+                "n": 0,
+                "name": "3rd (Drior) Regiment",
+                "state": 6,
+                "icon": "👑"
+            },
+            {
+                "i": 3,
+                "a": 10,
+                "cell": 132,
+                "x": 1509.42,
+                "y": 212.7,
+                "bx": 1509.42,
+                "by": 212.7,
+                "u": {
+                    "archers": 5,
+                    "infantry": 5
+                },
+                "n": 0,
+                "name": "4th (Cocham) Regiment",
+                "state": 6,
+                "icon": "🏹"
+            },
+            {
+                "i": 4,
+                "a": 2,
+                "cell": 1292,
+                "x": 1371.22,
+                "y": 476.16,
+                "bx": 1371.22,
+                "by": 476.16,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 6,
+                "icon": "🌊"
+            },
+            {
+                "i": 5,
+                "a": 1,
+                "cell": 735,
+                "x": 1421.7,
+                "y": 350.3,
+                "bx": 1421.7,
+                "by": 350.3,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 6,
+                "icon": "🌊"
+            },
+            {
+                "i": 6,
+                "a": 1,
+                "cell": 453,
+                "x": 1336.43,
+                "y": 301.58,
+                "bx": 1336.43,
+                "by": 301.58,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 6,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 7,
+        "color": "#82e2a7",
+        "name": "Skiplehamia",
+        "expansionism": 1.5,
+        "capital": 7,
+        "type": "Naval",
+        "center": 5071,
+        "culture": 2,
+        "coa": {
+            "t1": "pappellony-argent-sable",
+            "ordinaries": [
+                {
+                    "ordinary": "chevron",
+                    "t": "gules"
+                }
+            ],
+            "shield": "heater"
+        },
+        "pole": [
+            1888,
+            983
+        ],
+        "urban": 45.46699999999999,
+        "rural": 328.21424531936646,
+        "burgs": 6,
+        "area": 8220,
+        "cells": 32,
+        "neighbors": [
+            19,
+            15
+        ],
+        "campaigns": [
+            {
+                "name": "Bruran Conflict",
+                "start": 1959,
+                "end": 1966
+            },
+            {
+                "name": "Cocker Campaign",
+                "start": 1988,
+                "end": 1991
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "x",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Rival",
+            "Neutral",
+            "Suspicion",
+            "Unknown",
+            "Ally",
+            "Unknown",
+            "Neutral",
+            "Friendly",
+            "Suspicion"
+        ],
+        "form": "Monarchy",
+        "formName": "Duchy",
+        "fullName": "Duchy of Skiplehamia",
+        "provinces": [
+            21,
+            22
+        ],
+        "alert": 0.79,
+        "military": [
+            {
+                "i": 0,
+                "a": 1006,
+                "cell": 5071,
+                "x": 1875.13,
+                "y": 1006.62,
+                "bx": 1875.13,
+                "by": 1006.62,
+                "u": {
+                    "archers": 462,
+                    "cavalry": 61,
+                    "artillery": 20,
+                    "infantry": 463
+                },
+                "n": 0,
+                "name": "1st (Brover) Regiment",
+                "state": 7,
+                "icon": "👑"
+            },
+            {
+                "i": 1,
+                "a": 2,
+                "cell": 4645,
+                "x": 1879.42,
+                "y": 931.38,
+                "bx": 1879.42,
+                "by": 931.38,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 7,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 8,
+        "color": "#84c1d8",
+        "name": "Cothaz",
+        "expansionism": 2.6,
+        "capital": 8,
+        "type": "Lake",
+        "center": 5957,
+        "culture": 5,
+        "coa": {
+            "t1": "gules",
+            "ordinaries": [
+                {
+                    "ordinary": "bordure",
+                    "t": "or"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "windmill",
+                    "t": "sable",
+                    "p": "ABCDEFGHIJKL",
+                    "t2": "argent",
+                    "t3": "sable",
+                    "size": 0.18
+                }
+            ],
+            "shield": "fantasy1"
+        },
+        "pole": [
+            1349,
+            1124
+        ],
+        "urban": 109.66499999999999,
+        "rural": 959.3780957460403,
+        "burgs": 15,
+        "area": 20738,
+        "cells": 76,
+        "neighbors": [
+            2,
+            18
+        ],
+        "campaigns": [
+            {
+                "name": "Kran'jan Crusade",
+                "start": 1797,
+                "end": 1799
+            },
+            {
+                "name": "Margekan Conquest",
+                "start": 1965,
+                "end": 1967
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Ally",
+            "Suspicion",
+            "Ally",
+            "Ally",
+            "Friendly",
+            "Unknown",
+            "Friendly",
+            "x",
+            "Friendly",
+            "Unknown",
+            "Ally",
+            "Unknown",
+            "Suspicion",
+            "Friendly",
+            "Friendly",
+            "Neutral",
+            "Neutral",
+            "Enemy",
+            "Ally"
+        ],
+        "form": "Monarchy",
+        "formName": "Principality",
+        "fullName": "Principality of Cothaz",
+        "provinces": [
+            23,
+            24,
+            25,
+            95
+        ],
+        "alert": 2.7,
+        "military": [
+            {
+                "i": 0,
+                "a": 3572,
+                "cell": 5773,
+                "x": 1345.38,
+                "y": 1118.64,
+                "bx": 1345.38,
+                "by": 1118.64,
+                "u": {
+                    "infantry": 1827,
+                    "cavalry": 506,
+                    "archers": 1218,
+                    "artillery": 21
+                },
+                "n": 0,
+                "name": "1st (Maless) Regiment",
+                "state": 8,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 3403,
+                "cell": 6117,
+                "x": 1340.1,
+                "y": 1194.5,
+                "bx": 1340.1,
+                "by": 1194.5,
+                "u": {
+                    "archers": 1549,
+                    "cavalry": 277,
+                    "artillery": 40,
+                    "infantry": 1537
+                },
+                "n": 0,
+                "name": "2nd (Olluph) Regiment",
+                "state": 8,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 3171,
+                "cell": 5542,
+                "x": 1358.52,
+                "y": 1076.19,
+                "bx": 1358.52,
+                "by": 1076.19,
+                "u": {
+                    "infantry": 1680,
+                    "cavalry": 514,
+                    "archers": 970,
+                    "artillery": 7
+                },
+                "n": 0,
+                "name": "3rd (Maless) Regiment",
+                "state": 8,
+                "icon": "⚔️"
+            },
+            {
+                "i": 3,
+                "a": 2982,
+                "cell": 5954,
+                "x": 1310.82,
+                "y": 1148.85,
+                "bx": 1310.82,
+                "by": 1148.85,
+                "u": {
+                    "infantry": 1568,
+                    "cavalry": 471,
+                    "archers": 914,
+                    "artillery": 29
+                },
+                "n": 0,
+                "name": "4th (Maless) Regiment",
+                "state": 8,
+                "icon": "⚔️"
+            },
+            {
+                "i": 4,
+                "a": 12,
+                "cell": 6117,
+                "x": 1355.45,
+                "y": 1194.43,
+                "bx": 1355.45,
+                "by": 1194.43,
+                "u": {
+                    "fleet": 12
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 8,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 9,
+        "color": "#b5afc1",
+        "name": "Olafsland",
+        "expansionism": 2.8,
+        "capital": 9,
+        "type": "Generic",
+        "center": 6065,
+        "culture": 7,
+        "coa": {
+            "t1": "bendySinister-argent-gules",
+            "charges": [
+                {
+                    "charge": "eagle",
+                    "t": "sable",
+                    "p": "e",
+                    "t2": "sable",
+                    "t3": "sable",
+                    "size": 1.5
+                }
+            ],
+            "shield": "oldFrench"
+        },
+        "pole": [
+            1814,
+            1184
+        ],
+        "urban": 89.779,
+        "rural": 790.8900558948517,
+        "burgs": 11,
+        "area": 15789,
+        "cells": 54,
+        "neighbors": [
+            15,
+            5,
+            19
+        ],
+        "campaigns": [
+            {
+                "name": "Cocker Campaign",
+                "start": 1581,
+                "end": 1588
+            },
+            {
+                "name": "Selsovian Campaign",
+                "start": 1831,
+                "end": 1842
+            },
+            {
+                "name": "Stapian Rebellion",
+                "start": 1954,
+                "end": 1955
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Friendly",
+            "Ally",
+            "Unknown",
+            "Vassal",
+            "Neutral",
+            "Ally",
+            "Friendly",
+            "x",
+            "Unknown",
+            "Suspicion",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "Ally",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Olafsland",
+        "provinces": [
+            26,
+            27,
+            28
+        ],
+        "alert": 0.36,
+        "military": [
+            {
+                "i": 0,
+                "a": 1147,
+                "cell": 6065,
+                "x": 1774.8,
+                "y": 1168.4,
+                "bx": 1774.8,
+                "by": 1168.4,
+                "u": {
+                    "archers": 480,
+                    "cavalry": 150,
+                    "artillery": 11,
+                    "infantry": 506
+                },
+                "n": 0,
+                "name": "1st (Olafsf) Regiment",
+                "state": 9,
+                "icon": "👑"
+            },
+            {
+                "i": 1,
+                "a": 1,
+                "cell": 6065,
+                "x": 1766.44,
+                "y": 1187.96,
+                "bx": 1766.44,
+                "by": 1187.96,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 9,
+                "icon": "🌊"
+            },
+            {
+                "i": 2,
+                "a": 1,
+                "cell": 6208,
+                "x": 1879.8,
+                "y": 1208.81,
+                "bx": 1879.8,
+                "by": 1208.81,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 9,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 10,
+        "color": "#9ee27d",
+        "name": "Stap",
+        "expansionism": 5.8,
+        "capital": 10,
+        "type": "Naval",
+        "center": 1723,
+        "culture": 2,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "lymphad",
+                    "t": "azure",
+                    "p": "e",
+                    "t2": "azure",
+                    "t3": "sable",
+                    "size": 1.5
+                }
+            ],
+            "shield": "heater"
+        },
+        "pole": [
+            2246,
+            505
+        ],
+        "urban": 474.66599999999994,
+        "rural": 3832.8982706665993,
+        "burgs": 57,
+        "area": 122118,
+        "cells": 482,
+        "neighbors": [
+            6,
+            4,
+            11,
+            19,
+            12
+        ],
+        "campaigns": [
+            {
+                "name": "Drior Conflict",
+                "start": 1642,
+                "end": 1644
+            },
+            {
+                "name": "Stapian Campaign",
+                "start": 1766,
+                "end": 1771
+            },
+            {
+                "name": "Vrean War",
+                "start": 1841,
+                "end": 1845
+            },
+            {
+                "name": "Newbok Conflict",
+                "start": 1954,
+                "end": 1965
+            },
+            {
+                "name": "Southan Intervention",
+                "start": 1988,
+                "end": 1993
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Neutral",
+            "Ally",
+            "Suspicion",
+            "Unknown",
+            "Suspicion",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "x",
+            "Suspicion",
+            "Suzerain",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "Ally",
+            "Friendly",
+            "Suspicion"
+        ],
+        "form": "Republic",
+        "formName": "Republic",
+        "fullName": "Republic of Stap",
+        "provinces": [
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            96,
+            97,
+            98,
+            99,
+            100
+        ],
+        "alert": 0.45,
+        "military": [
+            {
+                "i": 0,
+                "a": 1336,
+                "cell": 2107,
+                "x": 2240.44,
+                "y": 578.67,
+                "bx": 2240.44,
+                "by": 578.67,
+                "u": {
+                    "archers": 749,
+                    "cavalry": 42,
+                    "infantry": 534,
+                    "artillery": 11
+                },
+                "n": 0,
+                "name": "1st (Cockingle) Regiment",
+                "state": 10,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 1288,
+                "cell": 578,
+                "x": 1914.79,
+                "y": 320.15,
+                "bx": 1914.79,
+                "by": 320.15,
+                "u": {
+                    "archers": 727,
+                    "cavalry": 26,
+                    "artillery": 27,
+                    "infantry": 508
+                },
+                "n": 0,
+                "name": "2nd (Aringham) Regiment",
+                "state": 10,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 1082,
+                "cell": 2621,
+                "x": 2342.8,
+                "y": 649.8,
+                "bx": 2342.8,
+                "by": 649.8,
+                "u": {
+                    "archers": 612,
+                    "infantry": 437,
+                    "artillery": 15,
+                    "cavalry": 18
+                },
+                "n": 0,
+                "name": "3rd (Caltony) Regiment",
+                "state": 10,
+                "icon": "🏹"
+            },
+            {
+                "i": 3,
+                "a": 825,
+                "cell": 1225,
+                "x": 2291.08,
+                "y": 444.99,
+                "bx": 2291.08,
+                "by": 444.99,
+                "u": {
+                    "archers": 464,
+                    "cavalry": 21,
+                    "artillery": 7,
+                    "infantry": 333
+                },
+                "n": 0,
+                "name": "4th (Mewentlia) Regiment",
+                "state": 10,
+                "icon": "🏹"
+            },
+            {
+                "i": 4,
+                "a": 655,
+                "cell": 974,
+                "x": 1845.88,
+                "y": 402.25,
+                "bx": 1845.88,
+                "by": 402.25,
+                "u": {
+                    "archers": 373,
+                    "infantry": 266,
+                    "artillery": 7,
+                    "cavalry": 9
+                },
+                "n": 0,
+                "name": "5th (Warghamia) Regiment",
+                "state": 10,
+                "icon": "🏹"
+            },
+            {
+                "i": 5,
+                "a": 626,
+                "cell": 2477,
+                "x": 2017.7,
+                "y": 623.1,
+                "bx": 2017.7,
+                "by": 623.1,
+                "u": {
+                    "archers": 358,
+                    "infantry": 248,
+                    "artillery": 17,
+                    "cavalry": 3
+                },
+                "n": 0,
+                "name": "6th (Foburia) Regiment",
+                "state": 10,
+                "icon": "🏹"
+            },
+            {
+                "i": 6,
+                "a": 9,
+                "cell": 73,
+                "x": 1595.17,
+                "y": 178.71,
+                "bx": 1595.17,
+                "by": 178.71,
+                "u": {
+                    "archers": 6,
+                    "infantry": 3
+                },
+                "n": 0,
+                "name": "7th (New Stap) Regiment",
+                "state": 10,
+                "icon": "🏹"
+            },
+            {
+                "i": 7,
+                "a": 4,
+                "cell": 2477,
+                "x": 2002.43,
+                "y": 638.54,
+                "bx": 2002.43,
+                "by": 638.54,
+                "u": {
+                    "fleet": 4
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 10,
+                "icon": "🌊"
+            },
+            {
+                "i": 8,
+                "a": 3,
+                "cell": 578,
+                "x": 1937.26,
+                "y": 331.65,
+                "bx": 1937.26,
+                "by": 331.65,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 10,
+                "icon": "🌊"
+            },
+            {
+                "i": 9,
+                "a": 3,
+                "cell": 353,
+                "x": 1913.77,
+                "y": 259.76,
+                "bx": 1913.77,
+                "by": 259.76,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 10,
+                "icon": "🌊"
+            },
+            {
+                "i": 10,
+                "a": 3,
+                "cell": 974,
+                "x": 1822.3,
+                "y": 404.46,
+                "bx": 1822.3,
+                "by": 404.46,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "4th Fleet",
+                "state": 10,
+                "icon": "🌊"
+            },
+            {
+                "i": 11,
+                "a": 2,
+                "cell": 403,
+                "x": 1771.99,
+                "y": 277.62,
+                "bx": 1771.99,
+                "by": 277.62,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "5th Fleet",
+                "state": 10,
+                "icon": "🌊"
+            },
+            {
+                "i": 12,
+                "a": 2,
+                "cell": 1982,
+                "x": 2327.14,
+                "y": 539.03,
+                "bx": 2327.14,
+                "by": 539.03,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "6th Fleet",
+                "state": 10,
+                "icon": "🌊"
+            },
+            {
+                "i": 13,
+                "a": 1,
+                "cell": 1475,
+                "x": 2162.41,
+                "y": 497.26,
+                "bx": 2162.41,
+                "by": 497.26,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "7th Fleet",
+                "state": 10,
+                "icon": "🌊"
+            },
+            {
+                "i": 14,
+                "a": 1,
+                "cell": 3013,
+                "x": 1995.35,
+                "y": 714.2,
+                "bx": 1995.35,
+                "by": 714.2,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "8th Fleet",
+                "state": 10,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 11,
+        "color": "#ffd73e",
+        "name": "Felnia",
+        "expansionism": 1.2,
+        "capital": 11,
+        "type": "Naval",
+        "center": 2902,
+        "culture": 2,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "lochaberAxe",
+                    "t": "sable",
+                    "p": "jln",
+                    "t2": "sable",
+                    "size": 0.7
+                }
+            ],
+            "shield": "heater"
+        },
+        "pole": [
+            1940,
+            689
+        ],
+        "urban": 109.09800000000001,
+        "rural": 524.539312839508,
+        "burgs": 16,
+        "area": 18636,
+        "cells": 83,
+        "neighbors": [
+            10,
+            18,
+            19
+        ],
+        "campaigns": [
+            {
+                "name": "Margish Conflict",
+                "start": 1664,
+                "end": 1668
+            },
+            {
+                "name": "Stapian Intervention",
+                "start": 1877,
+                "end": 1880
+            },
+            {
+                "name": "Stap Conquest",
+                "start": 1988,
+                "end": 1989
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Friendly",
+            "Friendly",
+            "Ally",
+            "Suspicion",
+            "Ally",
+            "Rival",
+            "Ally",
+            "Suspicion",
+            "Suspicion",
+            "x",
+            "Suspicion",
+            "Neutral",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "Neutral",
+            "Rival",
+            "Rival"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Felnia",
+        "provinces": [
+            41,
+            42,
+            43,
+            44,
+            101,
+            102
+        ],
+        "alert": 1.11,
+        "military": [
+            {
+                "i": 0,
+                "a": 2219,
+                "cell": 2902,
+                "x": 1919.5,
+                "y": 704.91,
+                "bx": 1919.5,
+                "by": 704.91,
+                "u": {
+                    "archers": 1095,
+                    "cavalry": 105,
+                    "infantry": 964,
+                    "artillery": 55
+                },
+                "n": 0,
+                "name": "1st (Betlia) Regiment",
+                "state": 11,
+                "icon": "👑"
+            },
+            {
+                "i": 1,
+                "a": 10,
+                "cell": 2902,
+                "x": 1908.6,
+                "y": 718.2,
+                "bx": 1908.6,
+                "by": 718.2,
+                "u": {
+                    "fleet": 10
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 11,
+                "icon": "🌊"
+            },
+            {
+                "i": 2,
+                "a": 3,
+                "cell": 2705,
+                "x": 1995.39,
+                "y": 663.73,
+                "bx": 1995.39,
+                "by": 663.73,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 11,
+                "icon": "🌊"
+            },
+            {
+                "i": 3,
+                "a": 2,
+                "cell": 2892,
+                "x": 1819.73,
+                "y": 693.19,
+                "bx": 1819.73,
+                "by": 693.19,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 11,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 12,
+        "color": "#eaf34f",
+        "name": "Newbokland",
+        "expansionism": 3,
+        "capital": 12,
+        "type": "Naval",
+        "center": 3660,
+        "culture": 2,
+        "coa": {
+            "t1": "purpure",
+            "ordinaries": [
+                {
+                    "ordinary": "pale",
+                    "t": "argent",
+                    "line": "dragonTeeth"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "sword",
+                    "t": "purpure",
+                    "p": "e",
+                    "t2": "argent",
+                    "size": 0.7
+                }
+            ],
+            "shield": "heater"
+        },
+        "pole": [
+            2264,
+            842
+        ],
+        "urban": 120.667,
+        "rural": 988.3383189439774,
+        "burgs": 12,
+        "area": 30503,
+        "cells": 125,
+        "neighbors": [
+            10
+        ],
+        "campaigns": [
+            {
+                "name": "Stapan Conquest",
+                "start": 1679,
+                "end": 1680
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Ally",
+            "Neutral",
+            "Ally",
+            "Suspicion",
+            "Unknown",
+            "Suspicion",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "Vassal",
+            "Suspicion",
+            "x",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "Ally",
+            "Friendly",
+            "Suspicion"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Newbokland",
+        "provinces": [
+            45,
+            46,
+            47,
+            103
+        ],
+        "alert": 0.2,
+        "military": [
+            {
+                "i": 0,
+                "a": 518,
+                "cell": 3415,
+                "x": 2295.6,
+                "y": 786.3,
+                "bx": 2295.6,
+                "by": 786.3,
+                "u": {
+                    "archers": 299,
+                    "infantry": 212,
+                    "artillery": 7
+                },
+                "n": 0,
+                "name": "1st (Fazion) Regiment",
+                "state": 12,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 259,
+                "cell": 4665,
+                "x": 2189.45,
+                "y": 950.49,
+                "bx": 2189.45,
+                "by": 950.49,
+                "u": {
+                    "archers": 148,
+                    "artillery": 7,
+                    "infantry": 104
+                },
+                "n": 0,
+                "name": "2nd (Towbole) Regiment",
+                "state": 12,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 1,
+                "cell": 3660,
+                "x": 2201.9,
+                "y": 786.1,
+                "bx": 2201.9,
+                "by": 786.1,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 12,
+                "icon": "🌊"
+            },
+            {
+                "i": 3,
+                "a": 1,
+                "cell": 3415,
+                "x": 2290.28,
+                "y": 779.34,
+                "bx": 2290.28,
+                "by": 779.34,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 12,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 13,
+        "color": "#72bebd",
+        "name": "Rarak",
+        "expansionism": 3.1,
+        "capital": 13,
+        "type": "Generic",
+        "center": 2138,
+        "culture": 6,
+        "coa": {
+            "t1": "or",
+            "division": {
+                "division": "perFess",
+                "t": "azure",
+                "line": "dancetty"
+            },
+            "charges": [
+                {
+                    "charge": "eagleTwoHeads",
+                    "t": "vert",
+                    "p": "k",
+                    "t2": "vert",
+                    "t3": "vert",
+                    "size": 0.7
+                },
+                {
+                    "charge": "cavalier",
+                    "t": "argent",
+                    "p": "n",
+                    "size": 0.7
+                }
+            ],
+            "shield": "pavise"
+        },
+        "pole": [
+            992,
+            514
+        ],
+        "urban": 224.13400000000007,
+        "rural": 1676.758691251278,
+        "burgs": 32,
+        "area": 72161,
+        "cells": 345,
+        "neighbors": [],
+        "campaigns": [
+            {
+                "name": "Nanean Crusade",
+                "start": 1739,
+                "end": 1750
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Unknown",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Suspicion",
+            "Unknown",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "x",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "Suspicion"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Rarak",
+        "provinces": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            104,
+            105,
+            106
+        ],
+        "alert": 0.14,
+        "military": [
+            {
+                "i": 0,
+                "a": 445,
+                "cell": 2274,
+                "x": 1075.66,
+                "y": 608.73,
+                "bx": 1075.66,
+                "by": 608.73,
+                "u": {
+                    "archers": 232,
+                    "artillery": 3,
+                    "infantry": 191,
+                    "cavalry": 19
+                },
+                "n": 0,
+                "name": "1st (Harkimor) Regiment",
+                "state": 13,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 417,
+                "cell": 1252,
+                "x": 758.1,
+                "y": 471.2,
+                "bx": 758.1,
+                "by": 471.2,
+                "u": {
+                    "archers": 222,
+                    "infantry": 180,
+                    "artillery": 2,
+                    "cavalry": 13
+                },
+                "n": 0,
+                "name": "2nd (Narnan) Regiment",
+                "state": 13,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 237,
+                "cell": 366,
+                "x": 1001.03,
+                "y": 295.02,
+                "bx": 1001.03,
+                "by": 295.02,
+                "u": {
+                    "archers": 125,
+                    "cavalry": 12,
+                    "artillery": 2,
+                    "infantry": 98
+                },
+                "n": 0,
+                "name": "3rd (Kintadab) Regiment",
+                "state": 13,
+                "icon": "🏹"
+            }
+        ]
+    },
+    {
+        "i": 14,
+        "color": "#d3a9d7",
+        "name": "Pepjige",
+        "expansionism": 4.5,
+        "capital": 14,
+        "type": "Lake",
+        "center": 3601,
+        "culture": 5,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "lozenge",
+                    "t": "sable",
+                    "p": "e",
+                    "size": 1.5
+                }
+            ],
+            "shield": "fantasy1"
+        },
+        "pole": [
+            1268,
+            811
+        ],
+        "urban": 259.285,
+        "rural": 2666.4986050128937,
+        "burgs": 43,
+        "area": 73530,
+        "cells": 296,
+        "neighbors": [
+            3,
+            18,
+            16,
+            2
+        ],
+        "campaigns": [
+            {
+                "name": "Margek Invasion",
+                "start": 1768,
+                "end": 1770
+            },
+            {
+                "name": "Culesean War",
+                "start": 1784,
+                "end": 1790
+            },
+            {
+                "name": "Az'kaj'han Campaign",
+                "start": 1953,
+                "end": 1954
+            },
+            {
+                "name": "Kran'jan Campaign",
+                "start": 1963,
+                "end": 1966
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Ally",
+            "Suspicion",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "x",
+            "Unknown",
+            "Suspicion",
+            "Friendly",
+            "Enemy",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Pepjige",
+        "provinces": [
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            107,
+            108
+        ],
+        "alert": 1.48,
+        "military": [
+            {
+                "i": 0,
+                "a": 2977,
+                "cell": 4447,
+                "x": 1118.54,
+                "y": 930.72,
+                "bx": 1118.54,
+                "by": 930.72,
+                "u": {
+                    "infantry": 1419,
+                    "cavalry": 319,
+                    "archers": 1219,
+                    "artillery": 20
+                },
+                "n": 0,
+                "name": "1st (Srakess) Regiment",
+                "state": 14,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 2163,
+                "cell": 3733,
+                "x": 1255.73,
+                "y": 825.39,
+                "bx": 1255.73,
+                "by": 825.39,
+                "u": {
+                    "infantry": 1100,
+                    "cavalry": 314,
+                    "archers": 734,
+                    "artillery": 15
+                },
+                "n": 0,
+                "name": "2nd (Witland) Regiment",
+                "state": 14,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 2144,
+                "cell": 4314,
+                "x": 1349.22,
+                "y": 909,
+                "bx": 1349.22,
+                "by": 909,
+                "u": {
+                    "infantry": 1113,
+                    "cavalry": 397,
+                    "archers": 630,
+                    "artillery": 4
+                },
+                "n": 0,
+                "name": "3rd (Nataph) Regiment",
+                "state": 14,
+                "icon": "⚔️"
+            },
+            {
+                "i": 3,
+                "a": 2013,
+                "cell": 4465,
+                "x": 1272.89,
+                "y": 928.58,
+                "bx": 1272.89,
+                "by": 928.58,
+                "u": {
+                    "infantry": 1021,
+                    "cavalry": 277,
+                    "artillery": 13,
+                    "archers": 702
+                },
+                "n": 0,
+                "name": "4th (Nataph) Regiment",
+                "state": 14,
+                "icon": "⚔️"
+            },
+            {
+                "i": 4,
+                "a": 1762,
+                "cell": 4440,
+                "x": 1051.58,
+                "y": 933.68,
+                "bx": 1051.58,
+                "by": 933.68,
+                "u": {
+                    "archers": 842,
+                    "cavalry": 124,
+                    "artillery": 22,
+                    "infantry": 774
+                },
+                "n": 0,
+                "name": "5th (Skor) Regiment",
+                "state": 14,
+                "icon": "🏹"
+            },
+            {
+                "i": 5,
+                "a": 1452,
+                "cell": 2951,
+                "x": 1223.6,
+                "y": 731.2,
+                "bx": 1223.6,
+                "by": 731.2,
+                "u": {
+                    "archers": 502,
+                    "cavalry": 217,
+                    "infantry": 726,
+                    "artillery": 7
+                },
+                "n": 0,
+                "name": "6th (Letibalia) Regiment",
+                "state": 14,
+                "icon": "⚔️"
+            },
+            {
+                "i": 6,
+                "a": 1136,
+                "cell": 4306,
+                "x": 1222.2,
+                "y": 907,
+                "bx": 1222.2,
+                "by": 907,
+                "u": {
+                    "archers": 420,
+                    "cavalry": 142,
+                    "infantry": 560,
+                    "artillery": 14
+                },
+                "n": 0,
+                "name": "7th (Napjelashja) Regiment",
+                "state": 14,
+                "icon": "⚔️"
+            },
+            {
+                "i": 7,
+                "a": 6,
+                "cell": 4126,
+                "x": 774.72,
+                "y": 881.28,
+                "bx": 774.72,
+                "by": 881.28,
+                "u": {
+                    "archers": 3,
+                    "infantry": 3
+                },
+                "n": 0,
+                "name": "8th (Slalza) Regiment",
+                "state": 14,
+                "icon": "🏹"
+            },
+            {
+                "i": 8,
+                "a": 6,
+                "cell": 4440,
+                "x": 1041.91,
+                "y": 942.85,
+                "bx": 1041.91,
+                "by": 942.85,
+                "u": {
+                    "fleet": 6
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 14,
+                "icon": "🌊"
+            },
+            {
+                "i": 9,
+                "a": 3,
+                "cell": 3601,
+                "x": 1127.19,
+                "y": 820.38,
+                "bx": 1127.19,
+                "by": 820.38,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 14,
+                "icon": "🌊"
+            },
+            {
+                "i": 10,
+                "a": 2,
+                "cell": 4146,
+                "x": 1157.41,
+                "y": 891.07,
+                "bx": 1157.41,
+                "by": 891.07,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 14,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 15,
+        "color": "#ddb1c6",
+        "name": "Cockerland",
+        "expansionism": 3.6,
+        "capital": 15,
+        "type": "Naval",
+        "center": 5189,
+        "culture": 2,
+        "coa": {
+            "t1": "semy_of_mullet6-or-sable-smaller",
+            "ordinaries": [
+                {
+                    "ordinary": "chief",
+                    "t": "gules",
+                    "line": "straight"
+                }
+            ],
+            "shield": "heater"
+        },
+        "pole": [
+            1766,
+            1048
+        ],
+        "urban": 54.359,
+        "rural": 552.7808848619461,
+        "burgs": 9,
+        "area": 13267,
+        "cells": 50,
+        "neighbors": [
+            18,
+            7,
+            5,
+            19,
+            9
+        ],
+        "campaigns": [
+            {
+                "name": "Westcker War",
+                "start": 1743,
+                "end": 1748
+            },
+            {
+                "name": "Olafsish Intervention",
+                "start": 1829,
+                "end": 1830
+            },
+            {
+                "name": "Margekan Campaign",
+                "start": 1988,
+                "end": 1993
+            },
+            {
+                "name": "Skiplehamian Invasion",
+                "start": 1988,
+                "end": 1989
+            },
+            {
+                "name": "Blech War",
+                "start": 1988,
+                "end": 1993
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Friendly",
+            "Ally",
+            "Unknown",
+            "Vassal",
+            "Neutral",
+            "Ally",
+            "Friendly",
+            "Ally",
+            "Unknown",
+            "Suspicion",
+            "Unknown",
+            "Unknown",
+            "Unknown",
+            "x",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Protectorate",
+        "fullName": "Protectorate of Cockerland",
+        "provinces": [
+            64,
+            65,
+            109
+        ],
+        "alert": 0.55,
+        "military": [
+            {
+                "i": 0,
+                "a": 1070,
+                "cell": 5318,
+                "x": 1744.5,
+                "y": 1041.68,
+                "bx": 1744.5,
+                "by": 1041.68,
+                "u": {
+                    "infantry": 530,
+                    "cavalry": 86,
+                    "artillery": 13,
+                    "archers": 441
+                },
+                "n": 0,
+                "name": "1st (Brampsea) Regiment",
+                "state": 15,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 1,
+                "cell": 5189,
+                "x": 1699.36,
+                "y": 1021.53,
+                "bx": 1699.36,
+                "by": 1021.53,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 15,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 16,
+        "color": "#a1dc7d",
+        "name": "Az'kaj'ha",
+        "expansionism": 1.2,
+        "capital": 16,
+        "type": "Lake",
+        "center": 5398,
+        "culture": 5,
+        "coa": {
+            "t1": "argent",
+            "ordinaries": [
+                {
+                    "ordinary": "fess",
+                    "t": "sable",
+                    "line": "firTrees"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "fountain",
+                    "t": "azure",
+                    "p": "abc",
+                    "size": 0.5
+                }
+            ],
+            "shield": "fantasy1"
+        },
+        "pole": [
+            947,
+            1029
+        ],
+        "urban": 40.706,
+        "rural": 961.8529235720634,
+        "burgs": 13,
+        "area": 27906,
+        "cells": 123,
+        "neighbors": [
+            14
+        ],
+        "campaigns": [
+            {
+                "name": "Skath'jian Crusade",
+                "start": 1864,
+                "end": 1865
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Ally",
+            "Friendly",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "x",
+            "Suspicion",
+            "Friendly",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Principality",
+        "fullName": "Principality of Az'kaj'ha",
+        "provinces": [
+            66,
+            67,
+            68,
+            110
+        ],
+        "alert": 0.17,
+        "military": [
+            {
+                "i": 0,
+                "a": 561,
+                "cell": 5136,
+                "x": 918.37,
+                "y": 1019.13,
+                "bx": 918.37,
+                "by": 1019.13,
+                "u": {
+                    "archers": 265,
+                    "cavalry": 34,
+                    "infantry": 261,
+                    "artillery": 1
+                },
+                "n": 0,
+                "name": "1st (Skaph) Regiment",
+                "state": 16,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 223,
+                "cell": 5938,
+                "x": 957.76,
+                "y": 1152.44,
+                "bx": 957.76,
+                "by": 1152.44,
+                "u": {
+                    "infantry": 99,
+                    "cavalry": 12,
+                    "archers": 112
+                },
+                "n": 0,
+                "name": "2nd (Skath'tir) Regiment",
+                "state": 16,
+                "icon": "🏹"
+            }
+        ]
+    },
+    {
+        "i": 17,
+        "color": "#a2f764",
+        "name": "Chalk",
+        "expansionism": 2.2,
+        "capital": 17,
+        "type": "Generic",
+        "center": 932,
+        "culture": 9,
+        "coa": {
+            "t1": "fusily-azure-argent",
+            "ordinaries": [
+                {
+                    "ordinary": "bendlet",
+                    "t": "or",
+                    "line": "straight"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "crossMoline",
+                    "t": "purpure",
+                    "p": "joe",
+                    "size": 0.3
+                }
+            ],
+            "shield": "moriaOrc"
+        },
+        "pole": [
+            1274,
+            434
+        ],
+        "urban": 46.184999999999995,
+        "rural": 420.3777072429657,
+        "burgs": 8,
+        "area": 12419,
+        "cells": 49,
+        "neighbors": [
+            6,
+            3
+        ],
+        "campaigns": [
+            {
+                "name": "Sluan Rebellion",
+                "start": 1832,
+                "end": 1833
+            },
+            {
+                "name": "Styrvaqan Conquest",
+                "start": 1925,
+                "end": 1926
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Neutral",
+            "Suspicion",
+            "Friendly",
+            "Suspicion",
+            "Rival",
+            "Neutral",
+            "Neutral",
+            "Suspicion",
+            "Ally",
+            "Neutral",
+            "Ally",
+            "Unknown",
+            "Friendly",
+            "Suspicion",
+            "Suspicion",
+            "x",
+            "Neutral",
+            "Suspicion"
+        ],
+        "form": "Theocracy",
+        "formName": "Thearchy",
+        "fullName": "Thearchy of Chalk",
+        "provinces": [
+            69,
+            70
+        ],
+        "alert": 2.1,
+        "military": [
+            {
+                "i": 0,
+                "a": 4674,
+                "cell": 932,
+                "x": 1260.35,
+                "y": 400.79,
+                "bx": 1260.35,
+                "by": 400.79,
+                "u": {
+                    "archers": 1974,
+                    "cavalry": 586,
+                    "artillery": 38,
+                    "infantry": 2076
+                },
+                "n": 0,
+                "name": "1st (Sios) Regiment",
+                "state": 17,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 11,
+                "cell": 932,
+                "x": 1241.66,
+                "y": 394.84,
+                "bx": 1241.66,
+                "by": 394.84,
+                "u": {
+                    "fleet": 11
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 17,
+                "icon": "🌊"
+            },
+            {
+                "i": 2,
+                "a": 1,
+                "cell": 1288,
+                "x": 1326.7,
+                "y": 478.1,
+                "bx": 1326.7,
+                "by": 478.1,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 17,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 18,
+        "color": "#c3ec56",
+        "name": "Margek",
+        "expansionism": 5.5,
+        "capital": 18,
+        "type": "Lake",
+        "center": 5042,
+        "culture": 5,
+        "coa": {
+            "t1": "or",
+            "ordinaries": [
+                {
+                    "ordinary": "saltireParted",
+                    "t": "gules",
+                    "line": "straight"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "archer",
+                    "t": "argent",
+                    "p": "e",
+                    "t2": "gules",
+                    "t3": "argent",
+                    "size": 1.5
+                }
+            ],
+            "shield": "fantasy1"
+        },
+        "pole": [
+            1496,
+            992
+        ],
+        "urban": 359.85499999999996,
+        "rural": 3748.5590648055077,
+        "burgs": 50,
+        "area": 109275,
+        "cells": 378,
+        "neighbors": [
+            11,
+            1,
+            3,
+            19,
+            14,
+            15,
+            2,
+            8
+        ],
+        "campaigns": [
+            {
+                "name": "Sral'ar Intervention",
+                "start": 1727,
+                "end": 1734
+            },
+            {
+                "name": "Shash Expedition",
+                "start": 1873,
+                "end": 1882
+            },
+            {
+                "name": "Cothaz Rebellion",
+                "start": 1877,
+                "end": 1881
+            },
+            {
+                "name": "Culesean War",
+                "start": 1939,
+                "end": 1940
+            },
+            {
+                "name": "Felnian Invasion",
+                "start": 1988,
+                "end": 1989
+            },
+            {
+                "name": "Stapian Conflict",
+                "start": 1988,
+                "end": 1993
+            },
+            {
+                "name": "Srathus War",
+                "start": 1988,
+                "end": 1989
+            },
+            {
+                "name": "Cocker Invasion",
+                "start": 1988,
+                "end": 1989
+            },
+            {
+                "name": "Margek-Shashian War",
+                "start": 1991,
+                "attacker": 18,
+                "defender": 1
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Enemy",
+            "Rival",
+            "Suspicion",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Enemy",
+            "Neutral",
+            "Friendly",
+            "Rival",
+            "Friendly",
+            "Unknown",
+            "Enemy",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "x",
+            "Enemy"
+        ],
+        "form": "Monarchy",
+        "formName": "Empire",
+        "fullName": "Margish Empire",
+        "provinces": [
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            111,
+            112,
+            113,
+            114
+        ],
+        "alert": 2.04,
+        "military": [
+            {
+                "i": 0,
+                "a": 3448,
+                "cell": 5037,
+                "x": 1491.3,
+                "y": 994.74,
+                "bx": 1491.3,
+                "by": 994.74,
+                "u": {
+                    "infantry": 1782,
+                    "cavalry": 514,
+                    "archers": 1133,
+                    "artillery": 19
+                },
+                "n": 0,
+                "name": "1st (Pan'hez) Regiment",
+                "state": 18,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 2488,
+                "cell": 5177,
+                "x": 1557.39,
+                "y": 1018.92,
+                "bx": 1557.39,
+                "by": 1018.92,
+                "u": {
+                    "archers": 1226,
+                    "cavalry": 159,
+                    "artillery": 16,
+                    "infantry": 1087
+                },
+                "n": 0,
+                "name": "2nd (Pan'hez) Regiment",
+                "state": 18,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 2233,
+                "cell": 3633,
+                "x": 1692.82,
+                "y": 812.01,
+                "bx": 1692.82,
+                "by": 812.01,
+                "u": {
+                    "archers": 1024,
+                    "cavalry": 179,
+                    "artillery": 20,
+                    "infantry": 1010
+                },
+                "n": 0,
+                "name": "3rd (Nituph) Regiment",
+                "state": 18,
+                "icon": "🏹"
+            },
+            {
+                "i": 3,
+                "a": 2153,
+                "cell": 4185,
+                "x": 1561.18,
+                "y": 887.51,
+                "bx": 1561.18,
+                "by": 887.51,
+                "u": {
+                    "infantry": 1147,
+                    "cavalry": 353,
+                    "archers": 638,
+                    "artillery": 15
+                },
+                "n": 0,
+                "name": "4th (Solt'kin) Regiment",
+                "state": 18,
+                "icon": "⚔️"
+            },
+            {
+                "i": 4,
+                "a": 2042,
+                "cell": 5549,
+                "x": 1458.5,
+                "y": 1085.6,
+                "bx": 1458.5,
+                "by": 1085.6,
+                "u": {
+                    "archers": 772,
+                    "cavalry": 242,
+                    "artillery": 30,
+                    "infantry": 998
+                },
+                "n": 0,
+                "name": "5th (Cothjuk) Regiment",
+                "state": 18,
+                "icon": "⚔️"
+            },
+            {
+                "i": 5,
+                "a": 1903,
+                "cell": 4020,
+                "x": 1447.55,
+                "y": 869.99,
+                "bx": 1447.55,
+                "by": 869.99,
+                "u": {
+                    "archers": 793,
+                    "cavalry": 223,
+                    "infantry": 876,
+                    "artillery": 11
+                },
+                "n": 0,
+                "name": "6th (Chisdonia) Regiment",
+                "state": 18,
+                "icon": "⚔️"
+            },
+            {
+                "i": 6,
+                "a": 1873,
+                "cell": 4190,
+                "x": 1662.99,
+                "y": 890.1,
+                "bx": 1662.99,
+                "by": 890.1,
+                "u": {
+                    "archers": 710,
+                    "cavalry": 225,
+                    "infantry": 924,
+                    "artillery": 14
+                },
+                "n": 0,
+                "name": "7th (Pepjaj'i) Regiment",
+                "state": 18,
+                "icon": "⚔️"
+            },
+            {
+                "i": 7,
+                "a": 1838,
+                "cell": 3357,
+                "x": 1617.6,
+                "y": 784.4,
+                "bx": 1617.6,
+                "by": 784.4,
+                "u": {
+                    "archers": 709,
+                    "artillery": 6,
+                    "cavalry": 222,
+                    "infantry": 901
+                },
+                "n": 0,
+                "name": "8th (Pepjaj'i) Regiment",
+                "state": 18,
+                "icon": "⚔️"
+            },
+            {
+                "i": 8,
+                "a": 1684,
+                "cell": 3640,
+                "x": 1779.18,
+                "y": 816.39,
+                "bx": 1779.18,
+                "by": 816.39,
+                "u": {
+                    "archers": 859,
+                    "cavalry": 91,
+                    "artillery": 10,
+                    "infantry": 724
+                },
+                "n": 0,
+                "name": "9th (Fadingley) Regiment",
+                "state": 18,
+                "icon": "🏹"
+            },
+            {
+                "i": 9,
+                "a": 1633,
+                "cell": 4769,
+                "x": 1596.74,
+                "y": 958.87,
+                "bx": 1596.74,
+                "by": 958.87,
+                "u": {
+                    "archers": 576,
+                    "cavalry": 220,
+                    "artillery": 22,
+                    "infantry": 815
+                },
+                "n": 0,
+                "name": "10th (Solt'kin) Regiment",
+                "state": 18,
+                "icon": "⚔️"
+            },
+            {
+                "i": 10,
+                "a": 1317,
+                "cell": 4471,
+                "x": 1365.4,
+                "y": 921.4,
+                "bx": 1365.4,
+                "by": 921.4,
+                "u": {
+                    "archers": 479,
+                    "cavalry": 171,
+                    "infantry": 662,
+                    "artillery": 5
+                },
+                "n": 0,
+                "name": "11th (Chisdonia) Regiment",
+                "state": 18,
+                "icon": "⚔️"
+            },
+            {
+                "i": 11,
+                "a": 1051,
+                "cell": 3257,
+                "x": 1860.38,
+                "y": 762.53,
+                "bx": 1860.38,
+                "by": 762.53,
+                "u": {
+                    "archers": 495,
+                    "cavalry": 79,
+                    "infantry": 475,
+                    "artillery": 2
+                },
+                "n": 0,
+                "name": "12th (Fadingley) Regiment",
+                "state": 18,
+                "icon": "🏹"
+            },
+            {
+                "i": 12,
+                "a": 4,
+                "cell": 3885,
+                "x": 1639.58,
+                "y": 830,
+                "bx": 1639.58,
+                "by": 830,
+                "u": {
+                    "fleet": 4
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 18,
+                "icon": "🌊"
+            },
+            {
+                "i": 13,
+                "a": 3,
+                "cell": 4184,
+                "x": 1536.52,
+                "y": 904.16,
+                "bx": 1536.52,
+                "by": 904.16,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 18,
+                "icon": "🌊"
+            },
+            {
+                "i": 14,
+                "a": 1,
+                "cell": 5042,
+                "x": 1590.56,
+                "y": 1013.3,
+                "bx": 1590.56,
+                "by": 1013.3,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 18,
+                "icon": "🌊"
+            },
+            {
+                "i": 15,
+                "a": 1,
+                "cell": 4195,
+                "x": 1707.19,
+                "y": 885.18,
+                "bx": 1707.19,
+                "by": 885.18,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "4th Fleet",
+                "state": 18,
+                "icon": "🌊"
+            },
+            {
+                "i": 16,
+                "a": 1,
+                "cell": 3114,
+                "x": 1765.6,
+                "y": 751.29,
+                "bx": 1765.6,
+                "by": 751.29,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "5th Fleet",
+                "state": 18,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 19,
+        "color": "#ff8d76",
+        "name": "Stapia",
+        "expansionism": 4.6,
+        "capital": 19,
+        "type": "Naval",
+        "center": 5813,
+        "culture": 2,
+        "coa": {
+            "t1": "or",
+            "division": {
+                "division": "perPale",
+                "t": "azure",
+                "line": "indented"
+            },
+            "charges": [
+                {
+                    "charge": "lozengeFaceted",
+                    "t": "vert",
+                    "p": "p",
+                    "size": 0.7
+                },
+                {
+                    "charge": "billet",
+                    "t": "argent",
+                    "p": "q",
+                    "size": 0.7
+                }
+            ],
+            "shield": "heater"
+        },
+        "pole": [
+            1902,
+            1125
+        ],
+        "urban": 194.20200000000003,
+        "rural": 1611.1734184026718,
+        "burgs": 28,
+        "area": 46820,
+        "cells": 183,
+        "neighbors": [
+            11,
+            10,
+            18,
+            7,
+            15,
+            9
+        ],
+        "campaigns": [
+            {
+                "name": "Skiplehamian Expedition",
+                "start": 1821,
+                "end": 1832
+            },
+            {
+                "name": "Stapan War",
+                "start": 1896,
+                "end": 1897
+            },
+            {
+                "name": "Penmouth War",
+                "start": 1949,
+                "end": 1953
+            },
+            {
+                "name": "Felnian War",
+                "start": 1988,
+                "end": 1993
+            },
+            {
+                "name": "Margish War",
+                "start": 1988,
+                "end": 1989
+            },
+            {
+                "name": "Olafsish Rebellion",
+                "start": 1988,
+                "end": 1989
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Ally",
+            "Ally",
+            "Neutral",
+            "Friendly",
+            "Friendly",
+            "Friendly",
+            "Suspicion",
+            "Ally",
+            "Friendly",
+            "Suspicion",
+            "Rival",
+            "Suspicion",
+            "Suspicion",
+            "Friendly",
+            "Friendly",
+            "Friendly",
+            "Suspicion",
+            "Enemy",
+            "x"
+        ],
+        "form": "Union",
+        "formName": "Heptarchy",
+        "fullName": "Heptarchy of Stapia",
+        "provinces": [
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            115,
+            116
+        ],
+        "alert": 2.65,
+        "military": [
+            {
+                "i": 0,
+                "a": 3907,
+                "cell": 5202,
+                "x": 1922.57,
+                "y": 1016.57,
+                "bx": 1922.57,
+                "by": 1016.57,
+                "u": {
+                    "infantry": 1759,
+                    "cavalry": 224,
+                    "archers": 1842,
+                    "artillery": 82
+                },
+                "n": 0,
+                "name": "1st (Manchelia) Regiment",
+                "state": 19,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 3361,
+                "cell": 5811,
+                "x": 1922.26,
+                "y": 1120.19,
+                "bx": 1922.26,
+                "by": 1120.19,
+                "u": {
+                    "archers": 1662,
+                    "cavalry": 174,
+                    "infantry": 1499,
+                    "artillery": 26
+                },
+                "n": 0,
+                "name": "2nd (Norleigh) Regiment",
+                "state": 19,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 2118,
+                "cell": 3645,
+                "x": 1875.15,
+                "y": 807.81,
+                "bx": 1875.15,
+                "by": 807.81,
+                "u": {
+                    "archers": 1192,
+                    "cavalry": 54,
+                    "artillery": 39,
+                    "infantry": 833
+                },
+                "n": 0,
+                "name": "3rd (Felia) Regiment",
+                "state": 19,
+                "icon": "🏹"
+            },
+            {
+                "i": 3,
+                "a": 2059,
+                "cell": 4367,
+                "x": 2025.5,
+                "y": 916.8,
+                "bx": 2025.5,
+                "by": 916.8,
+                "u": {
+                    "archers": 1154,
+                    "cavalry": 54,
+                    "infantry": 808,
+                    "artillery": 43
+                },
+                "n": 0,
+                "name": "4th (Winchleach) Regiment",
+                "state": 19,
+                "icon": "🏹"
+            },
+            {
+                "i": 4,
+                "a": 1886,
+                "cell": 6071,
+                "x": 1860.46,
+                "y": 1162.43,
+                "bx": 1860.46,
+                "by": 1162.43,
+                "u": {
+                    "archers": 1004,
+                    "cavalry": 69,
+                    "artillery": 34,
+                    "infantry": 779
+                },
+                "n": 0,
+                "name": "5th (Felborpor) Regiment",
+                "state": 19,
+                "icon": "🏹"
+            },
+            {
+                "i": 5,
+                "a": 1860,
+                "cell": 5574,
+                "x": 1881.18,
+                "y": 1068.4,
+                "bx": 1881.18,
+                "by": 1068.4,
+                "u": {
+                    "infantry": 952,
+                    "cavalry": 159,
+                    "archers": 749
+                },
+                "n": 0,
+                "name": "6th (Manchelia) Regiment",
+                "state": 19,
+                "icon": "⚔️"
+            },
+            {
+                "i": 6,
+                "a": 780,
+                "cell": 5338,
+                "x": 2104.78,
+                "y": 1031.72,
+                "bx": 2104.78,
+                "by": 1031.72,
+                "u": {
+                    "archers": 440,
+                    "cavalry": 17,
+                    "infantry": 304,
+                    "artillery": 19
+                },
+                "n": 0,
+                "name": "7th (Mourydon) Regiment",
+                "state": 19,
+                "icon": "🏹"
+            },
+            {
+                "i": 7,
+                "a": 10,
+                "cell": 5813,
+                "x": 1969.67,
+                "y": 1106.59,
+                "bx": 1969.67,
+                "by": 1106.59,
+                "u": {
+                    "fleet": 10
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 19,
+                "icon": "🌊"
+            },
+            {
+                "i": 8,
+                "a": 1,
+                "cell": 4362,
+                "x": 1976.79,
+                "y": 895.76,
+                "bx": 1976.79,
+                "by": 895.76,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 19,
+                "icon": "🌊"
+            },
+            {
+                "i": 9,
+                "a": 1,
+                "cell": 4049,
+                "x": 1900.97,
+                "y": 880.9,
+                "bx": 1900.97,
+                "by": 880.9,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 19,
+                "icon": "🌊"
+            }
+        ]
+    }
+]

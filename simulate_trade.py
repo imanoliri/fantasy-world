@@ -1,103 +1,115 @@
-import json
 import math
 
-BURGS_FILE = 'data/burgs.json'
-OUTPUT_FILE = 'data/trade_routes.csv'
+# Configuration
+USE_TERRAIN_AND_INFRASTRUCTURE = True
 
-def load_burgs():
-    with open(BURGS_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
+def calculate_distance(burg1, burg2):
+    """
+    Calculates the distance between two burgs, optionally applying terrain and infrastructure modifiers.
+    burg1 and burg2 can be dictionaries (burg objects) or tuples (x, y).
+    """
+    x1, y1 = burg1['x'], burg1['y']
+    x2, y2 = burg2['x'], burg2['y']
 
-def calculate_distance(b1, b2):
-    return math.sqrt((b1['x'] - b2['x'])**2 + (b1['y'] - b2['y'])**2)
+    # Base Euclidean distance
+    dist = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+    
+    # Apply Terrain & Infrastructure Modifiers
+    if USE_TERRAIN_AND_INFRASTRUCTURE and isinstance(burg1, dict) and isinstance(burg2, dict):
+        multiplier = 1.0
+        
+        # Sea/Haven (Fastest)
+        # If both are havens (ports), sea travel is very efficient
+        if burg1.get('haven') and burg2.get('haven'):
+            multiplier *= 0.3
 
-def simulate_trade(burgs):
+        # Roads (Faster)
+        # If both have roads, we assume a connection (simplification)
+        elif burg1.get('road') and burg2.get('road'):
+            multiplier *= 0.5
+            
+            
+        # Mountains (Slower)
+        # Height difference is difficult to cross
+        multiplier *= (1+ 3 * abs(burg1.get('h', 0) - burg2.get('h', 0)))
+            
+        # Political Borders (Infrastructure/Safety)
+        # Trade within the same state is easier
+        if burg1.get('state') == burg2.get('state'):
+            multiplier *= 0.8
+            
+        dist = round(dist*multiplier, 2)
+        
+    return dist
+
+def simulate_trade(burgs, commodities=['Net_Food', 'Net_Gold']):
+    """
+    Simulates trade between burgs based on supply and demand using a gravity model.
+    """
+    print(f"--- Simulating Trade (Terrain & Infrastructure: {'ON' if USE_TERRAIN_AND_INFRASTRUCTURE else 'OFF'}) ---")
+    
     trades = []
     
-    # Commodities to trade
-    commodities = ['Net_Food', 'Net_Gold']
+    # Create a lookup for burgs by ID for easy access
+    burg_lookup = {b['id']: b for b in burgs}
     
     for commodity in commodities:
-        print(f"\n--- Simulating Trade for {commodity} ---")
-        
-        # Separate into Exporters and Importers
         exporters = []
         importers = []
         
+        # Identify Exporters and Importers
         for b in burgs:
             net = b.get('net_production_burg', {}).get(commodity, 0)
-            if net > 0.01: # Threshold to avoid floating point noise
-                # Create a mutable copy for tracking remaining supply
-                exporters.append({'id': b['id'], 'name': b['name'], 'x': b['x'], 'y': b['y'], 'supply': net, 'original_supply': net})
+            if net > 0.01:
+                exporters.append({'id': b['id'], 'supply': net, 'original_supply': net})
             elif net < -0.01:
-                # Create a mutable copy for tracking remaining demand
-                importers.append({'id': b['id'], 'name': b['name'], 'x': b['x'], 'y': b['y'], 'demand': -net, 'original_demand': -net})
+                importers.append({'id': b['id'], 'demand': -net, 'original_demand': -net})
         
+        print(f"--- Simulating Trade for {commodity} ---")
         print(f"Exporters: {len(exporters)}, Importers: {len(importers)}")
         
-        # Match Importers to Exporters
+        # Gravity Model Matching
+        # For each importer, calculate a score for each exporter: Supply / (Distance^2)
         for importer in importers:
-            if importer['demand'] <= 0: continue
+            importer_burg = burg_lookup[importer['id']]
+            scores = []
             
-            # Calculate score for all exporters: Supply / Distance^2
-            # We want high supply and low distance.
-            # Gravity model: Interaction ~ (Mass1 * Mass2) / Distance^2
-            # Here Mass1 is Demand, Mass2 is Supply.
-            # Since we are iterating per importer, Mass1 is constant for the sort.
-            # So we sort by Supply / Distance^2.
-            
-            candidates = []
             for exporter in exporters:
                 if exporter['supply'] <= 0: continue
                 
-                dist = calculate_distance(importer, exporter)
-                if dist < 1.0: dist = 1.0 # Avoid division by zero or huge spikes
+                exporter_burg = burg_lookup[exporter['id']]
+                
+                # Pass full burg objects to calculate_distance
+                dist = calculate_distance(importer_burg, exporter_burg)
+                if dist < 1: dist = 1 # Avoid division by zero
                 
                 score = exporter['supply'] / (dist ** 2)
-                candidates.append((score, dist, exporter))
+                scores.append({'exporter': exporter, 'score': score, 'distance': dist})
             
-            # Sort by score descending
-            candidates.sort(key=lambda x: x[0], reverse=True)
+            # Sort by score (highest first)
+            scores.sort(key=lambda x: x['score'], reverse=True)
             
             # Fulfill demand
-            for score, dist, exporter in candidates:
+            for match in scores:
                 if importer['demand'] <= 0: break
                 
+                exporter = match['exporter']
+                
+                # Greedy consumption: take as much as possible from this exporter
                 amount = min(importer['demand'], exporter['supply'])
                 
-                trades.append({
-                    'From_ID': exporter['id'],
-                    'From_Name': exporter['name'],
-                    'To_ID': importer['id'],
-                    'To_Name': importer['name'],
-                    'Commodity': commodity,
-                    'Amount': round(amount, 2),
-                    'Distance': round(dist, 2)
-                })
-                
-                # Update states
-                importer['demand'] -= amount
-                exporter['supply'] -= amount
-                
+                if amount > 0:
+                    trades.append({
+                        'From_ID': exporter['id'],
+                        'From_Name': burg_lookup[exporter['id']]['name'],
+                        'To_ID': importer['id'],
+                        'To_Name': burg_lookup[importer['id']]['name'],
+                        'Commodity': commodity,
+                        'Amount': amount,
+                        'Distance': match['distance']
+                    })
+                    
+                    importer['demand'] -= amount
+                    exporter['supply'] -= amount
+        
     return trades
-
-if __name__ == "__main__":
-    print("Loading burgs...")
-    burgs = load_burgs()
-    
-    print(f"Loaded {len(burgs)} burgs.")
-    
-    trades = simulate_trade(burgs)
-    
-    print(f"\nTotal trades generated: {len(trades)}")
-    
-    if trades:
-        # Simple CSV output without pandas
-        import csv
-        with open(OUTPUT_FILE, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=trades[0].keys())
-            writer.writeheader()
-            writer.writerows(trades)
-        print(f"Trade routes saved to {OUTPUT_FILE}")
-    else:
-        print("No trades occurred.")
