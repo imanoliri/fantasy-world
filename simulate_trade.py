@@ -101,7 +101,9 @@ def simulate_trade(burgs, commodities=['Net_Food', 'Net_Gold']):
                 if amount > 0:
                     trades.append({
                         'From_ID': exporter['id'],
+                        'From_Name': burg_lookup[exporter['id']]['name'],
                         'To_ID': importer['id'],
+                        'To_Name': burg_lookup[importer['id']]['name'],
                         'Commodity': commodity,
                         'Amount': amount,
                         'Distance': match['distance']
@@ -109,10 +111,5 @@ def simulate_trade(burgs, commodities=['Net_Food', 'Net_Gold']):
                     
                     importer['demand'] -= amount
                     exporter['supply'] -= amount
-                    
-        # Failsafe: If demand remains, try to find ANY exporter with supply (even if distant)
-        # Actually, the greedy approach above already checks ALL exporters sorted by score.
-        # If demand remains, it means GLOBAL supply is exhausted or unreachable.
-        # The previous "failsafe" was just ensuring we check all exporters, which we do now.
         
     return trades
