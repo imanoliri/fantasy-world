@@ -1,272 +1,212 @@
 [
     {
         "From_ID": 162,
-        "From_Name": "Frampton",
         "To_ID": 3,
-        "To_Name": "Frampton",
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 11.93
+        "Distance": 9.54148835350125
     },
     {
         "From_ID": 20,
-        "From_Name": "Craftham",
         "To_ID": 4,
-        "To_Name": "North",
         "Commodity": "Net_Food",
         "Amount": 3.5,
-        "Distance": 24.44
+        "Distance": 19.551977086729632
     },
     {
         "From_ID": 93,
-        "From_Name": "Harling",
         "To_ID": 5,
-        "To_Name": "Wickhamp",
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 36.86
+        "Distance": 29.487934888696397
     },
     {
         "From_ID": 115,
-        "From_Name": "Bolihuldon",
         "To_ID": 9,
-        "To_Name": "Sovilsea",
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 24.93
+        "Distance": 19.944242276907886
     },
     {
         "From_ID": 87,
-        "From_Name": "Sovery",
         "To_ID": 11,
-        "To_Name": "Moury",
         "Commodity": "Net_Food",
         "Amount": 4.5,
-        "Distance": 42.31
+        "Distance": 33.8514401466171
     },
     {
         "From_ID": 23,
-        "From_Name": "Chistonby",
         "To_ID": 13,
-        "To_Name": "Berbury",
         "Commodity": "Net_Food",
         "Amount": 4.0,
-        "Distance": 20.14
+        "Distance": 16.10865903792128
     },
     {
         "From_ID": 83,
-        "From_Name": "Tregone",
         "To_ID": 19,
-        "To_Name": "Tiverton",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 73.16
+        "Distance": 58.52775341664842
     },
     {
         "From_ID": 288,
-        "From_Name": "Yeorough",
         "To_ID": 29,
-        "To_Name": "Guildleton",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 84.32
+        "Distance": 67.45549335673113
     },
     {
         "From_ID": 6,
-        "From_Name": "Hatfield",
         "To_ID": 78,
-        "To_Name": "Westclif",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 40.93
+        "Distance": 32.745025148868024
     },
     {
         "From_ID": 259,
-        "From_Name": "Sorough",
         "To_ID": 84,
-        "To_Name": "Wodford",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 117.74
+        "Distance": 94.19424356084612
     },
     {
         "From_ID": 82,
-        "From_Name": "Buclifnal",
         "To_ID": 95,
-        "To_Name": "Alseasings",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 23.1
+        "Distance": 18.48327936271052
     },
     {
         "From_ID": 11,
-        "From_Name": "Moury",
         "To_ID": 111,
-        "To_Name": "Cleorough",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 122.93
+        "Distance": 98.34453396096812
     },
     {
         "From_ID": 355,
-        "From_Name": "Boshore",
         "To_ID": 114,
-        "To_Name": "Newleigh",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 31.35
+        "Distance": 25.08387976370486
     },
     {
         "From_ID": 447,
-        "From_Name": "Bazion",
         "To_ID": 126,
-        "To_Name": "Foverham",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 40.81
+        "Distance": 32.64683261818825
     },
     {
         "From_ID": 284,
-        "From_Name": "Flokwarne",
         "To_ID": 156,
-        "To_Name": "Chilton",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 59.45
+        "Distance": 47.56165716204596
     },
     {
         "From_ID": 172,
-        "From_Name": "Reaford",
         "To_ID": 159,
-        "To_Name": "Altford",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 59.29
+        "Distance": 47.43420470504383
     },
     {
         "From_ID": 499,
-        "From_Name": "Sudgewes",
         "To_ID": 173,
-        "To_Name": "Rothbridge",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 209.69
+        "Distance": 167.75533288691605
     },
     {
         "From_ID": 427,
-        "From_Name": "Creholeton",
         "To_ID": 178,
-        "To_Name": "Dunsted",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 66.04
+        "Distance": 52.8294366428415
     },
     {
         "From_ID": 9,
-        "From_Name": "Sovilsea",
         "To_ID": 222,
-        "To_Name": "Whitlewent",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 44.31
+        "Distance": 35.44697538577869
     },
     {
         "From_ID": 82,
-        "From_Name": "Buclifnal",
         "To_ID": 248,
-        "To_Name": "Congley",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 66.66
+        "Distance": 53.32523365162123
     },
     {
         "From_ID": 11,
-        "From_Name": "Moury",
         "To_ID": 255,
-        "To_Name": "Knutstabrid",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 77.73
+        "Distance": 62.182950718022454
     },
     {
         "From_ID": 6,
-        "From_Name": "Hatfield",
         "To_ID": 268,
-        "To_Name": "Knutster",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 110.22
+        "Distance": 88.17635601452353
     },
     {
         "From_ID": 274,
-        "From_Name": "Cliford",
         "To_ID": 303,
-        "To_Name": "Rethorough",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 58.79
+        "Distance": 47.03174077152581
     },
     {
         "From_ID": 13,
-        "From_Name": "Berbury",
         "To_ID": 375,
-        "To_Name": "Cantef",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 103.35
+        "Distance": 82.68174163622828
     },
     {
         "From_ID": 83,
-        "From_Name": "Tregone",
         "To_ID": 395,
-        "To_Name": "Tarleighes",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 66.39
+        "Distance": 53.114279812494864
     },
     {
         "From_ID": 7,
-        "From_Name": "Dudford",
         "To_ID": 409,
-        "To_Name": "Tetrinchbu",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 61.91
+        "Distance": 49.53136153993753
     },
     {
         "From_ID": 259,
-        "From_Name": "Sorough",
         "To_ID": 412,
-        "To_Name": "Stapleham",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 85.05
+        "Distance": 68.03789861540403
     },
     {
         "From_ID": 183,
-        "From_Name": "Walton",
         "To_ID": 413,
-        "To_Name": "Westfordbu",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 92.42
+        "Distance": 73.93913172333033
     },
     {
         "From_ID": 41,
-        "From_Name": "Swareton",
         "To_ID": 426,
-        "To_Name": "Sarewich",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 29.9
+        "Distance": 23.923709411376805
     },
     {
         "From_ID": 418,
-        "From_Name": "Tarmouthes",
         "To_ID": 431,
-        "To_Name": "Wenmouth",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 38.43
+        "Distance": 30.74058060609789
     }
 ]

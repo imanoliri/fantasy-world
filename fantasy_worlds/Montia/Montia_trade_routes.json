@@ -1,263 +1,205 @@
 [
     {
         "From_ID": 78,
-        "From_Name": "Rralerrij",
         "To_ID": 2,
-        "To_Name": "Mataph",
         "Commodity": "Net_Food",
         "Amount": 7.5,
-        "Distance": 52.02
+        "Distance": 41.61848819935677
     },
     {
         "From_ID": 351,
-        "From_Name": "Gaj'anek",
         "To_ID": 2,
-        "To_Name": "Mataph",
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 41.86
+        "Distance": 33.490583751257695
     },
     {
         "From_ID": 383,
-        "From_Name": "Goz'har",
         "To_ID": 2,
-        "To_Name": "Mataph",
         "Commodity": "Net_Food",
         "Amount": 1.0,
-        "Distance": 105.1
+        "Distance": 84.08288672494547
     },
     {
         "From_ID": 108,
-        "From_Name": "Utiarm",
         "To_ID": 4,
-        "To_Name": "Ulbgarm",
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 22.56
+        "Distance": 18.04759751324262
     },
     {
         "From_ID": 172,
-        "From_Name": "Sanland",
         "To_ID": 5,
-        "To_Name": "Oakley",
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 49.59
+        "Distance": 39.67364868524199
     },
     {
         "From_ID": 285,
-        "From_Name": "Buckingdon",
         "To_ID": 7,
-        "To_Name": "Brover",
         "Commodity": "Net_Food",
         "Amount": 5.0,
-        "Distance": 55.61
+        "Distance": 44.48525148855511
     },
     {
         "From_ID": 99,
-        "From_Name": "Tjarvatn",
         "To_ID": 9,
-        "To_Name": "Olafsf",
         "Commodity": "Net_Food",
         "Amount": 2.0,
-        "Distance": 16.63
+        "Distance": 13.307696419741598
     },
     {
         "From_ID": 202,
-        "From_Name": "Alfjorna",
         "To_ID": 9,
-        "To_Name": "Olafsf",
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 36.62
+        "Distance": 29.29606663018083
     },
     {
         "From_ID": 138,
-        "From_Name": "Dunsin",
         "To_ID": 11,
-        "To_Name": "Portscom",
         "Commodity": "Net_Food",
         "Amount": 1.5,
-        "Distance": 47.64
+        "Distance": 38.11277245228938
     },
     {
         "From_ID": 176,
-        "From_Name": "Altfieldge",
         "To_ID": 12,
-        "To_Name": "Newboke",
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 26.09
+        "Distance": 20.871159814442645
     },
     {
         "From_ID": 245,
-        "From_Name": "Thult",
         "To_ID": 17,
-        "To_Name": "Sios",
         "Commodity": "Net_Food",
         "Amount": 1.0,
-        "Distance": 37.45
+        "Distance": 29.95747492696937
     },
     {
         "From_ID": 140,
-        "From_Name": "Hertfield",
         "To_ID": 70,
-        "To_Name": "Aldonter",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 75.29
+        "Distance": 60.23586546236379
     },
     {
         "From_ID": 338,
-        "From_Name": "Pil'ar",
         "To_ID": 84,
-        "To_Name": "Elt'kash",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 137.6
+        "Distance": 110.08046511529642
     },
     {
         "From_ID": 13,
-        "From_Name": "Yotarak",
         "To_ID": 89,
-        "To_Name": "Gomron",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 63.5
+        "Distance": 50.79931842062455
     },
     {
         "From_ID": 3,
-        "From_Name": "Napjeri",
         "To_ID": 92,
-        "To_Name": "Mafordge",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 48.17
+        "Distance": 38.53430679277885
     },
     {
         "From_ID": 1,
-        "From_Name": "Shash",
         "To_ID": 123,
-        "To_Name": "Chawleigh",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 41.69
+        "Distance": 33.351861837084975
     },
     {
         "From_ID": 248,
-        "From_Name": "Thatclester",
         "To_ID": 144,
-        "To_Name": "Leighboury",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 83.57
+        "Distance": 66.85805620865737
     },
     {
         "From_ID": 36,
-        "From_Name": "Linton",
         "To_ID": 146,
-        "To_Name": "Sudgeby",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 28.03
+        "Distance": 22.421478274190527
     },
     {
         "From_ID": 5,
-        "From_Name": "Oakley",
         "To_ID": 158,
-        "To_Name": "Osfield",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 124.41
+        "Distance": 99.52614289723077
     },
     {
         "From_ID": 9,
-        "From_Name": "Olafsf",
         "To_ID": 202,
-        "To_Name": "Alfjorna",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 36.62
+        "Distance": 29.29606663018083
     },
     {
         "From_ID": 336,
-        "From_Name": "Bucketerpor",
         "To_ID": 220,
-        "To_Name": "Keremacury",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 82.81
+        "Distance": 66.2476913409063
     },
     {
         "From_ID": 11,
-        "From_Name": "Portscom",
         "To_ID": 258,
-        "To_Name": "Fadingley",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 171.08
+        "Distance": 136.86382464332922
     },
     {
         "From_ID": 270,
-        "From_Name": "Stanstabrid",
         "To_ID": 294,
-        "To_Name": "Romney",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 73.69
+        "Distance": 58.95412399484874
     },
     {
         "From_ID": 179,
-        "From_Name": "Yeoroughton",
         "To_ID": 295,
-        "To_Name": "Bingtontale",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 49.04
+        "Distance": 39.235616472791826
     },
     {
         "From_ID": 203,
-        "From_Name": "Olluph",
         "To_ID": 310,
-        "To_Name": "Maless",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 77.49
+        "Distance": 61.988752011957935
     },
     {
         "From_ID": 3,
-        "From_Name": "Napjeri",
         "To_ID": 319,
-        "To_Name": "Dunsboweny",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 104.06
+        "Distance": 83.24584313946245
     },
     {
         "From_ID": 125,
-        "From_Name": "Vreagielt",
         "To_ID": 324,
-        "To_Name": "Wacury",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 16.22
+        "Distance": 12.975482110503638
     },
     {
         "From_ID": 51,
-        "From_Name": "Vesse",
         "To_ID": 333,
-        "To_Name": "Car'th'har",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 104.47
+        "Distance": 83.5722154785908
     },
     {
         "From_ID": 61,
-        "From_Name": "Treton",
         "To_ID": 345,
-        "To_Name": "Thatcker",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 27.82
+        "Distance": 22.252268558508806
     }
 ]

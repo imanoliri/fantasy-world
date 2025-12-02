@@ -54,7 +54,29 @@ def analyze_world_data(data):
         total_area += area
         total_pop += pop
 
-    valid_burgs = [b for b in burgs if isinstance(b, dict) and 'name' in b]
+    # Create a lookup for cells by index 'i'
+    # The cells list in pack['cells'] might not be sorted or might skip indices, 
+    # but usually it's a list where index matches 'i' if it's dense. 
+    # However, Azgaar's cells are often a list of objects with 'i'.
+    # Let's create a dict for safety.
+    cell_lookup = {c.get('i'): c for c in cells if 'i' in c}
+
+    valid_burgs = []
+    for b in burgs:
+        if isinstance(b, dict) and 'name' in b:
+            # Enrich with cell data
+            cell_id = b.get('cell')
+            if cell_id is not None and cell_id in cell_lookup:
+                cell = cell_lookup[cell_id]
+                b['h'] = cell.get('h', 0)
+                b['road'] = cell.get('road', 0)
+                b['haven'] = cell.get('haven', 0)
+                b['biome'] = cell.get('biome', 0)
+                # Ensure state is consistent (burg state should match cell state usually, but burg state takes precedence)
+                if 'state' not in b:
+                    b['state'] = cell.get('state', 0)
+            
+            valid_burgs.append(b)
     
     return {
         'total_area': total_area, 'total_pop': total_pop,

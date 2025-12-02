@@ -1,380 +1,296 @@
 [
     {
         "From_ID": 147,
-        "From_Name": "Armir",
         "To_ID": 1,
-        "To_Name": "Parabriz",
         "Commodity": "Net_Food",
         "Amount": 5.0,
-        "Distance": 30.83
+        "Distance": 24.661655418888657
     },
     {
         "From_ID": 313,
-        "From_Name": "Bareshahr",
         "To_ID": 2,
-        "To_Name": "Fasasan",
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 27.74
+        "Distance": 22.19160201517677
     },
     {
         "From_ID": 127,
-        "From_Name": "Tevand",
         "To_ID": 3,
-        "To_Name": "Shah",
         "Commodity": "Net_Food",
         "Amount": 2.5,
-        "Distance": 31.12
+        "Distance": 24.89596015420982
     },
     {
         "From_ID": 245,
-        "From_Name": "Jowzdandaq",
         "To_ID": 4,
-        "To_Name": "Narififi",
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 37.97
+        "Distance": 30.3726044981329
     },
     {
         "From_ID": 142,
-        "From_Name": "Chabad",
         "To_ID": 5,
-        "To_Name": "Dastgerd",
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 27.44
+        "Distance": 21.948200837426203
     },
     {
         "From_ID": 270,
-        "From_Name": "Titropona",
         "To_ID": 8,
-        "To_Name": "Sapala",
         "Commodity": "Net_Food",
         "Amount": 3.5,
-        "Distance": 29.84
+        "Distance": 23.87299729820284
     },
     {
         "From_ID": 9,
-        "From_Name": "Boviataci",
         "To_ID": 10,
-        "To_Name": "Tajajar",
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 4.03
+        "Distance": 3.2249030993194197
     },
     {
         "From_ID": 324,
-        "From_Name": "Inaralas",
         "To_ID": 10,
-        "To_Name": "Tajajar",
         "Commodity": "Net_Food",
         "Amount": 1.0,
-        "Distance": 14.48
+        "Distance": 11.587027228758853
     },
     {
         "From_ID": 318,
-        "From_Name": "Rheingendorf",
         "To_ID": 12,
-        "To_Name": "Opel",
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 50.39
+        "Distance": 40.30918108818386
     },
     {
         "From_ID": 126,
-        "From_Name": "Eiameale",
         "To_ID": 13,
-        "To_Name": "Sores",
         "Commodity": "Net_Food",
         "Amount": 2.5,
-        "Distance": 25.84
+        "Distance": 20.66829843020462
     },
     {
         "From_ID": 124,
-        "From_Name": "Karksa",
         "To_ID": 15,
-        "To_Name": "Kohtaki",
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 9.62
+        "Distance": 7.694153624668537
     },
     {
         "From_ID": 346,
-        "From_Name": "Lohlai",
         "To_ID": 15,
-        "To_Name": "Kohtaki",
         "Commodity": "Net_Food",
         "Amount": 1.0,
-        "Distance": 19.27
+        "Distance": 15.412315075938464
     },
     {
         "From_ID": 154,
-        "From_Name": "Stympia",
         "To_ID": 16,
-        "To_Name": "Atropesia",
         "Commodity": "Net_Food",
         "Amount": 1.0,
-        "Distance": 27.87
+        "Distance": 22.29299728614347
     },
     {
         "From_ID": 87,
-        "From_Name": "Vaamali",
         "To_ID": 19,
-        "To_Name": "Kilvala",
         "Commodity": "Net_Food",
         "Amount": 1.5,
-        "Distance": 42.4
+        "Distance": 33.92094338310771
     },
     {
         "From_ID": 387,
-        "From_Name": "Morcyreia",
         "To_ID": 20,
-        "To_Name": "Oncheleu",
         "Commodity": "Net_Food",
         "Amount": 2.0,
-        "Distance": 16.07
+        "Distance": 12.854297335910594
     },
     {
         "From_ID": 233,
-        "From_Name": "Vatrolis",
         "To_ID": 20,
-        "To_Name": "Oncheleu",
         "Commodity": "Net_Food",
         "Amount": 2.0,
-        "Distance": 36.61
+        "Distance": 29.285482546818304
     },
     {
         "From_ID": 299,
-        "From_Name": "Stympsakou",
         "To_ID": 20,
-        "To_Name": "Oncheleu",
         "Commodity": "Net_Food",
         "Amount": 1.5,
-        "Distance": 34.64
+        "Distance": 27.713220527394522
     },
     {
         "From_ID": 251,
-        "From_Name": "Agicos",
         "To_ID": 20,
-        "To_Name": "Oncheleu",
         "Commodity": "Net_Food",
         "Amount": 1.5,
-        "Distance": 37.2
+        "Distance": 29.758288122807073
     },
     {
         "From_ID": 34,
-        "From_Name": "Acharta",
         "To_ID": 20,
-        "To_Name": "Oncheleu",
         "Commodity": "Net_Food",
         "Amount": 1.5,
-        "Distance": 47.07
+        "Distance": 37.654375150837375
     },
     {
         "From_ID": 145,
-        "From_Name": "Arkepeqan",
         "To_ID": 21,
-        "To_Name": "Bukan",
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 28.44
+        "Distance": 22.748023562498886
     },
     {
         "From_ID": 279,
-        "From_Name": "Nagesheh",
         "To_ID": 21,
-        "To_Name": "Bukan",
         "Commodity": "Net_Food",
         "Amount": 6.0,
-        "Distance": 55.93
+        "Distance": 44.74465223912242
     },
     {
         "From_ID": 214,
-        "From_Name": "Brigendaco",
         "To_ID": 22,
-        "To_Name": "Pulbium",
         "Commodity": "Net_Food",
         "Amount": 2.0,
-        "Distance": 18.7
+        "Distance": 14.957432934832116
     },
     {
         "From_ID": 214,
-        "From_Name": "Brigendaco",
         "To_ID": 23,
-        "To_Name": "Vindautum",
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 24.46
+        "Distance": 19.56928205121485
     },
     {
         "From_ID": 146,
-        "From_Name": "Glerialas",
         "To_ID": 29,
-        "To_Name": "Miimaa",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 62.78
+        "Distance": 50.224013380055545
     },
     {
         "From_ID": 12,
-        "From_Name": "Opel",
         "To_ID": 36,
-        "To_Name": "Fredenmunsa",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 116.59
+        "Distance": 93.26990682958787
     },
     {
         "From_ID": 15,
-        "From_Name": "Kohtaki",
         "To_ID": 44,
-        "To_Name": "Jepsapaki",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 36.41
+        "Distance": 29.128625096286296
     },
     {
         "From_ID": 27,
-        "From_Name": "Nuvuspo",
         "To_ID": 56,
-        "To_Name": "Hetkavere",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 33.69
+        "Distance": 26.94860293224868
     },
     {
         "From_ID": 5,
-        "From_Name": "Dastgerd",
         "To_ID": 62,
-        "To_Name": "Talkhast",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 62.36
+        "Distance": 49.89197674977419
     },
     {
         "From_ID": 6,
-        "From_Name": "Oitsa",
         "To_ID": 70,
-        "To_Name": "Seilumamas",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 84.53
+        "Distance": 67.62692576185917
     },
     {
         "From_ID": 43,
-        "From_Name": "Aemara",
         "To_ID": 91,
-        "To_Name": "Herviarau",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 24.66
+        "Distance": 19.729398166188417
     },
     {
         "From_ID": 73,
-        "From_Name": "Thebaizep",
         "To_ID": 101,
-        "To_Name": "Pitherythro",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 136.36
+        "Distance": 109.09156139683773
     },
     {
         "From_ID": 12,
-        "From_Name": "Opel",
         "To_ID": 123,
-        "To_Name": "Hinzenburg",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 56.47
+        "Distance": 45.17514360796208
     },
     {
         "From_ID": 239,
-        "From_Name": "Marnorum",
         "To_ID": 141,
-        "To_Name": "Rodutum",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 68.35
+        "Distance": 54.68387638051999
     },
     {
         "From_ID": 179,
-        "From_Name": "Apinium",
         "To_ID": 172,
-        "To_Name": "Supinorum",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 43.37
+        "Distance": 34.699353308094985
     },
     {
         "From_ID": 12,
-        "From_Name": "Opel",
         "To_ID": 175,
-        "To_Name": "Schutwan",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 83.61
+        "Distance": 66.88958782949696
     },
     {
         "From_ID": 75,
-        "From_Name": "Askromepios",
         "To_ID": 224,
-        "To_Name": "Acharta",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 47.97
+        "Distance": 38.37994893170133
     },
     {
         "From_ID": 12,
-        "From_Name": "Opel",
         "To_ID": 237,
-        "To_Name": "Adefidshahr",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 158.5
+        "Distance": 126.80205474675869
     },
     {
         "From_ID": 75,
-        "From_Name": "Askromepios",
         "To_ID": 307,
-        "To_Name": "Cyzantibeth",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 76.53
+        "Distance": 61.22584029639775
     },
     {
         "From_ID": 20,
-        "From_Name": "Oncheleu",
         "To_ID": 382,
-        "To_Name": "Inverwick",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 124.46
+        "Distance": 99.57194849956488
     },
     {
         "From_ID": 189,
-        "From_Name": "Sehpasirs",
         "To_ID": 386,
-        "To_Name": "Hyeleuthos",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 20.68
+        "Distance": 16.54279299272044
     },
     {
         "From_ID": 22,
-        "From_Name": "Pulbium",
         "To_ID": 393,
-        "To_Name": "Laylostan",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 117.89
+        "Distance": 94.31104452819932
     },
     {
         "From_ID": 146,
-        "From_Name": "Glerialas",
         "To_ID": 398,
-        "To_Name": "Letiatigan",
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 55.14
+        "Distance": 44.1144127015196
     }
 ]
