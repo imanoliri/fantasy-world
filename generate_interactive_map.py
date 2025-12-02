@@ -373,6 +373,8 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         th.sort-asc::after {{ content: ' ▲'; }}
         th.sort-desc::after {{ content: ' ▼'; }}
         
+        caption {{ font-weight: bold; padding: 10px; font-size: 1.1rem; background: #f8f9fa; border-bottom: 1px solid #ddd; }}
+        
         /* Tooltip */
         .tooltip {{ position: fixed; background: rgba(0,0,0,0.8); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 0.8rem; display: none; z-index: 1000; max-width: 200px; }}
         
@@ -437,11 +439,12 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             
             <div class="trade-table-container hidden" id="goldTradeTableContainer">
                 <table id="goldTradeTable">
+                    <caption>Gold Trade Routes</caption>
                     <thead>
                         <tr>
                             <th onclick="sortTable(0, this, 'goldTradeTable')">From</th>
                             <th onclick="sortTable(1, this, 'goldTradeTable')">To</th>
-                            <th onclick="sortTable(2, this, 'goldTradeTable')">Amount</th>
+                            <th onclick="sortTable(2, this, 'goldTradeTable')">Gold</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -452,11 +455,12 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
 
             <div class="trade-table-container hidden" id="foodTradeTableContainer">
                 <table id="foodTradeTable">
+                    <caption>Food Trade Routes</caption>
                     <thead>
                         <tr>
                             <th onclick="sortTable(0, this, 'foodTradeTable')">From</th>
                             <th onclick="sortTable(1, this, 'foodTradeTable')">To</th>
-                            <th onclick="sortTable(2, this, 'foodTradeTable')">Amount</th>
+                            <th onclick="sortTable(2, this, 'foodTradeTable')">Food</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -467,6 +471,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
 
             <div class="table-container hidden" id="burgTableContainer">
                 <table id="burgTable">
+                    <caption>Burgs</caption>
                     <thead>
                         <tr>
                             <th onclick="sortTable(0, this, 'burgTable')">Name</th>
@@ -486,6 +491,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
 
             <div class="state-table-container hidden" id="stateTableContainer">
                 <table id="stateTable">
+                    <caption>States</caption>
                     <thead>
                         <tr>
                             <th onclick="sortTable(0, this, 'stateTable')">Color</th>
