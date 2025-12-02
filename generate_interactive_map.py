@@ -4,7 +4,7 @@ import math
 
 # TRADES_FILE = 'data/trade_routes.csv' # Removed dependency
 
-def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map", states=None, cultures=None):
+def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map", states=None, cultures=None, map_data=None):
     print(f"Generating interactive map for {map_name} with {len(burgs)} burgs...")
     
     # Determine map bounds
@@ -33,6 +33,74 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
     # Generate SVG Elements
     svg_elements = []
     
+    # 0. Background Map (Polygons)
+    background_group = ""
+    if map_data:
+        print("Generating background map polygons...")
+        cells = map_data.get('pack', {}).get('cells', [])
+        vertices = map_data.get('pack', {}).get('vertices', [])
+        
+        # Create state color lookup
+        state_colors = {}
+        if states:
+            for s in states:
+                state_colors[s.get('i')] = s.get('color', '#cccccc')
+        
+        paths = []
+        
+        # We need to reconstruct polygons from cell vertices
+        # Azgaar's format: cells[i].v is list of vertex indices
+        # vertices[j] is [x, y]
+        
+        # Check if cells is a list of objects or the packed array format
+        # Based on the JSON viewed earlier, it's a list of objects with 'v' property
+        
+        for cell in cells:
+            # Skip water cells if desired, or color them blue. 
+            # Usually h < 20 is water, but let's stick to state coloring.
+            # If state is 0 (neutral/water), maybe skip or use a default color.
+            state_id = cell.get('state', 0)
+            
+            # If we want to show the map shape, we should render everything.
+            # If we only want political map, render states.
+            # Let's render everything with a default color if no state.
+            
+            fill = state_colors.get(state_id, '#e0e0e0') # Default grey for neutral
+            
+            # If it's water (h < 20 usually, or check biome/type), maybe different color?
+            # For now, stick to state colors. Neutrals might be water or unclaimable land.
+            if state_id == 0:
+                # Check height to distinguish water
+                h = cell.get('h', 0)
+                if h < 20:
+                    fill = "#a0c8f0" # Light blue for water
+                else:
+                    fill = "#e0e0e0" # Neutral land
+            
+            vertex_indices = cell.get('v', [])
+            if not vertex_indices: continue
+            
+            # Build path data
+            points = []
+            for v_idx in vertex_indices:
+                if v_idx < len(vertices):
+                    vertex = vertices[v_idx]
+                    if isinstance(vertex, dict) and 'p' in vertex:
+                        vx, vy = vertex['p']
+                    elif isinstance(vertex, (list, tuple)) and len(vertex) >= 2:
+                        vx, vy = vertex[0], vertex[1]
+                    else:
+                        continue
+                        
+                    points.append(f"{vx},{vy}")
+            
+            if points:
+                d = "M" + " L".join(points) + " Z"
+                paths.append(f'<path d="{d}" fill="{fill}" stroke="none" />')
+        
+        background_group = f'<g id="mapBackground" class="map-background">{"".join(paths)}</g>'
+        svg_elements.append(background_group)
+
     # 1. Trade Routes (Lines) - Draw first so they are behind burgs
     if trades_data:
         for t in trades_data:
@@ -441,6 +509,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             <button class="toggle-btn" id="toggleTable" onclick="toggleTable()">Burgs Table</button>
             <button class="toggle-btn" id="toggleFoodTradeTable" onclick="toggleFoodTradeTable()">Food Trade Table</button>
             <button class="toggle-btn" id="toggleGoldTradeTable" onclick="toggleGoldTradeTable()">Gold Trade Table</button>
+            <button class="toggle-btn active" id="toggleMap" onclick="toggleMap()">Show Map</button>
             <span>| Total Burgs: {len(burgs)}</span>
         </div>
     </header>
@@ -650,6 +719,17 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 container.classList.add('hidden');
             }}
             window.dispatchEvent(new Event('resize'));
+        }}
+
+        function toggleMap() {{
+            const btn = document.getElementById('toggleMap');
+            const mapGroup = document.getElementById('mapBackground');
+            btn.classList.toggle('active');
+            if (btn.classList.contains('active')) {{
+                mapGroup.style.display = 'block';
+            }} else {{
+                mapGroup.style.display = 'none';
+            }}
         }}
         
         function toggleAllTypes(source) {{

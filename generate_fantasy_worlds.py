@@ -466,7 +466,7 @@ if __name__ == "__main__":
                 
                 # 3. Generate Interactive Map
                 map_file = os.path.join(map_dir, f"{safe_name}_map.html")
-                generate_interactive_map.generate_map(processed_burgs, map_file, trades, safe_name, states=states, cultures=cultures)
+                generate_interactive_map.generate_map(processed_burgs, map_file, trades, safe_name, states=states, cultures=cultures, map_data=data)
                 
                 # 4. Generate Static Report
                 report_filename = os.path.join(map_dir, f"{safe_name}_report.html")
