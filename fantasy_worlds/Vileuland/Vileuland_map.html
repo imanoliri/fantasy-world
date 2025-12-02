@@ -21,6 +21,7 @@
         .burg-dot { transition: r 0.2s, stroke-width 0.2s, opacity 0.3s; cursor: pointer; }
         .burg-dot:hover { stroke: #333; stroke-width: 3px; }
         .burg-dot.selected { stroke: #000; stroke-width: 4px; r: 15px; animation: pulse 1s infinite; }
+        .burg-dot.highlighted { stroke: #000; stroke-width: 4px; r: 15px; animation: pulse 1s infinite; }
         .burg-dot.hidden { display: none; }
         
         /* Only show capital glow when body has show-capitals class */
@@ -48,8 +49,27 @@
         }
 
         /* Table Section */
-        .tables-wrapper { position: absolute; right: 0; top: 0; bottom: 0; display: flex; z-index: 20; pointer-events: none; }
-        .table-container, .state-table-container { width: 800px; overflow-y: auto; background: rgba(255, 255, 255, 0.95); padding: 0; box-shadow: -2px 0 5px rgba(0,0,0,0.1); border-left: 1px solid #ddd; pointer-events: auto; }
+        .tables-wrapper { position: absolute; right: 0; top: 0; bottom: 0; display: flex; z-index: 20; pointer-events: none; flex-direction: row-reverse; }
+        .table-container, .state-table-container, .trade-table-container { 
+            width: 800px; 
+            overflow-y: auto; 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 0; 
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1); 
+            border-left: 1px solid #ddd; 
+            pointer-events: auto; 
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .trade-table-container { 
+            width: 400px;
+        }
+        
+        /* Stacking Order: States > Burgs > Food > Gold (Left to Right) */
+        /* Since we use flex-direction: row-reverse, the first element in DOM is rightmost. */
+        /* We want Gold (Rightmost) -> Food -> Burgs -> States (Leftmost) */
+        /* So DOM order should be: Gold, Food, Burgs, States */
+        
         .hidden { display: none !important; }
         
         table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
@@ -104,11 +124,13 @@
                 </div>
             </div>
             
-            <label><input type="checkbox" id="toggleFoodTrades" checked onchange="toggleFoodTrades()"> Show Food Trade</label>
-            <label><input type="checkbox" id="toggleGoldTrades" checked onchange="toggleGoldTrades()"> Show Gold Trade</label>
+            <label><input type="checkbox" id="toggleFoodTrades" checked onchange="toggleFoodTrades()"> Food Trade</label>
+            <label><input type="checkbox" id="toggleGoldTrades" checked onchange="toggleGoldTrades()"> Gold Trade</label>
             <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
-            <label><input type="checkbox" id="toggleStateTable" onchange="toggleStateTable()"> Show States Table</label>
-            <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Show Burgs Table</label>
+            <label><input type="checkbox" id="toggleStateTable" onchange="toggleStateTable()"> States Table</label>
+            <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Burgs Table</label>
+            <label><input type="checkbox" id="toggleFoodTradeTable" onchange="toggleFoodTradeTable()"> Food Trade Table</label>
+            <label><input type="checkbox" id="toggleGoldTradeTable" onchange="toggleGoldTradeTable()"> Gold Trade Table</label>
             <span>| Total Burgs: 663</span>
         </div>
     </header>
@@ -5618,165 +5640,320 @@
         </div>
         
         <div class="tables-wrapper">
-            <div class="state-table-container hidden" id="stateTableContainer">
-                <table id="stateTable">
+            <!-- Order in DOM: Gold, Food, Burgs, States (because of row-reverse) -->
+            
+            <div class="trade-table-container hidden" id="goldTradeTableContainer">
+                <table id="goldTradeTable">
                     <thead>
                         <tr>
-                            <th onclick="sortTable(0, this, 'stateTable')">Color</th>
-                            <th onclick="sortTable(1, this, 'stateTable')">Name</th>
-                            <th onclick="sortTable(2, this, 'stateTable')">Capital</th>
-                            <th onclick="sortTable(3, this, 'stateTable')">Type</th>
-                            <th onclick="sortTable(4, this, 'stateTable')">Culture</th>
-                            <th onclick="sortTable(5, this, 'stateTable')">Burgs</th>
-                            <th onclick="sortTable(6, this, 'stateTable')">Area</th>
-                            <th onclick="sortTable(7, this, 'stateTable')">Cells</th>
-                            <th onclick="sortTable(8, this, 'stateTable')">Form</th>
-                            <th onclick="sortTable(9, this, 'stateTable')">Fullname</th>
+                            <th onclick="sortTable(0, this, 'goldTradeTable')">From</th>
+                            <th onclick="sortTable(1, this, 'goldTradeTable')">To</th>
+                            <th onclick="sortTable(2, this, 'goldTradeTable')">Amount</th>
                         </tr>
                     </thead>
                     <tbody>
                         
-                <tr data-original-index="0">
-                    <td><span class="color-box" style="background-color: #cccccc; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Neutrals</td>
-                    <td>None</td>
-                    <td>Unknown</td>
-                    <td>Wildlands</td>
-                    <td>0</td>
-                    <td>59,853</td>
-                    <td>284</td>
-                    <td>Unknown</td>
-                    <td>Neutrals</td>
+                <tr onclick="highlightTradeRoute(53, 14)">
+                    <td>Cantetellano</td>
+                    <td>Scidriagu</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="1">
-                    <td><span class="color-box" style="background-color: #66c2a5; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Lolia</td>
-                    <td>Chueguge</td>
-                    <td>Naval</td>
-                    <td>Astellian</td>
-                    <td>70</td>
-                    <td>130,321</td>
-                    <td>753</td>
-                    <td>Monarchy</td>
-                    <td>Kingdom of Lolia</td>
+                <tr onclick="highlightTradeRoute(82, 15)">
+                    <td>Teshigo</td>
+                    <td>Mubech</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="2">
-                    <td><span class="color-box" style="background-color: #fc8d62; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Adnicto</td>
-                    <td>Batua</td>
-                    <td>Generic</td>
-                    <td>Romian</td>
-                    <td>94</td>
-                    <td>199,624</td>
-                    <td>1,097</td>
-                    <td>Monarchy</td>
-                    <td>Adnictan Empire</td>
+                <tr onclick="highlightTradeRoute(445, 63)">
+                    <td>Sulzheim</td>
+                    <td>Belden</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="3">
-                    <td><span class="color-box" style="background-color: #8da0cb; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Oberischia</td>
+                <tr onclick="highlightTradeRoute(273, 106)">
+                    <td>Liris</td>
+                    <td>Paphyrope</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(276, 116)">
+                    <td>Rzharodok</td>
+                    <td>Peyatichs</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(3, 119)">
                     <td>Eschb</td>
-                    <td>River</td>
-                    <td>Shwazen</td>
-                    <td>101</td>
-                    <td>107,300</td>
-                    <td>580</td>
-                    <td>Monarchy</td>
-                    <td>Principality of Oberischia</td>
+                    <td>Schonach</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="4">
-                    <td><span class="color-box" style="background-color: #e78ac3; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Kakuhia</td>
-                    <td>Lotan</td>
-                    <td>Nomadic</td>
-                    <td>Soumi</td>
-                    <td>10</td>
-                    <td>18,268</td>
-                    <td>90</td>
-                    <td>Monarchy</td>
-                    <td>Duchy of Kakuhia</td>
+                <tr onclick="highlightTradeRoute(564, 123)">
+                    <td>Pieno</td>
+                    <td>Torrolino</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="5">
-                    <td><span class="color-box" style="background-color: #a6d854; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Citripi</td>
+                <tr onclick="highlightTradeRoute(310, 178)">
+                    <td>Asalnuo</td>
+                    <td>Olymnalaidy</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(52, 180)">
+                    <td>Kosjarkaus</td>
+                    <td>Kehrala</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(270, 211)">
+                    <td>Izhechkov</td>
+                    <td>Mtsen</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(274, 238)">
+                    <td>Schlu</td>
+                    <td>Kapenburg</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(633, 249)">
+                    <td>Dunia</td>
+                    <td>Stresk</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(70, 259)">
+                    <td>Hasheim</td>
+                    <td>Niebenburg</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(62, 265)">
+                    <td>Brasbury</td>
+                    <td>Widedonces</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(16, 268)">
+                    <td>Tripoliscu</td>
+                    <td>Phoseizi</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(52, 289)">
+                    <td>Kosjarkaus</td>
+                    <td>Kauma</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(1, 321)">
+                    <td>Chueguge</td>
+                    <td>Socensena</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(52, 322)">
+                    <td>Kosjarkaus</td>
+                    <td>Hauta</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(17, 324)">
+                    <td>Mauvaa</td>
+                    <td>Kaljan</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(451, 335)">
+                    <td>Histria</td>
+                    <td>Pidauros</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(373, 336)">
+                    <td>Cannsturo</td>
+                    <td>Lacricana</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(114, 365)">
+                    <td>Eminken</td>
+                    <td>Bisch</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(495, 387)">
+                    <td>Anmouth</td>
+                    <td>Seatondal</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(574, 406)">
+                    <td>Lomel</td>
+                    <td>Smemech</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(444, 413)">
+                    <td>Fiugnicanel</td>
+                    <td>Tustello</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(277, 436)">
+                    <td>Porjanta</td>
+                    <td>Kaaki</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(301, 446)">
+                    <td>Proli</td>
+                    <td>Pontechiaga</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(444, 493)">
+                    <td>Fiugnicanel</td>
+                    <td>Vallene</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(189, 543)">
+                    <td>Tarmium</td>
+                    <td>Aegiorani</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(426, 552)">
+                    <td>Chechkinsk</td>
+                    <td>Hezorincseszo</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(455, 557)">
+                    <td>Pullum</td>
+                    <td>Linsium</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(5, 560)">
                     <td>Sgurgo</td>
-                    <td>Generic</td>
-                    <td>Tallian</td>
-                    <td>144</td>
-                    <td>224,596</td>
-                    <td>1,162</td>
-                    <td>Republic</td>
-                    <td>Federation of Citripi</td>
+                    <td>Picaramavig</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="6">
-                    <td><span class="color-box" style="background-color: #ffd92f; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Vinivia</td>
-                    <td>Citrino</td>
-                    <td>Generic</td>
-                    <td>Tallian</td>
-                    <td>12</td>
-                    <td>45,035</td>
-                    <td>217</td>
-                    <td>Monarchy</td>
-                    <td>Grand Duchy of Vinivia</td>
+                <tr onclick="highlightTradeRoute(175, 565)">
+                    <td>Vicoce</td>
+                    <td>Tofiano</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="7">
-                    <td><span class="color-box" style="background-color: #eaa089; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Boskirkia</td>
-                    <td>Miton</td>
-                    <td>Naval</td>
-                    <td>Angshire</td>
-                    <td>67</td>
-                    <td>76,767</td>
-                    <td>417</td>
-                    <td>Union</td>
-                    <td>Boskirkian Union</td>
+                <tr onclick="highlightTradeRoute(426, 594)">
+                    <td>Chechkinsk</td>
+                    <td>Pesecheren</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="8">
-                    <td><span class="color-box" style="background-color: #ff8b7f; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Olalamaa</td>
-                    <td>Bjorata</td>
-                    <td>Nomadic</td>
-                    <td>Soumi</td>
-                    <td>39</td>
-                    <td>120,415</td>
-                    <td>594</td>
-                    <td>Theocracy</td>
-                    <td>Olalamaan Theocracy</td>
+                <tr onclick="highlightTradeRoute(496, 609)">
+                    <td>Wistowbury</td>
+                    <td>Brampton</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="9">
-                    <td><span class="color-box" style="background-color: #88b1e6; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
-                    <td>Haumaa</td>
+                <tr onclick="highlightTradeRoute(2, 615)">
+                    <td>Batua</td>
+                    <td>Foriorum</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(58, 618)">
+                    <td>Zhiny</td>
+                    <td>Bryan</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(9, 620)">
                     <td>Seila</td>
-                    <td>Nomadic</td>
-                    <td>Soumi</td>
-                    <td>86</td>
-                    <td>111,996</td>
-                    <td>627</td>
-                    <td>Monarchy</td>
-                    <td>Principality of Haumaa</td>
+                    <td>Ahtahe</td>
+                    <td>0.50</td>
                 </tr>
             
-                <tr data-original-index="10">
-                    <td><span class="color-box" style="background-color: #f788d5; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                <tr onclick="highlightTradeRoute(5, 641)">
+                    <td>Sgurgo</td>
+                    <td>Pigliaganoli</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(270, 659)">
+                    <td>Izhechkov</td>
+                    <td>Luchi</td>
+                    <td>0.50</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="trade-table-container hidden" id="foodTradeTableContainer">
+                <table id="foodTradeTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0, this, 'foodTradeTable')">From</th>
+                            <th onclick="sortTable(1, this, 'foodTradeTable')">To</th>
+                            <th onclick="sortTable(2, this, 'foodTradeTable')">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr onclick="highlightTradeRoute(501, 2)">
+                    <td>Gequm</td>
+                    <td>Batua</td>
+                    <td>0.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(503, 5)">
+                    <td>Basco</td>
+                    <td>Sgurgo</td>
+                    <td>1.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(471, 5)">
+                    <td>Aquinicelle</td>
+                    <td>Sgurgo</td>
+                    <td>3.00</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(352, 6)">
+                    <td>Monta</td>
+                    <td>Citrino</td>
+                    <td>2.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(512, 8)">
+                    <td>Kikylasala</td>
+                    <td>Bjorata</td>
+                    <td>1.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(556, 8)">
+                    <td>Purvenmajar</td>
+                    <td>Bjorata</td>
+                    <td>2.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(523, 9)">
+                    <td>Pohralivi</td>
+                    <td>Seila</td>
+                    <td>1.50</td>
+                </tr>
+            
+                <tr onclick="highlightTradeRoute(223, 10)">
+                    <td>Pomih</td>
                     <td>Detivis</td>
-                    <td>Detivis</td>
-                    <td>Generic</td>
-                    <td>Romian</td>
-                    <td>40</td>
-                    <td>43,494</td>
-                    <td>223</td>
-                    <td>Republic</td>
-                    <td>Republic of Detivis</td>
+                    <td>4.00</td>
                 </tr>
             
                     </tbody>
@@ -12431,6 +12608,171 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="state-table-container hidden" id="stateTableContainer">
+                <table id="stateTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0, this, 'stateTable')">Color</th>
+                            <th onclick="sortTable(1, this, 'stateTable')">Name</th>
+                            <th onclick="sortTable(2, this, 'stateTable')">Capital</th>
+                            <th onclick="sortTable(3, this, 'stateTable')">Type</th>
+                            <th onclick="sortTable(4, this, 'stateTable')">Culture</th>
+                            <th onclick="sortTable(5, this, 'stateTable')">Burgs</th>
+                            <th onclick="sortTable(6, this, 'stateTable')">Area</th>
+                            <th onclick="sortTable(7, this, 'stateTable')">Cells</th>
+                            <th onclick="sortTable(8, this, 'stateTable')">Form</th>
+                            <th onclick="sortTable(9, this, 'stateTable')">Fullname</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                <tr data-original-index="0">
+                    <td><span class="color-box" style="background-color: #cccccc; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Neutrals</td>
+                    <td>None</td>
+                    <td>Unknown</td>
+                    <td>Wildlands</td>
+                    <td>0</td>
+                    <td>59,853</td>
+                    <td>284</td>
+                    <td>Unknown</td>
+                    <td>Neutrals</td>
+                </tr>
+            
+                <tr data-original-index="1">
+                    <td><span class="color-box" style="background-color: #66c2a5; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Lolia</td>
+                    <td>Chueguge</td>
+                    <td>Naval</td>
+                    <td>Astellian</td>
+                    <td>70</td>
+                    <td>130,321</td>
+                    <td>753</td>
+                    <td>Monarchy</td>
+                    <td>Kingdom of Lolia</td>
+                </tr>
+            
+                <tr data-original-index="2">
+                    <td><span class="color-box" style="background-color: #fc8d62; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Adnicto</td>
+                    <td>Batua</td>
+                    <td>Generic</td>
+                    <td>Romian</td>
+                    <td>94</td>
+                    <td>199,624</td>
+                    <td>1,097</td>
+                    <td>Monarchy</td>
+                    <td>Adnictan Empire</td>
+                </tr>
+            
+                <tr data-original-index="3">
+                    <td><span class="color-box" style="background-color: #8da0cb; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Oberischia</td>
+                    <td>Eschb</td>
+                    <td>River</td>
+                    <td>Shwazen</td>
+                    <td>101</td>
+                    <td>107,300</td>
+                    <td>580</td>
+                    <td>Monarchy</td>
+                    <td>Principality of Oberischia</td>
+                </tr>
+            
+                <tr data-original-index="4">
+                    <td><span class="color-box" style="background-color: #e78ac3; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Kakuhia</td>
+                    <td>Lotan</td>
+                    <td>Nomadic</td>
+                    <td>Soumi</td>
+                    <td>10</td>
+                    <td>18,268</td>
+                    <td>90</td>
+                    <td>Monarchy</td>
+                    <td>Duchy of Kakuhia</td>
+                </tr>
+            
+                <tr data-original-index="5">
+                    <td><span class="color-box" style="background-color: #a6d854; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Citripi</td>
+                    <td>Sgurgo</td>
+                    <td>Generic</td>
+                    <td>Tallian</td>
+                    <td>144</td>
+                    <td>224,596</td>
+                    <td>1,162</td>
+                    <td>Republic</td>
+                    <td>Federation of Citripi</td>
+                </tr>
+            
+                <tr data-original-index="6">
+                    <td><span class="color-box" style="background-color: #ffd92f; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Vinivia</td>
+                    <td>Citrino</td>
+                    <td>Generic</td>
+                    <td>Tallian</td>
+                    <td>12</td>
+                    <td>45,035</td>
+                    <td>217</td>
+                    <td>Monarchy</td>
+                    <td>Grand Duchy of Vinivia</td>
+                </tr>
+            
+                <tr data-original-index="7">
+                    <td><span class="color-box" style="background-color: #eaa089; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Boskirkia</td>
+                    <td>Miton</td>
+                    <td>Naval</td>
+                    <td>Angshire</td>
+                    <td>67</td>
+                    <td>76,767</td>
+                    <td>417</td>
+                    <td>Union</td>
+                    <td>Boskirkian Union</td>
+                </tr>
+            
+                <tr data-original-index="8">
+                    <td><span class="color-box" style="background-color: #ff8b7f; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Olalamaa</td>
+                    <td>Bjorata</td>
+                    <td>Nomadic</td>
+                    <td>Soumi</td>
+                    <td>39</td>
+                    <td>120,415</td>
+                    <td>594</td>
+                    <td>Theocracy</td>
+                    <td>Olalamaan Theocracy</td>
+                </tr>
+            
+                <tr data-original-index="9">
+                    <td><span class="color-box" style="background-color: #88b1e6; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Haumaa</td>
+                    <td>Seila</td>
+                    <td>Nomadic</td>
+                    <td>Soumi</td>
+                    <td>86</td>
+                    <td>111,996</td>
+                    <td>627</td>
+                    <td>Monarchy</td>
+                    <td>Principality of Haumaa</td>
+                </tr>
+            
+                <tr data-original-index="10">
+                    <td><span class="color-box" style="background-color: #f788d5; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
+                    <td>Detivis</td>
+                    <td>Detivis</td>
+                    <td>Generic</td>
+                    <td>Romian</td>
+                    <td>40</td>
+                    <td>43,494</td>
+                    <td>223</td>
+                    <td>Republic</td>
+                    <td>Republic of Detivis</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <div id="tooltip" class="tooltip"></div>
@@ -12441,6 +12783,7 @@
         const mapContainer = document.getElementById('mapContainer');
         const table = document.getElementById('burgTable');
         let selectedId = null;
+        let highlightedIds = [];
 
         /* Dropdown Logic */
         function toggleDropdown(id) {
@@ -12515,6 +12858,28 @@
         function toggleStateTable() {
             const checkbox = document.getElementById('toggleStateTable');
             const container = document.getElementById('stateTableContainer');
+            if (checkbox.checked) {
+                container.classList.remove('hidden');
+            } else {
+                container.classList.add('hidden');
+            }
+            window.dispatchEvent(new Event('resize'));
+        }
+
+        function toggleFoodTradeTable() {
+            const checkbox = document.getElementById('toggleFoodTradeTable');
+            const container = document.getElementById('foodTradeTableContainer');
+            if (checkbox.checked) {
+                container.classList.remove('hidden');
+            } else {
+                container.classList.add('hidden');
+            }
+            window.dispatchEvent(new Event('resize'));
+        }
+
+        function toggleGoldTradeTable() {
+            const checkbox = document.getElementById('toggleGoldTradeTable');
+            const container = document.getElementById('goldTradeTableContainer');
             if (checkbox.checked) {
                 container.classList.remove('hidden');
             } else {
@@ -12771,6 +13136,14 @@
             svg.setAttribute('viewBox', viewBox.join(' '));
         });
 
+        function clearHighlights() {
+            highlightedIds.forEach(id => {
+                const dot = document.querySelector(`.burg-dot[data-id="${id}"]`);
+                if (dot) dot.classList.remove('highlighted');
+            });
+            highlightedIds = [];
+        }
+
         function selectBurg(id) {
             // Remove previous selection
             if (selectedId) {
@@ -12779,6 +13152,9 @@
                 if (prevRow) prevRow.classList.remove('selected');
                 if (prevDot) prevDot.classList.remove('selected');
             }
+            
+            // Clear any trade route highlights
+            clearHighlights();
             
             selectedId = id;
             
@@ -12800,6 +13176,19 @@
         
         function highlightBurg(id) {
             selectBurg(id);
+        }
+
+        function highlightTradeRoute(fromId, toId) {
+            clearHighlights();
+            if (selectedId) selectBurg(null); // Clear single selection
+
+            [fromId, toId].forEach(id => {
+                const dot = document.querySelector(`.burg-dot[data-id="${id}"]`);
+                if (dot) {
+                    dot.classList.add('highlighted');
+                    highlightedIds.push(id);
+                }
+            });
         }
 
         function sortTable(n, header, tableId) {

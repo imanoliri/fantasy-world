@@ -261,6 +261,32 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 </tr>
             """)
 
+    # 4. Trade Route Rows
+    food_rows = []
+    gold_rows = []
+    if trades_data:
+        for i, t in enumerate(trades_data):
+            from_id = str(t['From_ID'])
+            to_id = str(t['To_ID'])
+            amount = t['Amount']
+            commodity = t['Commodity']
+            
+            from_name = burg_name_lookup.get(int(from_id), 'Unknown')
+            to_name = burg_name_lookup.get(int(to_id), 'Unknown')
+            
+            row_html = f"""
+                <tr onclick="highlightTradeRoute({from_id}, {to_id})">
+                    <td>{from_name}</td>
+                    <td>{to_name}</td>
+                    <td>{amount:.2f}</td>
+                </tr>
+            """
+            
+            if commodity == 'Net_Food':
+                food_rows.append(row_html)
+            elif commodity == 'Net_Gold':
+                gold_rows.append(row_html)
+
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -284,6 +310,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         .burg-dot {{ transition: r 0.2s, stroke-width 0.2s, opacity 0.3s; cursor: pointer; }}
         .burg-dot:hover {{ stroke: #333; stroke-width: 3px; }}
         .burg-dot.selected {{ stroke: #000; stroke-width: 4px; r: 15px; animation: pulse 1s infinite; }}
+        .burg-dot.highlighted {{ stroke: #000; stroke-width: 4px; r: 15px; animation: pulse 1s infinite; }}
         .burg-dot.hidden {{ display: none; }}
         
         /* Only show capital glow when body has show-capitals class */
@@ -311,8 +338,27 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         /* Table Section */
-        .tables-wrapper {{ position: absolute; right: 0; top: 0; bottom: 0; display: flex; z-index: 20; pointer-events: none; }}
-        .table-container, .state-table-container {{ width: 800px; overflow-y: auto; background: rgba(255, 255, 255, 0.95); padding: 0; box-shadow: -2px 0 5px rgba(0,0,0,0.1); border-left: 1px solid #ddd; pointer-events: auto; }}
+        .tables-wrapper {{ position: absolute; right: 0; top: 0; bottom: 0; display: flex; z-index: 20; pointer-events: none; flex-direction: row-reverse; }}
+        .table-container, .state-table-container, .trade-table-container {{ 
+            width: 800px; 
+            overflow-y: auto; 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 0; 
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1); 
+            border-left: 1px solid #ddd; 
+            pointer-events: auto; 
+            transition: transform 0.3s ease-in-out;
+        }}
+
+        .trade-table-container {{ 
+            width: 400px;
+        }}
+        
+        /* Stacking Order: States > Burgs > Food > Gold (Left to Right) */
+        /* Since we use flex-direction: row-reverse, the first element in DOM is rightmost. */
+        /* We want Gold (Rightmost) -> Food -> Burgs -> States (Leftmost) */
+        /* So DOM order should be: Gold, Food, Burgs, States */
+        
         .hidden {{ display: none !important; }}
         
         table {{ width: 100%; border-collapse: collapse; font-size: 0.9rem; }}
@@ -367,11 +413,13 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 </div>
             </div>
             
-            <label><input type="checkbox" id="toggleFoodTrades" checked onchange="toggleFoodTrades()"> Show Food Trade</label>
-            <label><input type="checkbox" id="toggleGoldTrades" checked onchange="toggleGoldTrades()"> Show Gold Trade</label>
+            <label><input type="checkbox" id="toggleFoodTrades" checked onchange="toggleFoodTrades()"> Food Trade</label>
+            <label><input type="checkbox" id="toggleGoldTrades" checked onchange="toggleGoldTrades()"> Gold Trade</label>
             <label><input type="checkbox" id="toggleCapitals" checked onchange="toggleCapitals()"> Highlight Capitals</label>
-            <label><input type="checkbox" id="toggleStateTable" onchange="toggleStateTable()"> Show States Table</label>
-            <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Show Burgs Table</label>
+            <label><input type="checkbox" id="toggleStateTable" onchange="toggleStateTable()"> States Table</label>
+            <label><input type="checkbox" id="toggleTable" onchange="toggleTable()"> Burgs Table</label>
+            <label><input type="checkbox" id="toggleFoodTradeTable" onchange="toggleFoodTradeTable()"> Food Trade Table</label>
+            <label><input type="checkbox" id="toggleGoldTradeTable" onchange="toggleGoldTradeTable()"> Gold Trade Table</label>
             <span>| Total Burgs: {len(burgs)}</span>
         </div>
     </header>
@@ -385,24 +433,34 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         </div>
         
         <div class="tables-wrapper">
-            <div class="state-table-container hidden" id="stateTableContainer">
-                <table id="stateTable">
+            <!-- Order in DOM: Gold, Food, Burgs, States (because of row-reverse) -->
+            
+            <div class="trade-table-container hidden" id="goldTradeTableContainer">
+                <table id="goldTradeTable">
                     <thead>
                         <tr>
-                            <th onclick="sortTable(0, this, 'stateTable')">Color</th>
-                            <th onclick="sortTable(1, this, 'stateTable')">Name</th>
-                            <th onclick="sortTable(2, this, 'stateTable')">Capital</th>
-                            <th onclick="sortTable(3, this, 'stateTable')">Type</th>
-                            <th onclick="sortTable(4, this, 'stateTable')">Culture</th>
-                            <th onclick="sortTable(5, this, 'stateTable')">Burgs</th>
-                            <th onclick="sortTable(6, this, 'stateTable')">Area</th>
-                            <th onclick="sortTable(7, this, 'stateTable')">Cells</th>
-                            <th onclick="sortTable(8, this, 'stateTable')">Form</th>
-                            <th onclick="sortTable(9, this, 'stateTable')">Fullname</th>
+                            <th onclick="sortTable(0, this, 'goldTradeTable')">From</th>
+                            <th onclick="sortTable(1, this, 'goldTradeTable')">To</th>
+                            <th onclick="sortTable(2, this, 'goldTradeTable')">Amount</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {''.join(state_rows)}
+                        {''.join(gold_rows)}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="trade-table-container hidden" id="foodTradeTableContainer">
+                <table id="foodTradeTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0, this, 'foodTradeTable')">From</th>
+                            <th onclick="sortTable(1, this, 'foodTradeTable')">To</th>
+                            <th onclick="sortTable(2, this, 'foodTradeTable')">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {''.join(food_rows)}
                     </tbody>
                 </table>
             </div>
@@ -425,6 +483,28 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     </tbody>
                 </table>
             </div>
+
+            <div class="state-table-container hidden" id="stateTableContainer">
+                <table id="stateTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0, this, 'stateTable')">Color</th>
+                            <th onclick="sortTable(1, this, 'stateTable')">Name</th>
+                            <th onclick="sortTable(2, this, 'stateTable')">Capital</th>
+                            <th onclick="sortTable(3, this, 'stateTable')">Type</th>
+                            <th onclick="sortTable(4, this, 'stateTable')">Culture</th>
+                            <th onclick="sortTable(5, this, 'stateTable')">Burgs</th>
+                            <th onclick="sortTable(6, this, 'stateTable')">Area</th>
+                            <th onclick="sortTable(7, this, 'stateTable')">Cells</th>
+                            <th onclick="sortTable(8, this, 'stateTable')">Form</th>
+                            <th onclick="sortTable(9, this, 'stateTable')">Fullname</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {''.join(state_rows)}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <div id="tooltip" class="tooltip"></div>
@@ -435,6 +515,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         const mapContainer = document.getElementById('mapContainer');
         const table = document.getElementById('burgTable');
         let selectedId = null;
+        let highlightedIds = [];
 
         /* Dropdown Logic */
         function toggleDropdown(id) {{
@@ -509,6 +590,28 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         function toggleStateTable() {{
             const checkbox = document.getElementById('toggleStateTable');
             const container = document.getElementById('stateTableContainer');
+            if (checkbox.checked) {{
+                container.classList.remove('hidden');
+            }} else {{
+                container.classList.add('hidden');
+            }}
+            window.dispatchEvent(new Event('resize'));
+        }}
+
+        function toggleFoodTradeTable() {{
+            const checkbox = document.getElementById('toggleFoodTradeTable');
+            const container = document.getElementById('foodTradeTableContainer');
+            if (checkbox.checked) {{
+                container.classList.remove('hidden');
+            }} else {{
+                container.classList.add('hidden');
+            }}
+            window.dispatchEvent(new Event('resize'));
+        }}
+
+        function toggleGoldTradeTable() {{
+            const checkbox = document.getElementById('toggleGoldTradeTable');
+            const container = document.getElementById('goldTradeTableContainer');
             if (checkbox.checked) {{
                 container.classList.remove('hidden');
             }} else {{
@@ -765,6 +868,14 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             svg.setAttribute('viewBox', viewBox.join(' '));
         }});
 
+        function clearHighlights() {{
+            highlightedIds.forEach(id => {{
+                const dot = document.querySelector(`.burg-dot[data-id="${{id}}"]`);
+                if (dot) dot.classList.remove('highlighted');
+            }});
+            highlightedIds = [];
+        }}
+
         function selectBurg(id) {{
             // Remove previous selection
             if (selectedId) {{
@@ -773,6 +884,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 if (prevRow) prevRow.classList.remove('selected');
                 if (prevDot) prevDot.classList.remove('selected');
             }}
+            
+            // Clear any trade route highlights
+            clearHighlights();
             
             selectedId = id;
             
@@ -794,6 +908,19 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         
         function highlightBurg(id) {{
             selectBurg(id);
+        }}
+
+        function highlightTradeRoute(fromId, toId) {{
+            clearHighlights();
+            if (selectedId) selectBurg(null); // Clear single selection
+
+            [fromId, toId].forEach(id => {{
+                const dot = document.querySelector(`.burg-dot[data-id="${{id}}"]`);
+                if (dot) {{
+                    dot.classList.add('highlighted');
+                    highlightedIds.push(id);
+                }}
+            }});
         }}
 
         function sortTable(n, header, tableId) {{
