@@ -4,202 +4,202 @@
         "To_ID": 2,
         "Commodity": "Net_Food",
         "Amount": 7.5,
-        "Distance": 41.61848819935677
+        "Distance": 41.62
     },
     {
         "From_ID": 351,
         "To_ID": 2,
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 33.490583751257695
+        "Distance": 33.49
     },
     {
         "From_ID": 383,
         "To_ID": 2,
         "Commodity": "Net_Food",
         "Amount": 1.0,
-        "Distance": 84.08288672494547
+        "Distance": 84.08
     },
     {
         "From_ID": 108,
         "To_ID": 4,
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 18.04759751324262
+        "Distance": 18.05
     },
     {
         "From_ID": 172,
         "To_ID": 5,
         "Commodity": "Net_Food",
         "Amount": 3.0,
-        "Distance": 39.67364868524199
+        "Distance": 39.67
     },
     {
         "From_ID": 285,
         "To_ID": 7,
         "Commodity": "Net_Food",
         "Amount": 5.0,
-        "Distance": 44.48525148855511
+        "Distance": 44.49
     },
     {
         "From_ID": 99,
         "To_ID": 9,
         "Commodity": "Net_Food",
         "Amount": 2.0,
-        "Distance": 13.307696419741598
+        "Distance": 13.31
     },
     {
         "From_ID": 202,
         "To_ID": 9,
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 29.29606663018083
+        "Distance": 29.3
     },
     {
         "From_ID": 138,
         "To_ID": 11,
         "Commodity": "Net_Food",
         "Amount": 1.5,
-        "Distance": 38.11277245228938
+        "Distance": 38.11
     },
     {
         "From_ID": 176,
         "To_ID": 12,
         "Commodity": "Net_Food",
         "Amount": 0.5,
-        "Distance": 20.871159814442645
+        "Distance": 20.87
     },
     {
         "From_ID": 245,
         "To_ID": 17,
         "Commodity": "Net_Food",
         "Amount": 1.0,
-        "Distance": 29.95747492696937
+        "Distance": 29.96
     },
     {
         "From_ID": 140,
         "To_ID": 70,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 60.23586546236379
+        "Distance": 60.24
     },
     {
         "From_ID": 338,
         "To_ID": 84,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 110.08046511529642
+        "Distance": 110.08
     },
     {
         "From_ID": 13,
         "To_ID": 89,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 50.79931842062455
+        "Distance": 50.8
     },
     {
         "From_ID": 3,
         "To_ID": 92,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 38.53430679277885
+        "Distance": 38.53
     },
     {
         "From_ID": 1,
         "To_ID": 123,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 33.351861837084975
+        "Distance": 33.35
     },
     {
         "From_ID": 248,
         "To_ID": 144,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 66.85805620865737
+        "Distance": 66.86
     },
     {
         "From_ID": 36,
         "To_ID": 146,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 22.421478274190527
+        "Distance": 22.42
     },
     {
         "From_ID": 5,
         "To_ID": 158,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 99.52614289723077
+        "Distance": 99.53
     },
     {
         "From_ID": 9,
         "To_ID": 202,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 29.29606663018083
+        "Distance": 29.3
     },
     {
         "From_ID": 336,
         "To_ID": 220,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 66.2476913409063
+        "Distance": 66.25
     },
     {
         "From_ID": 11,
         "To_ID": 258,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 136.86382464332922
+        "Distance": 136.86
     },
     {
         "From_ID": 270,
         "To_ID": 294,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 58.95412399484874
+        "Distance": 58.95
     },
     {
         "From_ID": 179,
         "To_ID": 295,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 39.235616472791826
+        "Distance": 39.24
     },
     {
         "From_ID": 203,
         "To_ID": 310,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 61.988752011957935
+        "Distance": 61.99
     },
     {
         "From_ID": 3,
         "To_ID": 319,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 83.24584313946245
+        "Distance": 83.25
     },
     {
         "From_ID": 125,
         "To_ID": 324,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 12.975482110503638
+        "Distance": 12.98
     },
     {
         "From_ID": 51,
         "To_ID": 333,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 83.5722154785908
+        "Distance": 83.57
     },
     {
         "From_ID": 61,
         "To_ID": 345,
         "Commodity": "Net_Gold",
         "Amount": 0.5,
-        "Distance": 22.252268558508806
+        "Distance": 22.25
     }
 ]

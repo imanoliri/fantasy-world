@@ -1,4 +1,3 @@
-import json
 import math
 
 # Configuration
@@ -9,16 +8,8 @@ def calculate_distance(burg1, burg2):
     Calculates the distance between two burgs, optionally applying terrain and infrastructure modifiers.
     burg1 and burg2 can be dictionaries (burg objects) or tuples (x, y).
     """
-    # Extract coordinates
-    if isinstance(burg1, dict):
-        x1, y1 = burg1['x'], burg1['y']
-    else:
-        x1, y1 = burg1
-        
-    if isinstance(burg2, dict):
-        x2, y2 = burg2['x'], burg2['y']
-    else:
-        x2, y2 = burg2
+    x1, y1 = burg1['x'], burg1['y']
+    x2, y2 = burg2['x'], burg2['y']
 
     # Base Euclidean distance
     dist = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
@@ -47,7 +38,7 @@ def calculate_distance(burg1, burg2):
         if burg1.get('state') == burg2.get('state'):
             multiplier *= 0.8
             
-        dist *= multiplier
+        dist = round(dist*multiplier, 2)
         
     return dist
 

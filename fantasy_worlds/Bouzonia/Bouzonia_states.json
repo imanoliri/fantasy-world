@@ -1,0 +1,2547 @@
+[
+    {
+        "i": 0,
+        "name": "Neutrals",
+        "urban": 0,
+        "rural": 0,
+        "burgs": 0,
+        "area": 0,
+        "cells": 0,
+        "neighbors": [],
+        "diplomacy": [
+            [
+                "Padstedia-Cokenilian War",
+                "Padstedia declared a war on its rival Cokenilia",
+                "Cokenilia's ally Congia joined the war on defenders side",
+                "Cokenilia's ally Bolteria joined the war on defenders side",
+                "Padstedia's ally Watchet avoided entering the war"
+            ],
+            [
+                "Caustow-Draxtedian War",
+                "Caustow declared a war on its rival Draxted",
+                "Caustow's vassal Oldonland joined the war on attackers side",
+                "Caustow's vassal Mitburia joined the war on attackers side",
+                "Caustow's ally Taria joined the war on attackers side"
+            ],
+            [
+                "Watchet-Kendenbian War",
+                "Watchet declared a war on its rival Kendenbia",
+                "Frightened by Watchet, Maton severed the defense pact with Kendenbia",
+                "Watchet's ally Padstedia joined the war on attackers side",
+                "Watchet's ally Bolteria joined the war on attackers side"
+            ],
+            [
+                "Witland-Draxtedian War",
+                "Witland declared a war on its rival Draxted"
+            ]
+        ],
+        "provinces": []
+    },
+    {
+        "i": 1,
+        "color": "#66c2a5",
+        "name": "Whitfordia",
+        "expansionism": 1.7,
+        "capital": 1,
+        "type": "Naval",
+        "center": 3336,
+        "culture": 4,
+        "coa": {
+            "t1": "lozengy-sable-argent-small",
+            "division": {
+                "division": "perPale",
+                "t": "or",
+                "line": "straight"
+            },
+            "shield": "oldFrench"
+        },
+        "urban": 180.267,
+        "rural": 478.69978100061417,
+        "burgs": 13,
+        "area": 3758,
+        "cells": 87,
+        "neighbors": [
+            15,
+            11
+        ],
+        "campaigns": [
+            {
+                "name": "Hinck War",
+                "start": 1,
+                "end": 3
+            },
+            {
+                "name": "Draxted Campaign",
+                "start": 170,
+                "end": 173
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "x",
+            "Suspicion",
+            "Neutral",
+            "Unknown",
+            "Suspicion",
+            "Suspicion",
+            "Neutral",
+            "Suspicion",
+            "Suspicion",
+            "Neutral",
+            "Neutral",
+            "Suspicion",
+            "Unknown",
+            "Unknown",
+            "Suspicion",
+            "Neutral",
+            "Suspicion",
+            "Unknown"
+        ],
+        "form": "Theocracy",
+        "formName": "Theocracy",
+        "fullName": "Whitfordian Theocracy",
+        "provinces": [
+            1,
+            2,
+            3,
+            79,
+            80
+        ],
+        "pole": [
+            602,
+            369
+        ],
+        "alert": 0.36,
+        "military": [
+            {
+                "i": 0,
+                "a": 801,
+                "cell": 3336,
+                "x": 606.5,
+                "y": 348.5,
+                "bx": 606.5,
+                "by": 348.5,
+                "u": {
+                    "archers": 408,
+                    "cavalry": 23,
+                    "infantry": 336,
+                    "artillery": 34
+                },
+                "n": 0,
+                "name": "1st (Thetham) Regiment",
+                "state": 1,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 10,
+                "cell": 3336,
+                "x": 603.16,
+                "y": 341.32,
+                "bx": 603.16,
+                "by": 341.32,
+                "u": {
+                    "fleet": 10
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 1,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 2,
+        "color": "#fc8d62",
+        "name": "Padstedia",
+        "expansionism": 3.5,
+        "capital": 2,
+        "type": "Naval",
+        "center": 545,
+        "culture": 2,
+        "coa": {
+            "t1": "argent",
+            "ordinaries": [
+                {
+                    "ordinary": "fessCotissed",
+                    "t": "purpure",
+                    "line": "wavy"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "badgerStatant",
+                    "t": "argent",
+                    "p": "def",
+                    "t2": "argent",
+                    "size": 0.5
+                }
+            ],
+            "shield": "wedged"
+        },
+        "urban": 115.80500000000002,
+        "rural": 865.851501584053,
+        "burgs": 19,
+        "area": 7084,
+        "cells": 131,
+        "neighbors": [
+            8,
+            18
+        ],
+        "campaigns": [
+            {
+                "name": "Cokenilian Intervention",
+                "start": 29,
+                "end": 30
+            },
+            {
+                "name": "Watchet Crusade",
+                "start": 95,
+                "end": 97
+            },
+            {
+                "name": "Cokenilian War",
+                "start": 178,
+                "end": 181
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "x",
+            "Enemy",
+            "Friendly",
+            "Unknown",
+            "Suspicion",
+            "Neutral",
+            "Ally",
+            "Unknown",
+            "Enemy",
+            "Suspicion",
+            "Enemy",
+            "Neutral",
+            "Friendly",
+            "Unknown",
+            "Neutral",
+            "Unknown",
+            "Enemy"
+        ],
+        "form": "Republic",
+        "formName": "Republic",
+        "fullName": "Republic of Padstedia",
+        "provinces": [
+            4,
+            5,
+            6,
+            7,
+            81,
+            82
+        ],
+        "pole": [
+            122,
+            175
+        ],
+        "alert": 1.71,
+        "military": [
+            {
+                "i": 0,
+                "a": 3987,
+                "cell": 686,
+                "x": 115.4,
+                "y": 149.3,
+                "bx": 115.4,
+                "by": 149.3,
+                "u": {
+                    "archers": 1468,
+                    "cavalry": 430,
+                    "artillery": 70,
+                    "infantry": 2019
+                },
+                "n": 0,
+                "name": "1st (Petersham) Regiment",
+                "state": 2,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 1235,
+                "cell": 1030,
+                "x": 175.8,
+                "y": 171.45,
+                "bx": 175.8,
+                "by": 171.45,
+                "u": {
+                    "archers": 550,
+                    "cavalry": 83,
+                    "artillery": 13,
+                    "infantry": 589
+                },
+                "n": 0,
+                "name": "2nd (Exning) Regiment",
+                "state": 2,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 19,
+                "cell": 686,
+                "x": 118.97,
+                "y": 140.39,
+                "bx": 118.97,
+                "by": 140.39,
+                "u": {
+                    "fleet": 19
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 2,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 3,
+        "color": "#8da0cb",
+        "name": "Kendenbia",
+        "expansionism": 2.2,
+        "capital": 3,
+        "type": "Naval",
+        "center": 796,
+        "culture": 2,
+        "coa": {
+            "t1": "gules",
+            "ordinaries": [
+                {
+                    "ordinary": "bendSinister",
+                    "t": "argent",
+                    "line": "straight"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "windmill",
+                    "t": "azure",
+                    "p": "lem",
+                    "t2": "azure",
+                    "t3": "azure",
+                    "size": 0.5
+                }
+            ],
+            "shield": "wedged"
+        },
+        "urban": 155.22799999999995,
+        "rural": 901.8395134210587,
+        "burgs": 21,
+        "area": 5802,
+        "cells": 132,
+        "neighbors": [
+            8
+        ],
+        "campaigns": [
+            {
+                "name": "Dunsbury Campaign",
+                "start": 109,
+                "end": 118
+            },
+            {
+                "name": "Watchetian War",
+                "start": 178,
+                "end": 181
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Enemy",
+            "x",
+            "Suspicion",
+            "Rival",
+            "Suspicion",
+            "Neutral",
+            "Enemy",
+            "Rival",
+            "Unknown",
+            "Suspicion",
+            "Enemy",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Friendly",
+            "Rival",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Kendenbia",
+        "provinces": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            83
+        ],
+        "pole": [
+            253,
+            116
+        ],
+        "alert": 1.51,
+        "military": [
+            {
+                "i": 0,
+                "a": 2951,
+                "cell": 219,
+                "x": 288.6,
+                "y": 84.7,
+                "bx": 288.6,
+                "by": 84.7,
+                "u": {
+                    "archers": 1628,
+                    "cavalry": 90,
+                    "artillery": 49,
+                    "infantry": 1184
+                },
+                "n": 0,
+                "name": "1st (Brethobury) Regiment",
+                "state": 3,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 2705,
+                "cell": 486,
+                "x": 218.9,
+                "y": 125.5,
+                "bx": 218.9,
+                "by": 125.5,
+                "u": {
+                    "archers": 1477,
+                    "cavalry": 82,
+                    "infantry": 1078,
+                    "artillery": 68
+                },
+                "n": 0,
+                "name": "2nd (Totley) Regiment",
+                "state": 3,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 12,
+                "cell": 1043,
+                "x": 239.28,
+                "y": 170.14,
+                "bx": 239.28,
+                "by": 170.14,
+                "u": {
+                    "fleet": 12
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 3,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 4,
+        "color": "#e78ac3",
+        "name": "Maton",
+        "expansionism": 2.8,
+        "capital": 4,
+        "type": "River",
+        "center": 3118,
+        "culture": 3,
+        "coa": {
+            "t1": "sable",
+            "ordinaries": [
+                {
+                    "ordinary": "saltire",
+                    "t": "or",
+                    "line": "indented"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "eagle",
+                    "t": "gules",
+                    "p": "e",
+                    "t2": "gules",
+                    "t3": "or",
+                    "size": 0.7
+                }
+            ],
+            "shield": "swiss"
+        },
+        "urban": 61.505,
+        "rural": 506.8399040699005,
+        "burgs": 10,
+        "area": 3528,
+        "cells": 67,
+        "neighbors": [
+            14,
+            12
+        ],
+        "campaigns": [
+            {
+                "name": "Bolterian Invasion",
+                "start": 1,
+                "end": 8
+            },
+            {
+                "name": "Flokneth War",
+                "start": 169,
+                "end": 173
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Unknown",
+            "Friendly",
+            "Suspicion",
+            "x",
+            "Suspicion",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Neutral",
+            "Ally",
+            "Suspicion",
+            "Friendly",
+            "Suspicion",
+            "Neutral",
+            "Neutral",
+            "Suspicion",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Maton",
+        "provinces": [
+            13,
+            14
+        ],
+        "pole": [
+            246,
+            351
+        ],
+        "alert": 0.74,
+        "military": [
+            {
+                "i": 0,
+                "a": 1431,
+                "cell": 3038,
+                "x": 266.74,
+                "y": 327.26,
+                "bx": 266.74,
+                "by": 327.26,
+                "u": {
+                    "infantry": 739,
+                    "cavalry": 139,
+                    "artillery": 14,
+                    "archers": 539
+                },
+                "n": 0,
+                "name": "1st (Buclestab) Regiment",
+                "state": 4,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 1,
+                "cell": 3118,
+                "x": 231.12,
+                "y": 344.68,
+                "bx": 231.12,
+                "by": 344.68,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 4,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 5,
+        "color": "#a6d854",
+        "name": "Caustow",
+        "expansionism": 2.2,
+        "capital": 5,
+        "type": "Naval",
+        "center": 253,
+        "culture": 9,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "feather",
+                    "t": "azure",
+                    "p": "jlh",
+                    "size": 0.7
+                }
+            ],
+            "shield": "fantasy4"
+        },
+        "urban": 265.06799999999987,
+        "rural": 1664.6411890387535,
+        "burgs": 35,
+        "area": 12024,
+        "cells": 243,
+        "neighbors": [
+            17,
+            9,
+            6
+        ],
+        "campaigns": [
+            {
+                "name": "Monorham Conflict",
+                "start": 1,
+                "end": 5
+            },
+            {
+                "name": "Oldonish Campaign",
+                "start": 149,
+                "end": 152
+            },
+            {
+                "name": "Mitburian Conquest",
+                "start": 153,
+                "end": 154
+            },
+            {
+                "name": "Draxtedian War",
+                "start": 177,
+                "end": 181
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Unknown",
+            "Rival",
+            "Suspicion",
+            "x",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "Suzerain",
+            "Neutral",
+            "Rival",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Enemy",
+            "Ally",
+            "Suzerain",
+            "Rival"
+        ],
+        "form": "Monarchy",
+        "formName": "Empire",
+        "fullName": "Caustow Empire",
+        "provinces": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            84,
+            85,
+            86,
+            87
+        ],
+        "pole": [
+            904,
+            123
+        ],
+        "alert": 0.78,
+        "military": [
+            {
+                "i": 0,
+                "a": 2821,
+                "cell": 18,
+                "x": 930.77,
+                "y": 37.71,
+                "bx": 930.77,
+                "by": 37.71,
+                "u": {
+                    "archers": 1380,
+                    "infantry": 1242,
+                    "cavalry": 137,
+                    "artillery": 62
+                },
+                "n": 0,
+                "name": "1st (Castre) Regiment",
+                "state": 5,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 1969,
+                "cell": 654,
+                "x": 880.2,
+                "y": 139.5,
+                "bx": 880.2,
+                "by": 139.5,
+                "u": {
+                    "archers": 754,
+                    "cavalry": 175,
+                    "infantry": 1012,
+                    "artillery": 28
+                },
+                "n": 0,
+                "name": "2nd (Clifractia) Regiment",
+                "state": 5,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 8,
+                "cell": 654,
+                "x": 872.21,
+                "y": 141.71,
+                "bx": 872.21,
+                "by": 141.71,
+                "u": {
+                    "fleet": 8
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 5,
+                "icon": "🌊"
+            },
+            {
+                "i": 3,
+                "a": 4,
+                "cell": 253,
+                "x": 908.46,
+                "y": 75.48,
+                "bx": 908.46,
+                "by": 75.48,
+                "u": {
+                    "fleet": 4
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 5,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 6,
+        "color": "#ffd92f",
+        "name": "Monorham",
+        "expansionism": 3.4,
+        "capital": 6,
+        "type": "Naval",
+        "center": 847,
+        "culture": 9,
+        "coa": {
+            "t1": "purpure",
+            "charges": [
+                {
+                    "charge": "caravel",
+                    "t": "or",
+                    "p": "e",
+                    "t2": "or",
+                    "t3": "argent",
+                    "size": 1.5
+                }
+            ],
+            "shield": "fantasy4"
+        },
+        "urban": 192.37,
+        "rural": 1442.5174570679665,
+        "burgs": 34,
+        "area": 10056,
+        "cells": 228,
+        "neighbors": [
+            5
+        ],
+        "campaigns": [
+            {
+                "name": "Caustow War",
+                "start": 88,
+                "end": 90
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Suspicion",
+            "Suspicion",
+            "Neutral",
+            "Suspicion",
+            "x",
+            "Ally",
+            "Unknown",
+            "Suspicion",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Neutral",
+            "Suspicion",
+            "Rival"
+        ],
+        "form": "Republic",
+        "formName": "Republic",
+        "fullName": "Republic of Monorham",
+        "provinces": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95
+        ],
+        "pole": [
+            773,
+            182
+        ],
+        "alert": 0.43,
+        "military": [
+            {
+                "i": 0,
+                "a": 1477,
+                "cell": 739,
+                "x": 790.43,
+                "y": 147.11,
+                "bx": 790.43,
+                "by": 147.11,
+                "u": {
+                    "archers": 652,
+                    "cavalry": 98,
+                    "infantry": 705,
+                    "artillery": 22
+                },
+                "n": 0,
+                "name": "1st (Wigland) Regiment",
+                "state": 6,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 236,
+                "cell": 1072,
+                "x": 670.33,
+                "y": 168.57,
+                "bx": 670.33,
+                "by": 168.57,
+                "u": {
+                    "archers": 109,
+                    "artillery": 5,
+                    "infantry": 110,
+                    "cavalry": 12
+                },
+                "n": 0,
+                "name": "2nd (Dunsterton) Regiment",
+                "state": 6,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 2,
+                "cell": 1678,
+                "x": 722.62,
+                "y": 201.89,
+                "bx": 722.62,
+                "by": 201.89,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 6,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 7,
+        "color": "#6be3ab",
+        "name": "Wathamia",
+        "expansionism": 3.1,
+        "capital": 7,
+        "type": "Generic",
+        "center": 4253,
+        "culture": 7,
+        "coa": {
+            "t1": "or",
+            "charges": [
+                {
+                    "charge": "escallop",
+                    "t": "purpure",
+                    "p": "e",
+                    "size": 1.5
+                }
+            ],
+            "shield": "hessen"
+        },
+        "urban": 105.87599999999999,
+        "rural": 617.8858828246593,
+        "burgs": 15,
+        "area": 4859,
+        "cells": 117,
+        "neighbors": [
+            13
+        ],
+        "campaigns": [
+            {
+                "name": "Knutish War",
+                "start": 50,
+                "end": 57
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Friendly",
+            "Ally",
+            "x",
+            "Suspicion",
+            "Friendly",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Friendly",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Friendly",
+            "Neutral"
+        ],
+        "form": "Theocracy",
+        "formName": "Divine Principality",
+        "fullName": "Divine Principality of Wathamia",
+        "provinces": [
+            29,
+            30,
+            31,
+            96,
+            97,
+            98
+        ],
+        "pole": [
+            804,
+            443
+        ],
+        "alert": 0.34,
+        "military": [
+            {
+                "i": 0,
+                "a": 1177,
+                "cell": 4253,
+                "x": 792.84,
+                "y": 413.02,
+                "bx": 792.84,
+                "by": 413.02,
+                "u": {
+                    "archers": 492,
+                    "infantry": 527,
+                    "cavalry": 147,
+                    "artillery": 11
+                },
+                "n": 0,
+                "name": "1st (Kitoncia) Regiment",
+                "state": 7,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 4,
+                "cell": 4253,
+                "x": 796.82,
+                "y": 404.99,
+                "bx": 796.82,
+                "by": 404.99,
+                "u": {
+                    "fleet": 4
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 7,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 8,
+        "color": "#e290dc",
+        "name": "Watchet",
+        "expansionism": 3.7,
+        "capital": 8,
+        "type": "Naval",
+        "center": 1551,
+        "culture": 2,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "escallop",
+                    "t": "vert",
+                    "p": "jln",
+                    "size": 0.7
+                }
+            ],
+            "shield": "wedged"
+        },
+        "urban": 158.22500000000002,
+        "rural": 1101.679900676012,
+        "burgs": 22,
+        "area": 10190,
+        "cells": 181,
+        "neighbors": [
+            2,
+            3,
+            18,
+            14
+        ],
+        "campaigns": [
+            {
+                "name": "Padstedian Rebellion",
+                "start": 1,
+                "end": 4
+            },
+            {
+                "name": "Witlish War",
+                "start": 1,
+                "end": 2
+            },
+            {
+                "name": "Cokenilian War",
+                "start": 144,
+                "end": 149
+            },
+            {
+                "name": "Hinckhamp Conflict",
+                "start": 175,
+                "end": 180
+            },
+            {
+                "name": "Kendenbian War",
+                "start": 178,
+                "end": 181
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Ally",
+            "Enemy",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "Suspicion",
+            "x",
+            "Unknown",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Neutral",
+            "Suspicion",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Watchet",
+        "provinces": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            99
+        ],
+        "pole": [
+            145,
+            235
+        ],
+        "alert": 1.25,
+        "military": [
+            {
+                "i": 0,
+                "a": 3132,
+                "cell": 1836,
+                "x": 175.4,
+                "y": 228.5,
+                "bx": 175.4,
+                "by": 228.5,
+                "u": {
+                    "archers": 1195,
+                    "cavalry": 397,
+                    "infantry": 1478,
+                    "artillery": 62
+                },
+                "n": 0,
+                "name": "1st (Bucking) Regiment",
+                "state": 8,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 1729,
+                "cell": 1638,
+                "x": 145.55,
+                "y": 209.67,
+                "bx": 145.55,
+                "by": 209.67,
+                "u": {
+                    "infantry": 840,
+                    "cavalry": 181,
+                    "artillery": 28,
+                    "archers": 680
+                },
+                "n": 0,
+                "name": "2nd (Portskirkia) Regiment",
+                "state": 8,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 18,
+                "cell": 1836,
+                "x": 178.41,
+                "y": 232.12,
+                "bx": 178.41,
+                "by": 232.12,
+                "u": {
+                    "fleet": 18
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 8,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 9,
+        "color": "#90a6e5",
+        "name": "Oldonland",
+        "expansionism": 1.2,
+        "capital": 9,
+        "type": "Naval",
+        "center": 1710,
+        "culture": 9,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "crescent",
+                    "t": "gules",
+                    "p": "e",
+                    "size": 1.5
+                }
+            ],
+            "shield": "fantasy4"
+        },
+        "urban": 25.936,
+        "rural": 155.08309888839722,
+        "burgs": 4,
+        "area": 1618,
+        "cells": 32,
+        "neighbors": [
+            17,
+            5
+        ],
+        "campaigns": [
+            {
+                "name": "Caustow Expedition",
+                "start": 1,
+                "end": 6
+            },
+            {
+                "name": "Moury Conflict",
+                "start": 175,
+                "end": 178
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Unknown",
+            "Rival",
+            "Suspicion",
+            "Vassal",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "x",
+            "Neutral",
+            "Rival",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Enemy",
+            "Ally",
+            "Ally",
+            "Rival"
+        ],
+        "form": "Republic",
+        "formName": "Republic",
+        "fullName": "Republic of Oldonland",
+        "provinces": [
+            37,
+            38
+        ],
+        "pole": [
+            937,
+            217
+        ],
+        "alert": 0.59,
+        "military": [
+            {
+                "i": 0,
+                "a": 355,
+                "cell": 1614,
+                "x": 963,
+                "y": 204.5,
+                "bx": 963,
+                "by": 204.5,
+                "u": {
+                    "archers": 202,
+                    "cavalry": 6,
+                    "infantry": 140,
+                    "artillery": 7
+                },
+                "n": 0,
+                "name": "1st (Newbuteton) Regiment",
+                "state": 9,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 3,
+                "cell": 1614,
+                "x": 973.31,
+                "y": 204.13,
+                "bx": 973.31,
+                "by": 204.13,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 9,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 10,
+        "color": "#fda8b9",
+        "name": "Congia",
+        "expansionism": 1.7,
+        "capital": 10,
+        "type": "Generic",
+        "center": 1949,
+        "culture": 5,
+        "coa": {
+            "t1": "argent",
+            "ordinaries": [
+                {
+                    "ordinary": "bendlet",
+                    "t": "purpure",
+                    "line": "escartely"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "crown2",
+                    "t": "argent",
+                    "p": "joe",
+                    "t2": "argent",
+                    "t3": "gules",
+                    "size": 0.3
+                }
+            ],
+            "shield": "swiss"
+        },
+        "urban": 68.28200000000001,
+        "rural": 555.0286721289158,
+        "burgs": 13,
+        "area": 4174,
+        "cells": 94,
+        "neighbors": [
+            14
+        ],
+        "campaigns": [
+            {
+                "name": "Witlish Rebellion",
+                "start": 125,
+                "end": 129
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Enemy",
+            "Unknown",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "x",
+            "Friendly",
+            "Friendly",
+            "Unknown",
+            "Rival",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Ally"
+        ],
+        "form": "Republic",
+        "formName": "Republic",
+        "fullName": "Republic of Congia",
+        "provinces": [
+            39,
+            40,
+            41,
+            100
+        ],
+        "pole": [
+            303,
+            230
+        ],
+        "alert": 1.08,
+        "military": [
+            {
+                "i": 0,
+                "a": 3284,
+                "cell": 1757,
+                "x": 321.52,
+                "y": 217.49,
+                "bx": 321.52,
+                "by": 217.49,
+                "u": {
+                    "archers": 1665,
+                    "cavalry": 236,
+                    "infantry": 1354,
+                    "artillery": 29
+                },
+                "n": 0,
+                "name": "1st (Lesorough) Regiment",
+                "state": 10,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 7,
+                "cell": 2169,
+                "x": 312.8,
+                "y": 250.31,
+                "bx": 312.8,
+                "by": 250.31,
+                "u": {
+                    "fleet": 7
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 10,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 11,
+        "color": "#a2db7d",
+        "name": "Soneia",
+        "expansionism": 3.7,
+        "capital": 11,
+        "type": "Naval",
+        "center": 4203,
+        "culture": 8,
+        "coa": {
+            "t1": "or",
+            "charges": [
+                {
+                    "charge": "lionHeadCaboshed",
+                    "t": "azure",
+                    "p": "e",
+                    "t2": "azure",
+                    "size": 1.5
+                }
+            ],
+            "shield": "fantasy5"
+        },
+        "urban": 299.2629999999999,
+        "rural": 1711.919137954712,
+        "burgs": 45,
+        "area": 11985,
+        "cells": 291,
+        "neighbors": [
+            1,
+            12
+        ],
+        "campaigns": [
+            {
+                "name": "Bolterian Conflict",
+                "start": 72,
+                "end": 74
+            },
+            {
+                "name": "Knarester Campaign",
+                "start": 175,
+                "end": 176
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Suspicion",
+            "Suspicion",
+            "Ally",
+            "Rival",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Rival",
+            "Friendly",
+            "x",
+            "Neutral",
+            "Unknown",
+            "Suspicion",
+            "Friendly",
+            "Neutral",
+            "Rival",
+            "Suspicion"
+        ],
+        "form": "Union",
+        "formName": "United Provinces",
+        "fullName": "United Provinces of Soneia",
+        "provinces": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106
+        ],
+        "pole": [
+            520,
+            394
+        ],
+        "alert": 0.33,
+        "military": [
+            {
+                "i": 0,
+                "a": 1419,
+                "cell": 4203,
+                "x": 502.93,
+                "y": 418.49,
+                "bx": 502.93,
+                "by": 418.49,
+                "u": {
+                    "archers": 689,
+                    "infantry": 646,
+                    "artillery": 31,
+                    "cavalry": 53
+                },
+                "n": 0,
+                "name": "1st (Brokeholi) Regiment",
+                "state": 11,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 296,
+                "cell": 5538,
+                "x": 636.1,
+                "y": 508.8,
+                "bx": 636.1,
+                "by": 508.8,
+                "u": {
+                    "archers": 161,
+                    "infantry": 128,
+                    "artillery": 5,
+                    "cavalry": 2
+                },
+                "n": 0,
+                "name": "2nd (Altonby) Regiment",
+                "state": 11,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 5,
+                "cell": 4203,
+                "x": 500.63,
+                "y": 423.55,
+                "bx": 500.63,
+                "by": 423.55,
+                "u": {
+                    "fleet": 5
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 11,
+                "icon": "🌊"
+            },
+            {
+                "i": 3,
+                "a": 1,
+                "cell": 5538,
+                "x": 638.52,
+                "y": 514.49,
+                "bx": 638.52,
+                "by": 514.49,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 11,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 12,
+        "color": "#e9f051",
+        "name": "Bolteria",
+        "expansionism": 4.7,
+        "capital": 12,
+        "type": "Naval",
+        "center": 4460,
+        "culture": 2,
+        "coa": {
+            "t1": "gules",
+            "charges": [
+                {
+                    "charge": "bridge",
+                    "t": "or",
+                    "p": "e",
+                    "size": 1.5
+                }
+            ],
+            "shield": "wedged"
+        },
+        "urban": 231.934,
+        "rural": 1602.038159430027,
+        "burgs": 36,
+        "area": 12121,
+        "cells": 247,
+        "neighbors": [
+            4,
+            14,
+            11
+        ],
+        "campaigns": [
+            {
+                "name": "Matonese Campaign",
+                "start": 1,
+                "end": 11
+            },
+            {
+                "name": "Witlish War",
+                "start": 1,
+                "end": 11
+            },
+            {
+                "name": "Soneian Rebellion",
+                "start": 75,
+                "end": 76
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Enemy",
+            "Enemy",
+            "Suspicion",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Ally",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "x",
+            "Neutral",
+            "Suspicion",
+            "Unknown",
+            "Neutral",
+            "Neutral",
+            "Ally"
+        ],
+        "form": "Theocracy",
+        "formName": "Theocracy",
+        "fullName": "Bolterian Theocracy",
+        "provinces": [
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113
+        ],
+        "pole": [
+            196,
+            447
+        ],
+        "alert": 0.72,
+        "military": [
+            {
+                "i": 0,
+                "a": 1936,
+                "cell": 4460,
+                "x": 320.17,
+                "y": 428.06,
+                "bx": 320.17,
+                "by": 428.06,
+                "u": {
+                    "archers": 952,
+                    "cavalry": 84,
+                    "infantry": 857,
+                    "artillery": 43
+                },
+                "n": 0,
+                "name": "1st (Ostondia) Regiment",
+                "state": 12,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 23,
+                "cell": 5650,
+                "x": 587.35,
+                "y": 520.72,
+                "bx": 587.35,
+                "by": 520.72,
+                "u": {
+                    "archers": 15,
+                    "infantry": 8
+                },
+                "n": 0,
+                "name": "2nd (New Watchetia) Regiment",
+                "state": 12,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 12,
+                "cell": 4460,
+                "x": 322.33,
+                "y": 429.16,
+                "bx": 322.33,
+                "by": 429.16,
+                "u": {
+                    "fleet": 12
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 12,
+                "icon": "🌊"
+            },
+            {
+                "i": 3,
+                "a": 2,
+                "cell": 5062,
+                "x": 137.28,
+                "y": 478.03,
+                "bx": 137.28,
+                "by": 478.03,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 12,
+                "icon": "🌊"
+            },
+            {
+                "i": 4,
+                "a": 1,
+                "cell": 2279,
+                "x": 438.58,
+                "y": 260.25,
+                "bx": 438.58,
+                "by": 260.25,
+                "u": {
+                    "archers": 1
+                },
+                "n": 0,
+                "name": "3rd (Chawbigia) Regiment",
+                "state": 12,
+                "icon": "🏹"
+            }
+        ]
+    },
+    {
+        "i": 13,
+        "color": "#ffb066",
+        "name": "Knutland",
+        "expansionism": 1.5,
+        "capital": 13,
+        "type": "Generic",
+        "center": 5232,
+        "culture": 7,
+        "coa": {
+            "t1": "counterPotent-argent-gules",
+            "ordinaries": [
+                {
+                    "ordinary": "fess",
+                    "t": "azure",
+                    "line": "straight"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "tower",
+                    "t": "argent",
+                    "p": "def",
+                    "t2": "argent",
+                    "size": 0.5
+                }
+            ],
+            "shield": "hessen"
+        },
+        "urban": 127.81699999999998,
+        "rural": 526.1365929245949,
+        "burgs": 14,
+        "area": 3301,
+        "cells": 96,
+        "neighbors": [
+            7
+        ],
+        "campaigns": [
+            {
+                "name": "Wathamian War",
+                "start": 1,
+                "end": 3
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Unknown",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Unknown",
+            "Neutral",
+            "x",
+            "Neutral",
+            "Unknown",
+            "Neutral",
+            "Neutral",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Knutland",
+        "provinces": [
+            59,
+            60,
+            61,
+            114,
+            115
+        ],
+        "pole": [
+            715,
+            441
+        ],
+        "alert": 0.1,
+        "military": [
+            {
+                "i": 0,
+                "a": 308,
+                "cell": 5232,
+                "x": 711.85,
+                "y": 478,
+                "bx": 711.85,
+                "by": 478,
+                "u": {
+                    "archers": 148,
+                    "infantry": 135,
+                    "artillery": 4,
+                    "cavalry": 21
+                },
+                "n": 0,
+                "name": "1st (Marshbou) Regiment",
+                "state": 13,
+                "icon": "👑"
+            }
+        ]
+    },
+    {
+        "i": 14,
+        "color": "#ff8b7e",
+        "name": "Witland",
+        "expansionism": 4.8,
+        "capital": 14,
+        "type": "Naval",
+        "center": 2651,
+        "culture": 2,
+        "coa": {
+            "t1": "azure",
+            "ordinaries": [
+                {
+                    "ordinary": "bordure",
+                    "t": "or"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "billet",
+                    "t": "or",
+                    "p": "jleh",
+                    "size": 0.5
+                }
+            ],
+            "shield": "wedged"
+        },
+        "urban": 155.35200000000003,
+        "rural": 1526.810729086399,
+        "burgs": 30,
+        "area": 20760,
+        "cells": 351,
+        "neighbors": [
+            10,
+            8,
+            4,
+            18,
+            12
+        ],
+        "campaigns": [
+            {
+                "name": "Bolterian Conquest",
+                "start": 1,
+                "end": 9
+            },
+            {
+                "name": "Congian War",
+                "start": 29,
+                "end": 31
+            },
+            {
+                "name": "Watchet Conquest",
+                "start": 175,
+                "end": 176
+            },
+            {
+                "name": "Matonese War",
+                "start": 175,
+                "end": 180
+            },
+            {
+                "name": "Cokenilian War",
+                "start": 175,
+                "end": 176
+            },
+            {
+                "name": "Draxtedian War",
+                "start": 178,
+                "end": 181
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Unknown",
+            "Friendly",
+            "Neutral",
+            "Suspicion",
+            "Unknown",
+            "Unknown",
+            "Neutral",
+            "Suspicion",
+            "Unknown",
+            "Rival",
+            "Suspicion",
+            "Suspicion",
+            "Neutral",
+            "x",
+            "Enemy",
+            "Neutral",
+            "Unknown",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Empire",
+        "fullName": "Witlish Empire",
+        "provinces": [
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            116,
+            117
+        ],
+        "pole": [
+            141,
+            376
+        ],
+        "alert": 0.74,
+        "military": [
+            {
+                "i": 0,
+                "a": 3140,
+                "cell": 2647,
+                "x": 223.08,
+                "y": 290.14,
+                "bx": 223.08,
+                "by": 290.14,
+                "u": {
+                    "archers": 1238,
+                    "cavalry": 486,
+                    "infantry": 1377,
+                    "artillery": 39
+                },
+                "n": 0,
+                "name": "1st (Manch) Regiment",
+                "state": 14,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 10,
+                "cell": 3032,
+                "x": 226.06,
+                "y": 332.02,
+                "bx": 226.06,
+                "by": 332.02,
+                "u": {
+                    "fleet": 10
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 14,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 15,
+        "color": "#9f9cdc",
+        "name": "Draxted",
+        "expansionism": 1.7,
+        "capital": 15,
+        "type": "Naval",
+        "center": 2982,
+        "culture": 4,
+        "coa": {
+            "t1": "sable",
+            "division": {
+                "division": "perCross",
+                "t": "argent",
+                "line": "angled"
+            },
+            "charges": [
+                {
+                    "charge": "dolphin",
+                    "t": "or",
+                    "p": "j",
+                    "t2": "or",
+                    "size": 0.6
+                },
+                {
+                    "charge": "crossFitchy",
+                    "t": "purpure",
+                    "p": "l",
+                    "size": 0.6
+                },
+                {
+                    "charge": "griffinRampant",
+                    "t": "gules",
+                    "p": "m",
+                    "size": 0.6
+                },
+                {
+                    "charge": "rose",
+                    "t": "argent",
+                    "p": "o",
+                    "size": 0.6
+                }
+            ],
+            "shield": "oldFrench"
+        },
+        "urban": 88.67200000000001,
+        "rural": 360.28250989317894,
+        "burgs": 9,
+        "area": 4026,
+        "cells": 85,
+        "neighbors": [
+            1
+        ],
+        "campaigns": [
+            {
+                "name": "Whitfordian Crusade",
+                "start": 175,
+                "end": 176
+            },
+            {
+                "name": "Caustowian War",
+                "start": 177,
+                "end": 181
+            },
+            {
+                "name": "Witlandian War",
+                "start": 178,
+                "end": 181
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Unknown",
+            "Unknown",
+            "Neutral",
+            "Enemy",
+            "Neutral",
+            "Friendly",
+            "Suspicion",
+            "Enemy",
+            "Neutral",
+            "Friendly",
+            "Unknown",
+            "Unknown",
+            "Enemy",
+            "x",
+            "Enemy",
+            "Enemy",
+            "Rival"
+        ],
+        "form": "Monarchy",
+        "formName": "Principality",
+        "fullName": "Principality of Draxted",
+        "provinces": [
+            68,
+            69,
+            118,
+            119,
+            120
+        ],
+        "pole": [
+            680,
+            337
+        ],
+        "alert": 0.67,
+        "military": [
+            {
+                "i": 0,
+                "a": 973,
+                "cell": 2982,
+                "x": 679.05,
+                "y": 314.56,
+                "bx": 679.05,
+                "by": 314.56,
+                "u": {
+                    "archers": 548,
+                    "cavalry": 17,
+                    "infantry": 379,
+                    "artillery": 29
+                },
+                "n": 0,
+                "name": "1st (South) Regiment",
+                "state": 15,
+                "icon": "👑"
+            },
+            {
+                "i": 1,
+                "a": 7,
+                "cell": 2982,
+                "x": 679.43,
+                "y": 310.72,
+                "bx": 679.43,
+                "by": 310.72,
+                "u": {
+                    "fleet": 7
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 15,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 16,
+        "color": "#ff9cba",
+        "name": "Taria",
+        "expansionism": 2.5,
+        "capital": 16,
+        "type": "Generic",
+        "center": 4660,
+        "culture": 7,
+        "coa": {
+            "t1": "argent",
+            "division": {
+                "division": "perPale",
+                "t": "gules",
+                "line": "potentyDexter"
+            },
+            "charges": [
+                {
+                    "charge": "pot",
+                    "t": "purpure",
+                    "p": "p",
+                    "size": 0.7
+                },
+                {
+                    "charge": "inescutcheon",
+                    "t": "or",
+                    "p": "q",
+                    "size": 0.7
+                }
+            ],
+            "shield": "hessen"
+        },
+        "urban": 44.38499999999999,
+        "rural": 528.741962492466,
+        "burgs": 12,
+        "area": 4846,
+        "cells": 117,
+        "neighbors": [
+            17
+        ],
+        "campaigns": [
+            {
+                "name": "Mitburian Campaign",
+                "start": 1,
+                "end": 6
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Neutral",
+            "Enemy",
+            "x",
+            "Ally",
+            "Unknown"
+        ],
+        "form": "Monarchy",
+        "formName": "Principality",
+        "fullName": "Principality of Taria",
+        "provinces": [
+            70,
+            71,
+            72,
+            121,
+            122,
+            123
+        ],
+        "pole": [
+            926,
+            446
+        ],
+        "alert": 0.41,
+        "military": [
+            {
+                "i": 0,
+                "a": 1050,
+                "cell": 4668,
+                "x": 954.15,
+                "y": 440.02,
+                "bx": 954.15,
+                "by": 440.02,
+                "u": {
+                    "archers": 530,
+                    "infantry": 443,
+                    "cavalry": 74,
+                    "artillery": 3
+                },
+                "n": 0,
+                "name": "1st (Sarences) Regiment",
+                "state": 16,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 66,
+                "cell": 3988,
+                "x": 864.68,
+                "y": 398.83,
+                "bx": 864.68,
+                "by": 398.83,
+                "u": {
+                    "archers": 35,
+                    "cavalry": 2,
+                    "infantry": 27,
+                    "artillery": 2
+                },
+                "n": 0,
+                "name": "2nd (Penland) Regiment",
+                "state": 16,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 1,
+                "cell": 4788,
+                "x": 943.88,
+                "y": 453.43,
+                "bx": 943.88,
+                "by": 453.43,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 16,
+                "icon": "🌊"
+            },
+            {
+                "i": 3,
+                "a": 1,
+                "cell": 3988,
+                "x": 859.75,
+                "y": 404.23,
+                "bx": 859.75,
+                "by": 404.23,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 16,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 17,
+        "color": "#eaeb58",
+        "name": "Mitburia",
+        "expansionism": 3.6,
+        "capital": 17,
+        "type": "Naval",
+        "center": 1123,
+        "culture": 9,
+        "coa": {
+            "t1": "bendySinister-argent-purpure",
+            "ordinaries": [
+                {
+                    "ordinary": "pileInBend",
+                    "t": "vert"
+                }
+            ],
+            "shield": "fantasy4"
+        },
+        "urban": 34.756,
+        "rural": 401.9790329635143,
+        "burgs": 6,
+        "area": 3556,
+        "cells": 86,
+        "neighbors": [
+            5,
+            9,
+            16
+        ],
+        "campaigns": [
+            {
+                "name": "Oldonish War",
+                "start": 18,
+                "end": 32
+            },
+            {
+                "name": "Tarian Expedition",
+                "start": 77,
+                "end": 78
+            },
+            {
+                "name": "Caustow Rebellion",
+                "start": 175,
+                "end": 176
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Unknown",
+            "Rival",
+            "Suspicion",
+            "Vassal",
+            "Suspicion",
+            "Friendly",
+            "Unknown",
+            "Ally",
+            "Neutral",
+            "Rival",
+            "Neutral",
+            "Neutral",
+            "Unknown",
+            "Enemy",
+            "Ally",
+            "x",
+            "Rival"
+        ],
+        "form": "Theocracy",
+        "formName": "Diocese",
+        "fullName": "Diocese of Mitburia",
+        "provinces": [
+            73,
+            74,
+            124,
+            125,
+            126,
+            127
+        ],
+        "pole": [
+            931,
+            187
+        ],
+        "alert": 0.81,
+        "military": [
+            {
+                "i": 0,
+                "a": 922,
+                "cell": 1393,
+                "x": 956.4,
+                "y": 188.5,
+                "bx": 956.4,
+                "by": 188.5,
+                "u": {
+                    "archers": 518,
+                    "cavalry": 22,
+                    "infantry": 369,
+                    "artillery": 13
+                },
+                "n": 0,
+                "name": "1st (Masings) Regiment",
+                "state": 17,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 22,
+                "cell": 4679,
+                "x": 1007.3,
+                "y": 444,
+                "bx": 1007.3,
+                "by": 444,
+                "u": {
+                    "archers": 13,
+                    "infantry": 9
+                },
+                "n": 0,
+                "name": "2nd (Betford) Regiment",
+                "state": 17,
+                "icon": "🏹"
+            },
+            {
+                "i": 2,
+                "a": 2,
+                "cell": 1123,
+                "x": 997.36,
+                "y": 176.88,
+                "bx": 997.36,
+                "by": 176.88,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 17,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 18,
+        "color": "#ede35b",
+        "name": "Cokenilia",
+        "expansionism": 2.7,
+        "capital": 18,
+        "type": "Naval",
+        "center": 2335,
+        "culture": 2,
+        "coa": {
+            "t1": "or",
+            "charges": [
+                {
+                    "charge": "fleurDeLis",
+                    "t": "azure",
+                    "p": "e",
+                    "size": 1.5
+                }
+            ],
+            "shield": "wedged"
+        },
+        "urban": 92.27000000000001,
+        "rural": 653.4396573603153,
+        "burgs": 17,
+        "area": 10930,
+        "cells": 191,
+        "neighbors": [
+            2,
+            8,
+            14
+        ],
+        "campaigns": [
+            {
+                "name": "Witlish Intervention",
+                "start": 23,
+                "end": 27
+            },
+            {
+                "name": "Altford Campaign",
+                "start": 93,
+                "end": 95
+            },
+            {
+                "name": "Watchet Campaign",
+                "start": 123,
+                "end": 130
+            },
+            {
+                "name": "Padstedian War",
+                "start": 178,
+                "end": 181
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Unknown",
+            "Enemy",
+            "Neutral",
+            "Friendly",
+            "Rival",
+            "Rival",
+            "Neutral",
+            "Friendly",
+            "Rival",
+            "Ally",
+            "Suspicion",
+            "Ally",
+            "Friendly",
+            "Friendly",
+            "Rival",
+            "Unknown",
+            "Rival",
+            "x"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Cokenilia",
+        "provinces": [
+            75,
+            76,
+            77,
+            78,
+            128
+        ],
+        "pole": [
+            81,
+            257
+        ],
+        "alert": 0.85,
+        "military": [
+            {
+                "i": 0,
+                "a": 1515,
+                "cell": 1279,
+                "x": 58.76,
+                "y": 182.01,
+                "bx": 58.76,
+                "by": 182.01,
+                "u": {
+                    "archers": 459,
+                    "cavalry": 468,
+                    "infantry": 563,
+                    "artillery": 25
+                },
+                "n": 0,
+                "name": "1st (Caustorego) Regiment",
+                "state": 18,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 8,
+                "cell": 1279,
+                "x": 54.45,
+                "y": 182.27,
+                "bx": 54.45,
+                "by": 182.27,
+                "u": {
+                    "fleet": 8
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 18,
+                "icon": "🌊"
+            },
+            {
+                "i": 2,
+                "a": 1,
+                "cell": 3648,
+                "x": 48.05,
+                "y": 382.52,
+                "bx": 48.05,
+                "by": 382.52,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 18,
+                "icon": "🌊"
+            }
+        ]
+    }
+]

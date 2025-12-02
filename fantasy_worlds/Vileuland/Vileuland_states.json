@@ -1,0 +1,3239 @@
+[
+    {
+        "i": 0,
+        "name": "Neutrals",
+        "urban": 0,
+        "rural": 112.1997562944889,
+        "burgs": 0,
+        "area": 59853,
+        "cells": 284,
+        "neighbors": [
+            5,
+            6,
+            1,
+            7,
+            9
+        ],
+        "diplomacy": [
+            [
+                "Oberischia-Lolian War",
+                "Oberischia declared a war on its rival Lolia",
+                "Lolia's vassal Vinivia joined the war on defenders side",
+                "Frightened by Oberischia, Kakuhia severed the defense pact with Lolia",
+                "Oberischia's ally Boskirkia joined the war on attackers side"
+            ]
+        ],
+        "provinces": []
+    },
+    {
+        "i": 1,
+        "color": "#66c2a5",
+        "name": "Lolia",
+        "expansionism": 3.4,
+        "capital": 1,
+        "type": "Naval",
+        "center": 3907,
+        "culture": 11,
+        "coa": {
+            "t1": "or",
+            "division": {
+                "division": "perCross",
+                "t": "purpure",
+                "line": "invecked"
+            },
+            "charges": [
+                {
+                    "charge": "anchor",
+                    "t": "sable",
+                    "p": "jl",
+                    "divided": "counter",
+                    "size": 0.7
+                }
+            ],
+            "shield": "spanish"
+        },
+        "urban": 672.8960000000002,
+        "rural": 6649.016808152199,
+        "burgs": 70,
+        "area": 130321,
+        "cells": 753,
+        "neighbors": [
+            2,
+            3,
+            5,
+            6,
+            0,
+            7,
+            9
+        ],
+        "campaigns": [
+            {
+                "name": "Ancan Campaign",
+                "start": 1,
+                "end": 5
+            },
+            {
+                "name": "Alcauzan Rebellion",
+                "start": 1,
+                "end": 2
+            },
+            {
+                "name": "Boskirkian War",
+                "start": 1,
+                "end": 9
+            },
+            {
+                "name": "Oberischian War",
+                "start": 37,
+                "end": 38
+            },
+            {
+                "name": "Citripian Conflict",
+                "start": 62,
+                "end": 66
+            },
+            {
+                "name": "Vinivian War",
+                "start": 118,
+                "end": 123
+            },
+            {
+                "name": "Haumaan Intervention",
+                "start": 118,
+                "end": 123
+            },
+            {
+                "name": "Oberischian War",
+                "start": 121,
+                "end": 124
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "x",
+            "Suspicion",
+            "Enemy",
+            "Suspicion",
+            "Suspicion",
+            "Suzerain",
+            "Enemy",
+            "Friendly",
+            "Rival",
+            "Suspicion"
+        ],
+        "form": "Monarchy",
+        "formName": "Kingdom",
+        "fullName": "Kingdom of Lolia",
+        "provinces": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            250,
+            251,
+            252,
+            253,
+            254,
+            255
+        ],
+        "pole": [
+            358,
+            795
+        ],
+        "alert": 2.48,
+        "military": [
+            {
+                "i": 0,
+                "a": 6495,
+                "cell": 3969,
+                "x": 287.7,
+                "y": 559.6,
+                "bx": 287.7,
+                "by": 559.6,
+                "u": {
+                    "archers": 2620,
+                    "cavalry": 616,
+                    "infantry": 3147,
+                    "artillery": 112
+                },
+                "n": 0,
+                "name": "1st (Yundanoro) Regiment",
+                "state": 1,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 3420,
+                "cell": 4220,
+                "x": 332.34,
+                "y": 608.18,
+                "bx": 332.34,
+                "by": 608.18,
+                "u": {
+                    "infantry": 1652,
+                    "cavalry": 573,
+                    "artillery": 69,
+                    "archers": 1126
+                },
+                "n": 0,
+                "name": "2nd (Certia) Regiment",
+                "state": 1,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 3321,
+                "cell": 3179,
+                "x": 869.9,
+                "y": 376.92,
+                "bx": 869.9,
+                "by": 376.92,
+                "u": {
+                    "archers": 1531,
+                    "cavalry": 200,
+                    "infantry": 1510,
+                    "artillery": 80
+                },
+                "n": 0,
+                "name": "3rd (Haies) Regiment",
+                "state": 1,
+                "icon": "🏹"
+            },
+            {
+                "i": 3,
+                "a": 2710,
+                "cell": 6800,
+                "x": 919.4,
+                "y": 985.65,
+                "bx": 919.4,
+                "by": 985.65,
+                "u": {
+                    "archers": 1484,
+                    "cavalry": 96,
+                    "infantry": 1130
+                },
+                "n": 0,
+                "name": "4th (New Kyzan) Regiment",
+                "state": 1,
+                "icon": "🏹"
+            },
+            {
+                "i": 4,
+                "a": 2688,
+                "cell": 3904,
+                "x": 265.8,
+                "y": 538.76,
+                "bx": 265.8,
+                "by": 538.76,
+                "u": {
+                    "archers": 1235,
+                    "cavalry": 241,
+                    "artillery": 59,
+                    "infantry": 1153
+                },
+                "n": 0,
+                "name": "5th (Sanhafaisia) Regiment",
+                "state": 1,
+                "icon": "🏹"
+            },
+            {
+                "i": 5,
+                "a": 2389,
+                "cell": 5184,
+                "x": 410.83,
+                "y": 775.81,
+                "bx": 410.83,
+                "by": 775.81,
+                "u": {
+                    "infantry": 646,
+                    "cavalry": 1036,
+                    "archers": 690,
+                    "artillery": 17
+                },
+                "n": 0,
+                "name": "6th (Mont) Regiment",
+                "state": 1,
+                "icon": "🐴"
+            },
+            {
+                "i": 6,
+                "a": 2296,
+                "cell": 7279,
+                "x": 906.85,
+                "y": 1026.37,
+                "bx": 906.85,
+                "by": 1026.37,
+                "u": {
+                    "archers": 1106,
+                    "cavalry": 131,
+                    "infantry": 1059
+                },
+                "n": 0,
+                "name": "7th (New Kyzan) Regiment",
+                "state": 1,
+                "icon": "🏹"
+            },
+            {
+                "i": 7,
+                "a": 1745,
+                "cell": 1985,
+                "x": 692.51,
+                "y": 224.15,
+                "bx": 692.51,
+                "by": 224.15,
+                "u": {
+                    "infantry": 861,
+                    "cavalry": 151,
+                    "archers": 698,
+                    "artillery": 35
+                },
+                "n": 0,
+                "name": "8th (Itherchia) Regiment",
+                "state": 1,
+                "icon": "⚔️"
+            },
+            {
+                "i": 8,
+                "a": 1635,
+                "cell": 2006,
+                "x": 903.3,
+                "y": 229.9,
+                "bx": 903.3,
+                "by": 229.9,
+                "u": {
+                    "archers": 642,
+                    "cavalry": 161,
+                    "artillery": 20,
+                    "infantry": 812
+                },
+                "n": 0,
+                "name": "9th (Papsa) Regiment",
+                "state": 1,
+                "icon": "⚔️"
+            },
+            {
+                "i": 9,
+                "a": 1025,
+                "cell": 3339,
+                "x": 765,
+                "y": 405,
+                "bx": 765,
+                "by": 405,
+                "u": {
+                    "archers": 554,
+                    "cavalry": 29,
+                    "infantry": 400,
+                    "artillery": 42
+                },
+                "n": 0,
+                "name": "10th (Byblia) Regiment",
+                "state": 1,
+                "icon": "🏹"
+            },
+            {
+                "i": 10,
+                "a": 982,
+                "cell": 4998,
+                "x": 896.95,
+                "y": 751.99,
+                "bx": 896.95,
+                "by": 751.99,
+                "u": {
+                    "archers": 533,
+                    "cavalry": 36,
+                    "infantry": 413
+                },
+                "n": 0,
+                "name": "11th (New Kyzan) Regiment",
+                "state": 1,
+                "icon": "🏹"
+            },
+            {
+                "i": 11,
+                "a": 576,
+                "cell": 5938,
+                "x": 277.01,
+                "y": 875.5,
+                "bx": 277.01,
+                "by": 875.5,
+                "u": {
+                    "archers": 227,
+                    "artillery": 4,
+                    "infantry": 261,
+                    "cavalry": 84
+                },
+                "n": 0,
+                "name": "12th (Thouxy) Regiment",
+                "state": 1,
+                "icon": "⚔️"
+            },
+            {
+                "i": 12,
+                "a": 353,
+                "cell": 6790,
+                "x": 595.3,
+                "y": 990,
+                "bx": 595.3,
+                "by": 990,
+                "u": {
+                    "archers": 151,
+                    "cavalry": 23,
+                    "infantry": 168,
+                    "artillery": 11
+                },
+                "n": 0,
+                "name": "13th (Searenland) Regiment",
+                "state": 1,
+                "icon": "⚔️"
+            },
+            {
+                "i": 13,
+                "a": 47,
+                "cell": 5639,
+                "x": 668.64,
+                "y": 833,
+                "bx": 668.64,
+                "by": 833,
+                "u": {
+                    "archers": 26,
+                    "cavalry": 1,
+                    "artillery": 3,
+                    "infantry": 17
+                },
+                "n": 0,
+                "name": "14th (New Kyzan) Regiment",
+                "state": 1,
+                "icon": "🏹"
+            },
+            {
+                "i": 14,
+                "a": 15,
+                "cell": 3339,
+                "x": 763.19,
+                "y": 418.63,
+                "bx": 763.19,
+                "by": 418.63,
+                "u": {
+                    "fleet": 15
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 1,
+                "icon": "🌊"
+            },
+            {
+                "i": 15,
+                "a": 9,
+                "cell": 3907,
+                "x": 299.56,
+                "y": 552.32,
+                "bx": 299.56,
+                "by": 552.32,
+                "u": {
+                    "fleet": 9
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 1,
+                "icon": "🌊"
+            },
+            {
+                "i": 16,
+                "a": 8,
+                "cell": 3179,
+                "x": 869.61,
+                "y": 390.94,
+                "bx": 869.61,
+                "by": 390.94,
+                "u": {
+                    "fleet": 8
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 1,
+                "icon": "🌊"
+            },
+            {
+                "i": 17,
+                "a": 6,
+                "cell": 2006,
+                "x": 912.9,
+                "y": 242.23,
+                "bx": 912.9,
+                "by": 242.23,
+                "u": {
+                    "fleet": 6
+                },
+                "n": 1,
+                "name": "4th Fleet",
+                "state": 1,
+                "icon": "🌊"
+            },
+            {
+                "i": 18,
+                "a": 3,
+                "cell": 5087,
+                "x": 448.36,
+                "y": 769.21,
+                "bx": 448.36,
+                "by": 769.21,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "5th Fleet",
+                "state": 1,
+                "icon": "🌊"
+            },
+            {
+                "i": 19,
+                "a": 2,
+                "cell": 3546,
+                "x": 343.29,
+                "y": 449.87,
+                "bx": 343.29,
+                "by": 449.87,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "6th Fleet",
+                "state": 1,
+                "icon": "🌊"
+            },
+            {
+                "i": 20,
+                "a": 1,
+                "cell": 4617,
+                "x": 426.55,
+                "y": 686.96,
+                "bx": 426.55,
+                "by": 686.96,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "7th Fleet",
+                "state": 1,
+                "icon": "🌊"
+            },
+            {
+                "i": 21,
+                "a": 1,
+                "cell": 2549,
+                "x": 843.01,
+                "y": 280.42,
+                "bx": 843.01,
+                "by": 280.42,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "8th Fleet",
+                "state": 1,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 2,
+        "color": "#fc8d62",
+        "name": "Adnicto",
+        "expansionism": 4,
+        "capital": 2,
+        "type": "Generic",
+        "center": 1789,
+        "culture": 8,
+        "coa": {
+            "t1": "vert",
+            "ordinaries": [
+                {
+                    "ordinary": "point",
+                    "t": "or"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "gauntlet",
+                    "t": "argent",
+                    "p": "e",
+                    "size": 1.5
+                }
+            ],
+            "shield": "roman"
+        },
+        "urban": 687.3740000000003,
+        "rural": 7167.664430618286,
+        "burgs": 94,
+        "area": 199624,
+        "cells": 1097,
+        "neighbors": [
+            5,
+            1,
+            3,
+            10
+        ],
+        "campaigns": [
+            {
+                "name": "Ranorum Campaign",
+                "start": 1,
+                "end": 2
+            },
+            {
+                "name": "Detivis Conquest",
+                "start": 1,
+                "end": 4
+            },
+            {
+                "name": "Citripian War",
+                "start": 118,
+                "end": 121
+            },
+            {
+                "name": "Lolian Rebellion",
+                "start": 118,
+                "end": 123
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "x",
+            "Friendly",
+            "Friendly",
+            "Suspicion",
+            "Suspicion",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Suzerain"
+        ],
+        "form": "Monarchy",
+        "formName": "Empire",
+        "fullName": "Adnictan Empire",
+        "provinces": [
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            256,
+            257,
+            258,
+            259,
+            260,
+            261
+        ],
+        "pole": [
+            1744,
+            106
+        ],
+        "alert": 0.35,
+        "military": [
+            {
+                "i": 0,
+                "a": 2208,
+                "cell": 834,
+                "x": 1659.92,
+                "y": 88.69,
+                "bx": 1659.92,
+                "by": 88.69,
+                "u": {
+                    "archers": 543,
+                    "cavalry": 755,
+                    "artillery": 17,
+                    "infantry": 893
+                },
+                "n": 0,
+                "name": "1st (Binium) Regiment",
+                "state": 2,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 2083,
+                "cell": 1788,
+                "x": 1819.41,
+                "y": 195.23,
+                "bx": 1819.41,
+                "by": 195.23,
+                "u": {
+                    "archers": 640,
+                    "infantry": 932,
+                    "cavalry": 500,
+                    "artillery": 11
+                },
+                "n": 0,
+                "name": "2nd (Varauriro) Regiment",
+                "state": 2,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 2069,
+                "cell": 98,
+                "x": 1879.99,
+                "y": 11.74,
+                "bx": 1879.99,
+                "by": 11.74,
+                "u": {
+                    "archers": 680,
+                    "cavalry": 394,
+                    "artillery": 11,
+                    "infantry": 984
+                },
+                "n": 0,
+                "name": "3rd (Remibacovio) Regiment",
+                "state": 2,
+                "icon": "⚔️"
+            },
+            {
+                "i": 3,
+                "a": 2045,
+                "cell": 64,
+                "x": 1392.82,
+                "y": 2.29,
+                "bx": 1392.82,
+                "by": 2.29,
+                "u": {
+                    "archers": 504,
+                    "cavalry": 722,
+                    "artillery": 22,
+                    "infantry": 797
+                },
+                "n": 0,
+                "name": "4th (Linsium) Regiment",
+                "state": 2,
+                "icon": "⚔️"
+            },
+            {
+                "i": 4,
+                "a": 1514,
+                "cell": 1644,
+                "x": 1702.79,
+                "y": 179.53,
+                "bx": 1702.79,
+                "by": 179.53,
+                "u": {
+                    "infantry": 642,
+                    "cavalry": 503,
+                    "artillery": 8,
+                    "archers": 361
+                },
+                "n": 0,
+                "name": "5th (Dubrinisia) Regiment",
+                "state": 2,
+                "icon": "⚔️"
+            },
+            {
+                "i": 5,
+                "a": 833,
+                "cell": 74,
+                "x": 1544.8,
+                "y": 2.47,
+                "bx": 1544.8,
+                "by": 2.47,
+                "u": {
+                    "infantry": 291,
+                    "archers": 183,
+                    "cavalry": 355,
+                    "artillery": 4
+                },
+                "n": 0,
+                "name": "6th (Nerdum) Regiment",
+                "state": 2,
+                "icon": "🐴"
+            },
+            {
+                "i": 6,
+                "a": 736,
+                "cell": 2458,
+                "x": 1482.23,
+                "y": 269.54,
+                "bx": 1482.23,
+                "by": 269.54,
+                "u": {
+                    "infantry": 241,
+                    "cavalry": 338,
+                    "archers": 155,
+                    "artillery": 2
+                },
+                "n": 0,
+                "name": "7th (Maranium) Regiment",
+                "state": 2,
+                "icon": "🐴"
+            },
+            {
+                "i": 7,
+                "a": 495,
+                "cell": 1216,
+                "x": 1306.4,
+                "y": 140.06,
+                "bx": 1306.4,
+                "by": 140.06,
+                "u": {
+                    "infantry": 146,
+                    "cavalry": 254,
+                    "archers": 94,
+                    "artillery": 1
+                },
+                "n": 0,
+                "name": "8th (Tungripia) Regiment",
+                "state": 2,
+                "icon": "🐴"
+            },
+            {
+                "i": 8,
+                "a": 170,
+                "cell": 46,
+                "x": 1134.17,
+                "y": 2.09,
+                "bx": 1134.17,
+                "by": 2.09,
+                "u": {
+                    "cavalry": 148,
+                    "infantry": 8,
+                    "archers": 14
+                },
+                "n": 0,
+                "name": "9th (Histria) Regiment",
+                "state": 2,
+                "icon": "🐴"
+            },
+            {
+                "i": 9,
+                "a": 143,
+                "cell": 644,
+                "x": 991.3,
+                "y": 86.1,
+                "bx": 991.3,
+                "by": 86.1,
+                "u": {
+                    "infantry": 25,
+                    "archers": 14,
+                    "cavalry": 104
+                },
+                "n": 0,
+                "name": "10th (Histria) Regiment",
+                "state": 2,
+                "icon": "🐴"
+            },
+            {
+                "i": 10,
+                "a": 1,
+                "cell": 2220,
+                "x": 1846.63,
+                "y": 240.37,
+                "bx": 1846.63,
+                "by": 240.37,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 2,
+                "icon": "🌊"
+            },
+            {
+                "i": 11,
+                "a": 1,
+                "cell": 186,
+                "x": 1605.31,
+                "y": 23.21,
+                "bx": 1605.31,
+                "by": 23.21,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 2,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 3,
+        "color": "#8da0cb",
+        "name": "Oberischia",
+        "expansionism": 4.1,
+        "capital": 3,
+        "type": "River",
+        "center": 4051,
+        "culture": 10,
+        "coa": {
+            "t1": "vairAncien-argent-purpure-small",
+            "charges": [
+                {
+                    "charge": "crocodile",
+                    "t": "gules",
+                    "p": "e",
+                    "t2": "gules",
+                    "size": 1.5
+                }
+            ],
+            "shield": "swiss"
+        },
+        "urban": 786.7430000000003,
+        "rural": 7025.425578057766,
+        "burgs": 101,
+        "area": 107300,
+        "cells": 580,
+        "neighbors": [
+            1,
+            2,
+            10,
+            8,
+            4
+        ],
+        "campaigns": [
+            {
+                "name": "Adnictan War",
+                "start": 28,
+                "end": 31
+            },
+            {
+                "name": "Balese Rebellion",
+                "start": 45,
+                "end": 49
+            },
+            {
+                "name": "Lolian Campaign",
+                "start": 92,
+                "end": 101
+            },
+            {
+                "name": "Detivis Campaign",
+                "start": 118,
+                "end": 123
+            },
+            {
+                "name": "Olalamaan Conflict",
+                "start": 118,
+                "end": 123
+            },
+            {
+                "name": "Lolian War",
+                "start": 121,
+                "end": 124
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Enemy",
+            "Friendly",
+            "x",
+            "Suspicion",
+            "Suspicion",
+            "Enemy",
+            "Ally",
+            "Neutral",
+            "Neutral",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Principality",
+        "fullName": "Principality of Oberischia",
+        "provinces": [
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            262,
+            263,
+            264
+        ],
+        "pole": [
+            1680,
+            580
+        ],
+        "alert": 1.7,
+        "military": [
+            {
+                "i": 0,
+                "a": 5256,
+                "cell": 4420,
+                "x": 1570.08,
+                "y": 649.62,
+                "bx": 1570.08,
+                "by": 649.62,
+                "u": {
+                    "infantry": 2675,
+                    "cavalry": 426,
+                    "artillery": 20,
+                    "archers": 2135
+                },
+                "n": 0,
+                "name": "1st (Stresk) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 4940,
+                "cell": 3287,
+                "x": 1642.11,
+                "y": 392.58,
+                "bx": 1642.11,
+                "by": 392.58,
+                "u": {
+                    "infantry": 2473,
+                    "artillery": 38,
+                    "archers": 1475,
+                    "cavalry": 954
+                },
+                "n": 0,
+                "name": "2nd (Eminken) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 3698,
+                "cell": 3683,
+                "x": 1657.81,
+                "y": 483.19,
+                "bx": 1657.81,
+                "by": 483.19,
+                "u": {
+                    "infantry": 1943,
+                    "archers": 1316,
+                    "cavalry": 405,
+                    "artillery": 34
+                },
+                "n": 0,
+                "name": "3rd (Schlu) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 3,
+                "a": 3453,
+                "cell": 4051,
+                "x": 1593.76,
+                "y": 560.3,
+                "bx": 1593.76,
+                "by": 560.3,
+                "u": {
+                    "infantry": 1677,
+                    "cavalry": 194,
+                    "artillery": 46,
+                    "archers": 1536
+                },
+                "n": 0,
+                "name": "4th (Kipfheim) Regiment",
+                "state": 3,
+                "icon": "👑"
+            },
+            {
+                "i": 4,
+                "a": 3055,
+                "cell": 3995,
+                "x": 1670.82,
+                "y": 552.43,
+                "bx": 1670.82,
+                "by": 552.43,
+                "u": {
+                    "infantry": 1685,
+                    "cavalry": 494,
+                    "archers": 849,
+                    "artillery": 27
+                },
+                "n": 0,
+                "name": "5th (Doberngenia) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 5,
+                "a": 2757,
+                "cell": 3993,
+                "x": 1643.4,
+                "y": 551.62,
+                "bx": 1643.4,
+                "by": 551.62,
+                "u": {
+                    "infantry": 1460,
+                    "cavalry": 312,
+                    "artillery": 6,
+                    "archers": 979
+                },
+                "n": 0,
+                "name": "6th (Meschia) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 6,
+                "a": 2696,
+                "cell": 3113,
+                "x": 1630.5,
+                "y": 369.7,
+                "bx": 1630.5,
+                "by": 369.7,
+                "u": {
+                    "infantry": 973,
+                    "cavalry": 1099,
+                    "artillery": 21,
+                    "archers": 603
+                },
+                "n": 0,
+                "name": "7th (Eminken) Regiment",
+                "state": 3,
+                "icon": "🐴"
+            },
+            {
+                "i": 7,
+                "a": 2581,
+                "cell": 3436,
+                "x": 1597.01,
+                "y": 416.92,
+                "bx": 1597.01,
+                "by": 416.92,
+                "u": {
+                    "infantry": 1334,
+                    "cavalry": 252,
+                    "artillery": 25,
+                    "archers": 970
+                },
+                "n": 0,
+                "name": "8th (Frienau) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 8,
+                "a": 2497,
+                "cell": 3626,
+                "x": 1719.29,
+                "y": 460.09,
+                "bx": 1719.29,
+                "by": 460.09,
+                "u": {
+                    "infantry": 1428,
+                    "archers": 608,
+                    "cavalry": 449,
+                    "artillery": 12
+                },
+                "n": 0,
+                "name": "9th (Chern) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 9,
+                "a": 2346,
+                "cell": 3506,
+                "x": 1669.95,
+                "y": 434.4,
+                "bx": 1669.95,
+                "by": 434.4,
+                "u": {
+                    "infantry": 1278,
+                    "cavalry": 328,
+                    "archers": 727,
+                    "artillery": 13
+                },
+                "n": 0,
+                "name": "10th (Tutermers) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 10,
+                "a": 1954,
+                "cell": 3876,
+                "x": 1791.52,
+                "y": 524.39,
+                "bx": 1791.52,
+                "by": 524.39,
+                "u": {
+                    "infantry": 975,
+                    "archers": 423,
+                    "cavalry": 535,
+                    "artillery": 21
+                },
+                "n": 0,
+                "name": "11th (Inylia) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 11,
+                "a": 1736,
+                "cell": 4644,
+                "x": 1604.25,
+                "y": 700.48,
+                "bx": 1604.25,
+                "by": 700.48,
+                "u": {
+                    "archers": 612,
+                    "cavalry": 193,
+                    "artillery": 19,
+                    "infantry": 912
+                },
+                "n": 0,
+                "name": "12th (Rhein) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 12,
+                "a": 1732,
+                "cell": 4433,
+                "x": 1737.16,
+                "y": 653.74,
+                "bx": 1737.16,
+                "by": 653.74,
+                "u": {
+                    "infantry": 970,
+                    "archers": 469,
+                    "cavalry": 281,
+                    "artillery": 12
+                },
+                "n": 0,
+                "name": "13th (Belzheshin) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 13,
+                "a": 180,
+                "cell": 1723,
+                "x": 1071.4,
+                "y": 198.1,
+                "bx": 1071.4,
+                "by": 198.1,
+                "u": {
+                    "infantry": 102,
+                    "archers": 40,
+                    "cavalry": 38
+                },
+                "n": 0,
+                "name": "14th (New Gogororo) Regiment",
+                "state": 3,
+                "icon": "⚔️"
+            },
+            {
+                "i": 14,
+                "a": 7,
+                "cell": 3113,
+                "x": 1622.57,
+                "y": 381.18,
+                "bx": 1622.57,
+                "by": 381.18,
+                "u": {
+                    "fleet": 7
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 3,
+                "icon": "🌊"
+            },
+            {
+                "i": 15,
+                "a": 6,
+                "cell": 3361,
+                "x": 1540.18,
+                "y": 393.8,
+                "bx": 1540.18,
+                "by": 393.8,
+                "u": {
+                    "fleet": 6
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 3,
+                "icon": "🌊"
+            },
+            {
+                "i": 16,
+                "a": 1,
+                "cell": 4049,
+                "x": 1552.19,
+                "y": 577.15,
+                "bx": 1552.19,
+                "by": 577.15,
+                "u": {
+                    "fleet": 1
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 3,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 4,
+        "color": "#e78ac3",
+        "name": "Kakuhia",
+        "expansionism": 1.4,
+        "capital": 4,
+        "type": "Nomadic",
+        "center": 5133,
+        "culture": 1,
+        "coa": {
+            "t1": "argent",
+            "ordinaries": [
+                {
+                    "ordinary": "cross",
+                    "t": "azure",
+                    "line": "straight"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "axe",
+                    "t": "sable",
+                    "p": "acgi",
+                    "t2": "sable",
+                    "size": 0.5
+                }
+            ],
+            "shield": "pavise"
+        },
+        "urban": 55.32,
+        "rural": 930.735161781311,
+        "burgs": 10,
+        "area": 18268,
+        "cells": 90,
+        "neighbors": [
+            3,
+            8
+        ],
+        "campaigns": [
+            {
+                "name": "Oberischian War",
+                "start": 118,
+                "end": 123
+            },
+            {
+                "name": "Saskilan War",
+                "start": 118,
+                "end": 120
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Friendly",
+            "Suspicion",
+            "x",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Rival",
+            "Ally",
+            "Friendly"
+        ],
+        "form": "Monarchy",
+        "formName": "Duchy",
+        "fullName": "Duchy of Kakuhia",
+        "provinces": [
+            100,
+            101,
+            102,
+            103
+        ],
+        "pole": [
+            1672,
+            783
+        ],
+        "alert": 2.14,
+        "military": [
+            {
+                "i": 0,
+                "a": 3339,
+                "cell": 5133,
+                "x": 1594.84,
+                "y": 763.47,
+                "bx": 1594.84,
+                "by": 763.47,
+                "u": {
+                    "archers": 937,
+                    "cavalry": 1729,
+                    "artillery": 14,
+                    "infantry": 659
+                },
+                "n": 0,
+                "name": "1st (Lotan) Regiment",
+                "state": 4,
+                "icon": "👑"
+            },
+            {
+                "i": 1,
+                "a": 3272,
+                "cell": 5144,
+                "x": 1758.65,
+                "y": 770.36,
+                "bx": 1758.65,
+                "by": 770.36,
+                "u": {
+                    "cavalry": 2760,
+                    "infantry": 213,
+                    "archers": 296,
+                    "artillery": 3
+                },
+                "n": 0,
+                "name": "2nd (Chech) Regiment",
+                "state": 4,
+                "icon": "🐴"
+            },
+            {
+                "i": 2,
+                "a": 2494,
+                "cell": 5353,
+                "x": 1639.9,
+                "y": 797.74,
+                "bx": 1639.9,
+                "by": 797.74,
+                "u": {
+                    "cavalry": 1983,
+                    "infantry": 239,
+                    "archers": 272
+                },
+                "n": 0,
+                "name": "3rd (Jijalalmaa) Regiment",
+                "state": 4,
+                "icon": "🐴"
+            }
+        ]
+    },
+    {
+        "i": 5,
+        "color": "#a6d854",
+        "name": "Citripi",
+        "expansionism": 3.7,
+        "capital": 5,
+        "type": "Generic",
+        "center": 2509,
+        "culture": 3,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "bowWithThreeArrows",
+                    "t": "gules",
+                    "p": "e",
+                    "t2": "gules",
+                    "t3": "vert",
+                    "size": 1.5
+                }
+            ],
+            "shield": "horsehead"
+        },
+        "urban": 1140.774,
+        "rural": 10214.27799063921,
+        "burgs": 144,
+        "area": 224596,
+        "cells": 1162,
+        "neighbors": [
+            2,
+            1,
+            0,
+            6
+        ],
+        "campaigns": [
+            {
+                "name": "Vetrian Crusade",
+                "start": 1,
+                "end": 2
+            },
+            {
+                "name": "Vinivian Rebellion",
+                "start": 1,
+                "end": 8
+            },
+            {
+                "name": "Lolian Crusade",
+                "start": 93,
+                "end": 101
+            },
+            {
+                "name": "Carnean Conflict",
+                "start": 118,
+                "end": 120
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Suspicion",
+            "Suspicion",
+            "Friendly",
+            "x",
+            "Suspicion",
+            "Friendly",
+            "Neutral",
+            "Ally",
+            "Suspicion"
+        ],
+        "form": "Republic",
+        "formName": "Federation",
+        "fullName": "Federation of Citripi",
+        "provinces": [
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154,
+            155,
+            156,
+            157,
+            265,
+            266
+        ],
+        "pole": [
+            129,
+            408
+        ],
+        "alert": 0.24,
+        "military": [
+            {
+                "i": 0,
+                "a": 3571,
+                "cell": 2509,
+                "x": 119.83,
+                "y": 285.23,
+                "bx": 119.83,
+                "by": 285.23,
+                "u": {
+                    "archers": 1143,
+                    "cavalry": 724,
+                    "artillery": 24,
+                    "infantry": 1680
+                },
+                "n": 0,
+                "name": "1st (Citrilia) Regiment",
+                "state": 5,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 2725,
+                "cell": 2897,
+                "x": 321.2,
+                "y": 338.73,
+                "bx": 321.2,
+                "by": 338.73,
+                "u": {
+                    "infantry": 1221,
+                    "archers": 731,
+                    "cavalry": 756,
+                    "artillery": 17
+                },
+                "n": 0,
+                "name": "2nd (Cicalfenia) Regiment",
+                "state": 5,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 2103,
+                "cell": 3779,
+                "x": 224.34,
+                "y": 509.4,
+                "bx": 224.34,
+                "by": 509.4,
+                "u": {
+                    "infantry": 1005,
+                    "cavalry": 404,
+                    "artillery": 16,
+                    "archers": 678
+                },
+                "n": 0,
+                "name": "3rd (Rocciano) Regiment",
+                "state": 5,
+                "icon": "⚔️"
+            },
+            {
+                "i": 3,
+                "a": 914,
+                "cell": 1560,
+                "x": 725.93,
+                "y": 177.93,
+                "bx": 725.93,
+                "by": 177.93,
+                "u": {
+                    "infantry": 312,
+                    "cavalry": 422,
+                    "archers": 176,
+                    "artillery": 4
+                },
+                "n": 0,
+                "name": "4th (Paphyrope) Regiment",
+                "state": 5,
+                "icon": "🐴"
+            },
+            {
+                "i": 4,
+                "a": 482,
+                "cell": 24,
+                "x": 826.88,
+                "y": 1.99,
+                "bx": 826.88,
+                "by": 1.99,
+                "u": {
+                    "infantry": 142,
+                    "archers": 76,
+                    "cavalry": 264
+                },
+                "n": 0,
+                "name": "5th (Kales) Regiment",
+                "state": 5,
+                "icon": "🐴"
+            },
+            {
+                "i": 5,
+                "a": 39,
+                "cell": 1575,
+                "x": 942.7,
+                "y": 180.25,
+                "bx": 942.7,
+                "by": 180.25,
+                "u": {
+                    "infantry": 7,
+                    "cavalry": 29,
+                    "archers": 3
+                },
+                "n": 0,
+                "name": "6th (Pidauros) Regiment",
+                "state": 5,
+                "icon": "🐴"
+            },
+            {
+                "i": 6,
+                "a": 3,
+                "cell": 2509,
+                "x": 127.09,
+                "y": 269.6,
+                "bx": 127.09,
+                "by": 269.6,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 5,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 6,
+        "color": "#ffd92f",
+        "name": "Vinivia",
+        "expansionism": 3.6,
+        "capital": 6,
+        "type": "Generic",
+        "center": 4333,
+        "culture": 3,
+        "coa": {
+            "t1": "vert",
+            "charges": [
+                {
+                    "charge": "mulletFaceted",
+                    "t": "argent",
+                    "p": "jln",
+                    "size": 0.7
+                }
+            ],
+            "shield": "horsehead"
+        },
+        "urban": 122.95699999999998,
+        "rural": 1312.1548766493797,
+        "burgs": 12,
+        "area": 45035,
+        "cells": 217,
+        "neighbors": [
+            5,
+            0,
+            1,
+            7
+        ],
+        "campaigns": [
+            {
+                "name": "Citripian Campaign",
+                "start": 1,
+                "end": 2
+            },
+            {
+                "name": "Arlusan War",
+                "start": 1,
+                "end": 7
+            },
+            {
+                "name": "Boskirkian Crusade",
+                "start": 30,
+                "end": 31
+            },
+            {
+                "name": "Lolian Conflict",
+                "start": 118,
+                "end": 119
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Vassal",
+            "Suspicion",
+            "Enemy",
+            "Ally",
+            "Suspicion",
+            "x",
+            "Enemy",
+            "Friendly",
+            "Rival",
+            "Suspicion"
+        ],
+        "form": "Monarchy",
+        "formName": "Grand Duchy",
+        "fullName": "Grand Duchy of Vinivia",
+        "provinces": [
+            158,
+            159,
+            160,
+            161,
+            162,
+            267
+        ],
+        "pole": [
+            162,
+            637
+        ],
+        "alert": 3.04,
+        "military": [
+            {
+                "i": 0,
+                "a": 5901,
+                "cell": 4212,
+                "x": 222.31,
+                "y": 608.23,
+                "bx": 222.31,
+                "by": 608.23,
+                "u": {
+                    "archers": 1842,
+                    "cavalry": 1298,
+                    "infantry": 2732,
+                    "artillery": 29
+                },
+                "n": 0,
+                "name": "1st (Citrino) Regiment",
+                "state": 6,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 3440,
+                "cell": 3961,
+                "x": 176.04,
+                "y": 552.84,
+                "bx": 176.04,
+                "by": 552.84,
+                "u": {
+                    "archers": 1487,
+                    "cavalry": 393,
+                    "artillery": 36,
+                    "infantry": 1524
+                },
+                "n": 0,
+                "name": "2nd (Sontaro) Regiment",
+                "state": 6,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 3156,
+                "cell": 4272,
+                "x": 192.82,
+                "y": 629.94,
+                "bx": 192.82,
+                "by": 629.94,
+                "u": {
+                    "archers": 1442,
+                    "cavalry": 380,
+                    "infantry": 1314,
+                    "artillery": 20
+                },
+                "n": 0,
+                "name": "3rd (Citrino) Regiment",
+                "state": 6,
+                "icon": "🏹"
+            },
+            {
+                "i": 3,
+                "a": 3103,
+                "cell": 4763,
+                "x": 153.48,
+                "y": 726.87,
+                "bx": 153.48,
+                "by": 726.87,
+                "u": {
+                    "archers": 1465,
+                    "cavalry": 296,
+                    "infantry": 1337,
+                    "artillery": 5
+                },
+                "n": 0,
+                "name": "4th (Vignicallo) Regiment",
+                "state": 6,
+                "icon": "🏹"
+            },
+            {
+                "i": 4,
+                "a": 2460,
+                "cell": 4086,
+                "x": 184.35,
+                "y": 574.57,
+                "bx": 184.35,
+                "by": 574.57,
+                "u": {
+                    "archers": 1079,
+                    "cavalry": 282,
+                    "infantry": 1073,
+                    "artillery": 26
+                },
+                "n": 0,
+                "name": "5th (Sontaro) Regiment",
+                "state": 6,
+                "icon": "🏹"
+            }
+        ]
+    },
+    {
+        "i": 7,
+        "color": "#eaa089",
+        "name": "Boskirkia",
+        "expansionism": 2.4,
+        "capital": 7,
+        "type": "Naval",
+        "center": 7534,
+        "culture": 9,
+        "coa": {
+            "t1": "vert",
+            "division": {
+                "division": "perPale",
+                "t": "argent",
+                "line": "straight"
+            },
+            "charges": [
+                {
+                    "charge": "escallop",
+                    "t": "or",
+                    "p": "p",
+                    "size": 0.7
+                },
+                {
+                    "charge": "chain",
+                    "t": "gules",
+                    "p": "q",
+                    "size": 0.7
+                }
+            ],
+            "shield": "wedged"
+        },
+        "urban": 523.7790000000001,
+        "rural": 3961.6756696105003,
+        "burgs": 67,
+        "area": 76767,
+        "cells": 417,
+        "neighbors": [
+            0,
+            6,
+            1
+        ],
+        "campaigns": [
+            {
+                "name": "Hitch War",
+                "start": 15,
+                "end": 25
+            },
+            {
+                "name": "Vinivian War",
+                "start": 21,
+                "end": 22
+            },
+            {
+                "name": "Rothtonese War",
+                "start": 60,
+                "end": 61
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Enemy",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Friendly",
+            "Enemy",
+            "x",
+            "Neutral",
+            "Friendly",
+            "Friendly"
+        ],
+        "form": "Union",
+        "formName": "Union",
+        "fullName": "Boskirkian Union",
+        "provinces": [
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            268,
+            269,
+            270
+        ],
+        "pole": [
+            53,
+            1021
+        ],
+        "alert": 2.58,
+        "military": [
+            {
+                "i": 0,
+                "a": 4676,
+                "cell": 6366,
+                "x": 4.63,
+                "y": 944.44,
+                "bx": 4.63,
+                "by": 944.44,
+                "u": {
+                    "archers": 2619,
+                    "cavalry": 138,
+                    "artillery": 54,
+                    "infantry": 1865
+                },
+                "n": 0,
+                "name": "1st (Dodbridgia) Regiment",
+                "state": 7,
+                "icon": "🏹"
+            },
+            {
+                "i": 1,
+                "a": 4624,
+                "cell": 7264,
+                "x": 547.16,
+                "y": 1023.64,
+                "bx": 547.16,
+                "by": 1023.64,
+                "u": {
+                    "infantry": 2175,
+                    "artillery": 76,
+                    "archers": 2070,
+                    "cavalry": 303
+                },
+                "n": 0,
+                "name": "2nd (Torkwarkia) Regiment",
+                "state": 7,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 4130,
+                "cell": 6756,
+                "x": 266.55,
+                "y": 987.18,
+                "bx": 266.55,
+                "by": 987.18,
+                "u": {
+                    "infantry": 1992,
+                    "cavalry": 415,
+                    "archers": 1645,
+                    "artillery": 78
+                },
+                "n": 0,
+                "name": "3rd (Sholine) Regiment",
+                "state": 7,
+                "icon": "⚔️"
+            },
+            {
+                "i": 3,
+                "a": 2905,
+                "cell": 7682,
+                "x": 155.55,
+                "y": 1071,
+                "bx": 155.55,
+                "by": 1071,
+                "u": {
+                    "archers": 1416,
+                    "artillery": 42,
+                    "cavalry": 153,
+                    "infantry": 1294
+                },
+                "n": 0,
+                "name": "4th (Soreterster) Regiment",
+                "state": 7,
+                "icon": "🏹"
+            },
+            {
+                "i": 4,
+                "a": 2577,
+                "cell": 7096,
+                "x": 518.79,
+                "y": 1012.93,
+                "bx": 518.79,
+                "by": 1012.93,
+                "u": {
+                    "archers": 1126,
+                    "cavalry": 206,
+                    "infantry": 1207,
+                    "artillery": 38
+                },
+                "n": 0,
+                "name": "5th (Searetonley) Regiment",
+                "state": 7,
+                "icon": "⚔️"
+            },
+            {
+                "i": 5,
+                "a": 2562,
+                "cell": 7534,
+                "x": 12.45,
+                "y": 1054.79,
+                "bx": 12.45,
+                "by": 1054.79,
+                "u": {
+                    "archers": 1439,
+                    "artillery": 46,
+                    "cavalry": 71,
+                    "infantry": 1006
+                },
+                "n": 0,
+                "name": "6th (Miton) Regiment",
+                "state": 7,
+                "icon": "🏹"
+            },
+            {
+                "i": 6,
+                "a": 2418,
+                "cell": 7693,
+                "x": 302.57,
+                "y": 1071,
+                "bx": 302.57,
+                "by": 1071,
+                "u": {
+                    "infantry": 1133,
+                    "cavalry": 211,
+                    "artillery": 50,
+                    "archers": 1024
+                },
+                "n": 0,
+                "name": "7th (Widedonces) Regiment",
+                "state": 7,
+                "icon": "⚔️"
+            },
+            {
+                "i": 7,
+                "a": 2241,
+                "cell": 6884,
+                "x": 90.46,
+                "y": 995.55,
+                "bx": 90.46,
+                "by": 995.55,
+                "u": {
+                    "archers": 1260,
+                    "cavalry": 60,
+                    "artillery": 43,
+                    "infantry": 878
+                },
+                "n": 0,
+                "name": "8th (Anmouth) Regiment",
+                "state": 7,
+                "icon": "🏹"
+            },
+            {
+                "i": 8,
+                "a": 1440,
+                "cell": 7419,
+                "x": 461,
+                "y": 1039,
+                "bx": 461,
+                "by": 1039,
+                "u": {
+                    "archers": 727,
+                    "cavalry": 62,
+                    "artillery": 38,
+                    "infantry": 613
+                },
+                "n": 0,
+                "name": "9th (Miltashbrid) Regiment",
+                "state": 7,
+                "icon": "🏹"
+            },
+            {
+                "i": 9,
+                "a": 1345,
+                "cell": 6159,
+                "x": 320.57,
+                "y": 912.08,
+                "bx": 320.57,
+                "by": 912.08,
+                "u": {
+                    "infantry": 504,
+                    "cavalry": 418,
+                    "archers": 417,
+                    "artillery": 6
+                },
+                "n": 0,
+                "name": "10th (Briarres) Regiment",
+                "state": 7,
+                "icon": "⚔️"
+            },
+            {
+                "i": 10,
+                "a": 716,
+                "cell": 7685,
+                "x": 198.63,
+                "y": 1067.59,
+                "bx": 198.63,
+                "by": 1067.59,
+                "u": {
+                    "archers": 381,
+                    "cavalry": 30,
+                    "infantry": 305
+                },
+                "n": 0,
+                "name": "11th (Soreterster) Regiment",
+                "state": 7,
+                "icon": "🏹"
+            },
+            {
+                "i": 11,
+                "a": 14,
+                "cell": 7554,
+                "x": 263.28,
+                "y": 1044.99,
+                "bx": 263.28,
+                "by": 1044.99,
+                "u": {
+                    "fleet": 14
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 7,
+                "icon": "🌊"
+            },
+            {
+                "i": 12,
+                "a": 13,
+                "cell": 6765,
+                "x": 371.5,
+                "y": 998.4,
+                "bx": 371.5,
+                "by": 998.4,
+                "u": {
+                    "fleet": 13
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 7,
+                "icon": "🌊"
+            },
+            {
+                "i": 13,
+                "a": 13,
+                "cell": 7419,
+                "x": 464.82,
+                "y": 1029.16,
+                "bx": 464.82,
+                "by": 1029.16,
+                "u": {
+                    "fleet": 13
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 7,
+                "icon": "🌊"
+            },
+            {
+                "i": 14,
+                "a": 12,
+                "cell": 7101,
+                "x": 600.49,
+                "y": 1022.29,
+                "bx": 600.49,
+                "by": 1022.29,
+                "u": {
+                    "fleet": 12
+                },
+                "n": 1,
+                "name": "4th Fleet",
+                "state": 7,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 8,
+        "color": "#ff8b7f",
+        "name": "Olalamaa",
+        "expansionism": 4.2,
+        "capital": 8,
+        "type": "Nomadic",
+        "center": 7186,
+        "culture": 1,
+        "coa": {
+            "t1": "argent",
+            "ordinaries": [
+                {
+                    "ordinary": "bend",
+                    "t": "azure",
+                    "line": "straight"
+                }
+            ],
+            "charges": [
+                {
+                    "charge": "earOfWheat",
+                    "t": "argent",
+                    "p": "e",
+                    "size": 0.7
+                }
+            ],
+            "shield": "pavise"
+        },
+        "urban": 355.82500000000005,
+        "rural": 4456.24779856205,
+        "burgs": 39,
+        "area": 120415,
+        "cells": 594,
+        "neighbors": [
+            10,
+            3,
+            4,
+            9
+        ],
+        "campaigns": [
+            {
+                "name": "Detivis War",
+                "start": 1,
+                "end": 11
+            },
+            {
+                "name": "Oberischian Invasion",
+                "start": 1,
+                "end": 2
+            },
+            {
+                "name": "Kakuhian Conflict",
+                "start": 1,
+                "end": 2
+            },
+            {
+                "name": "Haumaan Campaign",
+                "start": 79,
+                "end": 82
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "Rival",
+            "Neutral",
+            "Friendly",
+            "Neutral",
+            "x",
+            "Rival",
+            "Ally"
+        ],
+        "form": "Theocracy",
+        "formName": "Theocracy",
+        "fullName": "Olalamaan Theocracy",
+        "provinces": [
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            202,
+            271
+        ],
+        "pole": [
+            1797,
+            935
+        ],
+        "alert": 1.15,
+        "military": [
+            {
+                "i": 0,
+                "a": 4003,
+                "cell": 5799,
+                "x": 1734.05,
+                "y": 857.33,
+                "bx": 1734.05,
+                "by": 857.33,
+                "u": {
+                    "cavalry": 2964,
+                    "artillery": 10,
+                    "infantry": 429,
+                    "archers": 600
+                },
+                "n": 0,
+                "name": "1st (Mauvaa) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 1,
+                "a": 3869,
+                "cell": 5810,
+                "x": 1887.46,
+                "y": 859.52,
+                "bx": 1887.46,
+                "by": 859.52,
+                "u": {
+                    "cavalry": 3015,
+                    "infantry": 373,
+                    "archers": 476,
+                    "artillery": 5
+                },
+                "n": 0,
+                "name": "2nd (Lahjalogemi) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 2,
+                "a": 3765,
+                "cell": 7186,
+                "x": 1651.9,
+                "y": 1020.1,
+                "bx": 1651.9,
+                "by": 1020.1,
+                "u": {
+                    "archers": 673,
+                    "cavalry": 2609,
+                    "artillery": 18,
+                    "infantry": 465
+                },
+                "n": 0,
+                "name": "3rd (Antsmahia) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 3,
+                "a": 3738,
+                "cell": 5048,
+                "x": 1801.53,
+                "y": 757.93,
+                "bx": 1801.53,
+                "by": 757.93,
+                "u": {
+                    "cavalry": 2697,
+                    "infantry": 407,
+                    "archers": 630,
+                    "artillery": 4
+                },
+                "n": 0,
+                "name": "4th (Pesecheren) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 4,
+                "a": 2998,
+                "cell": 5793,
+                "x": 1645.82,
+                "y": 849.57,
+                "bx": 1645.82,
+                "by": 849.57,
+                "u": {
+                    "cavalry": 1638,
+                    "archers": 752,
+                    "infantry": 596,
+                    "artillery": 12
+                },
+                "n": 0,
+                "name": "5th (Mubech) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 5,
+                "a": 2814,
+                "cell": 7671,
+                "x": 1915.99,
+                "y": 1059.71,
+                "bx": 1915.99,
+                "by": 1059.71,
+                "u": {
+                    "cavalry": 2571,
+                    "infantry": 75,
+                    "archers": 168
+                },
+                "n": 0,
+                "name": "6th (Same) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 6,
+                "a": 2811,
+                "cell": 6589,
+                "x": 1694.14,
+                "y": 947.9,
+                "bx": 1694.14,
+                "by": 947.9,
+                "u": {
+                    "cavalry": 2237,
+                    "archers": 379,
+                    "infantry": 192,
+                    "artillery": 3
+                },
+                "n": 0,
+                "name": "7th (Piolia) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 7,
+                "a": 2650,
+                "cell": 7524,
+                "x": 1785.73,
+                "y": 1041.07,
+                "bx": 1785.73,
+                "by": 1041.07,
+                "u": {
+                    "cavalry": 2425,
+                    "infantry": 68,
+                    "archers": 157
+                },
+                "n": 0,
+                "name": "8th (Antsmahia) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 8,
+                "a": 2610,
+                "cell": 5708,
+                "x": 1915.35,
+                "y": 832.8,
+                "bx": 1915.35,
+                "by": 832.8,
+                "u": {
+                    "cavalry": 1888,
+                    "archers": 388,
+                    "infantry": 327,
+                    "artillery": 7
+                },
+                "n": 0,
+                "name": "9th (Suori) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 9,
+                "a": 2328,
+                "cell": 6236,
+                "x": 1708.87,
+                "y": 906.6,
+                "bx": 1708.87,
+                "by": 906.6,
+                "u": {
+                    "archers": 598,
+                    "cavalry": 1372,
+                    "artillery": 32,
+                    "infantry": 326
+                },
+                "n": 0,
+                "name": "10th (Kaljan) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 10,
+                "a": 2133,
+                "cell": 6716,
+                "x": 1645.12,
+                "y": 973.35,
+                "bx": 1645.12,
+                "by": 973.35,
+                "u": {
+                    "cavalry": 1777,
+                    "infantry": 158,
+                    "archers": 197,
+                    "artillery": 1
+                },
+                "n": 0,
+                "name": "11th (Antsmahia) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 11,
+                "a": 339,
+                "cell": 6365,
+                "x": 1918.24,
+                "y": 924.52,
+                "bx": 1918.24,
+                "by": 924.52,
+                "u": {
+                    "cavalry": 184,
+                    "archers": 72,
+                    "infantry": 83
+                },
+                "n": 0,
+                "name": "12th (Lahjalogemi) Regiment",
+                "state": 8,
+                "icon": "🐴"
+            },
+            {
+                "i": 12,
+                "a": 4,
+                "cell": 7186,
+                "x": 1642.77,
+                "y": 1026.73,
+                "bx": 1642.77,
+                "by": 1026.73,
+                "u": {
+                    "fleet": 4
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 8,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 9,
+        "color": "#88b1e6",
+        "name": "Haumaa",
+        "expansionism": 3.5,
+        "capital": 9,
+        "type": "Nomadic",
+        "center": 5782,
+        "culture": 1,
+        "coa": {
+            "t1": "argent",
+            "charges": [
+                {
+                    "charge": "crown",
+                    "t": "sable",
+                    "p": "e",
+                    "t2": "vert",
+                    "size": 1.5
+                }
+            ],
+            "shield": "pavise"
+        },
+        "urban": 789.972,
+        "rural": 5146.571249186993,
+        "burgs": 86,
+        "area": 111996,
+        "cells": 627,
+        "neighbors": [
+            1,
+            0,
+            8
+        ],
+        "campaigns": [
+            {
+                "name": "Hinparan Crusade",
+                "start": 49,
+                "end": 54
+            },
+            {
+                "name": "Estarakian Campaign",
+                "start": 115,
+                "end": 123
+            },
+            {
+                "name": "Ruokepan War",
+                "start": 118,
+                "end": 123
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Rival",
+            "Neutral",
+            "Neutral",
+            "Ally",
+            "Ally",
+            "Rival",
+            "Friendly",
+            "Rival",
+            "x",
+            "Neutral"
+        ],
+        "form": "Monarchy",
+        "formName": "Principality",
+        "fullName": "Principality of Haumaa",
+        "provinces": [
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213,
+            214,
+            215,
+            216,
+            217,
+            218,
+            219,
+            220,
+            221,
+            222,
+            223,
+            224,
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            234,
+            272,
+            273
+        ],
+        "pole": [
+            1323,
+            886
+        ],
+        "alert": 1.27,
+        "military": [
+            {
+                "i": 0,
+                "a": 4370,
+                "cell": 5564,
+                "x": 1388.92,
+                "y": 829.56,
+                "bx": 1388.92,
+                "by": 829.56,
+                "u": {
+                    "cavalry": 1713,
+                    "archers": 1580,
+                    "infantry": 1051,
+                    "artillery": 26
+                },
+                "n": 0,
+                "name": "1st (Aasesi) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 1,
+                "a": 4107,
+                "cell": 6315,
+                "x": 1193.2,
+                "y": 922.81,
+                "bx": 1193.2,
+                "by": 922.81,
+                "u": {
+                    "cavalry": 1822,
+                    "archers": 1409,
+                    "infantry": 842,
+                    "artillery": 34
+                },
+                "n": 0,
+                "name": "2nd (Kaaki) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 2,
+                "a": 3856,
+                "cell": 6444,
+                "x": 1394.81,
+                "y": 939.18,
+                "bx": 1394.81,
+                "by": 939.18,
+                "u": {
+                    "cavalry": 3154,
+                    "infantry": 284,
+                    "archers": 408,
+                    "artillery": 10
+                },
+                "n": 0,
+                "name": "3rd (Jung) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 3,
+                "a": 3493,
+                "cell": 6098,
+                "x": 1330.83,
+                "y": 893.36,
+                "bx": 1330.83,
+                "by": 893.36,
+                "u": {
+                    "cavalry": 2538,
+                    "archers": 495,
+                    "infantry": 454,
+                    "artillery": 6
+                },
+                "n": 0,
+                "name": "4th (Aasesi) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 4,
+                "a": 3105,
+                "cell": 6547,
+                "x": 1098.37,
+                "y": 956.73,
+                "bx": 1098.37,
+                "by": 956.73,
+                "u": {
+                    "archers": 952,
+                    "cavalry": 1401,
+                    "artillery": 42,
+                    "infantry": 710
+                },
+                "n": 0,
+                "name": "5th (Hylinmaa) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 5,
+                "a": 3062,
+                "cell": 5881,
+                "x": 1308.79,
+                "y": 873.18,
+                "bx": 1308.79,
+                "by": 873.18,
+                "u": {
+                    "cavalry": 945,
+                    "artillery": 18,
+                    "infantry": 751,
+                    "archers": 1348
+                },
+                "n": 0,
+                "name": "6th (Aasesi) Regiment",
+                "state": 9,
+                "icon": "🏹"
+            },
+            {
+                "i": 6,
+                "a": 3045,
+                "cell": 6427,
+                "x": 1157.59,
+                "y": 934.04,
+                "bx": 1157.59,
+                "by": 934.04,
+                "u": {
+                    "cavalry": 713,
+                    "archers": 1543,
+                    "infantry": 755,
+                    "artillery": 34
+                },
+                "n": 0,
+                "name": "7th (Hinkinenki) Regiment",
+                "state": 9,
+                "icon": "🏹"
+            },
+            {
+                "i": 7,
+                "a": 2724,
+                "cell": 7333,
+                "x": 1486.48,
+                "y": 1028.79,
+                "bx": 1486.48,
+                "by": 1028.79,
+                "u": {
+                    "cavalry": 1898,
+                    "infantry": 377,
+                    "archers": 436,
+                    "artillery": 13
+                },
+                "n": 0,
+                "name": "8th (Saajaa) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 8,
+                "a": 2428,
+                "cell": 5782,
+                "x": 1429.7,
+                "y": 860.4,
+                "bx": 1429.7,
+                "by": 860.4,
+                "u": {
+                    "archers": 496,
+                    "cavalry": 1534,
+                    "artillery": 16,
+                    "infantry": 382
+                },
+                "n": 0,
+                "name": "9th (Seila) Regiment",
+                "state": 9,
+                "icon": "👑"
+            },
+            {
+                "i": 9,
+                "a": 2208,
+                "cell": 6989,
+                "x": 1316.22,
+                "y": 1000.48,
+                "bx": 1316.22,
+                "by": 1000.48,
+                "u": {
+                    "cavalry": 1601,
+                    "infantry": 287,
+                    "archers": 314,
+                    "artillery": 6
+                },
+                "n": 0,
+                "name": "10th (Saslavariky) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 10,
+                "a": 1706,
+                "cell": 7466,
+                "x": 1226.65,
+                "y": 1034.38,
+                "bx": 1226.65,
+                "by": 1034.38,
+                "u": {
+                    "cavalry": 987,
+                    "infantry": 207,
+                    "archers": 495,
+                    "artillery": 17
+                },
+                "n": 0,
+                "name": "11th (Hinkinenki) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 11,
+                "a": 849,
+                "cell": 7750,
+                "x": 1295.27,
+                "y": 1065.64,
+                "bx": 1295.27,
+                "by": 1065.64,
+                "u": {
+                    "cavalry": 760,
+                    "artillery": 1,
+                    "infantry": 26,
+                    "archers": 62
+                },
+                "n": 0,
+                "name": "12th (Ylapari) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 12,
+                "a": 777,
+                "cell": 7759,
+                "x": 1421.94,
+                "y": 1071,
+                "bx": 1421.94,
+                "by": 1071,
+                "u": {
+                    "cavalry": 701,
+                    "infantry": 23,
+                    "archers": 53
+                },
+                "n": 0,
+                "name": "13th (Ylapari) Regiment",
+                "state": 9,
+                "icon": "🐴"
+            },
+            {
+                "i": 13,
+                "a": 8,
+                "cell": 6547,
+                "x": 1110.57,
+                "y": 952.41,
+                "bx": 1110.57,
+                "by": 952.41,
+                "u": {
+                    "fleet": 8
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 9,
+                "icon": "🌊"
+            },
+            {
+                "i": 14,
+                "a": 6,
+                "cell": 5782,
+                "x": 1441.5,
+                "y": 861.4,
+                "bx": 1441.5,
+                "by": 861.4,
+                "u": {
+                    "fleet": 6
+                },
+                "n": 1,
+                "name": "2nd Fleet",
+                "state": 9,
+                "icon": "🌊"
+            },
+            {
+                "i": 15,
+                "a": 2,
+                "cell": 7750,
+                "x": 1305.68,
+                "y": 1056.22,
+                "bx": 1305.68,
+                "by": 1056.22,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "3rd Fleet",
+                "state": 9,
+                "icon": "🌊"
+            },
+            {
+                "i": 16,
+                "a": 2,
+                "cell": 7318,
+                "x": 1377.46,
+                "y": 1033.66,
+                "bx": 1377.46,
+                "by": 1033.66,
+                "u": {
+                    "fleet": 2
+                },
+                "n": 1,
+                "name": "4th Fleet",
+                "state": 9,
+                "icon": "🌊"
+            }
+        ]
+    },
+    {
+        "i": 10,
+        "color": "#f788d5",
+        "name": "Detivis",
+        "expansionism": 3.7,
+        "capital": 10,
+        "type": "Generic",
+        "center": 2960,
+        "culture": 8,
+        "coa": {
+            "t1": "argent",
+            "division": {
+                "division": "perPale",
+                "t": "gules",
+                "line": "straight"
+            },
+            "charges": [
+                {
+                    "charge": "sextifoil",
+                    "t": "sable",
+                    "p": "p",
+                    "size": 0.7
+                },
+                {
+                    "charge": "helmet",
+                    "t": "or",
+                    "p": "q",
+                    "size": 0.7,
+                    "sinister": 1
+                }
+            ],
+            "shield": "roman"
+        },
+        "urban": 363.98699999999997,
+        "rural": 2590.6124877929688,
+        "burgs": 40,
+        "area": 43494,
+        "cells": 223,
+        "neighbors": [
+            2,
+            3,
+            8
+        ],
+        "campaigns": [
+            {
+                "name": "Sanian War",
+                "start": 1,
+                "end": 4
+            },
+            {
+                "name": "Adnictan Expedition",
+                "start": 118,
+                "end": 123
+            },
+            {
+                "name": "Olalamaan Rebellion",
+                "start": 118,
+                "end": 123
+            }
+        ],
+        "diplomacy": [
+            "x",
+            "Suspicion",
+            "Vassal",
+            "Friendly",
+            "Friendly",
+            "Suspicion",
+            "Suspicion",
+            "Friendly",
+            "Ally",
+            "Neutral",
+            "x"
+        ],
+        "form": "Republic",
+        "formName": "Republic",
+        "fullName": "Republic of Detivis",
+        "provinces": [
+            235,
+            236,
+            237,
+            238,
+            239,
+            240,
+            241,
+            242,
+            243,
+            244,
+            245,
+            246,
+            247,
+            248,
+            249
+        ],
+        "pole": [
+            1833,
+            366
+        ],
+        "alert": 0.4,
+        "military": [
+            {
+                "i": 0,
+                "a": 2033,
+                "cell": 2600,
+                "x": 1895.7,
+                "y": 289.4,
+                "bx": 1895.7,
+                "by": 289.4,
+                "u": {
+                    "archers": 644,
+                    "cavalry": 512,
+                    "artillery": 15,
+                    "infantry": 862
+                },
+                "n": 0,
+                "name": "1st (Naista) Regiment",
+                "state": 10,
+                "icon": "⚔️"
+            },
+            {
+                "i": 1,
+                "a": 1193,
+                "cell": 2960,
+                "x": 1869.32,
+                "y": 338.78,
+                "bx": 1869.32,
+                "by": 338.78,
+                "u": {
+                    "archers": 349,
+                    "cavalry": 283,
+                    "artillery": 9,
+                    "infantry": 552
+                },
+                "n": 0,
+                "name": "2nd (Brimiria) Regiment",
+                "state": 10,
+                "icon": "⚔️"
+            },
+            {
+                "i": 2,
+                "a": 3,
+                "cell": 2600,
+                "x": 1898.69,
+                "y": 282.42,
+                "bx": 1898.69,
+                "by": 282.42,
+                "u": {
+                    "fleet": 3
+                },
+                "n": 1,
+                "name": "1st Fleet",
+                "state": 10,
+                "icon": "🌊"
+            }
+        ]
+    }
+]

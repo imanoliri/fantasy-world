@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Analysis: Vileuland</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    </head><body>
+    <a href="../index.html" class="back-link">&larr; Back to Index</a>
+    <h1>World Analysis: Vileuland</h1>
+    <div class="card"><h2>General Statistics</h2><div class="stat-grid">
+        <div class="stat-box"><div class="stat-value">10</div><div>States</div></div>
+        <div class="stat-box"><div class="stat-value">663</div><div>Burgs</div></div>
+        <div class="stat-box"><div class="stat-value">2,045,339</div><div>Total Area</div></div>
+        <div class="stat-box"><div class="stat-value">49,566,584</div><div>Total Pop</div></div>
+    </div></div>
+    
+        <div class="card" id="biomes-section">
+            <div class="header-row">
+                <h2>Biomes</h2>
+                <div class="toggle-container">
+                    <span>Table</span>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="toggleView('biomes-section')">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Chart</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>Biome</th><th>Area</th><th>% Area</th><th>Cells</th></tr></thead>
+                    <tbody><tr><td><span class="color-box" style="background-color: #466eab"></span>Marine</td>
+                      <td>907,670</td><td>44.4%</td><td>1750</td></tr><tr><td><span class="color-box" style="background-color: #c8d68f"></span>Grassland</td>
+                      <td>290,148</td><td>14.2%</td><td>1491</td></tr><tr><td><span class="color-box" style="background-color: #29bc56"></span>Temperate deciduous forest</td>
+                      <td>270,814</td><td>13.2%</td><td>1406</td></tr><tr><td><span class="color-box" style="background-color: #409c43"></span>Temperate rainforest</td>
+                      <td>140,968</td><td>6.9%</td><td>804</td></tr><tr><td><span class="color-box" style="background-color: #d2d082"></span>Savanna</td>
+                      <td>135,488</td><td>6.6%</td><td>760</td></tr><tr><td><span class="color-box" style="background-color: #b6d95d"></span>Tropical seasonal forest</td>
+                      <td>82,088</td><td>4.0%</td><td>487</td></tr><tr><td><span class="color-box" style="background-color: #4b6b32"></span>Taiga</td>
+                      <td>65,620</td><td>3.2%</td><td>308</td></tr><tr><td><span class="color-box" style="background-color: #d5e7eb"></span>Glacier</td>
+                      <td>56,638</td><td>2.8%</td><td>272</td></tr><tr><td><span class="color-box" style="background-color: #0b9131"></span>Wetland</td>
+                      <td>34,191</td><td>1.7%</td><td>188</td></tr><tr><td><span class="color-box" style="background-color: #96784b"></span>Tundra</td>
+                      <td>23,967</td><td>1.2%</td><td>114</td></tr><tr><td><span class="color-box" style="background-color: #fbe79f"></span>Hot desert</td>
+                      <td>17,281</td><td>0.8%</td><td>86</td></tr><tr><td><span class="color-box" style="background-color: #7dcb35"></span>Tropical rainforest</td>
+                      <td>11,295</td><td>0.6%</td><td>84</td></tr><tr><td><span class="color-box" style="background-color: #b5b887"></span>Cold desert</td>
+                      <td>9,171</td><td>0.4%</td><td>44</td></tr></tbody>
+                </table>
+            </div>
+            <div class="chart-container"><canvas id="biomesChart"></canvas></div>
+        </div>
+        <div class="card" id="states-section">
+            <div class="header-row">
+                <h2>States</h2>
+                <div class="toggle-container">
+                    <span>Table</span>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="toggleView('states-section')">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Chart</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>State</th><th>Area</th><th>Population</th><th>Burgs</th></tr></thead>
+                    <tbody><tr><td><span class="color-box" style="background-color: #a6d854"></span>Citripi</td>
+                      <td>224,596</td><td>10,214,279</td><td>144</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Adnicto</td>
+                      <td>199,624</td><td>7,167,665</td><td>94</td></tr><tr><td><span class="color-box" style="background-color: #8da0cb"></span>Oberischia</td>
+                      <td>107,300</td><td>7,025,425</td><td>101</td></tr><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Lolia</td>
+                      <td>130,321</td><td>6,649,017</td><td>70</td></tr><tr><td><span class="color-box" style="background-color: #88b1e6"></span>Haumaa</td>
+                      <td>111,996</td><td>5,146,570</td><td>86</td></tr><tr><td><span class="color-box" style="background-color: #ff8b7f"></span>Olalamaa</td>
+                      <td>120,415</td><td>4,456,247</td><td>39</td></tr><tr><td><span class="color-box" style="background-color: #eaa089"></span>Boskirkia</td>
+                      <td>76,767</td><td>3,961,676</td><td>67</td></tr><tr><td><span class="color-box" style="background-color: #f788d5"></span>Detivis</td>
+                      <td>43,494</td><td>2,590,612</td><td>40</td></tr><tr><td><span class="color-box" style="background-color: #ffd92f"></span>Vinivia</td>
+                      <td>45,035</td><td>1,312,154</td><td>12</td></tr><tr><td><span class="color-box" style="background-color: #e78ac3"></span>Kakuhia</td>
+                      <td>18,268</td><td>930,735</td><td>10</td></tr></tbody>
+                </table>
+            </div>
+            <div class="chart-container"><canvas id="statesChart"></canvas></div>
+        </div>
+        <div class="card" id="burgs-section">
+            <div class="header-row">
+                <h2>Largest Burgs</h2>
+                <div class="toggle-container">
+                    <span>Table</span>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="toggleView('burgs-section')">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Chart</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>Name</th><th>Population</th><th>State</th><th>Type</th></tr></thead>
+                    <tbody><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Fronceira</td><td>62,272,000</td><td>Lolia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Sgurgo</td><td>49,868,000</td><td>Citripi</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #ff8b7f"></span>Kaljan</td><td>48,398,000</td><td>Olalamaa</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Hyecena</td><td>42,399,000</td><td>Lolia</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #88b1e6"></span>Kosjarkaus</td><td>41,746,000</td><td>Haumaa</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #ff8b7f"></span>Bjorata</td><td>35,567,000</td><td>Olalamaa</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #88b1e6"></span>Muriti</td><td>31,543,000</td><td>Haumaa</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #eaa089"></span>Anmouth</td><td>30,152,000</td><td>Boskirkia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #88b1e6"></span>Seila</td><td>29,553,000</td><td>Haumaa</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #8da0cb"></span>Stresk</td><td>28,231,000</td><td>Oberischia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #f788d5"></span>Naista</td><td>28,119,000</td><td>Detivis</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Linsium</td><td>27,963,000</td><td>Adnicto</td><td>Highland</td></tr><tr><td><span class="color-box" style="background-color: #8da0cb"></span>Sulzheim</td><td>27,620,000</td><td>Oberischia</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Binium</td><td>27,190,000</td><td>Adnicto</td><td>Lake</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Preventum</td><td>26,366,000</td><td>Adnicto</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #f788d5"></span>Pomih</td><td>26,346,000</td><td>Detivis</td><td>Naval</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Magna</td><td>26,097,000</td><td>Citripi</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Matesmouth</td><td>25,334,000</td><td>Lolia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Fiugnicanel</td><td>25,095,000</td><td>Citripi</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #ffd92f"></span>Sontaro</td><td>24,924,000</td><td>Vinivia</td><td>Generic</td></tr></tbody>
+                </table>
+            </div>
+            <div class="chart-container"><canvas id="burgsChart"></canvas></div>
+        </div>
+        <div class="card" id="smallest-burgs-section">
+            <div class="header-row">
+                <h2>Smallest Burgs</h2>
+                <div class="toggle-container">
+                    <span>Table</span>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="toggleView('smallest-burgs-section')">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Chart</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>Name</th><th>Population</th><th>State</th><th>Type</th></tr></thead>
+                    <tbody><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Lugrantia</td><td>781,000</td><td>Adnicto</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Hyera</td><td>791,000</td><td>Citripi</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #88b1e6"></span>Ylapari</td><td>794,000</td><td>Haumaa</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #ff8b7f"></span>Kaulakivila</td><td>836,000</td><td>Olalamaa</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Rouervauville</td><td>880,000</td><td>Lolia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #ff8b7f"></span>Same</td><td>907,000</td><td>Olalamaa</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #88b1e6"></span>Keuvelotsa</td><td>998,000</td><td>Haumaa</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #88b1e6"></span>Kolvaraki</td><td>1,016,000</td><td>Haumaa</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #8da0cb"></span>Smyrcyreum</td><td>1,021,000</td><td>Oberischia</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Ardon</td><td>1,042,000</td><td>Lolia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Thusis</td><td>1,051,000</td><td>Citripi</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Pagidauron</td><td>1,063,000</td><td>Citripi</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Coraleliba</td><td>1,085,000</td><td>Adnicto</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #66c2a5"></span>Telheniche</td><td>1,087,000</td><td>Lolia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #88b1e6"></span>Kokila</td><td>1,098,000</td><td>Haumaa</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #fc8d62"></span>Lintodugus</td><td>1,100,000</td><td>Adnicto</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #eaa089"></span>Treven</td><td>1,114,000</td><td>Boskirkia</td><td>Generic</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Totontinopo</td><td>1,154,000</td><td>Citripi</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Mubeanagne</td><td>1,155,000</td><td>Citripi</td><td>Hunting</td></tr><tr><td><span class="color-box" style="background-color: #a6d854"></span>Lizephikast</td><td>1,157,000</td><td>Citripi</td><td>Hunting</td></tr></tbody>
+                </table>
+            </div>
+            <div class="chart-container"><canvas id="smallestBurgsChart"></canvas></div>
+        </div>
+    <script>
+        function toggleView(id) { document.getElementById(id).classList.toggle('show-table'); }
+        
+        new Chart(document.getElementById('biomesChart').getContext('2d'), {
+            type: 'bar',
+            data: {"labels": ["Global Biome Distribution"], "datasets": [{"label": "Glacier", "data": [56638], "backgroundColor": "#d5e7eb", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Tundra", "data": [23967], "backgroundColor": "#96784b", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Taiga", "data": [65620], "backgroundColor": "#4b6b32", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Cold desert", "data": [9171], "backgroundColor": "#b5b887", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Temperate rainforest", "data": [140968], "backgroundColor": "#409c43", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Temperate deciduous forest", "data": [270814], "backgroundColor": "#29bc56", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Grassland", "data": [290148], "backgroundColor": "#c8d68f", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Wetland", "data": [34191], "backgroundColor": "#0b9131", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Tropical seasonal forest", "data": [82088], "backgroundColor": "#b6d95d", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Tropical rainforest", "data": [11295], "backgroundColor": "#7dcb35", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Savanna", "data": [135488], "backgroundColor": "#d2d082", "barPercentage": 0.9, "categoryPercentage": 1.0}, {"label": "Hot desert", "data": [17281], "backgroundColor": "#fbe79f", "barPercentage": 0.9, "categoryPercentage": 1.0}]},
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { 
+                    legend: { display: true, position: 'bottom' }, 
+                    title: { display: true, text: 'Biome Distribution (Cold to Warm)' } 
+                }, scales: { x: { stacked: true, display: false, max: 1137669 }, y: { stacked: true, display: false } }
+            }
+        });
+        new Chart(document.getElementById('statesChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ["Citripi", "Adnicto", "Oberischia", "Lolia", "Haumaa", "Olalamaa", "Boskirkia", "Detivis", "Vinivia", "Kakuhia"],
+                datasets: [{
+                    label: 'Population',
+                    data: [10214279.211908579, 7167665.113478899, 7025425.201356411, 6649017.302513123, 5146570.295453072, 4456247.494935989, 3961676.4978170395, 2590612.6980781555, 1312154.9955308437, 930735.2967262268],
+                    backgroundColor: ["#a6d854", "#fc8d62", "#8da0cb", "#66c2a5", "#88b1e6", "#ff8b7f", "#eaa089", "#f788d5", "#ffd92f", "#e78ac3"],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { 
+                    legend: { display: false, position: 'top' }, 
+                    title: { display: true, text: 'State Populations' } 
+                }, scales: { y: { ticks: { autoSkip: false } } }
+            }
+        });
+        new Chart(document.getElementById('burgsChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ["Fronceira", "Sgurgo", "Kaljan", "Hyecena", "Kosjarkaus", "Bjorata", "Muriti", "Anmouth", "Seila", "Stresk", "Naista", "Linsium", "Sulzheim", "Binium", "Preventum", "Pomih", "Magna", "Matesmouth", "Fiugnicanel", "Sontaro"],
+                datasets: [{
+                    label: 'Population',
+                    data: [62272000.0, 49868000.0, 48398000.0, 42399000.0, 41746000.0, 35567000.0, 31543000.0, 30152000.0, 29553000.0, 28231000.0, 28119000.0, 27963000.0, 27620000.0, 27190000.0, 26366000.0, 26346000.0, 26097000.0, 25334000.0, 25095000.0, 24924000.0],
+                    backgroundColor: ["#66c2a5", "#a6d854", "#ff8b7f", "#66c2a5", "#88b1e6", "#ff8b7f", "#88b1e6", "#eaa089", "#88b1e6", "#8da0cb", "#f788d5", "#fc8d62", "#8da0cb", "#fc8d62", "#fc8d62", "#f788d5", "#a6d854", "#66c2a5", "#a6d854", "#ffd92f"],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { 
+                    legend: { display: false, position: 'top' }, 
+                    title: { display: true, text: 'Largest Burgs' } 
+                }, scales: { y: { ticks: { autoSkip: false } } }
+            }
+        });
+        new Chart(document.getElementById('smallestBurgsChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ["Lugrantia", "Hyera", "Ylapari", "Kaulakivila", "Rouervauville", "Same", "Keuvelotsa", "Kolvaraki", "Smyrcyreum", "Ardon", "Thusis", "Pagidauron", "Coraleliba", "Telheniche", "Kokila", "Lintodugus", "Treven", "Totontinopo", "Mubeanagne", "Lizephikast"],
+                datasets: [{
+                    label: 'Population',
+                    data: [781000.0, 791000.0, 794000.0, 836000.0, 880000.0, 907000.0, 998000.0, 1016000.0, 1021000.0, 1042000.0, 1051000.0, 1063000.0, 1085000.0, 1087000.0, 1098000.0, 1100000.0, 1114000.0, 1154000.0, 1155000.0, 1157000.0],
+                    backgroundColor: ["#fc8d62", "#a6d854", "#88b1e6", "#ff8b7f", "#66c2a5", "#ff8b7f", "#88b1e6", "#88b1e6", "#8da0cb", "#66c2a5", "#a6d854", "#a6d854", "#fc8d62", "#66c2a5", "#88b1e6", "#fc8d62", "#eaa089", "#a6d854", "#a6d854", "#a6d854"],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { 
+                    legend: { display: false, position: 'top' }, 
+                    title: { display: true, text: 'Smallest Burgs' } 
+                }, scales: { y: { ticks: { autoSkip: false } } }
+            }
+        });
+    </script></body></html>

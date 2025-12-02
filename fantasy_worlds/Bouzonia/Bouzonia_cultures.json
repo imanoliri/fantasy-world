@@ -1,0 +1,151 @@
+[
+    {
+        "name": "Wildlands",
+        "i": 0,
+        "base": 1,
+        "origins": [
+            null
+        ],
+        "shield": "round"
+    },
+    {
+        "name": "Facuryles",
+        "base": 1,
+        "shield": "heater",
+        "center": 2601,
+        "i": 1,
+        "color": "#c6b9c1",
+        "type": "Generic",
+        "expansionism": 1.8,
+        "origins": [
+            0
+        ],
+        "code": "Fa"
+    },
+    {
+        "name": "Clifract",
+        "base": 1,
+        "shield": "wedged",
+        "center": 2357,
+        "i": 2,
+        "color": "#bc80bd",
+        "type": "Naval",
+        "expansionism": 3,
+        "origins": [
+            0
+        ],
+        "code": "Cl"
+    },
+    {
+        "name": "Soroughes",
+        "base": 1,
+        "shield": "swiss",
+        "center": 3123,
+        "i": 3,
+        "color": "#fdb462",
+        "type": "River",
+        "expansionism": 1.2,
+        "origins": [
+            0
+        ],
+        "code": "So"
+    },
+    {
+        "name": "Wigham",
+        "base": 1,
+        "shield": "oldFrench",
+        "center": 3336,
+        "i": 4,
+        "color": "#fccde5",
+        "type": "Naval",
+        "expansionism": 4,
+        "origins": [
+            0
+        ],
+        "code": "Wi"
+    },
+    {
+        "name": "Haling",
+        "base": 1,
+        "shield": "swiss",
+        "center": 1458,
+        "i": 5,
+        "color": "#fb8072",
+        "type": "Generic",
+        "expansionism": 1.7,
+        "origins": [
+            0
+        ],
+        "code": "Ha"
+    },
+    {
+        "name": "Harwick",
+        "base": 1,
+        "shield": "spanish",
+        "center": 5591,
+        "i": 6,
+        "color": "#b3de69",
+        "type": "Generic",
+        "expansionism": 1.3,
+        "origins": [
+            0
+        ],
+        "code": "HA"
+    },
+    {
+        "name": "Abingley",
+        "base": 1,
+        "shield": "hessen",
+        "center": 4878,
+        "i": 7,
+        "color": "#dababf",
+        "type": "Generic",
+        "expansionism": 2.8,
+        "origins": [
+            0
+        ],
+        "code": "Ab"
+    },
+    {
+        "name": "Newboke",
+        "base": 1,
+        "shield": "fantasy5",
+        "center": 3398,
+        "i": 8,
+        "color": "#ffed6f",
+        "type": "Naval",
+        "expansionism": 3.7,
+        "origins": [
+            0
+        ],
+        "code": "Ne"
+    },
+    {
+        "name": "Tarton",
+        "base": 1,
+        "shield": "fantasy4",
+        "center": 1474,
+        "i": 9,
+        "color": "#ccebc5",
+        "type": "Naval",
+        "expansionism": 3.5,
+        "origins": [
+            0
+        ],
+        "code": "Ta"
+    },
+    {
+        "name": "Alneyles",
+        "base": 1,
+        "shield": "fantasy1",
+        "center": 5306,
+        "i": 10,
+        "color": "#80b1d3",
+        "type": "River",
+        "expansionism": 2.2,
+        "origins": [
+            0
+        ],
+        "code": "Al"
+    }
+]
