@@ -12920,7 +12920,7 @@
             "Enemy": "#FF4500",     // Orange Red
             "War": "#FF0000",       // Red
             "Vassal": "#87CEEB",    // Sky Blue
-            "Suzerain": "#800080",  // Purple
+            "Suzerain": "#C8A2C8",  // Lilac
             "Unknown": "#F5F5F5",   // White Smoke
             "x": "#800080"          // Selected State (Purple)
         };
@@ -13063,7 +13063,11 @@
                         p.setAttribute('fill', '#333333'); // Dark Gray for water
                     } else {
                         const pStateId = parseInt(p.getAttribute('data-state-id'));
-                        if (!isNaN(pStateId) && pStateId < relations.length) {
+                        
+                        // FIX: Explicitly handle Neutrals (ID 0)
+                        if (pStateId === 0 && stateId !== 0) {
+                             p.setAttribute('fill', '#ffffff'); // White for Neutrals
+                        } else if (!isNaN(pStateId) && pStateId < relations.length) {
                             const relation = relations[pStateId];
                             // Highlight self differently?
                             let color = relationColors[relation] || relationColors['Unknown'];
