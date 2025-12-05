@@ -1231,7 +1231,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                             const nameCell = sRow.getElementsByTagName('td')[1]; // Name is 2nd column
                             if (nameCell && (nameCell.textContent || nameCell.innerText).trim() === stateName) {{
                                 sRow.classList.add('related-highlight'); 
-                                sRow.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                                sRow.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
                                 break; 
                             }}
                         }}
@@ -1256,7 +1256,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                                     if (fromName === burgName || toName === burgName) {{
                                         tRow.classList.add('related-highlight');
                                         if (!scrolled) {{
-                                            tRow.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                                            tRow.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
                                             scrolled = true;
                                         }}
                                     }}
@@ -1325,7 +1325,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     if (row) {{
                         row.classList.add('related-highlight');
                         if (!firstBurgScrolled) {{
-                            row.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                            row.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
                             firstBurgScrolled = true;
                         }}
                     }}
@@ -1351,7 +1351,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                             if (burgsInState.includes(fromName) || burgsInState.includes(toName)) {{
                                 tRow.classList.add('related-highlight');
                                 if (!firstTradeScrolled) {{
-                                    tRow.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                                    tRow.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
                                     firstTradeScrolled = true;
                                 }}
                             }}
@@ -1387,7 +1387,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 const row = document.querySelector(`tr[data-id="${{id}}"]`);
                 if (row) {{
                     row.classList.add('selected');
-                    row.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                    row.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
                 }}
             }});
 
@@ -1404,7 +1404,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     if (nameCell && stateNames.has(rowStateName)) {{
                         sRow.classList.add('related-highlight');
                         if (!firstStateScrolled) {{
-                            sRow.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                                sRow.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
                             firstStateScrolled = true;
                         }}
                     }}
