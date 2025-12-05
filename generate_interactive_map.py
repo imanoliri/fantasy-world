@@ -1241,6 +1241,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     const burgName = dot.getAttribute('data-name');
                     if (burgName) {{
                         ['foodTradeTable', 'goldTradeTable'].forEach(tableId => {{
+                            let scrolled = false;
                             const tTable = document.getElementById(tableId);
                             if (tTable) {{
                                 const tRows = tTable.getElementsByTagName('tr');
@@ -1254,6 +1255,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                                     
                                     if (fromName === burgName || toName === burgName) {{
                                         tRow.classList.add('related-highlight');
+                                        if (!scrolled) {{
+                                            tRow.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                                            scrolled = true;
+                                        }}
                                     }}
                                 }}
                             }}
@@ -1302,6 +1307,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             }}
 
             const burgsInState = [];
+            let firstBurgScrolled = false;
             
             // Highlight Burg Dots and accumulate names
             const dots = document.querySelectorAll(`.burg-dot[data-state="${{stateName}}"]`);
@@ -1316,7 +1322,13 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     highlightedIds.push(id);
                     // Highlight Burg Row
                     const row = document.querySelector(`tr[data-id="${{id}}"]`);
-                    if (row) row.classList.add('related-highlight');
+                    if (row) {{
+                        row.classList.add('related-highlight');
+                        if (!firstBurgScrolled) {{
+                            row.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                            firstBurgScrolled = true;
+                        }}
+                    }}
                 }}
                 if (name) burgsInState.push(name);
             }});
@@ -1324,6 +1336,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             // Highlight Trade Routes
             if (burgsInState.length > 0) {{
                  ['foodTradeTable', 'goldTradeTable'].forEach(tableId => {{
+                    let firstTradeScrolled = false;
                     const tTable = document.getElementById(tableId);
                     if (tTable) {{
                         const tRows = tTable.getElementsByTagName('tr');
@@ -1337,6 +1350,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                             
                             if (burgsInState.includes(fromName) || burgsInState.includes(toName)) {{
                                 tRow.classList.add('related-highlight');
+                                if (!firstTradeScrolled) {{
+                                    tRow.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                                    firstTradeScrolled = true;
+                                }}
                             }}
                         }}
                     }}
@@ -1378,6 +1395,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             const stateTable = document.getElementById('stateTable');
             if (stateTable && stateNames.size > 0) {{
                 const stateRows = stateTable.getElementsByTagName('tr');
+                let firstStateScrolled = false;
                 for (let i = 1; i < stateRows.length; i++) {{
                     const sRow = stateRows[i];
                     const nameCell = sRow.getElementsByTagName('td')[1];
@@ -1385,6 +1403,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     
                     if (nameCell && stateNames.has(rowStateName)) {{
                         sRow.classList.add('related-highlight');
+                        if (!firstStateScrolled) {{
+                            sRow.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
+                            firstStateScrolled = true;
+                        }}
                     }}
                 }}
             }}

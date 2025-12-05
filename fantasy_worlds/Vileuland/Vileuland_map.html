@@ -13410,6 +13410,7 @@
                     const burgName = dot.getAttribute('data-name');
                     if (burgName) {
                         ['foodTradeTable', 'goldTradeTable'].forEach(tableId => {
+                            let scrolled = false;
                             const tTable = document.getElementById(tableId);
                             if (tTable) {
                                 const tRows = tTable.getElementsByTagName('tr');
@@ -13423,6 +13424,10 @@
                                     
                                     if (fromName === burgName || toName === burgName) {
                                         tRow.classList.add('related-highlight');
+                                        if (!scrolled) {
+                                            tRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                                            scrolled = true;
+                                        }
                                     }
                                 }
                             }
@@ -13471,6 +13476,7 @@
             }
 
             const burgsInState = [];
+            let firstBurgScrolled = false;
             
             // Highlight Burg Dots and accumulate names
             const dots = document.querySelectorAll(`.burg-dot[data-state="${stateName}"]`);
@@ -13485,7 +13491,13 @@
                     highlightedIds.push(id);
                     // Highlight Burg Row
                     const row = document.querySelector(`tr[data-id="${id}"]`);
-                    if (row) row.classList.add('related-highlight');
+                    if (row) {
+                        row.classList.add('related-highlight');
+                        if (!firstBurgScrolled) {
+                            row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                            firstBurgScrolled = true;
+                        }
+                    }
                 }
                 if (name) burgsInState.push(name);
             });
@@ -13493,6 +13505,7 @@
             // Highlight Trade Routes
             if (burgsInState.length > 0) {
                  ['foodTradeTable', 'goldTradeTable'].forEach(tableId => {
+                    let firstTradeScrolled = false;
                     const tTable = document.getElementById(tableId);
                     if (tTable) {
                         const tRows = tTable.getElementsByTagName('tr');
@@ -13506,6 +13519,10 @@
                             
                             if (burgsInState.includes(fromName) || burgsInState.includes(toName)) {
                                 tRow.classList.add('related-highlight');
+                                if (!firstTradeScrolled) {
+                                    tRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                                    firstTradeScrolled = true;
+                                }
                             }
                         }
                     }
@@ -13547,6 +13564,7 @@
             const stateTable = document.getElementById('stateTable');
             if (stateTable && stateNames.size > 0) {
                 const stateRows = stateTable.getElementsByTagName('tr');
+                let firstStateScrolled = false;
                 for (let i = 1; i < stateRows.length; i++) {
                     const sRow = stateRows[i];
                     const nameCell = sRow.getElementsByTagName('td')[1];
@@ -13554,6 +13572,10 @@
                     
                     if (nameCell && stateNames.has(rowStateName)) {
                         sRow.classList.add('related-highlight');
+                        if (!firstStateScrolled) {
+                            sRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                            firstStateScrolled = true;
+                        }
                     }
                 }
             }
