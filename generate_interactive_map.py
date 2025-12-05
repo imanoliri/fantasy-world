@@ -374,7 +374,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             to_name = burg_name_lookup.get(int(to_id), 'Unknown')
             
             row_html = f"""
-                <tr onclick="highlightTradeRoute({from_id}, {to_id})">
+                <tr onclick="highlightTradeRoute(this, {from_id}, {to_id})">
                     <td>{from_name}</td>
                     <td>{to_name}</td>
                     <td>{amount:.2f}</td>
@@ -1344,17 +1344,50 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             }}
         }}
 
-        function highlightTradeRoute(fromId, toId) {{
+        function highlightTradeRoute(el, fromId, toId) {{
             clearHighlights();
-            if (selectedId) selectBurg(null); // Clear single selection
+            if (selectedId) selectBurg(null); // Reset single burg selection mode
 
-            [fromId, toId].forEach(id => {{
+            // 1. Highlight the Trade Route Row(s)
+            if (el) el.classList.add('selected');
+
+            // 2. Identify and Highlight Burgs (Dots and Rows)
+            const burgIds = [fromId, toId];
+            const stateNames = new Set();
+
+            burgIds.forEach(id => {{
+                // Highlight Dot
                 const dot = document.querySelector(`.burg-dot[data-id="${{id}}"]`);
                 if (dot) {{
-                    dot.classList.add('highlighted');
+                    dot.classList.add('selected');
                     highlightedIds.push(id);
+                    
+                    const sName = dot.getAttribute('data-state');
+                    if (sName) stateNames.add(sName);
+                }}
+
+                // Highlight Row
+                const row = document.querySelector(`tr[data-id="${{id}}"]`);
+                if (row) {{
+                    row.classList.add('selected');
+                    row.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
                 }}
             }});
+
+            // 3. Highlight States
+            const stateTable = document.getElementById('stateTable');
+            if (stateTable && stateNames.size > 0) {{
+                const stateRows = stateTable.getElementsByTagName('tr');
+                for (let i = 1; i < stateRows.length; i++) {{
+                    const sRow = stateRows[i];
+                    const nameCell = sRow.getElementsByTagName('td')[1];
+                    const rowStateName = (nameCell.textContent || nameCell.innerText).trim();
+                    
+                    if (nameCell && stateNames.has(rowStateName)) {{
+                        sRow.classList.add('related-highlight');
+                    }}
+                }}
+            }}
         }}
 
         function sortTable(n, header, tableId) {{
