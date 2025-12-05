@@ -7284,13 +7284,13 @@
             // Cold (-10 to 0): Blue
             // Freezing (< -10): Purple
             
-            if (t < -20) return "#4B0082"; // Indigo (Deep Freeze)
-            if (t < -10) return "#800080"; // Purple (Freezing)
+            if (t < -10) return "#4B0082"; // Indigo (Deep Freeze)
+            if (t < -5) return "#800080"; // Purple (Freezing)
             if (t < 0) return "#0000FF"; // Blue (Cold)
-            if (t < 10) return "#00BFFF"; // Deep Sky Blue (Cool)
-            if (t < 20) return "#ADFF2F"; // Green Yellow (Temperate)
-            if (t < 30) return "#FFD700"; // Gold (Warm)
-            if (t < 40) return "#FF8C00"; // Dark Orange (Hot)
+            if (t < 5) return "#00BFFF"; // Deep Sky Blue (Cool)
+            if (t < 10) return "#ADFF2F"; // Green Yellow (Temperate)
+            if (t < 15) return "#FFD700"; // Gold (Warm)
+            if (t < 20) return "#FF8C00"; // Dark Orange (Hot)
             return "#FF0000"; // Red (Scorching)
         }
 
