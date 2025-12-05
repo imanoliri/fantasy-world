@@ -869,6 +869,9 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 }}
             }}
             
+            // FIX: Treat selecting "Neutral" (0) as deselecting
+            if (stateId === 0) stateId = null;
+            
             const paths = document.querySelectorAll('#mapBackground path');
             
             if (stateId !== null && diplomacyMatrix[stateId]) {{
