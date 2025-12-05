@@ -780,13 +780,6 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     p.setAttribute('fill', p.getAttribute('data-state-color'));
                 }});
             }} else if (currentMode === 'state') {{
-                // Switch to Diplomacy
-                btn.innerText = 'Mode: Diplomacy';
-                btn.setAttribute('data-mode', 'diplomacy');
-                // Initial diplomacy view (neutral or based on selected burg/state)
-                const selectedDot = selectedId ? document.querySelector(`.burg-dot[data-id="${{selectedId}}"]`) : null;
-                updateDiplomacyColors(selectedDot ? selectedDot.getAttribute('data-state') : null);
-            }} else if (currentMode === 'diplomacy') {{
                 // Switch to Heightmap
                 btn.innerText = 'Mode: Heightmap';
                 btn.setAttribute('data-mode', 'heightmap');
@@ -852,7 +845,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             const btn = document.getElementById('toggleMapMode');
             const currentMode = btn.getAttribute('data-mode');
             
-            if (currentMode === 'diplomacy') {{
+            if (currentMode === 'state') {{
                 updateDiplomacyColors(stateId);
             }}
         }}
@@ -898,13 +891,14 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     }}
                 }});
             }} else {{
-                // Reset to neutral (White land, Dark Gray water) if no state selected
+                // Reset to State Colors if no state selected
                 paths.forEach(p => {{
                     const isWater = p.hasAttribute('data-is-water');
                     if (isWater) {{
                         p.setAttribute('fill', '#333333'); // Dark Gray
                     }} else {{
-                        p.setAttribute('fill', '#ffffff'); // White
+                        // Revert to state color
+                        p.setAttribute('fill', p.getAttribute('data-state-color'));
                     }}
                 }});
             }}
@@ -1150,18 +1144,6 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             svg.setAttribute('viewBox', viewBox.join(' '));
         }});
 
-        function clearHighlights() {{
-            highlightedIds.forEach(id => {{
-                const dot = document.querySelector(`.burg-dot[data-id="${{id}}"]`);
-                if (dot) {{
-                    dot.classList.remove('highlighted');
-                    dot.style.fill = ''; // Reset color
-                    dot.style.stroke = ''; // Reset stroke
-                }}
-            }});
-            highlightedIds = [];
-        }}
-
         function selectBurg(id) {{
             // Remove previous selection
             if (selectedId) {{
@@ -1196,7 +1178,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                     if (stateName) {{
                         // Update Diplomacy Map if active
                         const btn = document.getElementById('toggleMapMode');
-                        if (btn && btn.getAttribute('data-mode') === 'diplomacy') {{
+                        if (btn && btn.getAttribute('data-mode') === 'state') {{
                             updateDiplomacyColors(stateName);
                         }}
 
