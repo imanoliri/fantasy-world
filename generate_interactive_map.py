@@ -342,8 +342,11 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             form = s.get('form', 'Unknown')
             fullname = s.get('fullName', name)
             
+            # Escape quotes in name for JS
+            safe_name = name.replace("'", "\\'")
+            
             state_rows.append(f"""
-                <tr data-original-index="{len(state_rows)}" onclick="highlightState('{name}', '{color}')">
+                <tr data-original-index="{len(state_rows)}" onclick="highlightState('{safe_name}', '{color}')">
                     <td><span class="color-box" style="background-color: {color}; display: inline-block; width: 15px; height: 15px; border: 1px solid #333;"></span></td>
                     <td>{name}</td>
                     <td>{capital_name}</td>
@@ -463,6 +466,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         th:hover {{ background: #e9ecef; }}
         tr:hover {{ background-color: #f1f1f1; cursor: pointer; }}
         tr.selected {{ background-color: #fff3cd; border-left: 5px solid #f1c40f; }}
+        tr.related-highlight {{ background-color: #fff3cd; border-left: 5px solid #f1c40f; }}
         tr.capital-row {{ font-weight: bold; background-color: #fffbf0; }}
         
         /* Sort Icons */
@@ -1225,9 +1229,8 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                         for (let i = 1; i < stateRows.length; i++) {{
                             const sRow = stateRows[i];
                             const nameCell = sRow.getElementsByTagName('td')[1]; // Name is 2nd column
-                            if (nameCell && (nameCell.textContent || nameCell.innerText) === stateName) {{
-                                sRow.classList.add('selected');
-                                sRow.classList.add('related-highlight'); // Marker class to clear later
+                            if (nameCell && (nameCell.textContent || nameCell.innerText).trim() === stateName) {{
+                                sRow.classList.add('related-highlight'); 
                                 sRow.scrollIntoView({{ behavior: 'smooth', block: 'nearest' }});
                                 break; 
                             }}
@@ -1246,11 +1249,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                                     const fromCell = tRow.getElementsByTagName('td')[0];
                                     const toCell = tRow.getElementsByTagName('td')[1];
                                     
-                                    const fromName = fromCell.textContent || fromCell.innerText;
-                                    const toName = toCell.textContent || toCell.innerText;
+                                    const fromName = (fromCell.textContent || fromCell.innerText).trim();
+                                    const toName = (toCell.textContent || toCell.innerText).trim();
                                     
                                     if (fromName === burgName || toName === burgName) {{
-                                        tRow.classList.add('selected');
                                         tRow.classList.add('related-highlight');
                                     }}
                                 }}
@@ -1266,28 +1268,80 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         }}
 
         function clearHighlights() {{
-            highlightedIds.forEach(id => {{
-                const dot = document.querySelector(`.burg-dot[data-id="${{id}}"]`);
-                if (dot) {{
-                    dot.classList.remove('highlighted');
-                    dot.style.fill = ''; // Reset color
-                    dot.style.stroke = ''; // Reset stroke
-                }}
+            // Clear Burg Dots
+            document.querySelectorAll('.burg-dot').forEach(el => {{
+                el.classList.remove('selected', 'highlighted');
+                el.style.fill = ''; 
+                el.style.stroke = ''; 
             }});
+            
+            // Clear Table Rows (Burgs, States, Trades)
+            document.querySelectorAll('tr').forEach(el => {{
+                el.classList.remove('selected', 'related-highlight');
+            }});
+
             highlightedIds = [];
+            selectedId = null;
         }}
 
         function highlightState(stateName, color) {{
             clearHighlights();
-            if (selectedId) selectBurg(null);
+            
+            // Find and highlight state row
+            const stateTable = document.getElementById('stateTable');
+            if (stateTable) {{
+                const stateRows = stateTable.getElementsByTagName('tr');
+                for (let i = 1; i < stateRows.length; i++) {{
+                    const sRow = stateRows[i];
+                    const nameCell = sRow.getElementsByTagName('td')[1];
+                    if (nameCell && (nameCell.textContent || nameCell.innerText).trim() === stateName) {{
+                        sRow.classList.add('selected');
+                        break;
+                    }}
+                }}
+            }}
 
+            const burgsInState = [];
+            
+            // Highlight Burg Dots and accumulate names
             const dots = document.querySelectorAll(`.burg-dot[data-state="${{stateName}}"]`);
             dots.forEach(dot => {{
                 dot.classList.add('highlighted');
                 dot.style.fill = color;
-                dot.style.stroke = '#000'; // Make it pop
-                highlightedIds.push(dot.getAttribute('data-id'));
+                dot.style.stroke = '#000';
+                
+                const id = dot.getAttribute('data-id');
+                const name = dot.getAttribute('data-name');
+                if (id) {{
+                    highlightedIds.push(id);
+                    // Highlight Burg Row
+                    const row = document.querySelector(`tr[data-id="${{id}}"]`);
+                    if (row) row.classList.add('related-highlight');
+                }}
+                if (name) burgsInState.push(name);
             }});
+            
+            // Highlight Trade Routes
+            if (burgsInState.length > 0) {{
+                 ['foodTradeTable', 'goldTradeTable'].forEach(tableId => {{
+                    const tTable = document.getElementById(tableId);
+                    if (tTable) {{
+                        const tRows = tTable.getElementsByTagName('tr');
+                        for (let i = 1; i < tRows.length; i++) {{
+                            const tRow = tRows[i];
+                            const fromCell = tRow.getElementsByTagName('td')[0];
+                            const toCell = tRow.getElementsByTagName('td')[1];
+                            
+                            const fromName = (fromCell.textContent || fromCell.innerText).trim();
+                            const toName = (toCell.textContent || toCell.innerText).trim();
+                            
+                            if (burgsInState.includes(fromName) || burgsInState.includes(toName)) {{
+                                tRow.classList.add('related-highlight');
+                            }}
+                        }}
+                    }}
+                }});
+            }}
         }}
 
         function highlightTradeRoute(fromId, toId) {{
