@@ -3,6 +3,7 @@ import collections
 import os
 import re
 import glob
+import shutil
 
 # Import modules
 import simulate_economy
@@ -386,6 +387,15 @@ if __name__ == "__main__":
         print(f"Created output directory: {OUTPUT_DIR}")
         
     generate_css(OUTPUT_DIR)
+
+    # Copy interactive map CSS
+    map_css_src = os.path.join(BASE_DIR, 'templates', 'map.css')
+    map_css_dst = os.path.join(OUTPUT_DIR, 'map.css')
+    if os.path.exists(map_css_src):
+        shutil.copy(map_css_src, map_css_dst)
+        print(f"Copied map.css to: {map_css_dst}")
+    else:
+        print(f"Warning: map.css not found at {map_css_src}")
 
     json_files = glob.glob(os.path.join(INPUT_DIR, '*.json'))
     
