@@ -10,8 +10,9 @@ import generate_interactive_map
 import simulate_trade
 
 # Configuration
-INPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_maps'
-OUTPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_worlds'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+INPUT_DIR = os.path.join(BASE_DIR, 'fantasy_maps')
+OUTPUT_DIR = os.path.join(BASE_DIR, 'fantasy_worlds')
 
 def load_data(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
