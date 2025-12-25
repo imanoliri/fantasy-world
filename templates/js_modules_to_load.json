@@ -1,0 +1,8 @@
+[
+    "globals.js",
+    "ui.js",
+    "map_render.js",
+    "tables.js",
+    "interactions.js",
+    "selection.js"
+]

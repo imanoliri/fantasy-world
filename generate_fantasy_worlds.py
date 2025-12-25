@@ -3,6 +3,7 @@ import collections
 import os
 import re
 import glob
+import shutil
 
 # Import modules
 import simulate_economy
@@ -10,8 +11,9 @@ import generate_interactive_map
 import simulate_trade
 
 # Configuration
-INPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_maps'
-OUTPUT_DIR = r'c:\Github_Projects\fantasy-world\fantasy_worlds'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+INPUT_DIR = os.path.join(BASE_DIR, 'fantasy_maps')
+OUTPUT_DIR = os.path.join(BASE_DIR, 'fantasy_worlds')
 
 def load_data(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -385,6 +387,62 @@ if __name__ == "__main__":
         print(f"Created output directory: {OUTPUT_DIR}")
         
     generate_css(OUTPUT_DIR)
+
+    # Copy interactive map CSS
+    map_css_src = os.path.join(BASE_DIR, 'templates', 'map.css')
+    map_css_dst = os.path.join(OUTPUT_DIR, 'map.css')
+    if os.path.exists(map_css_src):
+        shutil.copy(map_css_src, map_css_dst)
+        print(f"Copied map.css to: {map_css_dst}")
+    else:
+        print(f"Warning: map.css not found at {map_css_src}")
+
+    # Build map.js from modules
+    js_modules_dir = os.path.join(BASE_DIR, 'templates', 'js_modules')
+    # Config file moved to templates/ for visibility
+    modules_config_path = os.path.join(BASE_DIR, 'templates', 'js_modules_to_load.json')
+    map_js_dst = os.path.join(OUTPUT_DIR, 'map.js')
+    
+    map_js_content = ""
+    
+    if os.path.exists(modules_config_path):
+        try:
+            with open(modules_config_path, 'r', encoding='utf-8') as f:
+                module_list = json.load(f)
+            
+            print(f"Bundling {len(module_list)} JS modules from config...")
+            for mod_name in module_list:
+                mod_path = os.path.join(js_modules_dir, mod_name)
+                if os.path.exists(mod_path):
+                    with open(mod_path, 'r', encoding='utf-8') as f:
+                        map_js_content += f.read() + "\n\n"
+                else:
+                    print(f"Warning: Module {mod_name} listed in modules.json not found.")
+        except json.JSONDecodeError:
+            print(f"Error: Invalid JSON in {modules_config_path}")
+    elif os.path.exists(js_modules_dir):
+         # Fallback to sorted glob if json missing (backup behavior)
+         print(f"Warning: modules.json not found in {js_modules_dir}. Using alphabetical order.")
+         module_files = sorted(glob.glob(os.path.join(js_modules_dir, '*.js')))
+         for mod_file in module_files:
+             with open(mod_file, 'r', encoding='utf-8') as f:
+                 map_js_content += f.read() + "\n\n"
+    else:
+        print(f"Warning: JS Modules directory not found at {js_modules_dir}")
+
+    if map_js_content:
+        with open(map_js_dst, 'w', encoding='utf-8') as f:
+            f.write(map_js_content)
+        print(f"Generated map.js at {map_js_dst}")
+    
+    # Fallback to legacy map.js if no modules found
+    if not map_js_content:
+        map_js_src = os.path.join(BASE_DIR, 'templates', 'map.js')
+        if os.path.exists(map_js_src):
+            shutil.copy(map_js_src, map_js_dst)
+            print(f"Copied legacy map.js to: {map_js_dst}")
+        else:
+            print(f"Warning: map.js source not found")
 
     json_files = glob.glob(os.path.join(INPUT_DIR, '*.json'))
     
