@@ -399,22 +399,41 @@ if __name__ == "__main__":
 
     # Build map.js from modules
     js_modules_dir = os.path.join(BASE_DIR, 'templates', 'js_modules')
+    # Config file moved to templates/ for visibility
+    modules_config_path = os.path.join(BASE_DIR, 'templates', 'js_modules_to_load.json')
     map_js_dst = os.path.join(OUTPUT_DIR, 'map.js')
     
     map_js_content = ""
-    if os.path.exists(js_modules_dir):
-        module_files = sorted(glob.glob(os.path.join(js_modules_dir, '*.js')))
-        if module_files:
-            print(f"Bundling {len(module_files)} JS modules...")
-            for mod_file in module_files:
-                with open(mod_file, 'r', encoding='utf-8') as f:
-                    map_js_content += f.read() + "\n\n"
+    
+    if os.path.exists(modules_config_path):
+        try:
+            with open(modules_config_path, 'r', encoding='utf-8') as f:
+                module_list = json.load(f)
             
-            with open(map_js_dst, 'w', encoding='utf-8') as f:
-                f.write(map_js_content)
-            print(f"Generated map.js at {map_js_dst}")
-        else:
-            print(f"Warning: No JS modules found in {js_modules_dir}")
+            print(f"Bundling {len(module_list)} JS modules from config...")
+            for mod_name in module_list:
+                mod_path = os.path.join(js_modules_dir, mod_name)
+                if os.path.exists(mod_path):
+                    with open(mod_path, 'r', encoding='utf-8') as f:
+                        map_js_content += f.read() + "\n\n"
+                else:
+                    print(f"Warning: Module {mod_name} listed in modules.json not found.")
+        except json.JSONDecodeError:
+            print(f"Error: Invalid JSON in {modules_config_path}")
+    elif os.path.exists(js_modules_dir):
+         # Fallback to sorted glob if json missing (backup behavior)
+         print(f"Warning: modules.json not found in {js_modules_dir}. Using alphabetical order.")
+         module_files = sorted(glob.glob(os.path.join(js_modules_dir, '*.js')))
+         for mod_file in module_files:
+             with open(mod_file, 'r', encoding='utf-8') as f:
+                 map_js_content += f.read() + "\n\n"
+    else:
+        print(f"Warning: JS Modules directory not found at {js_modules_dir}")
+
+    if map_js_content:
+        with open(map_js_dst, 'w', encoding='utf-8') as f:
+            f.write(map_js_content)
+        print(f"Generated map.js at {map_js_dst}")
     
     # Fallback to legacy map.js if no modules found
     if not map_js_content:
