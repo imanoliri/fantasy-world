@@ -397,6 +397,15 @@ if __name__ == "__main__":
     else:
         print(f"Warning: map.css not found at {map_css_src}")
 
+    # Copy interactive map JS
+    map_js_src = os.path.join(BASE_DIR, 'templates', 'map.js')
+    map_js_dst = os.path.join(OUTPUT_DIR, 'map.js')
+    if os.path.exists(map_js_src):
+        shutil.copy(map_js_src, map_js_dst)
+        print(f"Copied map.js to: {map_js_dst}")
+    else:
+        print(f"Warning: map.js not found at {map_js_src}")
+
     json_files = glob.glob(os.path.join(INPUT_DIR, '*.json'))
     
     # Load simulation config once
