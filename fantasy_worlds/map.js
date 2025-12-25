@@ -5,6 +5,11 @@ const table = document.getElementById('burgTable');
 let selectedId = null;
 let highlightedIds = [];
 
+// These variables will be defined by data injection in the HTML itself
+// let diplomacyMatrix = [];
+// let stateNameIdMap = [];
+
+
 /* Dropdown Logic */
 function toggleDropdown(id) {
     document.getElementById(id).classList.toggle("show");
@@ -103,20 +108,6 @@ function toggleFoodTradeTable() {
     window.dispatchEvent(new Event('resize'));
 }
 
-const relationColors = {
-    "Ally": "#32CD32",      // Lime Green
-    "Friendly": "#90EE90",  // Light Green
-    "Neutral": "#D3D3D3",   // Light Grey
-    "Suspicion": "#FFA500", // Orange
-    "Enemy": "#FF4500",     // Orange Red
-    "War": "#FF0000",       // Red
-    "Vassal": "#87CEEB",    // Sky Blue
-    "Suzerain": "#C8A2C8",  // Lilac
-    "Unknown": "#F5F5F5",   // White Smoke
-    "x": "#800080"          // Selected State (Purple)
-};
-
-
 function toggleGoldTradeTable() {
     const btn = document.getElementById('toggleGoldTradeTable');
     const container = document.getElementById('goldTradeTableContainer');
@@ -139,6 +130,20 @@ function toggleMap() {
         mapGroup.style.display = 'none';
     }
 }
+
+
+const relationColors = {
+    "Ally": "#32CD32",      // Lime Green
+    "Friendly": "#90EE90",  // Light Green
+    "Neutral": "#D3D3D3",   // Light Grey
+    "Suspicion": "#FFA500", // Orange
+    "Enemy": "#FF4500",     // Orange Red
+    "War": "#FF0000",       // Red
+    "Vassal": "#87CEEB",    // Sky Blue
+    "Suzerain": "#C8A2C8",  // Lilac
+    "Unknown": "#F5F5F5",   // White Smoke
+    "x": "#800080"          // Selected State (Purple)
+};
 
 function toggleMapMode() {
     const btn = document.getElementById('toggleMapMode');
@@ -224,15 +229,6 @@ function getColorForTemp(t) {
     return "#FF0000"; // Red (Scorching)
 }
 
-function selectState(stateId) {
-    const btn = document.getElementById('toggleMapMode');
-    const currentMode = btn.getAttribute('data-mode');
-
-    if (currentMode === 'state') {
-        updateDiplomacyColors(stateId);
-    }
-}
-
 function updateDiplomacyColors(stateIdentifier) {
     let stateId = null;
 
@@ -286,6 +282,7 @@ function updateDiplomacyColors(stateIdentifier) {
         });
     }
 }
+
 
 function toggleAllStates(source) {
     const checkboxes = document.querySelectorAll('#stateCheckboxes input[type="checkbox"]');
@@ -413,6 +410,69 @@ function toggleAllTypes(source) {
     }
     filterTable();
 }
+
+function sortTable(n, header, tableId) {
+    const table = document.getElementById(tableId);
+    let dir = "asc";
+
+    // Reset other headers
+    const headers = table.querySelectorAll('th');
+    headers.forEach(h => {
+        if (h !== header) {
+            h.innerHTML = h.innerHTML.replace(' ▲', '').replace(' ▼', '');
+        }
+    });
+
+    if (header.innerHTML.includes('▲')) {
+        dir = "desc";
+    }
+
+    let switching = true;
+    let shouldSwitch, i;
+
+    while (switching) {
+        switching = false;
+        const rows = table.rows;
+
+        for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            const x = rows[i].getElementsByTagName("TD")[n];
+            const y = rows[i + 1].getElementsByTagName("TD")[n];
+
+            let xVal = x.innerHTML.toLowerCase();
+            let yVal = y.innerHTML.toLowerCase();
+
+            // Check if numeric (remove commons)
+            const xNum = parseFloat(xVal.replace(/,/g, ''));
+            const yNum = parseFloat(yVal.replace(/,/g, ''));
+
+            if (!isNaN(xNum) && !isNaN(yNum)) {
+                if (dir === "asc") {
+                    if (xNum > yNum) { shouldSwitch = true; break; }
+                } else {
+                    if (xNum < yNum) { shouldSwitch = true; break; }
+                }
+            } else {
+                if (dir === "asc") {
+                    if (xVal > yVal) { shouldSwitch = true; break; }
+                } else {
+                    if (xVal < yVal) { shouldSwitch = true; break; }
+                }
+            }
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+        }
+    }
+
+    if (dir === "asc") {
+        header.innerHTML = header.innerHTML.replace(' ▼', '') + ' ▲';
+    } else {
+        header.innerHTML = header.innerHTML.replace(' ▲', '') + ' ▼';
+    }
+}
+
 
 // Map Interactions
 svg.addEventListener('click', (e) => {
@@ -563,6 +623,7 @@ mapContainer.addEventListener('wheel', (e) => {
 
     svg.setAttribute('viewBox', viewBox.join(' '));
 });
+
 
 function selectBurg(id) {
     // Remove previous selection
@@ -790,67 +851,13 @@ function highlightTradeRoute(el, fromId, toId) {
     }
 }
 
-function sortTable(n, header, tableId) {
-    const table = document.getElementById(tableId);
-    let dir = "asc";
+function selectState(stateId) {
+    const btn = document.getElementById('toggleMapMode');
+    const currentMode = btn.getAttribute('data-mode');
 
-    // Reset other headers
-    const headers = table.querySelectorAll('th');
-    headers.forEach(h => {
-        if (h !== header) {
-            h.classList.remove('sort-asc', 'sort-desc');
-        }
-    });
-
-    // Determine sort direction (Tri-state: Asc -> Desc -> Original)
-    if (header.classList.contains('sort-asc')) {
-        dir = "desc";
-        header.classList.remove('sort-asc');
-        header.classList.add('sort-desc');
-    } else if (header.classList.contains('sort-desc')) {
-        dir = "original";
-        header.classList.remove('sort-desc');
-    } else {
-        dir = "asc";
-        header.classList.add('sort-asc');
+    if (currentMode === 'state') {
+        updateDiplomacyColors(stateId);
     }
-
-    // Optimization: Sort an array of rows instead of DOM manipulation
-    const tbody = table.querySelector('tbody');
-    const rowsArray = Array.from(tbody.rows);
-
-    rowsArray.sort((a, b) => {
-        // If reverting to original order
-        if (dir === "original") {
-            let xIndex = parseInt(a.getAttribute('data-original-index'));
-            let yIndex = parseInt(b.getAttribute('data-original-index'));
-            return xIndex - yIndex;
-        }
-
-        let x = a.getElementsByTagName("TD")[n];
-        let y = b.getElementsByTagName("TD")[n];
-
-        let xContent = x.textContent || x.innerText;
-        let yContent = y.textContent || y.innerText;
-
-        // Handle "★ " prefix
-        xContent = xContent.replace("★ ", "");
-        yContent = yContent.replace("★ ", "");
-
-        // Check if numeric (remove commas)
-        let xNum = parseFloat(xContent.replace(/,/g, ""));
-        let yNum = parseFloat(yContent.replace(/,/g, ""));
-
-        if (!isNaN(xNum) && !isNaN(yNum)) {
-            return dir === "asc" ? xNum - yNum : yNum - xNum;
-        } else {
-            return dir === "asc" ? xContent.localeCompare(yContent) : yContent.localeCompare(xContent);
-        }
-    });
-
-    // Re-append sorted rows
-    const fragment = document.createDocumentFragment();
-    rowsArray.forEach(row => fragment.appendChild(row));
-    tbody.appendChild(fragment);
 }
+
 

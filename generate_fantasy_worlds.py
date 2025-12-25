@@ -397,14 +397,33 @@ if __name__ == "__main__":
     else:
         print(f"Warning: map.css not found at {map_css_src}")
 
-    # Copy interactive map JS
-    map_js_src = os.path.join(BASE_DIR, 'templates', 'map.js')
+    # Build map.js from modules
+    js_modules_dir = os.path.join(BASE_DIR, 'templates', 'js_modules')
     map_js_dst = os.path.join(OUTPUT_DIR, 'map.js')
-    if os.path.exists(map_js_src):
-        shutil.copy(map_js_src, map_js_dst)
-        print(f"Copied map.js to: {map_js_dst}")
-    else:
-        print(f"Warning: map.js not found at {map_js_src}")
+    
+    map_js_content = ""
+    if os.path.exists(js_modules_dir):
+        module_files = sorted(glob.glob(os.path.join(js_modules_dir, '*.js')))
+        if module_files:
+            print(f"Bundling {len(module_files)} JS modules...")
+            for mod_file in module_files:
+                with open(mod_file, 'r', encoding='utf-8') as f:
+                    map_js_content += f.read() + "\n\n"
+            
+            with open(map_js_dst, 'w', encoding='utf-8') as f:
+                f.write(map_js_content)
+            print(f"Generated map.js at {map_js_dst}")
+        else:
+            print(f"Warning: No JS modules found in {js_modules_dir}")
+    
+    # Fallback to legacy map.js if no modules found
+    if not map_js_content:
+        map_js_src = os.path.join(BASE_DIR, 'templates', 'map.js')
+        if os.path.exists(map_js_src):
+            shutil.copy(map_js_src, map_js_dst)
+            print(f"Copied legacy map.js to: {map_js_dst}")
+        else:
+            print(f"Warning: map.js source not found")
 
     json_files = glob.glob(os.path.join(INPUT_DIR, '*.json'))
     
