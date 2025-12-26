@@ -358,7 +358,7 @@ def generate_worlds_index(reports, output_dir):
         </div>"""
 
     html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy World Reports</title>
+    <title>Fantasy Worlds</title>
     <style>
         body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0 auto; padding: 40px; background: #f4f4f9; max-width: 800px; }}
         h1 {{ text-align: center; color: #2c3e50; margin-bottom: 40px; }}
@@ -442,7 +442,7 @@ if __name__ == "__main__":
             shutil.copy(map_js_src, map_js_dst)
             print(f"Copied legacy map.js to: {map_js_dst}")
         else:
-            print(f"Warning: map.js source not found")
+            print(f"Warning: legacy map.js source not found")
 
     json_files = glob.glob(os.path.join(INPUT_DIR, '*.json'))
     
