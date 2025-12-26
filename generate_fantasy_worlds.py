@@ -371,7 +371,7 @@ def generate_worlds_index(reports, output_dir):
         .report-action {{ color: #3498db; font-weight: 500; text-decoration: none; border: 1px solid #3498db; padding: 8px; border-radius: 4px; transition: background 0.2s, color 0.2s; }}
         .report-action:hover {{ background: #3498db; color: white; }}
     </style></head><body>
-    <h1>Fantasy World Reports</h1>
+    <h1>Fantasy Worlds</h1>
     <div class="reports-grid">
         {links_html}
     </div>
