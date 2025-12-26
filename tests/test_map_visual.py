@@ -206,7 +206,6 @@ def test_montreia_map_filters(page: Page):
     print("Reselecting All Types...")
     page.click("#typeCheckboxes input[value='all']")
     page.wait_for_timeout(500)
-    
     page.click("button[onclick=\"toggleDropdown('typeDropdown')\"]") 
     page.wait_for_timeout(200)
 
@@ -224,3 +223,34 @@ def test_montreia_map_filters(page: Page):
     page.wait_for_timeout(500)
 
     verify_visual_state(page, "montreia_filter_state_bukania")
+
+def test_montreia_search_visual(page: Page):
+    """
+    Search Visual Test:
+    1. Hide Map (to clear visual noise)
+    2. Search for "ia"
+    3. Verify snapshot
+    """
+    base_dir = Path(__file__).resolve().parent.parent
+    map_path = base_dir / "fantasy_worlds" / "Montreia" / "Montreia_map.html"
+    map_url = map_path.as_uri()
+
+    print(f"Navigating to {map_url} (Visual Search Test)")
+    page.goto(map_url)
+    page.wait_for_selector("#toggleStateTable")
+
+    # Stabilize
+    page.mouse.move(0, 0)
+    page.wait_for_timeout(1000)
+
+    # 1. Hide Map (Click Toggle Map)
+    print("Clicking Toggle Map (to hide)...")
+    page.click("#toggleMap")
+    page.wait_for_timeout(500)
+
+    # 2. Type "ia" in search box
+    print("Typing 'ia' in search box...")
+    page.type("#searchInput", "ia")
+    page.wait_for_timeout(1000) # Wait for filter to apply (keyup event)
+
+    verify_visual_state(page, "montreia_search_ia")

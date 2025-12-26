@@ -170,16 +170,9 @@ def test_montreia_table_filters(page: Page):
     with open(snapshot_path, "r", encoding="utf-8") as f:
         snapshot = json.load(f)
 
-    # If keys mismatch (e.g. expansion), we might need to update.
-    # We will warn if snapshot is missing keys.
+    # Automatic update logic for compatibility
     keys_mismatch = set(results.keys()) - set(snapshot.keys())
     if keys_mismatch:
-         # Overwrite snapshot to include new keys if we are expanding
-         # But usually we want to control this. Since this IS the expansion task, we force update logic or warn.
-         # Let's overwrite/merge for this task since user requested expansion.
-         # But safely, we should return/warn.
-         # Actually, better to just overwrite if we are confident, or fail.
-         # Let's fail with a specific message to delete the file for regeneration, or auto-update logic.
          print(f"New keys found: {keys_mismatch}. Updating snapshot.")
          snapshot.update(results)
          with open(snapshot_path, "w", encoding="utf-8") as f:
@@ -189,7 +182,82 @@ def test_montreia_table_filters(page: Page):
     # Compare
     for key in results:
         if key not in snapshot:
-            continue # Should have been handled above
+            continue
+        if results[key] != snapshot[key]:
+            print(f"Mismatch in {key}!")
+            print(f"Got {len(results[key])} rows, Expected {len(snapshot[key])} rows.")
+        assert results[key] == snapshot[key], f"Data mismatch for {key}"
+
+def test_montreia_search_data(page: Page):
+    """
+    UI Regression test for Search.
+    Verifies that searching for 'ia' correctly filters ALL tables.
+    Order: States, Burgs, Food Trade, Gold Trade.
+    """
+    base_dir = Path(__file__).resolve().parent.parent
+    map_path = base_dir / "fantasy_worlds" / "Montreia" / "Montreia_map.html"
+    map_url = map_path.as_uri()
+    snapshot_path = base_dir / "tests" / "data" / "Montreia_search_tables.json"
+
+    print(f"Navigating to {map_url} (Search Data Test)")
+    page.goto(map_url)
+    page.wait_for_selector("#toggleStateTable", timeout=60000)
+
+    tables_config = {
+        "states": {"button": "#toggleStateTable", "table": "#stateTableContainer table"},
+        "burgs": {"button": "#toggleTable", "table": "#burgTableContainer table"},
+        "food_trade": {"button": "#toggleFoodTradeTable", "table": "#foodTradeTableContainer table"},
+        "gold_trade": {"button": "#toggleGoldTradeTable", "table": "#goldTradeTableContainer table"},
+    }
+    tables_order = ["states", "burgs", "food_trade", "gold_trade"]
+
+    # Helper to scrape visible rows
+    def scrape_visible(table_selector):
+        return page.eval_on_selector(
+            table_selector,
+            """
+            (table) => {
+                const rows = Array.from(table.querySelectorAll('tr'));
+                // Filter rows that are display:none
+                return rows.filter(tr => tr.style.display !== 'none').map(tr => {
+                    const cells = Array.from(tr.querySelectorAll('th, td'));
+                    return cells.map(td => td.innerText.trim());
+                });
+            }
+            """
+        )
+
+    results = {}
+
+    # === Scenario: Search "ia" ===
+    print("Typing 'ia' into search box...")
+    page.type("#searchInput", "ia")
+    page.wait_for_timeout(1000) # Wait for debounce/filter
+
+    for name in tables_order:
+        config = tables_config[name]
+        print(f"Scraping {name} for search='ia'...")
+        # Ensure visible
+        if not page.is_visible(config["table"]):
+            page.click(config["button"])
+            page.wait_for_selector(config["table"], state="visible")
+        
+        # Scrape
+        results[name] = scrape_visible(config["table"])
+
+    # Verify or Create Snapshot
+    if not snapshot_path.exists():
+        with open(snapshot_path, "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=4)
+        warnings.warn(f"Created new snapshot at {snapshot_path}. Verify contents manually.")
+        return
+
+    # Load Snapshot
+    with open(snapshot_path, "r", encoding="utf-8") as f:
+        snapshot = json.load(f)
+
+    # Compare
+    for key in results:
         if results[key] != snapshot[key]:
             print(f"Mismatch in {key}!")
             print(f"Got {len(results[key])} rows, Expected {len(snapshot[key])} rows.")
