@@ -1,7 +1,7 @@
 import pytest
 import time
 from pathlib import Path
-from playwright.sync_api import Page
+from playwright.sync_api import Page, expect
 from PIL import Image, ImageChops
 import math
 import operator
@@ -254,3 +254,44 @@ def test_montreia_search_visual(page: Page):
     page.wait_for_timeout(1000) # Wait for filter to apply (keyup event)
 
     verify_visual_state(page, "montreia_search_ia")
+
+def test_montreia_select_state_visual(page: Page):
+    """
+    Map Interaction Visual Test:
+    1. Open States Table.
+    2. Click 'Sasburgia' row.
+    3. Verify visual change (Burgs highlighted/Colored).
+    """
+    base_dir = Path(__file__).resolve().parent.parent
+    map_path = base_dir / "fantasy_worlds" / "Montreia" / "Montreia_map.html"
+    map_url = map_path.as_uri()
+
+    print(f"Navigating to {map_url} (Map Interaction Test)")
+    page.goto(map_url)
+    page.wait_for_selector("#toggleStateTable")
+    page.mouse.move(0, 0)
+    page.wait_for_timeout(1000)
+
+    # 1. Open States Table
+    if not page.is_visible("#stateTableContainer table"):
+        print("Opening States Table...")
+        page.click("#toggleStateTable")
+        page.wait_for_selector("#stateTableContainer table", state="visible")
+
+    # 2. Click Sasburgia Row
+    # We need to find the TR that contains "Sasburgia"
+    print("Clicking 'Sasburgia' row in States Table...")
+    # This locator finds a row (tr) containing the text "Sasburgia"
+    row_locator = page.locator("#stateTableContainer table tr:has-text('Sasburgia')")
+    
+    # Ensure it exists
+    expect(row_locator).to_be_visible()
+    
+    # Click it.
+    row_locator.click()
+    
+    page.wait_for_timeout(1000) # Wait for highlight animation/update
+
+    # 3. Verify Visual Snapshot
+    # Snapshot name updated to reflect new logic
+    verify_visual_state(page, "montreia_interaction_table_click_sasburgia")
