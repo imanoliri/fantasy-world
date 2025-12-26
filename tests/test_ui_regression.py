@@ -262,3 +262,76 @@ def test_montreia_search_data(page: Page):
             print(f"Mismatch in {key}!")
             print(f"Got {len(results[key])} rows, Expected {len(snapshot[key])} rows.")
         assert results[key] == snapshot[key], f"Data mismatch for {key}"
+
+def test_montreia_sorting_data(page: Page):
+    """
+    UI Regression test for Table Sorting.
+    Verifies that clicking headers sorts the data.
+    Focus on Burgs table for simplicity and "Name" and "Population" (if available).
+    """
+    base_dir = Path(__file__).resolve().parent.parent
+    map_path = base_dir / "fantasy_worlds" / "Montreia" / "Montreia_map.html"
+    map_url = map_path.as_uri()
+    snapshot_path = base_dir / "tests" / "data" / "Montreia_sorting_tables.json"
+
+    print(f"Navigating to {map_url} (Sorting Test)")
+    page.goto(map_url)
+    page.wait_for_selector("#toggleStateTable", timeout=60000)
+
+    # Ensure Burgs table visible
+    if not page.is_visible("#burgTableContainer table"):
+        page.click("#toggleTable")
+        page.wait_for_selector("#burgTableContainer table", state="visible")
+
+    def scrape_table():
+         return page.eval_on_selector(
+            "#burgTableContainer table",
+            """
+            (table) => {
+                const rows = Array.from(table.querySelectorAll('tr'));
+                // Return visible rows. The header row is usually visible. 
+                // We mainly care about the order of data rows.
+                return rows.filter(tr => tr.style.display !== 'none').map(tr => {
+                    const cells = Array.from(tr.querySelectorAll('th, td'));
+                    return cells.map(td => td.innerText.trim());
+                });
+            }
+            """
+        )
+
+    results = {}
+
+    # === Sort by Name (Ascending?) ===
+    # Assuming first click sorts Ascending, second Descending, or vice versa depending on default.
+    # Usually first column header is Name.
+    print("Clicking First Column Header (Burg/Name)...")
+    # Click the TH inside the table. Assuming index 0.
+    page.click("#burgTableContainer table th:nth-child(1)")
+    page.wait_for_timeout(500)
+    results["burgs_sort_name_1"] = scrape_table()
+
+    # === Sort by Name (Descending?) ===
+    print("Clicking First Column Header Again...")
+    page.click("#burgTableContainer table th:nth-child(1)")
+    page.wait_for_timeout(500)
+    results["burgs_sort_name_2"] = scrape_table()
+
+    # Verify or Create Snapshot
+    if not snapshot_path.exists():
+        with open(snapshot_path, "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=4)
+        warnings.warn(f"Created new snapshot at {snapshot_path}. Verify contents manually.")
+        return
+
+    # Load Snapshot
+    with open(snapshot_path, "r", encoding="utf-8") as f:
+        snapshot = json.load(f)
+
+    # Compare
+    for key in results:
+        if results[key] != snapshot[key]:
+            print(f"Mismatch in {key}!")
+            # Print first 3 rows
+            print(f"Got: {results[key][1:4]}")
+            print(f"Exp: {snapshot[key][1:4]}")
+        assert results[key] == snapshot[key], f"Sorting mismatch for {key}"
