@@ -161,3 +161,66 @@ def test_montreia_map_buttons_sequence(page: Page):
     page.click("#toggleCapitals")
     page.wait_for_timeout(500)
     verify_visual_state(page, "montreia_seq_4_capitals_click")
+
+def test_montreia_map_filters(page: Page):
+    """
+    Filter Interaction visual test:
+    1. Show Map
+    2. Filter Types: Uncheck All, Check Generic
+    3. Reset Types: Check All
+    4. Filter States: Uncheck All, Check Bukania
+    """
+    base_dir = Path(__file__).resolve().parent.parent
+    map_path = base_dir / "fantasy_worlds" / "Montreia" / "Montreia_map.html"
+    map_url = map_path.as_uri()
+
+    print(f"Navigating to {map_url} (Filter Test)")
+    page.goto(map_url)
+    page.wait_for_selector("#toggleStateTable")
+
+    # Stabilize
+    page.mouse.move(0, 0)
+    page.wait_for_timeout(1000)
+
+    # Hide Map
+    print("Clicking Show Map button...")
+    page.click("#toggleMap")
+    page.wait_for_timeout(500)
+
+    # Filter Types
+    print("Opening Filter Types...")
+    page.click("button[onclick=\"toggleDropdown('typeDropdown')\"]")
+    page.wait_for_timeout(200)
+
+    print("Unselecting All Types...")
+    page.click("#typeCheckboxes input[value='all']")
+    page.wait_for_timeout(200)
+
+    print("Selecting Generic...")
+    page.click("#typeCheckboxes input[value='Generic']")
+    page.wait_for_timeout(500)
+    
+    verify_visual_state(page, "montreia_filter_type_generic")
+
+    # Select all types back & close dropdown
+    print("Reselecting All Types...")
+    page.click("#typeCheckboxes input[value='all']")
+    page.wait_for_timeout(500)
+    
+    page.click("button[onclick=\"toggleDropdown('typeDropdown')\"]") 
+    page.wait_for_timeout(200)
+
+    # Filter States
+    print("Opening Filter States...")
+    page.click("button[onclick=\"toggleDropdown('stateDropdown')\"]")
+    page.wait_for_timeout(200)
+
+    print("Unselecting All States...")
+    page.click("#stateCheckboxes input[value='all']")
+    page.wait_for_timeout(200)
+
+    print("Selecting Bukania...")
+    page.click("#stateCheckboxes input[value='Bukania']")
+    page.wait_for_timeout(500)
+
+    verify_visual_state(page, "montreia_filter_state_bukania")
