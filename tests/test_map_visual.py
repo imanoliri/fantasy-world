@@ -6,6 +6,7 @@ from PIL import Image, ImageChops
 import math
 import operator
 from functools import reduce
+import warnings
 
 def rmsdiff(im1, im2):
     "Calculate the root-mean-square difference between two images"
@@ -16,17 +17,28 @@ def rmsdiff(im1, im2):
         map(lambda h, i: h*(i**2), h, range(256))
     ) / (float(im1.size[0]) * im1.size[1]))
 
-def verify_visual_state(page: Page, snapshot_name: str, tolerance: float = 1.0):
+def verify_visual_state(page: Page, snapshot_name: str, tolerance: float = 1.0, expect_fail: bool = False, suffix_str: str = None):
     """
     Helper to take a screenshot and compare it with baseline using PIL RMS.
+    
+    Args:
+        page: Playwright page object.
+        snapshot_name: Base name for snapshot files.
+        tolerance: RMS difference tolerance (default 1.0).
+        expect_fail: If True, asserts that the comparison FAILS (RMS > tolerance).
+        suffix_str: suffix to add to the snapshot name.
     """
     base_dir = Path(__file__).resolve().parent.parent
     snapshot_dir = base_dir / "tests" / "snapshots"
     snapshot_dir.mkdir(parents=True, exist_ok=True)
     
-    snapshot_path = snapshot_dir / f"{snapshot_name}_baseline.png"
-    current_path = snapshot_dir / f"{snapshot_name}_current.png"
-    diff_path = snapshot_dir / f"{snapshot_name}_diff.png"
+    #Add suffix if provided
+    if not suffix_str:
+        suffix_str = ""
+    snapshot_path = snapshot_dir / f"{snapshot_name}_baseline{suffix_str}.png"
+
+    current_path = snapshot_dir / f"{snapshot_name}_current{suffix_str}.png"
+    diff_path = snapshot_dir / f"{snapshot_name}_diff{suffix_str}.png"
 
     # Ensure consistent viewport before screenshot
     page.set_viewport_size({"width": 1280, "height": 720})
@@ -34,14 +46,13 @@ def verify_visual_state(page: Page, snapshot_name: str, tolerance: float = 1.0):
     print(f"Capturing snapshot for: {snapshot_name}")
     page.screenshot(path=str(current_path))
 
-    # Create baseline if missing
+    # Create baseline if missing (Only if NOT expecting fail)
     if not snapshot_path.exists():
+        if expect_fail:
+            pytest.fail(f"Expected failure baseline {snapshot_path} does not exist. Cannot run negative test.")
+        
         import shutil
         shutil.copy(current_path, snapshot_path)
-        # We can either fail or warn. To ensure "Green" on first run if confirmed, we could just pass.
-        # But standard is to fail or at least notify. 
-        # For this specific task flow, failing once effectively communicates "Baseline Created".
-        import warnings
         warnings.warn(f"Snapshot created at {snapshot_path}. Run test again to verify.")
         return
 
@@ -52,7 +63,13 @@ def verify_visual_state(page: Page, snapshot_name: str, tolerance: float = 1.0):
         pytest.fail(f"Image dimensions differ: Baseline {img_baseline.size} vs Current {img_current.size}")
 
     diff_score = rmsdiff(img_baseline, img_current)
-    print(f"RMS Difference Score ({snapshot_name}): {diff_score}")
+    print(f"RMS Difference Score ({snapshot_name} vs {snapshot_path.name}): {diff_score}")
+
+    if expect_fail:
+        if diff_score <= tolerance:
+            ImageChops.difference(img_baseline, img_current).save(diff_path)
+            pytest.fail(f"Negative Test unsuccesful! Expected mismatch > {tolerance}, but got {diff_score}. Images match too closely.")
+        return
 
     if diff_score > tolerance:
         ImageChops.difference(img_baseline, img_current).save(diff_path)
@@ -76,6 +93,30 @@ def test_montreia_map_visual(page: Page):
 
     verify_visual_state(page, "montreia_map")
 
+def test_montreia_visual_fail_check(page: Page):
+    """
+    Negative Test: verify that the system correctly identifies a mismatch.
+    Compares current map state against 'montreia_map_baseline__FALSE.png'.
+    """
+    base_dir = Path(__file__).resolve().parent.parent
+    map_path = base_dir / "fantasy_worlds" / "Montreia" / "Montreia_map.html"
+    map_url = map_path.as_uri()
+
+    print(f"Navigating to {map_url} (Negative Test)")
+    page.goto(map_url)
+    page.wait_for_selector("#toggleStateTable")
+    
+    # Stabilize
+    page.mouse.move(0, 0)
+    page.wait_for_timeout(2000)
+
+    verify_visual_state(
+        page, 
+        "montreia_map", 
+        suffix_str="__FALSE",
+        expect_fail=True
+    )
+
 def test_montreia_map_buttons_sequence(page: Page):
     """
     Sequential visual test:
@@ -97,13 +138,10 @@ def test_montreia_map_buttons_sequence(page: Page):
     page.mouse.move(0, 0)
     page.wait_for_timeout(1000)
 
-    # 1. Toggle Map (Should hide/show map polygons?)
-    # Based on HTML class="toggle-btn active" id="toggleMap", clicking it might toggle visibility.
-    # Let's interact and snapshot.
-    
+    # 1. Toggle Map
     print("Clicking Toggle Map...")
     page.click("#toggleMap")
-    page.wait_for_timeout(500) # Wait for potential transition/render
+    page.wait_for_timeout(500)
     verify_visual_state(page, "montreia_seq_1_map_click")
 
     # 2. Toggle Food Trade
