@@ -54,7 +54,14 @@
                 Table</button>
             <button class="toggle-btn active" id="toggleMap" onclick="toggleMap()">Show Map</button>
             <button class="toggle-btn" id="toggleMapMode" onclick="toggleMapMode()">Mode: Biome</button>
+            <button class="toggle-btn special" id="toggleAdventure" onclick="toggleAdventureMode()">⚔️
+                Adventure</button>
             <span>| Total Burgs: {{ total_burgs }}</span>
+            <div id="adventureStats" class="adventure-stats" style="display:none;">
+                <span title="Soldiers">🛡️ <span id="advSoldiers">0</span></span>
+                <span title="Food">🍎 <span id="advFood">0</span></span>
+                <span title="Gold">💰 <span id="advGold">0</span></span>
+            </div>
         </div>
     </header>
 
@@ -67,8 +74,9 @@
                     {% for p in background_paths %}
                     <path d="{{ p.d }}" fill="{{ p.fill }}" stroke="none" data-state-color="{{ p.state_fill }}"
                         data-biome-color="{{ p.biome_fill }}" data-state-id="{{ p.state_id }}" data-height="{{ p.h }}"
-                        data-temp="{{ p.t }}" data-biome="{{ p.biome_name }}" data-state="{{ p.state_name }}" {% if
-                        p.is_water %}data-is-water="true" {% endif %} onclick="selectState({{ p.state_id }})" />
+                        data-temp="{{ p.t }}" data-biome="{{ p.biome_name }}" data-state="{{ p.state_name }}"
+                        data-cell-id="{{ p.cell_id }}" {% if p.is_water %}data-is-water="true" {% endif %}
+                        onclick="selectState({{ p.state_id }})" />
                     {% endfor %}
                 </g>
 
@@ -216,7 +224,9 @@
         <script>
             /* Injected Data */
             var diplomacyMatrix = {{ diplomacy_matrix }};
+            var diplomacyMatrix = {{ diplomacy_matrix }};
             var stateNameIdMap = {{ state_name_id_map }};
+            var graphData = {{ graph_data }};
         </script>
         <script src="../map.js"></script>
 </body>

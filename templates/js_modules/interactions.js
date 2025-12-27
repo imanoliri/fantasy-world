@@ -1,5 +1,10 @@
-// Map Interactions
 svg.addEventListener('click', (e) => {
+    // Adventure Mode
+    if (window.AdventureManager && window.AdventureManager.active) {
+        window.AdventureManager.handleClick(e.target);
+        return;
+    }
+
     if (e.target.classList.contains('burg-dot')) {
         const id = e.target.getAttribute('data-id');
         selectBurg(id);
