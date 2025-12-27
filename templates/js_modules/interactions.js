@@ -14,6 +14,13 @@ svg.addEventListener('click', (e) => {
     }
 });
 
+svg.addEventListener('contextmenu', (e) => {
+    if (window.AdventureManager && window.AdventureManager.active) {
+        e.preventDefault(); // Prevent default context menu
+        window.AdventureManager.handleRightClick(e.target);
+    }
+});
+
 svg.addEventListener('mousemove', (e) => {
     if (e.target.classList.contains('burg-dot')) {
         const name = e.target.getAttribute('data-name');

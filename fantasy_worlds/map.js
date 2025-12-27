@@ -480,7 +480,9 @@ const AdventureManager = {
         gold: 10
     },
     partyElement: null,
+    partyElement: null,
     pathElement: null,
+    previewPathElement: null,
     isMoving: false,
     movementId: 0,
 
@@ -502,19 +504,31 @@ const AdventureManager = {
         // Create path element (polyline)
         const pathLine = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
         pathLine.setAttribute("fill", "none");
-        pathLine.setAttribute("stroke", "#ffffff");
-        pathLine.setAttribute("stroke-width", "2");
+        pathLine.setAttribute("stroke", "#ff0000"); // Red
+        pathLine.setAttribute("stroke-width", "3");
         pathLine.setAttribute("stroke-dasharray", "5,5");
         pathLine.setAttribute("pointer-events", "none");
-        pathLine.style.opacity = "0.7";
+        pathLine.style.opacity = "0.8";
         pathLine.style.display = "none";
 
+        // Create preview path element (polyline) different style
+        const previewLine = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+        previewLine.setAttribute("fill", "none");
+        previewLine.setAttribute("stroke", "#00ffff"); // Cyan
+        previewLine.setAttribute("stroke-width", "3");
+        previewLine.setAttribute("stroke-dasharray", "5,5"); // Same dash as normal
+        previewLine.setAttribute("pointer-events", "none");
+        previewLine.style.opacity = "0.8";
+        previewLine.style.display = "none";
+
         const svg = document.getElementById('mapSvg');
+        svg.appendChild(previewLine);
         svg.appendChild(pathLine);
         svg.appendChild(circle); // Append circle after to be on top
 
         this.partyElement = circle;
         this.pathElement = pathLine;
+        this.previewPathElement = previewLine;
     },
 
     toggle() {
@@ -573,23 +587,16 @@ const AdventureManager = {
 
     async handleClick(target) {
         if (!this.active) return;
+
+        // Clear preview on click
+        this.drawPreviewPath([]);
+
         // if moving, we override. No return.
 
         // Increment movementId to invalidate previous moves
         this.movementId++;
 
-        let cellId = null;
-
-        if (target.tagName === 'path') {
-            const id = target.getAttribute('data-cell-id');
-            if (id) cellId = parseInt(id);
-        } else if (target.classList.contains('burg-dot')) {
-            // Find closest cell to burg
-            // We can read x,y from circle
-            const cx = parseFloat(target.getAttribute('cx'));
-            const cy = parseFloat(target.getAttribute('cy'));
-            cellId = this.findCellAt(cx, cy);
-        }
+        const cellId = this.getTargetCellId(target);
 
         if (cellId !== null) {
             // Check if water
@@ -608,6 +615,39 @@ const AdventureManager = {
                 this.showFeedback("No path found (or too far/blocked)!");
             }
         }
+    },
+
+    handleRightClick(target) {
+        if (!this.active) return;
+
+        const cellId = this.getTargetCellId(target);
+        if (cellId !== null) {
+            // Pathfinding Preview
+            if (graphData[cellId].h < 20) {
+                this.showFeedback("Cannot preview path to water!");
+                return;
+            }
+            const path = this.findPath(this.party.cell, cellId);
+            if (path && path.length > 0) {
+                this.drawPreviewPath(path);
+                this.showFeedback(`Path distance: ${path.length} steps`);
+            } else {
+                this.showFeedback("No path possible");
+            }
+        }
+    },
+
+    getTargetCellId(target) {
+        let cellId = null;
+        if (target.tagName === 'path') {
+            const id = target.getAttribute('data-cell-id');
+            if (id) cellId = parseInt(id);
+        } else if (target.classList.contains('burg-dot')) {
+            const cx = parseFloat(target.getAttribute('cx'));
+            const cy = parseFloat(target.getAttribute('cy'));
+            cellId = this.findCellAt(cx, cy);
+        }
+        return cellId;
     },
 
     findCellAt(x, y) {
@@ -760,6 +800,23 @@ const AdventureManager = {
 
         this.pathElement.setAttribute("points", points);
         this.pathElement.style.display = "block";
+    },
+
+    drawPreviewPath(path) {
+        if (!this.previewPathElement) return;
+
+        if (!path || path.length === 0) {
+            this.previewPathElement.style.display = "none";
+            return;
+        }
+
+        const points = path.map(id => {
+            const cell = graphData[id];
+            return cell ? `${cell.p[0]},${cell.p[1]}` : "";
+        }).join(" ");
+
+        this.previewPathElement.setAttribute("points", points);
+        this.previewPathElement.style.display = "block";
     }
 };
 
@@ -780,6 +837,13 @@ svg.addEventListener('click', (e) => {
     } else {
         // Deselect if clicking empty space
         // selectBurg(null);
+    }
+});
+
+svg.addEventListener('contextmenu', (e) => {
+    if (window.AdventureManager && window.AdventureManager.active) {
+        e.preventDefault(); // Prevent default context menu
+        window.AdventureManager.handleRightClick(e.target);
     }
 });
 
