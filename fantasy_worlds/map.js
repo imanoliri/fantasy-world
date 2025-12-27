@@ -811,6 +811,10 @@ const AdventureManager = {
         const toolsAmount = Math.min(craftsmanQuartiers, 5);
         const canBuyTools = craftsmanQuartiers > 0;
 
+        const soldierQuartiers = burg.soldier_quartiers || 0;
+        const soldierCost = Math.max(1, 6 - soldierQuartiers);
+        const canRecruit = soldierQuartiers >= 1;
+
         this.popupElement.innerHTML = `
             <h2>${burg.name}</h2>
             <div class="content-wrapper">
@@ -823,7 +827,7 @@ const AdventureManager = {
             </div>
             <div class="actions">
                 <button class="btn-buy" onclick="AdventureManager.buyFood(10, 1)">Buy 10 Food (1 💰)</button>
-                <button class="btn-recruit" onclick="AdventureManager.recruitSoldiers(5, 1, ${burg.cell_id})" ${(burg.soldier_quartiers || 0) < 1 ? 'disabled' : ''}>Recruit 5 Soldiers (1 💰, 5 🛠️)</button>
+                ${canRecruit ? `<button class="btn-recruit" onclick="AdventureManager.recruitSoldiers(5, ${soldierCost}, ${burg.cell_id})">Recruit 5 Soldiers (${soldierCost} 💰, 5 🛠️)</button>` : ''}
                 ${canBuyTools ? `<button class="btn-buy" onclick="AdventureManager.buyTools(${toolsAmount}, 1)">Buy ${toolsAmount} Tools (1 💰)</button>` : ''}
                 <button class="btn-leave" onclick="AdventureManager.closePopup()">Leave</button>
             </div>
