@@ -318,6 +318,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         'food_rows': food_rows,
         'gold_rows': gold_rows,
         'gold_rows': gold_rows,
+        'burgs_data_json': json.dumps(burgs_data),
         'diplomacy_matrix': json.dumps(diplomacy_matrix),
         'state_name_id_map': json.dumps(state_name_id_map),
         'graph_data': json.dumps([{

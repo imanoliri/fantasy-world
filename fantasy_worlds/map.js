@@ -483,8 +483,10 @@ const AdventureManager = {
     partyElement: null,
     pathElement: null,
     previewPathElement: null,
+    popupElement: null,
     isMoving: false,
     movementId: 0,
+    knownBurgs: {},
 
     init() {
         if (this.partyElement) return;
@@ -756,6 +758,106 @@ const AdventureManager = {
         }
 
         this.isMoving = false;
+
+        // Check for arrival at burg
+        this.checkForArrival();
+    },
+
+    checkForArrival() {
+        // We know where the party is: this.party.cell
+        // We need to find if there is a burg at this cell. Easiest is to search burgs_data (global var)
+        const burg = burgsData.find(b => b.cell_id === this.party.cell);
+
+        if (burg) {
+            this.showBurgPopup(burg);
+        }
+    },
+
+    showBurgPopup(burg) {
+        // Create popup if doesn't exist
+        if (!this.popupElement) {
+            this.popupElement = document.createElement('div');
+            this.popupElement.className = 'burg-popup';
+            document.body.appendChild(this.popupElement);
+        }
+
+        // Calculate Surplus and Reset Logic
+        // "if it has an excedent of food, your food resets to 10x that excedent"
+        // excedent is net_food (if positive)
+        let notificationHtml = '';
+        const netFood = parseFloat(burg.net_food); // Ensure number
+
+        if (netFood > 0) {
+            const resetValue = Math.floor(netFood * 10);
+            // Only reset if it's an improvement or just force reset? User said "resets to".
+            // New logic: "if it's less, fill it up to the food from the surplus"
+            if (this.party.food < resetValue) {
+                this.party.food = resetValue;
+                notificationHtml = `<div class="notification">Food refilled to ${resetValue} due to surplus!</div>`;
+                this.updateStats();
+            }
+        }
+
+        // Ensure overlay exists
+        let overlay = document.getElementById('modalOverlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.id = 'modalOverlay';
+            overlay.className = 'modal-overlay';
+            document.body.appendChild(overlay);
+        }
+        overlay.style.display = 'block';
+
+        this.popupElement.innerHTML = `
+            <h2>${burg.name}</h2>
+            <div class="content-wrapper">
+                <div class="info">
+                    Type: ${burg.type}<br>
+                    Pop: ${burg.population_fmt}<br>
+                    Food Surplus: ${parseFloat(burg.net_food).toFixed(2)}
+                </div>
+                ${notificationHtml}
+            </div>
+            <div class="actions">
+                <button class="btn-buy" onclick="AdventureManager.buyFood(10, 1)">Buy 10 Food (1 💰)</button>
+                <button class="btn-recruit" onclick="AdventureManager.recruitSoldiers(5, 1)">Recruit 5 Soldiers (1 💰)</button>
+                <button class="btn-leave" onclick="AdventureManager.closePopup()">Leave</button>
+            </div>
+        `;
+
+        this.popupElement.style.display = 'block';
+    },
+
+    closePopup() {
+        if (this.popupElement) {
+            this.popupElement.style.display = 'none';
+        }
+        const overlay = document.getElementById('modalOverlay');
+        if (overlay) {
+            overlay.style.display = 'none';
+        }
+    },
+
+    buyFood(amount, cost) {
+        if (this.party.gold >= cost) {
+            this.party.gold -= cost;
+            this.party.food += amount;
+            this.updateStats();
+            this.showFeedback(`Bought ${amount} food!`);
+        } else {
+            this.showFeedback("Not enough gold!");
+        }
+    },
+
+    recruitSoldiers(amount, cost) {
+        if (this.party.gold >= cost) {
+            this.party.gold -= cost;
+            this.party.soldiers += amount;
+            this.updateStats();
+            this.showFeedback(`Recruited ${amount} soldiers!`);
+        } else {
+            this.showFeedback("Not enough gold!");
+        }
     },
 
     render() {

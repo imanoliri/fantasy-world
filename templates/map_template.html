@@ -96,7 +96,7 @@
                     stroke-width="{{ b.stroke_width }}" class="burg-dot{{ b.capital_class }} {{ b.dot_class_str }}"
                     data-id="{{ b.id }}" data-name="{{ b.name }}" data-pop="{{ b.population }}" data-type="{{ b.type }}"
                     data-state="{{ b.state_name }}" data-gold="{{ b.net_gold }}" data-food="{{ b.net_food }}"
-                    data-quartiers="{{ b.quartier_details }}">
+                    data-quartiers="{{ b.quartier_details }}" data-cell-id="{{ b.cell_id }}">
                 </circle>
                 {% endfor %}
             </svg>
@@ -224,9 +224,9 @@
         <script>
             /* Injected Data */
             var diplomacyMatrix = {{ diplomacy_matrix }};
-            var diplomacyMatrix = {{ diplomacy_matrix }};
             var stateNameIdMap = {{ state_name_id_map }};
             var graphData = {{ graph_data }};
+            var burgsData = {{ burgs_data_json }};
         </script>
         <script src="../map.js"></script>
 </body>

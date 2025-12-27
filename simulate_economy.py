@@ -89,6 +89,7 @@ def get_burg_model(burg, config):
     return {
         'id': burg.get('i'), 
         'name': burg.get('name'), 
+        'cell': burg.get('cell'), # Important for map mapping
         'x': burg.get('x'), 
         'y': burg.get('y'), 
         'type': burg.get('type'), 
