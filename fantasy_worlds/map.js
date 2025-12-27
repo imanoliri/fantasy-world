@@ -477,7 +477,8 @@ const AdventureManager = {
         cell: 0,
         soldiers: 10,
         food: 50,
-        gold: 10
+        gold: 10,
+        tools: 10
     },
     partyElement: null,
     partyElement: null,
@@ -576,6 +577,7 @@ const AdventureManager = {
             this.party.soldiers = 10;
             this.party.food = 50;
             this.party.gold = 10;
+            this.party.tools = 10;
             this.partyElement.style.display = "block";
             this.updateStats();
             this.render();
@@ -782,18 +784,15 @@ const AdventureManager = {
         }
 
         // Calculate Surplus and Reset Logic
-        // "if it has an excedent of food, your food resets to 10x that excedent"
-        // excedent is net_food (if positive)
         let notificationHtml = '';
         const netFood = parseFloat(burg.net_food); // Ensure number
 
         if (netFood > 0) {
-            const resetValue = Math.floor(netFood * 10);
-            // Only reset if it's an improvement or just force reset? User said "resets to".
-            // New logic: "if it's less, fill it up to the food from the surplus"
-            if (this.party.food < resetValue) {
-                this.party.food = resetValue;
-                notificationHtml = `<div class="notification">Food refilled to ${resetValue} due to surplus!</div>`;
+            // Only refill if current food is LESS than the surplus capacity
+            const surplusCap = Math.floor(netFood * 10);
+            if (this.party.food < surplusCap) {
+                this.party.food = surplusCap;
+                notificationHtml = `<div class="notification">Abundant food! Supplies reset to ${surplusCap}.</div>`;
                 this.updateStats();
             }
         }
@@ -808,6 +807,10 @@ const AdventureManager = {
         }
         overlay.style.display = 'block';
 
+        const craftsmanQuartiers = burg.craftsman_quartiers || 0;
+        const toolsAmount = Math.min(craftsmanQuartiers, 5);
+        const canBuyTools = craftsmanQuartiers > 0;
+
         this.popupElement.innerHTML = `
             <h2>${burg.name}</h2>
             <div class="content-wrapper">
@@ -820,7 +823,8 @@ const AdventureManager = {
             </div>
             <div class="actions">
                 <button class="btn-buy" onclick="AdventureManager.buyFood(10, 1)">Buy 10 Food (1 💰)</button>
-                <button class="btn-recruit" onclick="AdventureManager.recruitSoldiers(5, 1)">Recruit 5 Soldiers (1 💰)</button>
+                <button class="btn-recruit" onclick="AdventureManager.recruitSoldiers(5, 1, ${burg.cell_id})" ${(burg.soldier_quartiers || 0) < 1 ? 'disabled' : ''}>Recruit 5 Soldiers (1 💰, 5 🛠️)</button>
+                ${canBuyTools ? `<button class="btn-buy" onclick="AdventureManager.buyTools(${toolsAmount}, 1)">Buy ${toolsAmount} Tools (1 💰)</button>` : ''}
                 <button class="btn-leave" onclick="AdventureManager.closePopup()">Leave</button>
             </div>
         `;
@@ -849,14 +853,47 @@ const AdventureManager = {
         }
     },
 
-    recruitSoldiers(amount, cost) {
+    buyTools(amount, cost) {
         if (this.party.gold >= cost) {
             this.party.gold -= cost;
+            this.party.tools += amount;
+            this.updateStats();
+            this.showFeedback(`Bought ${amount} tools!`);
+        } else {
+            this.showFeedback("Not enough gold!");
+        }
+    },
+
+    recruitSoldiers(amount, cost, burgCellId) {
+        // Find burg to update its soldier count
+        const burg = burgsData.find(b => b.cell_id === burgCellId);
+
+        if (!burg) {
+            console.error("Burg not found for recruitment");
+            return;
+        }
+
+        const availableQuartiers = burg.soldier_quartiers || 0;
+        if (availableQuartiers < 1) {
+            this.showFeedback("No military quarters available!");
+            return;
+        }
+
+        const toolsCost = 5;
+
+        if (this.party.gold >= cost && this.party.tools >= toolsCost) {
+            this.party.gold -= cost;
+            this.party.tools -= toolsCost;
             this.party.soldiers += amount;
+
             this.updateStats();
             this.showFeedback(`Recruited ${amount} soldiers!`);
         } else {
-            this.showFeedback("Not enough gold!");
+            if (this.party.gold < cost) {
+                this.showFeedback("Not enough gold!");
+            } else {
+                this.showFeedback("Not enough tools!");
+            }
         }
     },
 
@@ -873,6 +910,7 @@ const AdventureManager = {
         document.getElementById('advSoldiers').textContent = this.party.soldiers;
         document.getElementById('advFood').textContent = this.party.food;
         document.getElementById('advGold').textContent = this.party.gold;
+        document.getElementById('advTools').textContent = this.party.tools;
     },
 
     showFeedback(msg) {

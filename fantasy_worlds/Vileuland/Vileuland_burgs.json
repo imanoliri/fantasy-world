@@ -20,7 +20,10 @@
             "Clerk": 795,
             "Soldier": 795
         },
+        "soldiers": 795,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 3,
@@ -63,7 +66,10 @@
             "Clerk": 453,
             "Soldier": 453
         },
+        "soldiers": 453,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 1,
@@ -106,7 +112,10 @@
             "Clerk": 436,
             "Soldier": 436
         },
+        "soldiers": 436,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -149,7 +158,10 @@
             "Clerk": 342,
             "Soldier": 342
         },
+        "soldiers": 342,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -192,7 +204,10 @@
             "Clerk": 3694,
             "Soldier": 3694
         },
+        "soldiers": 3694,
         "nr_quartiers": 59,
+        "soldier_quartiers": 4,
+        "craftsman_quartiers": 9,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 16,
@@ -235,7 +250,10 @@
             "Clerk": 1135,
             "Soldier": 1135
         },
+        "soldiers": 1135,
         "nr_quartiers": 13,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -278,7 +296,10 @@
             "Clerk": 318,
             "Soldier": 318
         },
+        "soldiers": 318,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -321,7 +342,10 @@
             "Clerk": 2635,
             "Soldier": 2635
         },
+        "soldiers": 2635,
         "nr_quartiers": 41,
+        "soldier_quartiers": 3,
+        "craftsman_quartiers": 6,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 11,
@@ -364,7 +388,10 @@
             "Clerk": 2189,
             "Soldier": 2189
         },
+        "soldiers": 2189,
         "nr_quartiers": 33,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 5,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 9,
@@ -407,7 +434,10 @@
             "Clerk": 2106,
             "Soldier": 2106
         },
+        "soldiers": 2106,
         "nr_quartiers": 27,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 5,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 1,
@@ -450,7 +480,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 1,
@@ -493,7 +526,10 @@
             "Clerk": 0,
             "Soldier": 5415
         },
+        "soldiers": 5415,
         "nr_quartiers": 75,
+        "soldier_quartiers": 6,
+        "craftsman_quartiers": 6,
         "quartiers": {
             "Farmer": 54,
             "Fisherman": 3,
@@ -536,7 +572,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -579,7 +618,10 @@
             "Clerk": 0,
             "Soldier": 1381
         },
+        "soldiers": 1381,
         "nr_quartiers": 15,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -622,7 +664,10 @@
             "Clerk": 0,
             "Soldier": 1568
         },
+        "soldiers": 1568,
         "nr_quartiers": 17,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -665,7 +710,10 @@
             "Clerk": 0,
             "Soldier": 1235
         },
+        "soldiers": 1235,
         "nr_quartiers": 18,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 5,
@@ -708,7 +756,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 26,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 22,
             "Fisherman": 1,
@@ -751,7 +802,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -794,7 +848,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -837,7 +894,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -880,7 +940,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -923,7 +986,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -966,7 +1032,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -1009,7 +1078,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -1052,7 +1124,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 15,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -1095,7 +1170,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -1138,7 +1216,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 3,
@@ -1181,7 +1262,10 @@
             "Clerk": 0,
             "Soldier": 267
         },
+        "soldiers": 267,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -1224,7 +1308,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -1267,7 +1354,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -1310,7 +1400,10 @@
             "Clerk": 0,
             "Soldier": 199
         },
+        "soldiers": 199,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -1353,7 +1446,10 @@
             "Clerk": 0,
             "Soldier": 1958
         },
+        "soldiers": 1958,
         "nr_quartiers": 26,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 19,
             "Fisherman": 1,
@@ -1396,7 +1492,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -1439,7 +1538,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -1482,7 +1584,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -1525,7 +1630,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -1568,7 +1676,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -1611,7 +1722,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 2,
@@ -1654,7 +1768,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -1697,7 +1814,10 @@
             "Clerk": 0,
             "Soldier": 1503
         },
+        "soldiers": 1503,
         "nr_quartiers": 21,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 6,
@@ -1740,7 +1860,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 3,
@@ -1783,7 +1906,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -1826,7 +1952,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -1869,7 +1998,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -1912,7 +2044,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -1955,7 +2090,10 @@
             "Clerk": 0,
             "Soldier": 195
         },
+        "soldiers": 195,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -1998,7 +2136,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -2041,7 +2182,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -2084,7 +2228,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 2,
@@ -2127,7 +2274,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -2170,7 +2320,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -2213,7 +2366,10 @@
             "Clerk": 0,
             "Soldier": 3092
         },
+        "soldiers": 3092,
         "nr_quartiers": 48,
+        "soldier_quartiers": 3,
+        "craftsman_quartiers": 3,
         "quartiers": {
             "Farmer": 23,
             "Fisherman": 13,
@@ -2256,7 +2412,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 3,
@@ -2299,7 +2458,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -2342,7 +2504,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -2385,7 +2550,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -2428,7 +2596,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -2471,7 +2642,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 21,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 17,
             "Fisherman": 1,
@@ -2514,7 +2688,10 @@
             "Clerk": 0,
             "Soldier": 1876
         },
+        "soldiers": 1876,
         "nr_quartiers": 25,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 18,
             "Fisherman": 1,
@@ -2557,7 +2734,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -2600,7 +2780,10 @@
             "Clerk": 0,
             "Soldier": 152
         },
+        "soldiers": 152,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -2643,7 +2826,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 4,
@@ -2686,7 +2872,10 @@
             "Clerk": 0,
             "Soldier": 1229
         },
+        "soldiers": 1229,
         "nr_quartiers": 14,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -2729,7 +2918,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -2772,7 +2964,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -2815,7 +3010,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -2858,7 +3056,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -2901,7 +3102,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -2944,7 +3148,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -2987,7 +3194,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 27,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 23,
             "Fisherman": 1,
@@ -3030,7 +3240,10 @@
             "Clerk": 0,
             "Soldier": 1507
         },
+        "soldiers": 1507,
         "nr_quartiers": 21,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 6,
@@ -3073,7 +3286,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -3116,7 +3332,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -3159,7 +3378,10 @@
             "Clerk": 0,
             "Soldier": 1483
         },
+        "soldiers": 1483,
         "nr_quartiers": 21,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 6,
@@ -3202,7 +3424,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -3245,7 +3470,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -3288,7 +3516,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -3331,7 +3562,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -3374,7 +3608,10 @@
             "Clerk": 0,
             "Soldier": 1279
         },
+        "soldiers": 1279,
         "nr_quartiers": 18,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 5,
@@ -3417,7 +3654,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -3460,7 +3700,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -3503,7 +3746,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 2,
@@ -3546,7 +3792,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -3589,7 +3838,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -3632,7 +3884,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -3675,7 +3930,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -3718,7 +3976,10 @@
             "Clerk": 0,
             "Soldier": 1703
         },
+        "soldiers": 1703,
         "nr_quartiers": 24,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 17,
             "Fisherman": 1,
@@ -3761,7 +4022,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -3804,7 +4068,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 22,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 18,
             "Fisherman": 1,
@@ -3847,7 +4114,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -3890,7 +4160,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -3933,7 +4206,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -3976,7 +4252,10 @@
             "Clerk": 0,
             "Soldier": 161
         },
+        "soldiers": 161,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -4019,7 +4298,10 @@
             "Clerk": 0,
             "Soldier": 131
         },
+        "soldiers": 131,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -4062,7 +4344,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -4105,7 +4390,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -4148,7 +4436,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -4191,7 +4482,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -4234,7 +4528,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -4277,7 +4574,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -4320,7 +4620,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -4363,7 +4666,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -4406,7 +4712,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -4449,7 +4758,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -4492,7 +4804,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -4535,7 +4850,10 @@
             "Clerk": 0,
             "Soldier": 1378
         },
+        "soldiers": 1378,
         "nr_quartiers": 15,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -4578,7 +4896,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -4621,7 +4942,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -4664,7 +4988,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -4707,7 +5034,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -4750,7 +5080,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -4793,7 +5126,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 26,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 22,
             "Fisherman": 1,
@@ -4836,7 +5172,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -4879,7 +5218,10 @@
             "Clerk": 0,
             "Soldier": 1769
         },
+        "soldiers": 1769,
         "nr_quartiers": 28,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 7,
@@ -4922,7 +5264,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -4965,7 +5310,10 @@
             "Clerk": 0,
             "Soldier": 1289
         },
+        "soldiers": 1289,
         "nr_quartiers": 14,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -5008,7 +5356,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -5051,7 +5402,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -5094,7 +5448,10 @@
             "Clerk": 0,
             "Soldier": 1085
         },
+        "soldiers": 1085,
         "nr_quartiers": 12,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -5137,7 +5494,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 2,
@@ -5180,7 +5540,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -5223,7 +5586,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -5266,7 +5632,10 @@
             "Clerk": 0,
             "Soldier": 803
         },
+        "soldiers": 803,
         "nr_quartiers": 10,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -5309,7 +5678,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -5352,7 +5724,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -5395,7 +5770,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -5438,7 +5816,10 @@
             "Clerk": 0,
             "Soldier": 1636
         },
+        "soldiers": 1636,
         "nr_quartiers": 23,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -5481,7 +5862,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -5524,7 +5908,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -5567,7 +5954,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -5610,7 +6000,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -5653,7 +6046,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -5696,7 +6092,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -5739,7 +6138,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -5782,7 +6184,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -5825,7 +6230,10 @@
             "Clerk": 0,
             "Soldier": 1615
         },
+        "soldiers": 1615,
         "nr_quartiers": 23,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -5868,7 +6276,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -5911,7 +6322,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -5954,7 +6368,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -5997,7 +6414,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -6040,7 +6460,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -6083,7 +6506,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -6126,7 +6552,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -6169,7 +6598,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 15,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -6212,7 +6644,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -6255,7 +6690,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 2,
@@ -6298,7 +6736,10 @@
             "Clerk": 0,
             "Soldier": 2203
         },
+        "soldiers": 2203,
         "nr_quartiers": 29,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 22,
             "Fisherman": 1,
@@ -6341,7 +6782,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 20,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -6384,7 +6828,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -6427,7 +6874,10 @@
             "Clerk": 0,
             "Soldier": 1299
         },
+        "soldiers": 1299,
         "nr_quartiers": 18,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 5,
@@ -6470,7 +6920,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -6513,7 +6966,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -6556,7 +7012,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -6599,7 +7058,10 @@
             "Clerk": 0,
             "Soldier": 659
         },
+        "soldiers": 659,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -6642,7 +7104,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -6685,7 +7150,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 22,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 18,
             "Fisherman": 1,
@@ -6728,7 +7196,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -6771,7 +7242,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -6814,7 +7288,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -6857,7 +7334,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -6900,7 +7380,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -6943,7 +7426,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -6986,7 +7472,10 @@
             "Clerk": 0,
             "Soldier": 1662
         },
+        "soldiers": 1662,
         "nr_quartiers": 23,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -7029,7 +7518,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -7072,7 +7564,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 2,
@@ -7115,7 +7610,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -7158,7 +7656,10 @@
             "Clerk": 0,
             "Soldier": 2099
         },
+        "soldiers": 2099,
         "nr_quartiers": 27,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 20,
             "Fisherman": 1,
@@ -7201,7 +7702,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -7244,7 +7748,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 15,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -7287,7 +7794,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -7330,7 +7840,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -7373,7 +7886,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -7416,7 +7932,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -7459,7 +7978,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -7502,7 +8024,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 26,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 22,
             "Fisherman": 1,
@@ -7545,7 +8070,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 24,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 20,
             "Fisherman": 1,
@@ -7588,7 +8116,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -7631,7 +8162,10 @@
             "Clerk": 0,
             "Soldier": 1333
         },
+        "soldiers": 1333,
         "nr_quartiers": 15,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -7674,7 +8208,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -7717,7 +8254,10 @@
             "Clerk": 0,
             "Soldier": 1462
         },
+        "soldiers": 1462,
         "nr_quartiers": 16,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -7760,7 +8300,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -7803,7 +8346,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -7846,7 +8392,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -7889,7 +8438,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -7932,7 +8484,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -7975,7 +8530,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -8018,7 +8576,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -8061,7 +8622,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -8104,7 +8668,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 20,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -8147,7 +8714,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -8190,7 +8760,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -8233,7 +8806,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -8276,7 +8852,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 1,
@@ -8319,7 +8898,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -8362,7 +8944,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -8405,7 +8990,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -8448,7 +9036,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -8491,7 +9082,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -8534,7 +9128,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -8577,7 +9174,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -8620,7 +9220,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -8663,7 +9266,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -8706,7 +9312,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -8749,7 +9358,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -8792,7 +9404,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -8835,7 +9450,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -8878,7 +9496,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -8921,7 +9542,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -8964,7 +9588,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -9007,7 +9634,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -9050,7 +9680,10 @@
             "Clerk": 0,
             "Soldier": 1480
         },
+        "soldiers": 1480,
         "nr_quartiers": 16,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -9093,7 +9726,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -9136,7 +9772,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -9179,7 +9818,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -9222,7 +9864,10 @@
             "Clerk": 0,
             "Soldier": 135
         },
+        "soldiers": 135,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -9265,7 +9910,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -9308,7 +9956,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -9351,7 +10002,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -9394,7 +10048,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -9437,7 +10094,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -9480,7 +10140,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -9523,7 +10186,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -9566,7 +10232,10 @@
             "Clerk": 0,
             "Soldier": 2196
         },
+        "soldiers": 2196,
         "nr_quartiers": 30,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 19,
             "Fisherman": 5,
@@ -9609,7 +10278,10 @@
             "Clerk": 0,
             "Soldier": 1614
         },
+        "soldiers": 1614,
         "nr_quartiers": 23,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -9652,7 +10324,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -9695,7 +10370,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -9738,7 +10416,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -9781,7 +10462,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -9824,7 +10508,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 1,
@@ -9867,7 +10554,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 1,
@@ -9910,7 +10600,10 @@
             "Clerk": 0,
             "Soldier": 1416
         },
+        "soldiers": 1416,
         "nr_quartiers": 20,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 6,
@@ -9953,7 +10646,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -9996,7 +10692,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -10039,7 +10738,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -10082,7 +10784,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -10125,7 +10830,10 @@
             "Clerk": 0,
             "Soldier": 141
         },
+        "soldiers": 141,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -10168,7 +10876,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -10211,7 +10922,10 @@
             "Clerk": 0,
             "Soldier": 1483
         },
+        "soldiers": 1483,
         "nr_quartiers": 16,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -10254,7 +10968,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -10297,7 +11014,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -10340,7 +11060,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -10383,7 +11106,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -10426,7 +11152,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -10469,7 +11198,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -10512,7 +11244,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -10555,7 +11290,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 15,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -10598,7 +11336,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -10641,7 +11382,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -10684,7 +11428,10 @@
             "Clerk": 0,
             "Soldier": 2455
         },
+        "soldiers": 2455,
         "nr_quartiers": 33,
+        "soldier_quartiers": 3,
+        "craftsman_quartiers": 3,
         "quartiers": {
             "Farmer": 24,
             "Fisherman": 1,
@@ -10727,7 +11474,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -10770,7 +11520,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -10813,7 +11566,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -10856,7 +11612,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -10899,7 +11658,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -10942,7 +11704,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -10985,7 +11750,10 @@
             "Clerk": 0,
             "Soldier": 137
         },
+        "soldiers": 137,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -11028,7 +11796,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -11071,7 +11842,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -11114,7 +11888,10 @@
             "Clerk": 0,
             "Soldier": 1367
         },
+        "soldiers": 1367,
         "nr_quartiers": 15,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -11157,7 +11934,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -11200,7 +11980,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -11243,7 +12026,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -11286,7 +12072,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -11329,7 +12118,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -11372,7 +12164,10 @@
             "Clerk": 0,
             "Soldier": 1547
         },
+        "soldiers": 1547,
         "nr_quartiers": 17,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -11415,7 +12210,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -11458,7 +12256,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -11501,7 +12302,10 @@
             "Clerk": 0,
             "Soldier": 1574
         },
+        "soldiers": 1574,
         "nr_quartiers": 17,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -11544,7 +12348,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -11587,7 +12394,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 25,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 21,
             "Fisherman": 1,
@@ -11630,7 +12440,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -11673,7 +12486,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -11716,7 +12532,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 4,
@@ -11759,7 +12578,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 20,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -11802,7 +12624,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -11845,7 +12670,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 4,
@@ -11888,7 +12716,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 19,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 6,
@@ -11931,7 +12762,10 @@
             "Clerk": 0,
             "Soldier": 1694
         },
+        "soldiers": 1694,
         "nr_quartiers": 23,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -11974,7 +12808,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -12017,7 +12854,10 @@
             "Clerk": 0,
             "Soldier": 2083
         },
+        "soldiers": 2083,
         "nr_quartiers": 32,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 9,
@@ -12060,7 +12900,10 @@
             "Clerk": 0,
             "Soldier": 158
         },
+        "soldiers": 158,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -12103,7 +12946,10 @@
             "Clerk": 0,
             "Soldier": 1832
         },
+        "soldiers": 1832,
         "nr_quartiers": 25,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 18,
             "Fisherman": 1,
@@ -12146,7 +12992,10 @@
             "Clerk": 0,
             "Soldier": 2153
         },
+        "soldiers": 2153,
         "nr_quartiers": 28,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 21,
             "Fisherman": 1,
@@ -12189,7 +13038,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -12232,7 +13084,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -12275,7 +13130,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -12318,7 +13176,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -12361,7 +13222,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -12404,7 +13268,10 @@
             "Clerk": 0,
             "Soldier": 1471
         },
+        "soldiers": 1471,
         "nr_quartiers": 16,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -12447,7 +13314,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -12490,7 +13360,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -12533,7 +13406,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -12576,7 +13452,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -12619,7 +13498,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -12662,7 +13544,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -12705,7 +13590,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -12748,7 +13636,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -12791,7 +13682,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -12834,7 +13728,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -12877,7 +13774,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -12920,7 +13820,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 22,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 18,
             "Fisherman": 1,
@@ -12963,7 +13866,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -13006,7 +13912,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -13049,7 +13958,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -13092,7 +14004,10 @@
             "Clerk": 0,
             "Soldier": 309
         },
+        "soldiers": 309,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -13135,7 +14050,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -13178,7 +14096,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -13221,7 +14142,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -13264,7 +14188,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -13307,7 +14234,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 22,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 18,
             "Fisherman": 1,
@@ -13350,7 +14280,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -13393,7 +14326,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -13436,7 +14372,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -13479,7 +14418,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -13522,7 +14464,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -13565,7 +14510,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -13608,7 +14556,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -13651,7 +14602,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 22,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 18,
             "Fisherman": 1,
@@ -13694,7 +14648,10 @@
             "Clerk": 0,
             "Soldier": 522
         },
+        "soldiers": 522,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -13737,7 +14694,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -13780,7 +14740,10 @@
             "Clerk": 0,
             "Soldier": 984
         },
+        "soldiers": 984,
         "nr_quartiers": 11,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -13823,7 +14786,10 @@
             "Clerk": 0,
             "Soldier": 1455
         },
+        "soldiers": 1455,
         "nr_quartiers": 16,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -13866,7 +14832,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -13909,7 +14878,10 @@
             "Clerk": 0,
             "Soldier": 4209
         },
+        "soldiers": 4209,
         "nr_quartiers": 58,
+        "soldier_quartiers": 5,
+        "craftsman_quartiers": 5,
         "quartiers": {
             "Farmer": 42,
             "Fisherman": 2,
@@ -13952,7 +14924,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -13995,7 +14970,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -14038,7 +15016,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -14081,7 +15062,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -14124,7 +15108,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -14167,7 +15154,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -14210,7 +15200,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -14253,7 +15246,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -14296,7 +15292,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -14339,7 +15338,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -14382,7 +15384,10 @@
             "Clerk": 0,
             "Soldier": 1401
         },
+        "soldiers": 1401,
         "nr_quartiers": 16,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -14425,7 +15430,10 @@
             "Clerk": 0,
             "Soldier": 915
         },
+        "soldiers": 915,
         "nr_quartiers": 11,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -14468,7 +15476,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -14511,7 +15522,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -14554,7 +15568,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 2,
@@ -14597,7 +15614,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -14640,7 +15660,10 @@
             "Clerk": 0,
             "Soldier": 530
         },
+        "soldiers": 530,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -14683,7 +15706,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -14726,7 +15752,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -14769,7 +15798,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -14812,7 +15844,10 @@
             "Clerk": 0,
             "Soldier": 545
         },
+        "soldiers": 545,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 2,
@@ -14855,7 +15890,10 @@
             "Clerk": 0,
             "Soldier": 500
         },
+        "soldiers": 500,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -14898,7 +15936,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -14941,7 +15982,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -14984,7 +16028,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -15027,7 +16074,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -15070,7 +16120,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -15113,7 +16166,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 28,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 24,
             "Fisherman": 1,
@@ -15156,7 +16212,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -15199,7 +16258,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 3,
@@ -15242,7 +16304,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -15285,7 +16350,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -15328,7 +16396,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -15371,7 +16442,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -15414,7 +16488,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 1,
@@ -15457,7 +16534,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -15500,7 +16580,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -15543,7 +16626,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -15586,7 +16672,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -15629,7 +16718,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -15672,7 +16764,10 @@
             "Clerk": 0,
             "Soldier": 866
         },
+        "soldiers": 866,
         "nr_quartiers": 10,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -15715,7 +16810,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -15758,7 +16856,10 @@
             "Clerk": 0,
             "Soldier": 244
         },
+        "soldiers": 244,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -15801,7 +16902,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -15844,7 +16948,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -15887,7 +16994,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 20,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -15930,7 +17040,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -15973,7 +17086,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 2,
@@ -16016,7 +17132,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 20,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -16059,7 +17178,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16102,7 +17224,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -16145,7 +17270,10 @@
             "Clerk": 0,
             "Soldier": 607
         },
+        "soldiers": 607,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -16188,7 +17316,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -16231,7 +17362,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -16274,7 +17408,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16317,7 +17454,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -16360,7 +17500,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -16403,7 +17546,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16446,7 +17592,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16489,7 +17638,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -16532,7 +17684,10 @@
             "Clerk": 0,
             "Soldier": 1997
         },
+        "soldiers": 1997,
         "nr_quartiers": 26,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 19,
             "Fisherman": 1,
@@ -16575,7 +17730,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16618,7 +17776,10 @@
             "Clerk": 0,
             "Soldier": 1443
         },
+        "soldiers": 1443,
         "nr_quartiers": 16,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -16661,7 +17822,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16704,7 +17868,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16747,7 +17914,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16790,7 +17960,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16833,7 +18006,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -16876,7 +18052,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 3,
@@ -16919,7 +18098,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -16962,7 +18144,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 1,
@@ -17005,7 +18190,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -17048,7 +18236,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -17091,7 +18282,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -17134,7 +18328,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -17177,7 +18374,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -17220,7 +18420,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -17263,7 +18466,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -17306,7 +18512,10 @@
             "Clerk": 0,
             "Soldier": 1344
         },
+        "soldiers": 1344,
         "nr_quartiers": 19,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 5,
@@ -17349,7 +18558,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -17392,7 +18604,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -17435,7 +18650,10 @@
             "Clerk": 0,
             "Soldier": 1359
         },
+        "soldiers": 1359,
         "nr_quartiers": 15,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -17478,7 +18696,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -17521,7 +18742,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -17564,7 +18788,10 @@
             "Clerk": 0,
             "Soldier": 1991
         },
+        "soldiers": 1991,
         "nr_quartiers": 26,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 19,
             "Fisherman": 1,
@@ -17607,7 +18834,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -17650,7 +18880,10 @@
             "Clerk": 0,
             "Soldier": 388
         },
+        "soldiers": 388,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -17693,7 +18926,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 20,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -17736,7 +18972,10 @@
             "Clerk": 0,
             "Soldier": 1197
         },
+        "soldiers": 1197,
         "nr_quartiers": 13,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -17779,7 +19018,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -17822,7 +19064,10 @@
             "Clerk": 0,
             "Soldier": 147
         },
+        "soldiers": 147,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -17865,7 +19110,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -17908,7 +19156,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -17951,7 +19202,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 26,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 22,
             "Fisherman": 1,
@@ -17994,7 +19248,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -18037,7 +19294,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -18080,7 +19340,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -18123,7 +19386,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -18166,7 +19432,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -18209,7 +19478,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -18252,7 +19524,10 @@
             "Clerk": 0,
             "Soldier": 148
         },
+        "soldiers": 148,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -18295,7 +19570,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 23,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 19,
             "Fisherman": 1,
@@ -18338,7 +19616,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -18381,7 +19662,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -18424,7 +19708,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -18467,7 +19754,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -18510,7 +19800,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -18553,7 +19846,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -18596,7 +19892,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -18639,7 +19938,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -18682,7 +19984,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -18725,7 +20030,10 @@
             "Clerk": 0,
             "Soldier": 1570
         },
+        "soldiers": 1570,
         "nr_quartiers": 17,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -18768,7 +20076,10 @@
             "Clerk": 0,
             "Soldier": 1745
         },
+        "soldiers": 1745,
         "nr_quartiers": 24,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 17,
             "Fisherman": 1,
@@ -18811,7 +20122,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -18854,7 +20168,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -18897,7 +20214,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -18940,7 +20260,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -18983,7 +20306,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19026,7 +20352,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 27,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 23,
             "Fisherman": 1,
@@ -19069,7 +20398,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 29,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 25,
             "Fisherman": 1,
@@ -19112,7 +20444,10 @@
             "Clerk": 0,
             "Soldier": 2046
         },
+        "soldiers": 2046,
         "nr_quartiers": 31,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 8,
@@ -19155,7 +20490,10 @@
             "Clerk": 0,
             "Soldier": 1373
         },
+        "soldiers": 1373,
         "nr_quartiers": 15,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -19198,7 +20536,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -19241,7 +20582,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -19284,7 +20628,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -19327,7 +20674,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19370,7 +20720,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 16,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 5,
@@ -19413,7 +20766,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19456,7 +20812,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19499,7 +20858,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19542,7 +20904,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 2,
@@ -19585,7 +20950,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -19628,7 +20996,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19671,7 +21042,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -19714,7 +21088,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19757,7 +21134,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -19800,7 +21180,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19843,7 +21226,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 4,
@@ -19886,7 +21272,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19929,7 +21318,10 @@
             "Clerk": 0,
             "Soldier": 170
         },
+        "soldiers": 170,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -19972,7 +21364,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -20015,7 +21410,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 15,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -20058,7 +21456,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -20101,7 +21502,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 1,
@@ -20144,7 +21548,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 31,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 27,
             "Fisherman": 1,
@@ -20187,7 +21594,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -20230,7 +21640,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -20273,7 +21686,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -20316,7 +21732,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -20359,7 +21778,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -20402,7 +21824,10 @@
             "Clerk": 0,
             "Soldier": 1993
         },
+        "soldiers": 1993,
         "nr_quartiers": 26,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 19,
             "Fisherman": 1,
@@ -20445,7 +21870,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -20488,7 +21916,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -20531,7 +21962,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -20574,7 +22008,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -20617,7 +22054,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -20660,7 +22100,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -20703,7 +22146,10 @@
             "Clerk": 0,
             "Soldier": 147
         },
+        "soldiers": 147,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -20746,7 +22192,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -20789,7 +22238,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -20832,7 +22284,10 @@
             "Clerk": 0,
             "Soldier": 92
         },
+        "soldiers": 92,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -20875,7 +22330,10 @@
             "Clerk": 0,
             "Soldier": 88
         },
+        "soldiers": 88,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -20918,7 +22376,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -20961,7 +22422,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -21004,7 +22468,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -21047,7 +22514,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -21090,7 +22560,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 15,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -21133,7 +22606,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -21176,7 +22652,10 @@
             "Clerk": 0,
             "Soldier": 1344
         },
+        "soldiers": 1344,
         "nr_quartiers": 15,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -21219,7 +22698,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -21262,7 +22744,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 34,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 30,
             "Fisherman": 1,
@@ -21305,7 +22790,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 25,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 21,
             "Fisherman": 1,
@@ -21348,7 +22836,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -21391,7 +22882,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -21434,7 +22928,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -21477,7 +22974,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -21520,7 +23020,10 @@
             "Clerk": 0,
             "Soldier": 316
         },
+        "soldiers": 316,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 1,
@@ -21563,7 +23066,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -21606,7 +23112,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 1,
@@ -21649,7 +23158,10 @@
             "Clerk": 0,
             "Soldier": 2269
         },
+        "soldiers": 2269,
         "nr_quartiers": 29,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 22,
             "Fisherman": 1,
@@ -21692,7 +23204,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -21735,7 +23250,10 @@
             "Clerk": 0,
             "Soldier": 1749
         },
+        "soldiers": 1749,
         "nr_quartiers": 28,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 7,
@@ -21778,7 +23296,10 @@
             "Clerk": 0,
             "Soldier": 3141
         },
+        "soldiers": 3141,
         "nr_quartiers": 48,
+        "soldier_quartiers": 3,
+        "craftsman_quartiers": 3,
         "quartiers": {
             "Farmer": 23,
             "Fisherman": 13,
@@ -21821,7 +23342,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -21864,7 +23388,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -21907,7 +23434,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 1,
@@ -21950,7 +23480,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -21993,7 +23526,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -22036,7 +23572,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -22079,7 +23618,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -22122,7 +23664,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -22165,7 +23710,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -22208,7 +23756,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 12,
             "Fisherman": 0,
@@ -22251,7 +23802,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -22294,7 +23848,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -22337,7 +23894,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -22380,7 +23940,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -22423,7 +23986,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 24,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 20,
             "Fisherman": 1,
@@ -22466,7 +24032,10 @@
             "Clerk": 0,
             "Soldier": 575
         },
+        "soldiers": 575,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -22509,7 +24078,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -22552,7 +24124,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -22595,7 +24170,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -22638,7 +24216,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -22681,7 +24262,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -22724,7 +24308,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 1,
@@ -22767,7 +24354,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -22810,7 +24400,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -22853,7 +24446,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -22896,7 +24492,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -22939,7 +24538,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -22982,7 +24584,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -23025,7 +24630,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -23068,7 +24676,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -23111,7 +24722,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -23154,7 +24768,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -23197,7 +24814,10 @@
             "Clerk": 0,
             "Soldier": 79
         },
+        "soldiers": 79,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -23240,7 +24860,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -23283,7 +24906,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -23326,7 +24952,10 @@
             "Clerk": 0,
             "Soldier": 1539
         },
+        "soldiers": 1539,
         "nr_quartiers": 17,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -23369,7 +24998,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -23412,7 +25044,10 @@
             "Clerk": 0,
             "Soldier": 433
         },
+        "soldiers": 433,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -23455,7 +25090,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -23498,7 +25136,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -23541,7 +25182,10 @@
             "Clerk": 0,
             "Soldier": 177
         },
+        "soldiers": 177,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -23584,7 +25228,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 21,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 17,
             "Fisherman": 1,
@@ -23627,7 +25274,10 @@
             "Clerk": 0,
             "Soldier": 151
         },
+        "soldiers": 151,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -23670,7 +25320,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 28,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 24,
             "Fisherman": 1,
@@ -23713,7 +25366,10 @@
             "Clerk": 0,
             "Soldier": 1356
         },
+        "soldiers": 1356,
         "nr_quartiers": 15,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -23756,7 +25412,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -23799,7 +25458,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -23842,7 +25504,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -23885,7 +25550,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -23928,7 +25596,10 @@
             "Clerk": 0,
             "Soldier": 2663
         },
+        "soldiers": 2663,
         "nr_quartiers": 32,
+        "soldier_quartiers": 3,
+        "craftsman_quartiers": 3,
         "quartiers": {
             "Farmer": 23,
             "Fisherman": 1,
@@ -23971,7 +25642,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -24014,7 +25688,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -24057,7 +25734,10 @@
             "Clerk": 0,
             "Soldier": 1480
         },
+        "soldiers": 1480,
         "nr_quartiers": 16,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -24100,7 +25780,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 27,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 23,
             "Fisherman": 1,
@@ -24143,7 +25826,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -24186,7 +25872,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -24229,7 +25918,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 21,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 17,
             "Fisherman": 1,
@@ -24272,7 +25964,10 @@
             "Clerk": 0,
             "Soldier": 1595
         },
+        "soldiers": 1595,
         "nr_quartiers": 17,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -24315,7 +26010,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -24358,7 +26056,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -24401,7 +26102,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -24444,7 +26148,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -24487,7 +26194,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -24530,7 +26240,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -24573,7 +26286,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -24616,7 +26332,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -24659,7 +26378,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 26,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 22,
             "Fisherman": 1,
@@ -24702,7 +26424,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -24745,7 +26470,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -24788,7 +26516,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -24831,7 +26562,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -24874,7 +26608,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -24917,7 +26654,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -24960,7 +26700,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -25003,7 +26746,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 12,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 4,
@@ -25046,7 +26792,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -25089,7 +26838,10 @@
             "Clerk": 0,
             "Soldier": 1512
         },
+        "soldiers": 1512,
         "nr_quartiers": 21,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 6,
@@ -25132,7 +26884,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -25175,7 +26930,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -25218,7 +26976,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 15,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -25261,7 +27022,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -25304,7 +27068,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -25347,7 +27114,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -25390,7 +27160,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -25433,7 +27206,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -25476,7 +27252,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 11,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 11,
             "Fisherman": 0,
@@ -25519,7 +27298,10 @@
             "Clerk": 0,
             "Soldier": 1520
         },
+        "soldiers": 1520,
         "nr_quartiers": 17,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 15,
             "Fisherman": 0,
@@ -25562,7 +27344,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -25605,7 +27390,10 @@
             "Clerk": 0,
             "Soldier": 406
         },
+        "soldiers": 406,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -25648,7 +27436,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -25691,7 +27482,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -25734,7 +27528,10 @@
             "Clerk": 0,
             "Soldier": 1285
         },
+        "soldiers": 1285,
         "nr_quartiers": 18,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 5,
@@ -25777,7 +27574,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -25820,7 +27620,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -25863,7 +27666,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -25906,7 +27712,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -25949,7 +27758,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -25992,7 +27804,10 @@
             "Clerk": 0,
             "Soldier": 661
         },
+        "soldiers": 661,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -26035,7 +27850,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -26078,7 +27896,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -26121,7 +27942,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 20,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -26164,7 +27988,10 @@
             "Clerk": 0,
             "Soldier": 1398
         },
+        "soldiers": 1398,
         "nr_quartiers": 15,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -26207,7 +28034,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 1,
@@ -26250,7 +28080,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -26293,7 +28126,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -26336,7 +28172,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -26379,7 +28218,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -26422,7 +28264,10 @@
             "Clerk": 0,
             "Soldier": 826
         },
+        "soldiers": 826,
         "nr_quartiers": 10,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -26465,7 +28310,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -26508,7 +28356,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -26551,7 +28402,10 @@
             "Clerk": 0,
             "Soldier": 867
         },
+        "soldiers": 867,
         "nr_quartiers": 10,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -26594,7 +28448,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -26637,7 +28494,10 @@
             "Clerk": 0,
             "Soldier": 1090
         },
+        "soldiers": 1090,
         "nr_quartiers": 12,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 10,
             "Fisherman": 0,
@@ -26680,7 +28540,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 0,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 0,
             "Fisherman": 0,
@@ -26723,7 +28586,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -26766,7 +28632,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -26809,7 +28678,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -26852,7 +28724,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -26895,7 +28770,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 13,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 13,
             "Fisherman": 0,
@@ -26938,7 +28816,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -26981,7 +28862,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27024,7 +28908,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 26,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 22,
             "Fisherman": 1,
@@ -27067,7 +28954,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -27110,7 +29000,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27153,7 +29046,10 @@
             "Clerk": 0,
             "Soldier": 161
         },
+        "soldiers": 161,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27196,7 +29092,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 20,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 16,
             "Fisherman": 1,
@@ -27239,7 +29138,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27282,7 +29184,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 14,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 14,
             "Fisherman": 0,
@@ -27325,7 +29230,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27368,7 +29276,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,
@@ -27411,7 +29322,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 8,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -27454,7 +29368,10 @@
             "Clerk": 0,
             "Soldier": 2293
         },
+        "soldiers": 2293,
         "nr_quartiers": 29,
+        "soldier_quartiers": 2,
+        "craftsman_quartiers": 2,
         "quartiers": {
             "Farmer": 22,
             "Fisherman": 1,
@@ -27497,7 +29414,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27540,7 +29460,10 @@
             "Clerk": 0,
             "Soldier": 919
         },
+        "soldiers": 919,
         "nr_quartiers": 11,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -27583,7 +29506,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 9,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 9,
             "Fisherman": 0,
@@ -27626,7 +29552,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 35,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 31,
             "Fisherman": 1,
@@ -27669,7 +29598,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27712,7 +29644,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 3,
@@ -27755,7 +29690,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -27798,7 +29736,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27841,7 +29782,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27884,7 +29828,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27927,7 +29874,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -27970,7 +29920,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 6,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 0,
@@ -28013,7 +29966,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 15,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 5,
@@ -28056,7 +30012,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -28099,7 +30058,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 5,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 5,
             "Fisherman": 0,
@@ -28142,7 +30104,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -28185,7 +30150,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 2,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 2,
             "Fisherman": 0,
@@ -28228,7 +30196,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 10,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 6,
             "Fisherman": 3,
@@ -28271,7 +30242,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 3,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 3,
             "Fisherman": 0,
@@ -28314,7 +30288,10 @@
             "Clerk": 0,
             "Soldier": 801
         },
+        "soldiers": 801,
         "nr_quartiers": 10,
+        "soldier_quartiers": 1,
+        "craftsman_quartiers": 1,
         "quartiers": {
             "Farmer": 8,
             "Fisherman": 0,
@@ -28357,7 +30334,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 4,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 4,
             "Fisherman": 0,
@@ -28400,7 +30380,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -28443,7 +30426,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 1,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 1,
             "Fisherman": 0,
@@ -28486,7 +30472,10 @@
             "Clerk": 0,
             "Soldier": 0
         },
+        "soldiers": 0,
         "nr_quartiers": 7,
+        "soldier_quartiers": 0,
+        "craftsman_quartiers": 0,
         "quartiers": {
             "Farmer": 7,
             "Fisherman": 0,

@@ -258,6 +258,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             'net_food_val': net_food,
             'quartier_details': quartier_details,
             'nr_quartiers': quartiers,
+            'soldier_quartiers': b.get('soldier_quartiers', 0),
+            'craftsman_quartiers': b.get('craftsman_quartiers', 0),
+            'citizens': b.get('citizens', {}),
+            'quartiers': b.get('quartiers', {}),
             'name_display': name_display,
             'row_class': row_class
         })
