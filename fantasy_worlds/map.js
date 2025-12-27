@@ -826,9 +826,9 @@ const AdventureManager = {
                 ${notificationHtml}
             </div>
             <div class="actions">
-                <button class="btn-buy" onclick="AdventureManager.buyFood(10, 1)">Buy 10 Food (1 💰)</button>
-                ${canRecruit ? `<button class="btn-recruit" onclick="AdventureManager.recruitSoldiers(5, ${soldierCost}, ${burg.cell_id})">Recruit 5 Soldiers (${soldierCost} 💰, 5 🛠️)</button>` : ''}
-                ${canBuyTools ? `<button class="btn-buy" onclick="AdventureManager.buyTools(${toolsAmount}, 1)">Buy ${toolsAmount} Tools (1 💰)</button>` : ''}
+                <button class="btn-buy" onclick="AdventureManager.buyFood(10, 1)" title="1 Gold for 10 Food">Buy 10 Food (1 💰)</button>
+                ${canRecruit ? `<button class="btn-recruit" onclick="AdventureManager.recruitSoldiers(5, ${soldierCost}, ${burg.cell_id})" title="Recruit 5 soldiers for 5 Tools and 5 Gold. Each extra soldier over 1 in the burg decreases the gold cost by one (down to a minimum of 1)">Recruit 5 Soldiers (${soldierCost} 💰, 5 🛠️)</button>` : ''}
+                ${canBuyTools ? `<button class="btn-buy" onclick="AdventureManager.buyTools(${toolsAmount}, 1)" title="1 Gold for an amount of Tools equal to Craftsmen in the burg (max 5)">Buy ${toolsAmount} Tools (1 💰)</button>` : ''}
                 <button class="btn-leave" onclick="AdventureManager.closePopup()">Leave</button>
             </div>
         `;
