@@ -159,9 +159,11 @@
                             <th onclick="sortTable(1, this, 'burgTable')">Type</th>
                             <th onclick="sortTable(2, this, 'burgTable')">State</th>
                             <th onclick="sortTable(3, this, 'burgTable')">Quartiers</th>
-                            <th onclick="sortTable(4, this, 'burgTable')">Pop</th>
-                            <th onclick="sortTable(5, this, 'burgTable')">Food</th>
-                            <th onclick="sortTable(6, this, 'burgTable')">Gold</th>
+                            <th onclick="sortTable(4, this, 'burgTable')">Craftsman</th>
+                            <th onclick="sortTable(5, this, 'burgTable')">Soldier</th>
+                            <th onclick="sortTable(6, this, 'burgTable')">Pop</th>
+                            <th onclick="sortTable(7, this, 'burgTable')">Food</th>
+                            <th onclick="sortTable(8, this, 'burgTable')">Gold</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -172,6 +174,8 @@
                             <td>{{ b.type }}</td>
                             <td>{{ b.state_name }}</td>
                             <td class="quartier-cell" data-details="{{ b.quartier_details }}">{{ b.nr_quartiers }}</td>
+                            <td>{{ b.craftsman_quartiers }}</td>
+                            <td>{{ b.soldier_quartiers }}</td>
                             <td>{{ b.population_fmt }}</td>
                             <td class="{{ 'pos' if b.net_food_val > 0 else 'neg' }}">{{ b.net_food }}</td>
                             <td class="{{ 'pos' if b.net_gold_val > 0 else 'neg' }}">{{ b.net_gold }}</td>
