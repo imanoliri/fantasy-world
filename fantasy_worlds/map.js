@@ -428,10 +428,6 @@ function sortTable(n, header, tableId) {
         dir = "desc";
     }
 
-    // Get rows as array (skip header row 0)
-    // Note: table.rows includes the header. 
-    // If tbody exists, we use rows from there.
-    // Let's assume row 0 is header in the whole table context if we use table.rows
     const rows = Array.from(table.rows).slice(1);
 
     rows.sort((rowA, rowB) => {
@@ -486,6 +482,7 @@ const AdventureManager = {
     partyElement: null,
     pathElement: null,
     isMoving: false,
+    movementId: 0,
 
     init() {
         if (this.partyElement) return;
@@ -575,7 +572,11 @@ const AdventureManager = {
     },
 
     async handleClick(target) {
-        if (!this.active || this.isMoving) return;
+        if (!this.active) return;
+        // if moving, we override. No return.
+
+        // Increment movementId to invalidate previous moves
+        this.movementId++;
 
         let cellId = null;
 
@@ -675,8 +676,17 @@ const AdventureManager = {
 
     async moveAlongPath(path) {
         this.isMoving = true;
+        const currentId = this.movementId;
 
         for (let nextCell of path) {
+            // Check if superseded
+            if (this.movementId !== currentId) {
+                // Determine if we should clear path or not. 
+                // The new click will call drawPath with new path, so we don't need to do anything.
+                // Just stop this loop.
+                return;
+            }
+
             if (this.party.food <= 0) {
                 this.showFeedback("Out of food! Party is starving.");
                 // Maybe penalty?
