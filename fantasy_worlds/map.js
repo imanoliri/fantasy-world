@@ -414,6 +414,7 @@ function toggleAllTypes(source) {
 function sortTable(n, header, tableId) {
     const table = document.getElementById(tableId);
     let dir = "asc";
+    const tbody = table.querySelector('tbody') || table;
 
     // Reset other headers
     const headers = table.querySelectorAll('th');
@@ -427,43 +428,40 @@ function sortTable(n, header, tableId) {
         dir = "desc";
     }
 
-    let switching = true;
-    let shouldSwitch, i;
+    // Get rows as array (skip header row 0)
+    // Note: table.rows includes the header. 
+    // If tbody exists, we use rows from there.
+    // Let's assume row 0 is header in the whole table context if we use table.rows
+    const rows = Array.from(table.rows).slice(1);
 
-    while (switching) {
-        switching = false;
-        const rows = table.rows;
+    rows.sort((rowA, rowB) => {
+        const cellA = rowA.getElementsByTagName("TD")[n];
+        const cellB = rowB.getElementsByTagName("TD")[n];
 
-        for (i = 1; i < (rows.length - 1); i++) {
-            shouldSwitch = false;
-            const x = rows[i].getElementsByTagName("TD")[n];
-            const y = rows[i + 1].getElementsByTagName("TD")[n];
+        let aVal = cellA ? (cellA.textContent || cellA.innerText).toLowerCase() : "";
+        let bVal = cellB ? (cellB.textContent || cellB.innerText).toLowerCase() : "";
 
-            let xVal = x.innerHTML.toLowerCase();
-            let yVal = y.innerHTML.toLowerCase();
+        // Remove commas for number parsing
+        const aNum = parseFloat(aVal.replace(/,/g, ''));
+        const bNum = parseFloat(bVal.replace(/,/g, ''));
 
-            // Check if numeric (remove commons)
-            const xNum = parseFloat(xVal.replace(/,/g, ''));
-            const yNum = parseFloat(yVal.replace(/,/g, ''));
-
-            if (!isNaN(xNum) && !isNaN(yNum)) {
-                if (dir === "asc") {
-                    if (xNum > yNum) { shouldSwitch = true; break; }
-                } else {
-                    if (xNum < yNum) { shouldSwitch = true; break; }
-                }
-            } else {
-                if (dir === "asc") {
-                    if (xVal > yVal) { shouldSwitch = true; break; }
-                } else {
-                    if (xVal < yVal) { shouldSwitch = true; break; }
-                }
-            }
+        if (!isNaN(aNum) && !isNaN(bNum)) {
+            return dir === "asc" ? aNum - bNum : bNum - aNum;
+        } else {
+            if (aVal < bVal) return dir === "asc" ? -1 : 1;
+            if (aVal > bVal) return dir === "asc" ? 1 : -1;
+            return 0;
         }
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-        }
+    });
+
+    // Re-append rows in sorted order
+    // Using DocumentFragment for better performance
+    const fragment = document.createDocumentFragment();
+    rows.forEach(row => fragment.appendChild(row));
+
+    // Append fragment to cached tbody
+    if (tbody) {
+        tbody.appendChild(fragment);
     }
 
     if (dir === "asc") {
@@ -486,6 +484,7 @@ const AdventureManager = {
         gold: 10
     },
     partyElement: null,
+    pathElement: null,
     isMoving: false,
 
     init() {
@@ -503,11 +502,22 @@ const AdventureManager = {
         circle.style.transition = "cx 0.2s linear, cy 0.2s linear";
         circle.style.display = "none";
 
-        // Append to mapSvg but ensure it's on top. 
-        // We can append to the end.
+        // Create path element (polyline)
+        const pathLine = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+        pathLine.setAttribute("fill", "none");
+        pathLine.setAttribute("stroke", "#ffffff");
+        pathLine.setAttribute("stroke-width", "2");
+        pathLine.setAttribute("stroke-dasharray", "5,5");
+        pathLine.setAttribute("pointer-events", "none");
+        pathLine.style.opacity = "0.7";
+        pathLine.style.display = "none";
+
         const svg = document.getElementById('mapSvg');
-        svg.appendChild(circle);
+        svg.appendChild(pathLine);
+        svg.appendChild(circle); // Append circle after to be on top
+
         this.partyElement = circle;
+        this.pathElement = pathLine;
     },
 
     toggle() {
@@ -590,7 +600,9 @@ const AdventureManager = {
             // Pathfinding
             const path = this.findPath(this.party.cell, cellId);
             if (path && path.length > 0) {
+                this.drawPath(path);
                 await this.moveAlongPath(path);
+                this.drawPath([]); // Clear after
             } else {
                 this.showFeedback("No path found (or too far/blocked)!");
             }
@@ -681,6 +693,14 @@ const AdventureManager = {
             this.updateStats();
             this.render();
 
+            // Update path visual (remove visited nodes)
+            // path is the full path. We are iterating it.
+            // We want to show from current nextCell to end.
+            const remainingIndex = path.indexOf(nextCell);
+            if (remainingIndex > -1) {
+                this.drawPath(path.slice(remainingIndex));
+            }
+
             // Wait for animation
             await new Promise(r => setTimeout(r, 150));
         }
@@ -713,6 +733,23 @@ const AdventureManager = {
         t.style.left = window.innerWidth / 2 + 'px';
         t.style.top = '100px';
         setTimeout(() => t.style.display = 'none', 2000);
+    },
+
+    drawPath(path) {
+        if (!this.pathElement) return;
+
+        if (!path || path.length === 0) {
+            this.pathElement.style.display = "none";
+            return;
+        }
+
+        const points = path.map(id => {
+            const cell = graphData[id];
+            return cell ? `${cell.p[0]},${cell.p[1]}` : "";
+        }).join(" ");
+
+        this.pathElement.setAttribute("points", points);
+        this.pathElement.style.display = "block";
     }
 };
 

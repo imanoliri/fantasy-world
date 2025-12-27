@@ -10,6 +10,7 @@ const AdventureManager = {
         gold: 10
     },
     partyElement: null,
+    pathElement: null,
     isMoving: false,
 
     init() {
@@ -27,11 +28,22 @@ const AdventureManager = {
         circle.style.transition = "cx 0.2s linear, cy 0.2s linear";
         circle.style.display = "none";
 
-        // Append to mapSvg but ensure it's on top. 
-        // We can append to the end.
+        // Create path element (polyline)
+        const pathLine = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+        pathLine.setAttribute("fill", "none");
+        pathLine.setAttribute("stroke", "#ffffff");
+        pathLine.setAttribute("stroke-width", "2");
+        pathLine.setAttribute("stroke-dasharray", "5,5");
+        pathLine.setAttribute("pointer-events", "none");
+        pathLine.style.opacity = "0.7";
+        pathLine.style.display = "none";
+
         const svg = document.getElementById('mapSvg');
-        svg.appendChild(circle);
+        svg.appendChild(pathLine);
+        svg.appendChild(circle); // Append circle after to be on top
+
         this.partyElement = circle;
+        this.pathElement = pathLine;
     },
 
     toggle() {
@@ -114,7 +126,9 @@ const AdventureManager = {
             // Pathfinding
             const path = this.findPath(this.party.cell, cellId);
             if (path && path.length > 0) {
+                this.drawPath(path);
                 await this.moveAlongPath(path);
+                this.drawPath([]); // Clear after
             } else {
                 this.showFeedback("No path found (or too far/blocked)!");
             }
@@ -205,6 +219,14 @@ const AdventureManager = {
             this.updateStats();
             this.render();
 
+            // Update path visual (remove visited nodes)
+            // path is the full path. We are iterating it.
+            // We want to show from current nextCell to end.
+            const remainingIndex = path.indexOf(nextCell);
+            if (remainingIndex > -1) {
+                this.drawPath(path.slice(remainingIndex));
+            }
+
             // Wait for animation
             await new Promise(r => setTimeout(r, 150));
         }
@@ -237,6 +259,23 @@ const AdventureManager = {
         t.style.left = window.innerWidth / 2 + 'px';
         t.style.top = '100px';
         setTimeout(() => t.style.display = 'none', 2000);
+    },
+
+    drawPath(path) {
+        if (!this.pathElement) return;
+
+        if (!path || path.length === 0) {
+            this.pathElement.style.display = "none";
+            return;
+        }
+
+        const points = path.map(id => {
+            const cell = graphData[id];
+            return cell ? `${cell.p[0]},${cell.p[1]}` : "";
+        }).join(" ");
+
+        this.pathElement.setAttribute("points", points);
+        this.pathElement.style.display = "block";
     }
 };
 
