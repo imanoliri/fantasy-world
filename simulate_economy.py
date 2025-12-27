@@ -89,6 +89,7 @@ def get_burg_model(burg, config):
     return {
         'id': burg.get('i'), 
         'name': burg.get('name'), 
+        'cell': burg.get('cell'), # Important for map mapping
         'x': burg.get('x'), 
         'y': burg.get('y'), 
         'type': burg.get('type'), 
@@ -96,7 +97,10 @@ def get_burg_model(burg, config):
         'capital': burg.get('capital'), 
         'population': round(burg.get('population')*1000), 
         'citizens': citizens, 
+        'soldiers': citizens.get('Soldier', 0), 
         'nr_quartiers': sum(quartiers.values()), 
+        'soldier_quartiers': quartiers.get('Soldier', 0), # Expose soldier quartier count
+        'craftsman_quartiers': quartiers.get('Craftsman', 0), # Expose craftsman quartier count
         'quartiers': quartiers, 
         'net_production_burg': net_production_burg, 
         'area_requirements_burg': area_requirements_burg

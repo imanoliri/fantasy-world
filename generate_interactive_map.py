@@ -114,6 +114,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
                 if state_id == 0: state_name = "Neutral"
                 
                 background_paths.append({
+                    'cell_id': cell.get('i'),
                     'd': d,
                     'fill': biome_fill,
                     'state_fill': state_fill,
@@ -240,6 +241,7 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         
         burgs_data.append({
             'id': b['id'],
+            'cell_id': b.get('cell'),
             'x': cx, 'y': cy, 'r': r,
             'color': color, 'stroke': stroke, 'stroke_width': stroke_width,
             'capital_class': capital_class,
@@ -256,6 +258,10 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
             'net_food_val': net_food,
             'quartier_details': quartier_details,
             'nr_quartiers': quartiers,
+            'soldier_quartiers': b.get('soldier_quartiers', 0),
+            'craftsman_quartiers': b.get('craftsman_quartiers', 0),
+            'citizens': b.get('citizens', {}),
+            'quartiers': b.get('quartiers', {}),
             'name_display': name_display,
             'row_class': row_class
         })
@@ -316,8 +322,16 @@ def generate_map(burgs, output_file, trades_data=None, map_name="Interactive Map
         'food_rows': food_rows,
         'gold_rows': gold_rows,
         'gold_rows': gold_rows,
+        'burgs_data_json': json.dumps(burgs_data),
         'diplomacy_matrix': json.dumps(diplomacy_matrix),
-        'state_name_id_map': json.dumps(state_name_id_map)
+        'state_name_id_map': json.dumps(state_name_id_map),
+        'graph_data': json.dumps([{
+            'i': c.get('i'),
+            'c': c.get('c', []),
+            'h': c.get('h', 0),
+            'b': c.get('biome', 0),
+            'p': c.get('p', [0, 0])
+        } for c in (map_data.get('pack', {}).get('cells', []) if map_data else [])])
     }
     
     html_output = template.render(context)

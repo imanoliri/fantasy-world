@@ -3,6 +3,7 @@
     "ui.js",
     "map_render.js",
     "tables.js",
+    "adventure.js",
     "interactions.js",
     "selection.js"
 ]

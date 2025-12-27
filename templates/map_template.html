@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map: {{ map_name }}</title>
+    <title>World: {{ map_name }}</title>
     <link rel="stylesheet" href="../map.css">
 </head>
 
 <body class="show-capitals show-food-trades show-gold-trades">
     <header>
-        <h1>Interactive Map: {{ map_name }}</h1>
+        <h1>World: {{ map_name }}</h1>
         <div class="controls">
             <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search names...">
 
@@ -54,7 +54,15 @@
                 Table</button>
             <button class="toggle-btn active" id="toggleMap" onclick="toggleMap()">Show Map</button>
             <button class="toggle-btn" id="toggleMapMode" onclick="toggleMapMode()">Mode: Biome</button>
+            <button class="toggle-btn special" id="toggleAdventure" onclick="toggleAdventureMode()">⚔️
+                Adventure</button>
             <span>| Total Burgs: {{ total_burgs }}</span>
+            <div id="adventureStats" class="adventure-stats" style="display:none;">
+                <span title="Soldiers">🛡️ <span id="advSoldiers">0</span></span>
+                <span title="Tools">🛠️ <span id="advTools">0</span></span>
+                <span title="Food">🍎 <span id="advFood">0</span></span>
+                <span title="Gold">💰 <span id="advGold">0</span></span>
+            </div>
         </div>
     </header>
 
@@ -67,8 +75,9 @@
                     {% for p in background_paths %}
                     <path d="{{ p.d }}" fill="{{ p.fill }}" stroke="none" data-state-color="{{ p.state_fill }}"
                         data-biome-color="{{ p.biome_fill }}" data-state-id="{{ p.state_id }}" data-height="{{ p.h }}"
-                        data-temp="{{ p.t }}" data-biome="{{ p.biome_name }}" data-state="{{ p.state_name }}" {% if
-                        p.is_water %}data-is-water="true" {% endif %} onclick="selectState({{ p.state_id }})" />
+                        data-temp="{{ p.t }}" data-biome="{{ p.biome_name }}" data-state="{{ p.state_name }}"
+                        data-cell-id="{{ p.cell_id }}" {% if p.is_water %}data-is-water="true" {% endif %}
+                        onclick="selectState({{ p.state_id }})" />
                     {% endfor %}
                 </g>
 
@@ -88,7 +97,7 @@
                     stroke-width="{{ b.stroke_width }}" class="burg-dot{{ b.capital_class }} {{ b.dot_class_str }}"
                     data-id="{{ b.id }}" data-name="{{ b.name }}" data-pop="{{ b.population }}" data-type="{{ b.type }}"
                     data-state="{{ b.state_name }}" data-gold="{{ b.net_gold }}" data-food="{{ b.net_food }}"
-                    data-quartiers="{{ b.quartier_details }}">
+                    data-quartiers="{{ b.quartier_details }}" data-cell-id="{{ b.cell_id }}">
                 </circle>
                 {% endfor %}
             </svg>
@@ -150,9 +159,11 @@
                             <th onclick="sortTable(1, this, 'burgTable')">Type</th>
                             <th onclick="sortTable(2, this, 'burgTable')">State</th>
                             <th onclick="sortTable(3, this, 'burgTable')">Quartiers</th>
-                            <th onclick="sortTable(4, this, 'burgTable')">Pop</th>
-                            <th onclick="sortTable(5, this, 'burgTable')">Food</th>
-                            <th onclick="sortTable(6, this, 'burgTable')">Gold</th>
+                            <th onclick="sortTable(4, this, 'burgTable')">Craftsman</th>
+                            <th onclick="sortTable(5, this, 'burgTable')">Soldier</th>
+                            <th onclick="sortTable(6, this, 'burgTable')">Pop</th>
+                            <th onclick="sortTable(7, this, 'burgTable')">Food</th>
+                            <th onclick="sortTable(8, this, 'burgTable')">Gold</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -163,6 +174,8 @@
                             <td>{{ b.type }}</td>
                             <td>{{ b.state_name }}</td>
                             <td class="quartier-cell" data-details="{{ b.quartier_details }}">{{ b.nr_quartiers }}</td>
+                            <td>{{ b.craftsman_quartiers }}</td>
+                            <td>{{ b.soldier_quartiers }}</td>
                             <td>{{ b.population_fmt }}</td>
                             <td class="{{ 'pos' if b.net_food_val > 0 else 'neg' }}">{{ b.net_food }}</td>
                             <td class="{{ 'pos' if b.net_gold_val > 0 else 'neg' }}">{{ b.net_gold }}</td>
@@ -217,6 +230,8 @@
             /* Injected Data */
             var diplomacyMatrix = {{ diplomacy_matrix }};
             var stateNameIdMap = {{ state_name_id_map }};
+            var graphData = {{ graph_data }};
+            var burgsData = {{ burgs_data_json }};
         </script>
         <script src="../map.js"></script>
 </body>

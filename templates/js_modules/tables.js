@@ -128,6 +128,7 @@ function toggleAllTypes(source) {
 function sortTable(n, header, tableId) {
     const table = document.getElementById(tableId);
     let dir = "asc";
+    const tbody = table.querySelector('tbody') || table;
 
     // Reset other headers
     const headers = table.querySelectorAll('th');
@@ -141,43 +142,36 @@ function sortTable(n, header, tableId) {
         dir = "desc";
     }
 
-    let switching = true;
-    let shouldSwitch, i;
+    const rows = Array.from(table.rows).slice(1);
 
-    while (switching) {
-        switching = false;
-        const rows = table.rows;
+    rows.sort((rowA, rowB) => {
+        const cellA = rowA.getElementsByTagName("TD")[n];
+        const cellB = rowB.getElementsByTagName("TD")[n];
 
-        for (i = 1; i < (rows.length - 1); i++) {
-            shouldSwitch = false;
-            const x = rows[i].getElementsByTagName("TD")[n];
-            const y = rows[i + 1].getElementsByTagName("TD")[n];
+        let aVal = cellA ? (cellA.textContent || cellA.innerText).toLowerCase() : "";
+        let bVal = cellB ? (cellB.textContent || cellB.innerText).toLowerCase() : "";
 
-            let xVal = x.innerHTML.toLowerCase();
-            let yVal = y.innerHTML.toLowerCase();
+        // Remove commas for number parsing
+        const aNum = parseFloat(aVal.replace(/,/g, ''));
+        const bNum = parseFloat(bVal.replace(/,/g, ''));
 
-            // Check if numeric (remove commons)
-            const xNum = parseFloat(xVal.replace(/,/g, ''));
-            const yNum = parseFloat(yVal.replace(/,/g, ''));
-
-            if (!isNaN(xNum) && !isNaN(yNum)) {
-                if (dir === "asc") {
-                    if (xNum > yNum) { shouldSwitch = true; break; }
-                } else {
-                    if (xNum < yNum) { shouldSwitch = true; break; }
-                }
-            } else {
-                if (dir === "asc") {
-                    if (xVal > yVal) { shouldSwitch = true; break; }
-                } else {
-                    if (xVal < yVal) { shouldSwitch = true; break; }
-                }
-            }
+        if (!isNaN(aNum) && !isNaN(bNum)) {
+            return dir === "asc" ? aNum - bNum : bNum - aNum;
+        } else {
+            if (aVal < bVal) return dir === "asc" ? -1 : 1;
+            if (aVal > bVal) return dir === "asc" ? 1 : -1;
+            return 0;
         }
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-        }
+    });
+
+    // Re-append rows in sorted order
+    // Using DocumentFragment for better performance
+    const fragment = document.createDocumentFragment();
+    rows.forEach(row => fragment.appendChild(row));
+
+    // Append fragment to cached tbody
+    if (tbody) {
+        tbody.appendChild(fragment);
     }
 
     if (dir === "asc") {

@@ -1,11 +1,23 @@
-// Map Interactions
 svg.addEventListener('click', (e) => {
+    // Adventure Mode
+    if (window.AdventureManager && window.AdventureManager.active) {
+        window.AdventureManager.handleClick(e.target);
+        return;
+    }
+
     if (e.target.classList.contains('burg-dot')) {
         const id = e.target.getAttribute('data-id');
         selectBurg(id);
     } else {
         // Deselect if clicking empty space
         // selectBurg(null);
+    }
+});
+
+svg.addEventListener('contextmenu', (e) => {
+    if (window.AdventureManager && window.AdventureManager.active) {
+        e.preventDefault(); // Prevent default context menu
+        window.AdventureManager.handleRightClick(e.target);
     }
 });
 
